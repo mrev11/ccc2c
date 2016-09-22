@@ -1,0 +1,41 @@
+
+2011.08.12 -- 1.07
+  dosconv megszüntetve
+    fájlok nem csak a cwd-ben lehetnek
+    nevükben kis/nagybetû lehet
+    fájlnév bekérõ dialogbox rendbehozva
+    
+  prgout (F9)
+    mindig automatikusan határozza meg a téglalapot
+    (korábban egyes esetekben a marcrect-et használta)
+    a generált programba nem tesz CWI kódokat
+
+  dobozrajzolók megadása hexa kódokkal
+    hogy a forrás CWI <-> Latin konverziója 
+    ne rontsa el a mûködést (már el volt romolva)
+    
+  msk2say
+    a fáljneveket nem konvertálja kisbetûre  
+
+
+2000.04.21 -- 1.04
+  Checkboxok t mogat sa
+
+
+2000.01.12 -- 1.03
+  Portolva UNIX-ra, egys‚ges k¢drendszer
+
+
+1999.05.20 -- 1.02
+  PRG2PPO-val ford¡tva, inkompatibilit sok sz–rve
+
+
+1999.02.09 -- 1.01
+
+  ExtractName jav¡tva, hogy ilyen bemenettel is m–k”dj”n:
+
+      mask ..\proba\haz -gO
+  
+  az eredm‚ny haz.out ..\proba\-ban keletkezik.
+   
+  

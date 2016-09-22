@@ -1,0 +1,3 @@
+#!/bin/bash
+
+test-filech.py  -jtauto -jtdebug 

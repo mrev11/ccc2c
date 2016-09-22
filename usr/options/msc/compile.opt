@@ -1,0 +1,15 @@
+-nologo
+-c 
+-MT 
+-Ox
+-W2
+-WX
+-Gy
+-GR
+-J
+-DMSVC
+-D_CCC_
+-D_CCC2_
+-DWIN32
+-DWINDOWS
+-DMULTITHREAD

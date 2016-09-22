@@ -1,0 +1,26 @@
+//MSK2DLG 0.2.00
+
+function panel3Class()
+static clid
+    if( clid==NIL )
+        clid:=classRegister('panel3',{jtpanelClass()})
+        classMethod(clid,'initialize',{|this|panel3Ini(this)})
+        classAttrib(clid,'table')
+        classAttrib(clid,'navig')
+    end
+    return clid
+
+
+function panel3New()
+local clid:=panel3Class()
+    return objectNew(clid):initialize()
+
+
+function panel3Ini(this)
+    jtpanelIni(this,0,0,12,39)
+    this:name:='panel3'
+    this:layout:='fix'
+    this:table:=jtbrowsetableNew(0,1,8,36); this:table:name:='table'; this:additem(this:table)
+    this:navig:=jtpanelNew(9,1,10,36); this:navig:name:='navig'; this:additem(this:navig)
+    return this
+

@@ -1,0 +1,5 @@
+-bccc$(CCCVER)_socket 
+-bccc$(CCCVER)_xmldom
+
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)
+BUILD_SHR=static

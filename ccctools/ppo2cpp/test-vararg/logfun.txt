@@ -1,0 +1,38 @@
+
+aa {aa,bbb,cccc,ddddd}
+test1          3 <mindig 3
+test1          3 <mindig 3
+test2          4 <amennyit ténylegesen megadtak
+test2          1 <amennyit ténylegesen megadtak
+test3          4 <amennyit ténylegesen megadtak, de legalább 2
+test3          2 <amennyit ténylegesen megadtak, de legalább 2
+
+test4 aa bbb <név szerint is ismert paraméterek
+aa <egy elem elõvétele
+<error>{{args,{{aa,bbb,cccc,ddddd},        10}},{candefault,.F.},{canretry,.F.},{cansubstitute,.F.},{cargo,NIL},{description,index violation},{filename,},{gencode,         0},{operation,idxr0},{oscode,         0},{severity,         0},{subcode,         0},{subsystem,},{tries,         0}} <elszáll, ha túlnyúl
+{test4,aa,bbb,cccc,ddddd,NIL,aa,bbb,cccc,ddddd} <helyettesítés arrayben
+{1,aa,bbb,cccc,ddddd,2,aa,bbb,cccc,ddddd} <helyettesítés függvényhívásban
+<xx>{{a1,aa},{a2,bbb},{a3,cccc},{a4,ddddd}} <helyettesítés metódushívásban
+
+test4 X NIL <név szerint is ismert paraméterek
+X <egy elem elõvétele
+<error>{{args,{{X,NIL},        10}},{candefault,.F.},{canretry,.F.},{cansubstitute,.F.},{cargo,NIL},{description,index violation},{filename,},{gencode,         0},{operation,idxr0},{oscode,         0},{severity,         0},{subcode,         0},{subsystem,},{tries,         0}} <elszáll, ha túlnyúl
+{test4,X,NIL,NIL,X,NIL} <helyettesítés arrayben
+{1,X,NIL,2,X,NIL} <helyettesítés függvényhívásban
+<xx>{{a1,X},{a2,NIL},{a3,NIL},{a4,NIL}} <helyettesítés metódushívásban
+
+{test5/1,aa,bbb,cccc,test5/1,aa,bbb,cccc} <blokkargumentumok helyettesítve arraybe
+{test5/2,aa,bbb,cccc,NIL,test5/2,aa,bbb,cccc} <blokkargumentumok helyettesítve függvényhívásba
+<xx>{{a1,test5/3},{a2,aa},{a3,bbb},{a4,cccc}} <blokkargumentumok helyettesítve függvényhívásba
+<xx>{{a1,test5/4},{a2,aa},{a3,bbb},{a4,cccc}} <blokkargumentumok helyettesítve metódushívásba
+
+{test5/1,X,NIL,NIL,test5/1,X,NIL,NIL} <blokkargumentumok helyettesítve arraybe
+{test5/2,X,NIL,NIL,NIL,test5/2,X,NIL,NIL} <blokkargumentumok helyettesítve függvényhívásba
+<xx>{{a1,test5/3},{a2,X},{a3,NIL},{a4,NIL}} <blokkargumentumok helyettesítve függvényhívásba
+<xx>{{a1,test5/4},{a2,X},{a3,NIL},{a4,NIL}} <blokkargumentumok helyettesítve metódushívásba
+
+{test6,{aa,bbb,cccc,ddddd},aa,bbb,cccc,ddddd} <csillagok eltérõ szinten
+{test6,{aa,bbb,cccc,ddddd},aa,bbb,cccc,ddddd} <csillagok eltérõ szinten
+{test6,{X},X} <csillagok eltérõ szinten
+{test6,{X},X} <csillagok eltérõ szinten
+

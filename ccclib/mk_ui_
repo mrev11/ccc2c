@@ -1,0 +1,18 @@
+#!/bin/bash
+. $CCCDIR/usr/bin/$CCCUNAME/__unix.b
+export BUILD_OBJ="$BUILD_OBJ"_ui_
+
+build.exe @ui_.bld
+
+mkdir $CCCDIR/usr/lib/$CCCBIN 2>/dev/null
+cp -pf $BUILD_OBJ/*.lib    $CCCDIR/usr/lib/$CCCBIN
+#cp -pf $BUILD_OBJ/*.so     $CCCDIR/usr/lib/$CCCBIN
+
+#so kozvetlen cp helyett mv-vel kerul a helyere,
+#hogy az eppen futo programok nem szalljanak el
+for so in $BUILD_OBJ/*.so; do
+    cp -pf $so $so.new
+    mv $so.new  $CCCDIR/usr/lib/$CCCBIN/`basename $so`
+done
+ 
+

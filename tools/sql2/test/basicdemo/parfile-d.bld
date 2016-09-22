@@ -1,0 +1,10 @@
+-d.
+-dcompat
+-dtds/code_generated
+-dconnect-db2
+
+-b../$$(testdata_lib)
+-bccc2_sql2_db2
+
+BUILD_EXE=exe-db2
+

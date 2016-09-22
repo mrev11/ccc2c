@@ -1,0 +1,4 @@
+-s$(CCC2DIR)/setup/setup-flex
+@$(CCC3DIR)/content.savex
+-i.savex.
+-mw

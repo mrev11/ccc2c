@@ -1,0 +1,3 @@
+#!/bin/bash
+
+test-pbar.py  -jtauto -jtdebug 

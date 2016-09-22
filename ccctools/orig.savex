@@ -1,0 +1,8 @@
+-s/opt/ccc2/ccctools
+-r:ppo:
+-lrobj*
+
+-r:archiv.nopack:autolink:
+
+-x.savex.bak.exe.
+-mw

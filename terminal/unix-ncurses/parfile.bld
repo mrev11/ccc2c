@@ -1,0 +1,16 @@
+-mncterm
+-d.
+-d../common
+-dreadkey
+-d$(CCCDIR)/ccclib/src/uic/screenbuf
+-i$(CCCDIR)/ccclib/src/uic/termapi
+
+-i/usr/X11R7/include
+-i/usr/X11R6/include
+
+-bccc$(CCCVER).lib
+-bncursesw
+
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)
+BUILD_CFG=compopt.ext
+

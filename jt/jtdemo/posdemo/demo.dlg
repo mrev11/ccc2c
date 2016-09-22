@@ -1,0 +1,24 @@
+//MSK2DLG 0.1.04
+
+function demoClass()
+static clid
+    if( clid==NIL )
+        clid:=classRegister('demo',{jtdialogClass()})
+        classMethod(clid,'initialize',{|this|demoIni(this)})
+        classAttrib(clid,'tpane')
+    end
+    return clid
+
+
+function demoNew()
+local clid:=demoClass()
+    return objectNew(clid):initialize()
+
+
+function demoIni(this)
+    jtdialogIni(this,6,16,15,68)
+    this:name:='demo'
+    this:layout:='fix'
+    this:tpane:=jttabpaneNew(1,3,7,49); this:tpane:name:='tpane'; this:add(this:tpane)
+    return this
+

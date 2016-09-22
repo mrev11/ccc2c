@@ -1,0 +1,21 @@
+
+#osszehasonlitas az eredeti CCC2-vel
+
+-s/opt/ccc2/ccclib/src
+-r:uic:uic-alt:uid:uif:uiw:
+-x.savex.bak.
+
+
+
+#tovabbi nem listazott elteresek
+#qout.cpp       : src/ui_/ helyett src/-ben van, nincs benne konverzio
+#screenchar.cpp : CCC2-ben ez uic-ban van, de a kozosben kell legyen (el is ter)
+#remoteio.cpp   : uic fuggvenyek ures compat fuggvenyei ui_-ban
+
+-lxcompat_ccc2.prg
+-lxqout.cpp                 
+-lxscreenchar.cpp                 
+-lxremoteio.cpp
+
+
+-md

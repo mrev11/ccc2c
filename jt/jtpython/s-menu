@@ -1,0 +1,6 @@
+#!/bin/bash
+
+test-menu.py  -jtauto -jtdebug 
+
+
+

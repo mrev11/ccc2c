@@ -1,0 +1,24 @@
+
+blk0
+{1x,NIL,NIL}{1,NIL}
+{1x,2x,3}{1,2}
+{1x,2x,3}{1,2}
+p = 2
+
+blk1
+{1x,NIL}fun
+{1x,2x,3}fun
+{1x,2xx,3,4,5}fun
+p = 2xx
+
+blk2
+{1x,NIL}{1}
+{1x,2x,3}{1,2x,3}
+{1x,2xx,3,4,5}{1,2xx,3,4,5}
+p = 2xx
+
+blk3
+{1x,NIL}{1,NIL}
+{1x,2x,3}{1,2x}
+{1x,2xx,3,4,5}{1,2xx}
+p = 2xx

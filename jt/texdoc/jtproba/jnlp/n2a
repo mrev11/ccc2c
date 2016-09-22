@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# A Jáva Web Start csak UTF8 kódolású jnlp filét fogad el,
+# ezért elõször megírjuk a .nat kiterjesztésû filéket Latin1-ben,
+# amiket azután ezzel a scripttel UTF8 kódolású jnlp-re konvertálunk.
+
+find *.nat | while read NAME; do 
+    BNAME=$(basename $NAME .nat)
+    native2ascii -encoding iso-8859-1 $BNAME.nat | 
+    native2ascii -reverse -encoding UTF8 > $BNAME.jnlp
+done
+ 

@@ -1,0 +1,12 @@
+-c 
+-O1
+-DMINGW
+-D_CCC_
+-D_CCC2_
+-DWIN32
+-DWINDOWS
+-D_xWINDOWS_
+-DMULTITHREAD
+-funsigned-char
+-mms-bitfields
+ 

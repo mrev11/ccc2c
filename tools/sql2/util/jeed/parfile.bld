@@ -1,0 +1,13 @@
+-lccc2_jeed
+
+-bccc2_tds
+-bccc2_sql2_oracle
+-bccc2_sql2_postgres
+-bccc2_sql2_mysql
+-bccc2_jt
+-bccc2_xmldom
+-bccc2_socket
+-bccc2_sslsocket
+-bccc2_btbtx
+
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)

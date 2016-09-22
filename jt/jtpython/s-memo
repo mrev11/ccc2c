@@ -1,0 +1,3 @@
+#!/bin/bash
+
+test-memo.py  -jtauto -jtdebug 

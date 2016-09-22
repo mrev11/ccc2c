@@ -1,0 +1,24 @@
+2001.11.10 -- 1.06  
+  emprow tot_col*2 hosszú
+
+2001.05.08 -- 1.05  
+  inicializ l s jav¡tva, kis/nagybet– megtartva
+
+2000.01.26 -- 1.04  
+  batch m¢d nem t”rli a k‚perny“t
+
+2000.01.12 -- 1.03
+  Portolva UNIX-ra, egys‚ges k¢drendszer
+
+1999.05.20 -- 1.02
+  PRG2PPO-val ford¡tva, inkompatibilit sok sz–rve
+
+1999.02.09 -- 1.01
+
+  ExtractName jav¡tva, hogy ilyen bemenettel is m–k”dj”n:
+
+      page ..\penzbizo\printker -gO
+  
+  az eredm‚ny printker.out ..\penzbizo\-ban keletkezik.
+   
+  

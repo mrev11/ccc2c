@@ -1,0 +1,6 @@
+-ltutil 
+-d. 
+-d$(CCCDIR)/tabobj/utility.src 
+-d$(CCCDIR)/tabobj/utility.src/srcw32
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+export OREF_SIZE=100000
+exec filetime-restore.exe

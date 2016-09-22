@@ -1,0 +1,7 @@
+-bdbaseiii
+-bccc2_btbtx.lib
+
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)
+
+#btbtx-bôl kell a memókezelés, és még néhány dolog
+

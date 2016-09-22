@@ -1,0 +1,31 @@
+
+# Verziószámozás.
+# Dinamikusan változtatható ikon, enabled, text, tooltip.
+# Getek picture-je dinamikusan változtatható. 
+# Listboxok listája dinamikusan változtatható.
+# Editálható browse, PictureFieldbõl TablecellEditor. 
+# A picture-ben jelezzük egy oszlop editálhatóságát.
+# Filé upload, download.
+# Remote directory list, mkdir, rmdir, file delete.
+# Jelszómezõ. Az alkalmazás átküld egy véletlenszámot, ebbõl és a 
+# jelszóból képzünk egy MD5 hasht, ezt küldjük vissza ellenõrzésre.
+# SSL kommunikáció (sslforward segédprogram). 
+# Kihagyva a régi TBrowse osztály.
+# Fókuszkezelõ üzenetek kidolgozása. Tetszõleges kontrollra adni 
+# a fókuszt programból. Speciális eset lapozni egy tabbedpane-ben.
+# Kérdés: hogyan lehet észrevenni, hogy lapoztak egy tabbed pane-ben?
+# Gyorsító billentyûk. Jelenleg a terminál csak egérrel mûködik,
+# illetve a Jáva default billentyû akcióit érti.
+
+ 
+Nagy text dokumentumok terminál oldali megjelenítése.
+Egy text dokumentum "nagy", ha nem célszerû egyben átküldeni 
+a hálózaton.
+
+Remote open, read/write, nyomtatás. 
+Kérdés, hogy az upload/download mellett kellenek-e ezek egyáltalán.
+
+Famegjelenítõ kontroll, TextArea kontroll, HTML megjelenítõ kontroll.
+
+SSL kommunikáció támogatása proxyn keresztül.
+ 

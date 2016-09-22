@@ -1,0 +1,5 @@
+#!/bin/bash
+export SQLDEBUG=on
+
+tabtest1.exe  
+

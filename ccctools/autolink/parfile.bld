@@ -1,0 +1,4 @@
+-d.
+
+-bccc$(CCCVER)_crypto
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)

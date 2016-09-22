@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# lib, hogy ne húzza be a fullscreen könyvtárakat
+# sajnos a dbaseiii könyvtár így nem önjáró:
+# a memókezeléshez linkelni kell egy táblaobjektumot
+
+bapp_unix0.b -ldbaseiii
+
+cp -pf obj$CCCBIN/*.lib $CCCDIR/usr/lib/$CCCBIN 
+#cp -pf obj$CCCBIN/*.so  $CCCDIR/usr/lib/$CCCBIN 
+ 

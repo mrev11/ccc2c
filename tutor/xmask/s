@@ -1,0 +1,4 @@
+#!/bin/bash
+export CCC_UI=uif
+#export CCC_UI=uic
+xmask.exe

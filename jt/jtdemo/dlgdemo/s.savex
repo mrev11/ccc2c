@@ -1,0 +1,6 @@
+-s/home/vermes/jt/jtdemo/dlgdemo
+-r:ppo:objlin:html:semaphor.tmp:
+-x.exe.bak.log.
+-lxout*
+-lxjterm.xml
+-mw

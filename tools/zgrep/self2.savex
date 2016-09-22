@@ -1,0 +1,6 @@
+-s$(CCC2DIR)/tools/zgrep
+-r:ppo:
+-lrobj*
+-x.bak.
+-lxstred.prg
+-mw

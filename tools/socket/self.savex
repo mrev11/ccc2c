@@ -1,0 +1,3 @@
+-s$(CCCDIR)/tools/socket
+@$(CCCDIR)/tartalom.savex
+-mw

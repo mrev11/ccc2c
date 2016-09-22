@@ -1,0 +1,95 @@
+
+
+#define VERSION "CCC2-1.0.13"
+
+#ifdef _HISTORY_
+
+2011.07.08 -- 1.0.13
+  tstru: path kezeles javitva
+  tstru, tview: fullpath konverzio relativ path-ra
+
+2008.09.08 -- 1.0.12
+   bt2dbf/bt2txt [-c ctrl] [-f] fname
+
+2008.05.29 -- 1.0.10
+   datidx és btbtx formátumnál 10-nél hosszabb (max 32) mezõnevek.
+
+   Maguk a motorok nem változtak.
+   A DATIDX és BTBTX motor magától mûködik hosszú mezõnevekkel is
+   A DBFCTX motor természetesen nem tud hosszú mezõnevekkel mûködni.
+   A utilityk (tstru, xstru, tview, xview, ddict2) kicsit változtak, 
+   hogy kezelni lehessen a hosszú mezõneveket.
+
+   A dat2dbf, bt2dbf (egyelõre) eredeti állapotukban maradtak. 
+   Mûködnek, de lecsonkítják a mezõneveket 10 karakterre. 
+   Emiatt a dbf exportban egyezõ mezõnevek is keletkezhetnek.
+
+   A tableobjektum loaddbf metódusa szintén eredeti állapotában maradt. 
+   Az olyan dbf-beli mezõket, amiknek nincs megfelelõje a 
+   táblaobjektumban (mert pl. lerövidült a neve) nem importálja.
+
+   Tehát csak az interaktív táblaeditáló programokban van változás.
+
+2006.02.20 -- 1.0.09
+  Tview indításakor beállítható az index (-c opció).
+
+2001.10.15 -- 1.0.08
+  xstru/dstru elszállt, ha mezõ appendbõl esc-pel kiléptek.
+
+2001.08.29 -- 1.0.07
+  xstru elszállt, ha index appendbõl esc-pel kiléptek.
+
+2001.07.07 -- 1.0.06
+  tabModRecord helyett tabEditRecord a könyvtárból.
+
+
+2000.07.15 -- 1.0.05
+ 
+  Zap, exclusive open ‚s rekord lock funkci¢val b“v¡tve.
+  A z editor billenty–kezel“je  tv‚ve.
+
+2000.05.11 -- 1.0.04
+
+  kdirseek gyorskeres“je inicializ lva van az aktu lis ‚rt‚kekkel
+
+2000.03.18 -- 1.0.03
+  
+  A sz‚les picture-”k transzform ci¢ja jav¡tva.
+
+  brwedit.prg (alapk”nyvt r) jav¡tva, ezzel a bstru ‚s
+  t rsai elsz ll sa megsz–nt.
+
+
+1999.06.15 -- 1.0.02
+
+  implement ci¢ DBFCTX-re is (indexek n‚lkl)
+  tov bbi jav¡tgat sok
+
+
+1999.06.13 -- 1.0.01
+ 
+  A strukt£ra m¢dos¡t s algoritmusa a k”vetkez“ volt:
+  
+  1. az oszlopok t”mbj‚t {}-re  t¡rtuk,
+  2. az indexek t”mbj‚t {}-re  t¡rtuk,
+  3. tabAddColumn() h¡v sokkal betettk az £j oszlokoat,
+  4. tabAddIndex() h¡v sokkal betettk az £j indexeket,
+  5. az ¡gy manipul lt objektummal tabUpgrade-et csin ltunk.
+  
+  Ez azonban ROSSZ, mert a rekordbuffer hossza nem inicializ l¢dik,
+  az £jonnan betett mez“k offsetei rossz ‚rt‚kek, ami mindenf‚le
+  GPF-re vezet, ‚s a m¢dos¡tott fil‚ teljesen elromlik. 
+  
+  Helyette ez a jav¡tott algoritmus kell:
+  
+  1. tabNew0()-val vadonat £j objektumot csin lunk
+  2. tabAddColumn() h¡v sokkal betesszk az £j oszlokoat
+  3. tabAddIndex() h¡v sokkal betesszk az £j indexeket
+  4. az objektummal tabUpgrade-et csin lunk
+ 
+
+  Oszlopnevek, t¡pusok, hosszak, index oszlopok ellen“rz‚se.
+ 
+  Rengeteg kisebb nagyobb egy‚b jav¡t s.
+
+#endif

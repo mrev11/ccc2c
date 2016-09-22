@@ -1,0 +1,3 @@
+-s$(CCCDIR)/jt/jtlib
+-i.prg.
+-m0

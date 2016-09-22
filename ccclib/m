@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mk_ccc
+mk_ui_
+mk_uic
+

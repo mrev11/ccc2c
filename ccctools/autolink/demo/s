@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#futtatashoz szukseges
+export CCC_AUTOCACHE=/run/shm/autocache
+
+
+#ha nincs kesz exe, ujralinkel
+#rm  -f $CCC_AUTOCACHE/*.exe
+
+
+#CCC_AUTOCACHE nelkul nem fut
+#unset CCC_AUTOCACHE
+
+
+xbrwarr.exe

@@ -1,0 +1,8 @@
+ 
+-bccc$(CCCVER)_xmlrpc
+-bccc$(CCCVER)_xmldom
+-bccc$(CCCVER)_socket
+-bccc$(CCCVER)_sslsocket
+-bccc$(CCCVER)_crypto
+ 
+BUILD_EXE=..

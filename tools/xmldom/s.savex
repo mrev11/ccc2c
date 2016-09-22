@@ -1,0 +1,6 @@
+-s$(CCCDIR)/tools/xmldom
+-r:ppo:
+-lrobj*
+-i.prg.cpp.lem.lex.ch.h.xml.
+-lilog*
+-mw

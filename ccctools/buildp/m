@@ -1,0 +1,16 @@
+#!/bin/bash
+# FreeBSD-n 
+# build.exe nem tudja megát felülírni,
+# ezért eldugjuk a ppo-ban.
+
+if ! test -d ppo; then
+    mkdir ppo
+fi
+
+bapp_unix_.b  "BUILD_EXE=ppo" "BUILD_SHR=static"
+
+if test ppo/build.exe -nt $CCCDIR/usr/bin/$CCCUNAME/build.exe; then
+    cp -p ppo/build.exe  $CCCDIR/usr/bin/$CCCUNAME/build.exe
+fi
+
+ldd `which build.exe`

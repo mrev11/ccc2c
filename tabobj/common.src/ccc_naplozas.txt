@@ -1,0 +1,32 @@
+
+Új naplózás funkciók:
+
+- Táblákat ki lehet zárni a naplózásból a CCC_TRANSACTION_LOG_XTABLES
+  környezeti változóval. A táblákat ugyanúgy kell megadni, mint a 
+  CCC_TRANSACTION_LOG_TABLES-nél.
+
+- A lezáródott log fájlokat el lehet tenni egy aldirektoriba a 
+  CCC_TRANSACTION_LOG_ARCDIR környezeti változóval. Ha ez nem üres,
+  akkor az elkészült(lezáródott) log fájlok ide kerülnek.
+
+- Logolási szintek beállíthatóak. Az alkalmazások beállíthatnak logolási
+  szinteket a tabSetLogFuncion(functionName,level) függvény segítségével.
+  Környezeti változóval lehet szabályozni, hogy milyen szint kerüljön
+  logolásra. Mj.: Az alkalmazás a tabGetLogFuncion(functionName,level)
+  függvénnyel lekérdezheti, hogy milyen szint van beállítva.
+
+  CCC_TRANSACTION_LOG_LEVEL környezeti változó. Értéke:
+  - üres: mindent logol.
+  - 'all': mindent logol
+  - szám: minden olyan szintet logol, aminél az alkalmazás szintje
+    az itt megadott szám alatt van vagy vele egyenlõ.
+
+  CCC_TRANSACTION_LOG_FUNC: Itt felsorolhatunk <nev>:<szint> párokat
+     vesszõvel elválasztva. Ha egy alkalmazás a <nev> funkcióra adott
+     meg szintet, akkor ez a szint lesz érvényes és nem a
+     CCC_TRANSACTION_LOG_LEVEL-ben megadott szint. A <szint> értékei
+     ugyanazok lehetnek, mint a CCC_TRANSACTION_LOG_LEVEL-ben.
+
+
+  
+

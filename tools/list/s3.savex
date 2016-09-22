@@ -1,0 +1,4 @@
+-s$(CCC3DIR)/tools/list
+-lrobj*
+-x.bak.
+-mw

@@ -1,0 +1,10 @@
+-s$(CCCDIR)/ccctools/ppo2cpp
+#-i.cpp.lem.lex.h.ver.
+#-lr*
+-x.bak.exe.
+-r:ppo:
+-lrobj*
+-lxout*
+-lxlog-*
+-mw
+

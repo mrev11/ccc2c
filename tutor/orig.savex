@@ -1,0 +1,9 @@
+-s/opt/ccc2/tutor
+-r:ppo:
+-lrobj*
+
+-r:tran:websrv:
+-r:xbrwarr:rawstring:
+
+-x.savex.bak.exe.
+-md

@@ -1,0 +1,50 @@
+
+libcat, autolink kiserleti projekt, 
+statikus linkelessel helyettesitjuk a dinamikus linkelest.
+
+A libcat program a normal linkeleskor is keletkezo
+rsplink valaszfajl alapjan keszit egy olyan csomagot,
+ami tartalmaz egy linkelo/indito programot (autolink),
+es tartalmazza a statikus linkeleshez szukseges obj es 
+lib fajlokat. Az igy keszulo csomag kapja az exe nevet.
+A csomag attol lesz vegrehajthato, hogy az elejere van
+masolva az autolink program.
+
+A vegleges exe helyett az autolink program indul el,
+kipakkolja a csomagot, osszelinkeli, es exec-kel inditja.
+Ekozben figyeli, hogy a CCC_AUTOCACHE direktoriban
+van-e mar korabban elkeszult program, es ha van, akkor 
+eleg uj-e: Ha ujabb, mint a program linkelesehez
+szukseges (kulso)  konyvtarak, akkor ujralinkeles nelkul 
+a cache-bol inditja a programot. Az ujralinkeles csak akkor 
+mukodik, ha mukodokepes a fejleszto kornyezet (a linker), 
+es a program linkelesehez szukseges kulso konyvtarak 
+az eredeti helyukon vannak. Ha a linkeles nem lehetseges, 
+de a cache-ben van korabbi peldany, akkor az indul el.
+
+Kornyezeti valtozok
+ 
+CCC_AUTOCACHE
+    Itt jonnek letre a munkafajlok, es itt vannak a 
+    tenylegesen osszelinkelt exe-k. Nincs default erteke, 
+    ha hasznalni akarjuk az autolinket, akkor ezt meg kell 
+    adni. Linuxon peldaul lehet /run/shm/autocache.
+
+CCC_AUTOLINK
+    Annak a fajlnak a specifikacioja, amit a libcat program
+    a vegrehajthato csomag elejere rak. Ha nem adunk meg mast, 
+    a default: $CCCDIR/usr/bin/$CCCUNAME/autolink.exe.
+
+BUILD_BAT
+    Ez a build-re hat. A valtozo erteke egy direktori 
+    specifikacio, a build innen veszi a programkeszito
+    scripteket. Az autolink rendszert az kapcsolja be,
+    hogy olyan BUILD_BAT-ot adunk meg, amiben libcat-os
+    linkeles van.
+
+
+Linuxon nem nagyon lesz szukseg erre, mert az so-s 
+linkeles jobb, de Windowson nincs normalis dinamikus
+linkelesi lehetoseg, a dll-ek CCC-vel nem hasznalhatok.
+
+    

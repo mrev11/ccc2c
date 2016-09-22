@@ -1,0 +1,7 @@
+-sccc$(CCCVER)_jt
+
+# Ha nincs kéznél az openssl könyvtár,
+# akkor is le lehet fordítani a programot SSL támogatás nélkül
+# ki kell kommentezni az alábbi sort:
+BUILD_PRE=-dSSL_SUPPORT
+# és az alkalmazások linkeléséből ki kell venni ccc3_sslsocket-et.

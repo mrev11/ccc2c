@@ -1,0 +1,10 @@
+-mlist
+-d.
+-d$(CCCDIR)/ccclib/src/uic/termapi
+-d$(CCCDIR)/ccclib/src/uic/screenbuf
+
+-bccc$(CCCVER).lib
+-bccc$(CCCVER)_uic.lib
+
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)
+

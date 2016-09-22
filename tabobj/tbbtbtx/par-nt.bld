@@ -1,0 +1,8 @@
+-lccc2_btbtx 
+
+-d.
+-dbtree
+-d$(CCCDIR)/tabobj/common.src
+-d$(CCCDIR)/tabobj/common.src/srccpp
+
+ 

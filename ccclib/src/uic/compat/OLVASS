@@ -1,0 +1,12 @@
+
+Kiegeszitesek, hogy a konyvtar mukodjon CCC2-ben is:
+
+convtab_cwi2lat : CWI ekezeteseket konvertal Latin2-re
+convtab_inkey   : CCC3 inkey kodokat konvertal CCC2 inkey kodokra
+convtab_lat2ucs : Latin2 ekezeteseket es CCC dobozrajzolokat konvertal UCS-re 
+global.h        : CCC2 vagy CCC3-bol (mindegy), kell a kulon forditashoz
+inthash.h       : integer hash-eket generalo osztaly (a konverziokhoz)
+
+
+qout.cpp        : CCC3-bol athozva (CCC3-ban ez az alapkonyvtarban van)
+screenchar.cpp  : CCC3-bol idehozva (CCC3-ban ez az alapkonyvtarban van)

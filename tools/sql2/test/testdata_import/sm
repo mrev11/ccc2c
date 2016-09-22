@@ -1,0 +1,4 @@
+#!/bin/bash
+DBDRIVER=mysql
+#export POSTGRES_CONNECT=
+. import.b

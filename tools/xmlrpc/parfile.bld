@@ -1,0 +1,3 @@
+-sccc2_xmlrpc
+
+BUILD_PRE=-dSSL_SUPPORT

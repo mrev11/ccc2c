@@ -1,0 +1,3 @@
+#!/bin/bash
+test-alert.py  -jtauto -jtdebug
+ 

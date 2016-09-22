@@ -1,0 +1,3 @@
+-s$(CCCDIR)/tools/sql2
+@$(CCCDIR)/tartalom.savex
+-mw

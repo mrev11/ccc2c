@@ -1,0 +1,164 @@
+
+#define VERZIO  "5.2.0"
+
+
+#ifdef NOT_DEFINED
+
+2016.09.16 -- 5.2.0
+   A -pli,-plx parametereket fajlban is meg lehet adni:
+   
+   -pli@<filespec>
+   
+   A '-pli'-t nem egy minta koveti, hanem a @<filespec>.
+   A program beolvassa a fajlt, aminek soraiban egy-egy minta  
+   kell legyen (-pli nelkul). A sorokbol ('-pli'-t hozzaadva) 
+   kepez egy -pli opciot, amit hozzaad a parameterlistahoz. 
+   Igy nagyon sok minta (pl. programmal listazott fajlnev) 
+   megadhato -pli opciokent.
+   
+   Azokat a -pli/-plx mintakat, amikben nincs '*' vagy '?'
+   karakter nem a like fuggvennyel probalja illeszteni,
+   hanem beteszi a plihash/plxhash tablakba, es mintaillesztes
+   helyett hash keresest vegez. Ez felgyorsitja a programot,
+   ha sok konkret filespecet tartalmazo -pli opcionk van.
+   
+   megszunt shortcutok
+   R shortcut megszunt (reread, felesleges)
+   S shortcut megszunt (save, veszelyes, utkoztek: save,skip,sort)
+   F shortcut megszunt (freshen, veszelyes)
+   
+   megmaradt shortcutok
+   T Text compare
+   B Binary compare
+   S Sort
+   
+   uj shortcut
+   ALT-S Skip       a skip menu megszunt, helyette shortcut
+   ALT-R ResetOld   visszaall: az ujat felulirja a regivel (vagy torli) + skip
+   ALT-N CopyNew    frissit: az ujjal felulirja a regit + skip
+   
+   play.prg atirva
+   s_work default erteke "./" helyett ""
+   -s es -w additivitasa vegleg megszunt (ertelmetlen)
+   usage atirva
+   at lesz az egesz nevezve ddsync-re
+
+2016.08.14 -- 5.1.1
+   Az elozo javitas elrontotta a  @savex parameterfajlok 
+   ertelmezesenek sorrendjet, vissza kellett allni a korabbi 
+   megoldasra.
+
+2016.07.29 -- 5.1.00
+   A -s opcio korabban additiv volt, most a kesobb megadott 
+   ertek atirja az elozot. A regi mukodesi mod elerheto, 
+   ha egyszerre adjuk meg a directorykat (nincs sok ertelme).
+   A -s opcio defaultja '.' (korabban az additivitas miatt
+   nem lehetett defaultja, hianyzo -s-re helpet adott).
+   Uj opcio: helpet ad -h-ra.
+   Opciok elemzese a szokasos if..elseif..elseif..else..end 
+   szerkezettel, hibat jelez nem ertelmezett opciora.
+   Hibat jelez nem talalhato @savex parameterfajlra.
+   Korabban a @savex parameterfajlok parametereit forditott
+   sorrendben ertelmezte (vajon miert), most normalisan.
+   Kihagyja a parameterfajlok # komment sorait (korabban ezek 
+   ugy mentek at, hogy nem ertelezett opcionak szamitottak, 
+   amit a program warning nelkul eldobott).
+   Ekezetlenites, hogy CCC2-ben is olvashato legyen.
+
+2016.07.13 -- 5.0.00
+   mechanikusan szetdarabolva kisebb prg modulokra
+   a static valtozok elerese setget fuggvenyekkel
+   osszehasonlito browse atirva jobb technikaval
+
+2016.07.13 -- 4.0.02
+  -mD -mW es -mS unioja
+  -mD mindket oldalon minden elterest listaz
+
+2016.06.17 -- 4.0.01
+  -m2 az egyezoket listazza.
+
+2016.06.09 -- 4.0.00
+  egysegesitett CCC2 es CCC3 verzio
+  lenyegeben megegyezik a CCC3 verzioval
+
+2014.03.19 -- 3.0.13
+  dirsep konverzio s_plikex-ben es s_plikei-ben.
+
+2014.02.18 -- 3.0.12
+  filename escaping in cmp.
+
+2013.07.02 -- 3.0.11
+  savescreen/restscreen atrakva dolist-be.
+
+2012.04.30 -- 3.0.10
+  -plx  kihagyas relativ path + filenev alapjan (like)
+  -pli  bevetel  relativ path + filenev alapjan (like)
+
+  Hasonlo, mint a korabbi -lx, -li de azok csak a filenev alapjan
+  mukodtek, mig az uj opciok a path kozos reszet is nezik.
+
+2011.04.13 -- 3.0.09
+  Uj rendezes: sortBaseName
+
+2010.06.28 -- 3.0.08
+  Directory bejaraskor a message uzeneteket dispbegin/dispend-del
+  10-esevel osszefogja.
+
+2008.09.17 -- 3.0.07x
+  Idokorrekcional szetvalasztja a binaris es textfilek esetet.
+ 
+  A browse ujraolvasasat a break("X") valtja ki.
+  Minden mas kivetelt meghagyunk a default hibakezelonek.
+
+2008.07.25 -- 3.0.06
+
+  Uj applykey fv.: 
+    F3(list)-ra F4(edit)-re kiterjesztestol fuggo muveletek.
+
+  uj opcio --list, pl: --list:ogg=op %f 
+  uj opcio --edit, pl: --edit:ogg=oe:*=less:
+  
+  A kapcsolok additivak. %f helyere behelyettesiti a filenevet.
+  Ha nincs a parameterben %, akkor a vegere rak egy %f-et.
+
+  CVS-es szemetek kiveve
+  
+  Parameterfilek olvasasakor nem szokozoknel, hanem sorvegeknel darabol, 
+  azaz (egy sor)==(egy parameter). Nem lehet egy sorba tobb parametert irni, 
+  viszont nincs gond a parameterek belsejeben levo szokozokkel.
+ 
+
+//#define VERZIO  "3.0.05"  //2008.04.17 datetime korrekcio WORK-ben is (csak hatrafele modosit)
+//#define VERZIO  "3.0.04"  //2008.03.06 osszehasonlitas elotti transzformacio
+//#define VERZIO  "3.0.03"  //2008.02.18 F4-re edital
+//#define VERZIO  "3.0.02"  //2006.12.27 angolra forditva
+//#define VERZIO  "3.0.01"  //2006.05.31 utolso sor kihagyasakor elszallas javitva
+//#define VERZIO  "3.0.00"  //2006.04.13 unicode port
+//#define VERZIO  "2.2.01"  //2006.01.30 mindate stod formaban is megadhato
+//#define VERZIO  "2.2.00"  //2005.12.01 cvs support
+//#define VERZIO  "2.1.19"  //2005.11.30 file/dir symlinkek kulon
+//#define VERZIO  "2.1.18"  //2004.07.29 inkludalt parameterek beszurva
+//#define VERZIO  "2.1.17"  //2003.07.27 linkek elkerulese az uj directory()-val
+//#define VERZIO  "2.1.16"  //2003.07.24 optimalizalas
+//#define VERZIO  "2.1.15"  //2003.02.10 diff sorrendje ido szerint
+//#define VERZIO  "2.1.14"  //2003.01.01 terminal inkompatibilitas
+//#define VERZIO  "2.1.13"  //2002.10.14 $(ENVIRONMENT) helyettesitese
+//#define VERZIO  "2.1.12"  //2001.07.29 uj menu: list
+//#define VERZIO  "2.1.11"  //2001.07.21 symlinkek kihagyva (-y)
+//#define VERZIO  "2.1.10"  //2001.06.27 parameterek argv()-vel
+//#define VERZIO  "2.1.09"  //2000.10.02 felesleges ferase kiveve
+//#define VERZIO  "2.1.08"  //2000.05.30 idok masolasakor egysegesetes
+//#define VERZIO  "2.1.07"  //2000.04.10 TAB->space(4) osszehasonlitaskor
+//#define VERZIO  "2.1.06"  //2000.03.10 symbolic link
+//#define VERZIO  "2.1.05"  //2000.03.02
+//#define VERZIO  "2.1.04"  //2000.03.01 dirdirmake javitva
+//#define VERZIO  "2.1.03"  //2000.02.28 -f (find) opcio
+//#define VERZIO  "2.1.02"  //2000.02.26 -lr (like) opcio
+//#define VERZIO  "2.1.01"  //2000.02.22 -lx -li (like) opciok
+//#define VERZIO  "2.1.00"  //2000.02.17 portolas Linuxra
+//#define VERZIO  "2.0.03"  //2000.01.26 ext keresese javitva
+//#define VERZIO  "2.0.02"  //1999.05.11 . opcio
+//#define VERZIO  "2.0.01"  //1999.05.11 -cText, -r* opciok
+
+
+#endif

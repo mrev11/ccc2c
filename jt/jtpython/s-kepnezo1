@@ -1,0 +1,3 @@
+#!/bin/bash
+kepnezo1.py  -jtauto & # -jtdebug
+ 

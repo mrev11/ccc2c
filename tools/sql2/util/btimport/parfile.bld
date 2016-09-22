@@ -1,0 +1,7 @@
+-bccc2_sql2_oracle
+-bccc2_sql2_postgres
+-bccc2_tds
+-bccc2_btbtx
+
+BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)
+

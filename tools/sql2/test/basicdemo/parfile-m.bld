@@ -1,0 +1,10 @@
+-d.
+-dcompat
+-dtds/code_generated
+-dconnect-my
+
+-b../$$(testdata_lib)
+-bccc2_sql2_mysql
+
+BUILD_EXE=exe-my
+

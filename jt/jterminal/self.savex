@@ -1,0 +1,4 @@
+-s$(CCC3DIR)/jt/jterminal
+-x.class.jar.bak.
+-lxlog*
+-mw

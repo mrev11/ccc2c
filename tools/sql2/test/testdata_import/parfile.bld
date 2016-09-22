@@ -1,0 +1,8 @@
+#sajnos ezt bele kell linkelni
+-b../$$(testdata_lib)
+
+-bccc2_btbtx
+-bccc2_sql2_oracle
+-bccc2_sql2_postgres
+-bccc2_sql2_mysql
+-bccc2_sql2_db2

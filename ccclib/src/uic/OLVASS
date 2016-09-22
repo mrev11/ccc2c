@@ -1,0 +1,54 @@
+
+Olyan (alternativ) ccc2_uic konyvtar, 
+amivel a CCC2 programok CCC3 terminalban jelennek meg.
+
+Ha ccc2-ben a /opt/ccc2/usr/lib/lin/libccc2_uic.so
+konyvtarat helyettesitjuk az itt keszulo so konyvtarral,
+akkor a ccc2 progamok (elvileg) ugyanugy fognak mukodni, kiveve, 
+hogy a ccc3-as terminalt kell hasznalni a megjeleniteshez.
+A programokat nem kell ujraforditani vagy linkelni.
+
+
+Ezek a forrasok CCC2-ben es CCC3-ban megegyeznek
+(nincsenek idemasolva, hanem a CCC3DIR alol fordulnak):
+    uic/*
+    uic/screenbuf/*
+    uic/termapi/*
+
+Kiegeszitesek, hogy a konyvtar mukodjon CCC2-ben is:
+    uic/compat/*
+
+
+Miert jo a ccc3 terminal: 
+
+1) Unicode fontokat hasznal, minden megvan benne, 
+   peldaul dobozrajzolok, Konto farok karakterek.
+   Skalazhatok a fontok.
+
+2) Sokkal egyszerubb: Egyfele uzemmod van, ami a regi
+   konyvtar remote uzemmodjanak felel meg, de a hasznalat
+   megis egyszeru, mert a lokalisan futo programok automatikusan
+   elinditjak maguknak a terminalt.
+
+3) Sokkal kevesbe fugg a kornyezettol: Az alternativ uic-ban 
+   egyaltalan nincs kozvetlen megjelenites, ezert Linuxon 
+   es Windowson a szerver oldali kod ugyanaz, a terminal oldali 
+   kod pedig nagyreszt ugyanaz.
+     
+4) Van viszonylag normalisan mukodo ncurses terminal.  
+  
+
+Inkompatibilitasok:
+
+  Az alternativ uic-beli qout nem csinal karakterkonverziot.
+
+  Az alternativ uic konyvtar nem konvertalja a cwi karaktereket,
+  hanem feltetelezi, hogy a programok es az adatok is Latin2 kodolasuak,
+  egyebkent konnyen bele lehetne tenni a konverziot.
+  
+  Ha az uic-et statikusan linkelo programjaink vannak (mint z), 
+  akkor gond lehet, hogy ugyanaz a terminal csak egyfele programmal
+  kepes mukodni (ccc2 terminal a regivel, ccc3 terminal az ujjal).
+
+  Tovabbi tesztelesre szorul.
+  

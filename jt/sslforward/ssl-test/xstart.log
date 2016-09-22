@@ -1,0 +1,73 @@
+
+ACCEPT: 2016-06-02 14:48:45 127.0.0.1      46000 Empty Plain      27399
+ACCEPT: 2016-06-02 14:48:48 127.0.0.1      46001 Empty SSL forw      27423
+ACCEPT: 2016-06-02 14:48:52 127.0.0.1      46001 Empty SSL forw      27448
+ACCEPT: 2016-06-02 14:48:55 127.0.0.1      46002 Empty SSL forw, client-auth      27473
+ACCEPT: 2016-06-02 14:48:58 127.0.0.1      46008 Empty SSL      27498
+ACCEPT: 2016-06-02 14:49:02 127.0.0.1      46008 Empty SSL      27522
+ACCEPT: 2016-06-02 14:49:05 127.0.0.1      46009 Empty SSL, client-auth      27546
+default error block evaluated
+errorclass: error
+description: SIGINT (Interrupt from keyboard, Crlt-C)
+subcode:          2
+subsystem: SIGNAL
+  called from deferror(216)
+  called from defsignal(72)
+  called from _blk__1(0)
+  called from select_sckdesc(0)
+  called from select(39)
+  called from main(112)
+-----------------------------------------------------------
+ Variable Stack
+-----------------------------------------------------------
+0: STRING length=10 oref=7f309ba1a0b8 "yyyy-mm-dd"
+1: STRING length=10 oref=7f309ba1a0d0 "xstart.log"
+2: BINARY length=40 oref=7f309ba1a220 "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ... "
+3: ARRAY length=6 oref=7f309ba1a238
+4: NUMBER 1
+5: NUMBER 2
+6: NUMBER 3
+7: NUMBER 4
+8: NUMBER 5
+9: ARRAY length=5 oref=7f309ba1eed0
+10: BINARY length=40 oref=7f309ba2e5a8 "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ... "
+11: BLOCK oref=NULL
+12: NUMBER 6
+***** function main
+0: STRING length=11 oref=7f309ba1a010 "parfile.xml"
+1: STRING length=40 oref=7f309ba1a028 "/home/vermes/ccc3/jt/sslforward/ ... "
+2: OBJECT subtype=5 oref=7f309ba22a58
+3: REFARRAY length=5 oref=7f309ba2e560
+4: REFNUMBER 6
+5: NUMBER 5
+6: NUMBER 10
+7: NIL
+8: NIL
+9: NUMBER 27546
+10: ARRAY length=7 oref=7f309ba2db10
+11: STRING length=28 oref=7f309ba209a0 "SSLFORW_CAFILE=localhost.pem"
+***** function select
+12: ARRAY length=5 oref=7f309ba2e560
+13: NIL
+14: NIL
+15: NUMBER 5000
+16: NUMBER 4
+***** function select_sckdesc
+17: ARRAY length=5 oref=7f309ba2e560
+18: NIL
+19: NIL
+20: NUMBER 5000
+***** function _blk__1
+21: BLOCK oref=NULL
+22: NUMBER 2
+***** function defsignal
+23: NUMBER 2
+24: OBJECT subtype=6 oref=7f309ba2f028
+***** function deferror
+25: OBJECT subtype=6 oref=7f309ba2f028
+26: NIL
+27: NIL
+28: STRING length=0 oref=7f309ba2f250 ""
+29: ARRAY length=0 oref=7f309ba2f268
+30: NIL
+-----------------------------------------------------------

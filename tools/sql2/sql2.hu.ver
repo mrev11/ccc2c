@@ -1,0 +1,401 @@
+2015.02.03 sqlqueryNew("nonselect") alak mukodesenek egysegesitese.
+  sqlqueryNew("nonselect") minden interfeszben hibat ad.
+  Mindenhol egysegesitve az err:subcode-ok beallitas. 
+
+2015.02.02 sql2.postgres.sqlquery atdolgozva.
+  Megszunt az automatikus 'declare CURSORID cursor for ...' kiegeszites.
+  A program alkalmazkodik ahhoz, hogy a queryben van-e 'declare cursor',
+  azaz a 'declare CID cursor for select ...' alaknal kulon fetch-elget.
+  A kurzorazonosito elhagyhato, azaz ha a queryt CID nelkul adjak meg 
+  (declare cursor for select ...), akkor automatikus CID keszul.
+  Rowsetben es queryben: A szalbiztonsag erdekeben static valtozo helyett 
+  con:__cursorcount__ (uj attrib) szamlalja a kurzorokat. A deklaralt 
+  kurzorok lezarasa (rowsetben is, queryben is) rahagyhato a pg-re.
+
+  Elavult ismeret, miszerint a 'declare CID cursor for select ...' alaku 
+  queryben nem lehet 'for update' clause. Lehet, hatasara a fetch lockol.
+  (A 8.2-es doksiban meg hiba, a 8.3-as doksi mar lehetsegesnek mondja.)
+
+2015.02.01 sql2.mysql.sqlconnection.initialize javitva
+  sql_mode beallitas: set session sql_mode='ANSI_QUOTES,no_backslash_escapes'
+  tdsutil/dom2prg-ben mutex vedelem az osztaly regisztralasa korul
+
+2015.01.27 sql2.mysql.sqlconnection.initialize javitva
+
+2015.01.26 isolation level beallitas atdolgozva, rowset lock atdolgozva.
+  con:sqlisolationlevel-ben beallithato:
+    ISOL_SER   serializable 
+    ISOL_REP   repeatable read 
+    ISOL_COM   read committed 
+    ISOL_RO    read only 
+    ISOL_RW    read write 
+  rowset lock parameter:
+    NIL    no lock
+    "x"    exclusive lock, wait forever
+    "x0"   exclusive lock, no wait 
+    "x99"  exclusive lock, wait 99 sec
+    "s"    shared lock, wait forever
+    "s0"   shared lock, no wait 
+    "s99"  shared lock, wait 99 sec
+
+2015.01.23
+  con:sqlcommit és con:sqlrollback automatikusan lezárnak minden 
+  függőben levő queryt és rowsetet, és ha volt mit lezárni, 
+  akkor kivételt dobnak. Eredmény: tranzakcióhatáron nem lehet
+  feldolgozás alatt álló (lezáratlan) query vagy rowset.
+  
+  SQLite3 sqlsequence javítva. A bind paraméterrel nem szabad
+  adatbázis objektum neveket helyettesíteni, mert a helyettesítés
+  karakterliterálként történik, vagyis idézőjelbe kerül.
+
+  SQLite3 egyfelhasználós, nincs 'for update'.
+  
+  MySQL beállítja sql_mode='ANSI_QUOTES'-ot.
+  MySQL beállítja sql_mode='no_backslash_escapes'
+  
+  Postgres rowset:next-ben hibakezelés.
+  Postgres query:next-ben hibakezelés.
+
+2015.01.20
+  sql2.db2 interfész
+
+2015.01.03 
+  sql2.mysql interfész
+
+2012.09.20
+  Saját Postgres és SQLite3 prototype deklarációk.
+  Installált Postgres és SQLite3 nélkül is lefordítható a könyvtár. 
+  Windowson is fordul (kipróbálva nincs, kliens DLL-ek kellenének).
+
+2012.05.21
+  sqltabalias (pg/ora) javítva.
+
+2011.07.20
+  sqlquery.getbinary javítva.
+  
+  Az sqlidcase és sqlidquote használata megszűnt,
+  szükség esetén az azonosítókat idézve lehet beírni a tds-be.
+  
+  Az order(exp1,exp2,...) tagban ugyanolyan kifejezéslista lehet, 
+  mint az order by klózban (korábban csak oszlopnevek lehettek).
+  
+  A bind változókat a from klózban (tabjoin) is helyettesíti.
+  A jeed módosult, hogy ezeknek is értéket lehessen adni.
+
+
+2011.05.04
+  sqlerror hierachia átszervezve
+  új:  sqltranctlerror (Oracle, Postgres, ezeket érdemes ismételni)
+  új:  sqluniqueconstrainterror (Oracle, Postgres)
+  új:  sqlnodatafounderror (Oracle serial mód hibája)
+
+    sqlerror
+        ->  sqltranctlerror
+                ->  sqlnodatafounderror
+                ->  sqluniqueconstrainterror
+                ->  sqlrowcounterror
+                ->  sqlconcurrencyerror
+                        ->  sqlserialerror
+                        ->  sqllockerror
+                                ->  sqldeadlockerror
+        ->  sqlconnecterror
+
+2011.04.26
+  sqlerror -> SQLCONCURRENCYERROR -> sqlserialerror
+                                  -> sqllockerror   -> sqldeadlockerror
+           -> sqlconnecterror
+           -> sqlrowcounterror
+
+2011.04.20 
+  INDIKÁTOR VÁLTOZÓK (megváltozott koncepció)
+
+  Korábban az insert/update nem módosította a dirty/null flaget.
+  Az insert utáni visszaolvasással a helyzet megváltozott, 
+  ui. az inserthez kapcsolt fetch mindenképpen módosít.
+  
+  Áttekintés:
+  
+  instance: 
+    empty értékek, minden null, semmi sem dirty.
+
+  select/find:
+    beolvasódnak a tábla adatai
+    a null flag akkor állítódik be, ha a tábla-beli adat null
+    semmi sem dirty
+
+  insert: 
+    a kulcsoknak kötelezően kitöltöttnek kell lennie
+    csak a !null mezők íródnak ki
+    egyes mezők a szerverben default értéket kaphatnak,
+    ezek visszaolvasódnak és a null flagjük törlődik
+    minden dirty flag törlődik
+
+  update: 
+    a kulcsoknak kötelezően kitöltöttnek kell lennie
+    csak a dirty mezők íródnak ki 
+    minden dirty flag törlődik (egy megismételt update már hatástalan)
+    a null flagek változatlanok
+    
+  delete:
+    a kulcsoknak kötelezően kitöltöttnek kell lennie
+    a dirty és null flagek változatlanok
+
+
+2011.04.20
+  Az insert utáni visszaolvasáskor a bufferek cseréje nem elég,
+  mert a visszaolvasákor keletkezett bufferben a memók indikátor 
+  változói nincsenek beállítva. Ezért az indikátor változókat
+  külön át kell másolni (Oracle).
+  
+  Az update törli a dirty flageket (Oracle, Postgres).
+
+
+2011.04.20
+  Oracleben nem lehet elhalasztani a memók beolvasását.
+  Eddig az volt a koncepció, hogy a memó akkor olvasódik be,
+  amikor az alkalmazás hivatkozik az értékére. Ez azonban nem
+  jól működik az ilyen esetekben:
+    
+    row:=table:instance
+    row:key:="key1"
+    row:memo:="vanaki forrón szereti"
+    row:insert
+    con:sqlcommit
+    
+    row1:=table:find({"key1"})
+    row1:key:="key2"
+    row1:insert
+    con:sqlcommit
+    
+  Itt a row1-ben elvileg benne van a "vanaki ..." memó, 
+  aminek key2-höz is ki kell íródnia. De nem íródott ki, 
+  mert a (régi) find nem olvasta be, a program meg nem hivatkozik 
+  rá, a kulcs átírása után pedig már meg sem találná. 
+  Ezért a rowset:next az alkalmazástól függetlenül behozza a memókat.
+  Kivétel az insert utáni visszaolvasó select, ilyenkor a memót
+  nincs értelme visszaolvasni (ui. az insert még csak egy empty_blob-ot
+  írt ki, a tényleges tartalom kiírása később, külön menetben történik).
+  
+  Új metódusa van a soroknak, row:showflags. Olyan mint a show,
+  de max 48 széles mezőn írja ki az értékeket, azután viszont
+  feltünteti a dirty (D) és null (N) flaget. Teszteléshez jó.
+
+
+2011.03.25
+  tableentity:insert visszaolvassa a rekordot, következmény:
+    1) insert megköveteli a kulcsszegmensek kitöltését
+    2) a defaulttal rendelkező mezők értéke visszaolvasódik
+
+  Oracle hiba (feature?): Serializable tranzakcióban egy insertet 
+  közvetlenül követő update/select néha nem találja az éppen előzőleg
+  berakott rekordot. (Feltehetően az indexpage split-je alkalmával.)
+  
+  Workaround:
+  
+  tableentity:insert azonnal visszaolvassa a kiírt rekordot,
+  és ha nem sikerül, akkor sqlserialerrort dob (amivel szemben
+  az alkalmazást fel kell készíteni a tranzakció ismétlésére.)
+  Tapasztalat szerint, ha egyszer működött a select, akkor később már nem 
+  lesz vele baj. A kompatibilitás érdekében ugyanez a visszaolvasás 
+  bekerült a postgres driverbe is (noha ott nincs ilyen hiba).
+  A visszaolvasáshoz szükséges a key segmentek kiolvasása, ami hibát dob, 
+  ha a kulcsok nincsenek kitöltve. Korábban nem volt feltétlenül 
+  szükséges kitölteni a kulcsmezőket, lehetett a mező default értékére 
+  hagyatkozni (de az új, szigorúbb megközelítés jobb).
+  
+  A fenti hiba speciális esete volt javítva a blobok írásánál, 
+  az ottani gyanús üzelmeket (2009.09.27: hibakód csere 1403->8177) 
+  meg lehet szüntetni.
+
+
+  columndef osztályban új attribútum: keyseg
+  Gyakran jól jön, ha keresgélés nélkül is lehet tudni egy oszlopról, 
+  hogy benne van-e a primkey-ben. A keyseg .f.-re inicializálódik, 
+  és akkor kap .t. értéket, amikor tdsutil.dom2prg (1.3.01+) beleteszi 
+  az oszlopot a primkey array-be.
+  
+  tableentity:update figyeli az előbbi keyseg flaget, és a keysegment
+  értékeket akkor sem módosítja, ha egyébként az isdirty .t.-t ad.
+
+
+  Az sqlconnection objektumban külön adminisztrálva a session/transaction 
+  isolation level.
+  
+    con:sqlisolationlevel(newlevel,flag:=.f.)
+  
+  Ha newlevel==NIL, akkor csak lekérdezés történik. 
+  flag==.t. a session isolation level beállítását/lekérdezését végzi
+  flag==.f. (default) a transaction isolation level beállítását/lekérdezését végzi
+  
+
+2010.09.23
+  
+  Postgres escapelés felülvizsgálva, leírás pgsql2.cpp végén.
+  
+  Mindkét adatbáziskezelőben sqlliteral kiegészítve binary típus ággal.
+  Ez az ág kezeli azt az esetet, amikor az sqlbind helyettesít be egy
+  memó értéket az SQL parancs szövegébe. 
+  
+    Eddig helyettesített memókra nem volt megfelelő automatikus escapelés. 
+    Ha a helyettesítendő érték a logikus X típus volt, akkor az sqlbind
+    mindkét driverben elszállt.  Ha a helyettesítendő érték X helyett C 
+    típus volt, akkor a Postgres program sok esetben lefutott, de az Oracle 
+    általában 'invalid hexa value'-t mondott (mert hexában kérné a blobokat).  
+    
+  Ez a javítás nem működik (lefordul, de nem fejti ki a hatását) CCC2-ben, 
+  mert a CCC2 nem tesz különbséget az X és C típusok között, emiatt nem 
+  tud a típusnak megfelelő escapelő eljárást választani. Tehát nem jók az 
+  olyan CCC2 programok, amik memó értéket akarnak sqlbind-dal helyettesíteni.
+  
+2009.09.27
+
+  Az sqlconnection objektum az (új) __isolationlevel__ attribútumban 
+  tárolja az utoljára beállított (session) levelt, amit most le lehet 
+  kérdezni az sqlisolationlevel metódussal.
+
+  oracle.tableentity:create-ban:
+    A table create előtt átvált READ_COMMITTED isolation levelre,
+    mert az Oracle table create nem működik SERIALIZABLE módban.
+    A table create után visszavált az eredeti isolation levelre.
+
+  tableentity:create-ban:
+    Oraclenél előbb a default utána a not null,
+    Postgresnél nem számít a sorrend.
+
+  ocierror-ban:
+    A hibakód és a hibaszöveg minden esetben kiolvasva,
+    a description attribútumba mindig a kiolvasott szöveg kerül.
+
+    Kezelve az "ORA-00604: error occurred at recursive SQL level 1" eset.
+    Ilyenkor a hibaüzenet kétsoros,
+    és a második sor tartalmazza a tényleges hibát.
+    Elő lehet-e azt szedni máshonnan, mint a szövegből?
+    Van-e 2-nél is több soros hiba?
+    Az eddig látott esetekben a 604-es hibát egy
+    "ORA-08177: can't serialize access for this transaction" hiba követi,
+    ezt kell előszedni a második sorból, hogy kezelhető legyen.
+
+  A blobok (memók) beírásakor a visszaolvasó select SERIALIZABLE módban néha 
+  "ORA-01403: no data found" hibát ad. Ilyenkor is segít az egész tranzakció 
+  ismétlése. Ezért a memowrite kicseréli a 1403-as hibát 8177-re.
+
+  Megj: 
+    Az Oracle serializable módban akkor is képes serial errort adni, 
+    ha egyedül fut egy program, azaz biztosan nincs konkurrencia.
+    Tapasztalat szerint ilyenkor a megismételt tranzakció lefut.
+    
+  sqlerror objektumok:  
+    Változott az sqldeadlockerror leszármazása, most két baseclass-a van,
+    sqllockerror, sqlserialerror. Tehát "recover e <sqlserialerror>" most 
+    a deadlockokat is elkapja.
+
+    A sqllockerror, sqlserialerror, sqldeadlockerror objektumok
+    canretry mezeje .t.-re inicializálódik.
+
+
+  Mindkét könyvtárban a connection/statement handlerek nyilvántartása
+  szinkronizálva lett. Ugyanazon a connection-on keresztül egyszerre csak 
+  egy szál dolgozhat (így értelmes), de külön connection-okon keresztül
+  a szálak egyszerre is dolgozhatnak.
+
+
+2009.02.19
+  sqlliteral kibővítve az array típusra:
+    {a,b,c} -> (a,b,c)
+  ahol a tömbelemek az elemi típusok konverziós szabályai szerint
+  konvertálódnak. Pl. az 
+    'x' in :1
+  feltételnél az :1 helyére behelyettesíthető egy array {'x','y','z'}.
+
+2008.03.31
+  Koncepció váltás: Az insert azokat a mezőket küldi a szervernek,
+  amikre az isnull .f.-et ad. Korábban azokat küldte, amikre isdirty
+  .t. volt.
+
+2007.10.29
+  dereferencing type-punned pointer will break strict-aliasing rules
+  E warningok kitisztítása: (void**)&var -> (void**)(void*)&var.
+
+2007.07.05
+  Az insert-nél a null értékű mezőket kihagyjuk.
+  Korábban a nem dirty mezőket írtuk ki, azonban egy
+  column:='' értékadás után a mező null, de nem dirty.
+
+  Visszavéve a módosítás, ami a primary key mezőket automatikusan 
+  not null-ra állította.
+  
+  sqlbind-ben TRANSFORM_NULL_EQUALS
+  Ha az ilyen kifejezésekben mint "expr=:1", a placeholder helyére 
+  null kerül, akkor az "expr=null"-t cseréli "expr is null"-ra.
+  Tipikusan akkor lesz null a placeholder, amikor egy üres stringet,
+  vagy üres dátumot az sqlliteral null-ra cserél.
+
+2007.06.01
+  A Postgres driverben saját escape függvény, ami
+  E'proba \\ooo \\ooo szerencse'0 alakra hozza a bytea típust.
+  Hosszú ideje nem tudnak megállapodni a formátumban.
+  A régebbi szerverek nem fogadják el az E prefixet (8.0.x-ig).
+  Az újabb szerverek E prefixszel szeretik a stringet (8.1.x-től).
+  Állítólag az is szerverfüggő, hogy \ vagy \\ kell-e.
+
+  Az Oracle driverben a tab:instance nem jól inicializálta 
+  az új rowentity bufferét.
+
+  A tds primkey-ben felsorolt oszlopok notnull attribútuma 
+  automatikusan .t.-re van állítva.
+
+  A mkblk_c null-ra állítja a mezőt, ha annak új értéke empty
+  (hasonlóan  az empty dátum értékekhez).  Ha ez nem így volna, 
+  akkor az sqlvalue-ban a trimelésekor szembesülnénk azzal, 
+  hogy az Oracleben nem létezik üres string, pl. '' vagy trim(' ')
+  egyaránt a null-t jelentik. Ha a trimelést hagyjuk el (sqlvalue-ban), 
+  akkor az oszlopleképezéstől függ az érték, pl. nem lesznek egyenlők 
+  különböző hosszú mezőből kiírt értékek (nem lehet rá keresni).
+  Lehetne még a ''-t ' '-vel helyettesíteni kiíráskor (zagyvaság).
+
+  A nem használt mkblk_x törölve.
+  Megjegyzés: A mkblk_x csak abban különbözött mkblk_c-től, hogy nem 
+  csinált str2bin/bin2str transzformációt a binárisan tárolt adatra.
+  Postgresben azonban a char/varchar mezők nem tudnak bináris adatot
+  tartalmazni (csak a bytea). A bytea mezőkkel viszont nem lehet
+  normálisan dolgozni a psql-ben. Ezért az X típusú leképezés ejtve.
+
+2006.09.15
+  Áttérés a class szintaktikára.
+
+  sql2.*.slqvalue() kiegészült a null értékek vizsgálatával,
+  ezzel insert/update rávehető, hogy null-okat küldjön a szervernek,
+  ha egy mezőre be van állítva c:setdirty(row,.t.) és c:setnull(row,.t.).
+  Megjegyzés, null érték lekérdezése: c:isnull(row).
+  
+  con:sqlexec("select ... for update") 
+  támogatása, korábban ez Oracleben nem működött, 
+  noha van értelme, mert így lockolni lehet a rekordokat 
+  (amiket nem kérdezünk le, legalábbis nem ezzel a selecttel).
+
+  Dokumentáció felülvizsgálva.
+
+2005.08.17
+  dirtyflag manipuláció 
+        col:isdirty(row)
+        col:setdirty(row,flag) //egy oszlop
+        row:setdirty(flag)     //összes oszlop
+        tab:setdirty(row,flag) //összes oszlop
+
+  nullflag manipuláció  
+        col:isnull(row)
+        col:setnull(row,flag)  //egy oszlop
+        row:setnull(flag)      //összes oszlop
+        tab:setnull(row,flag)  //összes oszlop
+
+  rowcount 
+        con:sqlexec return értéke insert/update/delete 
+        utasítások esetén az érintett rekordok száma 
+        (más utasításoknál 0, korábban NIL volt).
+    
+  sqlrowcounterror
+        Új kivétel, row:update és row:delete dobja,
+        ha rowcount!=1, ui. ez azt mutatja, hogy baj van a
+        primary key egyediségével, amin az egész rendszer alapszik.
+
+

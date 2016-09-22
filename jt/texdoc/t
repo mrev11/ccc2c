@@ -1,0 +1,7 @@
+#!/bin/bash
+export SCRIPT=$CCCDIR/usr/tex/script
+#export SCRIPT=script
+ 
+#$SCRIPT/tdvi.b $1
+$SCRIPT/thtm.b $1
+
