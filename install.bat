@@ -144,13 +144,13 @@ popd
 :other
 :-------------------
 
-pushd jt 
-call mkall.bat 
-popd
+:pushd jt 
+:call mkall.bat 
+:popd
 
-pushd tools\sql2 
-call mkall.bat 
-popd
+:pushd tools\sql2 
+:call mkall.bat 
+:popd
 
 pushd tutor\dtree 
 call m.bat 
