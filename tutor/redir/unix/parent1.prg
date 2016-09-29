@@ -54,7 +54,7 @@ local c:=space(1)
     fclose( r1 )
     fclose( w2 )
     
-    d:=directory("*")
+    d:=directory("*","H")
     
     for n:=1 to len(d)
         fwrite( w1, d[n][1]+endofline() )

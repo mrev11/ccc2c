@@ -544,7 +544,7 @@ function getFileName(file,ext)
     if( !("."$file) )
         file+=ext
     end
-    if( !empty( directory(file) ) .and.;
+    if( !empty( directory(file,"H") ) .and.;
         2!=alert("A fájl már létezik, felülírja?",{"Nem","Felülír"}) )
         return .f.
     end

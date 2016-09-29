@@ -26,7 +26,7 @@ function main()
 local d,n,e,uname
     set dosconv off
 
-    d:=directory("*.exe")
+    d:=directory("*.exe","H")
     for n:=1 to len(d)
         e:=d[n][1] 
         run("ln -s "+e+" "+left(e,at(".",e)-1))
@@ -35,7 +35,7 @@ local d,n,e,uname
     uname:=getenv("CCCUNAME") 
     
     if( !empty(uname) .and. uname$curdir() )
-        d:=directory("*.b")
+        d:=directory("*.b","H")
         for n:=1 to len(d)
             e:=d[n][1] 
             if( "unix"$e )

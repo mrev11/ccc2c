@@ -23,6 +23,9 @@
 #include <cccapi.h>
 #include <fileconv.ch>
  
+#ifndef FILE_ATTRIBUTE_REPARSE_POINT
+#define FILE_ATTRIBUTE_REPARSE_POINT 0
+#endif
 
 static struct
 {
@@ -57,6 +60,7 @@ void _clp_findfirst(int argno)
         if( strchr(aspec,'H') ){ attr|=FILE_ATTRIBUTE_HIDDEN; }
         if( strchr(aspec,'S') ){ attr|=FILE_ATTRIBUTE_SYSTEM; }
         if( strchr(aspec,'D') ){ attr|=FILE_ATTRIBUTE_DIRECTORY; }
+        if( strchr(aspec,'L') ){ attr|=FILE_ATTRIBUTE_REPARSE_POINT; }
     }
  
     find.fhnd=FindFirstFile(fspec,&find.fdata);    
@@ -202,6 +206,11 @@ static void push_direntry()
     if( find.fdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY )
     {
         string("D");
+        add();
+    }
+    if( find.fdata.dwFileAttributes & FILE_ATTRIBUTE_REPARSE_POINT )
+    {
+        string("L");
         add();
     }
 
