@@ -35,6 +35,8 @@
 #define ISBINARY            ISSTRING
 #define REFBINPTR(i)        REFSTRPTR(i)
 #define REFBINLEN(i)        REFSTRLEN(i)
+#define PARB(x)             PARC(x)
+#define PARBLEN(x)          PARCLEN(x)
 
 #define binptr              chrptr
 #define binary              string

@@ -1,5 +1,21 @@
-dcef8f441f508438dcaf09c187b90a51beb5b929 2016092916:18:44 ./CHANGELOG_vermes
-ca7ae12f0934e98d71f858a310b1d60b1bbc00df 2016092916:10:10 ./log-install
+cfb3c768e654e4cb810a7647a19938e8c797e6b5 2016100215:16:21 ./CHANGELOG_vermes
+fe4488d3d9773e7c4f1a5d7dd3fe73baf9f30c6e 2016100214:54:34 ./log-install
+fad9661c89c8c5fb25e44b1801346d1453c44346 2016100214:54:21 ./usr/bin/linux/savex
+75df599db2b57a7e91bfd721341e620589858549 2016100214:54:18 ./usr/bin/linux/list
+53c3e269278944d455ccac03b05778dda7c89d28 2016100213:49:52 ./tools/savex/findfile.prg
+547573f9b28a08e17ebe289665236b105072824b 2016100213:34:23 ./ccclib/src/windows/filetime.cpp
+350e07dca13722a414d3933855f0bd5d03c07316 2016100213:33:13 ./ccclib/src/windows/findnext.cpp
+a381102b0ed48eedbbb28612d80af5bf83cc140b 2016100213:32:20 ./ccclib/src/setfdati.prg
+aaeb6838a68b0f0a04925426ec7c09e0ed3c8187 2016100213:23:40 ./usr/include/compat_ccc3.h
+b6fd497f42b42580598f3fe68768bf5e68b7b294 2016100211:27:52 ./tools/savex/savex.ver
+e2b977657dc0f891385fd6ee115e9e749e3197c4 2016100210:42:52 ./tools/savex/savebrowse.prg
+f4149625b23ee91256834c9d103dac7cf8881bdc 2016100116:47:11 ./ccclib/src/uic/termapi/remoteio.cpp
+29992ff2f31af0634c9f397887d11532ec68ce23 2016100116:45:33 ./ccclib/src/uic/termapi/termapi_async.h
+31033ae76d638130020e9123306e1cff5d5aa9ee 2016100110:10:06 ./ccclib/src/uic/termapi/termio.cpp
+cf63fe140195bcac0e1a5f57cedf6087a275428f 2016100109:19:14 ./ccclib/src/uic/termapi/termio.h
+a87e44a62a494dd7a197238f3aa45321324a9907 2016100109:11:27 ./terminal/common/tcpio.cpp
+b513249cf35a258e927ae71269e98d2093897fd8 2016100100:07:05 ./ccclib/src/uic/termapi/termapi.cpp
+3f5b6af48de8b24720838fde2b058a84739f5cf1 2016093021:52:34 ./usr/bin/windows/sx.bat
 9c974c31286d1396a03267ec20df2c34f218d72f 2016092916:10:10 ./usr/bin/linux/rnm
 261b5861543e45e78c5e2704db8d87fecdfda5fe 2016092916:10:09 ./usr/bin/linux/delempty
 bed474bb6af4ec7c9600109269fcf0ec5307480a 2016092916:10:09 ./usr/bin/linux/delobj
@@ -8,12 +24,10 @@ bed474bb6af4ec7c9600109269fcf0ec5307480a 2016092916:10:09 ./usr/bin/linux/delobj
 854dec14e8c0e7a140e9adc4b739ac3f3bf28ac1 2016092916:10:09 ./usr/bin/linux/lower
 19ea7acb6225d4bf9530b11266e73ebbdf77ba4d 2016092916:10:05 ./usr/bin/linux/zg
 14232f70f6e2ccc92c5cb58f55c5a94a438583a8 2016092916:10:05 ./usr/bin/linux/zgrep
-e98f49ae2d621959de78eec762e882f5768acb33 2016092916:09:58 ./usr/bin/linux/savex
 d112964dc0ccfbac60fdfdc240ff69e3dc075833 2016092916:09:58 ./usr/bin/linux/setperm
 cef22068f0c3392dd653d6463d13cb8090ede91b 2016092916:09:56 ./usr/bin/linux/page
 f888da17975cc09084e7e02063953d3d58d04f44 2016092916:09:45 ./usr/bin/linux/mklink
 b4311cdcfcb4fa251b44ee6aa17e0bf2853c0663 2016092916:09:43 ./usr/bin/linux/build
-de5c4fe35645a7750fa80d62b5f384b9e2e2c718 2016092916:02:08 ./ccclib/src/windows/findnext.cpp
 ad0251046fc54ed6a9a05366dfa92d84699f1bd2 2016092915:57:39 ./ccclib/src/windows/directory.prg
 3fa71f440f2d9cf0488538b72f1673b9ae4272e3 2016092915:43:49 ./jt/jtdemo/superdemo.prg
 e3b5862385d6c772d5c168545f088c8eb0af23a5 2016092915:43:17 ./tabobj/common.src/tabslock.prg
@@ -64,7 +78,6 @@ b12632ce93bc0ff21b8d9463b898433a8701365c 2016092220:08:26 ./usr/bin/linux/mask
 4d800b2204d90420676c781ecdd7a20cc72fc76c 2016092220:08:26 ./usr/bin/linux/msk2pge
 c4c86a3298330786d729859e3f60b37076b533ca 2016092220:08:26 ./usr/bin/linux/msk2say
 0aca27473ba45d4e590bdb8c073b6eb47278997e 2016092220:08:26 ./usr/bin/linux/pge2wro
-c1a1d40449ecaa63f7c41c19aa29c56717ff7aeb 2016092220:08:25 ./usr/bin/linux/list
 f6d3bb3b6ae824275330d4b4813b1a05eddc6d64 2016092220:08:24 ./usr/bin/linux/ddict2
 33621257e6290087cd87a90c6b86b78c5d6887da 2016092220:08:23 ./usr/bin/linux/dbfview
 d8a0288d62f8e846cdcb1fec872cc1fd234b7b91 2016092220:08:21 ./usr/bin/linux/bt2dbf
@@ -102,12 +115,10 @@ e04d0e600a60c819059e97ef77d73da52fa117bf 2016092220:06:49 ./gv
 89c22c994c5e63f889589e3bf4ec59548f043e00 2016092217:24:09 ./ccclib/objlin_ui_/rsplnk-libccc2_ui_
 35dccd57f0f8a9bb19ab96dcbfaeb168f3d0b9e4 2016092217:24:09 ./ccclib/objlin_uic/compopt-setcursor
 8877698023f4059c4efc923c35d5f48abc1b5b62 2016092217:24:08 ./ccclib/objlin_ui_/compopt-setcursor
-1df47472d096d3dbce921da2fff79aa57b0a9c81 2016092211:28:35 ./tools/savex/savex.ver
 5d28cb3b59c856fffe1fbeeb8c6daa66c1295476 2016092210:52:12 ./usr/bin/linux/__linux.b
 dcb84a99a2ed9335a83238362f3d475592b71c76 2016091812:29:04 ./tools/savex/sx.b
 3b0932208b0a53dfd81c161a18cf3b229f2f9b8b 2016091812:28:39 ./tools/savex/play.prg
 a6496b4b5c81c5428b4524722dc2ae22fd7e9bfd 2016091809:26:06 ./tools/savex/dolist.prg
-4a11b6e0897c81dd6ef0de4befc5879f6eadf510 2016091809:25:26 ./tools/savex/savebrowse.prg
 48e2e11e4c59484e9f0013a5bdd22f0d50db0e64 2016091800:30:28 ./tools/savex/usage.prg
 d20a6891941a92252222b861df969fb1b03e0d78 2016091715:21:26 ./tools/savex/savex.prg
 c0b362efc1cb6fb65d583c948b4b6e0b195e6b06 2016091711:51:39 ./tools/savex/copysave.prg
@@ -205,7 +216,6 @@ f6ecdcc3092168e0987001f6cb6ecbc395fdda0f 2016061012:56:09 ./ccctools/ccomp/m.bat
 7b949d155accc39674d708d07c6d924dd8dfc5d9 2016061008:42:22 ./ccclib/mk_ui_.bat
 cd17e8bea577b39726d20c0e50f7f8a82e26206c 2016061008:42:10 ./ccclib/mk_ccc.bat
 c50eca089159087580db11e59d88301cb45bebcc 2016061008:41:54 ./ccclib/m.bat
-6a3b2c38c0e6a6d4e742a2bd99d0a6521bbdeb5e 2016061008:34:59 ./ccclib/src/uic/termapi/termio.cpp
 4aa42c5fe394334520292b7ec1fda763ea6eeb06 2016061007:57:48 ./jt/sslforward/serveclient.cpp
 0745c885896e63d975d7deca5e2d2db8d6b8d679 2016061007:20:32 ./usr/include/sckcompat.h
 0741379d26761bcb887bee3e102f0c608dc5aa1d 2016061007:19:19 ./usr/include/sckutil.h
@@ -400,7 +410,6 @@ ba77a0967f6892538f26221f38c17c78065c8bb1 2016052409:48:56 ./setup/setup-unix/bui
 ac9f01c4429b1d0b0702c4617d41ea779fb44dd1 2016052409:47:39 ./ccclib/uic.bld
 56e03d80966876488da18e9f99d1806ee51bad2d 2016052409:39:01 ./ccclib/ccc.bld
 dad18bbcda597f35429a5f715b448fc3ac631c8b 2016052409:34:39 ./ccclib/m
-1594709e98b98761c528f80bb468e6a60f934008 2016052120:52:05 ./ccclib/src/uic/termapi/termapi.cpp_async
 4bcafe22ec436cf9622867c4a485582339c21cda 2016052120:47:12 ./ccclib/src/uic/compat/convtab-cwi2lat.cpp
 116eb7fa743e2271725eb375e0aa1b76f8caf72c 2016052116:12:30 ./terminal/unix-ncurses/learnkey/keymap-ccc
 79d56e27fd0a7990e6b06da6ac9ff8aa61456f3a 2016052115:59:19 ./terminal/unix-ncurses/learnkey/inkeymap-xterm/INKEYMAP-xterm
@@ -458,7 +467,6 @@ a590956552ebef0199db498bce49dcaf65d3d2a8 2016051516:30:37 ./usr/include/inkey.ch
 fb760361a2588c744fa1e44338f82ff95e261084 2016051511:58:23 ./ccclib/src/uic/OLVASS
 f9109c22ddb0b08c5b2f4b032a7c8901c96f67fc 2016051421:03:34 ./ccclib/src/uic/compat/compat.prg
 2157f80624d573291008d319e573ed1824a54bb8 2016051420:57:52 ./ccclib/src/uic/compat/init_ui.cpp
-b47e07088f05004141b0bcc2e3f897420e8ed94c 2016051416:16:12 ./terminal/common/tcpio.cpp
 ce224ec64a71c6ed6975047a72397b815a5cb9c1 2016050712:43:13 ./ccclib/src/uic/compat/convtab_lat2ucs.cpp
 5f6b05fadb1ca67ce09eac4dd1e82ed4ed9827b6 2016050319:32:44 ./setup/setup-unix/qout.cpp
 f64777ae6333b3569a3b019488b65c74018afc80 2016050219:23:24 ./tools/mask/mask.prg
@@ -601,7 +609,6 @@ ecb20df013ef37f503182a7dd8ca3a426af92266 2015012009:08:10 ./tools/sql2/test/test
 88bc30d308ac19048f0c1e8780427537f36a6a0e 2015012009:06:20 ./tools/sql2/test/testdata_import/sd
 36695ba13736406fc115b559f8bd563fc93b6e8c 2015012009:06:02 ./tools/sql2/test/testdata_import/sm
 98357bb683f76aa6e16456433e7a8ab5c46cb779 2015012009:05:11 ./tools/sql2/test/testdata_import/parfile.bld
-2dac097cd993fb724275f27d57e7c9873760b67e 2015012009:04:07 ./usr/include/compat_ccc3.h
 6fd140718eea4ecf2219d50978f56a0c12dae391 2015012009:01:12 ./tools/sql2/driver-db2/m
 fc656eb65d412509fa7a8f661305164e97bee7dd 2015012009:00:27 ./tools/sql2/mkall.b
 91b1f0f29564267066b50b469774bca8a033e4d7 2015012008:59:53 ./tools/sql2/test/basicdemo/parfile-d.bld
@@ -804,7 +811,6 @@ b8ca1b2b67cd2e9ebd86dbb55555200e2932fc85 2012121317:44:50 ./tabobj/tbbtbtx/btind
 10c659d8e24298f10bba6ef95996d0648c8d15a6 2012103008:11:38 ./terminal/xtest/xstart.par
 bededecb3b14a590af0b5ae7c08f85600134b3e0 2012102713:50:34 ./usr/build/windows/gtk-win.bld
 f97c336c1a01aebb27ecdb7da90311ffbce34fd3 2012102313:53:16 ./setup/setup-unix/i2bin.cpp
-b283a14491f2b0bcaf539836ce3f74730dc995e4 2012102310:29:39 ./ccclib/src/uic/termapi/remoteio.cpp
 86502900bacc9b414cde5b8cefbaa88fceb650cb 2012102310:02:32 ./terminal/terminal-test/remtest.bat
 86e4b332162579a8e92f9b88f1d43b585b6eb356 2012102215:27:18 ./terminal/terminal-test/clean-all.b
 a8ce9217c1617f63ba57235ac87ace1fb66c5f3e 2012102215:06:53 ./tools/xstart/xstart.par
@@ -986,7 +992,6 @@ d3d7ce3a7cdf6e1dcb2dc3c029dd6141593bc4c1 2010090119:17:48 ./terminal/unix/font-c
 6b598196c6d494ffa9f37bdcbc895e6060c8da36 2010071813:30:20 ./usr/bin/netbsd/__unix.b
 dd35366bf618a8edd04c7a178583ab82983842da 2010071114:52:03 ./ccclib/src/uic/termapi/olvass.txt
 eca926ad276651c44b83bc73e97aa9d861a41ac4 2010071114:30:19 ./ccclib/src/uic/termapi/termutil.h
-0ef62d0dee4d3cbe706ee8793383b0b40b8d8ee2 2010071111:18:36 ./ccclib/src/uic/termapi/termapi.cpp
 7073f1d3e50568652f968b3fc9692bd30a114986 2010071111:16:27 ./ccclib/src/uic/termapi/termapi.cpp_sync
 45a9f532725e56180e271d6933d93763fd6af50f 2010071109:34:11 ./usr/include/thread_data.h
 a7cd8aff55af080dff7278bd0cfbfe16d9e9967b 2010063010:01:55 ./tools/z/zdisplay.prg
@@ -1728,7 +1733,6 @@ eb2cdbdab0761dd394d6eabe67c0a5bce97cf957 2006041317:31:06 ./tools/z/ver3/zsearch
 84d4f4cdd6e71d8ca6717a68735f297bc60b5ecf 2006041113:35:43 ./setup/setup-unix/remoteio.cpp
 6570dc57f6bd608cd50dea4f91ea492ad28fc07a 2006041019:42:44 ./terminal/xtest/proba2.prg
 58e6f06164cb64fabed8c767fe6461239f1e8bd8 2006041015:54:21 ./ccclib/src/uic/termapi/remoteio.h
-1ca0d7a845188487617b14347d57652590b0e0ce 2006041013:34:02 ./ccclib/src/uic/termapi/termio.h
 1ffb23c47e149f4fc0c0164113b36df709ae4996 2006041012:19:57 ./ccclib/src/uic/termapi/netint.h
 fbd7e7d689cafdd9e53652107dcaccc07a9e5b04 2006040813:20:36 ./tools/z/ver3/box.txt
 16ff7b7ea40da3a27a4486a4e1083faa0d96eaed 2006040810:33:24 ./terminal/windows/x.bat
@@ -1834,7 +1838,6 @@ bbdb5fc1a85da322fe42cbb633f93c3cd434532b 2005110318:22:17 ./ccclib/src/unix/utim
 7290e501a6ae876d8c89993d10926334a313da40 2005091719:44:16 ./tabobj/utility.src/srcw32/keyb32c.cpp
 c875ace05bfed59170cfc10e96397daefa58569c 2005091719:41:51 ./tabobj/common.src/srccpp/mutex.cpp
 e862f448145e1c24d6b4fe8904b72648deab8d23 2005091719:39:20 ./ccclib/src/windows/systime.cpp
-ec3836a2417828e5e5fc8e546a595a6fa9b36700 2005091719:39:07 ./ccclib/src/windows/filetime.cpp
 c653465af23182b863a646d43f7afe6907f4f430 2005091719:39:03 ./ccclib/src/windows/fdup.cpp
 30eb623e043357b9204134e9fd64ef7da4e8496d 2005091719:38:50 ./ccclib/src/windows/exename.cpp
 34e2886a771286b8e9eb14991894e103dfb697fa 2005091719:38:47 ./ccclib/src/windows/envir.cpp
@@ -2182,7 +2185,6 @@ b5ea3fcbec112059c310165482804e1df83dabcd 2003090213:18:48 ./jt/jtdemo/cccdown/zi
 f3ed904b78de1306f5a4e0790002236cb554e390 2003082810:38:43 ./setup/setup-unix/prg2ppo/m
 6dcbf7e25b5381707d0e5ca8f179aa85b20ac5cf 2003082810:38:27 ./setup/setup-unix/build/m
 2f586fd3effdbd2fe06e485ec8b9a684753c2ecc 2003082617:49:17 ./ccclib/src/windows/utime.prg
-7be581baab38408e59011a4731fa771b5d1be725 2003082617:43:29 ./ccclib/src/setfdati.prg
 32198a1c5410357a596d95baa75876a75968a51b 2003082314:34:18 ./jt/jtdemo/jtenvir/jtenvir.prg
 688cc9db0c31fe12fdd17e6c16125884002d04d5 2003082314:32:48 ./jt/jterminal/jtenvir.java
 9ade713a6f5a93756de6fec98303ba303f4925d5 2003082311:50:30 ./jt/jterminal/jtexec.java
