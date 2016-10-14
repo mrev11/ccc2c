@@ -21,25 +21,34 @@
 #include "fileconv.ch"
 #include "stat.ch"
 
-***************************************************************************
-function directory(mask,type) //Clipper
+#define PRINT(x) ? #x,x
 
-// Inkompatibilitások:
+#define OPEN    ___opendir
+#define READ    ___readdir
+#define CLOSE   ___closedir
+#define LINK    ___readlink
+
+***************************************************************************
+function directory(mask,type,binopt)
+
+// InkompatibilitÃ¡sok:
 //
-// dosconv=on esetén csak a convertfspec2nativeformat(fname)==fname 
-// feltételnek megfelelõ filéket adja.
+// dosconv=on esetÃ©n csak a convertfspec2nativeformat(fname)==fname 
+// feltÃ©telnek megfelelÅ‘ filÃ©ket adja.
 //
-// UNIX-on a 'filename' és 'filename.' nevek (a Windowstól eltérõen)
-// különbözõnek számítanak.
+// UNIX-on a 'filename' Ã©s 'filename.' nevek (a WindowstÃ³l eltÃ©rÅ‘en)
+// kÃ¼lÃ¶nbÃ¶zÅ‘nek szÃ¡mÃ­tanak.
 // 
-// A filé attribútumban 'L' jelöli a szimbolikus linkeket. 
+// A filÃ© attribÃºtumban 'L' jelÃ¶li a szimbolikus linkeket. 
 // Windowson nincsenek szimbolikus linkek.
 //
-// Válogatni a 'D' és 'L' attribútumok szerint lehet. 
-// A default választás: directoryk nem, minden filé (linkek is) igen.
+// VÃ¡logatni a 'D' Ã©s 'L' attribÃºtumok szerint lehet. 
+// A default vÃ¡lasztÃ¡s: directoryk nem, minden filÃ© (linkek is) igen.
 //
-// A kapcsolók szintaktikája: X, vagy +X bekapcsol, -X kikapcsol.
-// Ezek szerint a symlinkek a -L kapcsolóval tilthatók le.
+// A kapcsolÃ³k szintaktikÃ¡ja: X, vagy +X bekapcsol, -X kikapcsol.
+// Ezek szerint a symlinkek a -L kapcsolÃ³val tilthatÃ³k le.
+
+// binopt==.t. esetÃ©n binary filÃ©neveket ad
 
 local dlist:=array(32),dlist_size:=0
 local fname_upper:=numand(get_dosconv(),DOSCONV_FNAME_UPPER)!=0
@@ -47,87 +56,104 @@ local fspec_asterix:=numand(get_dosconv(),DOSCONV_FSPEC_ASTERIX)!=0
 local dirspec,fmask,fname,dfname,ftype,st,lsm,dati,i
 local adddir:=.f.,isdir
 local addlnk:=.t.,islnk
+local lnktrg:=.f.
+local dirstream
+local linktarget
 
-static mutex:=thread_mutex_init()
- 
-    if( mask==NIL )
-        mask:="*"
-    elseif( mask=="" )
-        mask:="*"
+    if( empty(mask) )
+        mask:=a"*"
+    else
+        mask:=convertfspec2nativeformat(mask)
     end
+    
+    binopt:=!empty(binopt) //logikai
 
-    mask:=convertfspec2nativeformat(mask)
-
-    if( 0==(i:=rat('/',mask)) )
-        dirspec:="."
+    if( 0==(i:=rat(a'/',mask)) )
+        dirspec:=a"."
         fmask:=mask
     elseif( i==1 )
-        dirspec:="/"
+        dirspec:=a"/"
         fmask:=substr(mask,2)
     else
         dirspec:=substr(mask,1,i-1)
         fmask:=substr(mask,i+1)
     end
 
-    if( fspec_asterix .and. fmask=="*.*" )
-        fmask:="*"
+    if( fspec_asterix .and. fmask==a"*.*" )
+        fmask:=a"*"
     end
     
     if( type!=NIL )
-        adddir:= !"-D"$upper(type) .and. "D"$upper(type)
-        addlnk:= !"-L"$upper(type)
+        type::=upper
+        adddir:= !"-D"$type .and. "D"$type
+        addlnk:= !"-L"$type
+        lnktrg:= "@L"$type
     end
- 
-    thread_mutex_lock(mutex)
- 
-    if( 0==__opendir(dirspec) )
+    
+    if( !empty(fmask) .and. !a"?"$fmask .and. !a"*"$fmask )
+        //filename whithout wildcard
+        fname:=fmask
+    else
+        OPEN(@dirstream,dirspec,.t.)
+        fname:=READ(@dirstream)
+    end
+    
+    while( NIL!=fname )
 
-        while( NIL!=(fname:=__readdir()) )
+        if( like(fmask,fname) )
+        
+            dfname:=dirspec+a"/"+fname
+            st:=stat(dfname)
+            lsm:=lstat_st_mode(dfname)
 
-            if( fname==convertfspec2nativeformat(fname) .and. like(fmask,fname) )
+            if( NIL==st .or. NIL==lsm )
+                //nem stat-olhatÃ³, kihagyni
             
-                dfname:=dirspec+"/"+fname
-                st:=stat(dfname)
-                lsm:=lstat_st_mode(dfname)
-
-                if( NIL==st .or. NIL==lsm )
-                    //nem stat-olható, kihagyni
+            elseif( (isdir:=s_isdir(st[STAT_MODE])) .and. !adddir )
+                //directory, nem kÃ©rik, kihagyni
+                 
+            elseif( (islnk:=s_islnk(lsm)) .and. !addlnk )
+                //symlink, nem kÃ©rik, kihagyni
                 
-                elseif( (isdir:=s_isdir(st[STAT_MODE])) .and. !adddir )
-                    //directory, nem kérik, kihagyni
-                     
-                elseif( (islnk:=s_islnk(lsm)) .and. !addlnk )
-                    //symlink, nem kérik, kihagyni
-                    
-                else //bevesszük
+            else //bevesszÃ¼k
 
-                    dati:=ostime2dati(st[STAT_MTIME])
- 
-                    ftype:=""
-                    if( isdir ) 
-                        ftype+="D"
-                    end
-                    if( islnk )
-                        ftype+="L" 
-                    end
-                    
-                    if( dlist_size>=len(dlist) )
-                        asize(dlist,dlist_size+32)
-                    end
+                dati:=ostime2dati(st[STAT_MTIME])
 
-                    dlist[++dlist_size]:={;
-                        if(fname_upper,upper(fname),fname),;
-                        st[STAT_SIZE],; //fsize
-                        dati[1],; //fdate,;
-                        dati[2],; //ftime,;
-                        ftype }
+                ftype:=""
+                if( isdir ) 
+                    ftype+="D"
+                end
+                if( islnk )
+                    ftype+="L" 
+                end
+                
+                if( dlist_size>=len(dlist) )
+                    asize(dlist,dlist_size+32)
+                end
+                
+                if( !binopt )
+                    fname::=bin2str
+                end
+                
+                dlist[++dlist_size]:={;
+                    if(fname_upper,upper(fname),fname),;
+                    st[STAT_SIZE],; //fsize
+                    dati[1],; //fdate,;
+                    dati[2],; //ftime,;
+                    ftype }
+                    
+                if( islnk .and. lnktrg .and. (linktarget:=LINK(dfname,binopt))!=NIL )
+                    aadd(dlist[dlist_size],linktarget)
                 end
             end
         end
+        
+        fname:=READ(@dirstream)
     end
-    __closedir()
-    thread_mutex_unlock(mutex)
 
+    //already closed
+    //CLOSE(@dirstream)
+      
     return asize(dlist,dlist_size)
 
 ***************************************************************************

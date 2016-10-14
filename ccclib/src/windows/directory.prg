@@ -19,22 +19,27 @@
  */
 
 #include "directry.ch"
+
+#define PRINT(x) ? #x,x
+
  
 ***************************************************************************
-function directory(mask,attr) //Clipper
+function directory(mask,attr,binopt) //binopt==.t. -> binary filenev
 
 local dlist:=array(32),dlist_size:=0
 
+local handle
 local fitem
-local adddir:=.f.
-local addhid:=.f.
-local addsys:=.f.
-local addlnk:=.t.  //symlink
+local adddir:=.f. //include directory entries (default: no)
+local addhid:=.f. //include hidden entries (default: no)
+local addsys:=.f. //include system entries (default: no)
+local addlnk:=.t. //include symlink/junction entries (default: yes)
+local lnktrg:=.f. //link target in fitem[F_LINK] (default: no)
 
-static mutex:=thread_mutex_init()
- 
-    if( mask==NIL .or. mask=="" )
-        mask:="*"
+    if( empty(mask) )
+        mask:=a"*"
+    else
+        mask:=convertfspec2nativeformat(mask)
     end
 
     if( attr!=NIL )
@@ -42,25 +47,33 @@ static mutex:=thread_mutex_init()
         adddir:= !"-D"$attr .and. "D"$attr
         addhid:= !"-H"$attr .and. "H"$attr
         addsys:= !"-S"$attr .and. "S"$attr
-        addlnk:= !"-L"$attr .and. "L"$attr
+        addlnk:= !"-L"$attr
+        lnktrg:= "@L"$attr
     end
+
+    //PRINT(adddir)
+    //PRINT(addhid)
+    //PRINT(addsys)
+    //PRINT(addlnk)
  
-    thread_mutex_lock(mutex)
-    
-    fitem:=findfirst(mask)
+    fitem:=__findfirst(@handle,mask,binopt,lnktrg)
     
     while( NIL!=fitem )
+
+        //a __find* megkulonbozteti 
+        //a symlinket es a junctiont
+        fitem[F_ATTR]::=strtran("J","L")
     
         attr:=fitem[F_ATTR]
     
         if( "D"$attr .and. !adddir )
-            //kihagy
+            //? "kihagy-D"
         elseif( "S"$attr .and. !addsys )
-            //kihagy
+            //? "kihagy-S"
         elseif( "H"$attr .and. !addhid )
-            //kihagy
+            //? "kihagy-H"
         elseif( "L"$attr .and. !addlnk )
-            //kihagy
+            //? "kihagy-L"
         else
             //bevesz
 
@@ -70,10 +83,11 @@ static mutex:=thread_mutex_init()
             dlist[++dlist_size]:=fitem
         end
         
-        fitem:=findnext()
+        fitem:=__findnext(@handle)
     end
 
-    thread_mutex_unlock(mutex)
+    //already closed
+    //__findclose(@handle)
 
     return asize(dlist,dlist_size)
 

@@ -23,27 +23,31 @@
 
 *****************************************************************************
 function main()
-local d,n,e,uname
-    set dosconv off
+local d,n,exe,lnk
+local dirlnk
 
-    d:=directory("*.exe","H")
+    d:=directory("*.exe")
+    
+    asort(d,,,{|x,y|x[1]<y[1]})
+
     for n:=1 to len(d)
-        e:=d[n][1] 
-        run("ln -s "+e+" "+left(e,at(".",e)-1))
+
+        exe:=d[n][1]
+        lnk:=left(exe,len(exe)-4)
+
+        dirlnk:=directory(lnk,"@L")
+        if( len(dirlnk)<=0 ) 
+            run("ln -s "+exe+" "+lnk)
+            dirlnk:=directory(lnk,"@L")
+        end
+
+        if( len(dirlnk)!=1 ) 
+        elseif( !"L"$dirlnk[1][F_ATTR] ) 
+        elseif( len(dirlnk[1])<F_LINK )
+        else
+            ?? lnk, "->", dirlnk[1][F_LINK];?
+        end
     next
     
-    uname:=getenv("CCCUNAME") 
-    
-    if( !empty(uname) .and. uname$curdir() )
-        d:=directory("*.b","H")
-        for n:=1 to len(d)
-            e:=d[n][1] 
-            if( "unix"$e )
-                run("ln -s "+e+" "+strtran(e,"unix",uname) )
-            end
-        next
-    end
-
-    return NIL
 
 *****************************************************************************

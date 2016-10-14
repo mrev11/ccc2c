@@ -22,17 +22,17 @@
 
 
 *************************************************************************
-function _clp_filecopy(xf1,xf2) // CA-TOOLS függvény
+function _clp_filecopy(xf1,xf2) // CA-TOOLS fuggveny
 local f1:=convertfspec2nativeformat(xf1)
 local f2:=convertfspec2nativeformat(xf2)
-local ok:=__copyfile(f1,f2) //Win32 API hívás
-local result:=if(ok,filesize(f2),-1)
-    ferror(if(ok,0,-1)) //errno beállítása
-    return result //ez már nem állítja át errno-t
+local ok:=__copyfile(f1,f2) //Win32 API hivas
+local result:=if(ok,stat_st_size(f2),-1)
+    ferror(if(ok,0,-1)) //errno beallitasa
+    return result //ez mar nem allitja at errno-t
 
 
 *************************************************************************
-function filemove(xf1,xf2)  //CA-TOOLS függvény
+function filemove(xf1,xf2)  //CA-TOOLS fuggveny
 local f1:=convertfspec2nativeformat(xf1)
 local f2:=convertfspec2nativeformat(xf2)
     return frename(f1,f2)
