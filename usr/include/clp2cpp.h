@@ -33,6 +33,7 @@
 #undef FALSE
 #undef TEXT
 #define strcasecmp  stricmp
+#define wcscasecmp  wcsicmp
 #endif
 
 #ifdef UNIX
@@ -384,6 +385,7 @@ typedef USHORT FLAG;
 
 //------------------------------------------------------------
 #ifdef UNIX
+#define wcsicmp(s1,s2)  wcscasecmp(s1,s2)
 #define stricmp(s1,s2)  strcasecmp(s1,s2)
 #define flushall()  fflush(NULL)
 #endif
