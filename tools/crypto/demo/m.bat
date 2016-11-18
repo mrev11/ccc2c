@@ -1,2 +1,3 @@
 @echo off
-bapp_w32_ -bccc2_crypto -blibeay32
+bapp_w32_ -bccc2_crypto -bcrypto
+
