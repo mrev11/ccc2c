@@ -18,48 +18,33 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-function main(ini)
+// megkeres egy filét a PATH-ban
+// vagy csak kiírja a PATH-t
 
-local con
-local seq,val,n
+function main(fname)
 
-    con:=sql2.mysql.sqlconnectionNew(":konto:konto:konto") //host,user,pw,db
+local path:=getenv("PATH")::split(pathsep()),n
 
-    seq:=con:sqlsequenceNew("seqproba")
-    seq:start:=1000
-
-    if( !empty(ini) )
-        begin 
-            seq:drop
+    for n:=1 to len(path)
+    
+        if( empty(path[n]) )
+            loop
         end
-        seq:create
 
-
-        begin
-            con:sqlexec("drop table proba")
+        if( path[n][1]=='"' )
+            path[n]:=path[n][2..len(path[n])-1]
         end
-        con:sqlexec("create table  proba (id varchar(10) primary key)")
 
-        quit
-    end
-
-    for n:=1 to 100
-        val:=seq:nextval::str::alltrim::padl(10,"0")
-
-        con:sqlexec("insert into  proba (id) values (:1)",{val} )
-        
-        
-        if( n%10==0 )
-            con:sqlcommit
-            ?? "."
+        if( fname==NIL )
+            ? path[n]
+        else    
+            if( path[n]::right(1)!=dirsep() )
+                path[n]+=dirsep()
+            end
+            if( file(path[n]+fname) )
+                ? path[n]+fname
+            end
         end
     next
-
-    con:sqlcommit
-
-
-    con:sqldisconnect
-
-
-    ?
+    ? 
     
