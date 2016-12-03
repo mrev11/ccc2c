@@ -1,3 +1,9 @@
+2016.12.03 CCC3 fejlesztesek atveve;
+  build-ben dinamikus forditasi szabalyok;
+  build-ben a resource-ok keresese hash-sel optimalizalva;
+  tdc2prgch kodgenerator tamogatva;
+  savex a sima textcmp funkcioban is alkalmazza PREDIFF(S/W)-t; 
+
 2016.11.20 hianyzo copyright-ok potolva;
   savex: fajlnevek vedelme Windows parancssorban;
 

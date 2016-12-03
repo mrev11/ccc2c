@@ -40,3 +40,13 @@ log-*
 commit-message
 g-*
 /*.savex
+
+exe-db2/
+exe-my/
+exe-ora/
+exe-pg/
+exe-sqlite3/
+
+
+
+

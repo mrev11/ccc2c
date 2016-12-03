@@ -1,25 +1,29 @@
 #!/bin/bash
-echo TDS2OBJ.BAT $1 $2 
+#set -x
+echo TDC2OBJ.BAT $1 $2 
 
 #rm -f error 
-rm -f error--tds2prg-$1
+rm -f error--tdc2prg-$1
 rm -f error--outpre-$1
 rm -f error--ppo2cpp-$1
 rm -f error--outcpp-$1
 mkdir -p ppo
- 
+
 rm -f ppo/$1.prg
-cp -f $2/$1.tds ppo/$1.tmp
-tds2prg.exe   ppo/$1.tmp  >ppo/tds2prg-$1
-rm ppo/$1.tmp
+cp -f $2/$1.tdc ppo/$1.tmp-prg
+tdc2prgch.exe --prg  ppo/$1.tmp-prg 2>ppo/tdc2prg-$1
+
 if ! test -f ppo/$1.prg; then
     touch error
-    mv ppo/tds2prg-$1 error--tds2prg-$1
-    cat ppo/$1.prg.tmp >>error--tds2prg-$1  2>/dev/null
-    echo 'tds2prg' $1 FAILED
-    grep '^description:' error--tds2prg-$1
+    mv ppo/tdc2prg-$1 error--tdc2prg-$1 
+    cat error--tdc2prg-$1
+    echo 'tdc2prg' $1 FAILED
 else
-rm -f ppo/tds2prg-$1
+
+rm -f ppo/$1.tmp-prg
+rm -f ppo/tdc2prg-$1
+
+
 
 # innen kezdve ugyanaz, mint prg2obj
 # kiveve hogy a prg-t a ppo-bol veszi
@@ -76,5 +80,3 @@ fi;
 
 echo ----------------------------------------------------------------
 
-
- 
