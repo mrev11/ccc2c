@@ -1,3 +1,5 @@
+2016.12.07 build forditasi szabalyok rendezese javitva;
+
 2016.12.03 CCC3 fejlesztesek atveve;
   build-ben dinamikus forditasi szabalyok;
   build-ben a resource-ok keresese hash-sel optimalizalva;
