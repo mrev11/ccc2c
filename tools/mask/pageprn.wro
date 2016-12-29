@@ -1,0 +1,35 @@
+// pge2wro v2.2.01 
+
+#ifndef I_SCRSTR                                        
+#define I_SCRSTR                                        
+#command @ <row>, <col> SCREEN <scr> SAY <xpr>         ;
+                        [PICTURE <pic>]                ;
+                        [COLOR <color>]                ;
+                                                       ;
+      => scrPos( <scr>, <row>, <col> )                 ;
+       ; scrOutPict( <scr>, <xpr>, <pic> [, <color>] )  
+#define wrpict(i) if(pictlist==nil,nil,pictlist[i])     
+#endif                                                  
+
+
+#define p_redir   pgelist[  1] //21
+#define p_o       pgelist[  2] // 1
+#define p_pi      pgelist[  3] // 2
+
+#define PGELIST         3
+
+
+
+static function wrpageprn(scr,pgelist)
+
+   @  0, 44 screen scr say "========================="
+   @  1, 46 screen scr say "Redirected"
+   @  1, 57 screen scr say "to:"
+   @  2, 46 screen scr say xtrpadr(p_redir, , 21)
+   @  4, 46 screen scr say "Landscape/Portrait:"
+   @  4, 66 screen scr say xtrpadr(p_o, ,  1)
+   @  6, 46 screen scr say "Pitch:"
+   @  6, 53 screen scr say xtrpadr(p_pi, ,  2)
+   @  7, 44 screen scr say "========================="
+return scr
+

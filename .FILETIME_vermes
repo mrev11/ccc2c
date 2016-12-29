@@ -1,4 +1,9 @@
-16c9cdd70f3032c547427fc5442fddd459bbcc84 2016122411:24:17-UTC ./CHANGELOG_vermes
+0bf1437db2cc86513f85ddd7d97dc29c7fb82642 2016122914:42:12-UTC ./CHANGELOG_vermes
+8b392f94484d28d497e59410db47444a79386e3c 2016122914:29:07-UTC ./tools/mask/m
+99e9b3e5c2d500dda82fdcf93e336614d51c4393 2016122914:25:49-UTC ./usr/include/std1.ch
+984741a0a01478f745c8f6975b9a6187d15e91b8 2016122913:57:10-UTC ./tools/mask/pageprn.wro
+7db689cc72baf093862a075fb8a4cd04ba8b83e5 2016122913:40:31-UTC ./tools/mask/m-demo
+7d848efac51f9611647a6b70f3fdcb553dc66e6a 2016122909:55:26-UTC ./tools/mask/demo-wro.prg
 f24c88525339044a2c54754543b1a9e8a0003fd1 2016122408:39:10-UTC ./tools/sql2/log-mkall
 708290ac3945bf688aae660d6c02d32a73dfe205 2016122408:38:37-UTC ./usr/bin/linux/msk2dlg
 c82cbc1294579b827adf6a1c92ece8c8663e5c27 2016122408:38:37-UTC ./usr/bin/linux/sslforward
@@ -111,6 +116,7 @@ a7aa2e786e0588d8d1a7e43e96346a0eda1565fd 2016120115:05:55-UTC ./terminal/unix/te
 5d85f92867c3ec4c1776f452696c7585c7648cc4 2016112919:33:20-UTC ./terminal/terminal-test/screenwr/s
 8c489c560c14b8c7242c59f92f6c53d4cc62da26 2016112911:11:08-UTC ./tools/savex/savex.ver
 05899f6b98d4a58f0473c4758b2127264312ac31 2016112910:59:41-UTC ./tools/savex/compfile.prg
+2283a54b23ba19cee6c8616fcdc113f02adc8c4e 2016112521:21:21-UTC ./tools/mask/parfile.bld
 340d6a28fce2319f2b27af772e7246e5ef85b92a 2016112514:45:24-UTC ./usr/bin/linux/mask
 661a9cb971a14c76691ee654e54238640d092d65 2016112514:45:24-UTC ./usr/bin/linux/msk2pge
 bfb960cfa9f3037a979e7c4e3547a2e41187c51b 2016112514:45:24-UTC ./usr/bin/linux/msk2say
@@ -1568,7 +1574,6 @@ c8fc594b9532bad091c85c6ee9096d256874710c 2007060715:40:43-UTC ./jt/readme.hu.txt
 4f9b450ffb10450577ebc343f2a742d5014342be 2007060715:09:56-UTC ./jt/jtlib/readme.hu.txt
 c0b4da9e3d2ce0cd2ad2f62abd3d8d95a189e5ab 2007060714:21:01-UTC ./jt/jterminal/readme.hu.txt
 ac9440dde6db6dbcb4fedd516414e36278de3d8f 2007060518:38:18-UTC ./ccclib/src/o_object.prg
-e0055193e7c54d9021c7f718fdb3e0ffb6ee1730 2007060508:09:06-UTC ./usr/include/std1.ch
 924929fdf457d1e4ad2cfc10d71482c85ff71a21 2007053120:12:10-UTC ./tools/sql2/test/basicdemo/deadlock2.prg
 4d74aff17c43260e551d3c0de7964a283d9f5fbe 2007052115:47:02-UTC ./jt/jtlib/jttoolbar.prg
 3dfe17ef57b12440372270ea024f89d3f742725a 2007050509:19:47-UTC ./tools/xmldom/demo/malloc_dbg/mdbg.b
@@ -1626,6 +1631,7 @@ ad2e50ffc08614343790cd07a94a372d815586d3 2006092615:54:23-UTC ./tools/sql2/util/
 e8ffddbf92d3d9115fa410e02f51ced7864b4ec3 2006092615:54:07-UTC ./tools/sql2/util/jeed/test/connect.prg
 1e38b81866530295d5055b0f521265be5b20b77b 2006092613:02:54-UTC ./tools/sql2/util/tdsutil/m.bat
 193bfe254d539058b3c9b60c5c4e00e97379a857 2006092612:56:50-UTC ./tools/sql2/util/mkall.bat
+3337e0d7be5d33c3e07f5b6e52f6cfff175d920f 2006092512:56:22-UTC ./tools/mask/demo-msk.prg
 453c78c0e324d6e2c400a292a0183c986ea35fa8 2006091515:08:49-UTC ./tools/sql2/driver-postgres/sqlsequence.prg
 acfac3caab98180a990d2730b189ce235a6fd20a 2006091515:08:20-UTC ./tools/sql2/driver-oracle/sqlsequence.prg
 76a61fe99c954e9254dfcaad105fa89fd340ee90 2006091416:24:35-UTC ./tools/sql2/util/jeed/test/s0
@@ -2313,7 +2319,6 @@ f5995e7f3052b457f645f863cd9390a18e00b049 2003082014:16:37-UTC ./tools/dbfview/pa
 41c9c4bb3927b28a315f24c5750f4dacbcf995e5 2003082013:47:25-UTC ./tools/dbfview/m
 6a516dcbb513c7752182c9ffee96e258896056dc 2003082013:47:17-UTC ./tools/dbfview/m.bat
 374e1e266462da12c1e12c34a820ec887794be79 2003082011:45:10-UTC ./tools/setperm/m
-b333d528e0969f64b290183796be6e43299a1f30 2003082011:43:27-UTC ./tools/mask/m
 cbc61101c6afad38087d611cc9c340f7e2c26c0f 2003082011:42:11-UTC ./tools/ddict2/m
 825052df8e44afa7c6712170591250dab097e13e 2003082009:59:50-UTC ./tools/ddict2/parfile.bld
 b69087b272e9104d4f66fc8d079e9eaa6f270ae3 2003082009:59:12-UTC ./tools/ddict2/m.bat
@@ -2729,6 +2734,7 @@ c09972f210ef20f0444f202774fbf6bd5d11c641 1999021323:02:08-UTC ./tutor/xddict/xdd
 bad767272d2b4f982d7344493196fcd4f2713c6b 1998112003:01:28-UTC ./tools/ddict2/mskmerge.msk
 c76b610d20e57831ab0efe68a4deb51cc032709f 1998102801:17:01-UTC ./jt/jtdemo/tabedit/dd/_szamla.ch
 5e127090d294408d0997f50d2198f4cb69e3f92f 1998102801:17:01-UTC ./jt/jtdemo/tabedit/dd/_szamla.prg
+2e51e22150f3e8e129b4c2d9a2638e421c0bb6b1 1998090916:03:58-UTC ./tools/mask/scrstr.prg
 cc77a4973df9ef67cf93f6ced94b8b6aa0d6354b 1998072909:23:42-UTC ./tools/mask/kivonugy.pge
 11e532373e1374bbfd7dcda1ea1837af6b22191e 1997111617:09:18-UTC ./tools/mask/pageprn.msk
 6cf90e940c60fbd1eb6a77c6ff71db8dcdfdf00c 1997072702:32:20-UTC ./setup/setup-flex/tblcmp.c
@@ -2738,6 +2744,7 @@ d63ca64a5422a4fe00d7e2771dc550d0ae433703 1997072702:32:19-UTC ./setup/setup-flex
 931041f55d07b8daccfe0eb0f97982b9cc2c4fe4 1997072702:32:19-UTC ./setup/setup-flex/sym.c
 27668e88930945bd99134fb3341bf50c18df7dc9 1997072702:32:18-UTC ./setup/setup-flex/ecs.c
 84f1bb45de7559e424f741ab77295612a0c18aa2 1997072702:32:16-UTC ./setup/setup-flex/ccl.c
+88ad042ecd2ac68e0a5c8cb0133a58f9de6b479e 1997062111:28:46-UTC ./tools/mask/scrstr.ch
 c33ad3778c0aa0aa57dcf8a038c3c0627dd34bec 1997020117:53:18-UTC ./tools/ddict2/mskowner.msk
 e4d925bd3aade47204a32fa4f2fbfaaf0bcfea35 1996122908:59:52-UTC ./tools/mask/pagedemo.pge
 35a79c354658b04ef700111ab09b5bd67568fc88 1996072711:17:34-UTC ./ccclib/src/mod.prg

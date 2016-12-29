@@ -1,0 +1,6 @@
+#!/bin/bash
+
+bapp_unixc.b -lmask -xdemo-msk -xdemo-wro
+
+
+

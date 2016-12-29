@@ -18,7 +18,7 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//std.ch (CCC-PRG2PPO-hoz módosított változata)
+//std.ch (CCC-PRG2PPO-hoz modositott valtozata)
 
 #ifndef _SET_CH
 #include "set.ch"
@@ -215,18 +215,13 @@
 #command SET DELIMITERS (<x>)           => Set( _SET_DELIMITERS, <x> )
 
 
-#command @ <row>, <col> GET <var>                                       ;
-                        [PICTURE <pic>]                                 ;
-                        [VALID <valid>]                                 ;
-                        [WHEN <when>]                                   ;
-                        [SEND <msg>]                                    ;
-                                                                        ;
-      => SetPos( <row>, <col> )                                         ;
-       ; AAdd(                                                          ;
-           GetList,                                                     ;
-           _GETNEW( @<var>, <"var">, <pic>, <{valid}>, <{when}> ):display();
-             )                                                          ;
-      [; ATail(GetList):<msg>]
+#command @ <row>, <col> GET <var>                                           ;
+                            [PICTURE <pic>]                                 ;
+                            [VALID <valid>]                                 ;
+                            [WHEN <when>]                                   ;
+    => SetPos( <row>, <col> )                                               ;
+     ; AAdd(GetList,_GETNEW(@<var>,<"var">,<pic>,<{valid}>,<{when}>):display())
+
 
 
 //-----------------------------------------------------------------------
@@ -314,7 +309,7 @@
 
 
 //-----------------------------------------------------------------------
-//Menü szeparátor
+//Menu szeparator
 //-----------------------------------------------------------------------
 #ifdef _CCC_
 #define MENUSEP  chr(182)

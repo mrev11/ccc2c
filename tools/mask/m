@@ -1,2 +1,4 @@
 #!/bin/bash
-bapp_unixc.b -lmask "BUILD_EXE=$CCCDIR/usr/bin/$CCCUNAME" 
+bapp_unixc.b -xmask -xpage -xmsk2say -xmsk2pge -xpge2wro   @parfile.bld
+
+
