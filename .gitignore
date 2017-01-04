@@ -48,5 +48,28 @@ exe-pg/
 exe-sqlite3/
 
 
+#symlink
+usr/bin/freebsd/*
+!usr/bin/freebsd/*.b
+usr/bin/linux/*
+!usr/bin/linux/*.b
+usr/bin/netbsd/*
+!usr/bin/netbsd/*.b
+usr/bin/solaris/*
+!usr/bin/solaris/*.b
+
+usr/bin/linux/__linux.b
+usr/bin/linux/bapp_linux.b
+usr/bin/linux/bapp_linux0.b
+usr/bin/linux/bapp_linux_.b
+usr/bin/linux/bapp_linux_btbtx.b
+usr/bin/linux/bapp_linux_datidx.b
+usr/bin/linux/bapp_linux_dbfctx.b
+usr/bin/linux/bapp_linuxc.b
+usr/bin/linux/bapp_linuxc_btbtx.b
+usr/bin/linux/bapp_linuxc_datidx.b
+usr/bin/linux/bapp_linuxc_dbfctx.b
+usr/bin/linux/bapp_linuxg.b
+usr/bin/linux/bapp_linuxg_dbfctx.b
 
 
