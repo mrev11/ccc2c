@@ -1,11 +1,13 @@
+bc556d547a9b17da36bd4948dc7d7a40a15d9d52 2017021919:45:51-UTC ./CHANGELOG_vermes
+a56598bb9b73d23ead1e86248557ebd0bb55b9e4 2017021919:44:34-UTC ./log-install
+e569024127628d0013da5a2fcd9d55f2e5cb4af6 2017021919:32:03-UTC ./ccclib/src/uic/brwmenu.prg
+d54351ee8b70057485757fe55daaa00e98cee654 2017021918:14:34-UTC ./tutor/xbrwarr/xbrwarr.prg
 aeee28654da7eb66641b5dbc1b8a40fef594c9b9 2017021208:25:47-UTC ./usr/bin/linux/build
-3e82476b0de4df441434f4175253c064c9a2b3f5 2017021208:24:35-UTC ./CHANGELOG_vermes
 fb2fdd2ed8dcc0de718f7df6051dcb6d7a40de7c 2017021118:39:34-UTC ./usr/build/windows/obj2so.bat
 f453d3ff938ca47dd8e827d0d04f55e3a9a1532d 2017021118:12:56-UTC ./ccctools/buildp/build.hu.ver
 68e63d1f608b982082b20a32f7c78f8d73b82981 2017021118:05:46-UTC ./ccctools/buildp/build.prg
 8426df1a758c382bcd5b234ce739889562af7e1a 2017010721:57:21-UTC ./usr/bin/linux/list
 8bf7bd973b597b52c20226dbd75b2920db24201b 2017010509:06:56-UTC ./jt/jterminal/jterminal.jar
-6448e0e5b507666921604d38c79be8d6f951926e 2017010413:10:36-UTC ./log-install
 a2a33bf544e85130b2607d756b8191e504b9d236 2017010413:10:36-UTC ./usr/bin/linux/delempty
 af73f823b72fca2101ab6b996b77b4ff0a69657f 2017010413:10:36-UTC ./usr/bin/linux/delobj
 6713d71e8c23911186884a3eb1b980e600e24114 2017010413:10:36-UTC ./usr/bin/linux/delppo
@@ -239,7 +241,6 @@ eccce07dbe19a133a734f2916306237552e5236e 2016092913:37:04-UTC ./tutor/redir/unix
 f6f212559cf3f927d45e40c643b8609df4fb26fe 2016092913:36:58-UTC ./tutor/rename/rnm.prg
 d0757c8bcdaf221a76ffc7bb9bdfb3ec76087d8e 2016092913:36:52-UTC ./tutor/spawn/test0.prg
 e18901803fce1b86e01230e38fe997b019fdb84d 2016092913:36:46-UTC ./tutor/xbrowse/xbrowse.prg
-06b5a41af01f5ad335d78f99941f7fc64b12a177 2016092913:36:40-UTC ./tutor/xbrwarr/xbrwarr.prg
 f1bd286c369db72ae6bf1f65b3d82c7008e45d20 2016092913:36:33-UTC ./tutor/xtesztdb/xtesztdb.prg
 f264fa4551de504ff81475815244966db07523e5 2016092907:30:50-UTC ./jt/jtdemo/cccdown/cccdown.prg
 ee0ce8b4b7388a2be89337f147417caeccaebe6a 2016092907:22:12-UTC ./jt/jtdemo/dlgdemo/main6x.prg
@@ -1238,7 +1239,6 @@ b9918672448d2fb94341f1b1033602b241348445 2009050615:47:44-UTC ./usr/bin/netbsd/b
 acc82bb39e3ca5d24ba25a3e14955812a7db671e 2009050615:46:55-UTC ./usr/bin/netbsd/bapp_unix0.b
 b0d2fdcec72c558821c3a544a276e4fbf0fb4b56 2009050615:46:43-UTC ./usr/bin/netbsd/bapp_unix.b
 f2250b868fa0c3c48c9ccbc0d79b74efa698b2c9 2009050615:30:26-UTC ./usr/options/fre/link.opt
-c8f5c60d920361322b03f84c1c056e58ac9633a9 2009050306:54:49-UTC ./ccclib/src/uic/brwmenu.prg
 5bc543cbf361d76789b39064a630096f5ce40f59 2009050305:52:22-UTC ./ccclib/src/uic/m
 a93f66039cf5697a89ecb533f929b6fd34498e8a 2009042813:49:44-UTC ./ccctools/ppo2cpp/test-forward/proba.prg
 5c5f3cc8f3ffd3ccf26614c7aa9bcf83ec9b759a 2009042813:35:27-UTC ./ccctools/ppo2cpp/test-forward/forw1.prg
