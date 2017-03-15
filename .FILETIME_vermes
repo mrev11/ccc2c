@@ -1,4 +1,9 @@
-bc556d547a9b17da36bd4948dc7d7a40a15d9d52 2017021919:45:51-UTC ./CHANGELOG_vermes
+861cd533b1e3390f0b568b9d78d6bcae0464e572 2017031514:38:52-UTC ./CHANGELOG_vermes
+bd4ccb9208f01f3e778d5518e6b949b2c763d3f0 2017031512:33:44-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-hun.txt
+2c31ceddb6ab87c3712820ad644c93c3970e30c6 2017031512:26:45-UTC ./tools/sql2/driver-sqlite3/regression/OLVASS
+23ef682d33674e2ca5985df1c878903a9bce0299 2017031511:58:28-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-regression.rb
+f58f161b6fcaa79f3ac1626562b79308025ec54b 2017031511:55:47-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-eng.txt
+731a8eff333b8f7053ab2220511b524c87a75923 2017022709:43:51-UTC ./LICENSE
 a56598bb9b73d23ead1e86248557ebd0bb55b9e4 2017021919:44:34-UTC ./log-install
 e569024127628d0013da5a2fcd9d55f2e5cb4af6 2017021919:32:03-UTC ./ccclib/src/uic/brwmenu.prg
 d54351ee8b70057485757fe55daaa00e98cee654 2017021918:14:34-UTC ./tutor/xbrwarr/xbrwarr.prg
