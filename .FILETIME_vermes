@@ -1,7 +1,11 @@
-73d3cb697ee1c21dfa7ddf8a96c9d8b6056e7651 2017032419:52:32-UTC ./CHANGELOG_vermes
+5b3e2b2d4697b5da8241386e74c9d23129ee0b18 2017032419:56:24-UTC ./CHANGELOG_vermes
 46ea824a5c0b826cff4be463bd7cced6ae913977 2017032419:15:40-UTC ./ccctools/ppo2cpp/nodetab.h
 cb6d40dddbf5099bca51eb52821b7fe2edb79ef7 2017032419:14:33-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 c182cec986d8e6a78c9e14402ce1d14fa4f1fd81 2017032419:14:11-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
+841af9f93a0643e3565275c6510513184c63ed8a 2017032418:30:09-UTC ./ccctools/buildp/build.hu.ver
+dabf348fdac3875031e5aaa641e219a557796b04 2017032418:29:33-UTC ./ccctools/buildp/build.prg
+c52a5a9a63e51e0fbcec692ee979be64e6d9bd79 2017032418:28:32-UTC ./ccctools/build/build.prg
+16f47e6be60743e6d9be5c51755328492317bc7f 2017032418:27:37-UTC ./ccctools/build/build.hu.ver
 bd4ccb9208f01f3e778d5518e6b949b2c763d3f0 2017031512:33:44-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-hun.txt
 2c31ceddb6ab87c3712820ad644c93c3970e30c6 2017031512:26:45-UTC ./tools/sql2/driver-sqlite3/regression/OLVASS
 23ef682d33674e2ca5985df1c878903a9bce0299 2017031511:58:28-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-regression.rb
@@ -12,8 +16,6 @@ e569024127628d0013da5a2fcd9d55f2e5cb4af6 2017021919:32:03-UTC ./ccclib/src/uic/b
 d54351ee8b70057485757fe55daaa00e98cee654 2017021918:14:34-UTC ./tutor/xbrwarr/xbrwarr.prg
 aeee28654da7eb66641b5dbc1b8a40fef594c9b9 2017021208:25:47-UTC ./usr/bin/linux/build
 fb2fdd2ed8dcc0de718f7df6051dcb6d7a40de7c 2017021118:39:34-UTC ./usr/build/windows/obj2so.bat
-f453d3ff938ca47dd8e827d0d04f55e3a9a1532d 2017021118:12:56-UTC ./ccctools/buildp/build.hu.ver
-68e63d1f608b982082b20a32f7c78f8d73b82981 2017021118:05:46-UTC ./ccctools/buildp/build.prg
 8426df1a758c382bcd5b234ce739889562af7e1a 2017010721:57:21-UTC ./usr/bin/linux/list
 8bf7bd973b597b52c20226dbd75b2920db24201b 2017010509:06:56-UTC ./jt/jterminal/jterminal.jar
 a2a33bf544e85130b2607d756b8191e504b9d236 2017010413:10:36-UTC ./usr/bin/linux/delempty
@@ -143,8 +145,6 @@ c7a4c70d26de027130db44a02b068f45cf69e4f0 2016122408:38:35-UTC ./jt/jterminal/jtw
 b943765bdc9531e7b4d95526adf909cd5519f284 2016122408:38:34-UTC ./jt/jterminal/jtsocket$dummytrustmanager.class
 349e6756ebfacf038606e36678b66c2c5d0a576e 2016122408:38:34-UTC ./jt/jterminal/jtsocket.class
 7eb77f0d8a826a87f5a8bd90ee4acfd6ecf957e3 2016121619:34:36-UTC ./ccclib/src/windows/filetime.cpp
-7d2cd42da8f31057deca2d073e89fe9f15842a33 2016120722:48:38-UTC ./ccctools/build/build.prg
-8a097eebd5ef3369b16c7efa8075425c601ce761 2016120722:47:35-UTC ./ccctools/build/build.hu.ver
 85e4be19b35f129e06bdc2d08eb6cb7418b52152 2016120314:53:44-UTC ./usr/build/linux/tdc2obj.bat
 0a4560d3a1cd0caef189948e9a14e644144bbc87 2016120314:46:46-UTC ./usr/build/linux/tdc2ch.bat
 86ebc7b934d548de2c4cdd71aa279b1350876fe0 2016120314:25:48-UTC ./tools/tdc2prgch/tdc2prgch.prg
