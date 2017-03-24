@@ -1,4 +1,6 @@
-5b3e2b2d4697b5da8241386e74c9d23129ee0b18 2017032419:56:24-UTC ./CHANGELOG_vermes
+2d226e4deb984e4b91fc35aa48a0e032b28e0e29 2017032419:57:12-UTC ./CHANGELOG_vermes
+ddb1cf929f4c5ffb3dfc7bd563c9e44d1ab82f36 2017032419:47:07-UTC ./tools/ddict2/ddict2.prg
+7fe8211f5db832f2f7e14db3d99608dc4f09997c 2017032419:37:54-UTC ./tools/ddict2/progout.prg
 46ea824a5c0b826cff4be463bd7cced6ae913977 2017032419:15:40-UTC ./ccctools/ppo2cpp/nodetab.h
 cb6d40dddbf5099bca51eb52821b7fe2edb79ef7 2017032419:14:33-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 c182cec986d8e6a78c9e14402ce1d14fa4f1fd81 2017032419:14:11-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
@@ -6,6 +8,9 @@ c182cec986d8e6a78c9e14402ce1d14fa4f1fd81 2017032419:14:11-UTC ./ccctools/ppo2cpp
 dabf348fdac3875031e5aaa641e219a557796b04 2017032418:29:33-UTC ./ccctools/buildp/build.prg
 c52a5a9a63e51e0fbcec692ee979be64e6d9bd79 2017032418:28:32-UTC ./ccctools/build/build.prg
 16f47e6be60743e6d9be5c51755328492317bc7f 2017032418:27:37-UTC ./ccctools/build/build.hu.ver
+eb0e10d0576dc590b5dc093d51fce0a7bc324fe1 2017032417:56:18-UTC ./tools/tdc2prgch/tabsuper.prg
+3d504b121e6f23692d9f1a9f87b61a43f82605c2 2017032416:25:03-UTC ./tools/tdc2prgch/prg2tdc.prg
+731616a301f5fe219a6b4da96a5b7cb89684a98e 2017032212:29:32-UTC ./tools/ddict2/dddel.prg
 bd4ccb9208f01f3e778d5518e6b949b2c763d3f0 2017031512:33:44-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-hun.txt
 2c31ceddb6ab87c3712820ad644c93c3970e30c6 2017031512:26:45-UTC ./tools/sql2/driver-sqlite3/regression/OLVASS
 23ef682d33674e2ca5985df1c878903a9bce0299 2017031511:58:28-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-regression.rb
@@ -902,7 +907,6 @@ b23ac9f39fff4ca3651b6e9ae6c455c5fa41737d 2013101615:52:35-UTC ./tools/ddict2/ddi
 9a82f00bc56caeffc5d4f49a01acd2c18f3a9699 2013101615:32:50-UTC ./tools/ddict2/msksor.say
 d78c8941a21972b896d4d3f5eff94dbeabedd695 2013101615:32:12-UTC ./tools/ddict2/sorrend.prg
 3bafe0d3a1993f7822fb174b3ab81c63d8dc27b0 2013101615:29:56-UTC ./tools/ddict2/msksor.msk
-16b008b2a21f43f7c60feadb1fc07fba788c76a6 2013101615:06:41-UTC ./tools/ddict2/ddict2.prg
 49d05d8cf57dc6b1860fb75ad9ed2cf7a8dd63b8 2013101614:44:49-UTC ./tools/ddict2/dd/_ddict.ch
 0499165ab5f43aac04058a7a1e7785bfa7a16204 2013101614:44:49-UTC ./tools/ddict2/dd/_ddict.prg
 922d9563a48b7a47840003312dc5f7f917708cb0 2013101614:44:49-UTC ./tools/ddict2/dd/_ddictx.ch
@@ -1323,7 +1327,6 @@ c6a60c2d62bfc877123b1f3e6010845d5132b6af 2008080106:14:24-UTC ./ccctools/readme.
 1124f9d61b7fe9eae1c8067b89dcc0ffa973693e 2008062510:07:05-UTC ./tools/ddict2/browse.prg
 b460ff81bb30d743c932b3e0db84ae09da0db0e9 2008060512:38:23-UTC ./tabobj/utility.src/kdirseek.say
 0e680eb95b838adb4780bb9bab0d1ec1bcbf0518 2008060208:33:56-UTC ./tabobj/utility.src/kdirseek.msk
-bd062502db270b4131f977d83ec401d7f4573b49 2008052914:34:56-UTC ./tools/ddict2/progout.prg
 2493d2af270d3c82b62910eed3c3cd11e7d817f5 2008052313:21:03-UTC ./ccctools/ppo2cpp/fundecl.cpp
 dee0712c4ec9c94d32ba5c39949212ce9640e7a1 2008052313:18:00-UTC ./ccclib/src/unix/spawn.cpp
 1c8fb7444d48503eddad0a593b001e8b151c7479 2008052312:29:14-UTC ./tools/regex/clean-all.b

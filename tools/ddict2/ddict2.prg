@@ -28,39 +28,35 @@
 
 
 ****************************************************************************
-function main(a,b,c,d) //argumentumok: dbf directory, adatszótár
+function main(*) //argumentumok: dbfdir, datadict, namespace
 
 local sset:=standardset()
-local psiz:=4
-local p:=array(psiz),i,dbfdir,ddict
+local p:={*},pp,i,dbfdir,ddict,nspace
 local karbtart:={}, struct:={}, program:={}
 local ddpath, ddname, n
 local browse
-
-    p[1]:=a
-    p[2]:=b
-    p[3]:=c
-    p[4]:=d
 
     i:=1
     while( i<=len(p) .and. p[i]!=NIL )
     
         p[i]:=strtran(p[i],"/",dirsep())
         p[i]:=strtran(p[i],"\",dirsep())
+        
+        pp:=","+p[i]+","
  
-        if( p[i]$",-u+,/u+,/u,-u," )
+        if( p[i]$",-u+,-u," )
             underscore("_") //default
             adel(p,i)
 
-        elseif( p[i]$",-u-,/u-," )
+        elseif( p[i]$",-u-," )
             underscore("") 
             adel(p,i)
 
-        elseif( p[i]$",-s+,/s+,/s,-s," )
+        elseif( p[i]$",-s+,-s," )
             superlist(.t.) //default
             adel(p,i)
 
-        elseif( p[i]$",-s-,/s-," )
+        elseif( p[i]$",-s-," )
             superlist(.f.) 
             adel(p,i)
 
@@ -74,10 +70,11 @@ local browse
         ? "Copyright (C) ComFirm BT. 1998. All rights reserved"
 
         ?
-        ? "Használat: ddict2 [dbfDir [ddPathName]]  [-u+|-u-] [-s+|-s-]"
+        ? "Használat: ddict2 [dbfDir [ddPathName [namespace]]]  [-u+|-u-] [-s+|-s-]"
         ?
         ? "dbfDir     : a dbf-eket tartalmazó directory (default='.')"
         ? "ddPathName : az adatszótár adatbázis állomány (default='datadict')"
+        ? "namespace  : namespace of tabSuperList"
         ? "-u+,-u-    : aláhúzásos objektumgeneráló függvények (default: -u+)"
         ? "-s+,-s-    : kellenek-e a _super??.prg modulok (default: -s+)"
         ?
@@ -95,9 +92,12 @@ local browse
         ? "Üss le egy billentyût!"
         inkey(0)
     end
+    
+    p::asize(3)
 
     dbfdir := if(NIL==p[1],".",p[1])
     ddict  := if(NIL==p[2],"datadict",p[2])
+    nspace := if(NIL==p[3],"",p[3]+".")
     
     dbfRoot(dbfdir)  //beállítja a dbf directory-t
     
@@ -141,9 +141,9 @@ local browse
     aadd(karbtart,{"Korábbi verzió rekordjainak törlése  ",{||verzioDelete(),browse:refreshAll(),.t.}})
     brwMenu(browse,"Karbantartás","Index definíciók bevitele, módosítása, törlése",karbtart)
 
-    aadd(program,{"#ifdef ARROW vegyes típusú include-ok",{||progOutPut(browse,"##")}})
-    aadd(program,{"(FIELD:alias:count) típusú include-ok",{||progOutPut(browse,"::")}})
-    aadd(program,{"alias->field típusú include-ok (RDD)",{||progOutPut(browse,"->")}})
+    aadd(program,{"#ifdef ARROW vegyes típusú include-ok",{||progOutPut(browse,"##",nspace)}})
+    aadd(program,{"(FIELD:alias:count) típusú include-ok",{||progOutPut(browse,"::",nspace)}})
+    aadd(program,{"alias->field típusú include-ok (RDD)",{||progOutPut(browse,"->",nspace)}})
     brwMenu(browse,"Program","Programkimenet (PRG-CH) elõállítása",program)
 
     brwMenu(browse,"Tömörítés!","Az adatszótár tömörítése",{||ddictPack(browse),.t.})
