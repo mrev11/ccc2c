@@ -1,4 +1,7 @@
-861cd533b1e3390f0b568b9d78d6bcae0464e572 2017031514:38:52-UTC ./CHANGELOG_vermes
+73d3cb697ee1c21dfa7ddf8a96c9d8b6056e7651 2017032419:52:32-UTC ./CHANGELOG_vermes
+46ea824a5c0b826cff4be463bd7cced6ae913977 2017032419:15:40-UTC ./ccctools/ppo2cpp/nodetab.h
+cb6d40dddbf5099bca51eb52821b7fe2edb79ef7 2017032419:14:33-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
+c182cec986d8e6a78c9e14402ce1d14fa4f1fd81 2017032419:14:11-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
 bd4ccb9208f01f3e778d5518e6b949b2c763d3f0 2017031512:33:44-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-hun.txt
 2c31ceddb6ab87c3712820ad644c93c3970e30c6 2017031512:26:45-UTC ./tools/sql2/driver-sqlite3/regression/OLVASS
 23ef682d33674e2ca5985df1c878903a9bce0299 2017031511:58:28-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-regression.rb
@@ -656,8 +659,6 @@ e7011e3ecbfc8ea0fb513e0301c3df84331a39a4 2015092407:33:28-UTC ./ccclib/src/month
 3034dfca5fc39d8770f815b60760a61747526ac6 2015090314:46:21-UTC ./tabobj/tbbtbtx/dbcopybt.prg
 8470834850caca82208566e251db20a2efdaffa5 2015060821:22:34-UTC ./tools/tdc2prgch/util/tostr.prg
 7c459f48f84fd4afdac48be33d984452d1d1adc4 2015021705:52:13-UTC ./ccctools/buildp/OLVASS
-b693d312ee3071ba3dd8334884955e637115d171 2015021216:17:49-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
-719f10a6e42257c03a96121bf3c8cd747a4b1197 2015021216:15:05-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 bb2f9eb6b2855048ed7e528f566cd3c67ccadd27 2015021216:01:42-UTC ./usr/build/netbsd/prg2obj.bat
 3ee823eeab054bc6dc3073e6d9415d4cc6e6a56d 2015021216:01:09-UTC ./usr/build/linux/prg2obj.bat
 02ccbe61672bc17f894606067c89001e5401ac4e 2015021216:00:48-UTC ./usr/build/freebsd/prg2obj.bat
@@ -870,7 +871,6 @@ a8c60da0500f21014f28fc91d28e32984fa9bca2 2014011609:26:18-UTC ./usr/options/fre/
 0781bdb27ad595463a2702b0b853b5985f613bb7 2014011517:30:27-UTC ./setup/setup-lemon/m
 819badc56c487ef2aa258b0d8bda0d156f5c1997 2014011508:35:54-UTC ./tools/mask/msk2say.prg
 dc2d22f46db17063104784382fd7a7a4b6d80826 2013122615:38:29-UTC ./tools/sql2/util/tdsutil/parfile.bld
-96833629f5fcb4d0a81b5d857fc16461ddb39c1c 2013122614:41:59-UTC ./ccctools/ppo2cpp/nodetab.h
 461ef598db023e150079a856ff175d2364e60499 2013112911:20:56-UTC ./tools/crypto/m.bat
 2108f44f3930582c36ab953aaab2716999f8d213 2013112911:18:39-UTC ./tools/crypto/clean.b
 253796721ee45823bfb71661f955b73d9a34de06 2013112911:03:10-UTC ./tools/crypto/demo/m

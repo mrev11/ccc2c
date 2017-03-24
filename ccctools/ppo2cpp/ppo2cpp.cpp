@@ -34,7 +34,7 @@ extern void  ParseFree(void*,void(*)(void*));
 extern void  ParseTrace(FILE*,const char*); 
 extern void  Parse(void*,int,parsenode*);  //3th arg: %token_type {parsenode*} 
 
-static const char *version_number="4.4.27";
+static const char *version_number="4.4.28";
 
 ppo2cpp_lexer *lexer;
 
