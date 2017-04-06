@@ -1,3 +1,8 @@
+70ffa5f098ac42aed1c0023ceebbd37f2db9254c 2017040613:42:20-UTC ./ccctools/build/build.hu.ver
+2856ecacab40077840c56e103b4da985aad2aed0 2017040613:36:14-UTC ./ccctools/build/build.prg
+48bcb60ab1632647e744f96ee4b022230a169387 2017040613:03:14-UTC ./CHANGELOG_vermes
+453d40e2922bcf3b6d71622a44c067184a18de8b 2017040611:53:15-UTC ./ccctools/buildp/build.hu.ver
+e7cf4ee21ac17974c429093b54452fcbc6894e6c 2017040611:51:30-UTC ./ccctools/buildp/build.prg
 05c210c625650ddc1113bf17e6160e323365d8e5 2017032420:02:49-UTC ./log-install
 357adb8518a803a0f95e3ad8ffdfee62a71d5923 2017032420:02:38-UTC ./usr/bin/linux/prg2tdc
 ef7009c73102fe6cf2096ada22c1da9d350ebeb9 2017032420:02:38-UTC ./usr/bin/linux/tabsuper
@@ -5,16 +10,11 @@ ef7009c73102fe6cf2096ada22c1da9d350ebeb9 2017032420:02:38-UTC ./usr/bin/linux/ta
 a8d2eed177bbb6be4129c1ca8e789928c8103244 2017032420:02:33-UTC ./usr/bin/linux/ddict2
 b048acf66bba0c6a0bacdc316f56561977e89f9a 2017032420:02:22-UTC ./usr/bin/linux/build
 3ffcd46395e69f255d8a57b30c64d3c0b4b155a3 2017032420:02:03-UTC ./usr/bin/linux/ppo2cpp
-2d226e4deb984e4b91fc35aa48a0e032b28e0e29 2017032419:57:12-UTC ./CHANGELOG_vermes
 ddb1cf929f4c5ffb3dfc7bd563c9e44d1ab82f36 2017032419:47:07-UTC ./tools/ddict2/ddict2.prg
 7fe8211f5db832f2f7e14db3d99608dc4f09997c 2017032419:37:54-UTC ./tools/ddict2/progout.prg
 46ea824a5c0b826cff4be463bd7cced6ae913977 2017032419:15:40-UTC ./ccctools/ppo2cpp/nodetab.h
 cb6d40dddbf5099bca51eb52821b7fe2edb79ef7 2017032419:14:33-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 c182cec986d8e6a78c9e14402ce1d14fa4f1fd81 2017032419:14:11-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
-841af9f93a0643e3565275c6510513184c63ed8a 2017032418:30:09-UTC ./ccctools/buildp/build.hu.ver
-dabf348fdac3875031e5aaa641e219a557796b04 2017032418:29:33-UTC ./ccctools/buildp/build.prg
-c52a5a9a63e51e0fbcec692ee979be64e6d9bd79 2017032418:28:32-UTC ./ccctools/build/build.prg
-16f47e6be60743e6d9be5c51755328492317bc7f 2017032418:27:37-UTC ./ccctools/build/build.hu.ver
 eb0e10d0576dc590b5dc093d51fce0a7bc324fe1 2017032417:56:18-UTC ./tools/tdc2prgch/tabsuper.prg
 3d504b121e6f23692d9f1a9f87b61a43f82605c2 2017032416:25:03-UTC ./tools/tdc2prgch/prg2tdc.prg
 731616a301f5fe219a6b4da96a5b7cb89684a98e 2017032212:29:32-UTC ./tools/ddict2/dddel.prg
