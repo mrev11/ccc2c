@@ -1,6 +1,15 @@
+c86b9d366d678fedfdb3b85d479d28405eae71f6 2017041919:27:16-UTC ./CHANGELOG_vermes
+6f0e1b0aa093c8cbedd968dbfb0b15ffc22f8599 2017041919:08:10-UTC ./tools/xstart/xstart.prg
+33c9411de1f9bc74933771783e02fd67e8c7e646 2017041418:44:47-UTC ./tools/sql2/log-mkall
+7960dd1595ffed3a11b6014fe33e6fd43ad76f4a 2017041418:44:08-UTC ./usr/bin/linux/jeed
+b88daee6ba3c5d7716b0c40aa1703973b615315e 2017041418:44:08-UTC ./usr/bin/linux/tds2prg
+4f891a1f30ed95bde2c05572559ce69a3fe0ca13 2017041418:44:08-UTC ./usr/bin/linux/tds2ted
+4e79703304c12795e33c701ea9b2dc965a9a079f 2017041418:44:08-UTC ./usr/bin/linux/ted2prg
+b31f6e38218aaeebca5fa252bd8efafa259de680 2017041418:44:06-UTC ./usr/bin/linux/bt2tds
+00cca0519626885b3cb104897d5d609ca2d4e249 2017041418:44:06-UTC ./usr/bin/linux/bt2ted
+a0b770ae88553dfc93001b85440cb88d6ef83f40 2017041418:44:06-UTC ./usr/bin/linux/mkentitylib
 70ffa5f098ac42aed1c0023ceebbd37f2db9254c 2017040613:42:20-UTC ./ccctools/build/build.hu.ver
 2856ecacab40077840c56e103b4da985aad2aed0 2017040613:36:14-UTC ./ccctools/build/build.prg
-48bcb60ab1632647e744f96ee4b022230a169387 2017040613:03:14-UTC ./CHANGELOG_vermes
 453d40e2922bcf3b6d71622a44c067184a18de8b 2017040611:53:15-UTC ./ccctools/buildp/build.hu.ver
 e7cf4ee21ac17974c429093b54452fcbc6894e6c 2017040611:51:30-UTC ./ccctools/buildp/build.prg
 05c210c625650ddc1113bf17e6160e323365d8e5 2017032420:02:49-UTC ./log-install
@@ -872,7 +881,6 @@ f97c336c1a01aebb27ecdb7da90311ffbce34fd3 2012102311:53:16-UTC ./setup/setup-unix
 0ccb20ea13902d981ace1f02065b0caffb6c4814 2012102308:02:32-UTC ./terminal/terminal-test/remtest.bat
 86e4b332162579a8e92f9b88f1d43b585b6eb356 2012102213:27:18-UTC ./terminal/terminal-test/clean-all.b
 a8ce9217c1617f63ba57235ac87ace1fb66c5f3e 2012102213:06:53-UTC ./tools/xstart/xstart.par
-c702b5e244c4fe7837b07a9176207e6d2fa4a5aa 2012102117:46:09-UTC ./tools/xstart/xstart.prg
 1bcd59d506d2db0cab734d905fdc47630f30639f 2012102115:11:07-UTC ./terminal/terminal-test/clean-all.bat
 4c339f53b3ecda3e9b33003598a18aac23e4d65c 2012102114:41:38-UTC ./terminal/terminal-test/m.bat
 493aa183a916f3f7ce655334eb27fb923f0d99f7 2012102114:39:13-UTC ./terminal/terminal-test/remio/m.bat
