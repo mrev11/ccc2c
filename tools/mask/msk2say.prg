@@ -18,6 +18,7 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+//sorrend kezeles javitva (Vermes M. 2014.04.26)
 //nagy maszkok támogatása (Vermes M. 2014.01.15)
 //checkbox/radiobutton támogatás (Vermes M. 2000.04.21)
 //portolva CCC kódrendszerre (Vermes M. 2000.01.11)
@@ -105,10 +106,14 @@ local srTomb,say_mode
 
             if (w=="r")
                w:=memoread(p[i+1])
-               w:=strtran(w,chr(10),"")
                w:=strtran(w,chr(13),"")
-               w:=strtran(w," ","")
-               srTomb:=wordlist(w)
+               w:=strtran(w,chr(10)," ")
+               w:=strtran(w,","," ")
+               while( "  "$w )
+                  w::=strtran("  "," ")   
+               end
+               w::=alltrim
+               ? srTomb:=wordlist(w," ")
                i++
             end
 
@@ -584,6 +589,6 @@ local i,j,t:={},tg:={}
 
 *************************************************************************
 static function ver()
-   return "1.0.01-vm3"
+   return "1.0.2"
 
 *************************************************************************

@@ -1,11 +1,11 @@
 
 #define g_mezo1         getlist[ 1]
-#define g_nev           getlist[ 2]
-#define g_mezo2         getlist[ 3]
-#define g_cim           getlist[ 4]
-#define g_ossz          getlist[ 5]
-#define g_tel           getlist[ 6]
-#define g_datum         getlist[ 7]
+#define g_mezo2         getlist[ 2]
+#define g_ossz          getlist[ 3]
+#define g_datum         getlist[ 4]
+#define g_nev           getlist[ 5]
+#define g_cim           getlist[ 6]
+#define g_tel           getlist[ 7]
 #define g_ugy           getlist[ 8]
 
 static function MASKDEMO(bLoad,bRead,bStore)
@@ -22,30 +22,30 @@ local msk:=mskCreate( 14, 30, 24, 76,bLoad,bRead,bStore)
     mskSay(msk,  0,  0,"»¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿­")
     mskSay(msk,  1,  0,"¬Ï¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶± Ï¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶±¬")
     mskSay(msk,  2,  0,"¬¤Felirat1: ")
-    mskSay(msk,  2, 21,"¤ ¤N‚v: ")
+    mskSay(msk,  2, 21,"¤ ¤Név: ")
     mskSay(msk,  2, 45,"¤¬")
     mskSay(msk,  3,  0,"¬¤                   ¤ ¤                     ¤¬")
     mskSay(msk,  4,  0,"¬¤Felirat2: ")
-    mskSay(msk,  4, 21,"¤ ¤C¡m: ")
+    mskSay(msk,  4, 21,"¤ ¤Cím: ")
     mskSay(msk,  4, 45,"¤¬")
     mskSay(msk,  5,  0,"¬¤                   ¤ ¤                     ¤¬")
-    mskSay(msk,  6,  0,"¬¤™sszeg  : ")
+    mskSay(msk,  6,  0,"¬¤Összeg  : ")
     mskSay(msk,  6, 21,"¤ ¤Tel: ")
     mskSay(msk,  6, 45,"¤¬")
     mskSay(msk,  7,  0,"¬¤                   ¤ ¤                     ¤¬")
-    mskSay(msk,  8,  0,"¬¤D tum   : ")
-    mskSay(msk,  8, 21,"¤ ¤šgy: ")
+    mskSay(msk,  8,  0,"¬¤Dátum   : ")
+    mskSay(msk,  8, 21,"¤ ¤Ügy: ")
     mskSay(msk,  8, 45,"¤¬")
     mskSay(msk,  9,  0,"¬²¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶Î ²¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶Î¬")
     mskSay(msk, 10,  0,"º¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿®")
 
     mskGet   (msk,  2, 12,@mezo1,"mezo1")
-    mskGet   (msk,  2, 29,@nev,"nev")
     mskGet   (msk,  4, 12,@mezo2,"mezo2")
-    mskGet   (msk,  4, 29,@cim,"cim")
     mskGet   (msk,  6, 12,@ossz,"ossz")
-    mskGet   (msk,  6, 29,@tel,"tel")
     mskGet   (msk,  8, 12,@datum,"datum")
+    mskGet   (msk,  2, 29,@nev,"nev")
+    mskGet   (msk,  4, 29,@cim,"cim")
+    mskGet   (msk,  6, 29,@tel,"tel")
     mskGet   (msk,  8, 29,@ugy,"ugy")
 
     mskShow(msk)

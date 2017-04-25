@@ -1,4 +1,7 @@
-53b75eeaf7445ca5828faeabc2fa0e2f0a5a25df 2017042121:18:30-UTC ./CHANGELOG_vermes
+ba617db210c67d6926170c2ec74aaea28f96fac2 2017042522:25:40-UTC ./CHANGELOG_vermes
+11512383269f3c3f9dba4dffca7386f8945a1986 2017042522:18:43-UTC ./tools/mask/maskdemo.say
+75fad24132c3770f4fbed8f1987266646290111b 2017042522:18:26-UTC ./tools/mask/msk2say.prg
+0d4d970c68ded856386f7372da624f54c6d15f3f 2017042522:09:45-UTC ./tools/mask/maskdemo.sor
 7d7cfb8d76b07bb7f036b78c6585f82c3386043e 2017042121:07:21-UTC ./tools/sql2/sql2.hu.ver
 4acb9ac7be2a8c2981e0040dc0cfec5b6aa0c194 2017042121:00:36-UTC ./tools/sql2/driver-postgres/sqlutil.prg
 94deeaaa27250ee4a0f6b33fa7a81c4c2d96efef 2017042121:00:06-UTC ./tools/sql2/driver-oracle/sqlutil.prg
@@ -802,7 +805,6 @@ a8c60da0500f21014f28fc91d28e32984fa9bca2 2014011609:26:18-UTC ./usr/options/fre/
 103b0f408a38699590863d08005e98339fb6d4c2 2014011519:48:17-UTC ./setup/setup-flex/m
 4bacff516efe1b65d24172a06b6c6fde8ded0500 2014011518:01:57-UTC ./ccclib/src/vmm.cpp
 0781bdb27ad595463a2702b0b853b5985f613bb7 2014011517:30:27-UTC ./setup/setup-lemon/m
-819badc56c487ef2aa258b0d8bda0d156f5c1997 2014011508:35:54-UTC ./tools/mask/msk2say.prg
 dc2d22f46db17063104784382fd7a7a4b6d80826 2013122615:38:29-UTC ./tools/sql2/util/tdsutil/parfile.bld
 461ef598db023e150079a856ff175d2364e60499 2013112911:20:56-UTC ./tools/crypto/m.bat
 2108f44f3930582c36ab953aaab2716999f8d213 2013112911:18:39-UTC ./tools/crypto/clean.b
@@ -2587,7 +2589,6 @@ fe8ad6e7eca9268fac2c61cdcda3e133ba25159d 2000081810:37:00-UTC ./jt/msk2dlg/fspec
 8e71e71cc99a7f4728e3e3ceea1616e8bddce873 2000081109:25:56-UTC ./tools/ddict2/dd/d.bat
 45b96226d2f9828c43b73096665326cdac43aef9 2000053017:28:00-UTC ./jt/jtdemo/images/middle.gif
 7a723b441afd60346e7230590fe3598ec97b7981 2000053011:25:22-UTC ./tutor/xmask/demo.say
-c0f806fcfc2ca13f319ba78ce76ab00cc70ebcee 2000053011:15:48-UTC ./tools/mask/maskdemo.say
 e0637c98be92504e710fef1693dbf9a784339ba0 2000051620:35:48-UTC ./tutor/control/radio.say
 1ffa20bbb92d10c856873e5338f08816fef715d7 2000051620:35:34-UTC ./tutor/control/radio.msk
 e652a6399a4d985e44f67ebc345b9be68243c16b 2000042409:06:56-UTC ./tutor/control/radio.sor
