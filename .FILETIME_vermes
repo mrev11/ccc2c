@@ -1,4 +1,8 @@
-02172caf63dc764f887c69bb9e9d9cdd1cf2fb1b 2017042706:25:02-UTC ./CHANGELOG_vermes
+b9d349babf49f274daba827a915ef2751e4ef364 2017050306:21:27-UTC ./CHANGELOG_vermes
+1500d81c502c2f38396e2fb12217ead97a5e39fd 2017050306:17:24-UTC ./terminal/unix/terminal.cpp
+67f97a9442d770eabd651fa5a765360cc58a4e0b 2017050306:16:00-UTC ./terminal/unix/terminal-xft.cpp
+4aa66c5de5e0cd2e1b4c781137fae86b1bfe5266 2017050306:14:39-UTC ./terminal/gtk/terminal-gtk.cpp
+ca0a442695f3975641d08013f79ffffe8ba2d1a4 2017050119:07:29-UTC ./terminal/common/tcpio.cpp
 f00044b3e99ca0fc5c236226c98cd498eb5a96c0 2017042706:18:12-UTC ./ccclib/src/uic/setcursor.cpp
 58bbf5186acfbb7134ad81523de6336bced0265e 2017042522:33:04-UTC ./usr/bin/linux/msk2say
 11512383269f3c3f9dba4dffca7386f8945a1986 2017042522:18:43-UTC ./tools/mask/maskdemo.say
@@ -91,8 +95,6 @@ ceba31708637febc42940f669bd548982a8e7c00 2017010308:35:22-UTC ./install.b
 86ebc7b934d548de2c4cdd71aa279b1350876fe0 2016120314:25:48-UTC ./tools/tdc2prgch/tdc2prgch.prg
 000adf8852af5ee8ecd1c03f896da505833dc62c 2016120314:23:30-UTC ./tools/tdc2prgch/valt.dok
 b4ed0aa805e85681c4123c7a57e04d193fe2f508 2016120312:32:58-UTC ./usr/build/linux/tds2obj.bat
-a7aa2e786e0588d8d1a7e43e96346a0eda1565fd 2016120115:05:55-UTC ./terminal/unix/terminal.cpp
-0f8672e8d77bffd08caccf03caf0775efe5e17c0 2016120113:58:06-UTC ./terminal/unix/terminal-xft.cpp
 0f784282a80d0747e3e106cb7f57be2459d066c1 2016120110:17:02-UTC ./terminal/unix/s
 5d85f92867c3ec4c1776f452696c7585c7648cc4 2016112919:33:20-UTC ./terminal/terminal-test/screenwr/s
 8c489c560c14b8c7242c59f92f6c53d4cc62da26 2016112911:11:08-UTC ./tools/savex/savex.ver
@@ -109,7 +111,6 @@ a89b25533f1a11c12d33954c0b1ff638b970c789 2016112122:28:14-UTC ./tools/tdc2prgch/
 6bf3d2de02d34cf358a7fb94c502286c742141e3 2016111919:12:33-UTC ./tools/savex/escape.prg
 d2f2ef693f05c7b518fe0778039023c019e91b59 2016111915:27:02-UTC ./tutor/fpath/m.bat
 38e9313d79fffb44c3da9d559844d88d6dd11699 2016111915:27:02-UTC ./tutor/fpath/parfile.bld
-7b3085ffd9eac70043e5783ff8afb79329ab05bd 2016111912:46:28-UTC ./terminal/gtk/terminal-gtk.cpp
 9f94166c7fe6e0054c8e880b59ba718443328df7 2016111817:38:00-UTC ./tutor/fpath/fpath.prg
 7eecbb210ef0e19062b8dcb827c99ca1022a9344 2016111817:38:00-UTC ./tutor/fpath/lpath.prg
 cd27a94cac493f5598dbaf80fd9a0ef440d334f9 2016111816:50:15-UTC ./ccctools/autolink/m.bat
@@ -170,7 +171,6 @@ e2b977657dc0f891385fd6ee115e9e749e3197c4 2016100208:42:52-UTC ./tools/savex/save
 f4149625b23ee91256834c9d103dac7cf8881bdc 2016100114:47:11-UTC ./ccclib/src/uic/termapi/remoteio.cpp
 31033ae76d638130020e9123306e1cff5d5aa9ee 2016100108:10:06-UTC ./ccclib/src/uic/termapi/termio.cpp
 cf63fe140195bcac0e1a5f57cedf6087a275428f 2016100107:19:14-UTC ./ccclib/src/uic/termapi/termio.h
-a87e44a62a494dd7a197238f3aa45321324a9907 2016100107:11:27-UTC ./terminal/common/tcpio.cpp
 b513249cf35a258e927ae71269e98d2093897fd8 2016093022:07:05-UTC ./ccclib/src/uic/termapi/termapi.cpp
 3fa71f440f2d9cf0488538b72f1673b9ae4272e3 2016092913:43:49-UTC ./jt/jtdemo/superdemo.prg
 e3b5862385d6c772d5c168545f088c8eb0af23a5 2016092913:43:17-UTC ./tabobj/common.src/tabslock.prg
