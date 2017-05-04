@@ -1,5 +1,7 @@
+b35e96c1d2ff7c4321af918f5e01d40e64fe48a5 2017050421:23:18-UTC ./CHANGELOG_vermes
+1acaf0041a934b4330dbacf319fea0bd1ce94afa 2017050421:20:19-UTC ./terminal/unix/terminal.cpp
+79eb184571feec156f8363496d647d453c07f829 2017050421:08:02-UTC ./terminal/unix/terminal-xft.cpp
 39100180806cb8b97019d9504b7a687c471c7f6e 2017050415:19:03-UTC ./log-install
-e6377b9746a2bdfb34be28d49c525ec185e7ff38 2017050415:18:57-UTC ./CHANGELOG_vermes
 c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
 3466d19f6cf83e35244c932d3bb1012de4e19ba8 2017050414:58:53-UTC ./usr/bin/linux/xstart
 3c0f763165a56ed801e6c60e6383e3d5ec4f930e 2017050414:58:51-UTC ./usr/bin/linux/ncterm
@@ -7,8 +9,6 @@ c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clpr
 e928de4cf2e21dad8ce87967de07bd6e0b5f3909 2017050414:58:51-UTC ./usr/bin/linux/terminal-gtk
 972ec546805d39e2c8ccb2b7f92a63c1cae996de 2017050414:58:51-UTC ./usr/bin/linux/terminal-xft
 9cbf7bbbcba93f80728c5805310f6e4cf922ce87 2017050414:58:50-UTC ./usr/bin/linux/build
-1500d81c502c2f38396e2fb12217ead97a5e39fd 2017050306:17:24-UTC ./terminal/unix/terminal.cpp
-67f97a9442d770eabd651fa5a765360cc58a4e0b 2017050306:16:00-UTC ./terminal/unix/terminal-xft.cpp
 4aa66c5de5e0cd2e1b4c781137fae86b1bfe5266 2017050306:14:39-UTC ./terminal/gtk/terminal-gtk.cpp
 ca0a442695f3975641d08013f79ffffe8ba2d1a4 2017050119:07:29-UTC ./terminal/common/tcpio.cpp
 f00044b3e99ca0fc5c236226c98cd498eb5a96c0 2017042706:18:12-UTC ./ccclib/src/uic/setcursor.cpp
