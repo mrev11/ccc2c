@@ -1,4 +1,12 @@
-b9d349babf49f274daba827a915ef2751e4ef364 2017050306:21:27-UTC ./CHANGELOG_vermes
+39100180806cb8b97019d9504b7a687c471c7f6e 2017050415:19:03-UTC ./log-install
+e6377b9746a2bdfb34be28d49c525ec185e7ff38 2017050415:18:57-UTC ./CHANGELOG_vermes
+c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
+3466d19f6cf83e35244c932d3bb1012de4e19ba8 2017050414:58:53-UTC ./usr/bin/linux/xstart
+3c0f763165a56ed801e6c60e6383e3d5ec4f930e 2017050414:58:51-UTC ./usr/bin/linux/ncterm
+4122dbb565ef8ebdee40f5a2dad328511ac3f1c5 2017050414:58:51-UTC ./usr/bin/linux/terminal
+e928de4cf2e21dad8ce87967de07bd6e0b5f3909 2017050414:58:51-UTC ./usr/bin/linux/terminal-gtk
+972ec546805d39e2c8ccb2b7f92a63c1cae996de 2017050414:58:51-UTC ./usr/bin/linux/terminal-xft
+9cbf7bbbcba93f80728c5805310f6e4cf922ce87 2017050414:58:50-UTC ./usr/bin/linux/build
 1500d81c502c2f38396e2fb12217ead97a5e39fd 2017050306:17:24-UTC ./terminal/unix/terminal.cpp
 67f97a9442d770eabd651fa5a765360cc58a4e0b 2017050306:16:00-UTC ./terminal/unix/terminal-xft.cpp
 4aa66c5de5e0cd2e1b4c781137fae86b1bfe5266 2017050306:14:39-UTC ./terminal/gtk/terminal-gtk.cpp
@@ -27,12 +35,10 @@ a0b770ae88553dfc93001b85440cb88d6ef83f40 2017041418:44:06-UTC ./usr/bin/linux/mk
 2856ecacab40077840c56e103b4da985aad2aed0 2017040613:36:14-UTC ./ccctools/build/build.prg
 453d40e2922bcf3b6d71622a44c067184a18de8b 2017040611:53:15-UTC ./ccctools/buildp/build.hu.ver
 e7cf4ee21ac17974c429093b54452fcbc6894e6c 2017040611:51:30-UTC ./ccctools/buildp/build.prg
-05c210c625650ddc1113bf17e6160e323365d8e5 2017032420:02:49-UTC ./log-install
 357adb8518a803a0f95e3ad8ffdfee62a71d5923 2017032420:02:38-UTC ./usr/bin/linux/prg2tdc
 ef7009c73102fe6cf2096ada22c1da9d350ebeb9 2017032420:02:38-UTC ./usr/bin/linux/tabsuper
 8d5c8e1f2087a304de9a8f782fafed8bab1815bf 2017032420:02:33-UTC ./usr/bin/linux/dddel
 a8d2eed177bbb6be4129c1ca8e789928c8103244 2017032420:02:33-UTC ./usr/bin/linux/ddict2
-b048acf66bba0c6a0bacdc316f56561977e89f9a 2017032420:02:22-UTC ./usr/bin/linux/build
 3ffcd46395e69f255d8a57b30c64d3c0b4b155a3 2017032420:02:03-UTC ./usr/bin/linux/ppo2cpp
 ddb1cf929f4c5ffb3dfc7bd563c9e44d1ab82f36 2017032419:47:07-UTC ./tools/ddict2/ddict2.prg
 7fe8211f5db832f2f7e14db3d99608dc4f09997c 2017032419:37:54-UTC ./tools/ddict2/progout.prg
@@ -58,7 +64,6 @@ d17c9b63bbb5160d4f970a580b02aabb656ca476 2017010413:10:36-UTC ./usr/bin/linux/dt
 731731e6ec3e3263ef1f72d5c01d1b945eabd0b1 2017010413:10:32-UTC ./usr/bin/linux/zg
 0cad6347db493d6bcc687f524b9b035c0049427d 2017010413:10:32-UTC ./usr/bin/linux/zgrep
 1462d1c2cfb24988bdbe0e0cc11617967db4d08e 2017010413:10:32-UTC ./usr/bin/linux/zhist
-e1eb71404888af20ac3adf2700b47631e0c480a1 2017010413:10:30-UTC ./usr/bin/linux/xstart
 31d106287ac740a23144db32396ac85cfbf07afe 2017010413:10:26-UTC ./usr/bin/linux/tdc2prgch
 a802d01b9d22bc0c6e5dd2c3d3e0b6194927f9dc 2017010413:10:24-UTC ./usr/bin/linux/savex
 a22a0d848e62127da0db117a900be83b36f4516b 2017010413:10:24-UTC ./usr/bin/linux/setperm
@@ -72,11 +77,7 @@ a22a0d848e62127da0db117a900be83b36f4516b 2017010413:10:24-UTC ./usr/bin/linux/se
 efb5dc806abe2818cdf828d332c670cf1b3d2619 2017010413:10:17-UTC ./usr/bin/linux/bti
 d4c0b64978d9c130084ffabf233975600e9fc08b 2017010413:10:17-UTC ./usr/bin/linux/tstru
 c2caa7765a35a92db5c46b46ffc0f1ce34f937bf 2017010413:10:17-UTC ./usr/bin/linux/tview
-7ddc4341c754ad56bfff218c8e9eb9461410a9b9 2017010413:10:12-UTC ./usr/bin/linux/terminal-gtk
-7457383920cd76615618a7e85992ab004aaebb3a 2017010413:10:11-UTC ./usr/bin/linux/ncterm
 1cbc52e595764d886deba751c088ca4cd12a3a7c 2017010413:10:10-UTC ./usr/bin/linux/mklink
-cefc95f5a196ff4dd14505dd4be301c582ef4ea0 2017010413:10:10-UTC ./usr/bin/linux/terminal
-9d504d16715d3b3d0cabdf397e780aaacf3fc05c 2017010413:10:10-UTC ./usr/bin/linux/terminal-xft
 5d5b768093c01b2c88cf785a2a67fd6d518e6325 2017010413:10:09-UTC ./usr/bin/linux/prg2ppo
 d04ab0a6ce695bcb18021a12ed2e607a967bd19f 2017010413:10:09-UTC ./usr/bin/linux/removecr
 3a9140a7be7803812da51f63bbb71a771dd08432 2017010413:09:40-UTC ./usr/bin/linux/flex
@@ -815,7 +816,6 @@ dc2d22f46db17063104784382fd7a7a4b6d80826 2013122615:38:29-UTC ./tools/sql2/util/
 6dffcbbb23e6c9dd90947ead0db83c0404feb3fe 2013112909:58:25-UTC ./tools/crypto/sign.cpp
 a860da2eb475e1e9d198036ab4f07c6bc77256dc 2013112813:55:19-UTC ./tools/setperm/setgid_on_directories
 14c7bf4199346f00d90cfdcbed8b9741d99f4fca 2013112511:38:16-UTC ./tools/xmlrpc-framework/server/rpcwrapper/rpcwrapper.prg
-ec20f036373e05a041a2f7ce77914b98c1453f0d 2013112316:38:23-UTC ./usr/include/clprun.h
 959329e66d7da94efe18d7dec9625a3b4f4deae9 2013112316:34:46-UTC ./ccclib/src/deferror.prg
 7e8203959fb48e0c99503a6e5e50cfc62b8e7069 2013112316:32:26-UTC ./setup/setup-unix/break.cpp
 d4ebb9c592bf134555c30a265ff4e1c8d43f591b 2013112316:28:25-UTC ./ccctools/ppo2cpp/codegen.cpp

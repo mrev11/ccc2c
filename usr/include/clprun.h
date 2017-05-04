@@ -409,6 +409,10 @@ extern void _clp_classattrnames(int);
 extern void _clp_classmethnames(int);
 extern void _clp_classobjectlength(int);
 extern void _clp_classinheritstruct(int);
+
+//dispbegin.obj:
+extern void _clp_dispend(int);
+extern void _clp_dispbegin(int);
  
 #endif
 
