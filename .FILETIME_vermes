@@ -1,6 +1,18 @@
+42e8d7731ab666eead26adbb424601bf9b85de2b 2017050908:59:53-UTC ./ccclib/src/uic/checkbox.prg
+d5956269b4077bba98687d903c72c536e7d3dbfd 2017050908:58:51-UTC ./log-install
+dacc46ba9524c25195a2a3f804e7bcd01c9b9775 2017050908:57:34-UTC ./CHANGELOG_vermes
+729d4524036484c75df355368582a0df906f9106 2017050908:38:30-UTC ./tutor/rename/rnm.say
+387079fbe49ac26daa748253714532b80c222e86 2017050908:38:24-UTC ./tools/z/ver2/zreplace.say
+cf7190a7dd75c127ee921b3960ed009dc1bc0230 2017050908:38:24-UTC ./tools/z/ver2/zsearch.say
+2dfea88187f9e4e0e5de13a49711203d3930ba97 2017050908:38:22-UTC ./tools/xmlrpc-framework/client/rpcmonitor/login.say
+3fa277210f4e133eb5614711da0fcc855aec0d41 2017050908:38:15-UTC ./usr/bin/linux/ddict2
+29d974c21be0ae98cbb9b34c04e8de16007e794b 2017050908:38:14-UTC ./tools/ddict2/mskmerge.say
+663817e4933288e12bff034a3427e3c7fee69960 2017050908:38:14-UTC ./tools/ddict2/mskowner.say
+9a82f00bc56caeffc5d4f49a01acd2c18f3a9699 2017050908:38:14-UTC ./tools/ddict2/msksor.say
+40903fd8e82b89bfd3ba9a8ad21ce1f2208af973 2017050908:38:13-UTC ./tools/dbfview/search.say
+b460ff81bb30d743c932b3e0db84ae09da0db0e9 2017050908:38:10-UTC ./tabobj/utility.src/kdirseek.say
+11512383269f3c3f9dba4dffca7386f8945a1986 2017050908:38:05-UTC ./tools/mask/maskdemo.say
 241d20c35dd221917294060ea00b2aaa1b4b055d 2017050908:35:41-UTC ./.gitignore
-d11cdc2911579318548dbbc4b1a0ba703b0796b0 2017050908:34:55-UTC ./CHANGELOG_vermes
-0242a5c0701788129dfc36426be0404971228fc1 2017050908:33:44-UTC ./log-install
 304129a5ccca59ce818581c89b7701c42df1f518 2017050908:25:39-UTC ./install.bat
 3d610794cec737acf332eb5d128d2fb105dcfb51 2017050908:24:43-UTC ./install.b
 0554f8bc3667d945bc303d9e21c1c84bb5f2a167 2017050908:19:48-UTC ./usr/bin/linux/msk2pge
@@ -42,7 +54,6 @@ b6772c75b4cb0850b96ff5c5bc7a350d803cc1f4 2017042120:55:57-UTC ./tools/sql2/drive
 357adb8518a803a0f95e3ad8ffdfee62a71d5923 2017032420:02:38-UTC ./usr/bin/linux/prg2tdc
 ef7009c73102fe6cf2096ada22c1da9d350ebeb9 2017032420:02:38-UTC ./usr/bin/linux/tabsuper
 8d5c8e1f2087a304de9a8f782fafed8bab1815bf 2017032420:02:33-UTC ./usr/bin/linux/dddel
-a8d2eed177bbb6be4129c1ca8e789928c8103244 2017032420:02:33-UTC ./usr/bin/linux/ddict2
 3ffcd46395e69f255d8a57b30c64d3c0b4b155a3 2017032420:02:03-UTC ./usr/bin/linux/ppo2cpp
 ddb1cf929f4c5ffb3dfc7bd563c9e44d1ab82f36 2017032419:47:07-UTC ./tools/ddict2/ddict2.prg
 7fe8211f5db832f2f7e14db3d99608dc4f09997c 2017032419:37:54-UTC ./tools/ddict2/progout.prg
@@ -986,7 +997,6 @@ a8f87446421cce99e2f021f3493297ddec667f19 2012022517:37:47-UTC ./tools/xmldom/xml
 dea59134f63c0c66a40eafe080ac8622d8416bb8 2012021916:39:13-UTC ./tools/socket/ssl/sslctx_funif.cpp
 288a6f5d94c9500de2ae7aee91e3a667ac712f29 2011112819:41:13-UTC ./tools/xmldom/xmldom_parser.lem
 48d097b59230eb572d8ef06adfc1ca9e3d412248 2011111509:53:17-UTC ./jt/jtlib/jtdialog.prg
-cb7a0beb1f5240d49e1095a0d6901ec753b23109 2011091910:23:49-UTC ./ccclib/src/uic/checkbox.prg
 49e4b1df683dc03fdfefc08bea093d198ae2e112 2011091909:34:38-UTC ./setup/setup-unix/procline.cpp
 aced054833775fd62ee062df6382ed88106e5551 2011091216:36:35-UTC ./tabobj/commonui.src/tabedrec.prg
 669948b7ed23d31ae3ceb42d336177890f459a4f 2011082818:55:05-UTC ./ccclib/src/uic/o_get.prg
