@@ -1,3 +1,9 @@
+2017.05.09 Az installban msk2say elore lett veve;
+  Ha egyszerre le vannak torolve a say fajlok es az msk2say.exe,
+  akkor az msk-kat tartalmazo projektek nem tudnak lefordulni.
+  Ugyanezert msk2say nem lehet olyan projektben, ami msk-kat is
+  tartalmaz, tehat az msk2say-t kulon kell forditani;
+
 2017.05.09 colorutil ujrairva;
 
 2017.05.09 Build tobb resource-tol valo fuggoseget is kezel;

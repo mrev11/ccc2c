@@ -103,6 +103,12 @@ fi
 
 
 #-------------------
+# msk2say
+#-------------------
+
+pushd tools/mask; m; popd
+
+#-------------------
 #tabobj
 #-------------------
 
@@ -119,7 +125,6 @@ pushd tools/dbaseiii; m; popd
 pushd tools/dbfview; m; popd
 pushd tools/ddict2; m; popd
 pushd tools/list; m; popd
-pushd tools/mask; m; popd
 pushd tools/regex; m; popd
 pushd tools/savex; m; popd
 pushd tools/setperm; m; popd
