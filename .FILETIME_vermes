@@ -1,4 +1,4 @@
-5d91f516b69ad5993922250f79e71522cc4608c5 2017050909:09:57-UTC ./CHANGELOG_vermes
+d0a5308eda07d3a2c0a8845dc913a8d3f54f053b 2017050909:12:33-UTC ./CHANGELOG_vermes
 42e8d7731ab666eead26adbb424601bf9b85de2b 2017050908:59:53-UTC ./ccclib/src/uic/checkbox.prg
 d5956269b4077bba98687d903c72c536e7d3dbfd 2017050908:58:51-UTC ./log-install
 729d4524036484c75df355368582a0df906f9106 2017050908:38:30-UTC ./tutor/rename/rnm.say
@@ -31,6 +31,7 @@ fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/
 0614e5a2056bff71690942e9437b8e0451b857fa 2017050823:25:40-UTC ./ccctools/buildp/build.prg
 08d8c8bd91a8bb8ca10e03aa1968b7c72148f296 2017050820:12:19-UTC ./tools/mask/msk2say/OLVASS
 cb6d4d9186f4375b4f1b4fb64062ecae29917d06 2017050810:03:08-UTC ./ccclib/src/uic/listbox.prg
+c6888079e7a92701793c3be517ef3f343cdde688 2017050808:10:41-UTC ./ccclib/src/uic/ialert.prg
 1acaf0041a934b4330dbacf319fea0bd1ce94afa 2017050421:20:19-UTC ./terminal/unix/terminal.cpp
 79eb184571feec156f8363496d647d453c07f829 2017050421:08:02-UTC ./terminal/unix/terminal-xft.cpp
 c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
@@ -1001,7 +1002,6 @@ dea59134f63c0c66a40eafe080ac8622d8416bb8 2012021916:39:13-UTC ./tools/socket/ssl
 49e4b1df683dc03fdfefc08bea093d198ae2e112 2011091909:34:38-UTC ./setup/setup-unix/procline.cpp
 aced054833775fd62ee062df6382ed88106e5551 2011091216:36:35-UTC ./tabobj/commonui.src/tabedrec.prg
 669948b7ed23d31ae3ceb42d336177890f459a4f 2011082818:55:05-UTC ./ccclib/src/uic/o_get.prg
-14daf10fbb6582df1979b4c0071c25931d535f41 2011082107:56:17-UTC ./ccclib/src/uic/ialert.prg
 735bb46c02e3c1f3ed97b033dfe0a370724077d0 2011081215:34:08-UTC ./tools/mask/mask.hu.ver
 bec8a8bbfd1a5631988620db748d5a92106b95d2 2011081213:20:39-UTC ./tools/mask/box.msk
 6d0cce593cd5d4af8edc726366ec3d6259d2dc4f 2011081213:15:13-UTC ./tools/mask/filter.msk
