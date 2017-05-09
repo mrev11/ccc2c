@@ -1,4 +1,4 @@
-839fb7051b3425005c2b0773aa28caa3501eacd4 2017050909:16:45-UTC ./CHANGELOG_vermes
+eef4edd962368bf43a7381ebdc023465acfcc2f3 2017050909:21:49-UTC ./CHANGELOG_vermes
 42e8d7731ab666eead26adbb424601bf9b85de2b 2017050908:59:53-UTC ./ccclib/src/uic/checkbox.prg
 d5956269b4077bba98687d903c72c536e7d3dbfd 2017050908:58:51-UTC ./log-install
 729d4524036484c75df355368582a0df906f9106 2017050908:38:30-UTC ./tutor/rename/rnm.say
@@ -33,6 +33,7 @@ fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/
 cb6d4d9186f4375b4f1b4fb64062ecae29917d06 2017050810:03:08-UTC ./ccclib/src/uic/listbox.prg
 c6888079e7a92701793c3be517ef3f343cdde688 2017050808:10:41-UTC ./ccclib/src/uic/ialert.prg
 4df21f1b678f9ab36f80f69e051394866e9de394 2017050713:30:26-UTC ./ccclib/src/uic/altbutton.prg
+703ceaad4d6b54701c46e4e00a1d11fd6a357533 2017050706:13:58-UTC ./ccclib/src/uic/mask.prg
 1acaf0041a934b4330dbacf319fea0bd1ce94afa 2017050421:20:19-UTC ./terminal/unix/terminal.cpp
 79eb184571feec156f8363496d647d453c07f829 2017050421:08:02-UTC ./terminal/unix/terminal-xft.cpp
 c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
@@ -2294,7 +2295,6 @@ e8281a59c2f8f41547c4149e3c07df7e4a7e30f6 2003071909:55:08-UTC ./jt/jterminal/jtd
 cf260cffa2e794ff33a90f7b32cbd1b2ce3cf58a 2003071406:18:30-UTC ./ccclib/src/ui_/alert.prg
 47c60577da65038b950acd4b4a1bcbf6d976c69b 2003071317:54:40-UTC ./ccclib/src/ui_/message.prg
 e307952387506a79bb5f4581bfff3abbf62a0eb4 2003071310:20:48-UTC ./ccctools/mklink/m
-50d997aba721674962a345abc9382e20fad182bd 2003071309:00:42-UTC ./ccclib/src/uic/mask.prg
 806ff13c65b966bc7007cc896db6ea160b1ea906 2003071309:00:00-UTC ./ccclib/src/uic/alert.prg
 ac6abf26b0413a01011023e1e9adf048c35fdd8f 2003071308:31:06-UTC ./ccclib/src/ui_/cgi.cpp
 51f715174e985a49210b5b790515e629da3da299 2003071307:42:46-UTC ./ccclib/src/ui_/classid.cpp
