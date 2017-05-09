@@ -1,6 +1,6 @@
+5d91f516b69ad5993922250f79e71522cc4608c5 2017050909:09:57-UTC ./CHANGELOG_vermes
 42e8d7731ab666eead26adbb424601bf9b85de2b 2017050908:59:53-UTC ./ccclib/src/uic/checkbox.prg
 d5956269b4077bba98687d903c72c536e7d3dbfd 2017050908:58:51-UTC ./log-install
-dacc46ba9524c25195a2a3f804e7bcd01c9b9775 2017050908:57:34-UTC ./CHANGELOG_vermes
 729d4524036484c75df355368582a0df906f9106 2017050908:38:30-UTC ./tutor/rename/rnm.say
 387079fbe49ac26daa748253714532b80c222e86 2017050908:38:24-UTC ./tools/z/ver2/zreplace.say
 cf7190a7dd75c127ee921b3960ed009dc1bc0230 2017050908:38:24-UTC ./tools/z/ver2/zsearch.say
@@ -30,6 +30,7 @@ d25644d0e39b0dc37ee1fd796e6658f65dc120e3 2017050906:35:40-UTC ./ccctools/buildp/
 fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/sor2say.bat
 0614e5a2056bff71690942e9437b8e0451b857fa 2017050823:25:40-UTC ./ccctools/buildp/build.prg
 08d8c8bd91a8bb8ca10e03aa1968b7c72148f296 2017050820:12:19-UTC ./tools/mask/msk2say/OLVASS
+cb6d4d9186f4375b4f1b4fb64062ecae29917d06 2017050810:03:08-UTC ./ccclib/src/uic/listbox.prg
 1acaf0041a934b4330dbacf319fea0bd1ce94afa 2017050421:20:19-UTC ./terminal/unix/terminal.cpp
 79eb184571feec156f8363496d647d453c07f829 2017050421:08:02-UTC ./terminal/unix/terminal-xft.cpp
 c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
@@ -1739,7 +1740,6 @@ f960cc3ddcc263e91ae9c7c0deb3851cbe5c0241 2006042817:15:36-UTC ./tools/xmldom/dem
 b2737b4f4bc3133d53afe5bf8ce92b9874ea82e4 2006042517:39:44-UTC ./usr/options/msc/readme.hu.txt
 b5ea4d9a55405c9b6ef148013f5c6412e4ec8df1 2006042515:42:18-UTC ./usr/bin/windows/bapp_w320g.bat
 4c55aadb0992735c17b2d252d49b2ead8f9997a9 2006042514:18:36-UTC ./terminal/windows/xstart.par
-e6f19eef2020e46b852e3cb91d77deaf101021d1 2006042511:38:23-UTC ./ccclib/src/uic/listbox.prg
 6b4fbcdb30e33f82e37b4be8f657d83a9b8423f7 2006042510:48:33-UTC ./ccclib/src/uic/o_tbcolumn.prg
 4ea0146b9237efde7cdcc66e694eeec87b2eb27f 2006042214:29:29-UTC ./tools/crypto/rsapubenc.cpp
 6e415edc769688b37156caedb984aa38f18573bb 2006042214:22:57-UTC ./tools/crypto/rand.cpp

@@ -1,4 +1,11 @@
-2017.05.07 checkboxok es radio buttonok kirajzolasa korszerusitve;
+2017.05.09 listboxok korszerusitve;
+  Jobb szoveg szerinti illeszkedes kereses;
+  listbox:select szam vagy szoveg bemenettel is mukodik
+  listbox:select visszaterese a kivalasztott index (korabban NIL)
+  Hasznalhatobb block varget/varput-hoz;
+  listbox achoice szin a get:colorspec-bol szarmaztatva;
+
+2017.05.09 checkboxok es radio buttonok kirajzolasa korszerusitve;
 
 2017.05.09 say fajlok torolve;
 
