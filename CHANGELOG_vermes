@@ -1,3 +1,5 @@
+2017.05.09 say fajlok torolve;
+
 2017.05.09 Az installban msk2say elore lett veve;
   Ha egyszerre le vannak torolve a say fajlok es az msk2say.exe,
   akkor az msk-kat tartalmazo projektek nem tudnak lefordulni.
