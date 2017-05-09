@@ -1,8 +1,9 @@
+92a1cd9fe9cff6ef7da6c8e5b4ac8f9ea512fc17 2017050908:04:59-UTC ./CHANGELOG_vermes
 f025bca1596395a8f023c6fb1075ea7a66d38223 2017050907:55:03-UTC ./log-install
-1493781f25b238015440f5b7fa589a342bc38b41 2017050907:52:50-UTC ./CHANGELOG_vermes
 eefeccd6d0d0620b7dd8394e52eefeca2be2a156 2017050907:51:00-UTC ./usr/bin/linux/build
 2832df7b518d44f151bbcff065b1b8cdc71ac010 2017050907:51:00-UTC ./usr/bin/linux/terminal
 abaf20a7359e43e7d58cc889a55b1354c952e5f8 2017050907:51:00-UTC ./usr/bin/linux/terminal-xft
+1587b67a91c0aae5bc031ca2fa0761510b0638ce 2017050907:36:47-UTC ./ccclib/src/uic/colorutil.prg
 8e8d41a8d790d469c87f5ef57d0990773f26483f 2017050906:40:37-UTC ./usr/build/windows/sor2say.bat
 d25644d0e39b0dc37ee1fd796e6658f65dc120e3 2017050906:35:40-UTC ./ccctools/buildp/build.hu.ver
 fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/sor2say.bat
@@ -1744,7 +1745,6 @@ b5ea4d9a55405c9b6ef148013f5c6412e4ec8df1 2006042515:42:18-UTC ./usr/bin/windows/
 4c55aadb0992735c17b2d252d49b2ead8f9997a9 2006042514:18:36-UTC ./terminal/windows/xstart.par
 e6f19eef2020e46b852e3cb91d77deaf101021d1 2006042511:38:23-UTC ./ccclib/src/uic/listbox.prg
 6b4fbcdb30e33f82e37b4be8f657d83a9b8423f7 2006042510:48:33-UTC ./ccclib/src/uic/o_tbcolumn.prg
-a8e2efd9b3846628d1c4e6baf1be3d9b6f86895e 2006042508:26:38-UTC ./ccclib/src/uic/colorutil.prg
 4ea0146b9237efde7cdcc66e694eeec87b2eb27f 2006042214:29:29-UTC ./tools/crypto/rsapubenc.cpp
 6e415edc769688b37156caedb984aa38f18573bb 2006042214:22:57-UTC ./tools/crypto/rand.cpp
 89807763146b264b3b4e5a58da46c70108ef53df 2006042214:16:48-UTC ./tools/crypto/bin2hex.cpp
