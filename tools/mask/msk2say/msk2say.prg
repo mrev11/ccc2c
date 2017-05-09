@@ -18,7 +18,11 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//sorrend kezeles javitva (Vermes M. 2014.04.26)
+//altbuttonok tamogatasa (Vermes M. 2017.05.09)
+//szinek tamogatasa: CCC_MSKCOLOR_SAY, CCC_MSKCOLOR_GET (Vermes M. 2017.05.09)
+//egesz sorokat iro mskSay-eket general (Vermes M. 2017.05.09)
+//kikeruli az idezojel karaktereket (Vermes M. 2017.05.09)
+//sorrend kezeles javitva (Vermes M. 2017.04.26)
 //nagy maszkok támogatása (Vermes M. 2014.01.15)
 //checkbox/radiobutton támogatás (Vermes M. 2000.04.21)
 //portolva CCC kódrendszerre (Vermes M. 2000.01.11)
@@ -113,7 +117,7 @@ local srTomb,say_mode
                   w::=strtran("  "," ")   
                end
                w::=alltrim
-               ? srTomb:=wordlist(w," ")
+               srTomb:=wordlist(w," ")
                i++
             end
 
@@ -337,13 +341,12 @@ local wlist:={}, n:=0, i
 #define MSKL_OBJTOMB  2
 #define N_MSKL        2
 
-#define MSKLO_TIPUS        1
+#define MSKLO_TYPE         1
 #define MSKLO_ROW          2
 #define MSKLO_COL          3
 #define MSKLO_FIELDLEN     4
 #define MSKLO_STR          5
-#define MSKLO_MEGJELENIT   6
-#define N_MSKLO            6
+#define N_MSKLO            5
 
 *************************************************************************
 function mskLeiroTomb(screen)
@@ -401,7 +404,10 @@ local result,r,line,color,c,i,startI,startColor,w,nev,sor
                 while (i<=len(line) .and. color[i]<16)
                     i++
                 end 
-                aadd(result,{"S",sor,startI-1,i-startI,substr(line,startI,i-startI),nil})
+#define WHOLE_LINE
+#ifndef WHOLE_LINE
+                aadd(result,{"S",sor,startI-1,i-startI,substr(line,startI,i-startI),nil}) // say kulon
+#endif
 
             else
                 // Kiemelt szín. Ezt a színt kell követni.
@@ -428,7 +434,9 @@ local result,r,line,color,c,i,startI,startColor,w,nev,sor
                     nev:=alltrim(substr(nev,2))
                  
                     if( empty(nev) )
-                        aadd(result,{"S",sor,startI-1,i-startI,space(startI-i),nil})
+#ifndef WHOLE_LINE
+                        aadd(result,{"S",sor,startI-1,i-startI,space(startI-i),nil}) // say kulon
+#endif
 
                     elseif (len(w)==2)
                         aadd(result,{"G",sor,startI-1,1,nev,nil})
@@ -448,8 +456,38 @@ local result,r,line,color,c,i,startI,startColor,w,nev,sor
                 end
             end
         end 
+
+#ifdef WHOLE_LINE       
+        //say-ek kulon
+        //Ez a megoldas egesz sorokat ir ki,
+        //nem keruli ki, hanem csak space-ekkel helyettesiti a geteket.
+        //Amikor a getek kirajzoljak magukat, akkor ezek a helyek felulirodnak.
+        //Nem jo kikerulni a geteket, mert a nemrajzolas is rajzolas:
+        //Peldaul egy get nem tudja kisebbre venni magat a berajzoltnal,
+        //mert ott marad a berajzolt helyen egy lyuk.
+
+        for i:=1 to len(line)
+            startI:=i
+            while( i<len(line) .and. color[i]>=16 )
+                ++i
+            end
+            if( startI<i )
+                line:=line[1..startI-1]+space(i-startI)+line[i..]
+            end
+        next  
+        aadd(result,{"S",sor,0,len(line),line,NIL}) //say-ek kulon
+#endif
+
     next
     return {rect,result}
+
+
+******************************************************************************
+static function decomp(str) 
+    return '"' + str::strtran('"',<<REPL>>"+'"'+"<<REPL>>) + '"'
+
+//eredetileg ez CCC3-ban a szovegek kikereseset vegezte
+//az NLS tamogatas celjabol, itt csak az idezojeleket vedjuk le
 
 
 *************************************************************************
@@ -463,6 +501,8 @@ local type:=left(name,1)
        name:=strtran(substr(name,2),")","")
    elseif( type=="{" )
        name:=strtran(substr(name,2),"}","")
+    elseif( type=="/" )
+        name:=strtran(substr(name,2),"/","")
    end
    return alltrim(name)
 
@@ -478,6 +518,8 @@ local type:=left(name,1)
        type:="Radio"
    elseif( type=="{" )
        type:="List"
+   elseif( type=="/" )
+       type:="AltButton"
    else
        type:="Get"
    end
@@ -510,23 +552,22 @@ local i,w
     oTomb:=mskLeiroTomb[MSKL_OBJTOMB]
     glsta:={}
 
+    prog+=newl+"    msk:=mskCreate("+str(TOP,3)+","+str(LEFT,3)+",";
+                                    +str(BOTTOM,3)+","+str(RIGHT,3)+;
+                                    ",bLoad,bRead,bStore)"
+    prog+=newl
+    prog+=newl+"    mskColorSay() //push"
+
     for i:=1 to len(oTomb)
-
-       if (oTomb[i][MSKLO_TIPUS]=='S')
-
-          if( oTomb[i][MSKLO_MEGJELENIT]=='C' )
-             w:="if("+ISGUIFGV+","+'"'+space(len(oTomb[i][MSKLO_STR]))+'"'+","+'"'+oTomb[i][MSKLO_STR]+'"'+")"
-          else
-             w:='"'+oTomb[i][MSKLO_STR]+'"'
-          end
+       if (oTomb[i][MSKLO_TYPE]=='S')
+          //w:='"'+oTomb[i][MSKLO_STR]+'"'
+          w:=decomp(oTomb[i][MSKLO_STR]) //NLS
           prog+=newl+"    mskSay(msk,"+POSRO(oTomb[i][MSKLO_ROW],oTomb[i][MSKLO_COL])+","+w+")"
-
-       elseif (oTomb[i][MSKLO_TIPUS]=='G')
+       elseif (oTomb[i][MSKLO_TYPE]=='G')
           decl+=newl+"local "+NEVPAD(gname(oTomb[i]))+":=space("+str(oTomb[i][MSKLO_FIELDLEN],2)+")"
           aadd(glsta,oTomb[i])
-
        else
-          alert("Fatális hiba!;"+"mskLeiro.objTomb["+str(i,3)+"].tipus ismeretlen!")
+          ? "say/get of unknown type:",oTomb[i][MSKLO_TYPE]
           quit
        end
     next
@@ -537,20 +578,25 @@ local i,w
 
     for i:=1 to len(glsta)
         w:=glsta[i]
-        glst+=newl+"    msk"+padr(gtype(w),6)+"(msk,"+POSRO(w[MSKLO_ROW],w[MSKLO_COL])+",@"+gname(w)+","+'"'+gname(w)+'"'+")"
+        glst+=newl+"    msk"+padr(gtype(w),10)+"(msk,"+POSRO(w[MSKLO_ROW],w[MSKLO_COL])+",@"+gname(w)+","+'"'+gname(w)+'"'+")"
         defi+=newl+"#define g_"+NEVPAD(gname(w))+"  "+"getlist["+str(i,2)+"]"
     next
 
-    decl+=newl+"local msk:=mskCreate("+str(TOP,3)+","+str(LEFT,3)+",";
-                                      +str(BOTTOM,3)+","+str(RIGHT,3)+;
-                                     ",bLoad,bRead,bStore)"
+    decl+=newl+"local msk"
 
-    prog+=newl+glst
+
+    prog+=newl
+    prog+=newl+"    mskColorGet() //push"
+    prog+=glst
 
     prog+=newl
     prog+=newl+"    mskShow(msk)"
     prog+=newl+"    mskLoop(msk)"
     prog+=newl+"    mskHide(msk)"
+
+    prog+=newl
+    prog+=newl+"    mskColorRestore() //pop"
+    prog+=newl+"    mskColorRestore() //pop"
     prog+=newl+"    return lastkey()"
 
     return( memowrit(file,LAT(CCC(defi+newl+decl+newl+prog+newl))) )
@@ -589,6 +635,6 @@ local i,j,t:={},tg:={}
 
 *************************************************************************
 static function ver()
-   return "1.0.2"
+   return "1.1.0"
 
 *************************************************************************

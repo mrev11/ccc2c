@@ -1,4 +1,6 @@
-eef4edd962368bf43a7381ebdc023465acfcc2f3 2017050909:21:49-UTC ./CHANGELOG_vermes
+0679db069c5f48a512fa8dbcfe4082d368eb1077 2017050910:24:32-UTC ./CHANGELOG_vermes
+117dd8f5bfbde286d512a819502cac914c07bf0c 2017050910:22:10-UTC ./tools/mask/msk2say/msk2say.prg
+23fab68b7717145c06f021393f4560b4e9f22411 2017050910:17:43-UTC ./usr/bin/linux/msk2say
 42e8d7731ab666eead26adbb424601bf9b85de2b 2017050908:59:53-UTC ./ccclib/src/uic/checkbox.prg
 d5956269b4077bba98687d903c72c536e7d3dbfd 2017050908:58:51-UTC ./log-install
 729d4524036484c75df355368582a0df906f9106 2017050908:38:30-UTC ./tutor/rename/rnm.say
@@ -43,8 +45,6 @@ e928de4cf2e21dad8ce87967de07bd6e0b5f3909 2017050414:58:51-UTC ./usr/bin/linux/te
 4aa66c5de5e0cd2e1b4c781137fae86b1bfe5266 2017050306:14:39-UTC ./terminal/gtk/terminal-gtk.cpp
 ca0a442695f3975641d08013f79ffffe8ba2d1a4 2017050119:07:29-UTC ./terminal/common/tcpio.cpp
 f00044b3e99ca0fc5c236226c98cd498eb5a96c0 2017042706:18:12-UTC ./ccclib/src/uic/setcursor.cpp
-58bbf5186acfbb7134ad81523de6336bced0265e 2017042522:33:04-UTC ./usr/bin/linux/msk2say
-75fad24132c3770f4fbed8f1987266646290111b 2017042522:18:26-UTC ./tools/mask/msk2say.prg
 0d4d970c68ded856386f7372da624f54c6d15f3f 2017042522:09:45-UTC ./tools/mask/maskdemo.sor
 7d7cfb8d76b07bb7f036b78c6585f82c3386043e 2017042121:07:21-UTC ./tools/sql2/sql2.hu.ver
 4acb9ac7be2a8c2981e0040dc0cfec5b6aa0c194 2017042121:00:36-UTC ./tools/sql2/driver-postgres/sqlutil.prg
