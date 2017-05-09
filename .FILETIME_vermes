@@ -1,5 +1,5 @@
+29e0c0c72723d5dbd2f8d27f2746ad9165e806a8 2017050910:51:00-UTC ./CHANGELOG_vermes
 dfb07342aedd05b4d2cf6dddf2c3bd2dfd6d60a8 2017050910:47:07-UTC ./tutor/control/demo.prg
-fd61d8712466094efc93a806f380776b487e6b79 2017050910:38:28-UTC ./CHANGELOG_vermes
 0f0e9b6a65a0d900b15dc05f778256a86cd1774a 2017050910:37:29-UTC ./tutor/control/control.say
 587c715bc3940da1434c8757bc606324ce79950c 2017050910:37:02-UTC ./tutor/control/OLVASS
 02a3c1eda619c3b7ae1aceec72db37111a11fc69 2017050910:35:23-UTC ./tutor/control/orszagkod.prg
@@ -37,6 +37,8 @@ d25644d0e39b0dc37ee1fd796e6658f65dc120e3 2017050906:35:40-UTC ./ccctools/buildp/
 fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/sor2say.bat
 0614e5a2056bff71690942e9437b8e0451b857fa 2017050823:25:40-UTC ./ccctools/buildp/build.prg
 08d8c8bd91a8bb8ca10e03aa1968b7c72148f296 2017050820:12:19-UTC ./tools/mask/msk2say/OLVASS
+5355506ba38bd03835d2d592f9df46f1d8b9afdb 2017050813:23:11-UTC ./tutor/xbrwarr/s
+8f184335b3be42bd9279c7f73b7afb8fd57f2639 2017050811:37:15-UTC ./ccclib/src/uic/brwmenu.prg
 cb6d4d9186f4375b4f1b4fb64062ecae29917d06 2017050810:03:08-UTC ./ccclib/src/uic/listbox.prg
 c6888079e7a92701793c3be517ef3f343cdde688 2017050808:10:41-UTC ./ccclib/src/uic/ialert.prg
 86511d0a23097e13a28da19905617ec49b393d65 2017050714:47:37-UTC ./tutor/control/s
@@ -76,7 +78,6 @@ eb0e10d0576dc590b5dc093d51fce0a7bc324fe1 2017032417:56:18-UTC ./tools/tdc2prgch/
 731616a301f5fe219a6b4da96a5b7cb89684a98e 2017032212:29:32-UTC ./tools/ddict2/dddel.prg
 23ef682d33674e2ca5985df1c878903a9bce0299 2017031511:58:28-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-regression.rb
 731a8eff333b8f7053ab2220511b524c87a75923 2017022709:43:51-UTC ./LICENSE
-e569024127628d0013da5a2fcd9d55f2e5cb4af6 2017021919:32:03-UTC ./ccclib/src/uic/brwmenu.prg
 d54351ee8b70057485757fe55daaa00e98cee654 2017021918:14:34-UTC ./tutor/xbrwarr/xbrwarr.prg
 fb2fdd2ed8dcc0de718f7df6051dcb6d7a40de7c 2017021118:39:34-UTC ./usr/build/windows/obj2so.bat
 8426df1a758c382bcd5b234ce739889562af7e1a 2017010721:57:21-UTC ./usr/bin/linux/list
