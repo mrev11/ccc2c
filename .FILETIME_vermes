@@ -1,4 +1,4 @@
-d0a5308eda07d3a2c0a8845dc913a8d3f54f053b 2017050909:12:33-UTC ./CHANGELOG_vermes
+839fb7051b3425005c2b0773aa28caa3501eacd4 2017050909:16:45-UTC ./CHANGELOG_vermes
 42e8d7731ab666eead26adbb424601bf9b85de2b 2017050908:59:53-UTC ./ccclib/src/uic/checkbox.prg
 d5956269b4077bba98687d903c72c536e7d3dbfd 2017050908:58:51-UTC ./log-install
 729d4524036484c75df355368582a0df906f9106 2017050908:38:30-UTC ./tutor/rename/rnm.say
@@ -32,6 +32,7 @@ fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/
 08d8c8bd91a8bb8ca10e03aa1968b7c72148f296 2017050820:12:19-UTC ./tools/mask/msk2say/OLVASS
 cb6d4d9186f4375b4f1b4fb64062ecae29917d06 2017050810:03:08-UTC ./ccclib/src/uic/listbox.prg
 c6888079e7a92701793c3be517ef3f343cdde688 2017050808:10:41-UTC ./ccclib/src/uic/ialert.prg
+4df21f1b678f9ab36f80f69e051394866e9de394 2017050713:30:26-UTC ./ccclib/src/uic/altbutton.prg
 1acaf0041a934b4330dbacf319fea0bd1ce94afa 2017050421:20:19-UTC ./terminal/unix/terminal.cpp
 79eb184571feec156f8363496d647d453c07f829 2017050421:08:02-UTC ./terminal/unix/terminal-xft.cpp
 c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
