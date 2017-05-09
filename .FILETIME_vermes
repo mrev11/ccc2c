@@ -1,4 +1,9 @@
-0679db069c5f48a512fa8dbcfe4082d368eb1077 2017050910:24:32-UTC ./CHANGELOG_vermes
+dfb07342aedd05b4d2cf6dddf2c3bd2dfd6d60a8 2017050910:47:07-UTC ./tutor/control/demo.prg
+fd61d8712466094efc93a806f380776b487e6b79 2017050910:38:28-UTC ./CHANGELOG_vermes
+0f0e9b6a65a0d900b15dc05f778256a86cd1774a 2017050910:37:29-UTC ./tutor/control/control.say
+587c715bc3940da1434c8757bc606324ce79950c 2017050910:37:02-UTC ./tutor/control/OLVASS
+02a3c1eda619c3b7ae1aceec72db37111a11fc69 2017050910:35:23-UTC ./tutor/control/orszagkod.prg
+8bfd69095ecce2283e61fdc9a66c0757819f8a21 2017050910:33:34-UTC ./tutor/control/control.msk
 117dd8f5bfbde286d512a819502cac914c07bf0c 2017050910:22:10-UTC ./tools/mask/msk2say/msk2say.prg
 23fab68b7717145c06f021393f4560b4e9f22411 2017050910:17:43-UTC ./usr/bin/linux/msk2say
 42e8d7731ab666eead26adbb424601bf9b85de2b 2017050908:59:53-UTC ./ccclib/src/uic/checkbox.prg
@@ -34,7 +39,9 @@ fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/
 08d8c8bd91a8bb8ca10e03aa1968b7c72148f296 2017050820:12:19-UTC ./tools/mask/msk2say/OLVASS
 cb6d4d9186f4375b4f1b4fb64062ecae29917d06 2017050810:03:08-UTC ./ccclib/src/uic/listbox.prg
 c6888079e7a92701793c3be517ef3f343cdde688 2017050808:10:41-UTC ./ccclib/src/uic/ialert.prg
+86511d0a23097e13a28da19905617ec49b393d65 2017050714:47:37-UTC ./tutor/control/s
 4df21f1b678f9ab36f80f69e051394866e9de394 2017050713:30:26-UTC ./ccclib/src/uic/altbutton.prg
+0635370aef29570dc56861a06a13979dcf75e0ca 2017050707:25:45-UTC ./tutor/control/control.sor
 703ceaad4d6b54701c46e4e00a1d11fd6a357533 2017050706:13:58-UTC ./ccclib/src/uic/mask.prg
 1acaf0041a934b4330dbacf319fea0bd1ce94afa 2017050421:20:19-UTC ./terminal/unix/terminal.cpp
 79eb184571feec156f8363496d647d453c07f829 2017050421:08:02-UTC ./terminal/unix/terminal-xft.cpp
@@ -1863,7 +1870,6 @@ bb3d15bf5358e259aa348f0d85e602ac9a9d5bb6 2005122814:14:55-UTC ./ccctools/ppo2cpp
 9d788fa3c97fd6b42b07546c2e3d3e187b9d1dcb 2005122814:10:16-UTC ./ccctools/ppo2cpp/test-class/m
 9907c6e9860a341097b87cbc583335b45f798546 2005122813:31:25-UTC ./ccctools/ppo2cpp/test-class/base.prg
 8cf7e24126f768d13735e94a721b857cdfb2179a 2005122221:54:43-UTC ./ccctools/ppo2cpp/test-class/s
-b645961d3fbeb8c53526121efa13c2d0b8745e5f 2005121213:04:55-UTC ./tutor/control/m1.bat
 76a597fdc8812905031e695d9fb55a011de65ee6 2005121116:12:23-UTC ./jt/texdoc/t
 d2954c6f8fc715252372e7d3da142f2d168175e1 2005121115:30:46-UTC ./usr/tex/script/sethtm.tex
 ffd31d2fa090170ea63889421a112a070413c4ce 2005121115:13:22-UTC ./usr/tex/script/foot.html
@@ -2508,7 +2514,6 @@ e646579aec60ddc5b3fe13268bb2e7a1bc318ee1 2002101408:43:46-UTC ./tools/mask/hpcwi
 63eea8204a7c70a25c447073114d037406aacbbc 2002101408:43:46-UTC ./tools/mask/laserjet.prg
 1a05165b7163dbf66a8b0f27b0661087853b434d 2002101408:43:46-UTC ./tools/mask/msk2pge.prg
 6f039db40820d3b0f3956765b770102658e25917 2002101408:28:10-UTC ./tools/z/ver2/cuarrchr.prg
-20fb7b1d33dbd18b3fb8a3c0e8d8e9342f71fa81 2002101408:21:28-UTC ./tutor/control/demo.prg
 57fd92d8d492d04c698b71a3dc86d09a3e5ec0a5 2002101408:11:30-UTC ./tabobj/tbbtbtx/dbnames.prg
 4db07adc92be0ea3cc088caf32515cda674cdfd3 2002101408:11:30-UTC ./tabobj/tbbtbtx/luvrsion.prg
 2ec6271a798b818607a1827c883f1f57e07399f5 2002101408:11:28-UTC ./tabobj/common.src/netbusy.prg
@@ -2558,7 +2563,6 @@ b886a0d3aacf97283d04e0579635c873fac42105 2001111212:59:00-UTC ./usr/bin/netbsd/s
 ee15e0f80ec9846ba431f506ec8a4b9cfd35ea29 2001092508:47:26-UTC ./tools/xmlrpc-framework/rpcutil/wrapper.prg
 917386789e84a9f3c2f315721e2e618eb23ef02d 2001090510:03:12-UTC ./tools/xmlrpc/demo-rpc/sc.bat
 97bc0b67ba1cf67d31f5cf2294248be2bce31799 2001090510:02:42-UTC ./tools/xmlrpc/demo-rpc/ss.bat
-2241e56157721b01f6131205c4509c2dfbce86a5 2001090321:43:50-UTC ./tutor/control/m.bat
 2b15a4d22e0088ec1f15173297aee1f1dddbafc7 2001082018:24:29-UTC ./tools/xmlrpc-framework/client/rpcmonitor/login.msk
 3720bf136d2c882fce6583684cc33f7ef1c43510 2001070608:41:30-UTC ./ccctools/autolink/build/linux/msk2wro.bat
 f64f8c7137632f8275be7a7ab6a27a8e52ecb20d 2001070304:19:42-UTC ./ccctools/autolink/build/linux/pge2wro.bat
@@ -2583,8 +2587,6 @@ c08e177e99fadd32f26887e85898995cb7e47fe4 2000082918:21:16-UTC ./usr/options/lin/
 fe8ad6e7eca9268fac2c61cdcda3e133ba25159d 2000081810:37:00-UTC ./jt/msk2dlg/fspec.prg
 8e71e71cc99a7f4728e3e3ceea1616e8bddce873 2000081109:25:56-UTC ./tools/ddict2/dd/d.bat
 45b96226d2f9828c43b73096665326cdac43aef9 2000053017:28:00-UTC ./jt/jtdemo/images/middle.gif
-1ffa20bbb92d10c856873e5338f08816fef715d7 2000051620:35:34-UTC ./tutor/control/radio.msk
-e652a6399a4d985e44f67ebc345b9be68243c16b 2000042409:06:56-UTC ./tutor/control/radio.sor
 4e8ac890df17dd30d6a3c2d51aeee436022f5e52 2000032411:29:00-UTC ./jt/jterminal/images/exit.gif
 8d208cb7a6305a872129349aeb5a384ceea83a34 2000031314:32:38-UTC ./ccctools/autolink/build/linux/cls2och.bat
 00e49ead14c5a84dc6a20dffa3e6980b6028a2d5 2000021615:15:54-UTC ./tools/socket/socket-demo/s2.bat
