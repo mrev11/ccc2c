@@ -1,3 +1,11 @@
+2017.05.09 Build tobb resource-tol valo fuggoseget is kezel;
+  A konkret eset: say(msk,sor), ahol most a sor megvaltozasa 
+  is kivaltja az ujraforditast. Hogy vegul az msk2say.bat
+  vagy a sor2say.bat fog-e futni, az az s_rules rendezettsegetol fugg,
+  ami jelenleg az msk2say futasat eredmenyezi. A sor2say.bat-nak
+  ettol fuggetlenul jelen kell lennie, mert ebbol allapitja meg
+  a build a lehetseges forditasi muveleteket.
+
 2017.05.04 terminal ablak atmeretezese javitva;
   Nem jo az ablakot unmap/map-olni, mert valtozik tole a pozicio;
 
