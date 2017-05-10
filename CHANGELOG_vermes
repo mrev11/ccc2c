@@ -1,3 +1,7 @@
+2017.05.10 javitgatas;
+  browse puldown kiemelt sora brw:colorspec::logcolor(4) (1 helyett);
+  msk2say jobb azonnal visszaallitani a szineket a maszkokban;
+
 2017.05.09 A brwCreate-tel keszitett browse-ok szine globalisan allithato;
   A CCC_BRWCOLOR valtozoban megadott colorspec-et teszi bele a browse-okba:
     colorspec::logcolor(1) -> a browse sorai

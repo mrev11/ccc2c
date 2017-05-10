@@ -571,6 +571,7 @@ local i,w
           quit
        end
     next
+    prog+=newl+"    mskColorRestore() //pop"
 
     if( !empty(srTomb) )
         sorrend(glsta,srTomb)
@@ -588,6 +589,7 @@ local i,w
     prog+=newl
     prog+=newl+"    mskColorGet() //push"
     prog+=glst
+    prog+=newl+"    mskColorRestore() //pop"
 
     prog+=newl
     prog+=newl+"    mskShow(msk)"
@@ -595,8 +597,6 @@ local i,w
     prog+=newl+"    mskHide(msk)"
 
     prog+=newl
-    prog+=newl+"    mskColorRestore() //pop"
-    prog+=newl+"    mskColorRestore() //pop"
     prog+=newl+"    return lastkey()"
 
     return( memowrit(file,LAT(CCC(defi+newl+decl+newl+prog+newl))) )
