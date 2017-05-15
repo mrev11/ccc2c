@@ -1,4 +1,7 @@
-b50252b4b9092f5c3f0dd3d707e6ab0ab953c75d 2017051512:25:27-UTC ./CHANGELOG_vermes
+9edc17a865e76bc6ed31306f3d2999cbea742465 2017051513:12:23-UTC ./tools/mask/msk2say/msk2say.prg
+89095dd4274df62ba6e02c33add5b8246eaf6007 2017051513:06:17-UTC ./CHANGELOG_vermes
+5c8705b52dd2f791602971526a9a986a2008a410 2017051512:56:06-UTC ./ccclib/src/uic/pushbutton.prg
+5b4b1547dfc121e893ca03d82e6694ad7f342397 2017051512:37:36-UTC ./ccclib/src/uic/mask.prg
 499a7b56418204e068606a458db3b9f4a4843510 2017051512:23:00-UTC ./ccclib/src/uic/listbox.prg
 af6d7cd1ff3d733d67b73b803efb820defe38cde 2017051505:58:40-UTC ./ccclib/src/uic/checkbox.prg
 82d8a82aadb68664a8f598ab206ca7ffd7e363f1 2017051414:17:37-UTC ./tutor/control/control.say
@@ -33,7 +36,6 @@ b6d184334ff9dcd6587692d993b04f91126c426f 2017051407:25:20-UTC ./terminal/gtk/ter
 87dff074b0c9d728b9107eb6e687bc7fa350c8df 2017051216:09:12-UTC ./ccclib/src/uic/screenbuf/screenbuf.cpp
 b90c9d968e59ca2e2307bf4a318cc4a085736edb 2017051213:07:38-UTC ./tools/sql2/driver-mysql/OLVASS
 9ff3b31aea86c681e1eb79691de726273052ca73 2017051009:49:25-UTC ./usr/bin/linux/msk2say
-92f2f81d44ea13592873a734508e1d589354513b 2017051009:49:22-UTC ./tools/mask/msk2say/msk2say.prg
 67fa3bd7e1f5d388ffc21ae89c1eb3734eed0214 2017051009:45:23-UTC ./tutor/xbrwarr/s
 fa7d104cc6c4a09089628fdeb31b421ee55b8515 2017050918:51:03-UTC ./ccclib/src/uic/brwmenu.prg
 dfb07342aedd05b4d2cf6dddf2c3bd2dfd6d60a8 2017050910:47:07-UTC ./tutor/control/demo.prg
@@ -59,7 +61,6 @@ c6888079e7a92701793c3be517ef3f343cdde688 2017050808:10:41-UTC ./ccclib/src/uic/i
 86511d0a23097e13a28da19905617ec49b393d65 2017050714:47:37-UTC ./tutor/control/s
 4df21f1b678f9ab36f80f69e051394866e9de394 2017050713:30:26-UTC ./ccclib/src/uic/altbutton.prg
 0635370aef29570dc56861a06a13979dcf75e0ca 2017050707:25:45-UTC ./tutor/control/control.sor
-703ceaad4d6b54701c46e4e00a1d11fd6a357533 2017050706:13:58-UTC ./ccclib/src/uic/mask.prg
 c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
 3466d19f6cf83e35244c932d3bb1012de4e19ba8 2017050414:58:53-UTC ./usr/bin/linux/xstart
 ca0a442695f3975641d08013f79ffffe8ba2d1a4 2017050119:07:29-UTC ./terminal/common/tcpio.cpp
