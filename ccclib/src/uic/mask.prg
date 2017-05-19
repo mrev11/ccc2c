@@ -38,19 +38,23 @@ static color:={}
 *************************************************************************
 function mskColorSay(spec) //push
     if( empty(spec) )
-        spec:=getenv("CCC_MSKCOLOR_SAY")
+        spec:=ccc_config("MSKCOLOR_SAY")
     end
     if( empty(spec) )
         spec:=NIL
+    else
+        spec::=strtran(" ","")
     end
     aadd(color,setcolor(spec))
 
 function mskColorGet(spec) //push
     if( empty(spec) )
-        spec:=getenv("CCC_MSKCOLOR_GET")
+        spec:=ccc_config("MSKCOLOR_GET")
     end
     if( empty(spec) )
         spec:=NIL
+    else
+        spec::=strtran(" ","")
     end
     aadd(color,setcolor(spec))
 
