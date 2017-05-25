@@ -1,4 +1,4 @@
 #!/bin/bash
-bapp_unixc.b  @parfile.bld
+bapp_unix_.b  @parfile.bld
 
 
