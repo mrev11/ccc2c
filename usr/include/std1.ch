@@ -293,7 +293,9 @@
 //keyboard input
 //-----------------------------------------------------------------------
 
-#command KEYBOARD <c>           => __Keyboard( <c> )
+//fontos a sorrend!
+#command KEYBOARD <list,...>     => __Keyboard( <list>  )
+#command KEYBOARD ( <list,...> ) => __Keyboard( <list>  )
 #command CLEAR TYPEAHEAD        => __Keyboard()
 #command SET TYPEAHEAD TO <n>   => Set( _SET_TYPEAHEAD, <n> )
 
