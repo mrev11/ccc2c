@@ -1,4 +1,6 @@
-a9a4999ac55bd143b9691529f231ffc55f9b6cd7 2017100915:08:11-UTC ./CHANGELOG_vermes
+428f8d7d9c737bffdd84a028f0bc999efdad2fdc 2017101519:54:16-UTC ./CHANGELOG_vermes
+3342309244459e9a622c3ec680a08850f78e9540 2017101519:35:45-UTC ./jt/sslforward/socketpair.cpp
+b1beeb306509233fafbb2a80467d83fd8a82058f 2017101519:24:32-UTC ./jt/sslforward/serveclient.cpp
 754c45c7f0c596f331944e917bcd42ac232af1f8 2017100513:32:13-UTC ./log-install
 523fdf216b9748fe0c329148699c68197162bb30 2017100513:32:11-UTC ./usr/bin/linux/list
 43c4587492fc95a7cb2acec6b5099710bc099edf 2017100513:21:13-UTC ./ccclib/src/uic/termapi/termio.cpp
@@ -328,6 +330,7 @@ f0a087e9eecc67d2948161d3ea18dc68385760ca 2016061209:19:13-UTC ./setup/setup-wind
 7edc4a596d854597787d0f3ed9f5e9e2d6e3a4e7 2016061112:56:12-UTC ./setup/setup-windows/script/ccc2c-msc-64.bat
 1778ffa2376faa2cc2ac3f58d0f1e1dafc2e37c4 2016061112:55:57-UTC ./setup/setup-windows/script/ccc2c-mng-64.bat
 8a3b1ea924d93380eedb984781d5f76ff8516a6b 2016061108:11:24-UTC ./tabobj/tbbtbtx/utility/m.bat
+56b10fd6682d405540fd54cd0c022503a2eaf2c8 2016061014:47:12-UTC ./terminal/sslforw/s.savex
 082da42ada28580790bcfd3df7e83d3d967d0794 2016061012:15:22-UTC ./tools/zgrep/zg.bat
 b75fd3c63abfb7e2ddb14d0fd98933301872f8b6 2016061011:59:28-UTC ./tools/zgrep/self3.savex
 dfb9aaebd281ca5fe521b063d25a71368b377851 2016061011:59:25-UTC ./tools/zgrep/self2.savex
@@ -341,7 +344,6 @@ c343702e95cdc63bb09e26fd258ec38d71f40a7c 2016061006:42:38-UTC ./ccclib/mk_uic.ba
 6dbf780503088d20d7682dfef18f6978676552f4 2016061006:42:22-UTC ./ccclib/mk_ui_.bat
 2bf1717e959dba7186dab353219eef29cca2c46b 2016061006:42:10-UTC ./ccclib/mk_ccc.bat
 7a8f50fd5b408edc67378f0996e3b3a4a3b87d14 2016061006:41:54-UTC ./ccclib/m.bat
-4aa42c5fe394334520292b7ec1fda763ea6eeb06 2016061005:57:48-UTC ./jt/sslforward/serveclient.cpp
 0745c885896e63d975d7deca5e2d2db8d6b8d679 2016061005:20:32-UTC ./usr/include/sckcompat.h
 0741379d26761bcb887bee3e102f0c608dc5aa1d 2016061005:19:19-UTC ./usr/include/sckutil.h
 4d7af620f7d5e2bbe5e049b47b2a32e25958f578 2016060915:34:05-UTC ./tools/zgrep/ss.b
@@ -405,9 +407,24 @@ bfbbf71f1d4807e5f5d5173110ff7c8766b76e45 2016060215:24:10-UTC ./jt/jtstart/parfi
 1ecadf1190fa7b3695db02b0e116cda2648ea363 2016060215:21:20-UTC ./jt/jtdemo/parfile.bld
 0b4481944202c337b5b43630377dfde5b22cedc6 2016060215:18:26-UTC ./jt/jtdemo/ping/parfile.bld
 f55d8ca3addc92b0485f6d2326c8c92f50c47e2e 2016060215:14:56-UTC ./jt/sslforward/ssl-test/parfile.bld
+6bc4b4f63190283a41f74ab1492baa9fcd07a815 2016060213:05:09-UTC ./terminal/sslforw/parfile.bld
 f1e943f71d9f1024f0ecf691404a2e314e9753c6 2016060212:49:10-UTC ./jt/sslforward/ssl-test/xstart.log
+2de6ee45e4a7fa5b19db7c64ed14eee90918021a 2016060212:42:54-UTC ./terminal/sslforw/sslforw-term.cpp
 1e247a124bd672732329dc2c43be62348ac83af1 2016060212:42:38-UTC ./jt/sslforward/sslforward.cpp
+0e2d9acbf1ad43f500f324a65645fefc6666dfda 2016060212:42:00-UTC ./terminal/sslforw/sslforw-serv.cpp
 2d6947c39831f067865c0d99ea790eabbcaaed40 2016060210:10:50-UTC ./jt/sslforward/parfile.bld
+8caf2b51849aaa45706a3dec20fb1bd54c5ff1b8 2016060209:40:08-UTC ./terminal/sslforw/ssl-test/t-ssl-nc
+59f4ae0edef4c4b99587a3bd7b7c999a581ebe29 2016060209:37:25-UTC ./terminal/sslforw/ssl-test/t-ssl
+1bafc004137c7cde4725aab3193708a16f66c265 2016060209:37:04-UTC ./terminal/sslforw/ssl-test/t-plain
+04576ac521e6a3491748a23c50522734b4fcb387 2016060209:36:50-UTC ./terminal/sslforw/ssl-test/t-auth-s
+2f36e4255bbbec977bd7e53f8d66255f0346ef63 2016060209:36:31-UTC ./terminal/sslforw/ssl-test/t-auth-c
+594d84f7039c19474e256ea42d515fc2ef588828 2016060209:33:01-UTC ./terminal/sslforw/ssl-test/x.bat
+46ea20fc1759df9c6c9b975017ecc11116113b24 2016060209:29:42-UTC ./terminal/sslforw/ssl-test/x-xstart
+ea9b90f90f79d3f276770e4013a65d47f419b0de 2016060209:27:47-UTC ./terminal/sslforw/ssl-test/t-ssl.bat
+c230f9c80effc91516aac258dba127e5c6ea2e84 2016060209:17:48-UTC ./terminal/sslforw/ssl-test/t-auth-c.bat
+293695de43e1b139f36d9e179fd13f2febd5fe39 2016060209:17:16-UTC ./terminal/sslforw/ssl-test/t-auth-s.bat
+61bfcbdfd0d029131183891c33c63b13c6abe4aa 2016060209:16:34-UTC ./terminal/sslforw/ssl-test/t-plain.bat
+bcfbf071024ebbb5952e9ff06d398c3baf1df664 2016060209:14:59-UTC ./terminal/sslforw/ssl-test/t--host.bat
 044054d597e84125a062d5109204fb35e5f358c6 2016060208:45:32-UTC ./jt/sslforward/context.cpp
 93b9ce2a85c512a2d8f3d4d3621fa2352bf80888 2016060206:45:13-UTC ./jt/sslforward/forward.cpp
 de54377abeda8b49295ef3d41c49492017e3ca2a 2016060206:42:35-UTC ./jt/sslforward/m.bat
@@ -460,7 +477,7 @@ b428ea1236d8ae5f93c2031c1f33cbd024e2a345 2016053112:35:19-UTC ./jt/sslforward/ss
 06840c7ee6a179ac9a8de78515f2426102d2bbb5 2016053112:35:03-UTC ./jt/sslforward/ssl-test/t-46000-plain
 d479bbee32dd71e59f71affb8839e365b03ff63d 2016052819:18:30-UTC ./tools/list/m.bat
 b8bc80b35cdc2e0ab19edaa21dd01e6f404b958b 2016052818:58:26-UTC ./ccclib/src/qout.cpp
-175e1b63c44b6e8c0ddbe5332e25aa057296d656 2016052809:26:05-UTC ./jt/sslforward/socketpair.cpp
+58782932cd44ad2f5fdd5bc8239bdd6cb610a9e1 2016052809:02:09-UTC ./terminal/sslforw/ssl-test/x
 3a487ae74ea9cfb388368be7b96cf0c7b9f96f3d 2016052711:29:39-UTC ./terminal/unix-ncurses/parfile.bld
 64facb9de4d07b0c98925ccc39ade78dd6c1196e 2016052711:28:22-UTC ./terminal/unix/m
 caa07feb4b71a52db4ea87bf20ddc1c2fe94ad0d 2016052711:18:11-UTC ./terminal/unix/parfile.bld
@@ -521,6 +538,9 @@ e002dee4956231205cdff79e88354e74317804cc 2016052407:48:57-UTC ./setup/setup-unix
 ac9f01c4429b1d0b0702c4617d41ea779fb44dd1 2016052407:47:39-UTC ./ccclib/uic.bld
 56e03d80966876488da18e9f99d1806ee51bad2d 2016052407:39:01-UTC ./ccclib/ccc.bld
 dad18bbcda597f35429a5f715b448fc3ac631c8b 2016052407:34:39-UTC ./ccclib/m
+461d2e570bf0b111ca43018cca7e0857c275df56 2016052212:11:54-UTC ./terminal/sslforw/ssl-test/pem/rehash
+a6649f575721b839bd323d98c4feb8bad4f20203 2016052212:11:08-UTC ./terminal/sslforw/ssl-test/pem/OLVASS
+437100fa695ead955bcf6a950599731365b41fe0 2016052211:15:42-UTC ./terminal/sslforw/ssl-test/t--host
 364d4c6a112a3a8b4993da43451f559257a2496c 2016052118:47:13-UTC ./ccclib/src/uic/compat/convtab-cwi2lat.cpp
 6dc45cd7b4e5366eb539b653fb68f2d86a5ba949 2016052115:11:52-UTC ./terminal/unix-ncurses/learnkey/inkeymap-aquaris/INKEYMAP-aquaris
 5d4776fcc50f633d865f5b6e1d1750e4105d0480 2016052115:11:50-UTC ./terminal/unix-ncurses/learnkey/inkeymap-aquaris/instmap
@@ -610,6 +630,7 @@ f7d6cd82521e3508ecf4c9885562fb212e75641f 2016031413:22:35-UTC ./terminal/unix-nc
 d4fd66b115292e9d2d6a00ccf6995c64f32bbb58 2016031007:54:37-UTC ./tools/socket/socket.cpp
 9d990e0e4b8211efd75521d1f2c460b6cf1b7515 2016021917:36:44-UTC ./usr/options/lin/compile.opt
 dee7a4c839de5c7d1d4564ca66c6dd2753f9fb4f 2016021915:12:30-UTC ./tools/sql2/util/tdsutil/dom2prg.prg
+80bddf6c6ef96fd120ed77ab17b66cd5edf99302 2016021017:26:40-UTC ./terminal/sslforw/ssl-test/OLVASS
 40f9869509ec47f056b1dfea6c2f94908d82c323 2016021015:45:17-UTC ./jt/sslforward/m
 6e4ae4e649607844e341157c1f0875e6ea17d7be 2015121214:15:20-UTC ./ccctools/prg2ppo/input.lex
 09052d79c8f5bec7c53fbf6abdda7d38df0f3f53 2015121214:11:41-UTC ./ccctools/prg2ppo/prg2ppo.ver
@@ -1040,6 +1061,7 @@ a0a464f03f2cab7b00207a927a51e488f881274b 2011070821:26:28-UTC ./tabobj/utility.s
 3bfd63e5711035b4cd58a1f312553f6fcbfcde89 2011070821:18:15-UTC ./tabobj/tbbtbtx/utility/tview.prg
 90e949b3e014f058784c0e9f441255e53eb96ecf 2011070821:18:06-UTC ./tabobj/tbbtbtx/utility/tstru.prg
 71f39dcbd18c10148000c54bec3cdb79e2c3f476 2011070506:40:20-UTC ./ccclib/src/uic/drawbox.prg
+f11df7009460d29d3461fa3f898cbeadeca047d5 2011061216:18:50-UTC ./terminal/sslforw/ssl-test/pem/clnpkey/demo.pem
 7108f826e15f6db6eb487b71c3a4d1892fa742c3 2011061216:18:50-UTC ./tools/socket/ssl/sslauth-demo/demo-cert.pem
 19054616f5f865b4a29866f87eb3b2fb28b83303 2011061216:18:50-UTC ./tools/socket/ssl/sslauth-demo/demo-key.pem
 a6f7a1ea02dd2c12a639e2c76b0884d3270e373a 2011061216:17:20-UTC ./jt/sslforward/ssl-test/localhost-cert.pem
@@ -1893,6 +1915,10 @@ e5dfc25981070b074eef3ea40831e45513106005 2005120120:14:48-UTC ./jt/jtpython/usbp
 ffd519124bc093ff46b9118c90353501f5a94270 2005120120:11:23-UTC ./jt/jterminal/clean.b
 d811aefd4158f1de7c032d7e440da8c926161713 2005113000:17:06-UTC ./ccctools/autolink/build/linux/htm2ctm.bat
 bbdb5fc1a85da322fe42cbb633f93c3cd434532b 2005110317:22:17-UTC ./ccclib/src/unix/utime.cpp
+4918a2ee28f255cd9767d3d357039ecf4c8759f0 2005102113:18:11-UTC ./usr/include/behavior.och
+5bf45d36ae9e11de35d94a97f86afb1c1d0869cb 2005102113:18:11-UTC ./usr/include/meta.och
+55c80b213151c6de8aeea100542dc245b8fce61c 2005102113:18:11-UTC ./usr/include/metaclas.och
+a572071a51bca36334cf5b633535277a4196fd46 2005102113:18:11-UTC ./usr/include/object.och
 2056a5282d195460e7217356790c2f941f00c781 2005092916:08:46-UTC ./ccctools/ppo2cpp/test/while.prg
 7290e501a6ae876d8c89993d10926334a313da40 2005091717:44:16-UTC ./tabobj/utility.src/srcw32/keyb32c.cpp
 c875ace05bfed59170cfc10e96397daefa58569c 2005091717:41:51-UTC ./tabobj/common.src/srccpp/mutex.cpp
@@ -2578,6 +2604,9 @@ f64f8c7137632f8275be7a7ab6a27a8e52ecb20d 2001070304:19:42-UTC ./ccctools/autolin
 77f35fb2d728d8aa89aa98079514cd4ffa5484e6 2001070217:12:44-UTC ./tools/xmlrpc-framework/rpcutil/xdel.prg
 a2ddf58fd006460371998ba73023994bbb53e6ed 2001070204:40:54-UTC ./ccctools/autolink/build/linux/pge2out.bat
 a507e606b8ebd7543546903889969180883841f3 2001061607:35:02-UTC ./tools/xmlrpc/demo-rpc/client.php
+364d32e8f03f114ff4d4cba21da732346c95903b 2001050305:23:12-UTC ./usr/include/behavior.cls
+b9272a09f6709d92b60609aa8eed63f5f270deb3 2001050305:01:53-UTC ./usr/include/object.cls
+8778873df1939616092ba3712e2836117ccc07f6 2001050305:01:31-UTC ./usr/include/meta.cls
 d1a3ab814981842ab12857d7742ae18bb8290573 2001032217:22:24-UTC ./ccctools/prg2ppo/test/prg2ppo.opt
 94ccdd74f2e733e48554734e7e33e053fba597a5 2001032211:36:46-UTC ./ccctools/prg2ppo/dbundef.prg
 9fa375d9f09cf5560d7ed43032b585bcf9eb526d 2001022614:58:16-UTC ./jt/jtdemo/dlgdemo/texmenu/t.bat
@@ -2661,6 +2690,7 @@ c76b610d20e57831ab0efe68a4deb51cc032709f 1998102801:17:01-UTC ./jt/jtdemo/tabedi
 5e127090d294408d0997f50d2198f4cb69e3f92f 1998102801:17:01-UTC ./jt/jtdemo/tabedit/dd/_szamla.prg
 2e51e22150f3e8e129b4c2d9a2638e421c0bb6b1 1998090916:03:58-UTC ./tools/mask/scrstr.prg
 cc77a4973df9ef67cf93f6ced94b8b6aa0d6354b 1998072909:23:42-UTC ./tools/mask/kivonugy.pge
+5032f3e4048ffff558d0d13848c62657ca2d5f15 1998052111:11:16-UTC ./usr/include/metaclas.cls
 11e532373e1374bbfd7dcda1ea1837af6b22191e 1997111617:09:18-UTC ./tools/mask/pageprn.msk
 6cf90e940c60fbd1eb6a77c6ff71db8dcdfdf00c 1997072702:32:20-UTC ./setup/setup-flex/tblcmp.c
 88be495a061474159a77cf55e0bc543954517112 1997072702:32:20-UTC ./setup/setup-flex/yylex.c
