@@ -1,3 +1,10 @@
+2017.10.22 szemetgyujtes valtozott:
+  a) vartab_mark tipusvizsgalattal (teszt);
+  b) vartab_mark tipusvizsgalat nelkul (eles);
+  oref tablazat debug celu listazasa;
+  a PUSHNIL makro nullazza a NIL-ekben levo pointert
+  (hogy kevesebb feleslegesen megorzott objektum maradjon);
+
 2017.10.15 sslforw berakva a terminal directoryba;
 
 2017.10.05 Linuxon lokalis terminal UNIX sockettel;

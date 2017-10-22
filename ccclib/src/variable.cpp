@@ -68,7 +68,7 @@ static VREF *vref;
 
 static volatile int garbage_collection_is_running=0;
 
-static void vartab_mark(void*);
+static void vartab_mark(VALUE*);
 static void vartab_sweep();
 
 
@@ -370,7 +370,7 @@ void vartab_rebuild(void)
 
     for( sp=ststackbuf; sp<ststack; sp++)
     {
-        vartab_mark(sp->data.pointer);
+        vartab_mark(sp);
     }
 
 #ifdef MULTITHREAD
@@ -383,7 +383,7 @@ void vartab_rebuild(void)
     {
         for( sp=td->_stackbuf; sp<td->_stack; sp++)
         {
-            vartab_mark(sp->data.pointer);
+            vartab_mark(sp);
         }
         td=td->next;
     }
@@ -391,7 +391,7 @@ void vartab_rebuild(void)
     //local valtozok stack-je
     for( sp=stackbuf; sp<stack; sp++)
     {
-        vartab_mark(sp->data.pointer);
+        vartab_mark(sp);
     }
 #endif
 
@@ -401,7 +401,7 @@ void vartab_rebuild(void)
         VALUE *v=marked_oref->ptr.valptr;
         for( int t=v->type; t>=TYPE_NIL; t=(++v)->type )
         {
-            vartab_mark(v->data.pointer); //push
+            vartab_mark(v); //push
         }
     }
 
@@ -419,18 +419,30 @@ void vartab_rebuild(void)
 }
 
 //---------------------------------------------------------------------------
-static void vartab_mark(void *ptr)
+static void vartab_mark(VALUE *valueptr)
 {
-    int oidx=(OREF*)ptr-oref;
-    if( 0<=oidx && oidx<OREF_SIZE ) //valid oref
+    int type=valueptr->type;
+    void *ptr=valueptr->data.pointer;
+
+#ifdef USE_TYPE_INFO //not defined
+
+    if( type<TYPE_STRING )
     {
-        OREF *o=oref+oidx;
-        if( o->next==NEXT_UNKNOWN )
+        //kihagy
+    }
+    else if( type<TYPE_REF )
+    {
+        int oidx=(OREF*)ptr-oref;
+        if( 0<=oidx && oidx<OREF_SIZE ) //valid oref
         {
-            o->next=NEXT_RESERVED;
-            if( o->length>0 )
+            OREF *o=oref+oidx;
+            if( o->next==NEXT_UNKNOWN )
             {
-                mark_push(o);
+                o->next=NEXT_RESERVED;
+                if( o->length>0 )
+                {
+                    mark_push(o);
+                }
             }
         }
     }
@@ -443,10 +455,49 @@ static void vartab_mark(void *ptr)
             if( r->next==NEXT_UNKNOWN )
             {
                 r->next=NEXT_RESERVED;
-                vartab_mark(r->value.data.pointer);
+                vartab_mark(&(r->value));
             }
         }
     }
+#else
+        // Szalbiztonsag:
+        // Ez a stabilabbnak gondolt valtozat.
+        // A szemetgyujtes igy nem fugg attol,
+        // hogy milyen sorrendben allitjak be
+        // v->type-ot es v->data.pointer-t.
+        // Amig egy pointer beallitasa atomi,
+        // a tipus es a pointer beallitasa nem atomi.
+        // A NIL-ekben levo inicializalatlan pointer
+        // feleslegesen megorzott objektumokat okoz,
+        // ezert celszeru a NIL-eket nullazni.
+
+        int oidx=(OREF*)ptr-oref;
+        if( 0<=oidx && oidx<OREF_SIZE ) //valid oref
+        {
+            OREF *o=oref+oidx;
+            if( o->next==NEXT_UNKNOWN )
+            {
+                o->next=NEXT_RESERVED;
+                if( o->length>0 )
+                {
+                    mark_push(o);
+                }
+            }
+            return;
+        }
+        int vidx=(VREF*)ptr-vref;
+        if( 0<=vidx && vidx<VREF_SIZE ) //valid vref
+        {
+            VREF *r=vref+vidx;
+            if( r->next==NEXT_UNKNOWN )
+            {
+                r->next=NEXT_RESERVED;
+                vartab_mark(&(r->value));
+            }
+            return;
+        }
+#endif
+
 }
 
 //---------------------------------------------------------------------------
@@ -623,5 +674,143 @@ void _clp_vartab_rebuild(int argno)
     VARTAB_UNLOCK();
     push(&NIL);
 }
+
+
+
+//---------------------------------------------------------------------------
+//DEBUG: object inventory
+//---------------------------------------------------------------------------
+static int typecode(int type)
+{
+    switch(type)
+    {
+        case TYPE_END        : return 'E';
+        case TYPE_NIL        : return 'U';
+        case TYPE_NUMBER     : return 'N';
+        case TYPE_DATE       : return 'D';
+        case TYPE_FLAG       : return 'L';
+        case TYPE_POINTER    : return 'P';
+        case TYPE_STRING     : return 'C';
+        case TYPE_ARRAY      : return 'A';
+        case TYPE_BLOCK      : return 'B';
+        case TYPE_OBJECT     : return 'O';
+        case TYPE_REF        : return 'R';
+    }
+    return '_';
+}
+
+//---------------------------------------------------------------------------
+static void valprn(VALUE *valptr)
+{
+    fprintf(stderr,"%c",typecode(valptr->type));
+
+    if( valptr->type==TYPE_NUMBER )
+    {
+        fprintf(stderr,"%d",(int)valptr->data.number);
+    }
+
+    else if( valptr->type==TYPE_DATE )
+    {
+        fprintf(stderr,"%ld",valptr->data.date);
+    }
+
+    else if( valptr->type==TYPE_FLAG )
+    {
+        fprintf(stderr,"%d",0!=valptr->data.flag);
+    }
+
+    else if( valptr->type==TYPE_POINTER )
+    {
+        fprintf(stderr,"%lx",(long)valptr->data.pointer);
+    }
+
+    else if( valptr->type==TYPE_STRING )
+    {
+        fprintf(stderr,"%d",(int)valptr->data.string.len);
+    }
+
+    else if( valptr->type==TYPE_ARRAY )
+    {
+        OREF*oref=valptr->data.array.oref;
+        if(oref)
+        {
+            fprintf(stderr,"%d",oref->length);
+        }
+    }
+
+    else if( valptr->type==TYPE_BLOCK )
+    {
+        OREF*oref=valptr->data.block.oref;
+        if(oref)
+        {
+            fprintf(stderr,"%d",oref->length);
+            if( oref->length )
+            {
+                fprintf(stderr,"<");
+                for(int i=0; i<oref->length; i++)
+                {
+                    valprn( oref->ptr.valptr+i );
+                }
+                fprintf(stderr,">");
+            }
+        }
+    }
+
+    else if( valptr->type==TYPE_OBJECT )
+    {
+        fprintf(stderr,"%d",valptr->data.object.subtype);
+    }
+
+    else if( valptr->type==TYPE_REF )
+    {
+        VREF*vref=valptr->data.vref;
+        valprn( &(vref->value) );
+    }
+}
+
+//---------------------------------------------------------------------------
+void _clp___oref_list(int argno)
+{
+    stack-=argno;
+    push(&NIL);
+
+    fprintf(stderr,"\n==============================");
+
+    int cnt=0;
+    for( int n=0; n<OREF_SIZE; n++ )
+    {
+        if( oref[n].next == NEXT_RESERVED  ) 
+        {
+            cnt++;
+
+            fprintf(stderr,"\n"); 
+            //fprintf(stderr,"%08lx ",(unsigned long)oref[n].ptr.valptr);
+            fprintf(stderr,"%4d ",oref[n].length);
+
+            if( oref[n].length<=0 )
+            {
+                if(oref[n].ptr.chrptr)
+                {
+                    fprintf(stderr,"[%s]",oref[n].ptr.chrptr);
+                }
+            }
+            else
+            {
+                for(int i=0; i<oref[n].length; i++ )
+                {
+                    valprn( oref[n].ptr.valptr+i );
+                }
+            }
+        }
+    }
+
+    fprintf(stderr,"\n%d",cnt);
+    fprintf(stderr,"\n==============================");
+    fprintf(stderr,"\n");
+    fflush(0);
+
+}
  
 //---------------------------------------------------------------------------
+
+
