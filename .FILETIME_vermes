@@ -1,5 +1,5 @@
-70be89a6be5ff71e063cef3328cd28d52a09765e 2017102208:09:02-UTC ./CHANGELOG_vermes
-ceffb544dc0e6ee6146092b9cf8c4a27ce12020a 2017102114:14:34-UTC ./log-install
+e1a2fff11ab55adc04ca93862b2be6844d69f69e 2017102313:45:20-UTC ./CHANGELOG_vermes
+b7f3b5f956e17abe86d60eafdd62b31a0fb63574 2017102208:17:52-UTC ./log-install
 e122125dc2a94f7eb0f74693e00029c57805eab1 2017102114:14:34-UTC ./usr/bin/linux/xstart
 4a245131c6d33c96d649171acffc6af2f9c38852 2017102114:14:33-UTC ./usr/bin/linux/list
 d80eea05df699c8a7f02abe15c051c846cd43e42 2017102114:14:33-UTC ./usr/bin/linux/ncterm
@@ -929,7 +929,7 @@ addb16cd38a689b08f8d0e6d9fb6fbe5da2c8fce 2012103007:11:38-UTC ./terminal/xtest/x
 f97c336c1a01aebb27ecdb7da90311ffbce34fd3 2012102311:53:16-UTC ./setup/setup-unix/i2bin.cpp
 0ccb20ea13902d981ace1f02065b0caffb6c4814 2012102308:02:32-UTC ./terminal/terminal-test/remtest.bat
 86e4b332162579a8e92f9b88f1d43b585b6eb356 2012102213:27:18-UTC ./terminal/terminal-test/clean-all.b
-a8ce9217c1617f63ba57235ac87ace1fb66c5f3e 2012102213:06:53-UTC ./tools/xstart/xstart.par
+d9f64eb5a808d41a91199bcabd3c756d3fb75600 2012102117:47:44-UTC ./tools/xstart/xstart.par
 1bcd59d506d2db0cab734d905fdc47630f30639f 2012102115:11:07-UTC ./terminal/terminal-test/clean-all.bat
 4c339f53b3ecda3e9b33003598a18aac23e4d65c 2012102114:41:38-UTC ./terminal/terminal-test/m.bat
 493aa183a916f3f7ce655334eb27fb923f0d99f7 2012102114:39:13-UTC ./terminal/terminal-test/remio/m.bat

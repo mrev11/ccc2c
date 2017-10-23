@@ -2,10 +2,8 @@
 <item>
     <name>Test Program</name>
     <if>localhost</if>
-    <port>44965</port>
-    <env>CCC_TERMINAL_SOCKET=SOCKET:$(SOCKET)</env>   <!--windows-->
-    <env>CCC_TERMINAL=remote</env>
-    <env>CCC_REMOTE=comm:$(SOCKET):$(SOCKET):$(SOCKET)</env>  <!--linux-->
+    <port>55000</port>
+    <env>CCCTERM_CONNECT=SOCKET:$(SOCKET)</env>
     <command>z.exe xstart.par</command>
 </item>
 </xstart>
