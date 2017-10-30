@@ -1,3 +1,5 @@
+2017.10.30 terminal/common/flock.cpp kimaradt:
+
 2017.10.30 gtk terminalok javitgatasa:
   Az event->string-nek a karakternek megfelelo  
   UTF-8 stringet kellene tartalmaznia.

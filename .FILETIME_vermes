@@ -1,9 +1,11 @@
-8c6c79857e5d2b2a884fc1bffd5be05e1318c51c 2017103006:18:18-UTC ./CHANGELOG_vermes
+2ecf5b4218b63a88862c45d2a06831ce0a7155ea 2017103006:58:23-UTC ./CHANGELOG_vermes
+325937f2c329bbf2112e5d5bb76a922ec324d9a2 2017103006:57:18-UTC ./usr/bin/linux/terminal-gtk
 2341356765c2485678cafd640e78519a1a9cbb7f 2017103006:10:35-UTC ./terminal/gtk3/terminal-gtk.cpp
 2c9ae0de7f24f5133485a96c92fdc8874ad7c6ea 2017103006:10:14-UTC ./terminal/gtk/terminal-gtk.cpp
 fd5361632394d6d758f6910dece390f41fc7cc6d 2017102910:00:43-UTC ./terminal/common/tcpio.cpp
 1fba809252cbef32e937a2c76a046ff10b702939 2017102814:14:51-UTC ./ccclib/src/uic/termapi/remoteio.cpp
 be3db46edfd796a5d057ea4b5621d76fad2ebeed 2017102813:52:21-UTC ./terminal/terminal-test/remtest.b
+a39ce8304daa95ad92f81f0c5bf96d187a14213a 2017102813:00:19-UTC ./terminal/common/flock.cpp
 84053b58813b3fd5f6135ee26e31ed07f99850f3 2017102811:02:38-UTC ./ccclib/src/uic/termapi/termcmd.h
 5495c856e1b2bb34178136f595bc5ec9fcd9cf38 2017102613:13:13-UTC ./terminal/common/uid.cpp
 b412967b578538db77d2b52334ce735b0ea39e50 2017102508:05:39-UTC ./tutor/xbrwarr/config
@@ -12,7 +14,6 @@ b7f3b5f956e17abe86d60eafdd62b31a0fb63574 2017102208:17:52-UTC ./log-install
 e122125dc2a94f7eb0f74693e00029c57805eab1 2017102114:14:34-UTC ./usr/bin/linux/xstart
 4a245131c6d33c96d649171acffc6af2f9c38852 2017102114:14:33-UTC ./usr/bin/linux/list
 d80eea05df699c8a7f02abe15c051c846cd43e42 2017102114:14:33-UTC ./usr/bin/linux/ncterm
-dae620522c831246c4ed40d9870f806d7a73d839 2017102114:14:33-UTC ./usr/bin/linux/terminal-gtk
 e18f35f08711cdf0e3d20ef5749a77fd9639cccb 2017102114:14:32-UTC ./usr/bin/linux/build
 0e198ceebea6d33f895e3c6f0fe0b9a6187eff72 2017102114:14:32-UTC ./usr/bin/linux/prg2ppo
 129cafda57b06bfdcd0e37de30f39896545dc692 2017102114:14:32-UTC ./usr/bin/linux/removecr
