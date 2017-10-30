@@ -1,5 +1,10 @@
-b209fc9b30a5aacf2581a02bd33ffcace2998e65 2017102613:38:13-UTC ./CHANGELOG_vermes
-501455a0b06a5b54ef6477cf9d3620f3d2575bf0 2017102613:23:01-UTC ./terminal/common/tcpio.cpp
+8c6c79857e5d2b2a884fc1bffd5be05e1318c51c 2017103006:18:18-UTC ./CHANGELOG_vermes
+2341356765c2485678cafd640e78519a1a9cbb7f 2017103006:10:35-UTC ./terminal/gtk3/terminal-gtk.cpp
+2c9ae0de7f24f5133485a96c92fdc8874ad7c6ea 2017103006:10:14-UTC ./terminal/gtk/terminal-gtk.cpp
+fd5361632394d6d758f6910dece390f41fc7cc6d 2017102910:00:43-UTC ./terminal/common/tcpio.cpp
+1fba809252cbef32e937a2c76a046ff10b702939 2017102814:14:51-UTC ./ccclib/src/uic/termapi/remoteio.cpp
+be3db46edfd796a5d057ea4b5621d76fad2ebeed 2017102813:52:21-UTC ./terminal/terminal-test/remtest.b
+84053b58813b3fd5f6135ee26e31ed07f99850f3 2017102811:02:38-UTC ./ccclib/src/uic/termapi/termcmd.h
 5495c856e1b2bb34178136f595bc5ec9fcd9cf38 2017102613:13:13-UTC ./terminal/common/uid.cpp
 b412967b578538db77d2b52334ce735b0ea39e50 2017102508:05:39-UTC ./tutor/xbrwarr/config
 82d8a82aadb68664a8f598ab206ca7ffd7e363f1 2017102415:24:12-UTC ./tutor/control/control.say
@@ -56,7 +61,6 @@ b1beeb306509233fafbb2a80467d83fd8a82058f 2017101519:24:32-UTC ./jt/sslforward/se
 d8434c066b71fc4b36f1f58bb2f2889a39bba218 2017080212:45:33-UTC ./terminal/gtk3/m
 bc322fffe3b1c527600e8815851d271928bab40c 2017080212:16:29-UTC ./terminal/gtk/m.bat
 05723cc2f5285b1428c6177a9c504b154061b42c 2017080212:12:51-UTC ./terminal/gtk3/m.bat
-a601757a92493e89fa3ba8a64548d858f6c8d565 2017080210:18:28-UTC ./terminal/gtk3/terminal-gtk.cpp
 34b7320bcfcd6770c45e3444c01796f71f0b0cd0 2017080209:23:15-UTC ./terminal/gtk3/keycode_gtk.cpp
 7d132e459e82157cd8533396aa9000a1886bbe30 2017072511:29:08-UTC ./ccclib/src/uic/inkey.cpp
 062a2c2ba512ed5eb4bde18be466287127658a77 2017072511:06:24-UTC ./usr/include/std1.ch
@@ -98,7 +102,6 @@ fe9e04b6141006725d19e78964e7f0636f4e7131 2017051414:17:33-UTC ./tutor/control/co
 f45e5c78978577b035f5f5f545149ced19e54736 2017051408:41:40-UTC ./terminal/unix/terminal-xft.cpp
 8264de53d44a97041082f1660ef576316ada8667 2017051407:38:38-UTC ./ccclib/src/color.cpp
 b42a24ac696712b953229a7e30f3233c6e16117f 2017051407:34:26-UTC ./terminal/unix-ncurses/ncterm.cpp
-b6d184334ff9dcd6587692d993b04f91126c426f 2017051407:25:20-UTC ./terminal/gtk/terminal-gtk.cpp
 43db27b4d108a2f308e2c1f43e0c6080bcad2777 2017051218:48:02-UTC ./ccclib/src/uic/savescreen.cpp
 87dff074b0c9d728b9107eb6e687bc7fa350c8df 2017051216:09:12-UTC ./ccclib/src/uic/screenbuf/screenbuf.cpp
 b90c9d968e59ca2e2307bf4a318cc4a085736edb 2017051213:07:38-UTC ./tools/sql2/driver-mysql/OLVASS
@@ -213,7 +216,6 @@ be3af9f37837f4c03986e809d1f1ba1e27688f63 2016100211:49:53-UTC ./tools/savex/find
 a381102b0ed48eedbbb28612d80af5bf83cc140b 2016100211:32:20-UTC ./ccclib/src/setfdati.prg
 aaeb6838a68b0f0a04925426ec7c09e0ed3c8187 2016100211:23:40-UTC ./usr/include/compat_ccc3.h
 e2b977657dc0f891385fd6ee115e9e749e3197c4 2016100208:42:52-UTC ./tools/savex/savebrowse.prg
-f4149625b23ee91256834c9d103dac7cf8881bdc 2016100114:47:11-UTC ./ccclib/src/uic/termapi/remoteio.cpp
 cf63fe140195bcac0e1a5f57cedf6087a275428f 2016100107:19:14-UTC ./ccclib/src/uic/termapi/termio.h
 b513249cf35a258e927ae71269e98d2093897fd8 2016093022:07:05-UTC ./ccclib/src/uic/termapi/termapi.cpp
 38e9313d79fffb44c3da9d559844d88d6dd11699 2016093008:52:28-UTC ./tutor/fpath/parfile.bld
@@ -924,7 +926,6 @@ e58df8cdf798e9554ce31279c50d0bec73d426de 2013021711:01:24-UTC ./terminal/unix/re
 deb0179bb9a4358c62d5f2ed129c0d4537e529de 2013012613:14:34-UTC ./tools/sql2/test/basicdemo/parfile-p.bld
 711c3e7933d19756e64a805e311146ed9d03aac5 2013012612:56:51-UTC ./tools/sql2/test/basicdemo/parfile-o.bld
 34d2821923011d327765902f342abb45e36485ec 2013011709:05:49-UTC ./terminal/terminal-test/remio/remio.prg
-758d6eb4bdf38ddfc85bb95db3fbd851e38515da 2013011622:54:08-UTC ./terminal/terminal-test/remtest.b
 3f0a3796641800342f3778280d87130d517fa61d 2013011617:55:46-UTC ./terminal/terminal-test/xstart.par
 b8ca1b2b67cd2e9ebd86dbb55555200e2932fc85 2012121316:44:50-UTC ./tabobj/tbbtbtx/btindex.prg
 addb16cd38a689b08f8d0e6d9fb6fbe5da2c8fce 2012103007:11:38-UTC ./terminal/xtest/xstart.par
@@ -1730,7 +1731,6 @@ a96072d1119fc88f9d821c6b9c0f9095b65bec20 2006052915:06:53-UTC ./tools/sql2/test/
 3966a696033f3af20f5115bcacac6c18a7a65295 2006052217:23:54-UTC ./terminal/unix/x1
 97b3c4e923538b1e4318271329f0b5953d70d660 2006052217:17:43-UTC ./terminal/unix/x
 6550a2450ed221f1a97444b40029645f8542e2aa 2006052211:05:27-UTC ./ccclib/src/uic/termapi/termapi.h
-c931f674601d460181718d80627107cb992c80b7 2006052210:54:22-UTC ./ccclib/src/uic/termapi/termcmd.h
 78e96b97007c8d754b1af9eb0af55655e923830b 2006051716:40:33-UTC ./tools/sql2/driver-oracle/ociload.h
 8126738f735e6355e9dfdc7bac3eb81ffbbce4e9 2006051716:40:30-UTC ./tools/sql2/driver-oracle/oci.ch
 ea6d0c3f94fbf0507349bb8e2d4568aa52408fa7 2006051716:40:21-UTC ./tools/sql2/test/basicdemo/connect.prg
