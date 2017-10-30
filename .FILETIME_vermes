@@ -1,7 +1,7 @@
-2ecf5b4218b63a88862c45d2a06831ce0a7155ea 2017103006:58:23-UTC ./CHANGELOG_vermes
+133af171b02cb1e29bf866dba071ca8b105e6a13 2017103010:55:51-UTC ./terminal/gtk/terminal-gtk.cpp
+8e81216ed7d31145ec2ba354e5d274ed1338d407 2017103010:50:27-UTC ./CHANGELOG_vermes
+c34b30783f4bfd3b7190546ea37a11a557090d1b 2017103010:48:38-UTC ./terminal/gtk3/terminal-gtk.cpp
 325937f2c329bbf2112e5d5bb76a922ec324d9a2 2017103006:57:18-UTC ./usr/bin/linux/terminal-gtk
-2341356765c2485678cafd640e78519a1a9cbb7f 2017103006:10:35-UTC ./terminal/gtk3/terminal-gtk.cpp
-2c9ae0de7f24f5133485a96c92fdc8874ad7c6ea 2017103006:10:14-UTC ./terminal/gtk/terminal-gtk.cpp
 fd5361632394d6d758f6910dece390f41fc7cc6d 2017102910:00:43-UTC ./terminal/common/tcpio.cpp
 1fba809252cbef32e937a2c76a046ff10b702939 2017102814:14:51-UTC ./ccclib/src/uic/termapi/remoteio.cpp
 be3db46edfd796a5d057ea4b5621d76fad2ebeed 2017102813:52:21-UTC ./terminal/terminal-test/remtest.b
