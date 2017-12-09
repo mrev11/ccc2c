@@ -1,3 +1,13 @@
+2017.12.09 javitasok az androidhoz:
+  Elnyomva a warning: -Wno-empty-body;
+  A $PREFIX/lib helyen is keresi a konyvtarakat;
+  Build a nem talalt libeket -l-lel balrol kiegeszitve irja be az rsplnk 
+  valaszfajlba, ezzel megadja az eselyt a linkernek a tovabbi keresesre. 
+  Korabban az eredeti alakot irta be, ami csak arra jo, hogy mutassa, 
+  mit nem talalt;
+  alapkonyvtar signal.cpp: sigset helyett sigaction (sigset obsolete);
+  curses terminal: waddnwstr helyett konverzio + waddnstr (waddnwstr hianyzik);
+
 2017.11.26 tdccmp: utility bt strukturak ellenorzesere;
 
 2017.11.06 terminal: LPT eszkoznevek transzformalva; 

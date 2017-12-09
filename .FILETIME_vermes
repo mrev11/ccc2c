@@ -1,4 +1,12 @@
-1ee065bd03b88094c8e0b56f4b2a2585ebc91836 2017112612:05:44-UTC ./CHANGELOG_vermes
+31770bc88088ad1b94397950648653cbcee3199a 2017120908:35:28-UTC ./CHANGELOG_vermes
+aa129122e2afff907352a83d292958d068d37dda 2017120908:33:51-UTC ./usr/options/lin/compile.opt
+965690042bd6e5e39383df07474e1e0c6d9f992a 2017120508:08:26-UTC ./usr/bin/linux/__unix.b
+11257e992097139aa23693fdc6ce113b3d97765d 2017120507:56:07-UTC ./ccctools/buildp/build.prg
+4897cedfc9140d18f50fd09e3311b9193af25a46 2017120507:55:38-UTC ./ccctools/buildp/build.hu.ver
+42e1f45aa739e15169d73f6475e015860f5eab1f 2017120220:40:46-UTC ./ccclib/src/unix/signals.cpp
+ecffbd01481b28da808c0ef0f7b66d68b19d7af1 2017120209:15:29-UTC ./terminal/unix-ncurses/ncterm.cpp
+6011cb56850d9449e501eed5643b78dbd7467f15 2017112616:42:57-UTC ./usr/bin/linux/tdc2prgch
+91dc7c7ed1245d27cb573da4b0f55ab6f91be11a 2017112616:42:53-UTC ./tools/tdc2prgch/tdc2prgch.prg
 e31dcc1dab9643c3a5dd50095a1d2c73c1a8d309 2017112612:01:44-UTC ./install.b
 fce79f3c75233f8fb69392edd1c5d48dcc0fc62e 2017112612:00:09-UTC ./tools/tdccmp/parfile.bld
 d591640a695dd272f92db7bc082ad05ac110dd2b 2017112611:47:05-UTC ./tools/tdccmp/mkdiff1
@@ -45,7 +53,6 @@ a1a4978088467e10b57fb4e7fc02e42c36934d61 2017102113:54:23-UTC ./usr/bin/linux/zg
 39cdca7e9086d8d68adf0ea45fa310540cda1799 2017102113:54:22-UTC ./usr/bin/linux/zhist
 c9acdae0e753caa21e046ff6849f47e0a2fe583f 2017102113:54:16-UTC ./usr/bin/linux/prg2tdc
 37396454cc173114fe0118c77b84a8d38b616913 2017102113:54:16-UTC ./usr/bin/linux/tabsuper
-540d7b3eac53fd05cbab93c0fad40b167f68eb43 2017102113:54:16-UTC ./usr/bin/linux/tdc2prgch
 7b44aea714ca6e69f62855a576ec9e416471a91e 2017102113:54:14-UTC ./usr/bin/linux/savex
 2bc0c93316696af467948fba8c4fb341a0b6b526 2017102113:54:14-UTC ./usr/bin/linux/setperm
 19f55cfd0dc76e61e30cf4d53975512e40511d39 2017102113:54:12-UTC ./usr/bin/linux/dddel
@@ -115,7 +122,6 @@ fe9e04b6141006725d19e78964e7f0636f4e7131 2017051414:17:33-UTC ./tutor/control/co
 052efeb5b3b4c72e6a6d2b3a3f521e649dc78f45 2017051408:44:15-UTC ./terminal/unix/terminal.cpp
 f45e5c78978577b035f5f5f545149ced19e54736 2017051408:41:40-UTC ./terminal/unix/terminal-xft.cpp
 8264de53d44a97041082f1660ef576316ada8667 2017051407:38:38-UTC ./ccclib/src/color.cpp
-b42a24ac696712b953229a7e30f3233c6e16117f 2017051407:34:26-UTC ./terminal/unix-ncurses/ncterm.cpp
 43db27b4d108a2f308e2c1f43e0c6080bcad2777 2017051218:48:02-UTC ./ccclib/src/uic/savescreen.cpp
 87dff074b0c9d728b9107eb6e687bc7fa350c8df 2017051216:09:12-UTC ./ccclib/src/uic/screenbuf/screenbuf.cpp
 b90c9d968e59ca2e2307bf4a318cc4a085736edb 2017051213:07:38-UTC ./tools/sql2/driver-mysql/OLVASS
@@ -127,9 +133,7 @@ dfb07342aedd05b4d2cf6dddf2c3bd2dfd6d60a8 2017050910:47:07-UTC ./tutor/control/de
 213d18752897a993d8d0cecaa197b4205d8cdb0c 2017050908:19:39-UTC ./tools/mask/m.bat
 1587b67a91c0aae5bc031ca2fa0761510b0638ce 2017050907:36:47-UTC ./ccclib/src/uic/colorutil.prg
 8e8d41a8d790d469c87f5ef57d0990773f26483f 2017050906:40:37-UTC ./usr/build/windows/sor2say.bat
-d25644d0e39b0dc37ee1fd796e6658f65dc120e3 2017050906:35:40-UTC ./ccctools/buildp/build.hu.ver
 fd419b03dc150554369d615f922ce8ffbd8b1149 2017050823:32:09-UTC ./usr/build/linux/sor2say.bat
-0614e5a2056bff71690942e9437b8e0451b857fa 2017050823:25:40-UTC ./ccctools/buildp/build.prg
 d7ea36a6f97a1e0c626662f2a4656bedc576dff5 2017050820:14:33-UTC ./tools/mask/m
 08d8c8bd91a8bb8ca10e03aa1968b7c72148f296 2017050820:12:19-UTC ./tools/mask/msk2say/OLVASS
 c6888079e7a92701793c3be517ef3f343cdde688 2017050808:10:41-UTC ./ccclib/src/uic/ialert.prg
@@ -165,7 +169,6 @@ fb2fdd2ed8dcc0de718f7df6051dcb6d7a40de7c 2017021118:39:34-UTC ./usr/build/window
 7eb77f0d8a826a87f5a8bd90ee4acfd6ecf957e3 2016121619:34:36-UTC ./ccclib/src/windows/filetime.cpp
 85e4be19b35f129e06bdc2d08eb6cb7418b52152 2016120314:53:44-UTC ./usr/build/linux/tdc2obj.bat
 0a4560d3a1cd0caef189948e9a14e644144bbc87 2016120314:46:46-UTC ./usr/build/linux/tdc2ch.bat
-86ebc7b934d548de2c4cdd71aa279b1350876fe0 2016120314:25:48-UTC ./tools/tdc2prgch/tdc2prgch.prg
 000adf8852af5ee8ecd1c03f896da505833dc62c 2016120314:23:30-UTC ./tools/tdc2prgch/valt.dok
 b4ed0aa805e85681c4123c7a57e04d193fe2f508 2016120312:32:58-UTC ./usr/build/linux/tds2obj.bat
 0f784282a80d0747e3e106cb7f57be2459d066c1 2016120110:17:02-UTC ./terminal/unix/s
@@ -265,7 +268,6 @@ ea11635d49d379a5aeb9070971e6700c3404d56a 2016092907:21:39-UTC ./jt/jtdemo/dlgdem
 958f408ee70ec1da9262e03700fd0067a61af3fa 2016092522:17:52-UTC ./tutor/dtree/delempty.prg
 d9b6f903efcb870ba4658a87829f502d8de01b37 2016092323:40:18-UTC ./tools/zgrep/zgrep_version.prg
 cd9bb3a8484139686afe6b7b6f48d7b340ab0f0a 2016092323:39:06-UTC ./tools/zgrep/zgrep_view.prg
-5d28cb3b59c856fffe1fbeeb8c6daa66c1295476 2016092208:52:12-UTC ./usr/bin/linux/__linux.b
 dcb84a99a2ed9335a83238362f3d475592b71c76 2016091810:29:04-UTC ./tools/savex/sx.b
 199a5596ee594968e5bbcab7f22800269cf8eb4a 2016091810:28:40-UTC ./tools/savex/play.prg
 a6496b4b5c81c5428b4524722dc2ae22fd7e9bfd 2016091807:26:06-UTC ./tools/savex/dolist.prg
@@ -280,7 +282,6 @@ c972a102998e0bf77d96d4f7d9ac5714f01e992e 2016091617:24:05-UTC ./tools/savex/skip
 5a2fb4fd7d6dcdbc9ccdcf5574ebe99de39b054a 2016091608:04:51-UTC ./tools/savex/rdir.prg
 b08e1abd5f94773e45e2391c563355bcd770577d 2016091608:04:29-UTC ./tools/savex/hash.prg
 1fd67393b7e6577bda865eeb2df8b8309a5c0d6c 2016091510:57:11-UTC ./terminal/unix-ncurses/Xdefaults
-caa8fe4436b8f3514ae0cfffbfdf413095b435ac 2016091510:50:14-UTC ./ccclib/src/unix/signals.cpp
 f31fe7d6f35001f5a6f0f616a115e466cfe8ab74 2016090909:21:00-UTC ./usr/include/signal.ch
 935dc97bcafdc14e973bb0e0fbe74538ec4b22aa 2016082610:02:41-UTC ./terminal/common/message.cpp
 98ae44dc3be93a4a9c80c00e67be18b3b8b49503 2016080208:20:09-UTC ./tools/z/zfindpar.prg
@@ -646,7 +647,6 @@ e78b41fd9c035c8d83a86edc01bde4df48dc56fb 2016031520:59:48-UTC ./terminal/unix-nc
 e56e2a618af7cc8751cd43d6eccced80cad0fb57 2016031414:17:17-UTC ./terminal/unix-ncurses/learnkey/m
 f7d6cd82521e3508ecf4c9885562fb212e75641f 2016031413:22:35-UTC ./terminal/unix-ncurses/learnkey/testkey.cpp
 d4fd66b115292e9d2d6a00ccf6995c64f32bbb58 2016031007:54:37-UTC ./tools/socket/socket.cpp
-9d990e0e4b8211efd75521d1f2c460b6cf1b7515 2016021917:36:44-UTC ./usr/options/lin/compile.opt
 dee7a4c839de5c7d1d4564ca66c6dd2753f9fb4f 2016021915:12:30-UTC ./tools/sql2/util/tdsutil/dom2prg.prg
 80bddf6c6ef96fd120ed77ab17b66cd5edf99302 2016021017:26:40-UTC ./terminal/sslforw/ssl-test/OLVASS
 40f9869509ec47f056b1dfea6c2f94908d82c323 2016021015:45:17-UTC ./jt/sslforward/m
