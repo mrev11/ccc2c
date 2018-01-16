@@ -18,20 +18,19 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//dbf megjelenítõ,
+//dbf megjelenito,
 //Vermes M. 2003.03.10.
-//példa a dbaseiii osztály
-//(dbfclass, dbfedrec) használatára.
+//pelda a dbaseiii osztaly
+//(dbfclass, dbfedrec) hasznalatara.
 //
-//mutatja a memók tartalmát (.dbm file),
-//stringeket tud keresni (f/F billentyûk),
-//bármely típus string ábrázolása kereshetõ,
-//mezõhatárokon átlógó találatokat jelezhet,
-//lehet csak egy mezõben keresni (memókban is),
-//lehet hátrafelé keresni.
+//mutatja a memok tartalmat (.dbm file),
+//stringeket tud keresni (f/F billentyuk),
+//barmely tipus string abrazolasa keresheto,
+//mezohatarokon atlogo talalatokat jelezhet,
+//lehet csak egy mezoben keresni (memokban is),
+//lehet hatrafele keresni.
 
 #include "inkey.ch"
-#include "charconv.ch"
  
 static searchstring    := ""
 static casesensitive   := .f.
@@ -48,7 +47,6 @@ local db:=dbaseiiiNew()
 local b,rw,n,c,h,t,w,d,p
 local memonm,memofd,e
 
-    set dosconv off
     set date format "yyyy-mm-dd"
 
     //set printer to log
@@ -88,23 +86,23 @@ local memonm,memofd,e
             if( w>64 )
                 p:="@S64 "+p
             
-            elseif( left(h,3)=="DBM" .and. w==10  ) //memó
+            elseif( left(h,3)=="DBM" .and. w==10  ) //memo
             
                 if( memofd==NIL )
                     memonm:=strtran(dbfspec,".dbf",".dbm")
                     memofd:=memoOpen(memonm)
                     if( memofd<0 )
                         e:=fnferrorNew()
-                        e:description:="Memófilé megnyitása sikertelen"
+                        e:description:="Could not open memo file"
                         e:operation:="memoOpen"
                         e:filename:=memonm
                         break(e)
                     end
                 end
                 
-                db:fldblk[n]:=memoblk(memofd,db:fldblk[n])  //blokk lecserélve
-                c[3]:=512                                   //width lecserélve
-                p:="@S64 "+replicate("X",1024)              //picture lecserélve
+                db:fldblk[n]:=memoblk(memofd,db:fldblk[n])  //blokk lecserelve
+                c[3]:=512                                   //width lecserelve
+                p:="@S64 "+replicate("X",1024)              //picture lecserelve
             end
 
         elseif( t=="N" )
@@ -146,7 +144,7 @@ static function applykey(b,k,db)
         return .t.
 
     elseif( k==K_F3 .or. k==asc("f") .or. k==asc("/") )
-        search({|g|getini(g,db)},{|g|readmodal(g)},{|g|dosearch(g,db)})
+        search({|g|getlistini(g,db)},{|g|readmodal(g)},{|g|dosearch(g,db)})
         b:refreshall
         return .t.
 
@@ -171,9 +169,9 @@ static function applykey(b,k,db)
 
 
 ******************************************************************************
-// Keresés
+// Kereses
 ******************************************************************************
-static function getini(getlist,db)
+static function getlistini(getlist,db)
 local n
     g_search:picture:="@KS20 "+replicate("X",32)
     g_search:varput(searchstring)
@@ -230,9 +228,8 @@ local buffer,typ,wid,dec
         dec:=db:dbstruct[sf][4]
     end
  
-    ss:=_charconv(ss,CHARTAB_CCC2LAT)
     if( !cs )
-        ss:=_charconv(ss,CHARTAB_UPPER2LOWER) //ékezetes betûk is!
+        ss:=lower(ss)
     end
 
     while( !db:eof )
@@ -240,7 +237,7 @@ local buffer,typ,wid,dec
         if( id .or. !db:deleted )
 
             if( sf==0 )
-                buffer:=db:buffer 
+                buffer:=bin2str(db:buffer)
 
             else
                 buffer:=db:evalcolumn(sf)
@@ -257,9 +254,8 @@ local buffer,typ,wid,dec
                 end
             end
 
-            buffer:=_charconv(buffer,CHARTAB_CCC2LAT)
             if( !cs )
-                buffer:=_charconv(buffer,CHARTAB_UPPER2LOWER)
+                buffer:=lower(buffer)
             end
 
             if( ss $ buffer ) 

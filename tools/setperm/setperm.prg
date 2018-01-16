@@ -24,11 +24,11 @@ directories     2775
 regular files   664/775
 symbolic links  skip
 
-végrehajthatóak:
-  az "m" nevû filék
-  a .b kiterjesztésû bash scriptek
-  a #! kezdetû scriptek
-  a (7f)ELF kezdetû ELF filék
+vegrehajthatoak:
+  az "m" nevu filek
+  a .b kiterjesztesu bash scriptek
+  a #! kezdetu scriptek
+  a (7f)ELF kezdetu ELF filek
 
 #endif
 
@@ -104,6 +104,13 @@ static function setperm(dentry)
 local mode:=stat_st_mode(dentry)
 local nmode:=mode
 local xmode,ymode
+
+    if(mode==NIL)
+        // directory() C tipusban adja az eredmenyeket, de 
+        // nem minden fajlnev konvertalhato hibatlanul C-re
+        ? "!!!!!!! cannot stat:",  dirsep()+curdir()+dirsep()+dentry
+        return NIL
+    end
  
     if( s_isdir(mode) )
         nmode:=oct2l("2775")
@@ -155,13 +162,13 @@ local fd,buf,res:=.f.
 
     elseif( 0<=(fd:=fopen(name)) )
 
-        buf:=space(4)
+        buf:=x"00000000"
         fread(fd,@buf,4)
         fclose(fd)
         
-        if( buf==chr(127)+"ELF" )
+        if( buf==bin(127)+a"ELF" )
             res:=.t.
-        elseif( left(buf,2)=="#!" )
+        elseif( left(buf,2)==a"#!" )
             res:=.t.
         end
     end

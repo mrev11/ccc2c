@@ -19,9 +19,9 @@
  */
 
 //1999.02.16
-//az eredetileg táblaobjektumokhoz készült kód
-//átalakítva dbaseiiiClass osztályhoz
-//member függvényként (editrecord) is hívható
+//az eredetileg tablaobjektumokhoz keszult kod
+//atalakitva dbaseiiiClass osztalyhoz
+//member fuggvenykent (editrecord) is hivhato
 
 #include "inkey.ch"
 #include "dbstruct.ch"
@@ -41,13 +41,13 @@ static widthWind:=60
 function dbEditRecord(db,opt,fld)
 
 // opt - "EMST"  Exit,Modify,Store,Type
-// fld - {{"FIELD","Megnevezés","PICTURE"},{...},{...},...}
+// fld - {{"FIELD","Megnevezes","PICTURE"},{...},{...},...}
 
 local margin:=int((maxcol()-widthWind)/2)
 local col:=db:dbstruct,value:={},n,m,c,v,dcol
 local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
-    brw:flushright:=.f. //számok balra igazítva  
+    brw:flushright:=.f. //szamok balra igazitva  
  
     if( opt==NIL )
         opt:="EMST"
@@ -88,14 +88,14 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
     brwArray(brw,value)
 
-    brwColumn(brw,"Megnevezés",brwABlock(brw,MODR_NAME),widthName)
+    brwColumn(brw,"Name",brwABlock(brw,MODR_NAME),widthName)
 
     if( "T"$opt )
-        brwColumn(brw,"Típus",brwABlock(brw,MODR_TYPE),7)
+        brwColumn(brw,"Type",brwABlock(brw,MODR_TYPE),7)
     end
 
-    brwColumn(brw,"Tartalom",{||formaz(brw)},widthData)
-    dcol:=brw:colcount //editálható oszlop száma
+    brwColumn(brw,"Data",{||formaz(brw)},widthData)
+    dcol:=brw:colcount //editalhato oszlop szama
  
     if( "S"$opt )
         brwColumn(brw,"",{||status(brw,db)},1)
@@ -103,13 +103,13 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
     brwMenuName(brw,"["+rightName(db:fspec,30)+"]")
     if( "E"$opt )
-        brwMenu(brw,"Kilép","Kilép a módosítások tárolása nélkül",{||.f.},"K")
+        brwMenu(brw,"Quit","Quit without saving",{||.f.},"Q")
     end
     if( "M"$opt )
-        brwMenu(brw,"Módosít","Mezõtartalmak módosítása",{||edit(brw,dcol),.t.},"M")
+        brwMenu(brw,"Modify","Modify field data",{||edit(brw,dcol),.t.},"M")
     end
     if( "S"$opt )
-        brwMenu(brw,"Tárol","Módosított rekord beírása az adatbázisba",{||beir(brw,db),.f.},"T")
+        brwMenu(brw,"Save","Save modification to database",{||beir(brw,db),.f.},"S")
     end
     if( opt=="" )
         brwMenu(brw,"","",{||.f.})
@@ -164,9 +164,9 @@ local value,field
     return NIL
 
 //Ez nincs kidolgozva:
-//egyrészt a dbaseiii osztály readonly,
-//másrészt ki van véve a recordlock,
-//ezért a függvény a jelenlegi formájában hatástalan.
+//egyreszt a dbaseiii osztaly readonly,
+//masreszt ki van veve a recordlock,
+//ezert a fuggveny a jelenlegi formajaban hatastalan.
 
 ************************************************************************
 static function edit(brw,dcol) 
