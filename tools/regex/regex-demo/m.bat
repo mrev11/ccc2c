@@ -1,2 +1,3 @@
 @echo off
-call bapp_w32_  -bccc2_regex -bpcreposix -bpcre
+call bapp_w32_  -bccc%CCCVER%_regex -bpcreposix -bpcre
+
