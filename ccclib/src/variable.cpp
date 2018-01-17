@@ -721,7 +721,7 @@ static void valprn(VALUE *valptr)
 
     else if( valptr->type==TYPE_POINTER )
     {
-        fprintf(stderr,"%lx",(long)valptr->data.pointer);
+        fprintf(stderr,"%p",(void*)valptr->data.pointer);
     }
 
     else if( valptr->type==TYPE_STRING )
