@@ -1,5 +1,0 @@
--s$(CCC3DIR)/tools/z
--x.bak.
--r:ppo:
--lrobj*
--mw

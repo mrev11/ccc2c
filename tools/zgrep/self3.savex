@@ -1,6 +1,0 @@
--s$(CCC3DIR)/tools/zgrep
--r:ppo:
--lrobj*
--x.bak.
--lxstred.prg
--mw

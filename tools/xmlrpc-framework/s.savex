@@ -1,6 +1,0 @@
--s$(CCCDIR)/tools/xmlrpc-framework
-@$(CCCDIR)/content.savex
--lxerr-*
--lxsema
--lxsession.bt*
--mw

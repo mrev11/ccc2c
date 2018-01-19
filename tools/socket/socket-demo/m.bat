@@ -1,2 +1,2 @@
-call bapp_w32c -bccc2_socket
+call bapp_w32_ -bccc%CCCVER%_socket
  

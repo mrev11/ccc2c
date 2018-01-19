@@ -1,5 +1,5 @@
--bccc2_xmldom
--bccc2_xmlrpc 
--bccc2_socket 
--bccc2_sslsocket 
+-bccc$(CCCVER)_xmlrpc 
+-bccc$(CCCVER)_xmldom
+-bccc$(CCCVER)_socket 
+-bccc$(CCCVER)_sslsocket 
  

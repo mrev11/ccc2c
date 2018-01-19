@@ -1,6 +1,2 @@
 #!/bin/bash
-bapp_unix_.b -bccc2_socket
-#cp -pf listener.exe  $CCCDIR/usr/bin/$CCCUNAME
-#cp -pf remstart.exe  $CCCDIR/usr/bin/$CCCUNAME
-
- 
+bapp_unix_.b -bccc"$CCCVER"_socket
