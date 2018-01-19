@@ -12,6 +12,10 @@ pushd driver-oracle
     call m.bat
 popd
 
+pushd driver-sqlite3
+    call m.bat
+popd
+
 pushd driver-mysql
     call m.bat
 popd
@@ -19,7 +23,6 @@ popd
 pushd driver-db2
     call m.bat
 popd
-
 
 pushd util
     call mkall.bat

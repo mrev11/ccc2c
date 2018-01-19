@@ -1,11 +1,13 @@
 -d.
 -dtds
 
--bccc2_jeed
--bccc2_tds
--bccc2_sql2_oracle
--bccc2_sql2_postgres
--bccc2_jt
--bccc2_socket
--bccc2_btbtx
+-bccc$(CCCVER)_jeed
+-bccc$(CCCVER)_tds
+-bccc$(CCCVER)_sql2_oracle
+-bccc$(CCCVER)_sql2_postgres
+-bccc$(CCCVER)_jt
+-bccc$(CCCVER)_socket
+-bccc$(CCCVER)_sslsocket
+-bccc$(CCCVER)_btbtx
+-bccc$(CCCVER)_xmldom
 

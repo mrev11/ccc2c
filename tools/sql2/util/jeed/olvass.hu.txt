@@ -1,6 +1,6 @@
 jeed -- Jterminal Entity EDitor
 
-A tableentity objektum dinamikusan épül fel a tds filébõl.
-Az editor objektumot programból is lehet használni.
+A tableentity objektum dinamikusan Ã©pÃ¼l fel a tds filÃ©bÅ‘l.
+Az editor objektumot programbÃ³l is lehet hasznÃ¡lni.
 
-A geed-hez hasonló (de nem ugyanaz a) program.
+A geed-hez hasonlÃ³ (de nem ugyanaz a) program.

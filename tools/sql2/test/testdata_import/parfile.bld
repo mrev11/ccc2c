@@ -1,8 +1,9 @@
 #sajnos ezt bele kell linkelni
 -b../$$(testdata_lib)
 
--bccc2_btbtx
--bccc2_sql2_oracle
--bccc2_sql2_postgres
--bccc2_sql2_mysql
--bccc2_sql2_db2
+-bccc$(CCCVER)_btbtx
+-bccc$(CCCVER)_sql2_oracle
+-bccc$(CCCVER)_sql2_postgres
+-bccc$(CCCVER)_sql2_sqlite3
+-bccc$(CCCVER)_sql2_mysql
+-bccc$(CCCVER)_sql2_db2

@@ -2,42 +2,42 @@
 bt2tds
     bt2ted.exe
 
-    BT táblához tableentity definíciós filét (ted) készít.
-    Az eredményt általában még kézzel editálni kell, 
-    ui. nincsenek benne az opcionális select metódusok.
+    BT tÃ¡blÃ¡hoz tableentity definÃ­ciÃ³s filÃ©t (ted) kÃ©szÃ­t.
+    Az eredmÃ©nyt Ã¡ltalÃ¡ban mÃ©g kÃ©zzel editÃ¡lni kell, 
+    ui. nincsenek benne az opcionÃ¡lis select metÃ³dusok.
     Nem mindig van olyan index, ami megfelel primarykey-nek.
     
     bt2tds.exe
 
-    Lényegében ugyanaz, mint a régebbi bt2ted,
-    csak nem XML szintaktikájú ted kimenetet készít,
-    hanem az olvashatóbb table definition scriptet (tds).
+    LÃ©nyegÃ©ben ugyanaz, mint a rÃ©gebbi bt2ted,
+    csak nem XML szintaktikÃ¡jÃº ted kimenetet kÃ©szÃ­t,
+    hanem az olvashatÃ³bb table definition scriptet (tds).
     
 
-btimport (átkerült a test-be)
-    Egy bt (dat/dbf) táblát áttölt SQL adatbázisba.
-    Csak olyan táblákra mûködik, amik benne vannak egy entitylib
-    könyvtárban (lásd mkentitylib-et). Az entitylib könyvtárat
+btimport (Ã¡tkerÃ¼lt a test-be)
+    Egy bt (dat/dbf) tÃ¡blÃ¡t Ã¡ttÃ¶lt SQL adatbÃ¡zisba.
+    Csak olyan tÃ¡blÃ¡kra mÅ±kÃ¶dik, amik benne vannak egy entitylib
+    kÃ¶nyvtÃ¡rban (lÃ¡sd mkentitylib-et). Az entitylib kÃ¶nyvtÃ¡rat
     bele kell linkelni a btimport programba.
     
-    Megjegyzés: 
-    Az importálandó táblákhoz csinálunk egy entitylib könyvtárat
-    (a bt2tds, tds2prg és mkentitylib utilitykkel), 
-    és ennek a könyvtárnak a linkelésével csinálunk egy speciális, 
+    MegjegyzÃ©s: 
+    Az importÃ¡landÃ³ tÃ¡blÃ¡khoz csinÃ¡lunk egy entitylib kÃ¶nyvtÃ¡rat
+    (a bt2tds, tds2prg Ã©s mkentitylib utilitykkel), 
+    Ã©s ennek a kÃ¶nyvtÃ¡rnak a linkelÃ©sÃ©vel csinÃ¡lunk egy speciÃ¡lis, 
     az adott import feladathoz alkalmas btimport.exe-t. Azaz nem 
-    paraméterehzetõ, hogy mit importálunk, hanem alkalmanként el 
-    kell végezni a bedrótozást.
+    paramÃ©terehzetÅ‘, hogy mit importÃ¡lunk, hanem alkalmankÃ©nt el 
+    kell vÃ©gezni a bedrÃ³tozÃ¡st.
 
 
 mkentitylib
-    Az aktuális directory *.tds és *.ted filéire lefuttatja
-    tsd2prg-t vagy ted2prg-t, azaz elkészíti belõlük a prg-t.
-    (A prg-kbôl temészetesen a Builddel könyvtárat készítünk.)
-    Ha meg van adva egy argumentum, akkor hozzárak egy további
-    függvényt (entitylib.arg(name,con)), amivel név szerint is
-    meg lehet kapni a könyvtár tableentity osztályait.
+    Az aktuÃ¡lis directory *.tds Ã©s *.ted filÃ©ire lefuttatja
+    tsd2prg-t vagy ted2prg-t, azaz elkÃ©szÃ­ti belÅ‘lÃ¼k a prg-t.
+    (A prg-kbÅ‘l temÃ©szetesen a Builddel kÃ¶nyvtÃ¡rat kÃ©szÃ­tÃ¼nk.)
+    Ha meg van adva egy argumentum, akkor hozzÃ¡rak egy tovÃ¡bbi
+    fÃ¼ggvÃ©nyt (entitylib.arg(name,con)), amivel nÃ©v szerint is
+    meg lehet kapni a kÃ¶nyvtÃ¡r tableentity osztÃ¡lyait.
 
 
 tds2prg
-    tds2prg.exe: Tableentity Definition Scriptbõl prg-t készít.
-    ted2prg.exe: TableEntity Definition XML-bõl prg-t készít.
+    tds2prg.exe: Tableentity Definition ScriptbÅ‘l prg-t kÃ©szÃ­t.
+    ted2prg.exe: TableEntity Definition XML-bÅ‘l prg-t kÃ©szÃ­t.

@@ -1,4 +1,3 @@
 #!/bin/bash
-mkentitylib.exe --prgdir code_generated
+bapp_unix_.b @parfile.bld
 
-bapp_unix_.b -d. -dcode_generated -bccc2_sql2_oracle -bccc2_sql2_postgres

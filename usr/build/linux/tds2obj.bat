@@ -8,10 +8,19 @@ rm -f error--ppo2cpp-$1
 rm -f error--outcpp-$1
 mkdir -p ppo
  
+# rm -f ppo/$1.prg
+# cp -f $2/$1.tds ppo/$1.tmp
+# tds2prg.exe   ppo/$1.tmp  >ppo/tds2prg-$1
+# rm ppo/$1.tmp
+#
+# nem jo elore atrakni a ppo-ba, mert
+# nem talalja az esetleges include-okat
+
+rm -f $2/$1.prg
 rm -f ppo/$1.prg
-cp -f $2/$1.tds ppo/$1.tmp
-tds2prg.exe   ppo/$1.tmp  >ppo/tds2prg-$1
-rm ppo/$1.tmp
+tds2prg.exe  $2/$1.tds >ppo/tds2prg-$1
+mv $2/$1.prg ppo/$1.prg 2>/dev/null
+
 if ! test -f ppo/$1.prg; then
     touch error
     mv ppo/tds2prg-$1 error--tds2prg-$1
@@ -20,6 +29,9 @@ if ! test -f ppo/$1.prg; then
     grep '^description:' error--tds2prg-$1
 else
 rm -f ppo/tds2prg-$1
+
+
+
 
 # innen kezdve ugyanaz, mint prg2obj
 # kiveve hogy a prg-t a ppo-bol veszi
@@ -30,12 +42,12 @@ rm -f $CMPOPT
 echo $BUILD_PRE >>$CMPOPT
 for i in $BUILD_INC; do echo -I$i >>$CMPOPT; done
  
-echo -dARROW     >>$CMPOPT
-echo -d_CCC_     >>$CMPOPT
-echo -d_CCC2_    >>$CMPOPT
-echo -d_UNIX_    >>$CMPOPT 
-echo -d_LINUX_   >>$CMPOPT 
-echo -ustd1.ch   >>$CMPOPT
+echo -dARROW            >>$CMPOPT
+echo -d_CCC_            >>$CMPOPT
+echo -d_CCC"$CCCVER"_   >>$CMPOPT
+echo -d_UNIX_           >>$CMPOPT 
+echo -d_LINUX_          >>$CMPOPT 
+echo -ustd1.ch          >>$CMPOPT
 
 
 #(1) Elofeldolgozas (prg-->ppo)

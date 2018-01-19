@@ -1,3 +1,2 @@
 #!/bin/bash
-bapp_unix_.b       -ltestdata_lib
-
+bapp_unix_.b -ltestdata_lib

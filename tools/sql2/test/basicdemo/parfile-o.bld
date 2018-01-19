@@ -1,9 +1,8 @@
 -d.
--dcompat
--dtds/code_generated
+-dtds
 -dconnect-ora
 
 -b../$$(testdata_lib)
--bccc2_sql2_oracle
+-bccc$(CCCVER)_sql2_oracle
 
 BUILD_EXE=exe-ora

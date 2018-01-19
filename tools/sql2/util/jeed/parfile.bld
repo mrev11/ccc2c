@@ -1,13 +1,14 @@
--lccc2_jeed
+-lccc$(CCCVER)_jeed
 
--bccc2_tds
--bccc2_sql2_oracle
--bccc2_sql2_postgres
--bccc2_sql2_mysql
--bccc2_jt
--bccc2_xmldom
--bccc2_socket
--bccc2_sslsocket
--bccc2_btbtx
+-bccc$(CCCVER)_tds
+-bccc$(CCCVER)_sql2_oracle
+-bccc$(CCCVER)_sql2_postgres
+-bccc$(CCCVER)_sql2_sqlite3
+-bccc$(CCCVER)_sql2_mysql
+-bccc$(CCCVER)_jt
+-bccc$(CCCVER)_xmldom
+-bccc$(CCCVER)_socket
+-bccc$(CCCVER)_sslsocket
+-bccc$(CCCVER)_btbtx
 
 BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)

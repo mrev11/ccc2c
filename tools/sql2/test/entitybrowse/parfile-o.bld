@@ -2,11 +2,12 @@
 -dtds
 -dconnect-ora
 
--bsql2_oracle
--bjtlib
--bccc2_xmldom
--bccc2_socket
--bccc2_tbwrapper
+-bccc$(CCCVER)_sql2_oracle
+-bccc$(CCCVER)_jt
+-bccc$(CCCVER)_xmldom
+-bccc$(CCCVER)_socket
+-bccc$(CCCVER)_sslsocket
+-bccc$(CCCVER)_btbtx
 
 BUILD_EXE=exe-ora
 

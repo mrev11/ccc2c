@@ -1,0 +1,9 @@
+-d.
+-dtds
+-dconnect-sqlite3
+
+-b../$$(testdata_lib)
+-bccc$(CCCVER)_sql2_sqlite3
+
+BUILD_EXE=exe-sqlite3
+
