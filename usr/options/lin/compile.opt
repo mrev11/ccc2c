@@ -16,3 +16,5 @@
 -Wno-unused
 -Wno-trigraphs
 -Wno-empty-body
+-Wno-invalid-source-encoding
+
