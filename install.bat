@@ -170,6 +170,10 @@ pushd tutor\rename
 call m.bat 
 popd
 
+pushd tutor\fpath
+call m.bat 
+popd
+
 
 
 goto stop
