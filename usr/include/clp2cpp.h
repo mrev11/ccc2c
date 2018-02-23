@@ -32,8 +32,12 @@
 #undef TRUE
 #undef FALSE
 #undef TEXT
-#define strcasecmp  stricmp
-#define wcscasecmp  wcsicmp
+#ifndef strcasecmp
+  #define strcasecmp  stricmp
+#endif
+#ifndef wcscasecmp
+  #define wcscasecmp  wcsicmp
+#endif
 #endif
 
 #ifdef UNIX

@@ -45,10 +45,10 @@ extern void remwrite(int fp, char *data, int datalen);
 
 static struct
 {
-    int  flag;             //kell-e a csatornára küldeni
+    int  flag;             //kell-e a csatornara kuldeni
     FILE *fp;              //local FILE pointer
-    const char *def;       //default file/device név
-    int  remstat;          //0:alapállapot, 1:remote nyitva, -1:nem nyitható
+    const char *def;       //default file/device nev
+    int  remstat;          //0:alapallapot, 1:remote nyitva, -1:nem nyithato
 } outfile[5] = 
 {
     {1, NULL   , "CON" , 0},
@@ -78,46 +78,42 @@ static int locopen(int x, char *fname, int additive)
     else
     {
         FILE *file=0;
-        #ifdef _UNIX_
-            // Windowson fopen() kezeli az eszközöket
-            // (mint CON:, NUL:, LPT1:, LPT2:, stb.),
-            // a UNIX-os fopen ezeket nem ismeri,
-            // ezért van szükség a plusz rétegre.
-            // (csak DOSCONV ON esetén számít)
 
-            int fd=-1;
-            if( additive )
+        int fd=-1;
+        if( additive )
+        {
+            stringnb(fname);
+            number(FO_READWRITE);
+            extern void _clp_fopen(int);
+            _clp_fopen(2);
+            fd=D2INT(TOP()->data.number);
+            POP();
+            
+            if(fd>=0)
             {
-                stringnb(fname);
-                number(FO_READWRITE);
-                extern void _clp_fopen(int);
-                _clp_fopen(2);
-                fd=D2INT(TOP()->data.number);
-                POP();
-                //nincs szükség lseek-re
-            }
-            if( fd<0 )
-            {
-                stringnb(fname);
-                number(FC_NORMAL);
-                extern void _clp_fcreate(int);
-                _clp_fcreate(2);
-                fd=D2INT(TOP()->data.number);
+                number(fd);
+                number(0);
+                number(2); //SEEK_END
+                extern void _clp_fseek(int);
+                _clp_fseek(3);
                 POP();
             }
-            if( fd>=0 )
-            {
-                file=fdopen(fd,additive?"ab":"wb");
-            }
-        #else
-            extern char* wchar_to_utf8(const wchar_t*,unsigned,unsigned*);
-            extern wchar_t* utf8_to_wchar(const char*,unsigned,unsigned*);
-            //file=fopen(fname,additive?"ab":"wb");
-            wchar_t*wfn=utf8_to_wchar(fname,strlen(fname),0);
-            file=_wfopen(wfn,additive?L"ab":L"wb");
-            free(wfn);
-        #endif
+        }
 
+        if( fd<0 )
+        {
+            stringnb(fname);
+            number(FC_NORMAL);
+            extern void _clp_fcreate(int);
+            _clp_fcreate(2);
+            fd=D2INT(TOP()->data.number);
+            POP();
+        }
+
+        if( fd>=0 )
+        {
+            file=fdopen(fd,additive?"ab":"wb");
+        }
         outfile[x].fp=file;
     }
 
@@ -142,13 +138,6 @@ static void locclose(int x)
         fclose(outfile[x].fp);
         outfile[x].fp=NULL;
     }
-    #ifdef _UNIX_
-        // A printelés elindít egy child processt,
-        // aminek a befejeződése után zombi keletkezik,
-        // itt ezeket a zombikat lőjük lefele.
-        int stat;
-        waitpid(-1,&stat,WNOHANG);
-    #endif
 }
 
 //------------------------------------------------------------------------
@@ -165,14 +154,14 @@ while(stack<base+2)PUSHNIL();
     char *fname;
     int additive;
 
-    if( outfile[x].fp ) //ha lokálisan nyitva
+    if( outfile[x].fp ) //ha lokalisan nyitva
     {
-        locclose(x); //lezárni
+        locclose(x); //lezarni
     }
 
     if( outfile[x].remstat>0 ) //ha remote nyitva
     {
-        remclose(x); //lezárni
+        remclose(x); //lezarni
     }
     outfile[x].remstat=0;
 
@@ -196,7 +185,7 @@ while(stack<base+2)PUSHNIL();
 
     if( fname )
     {
-        if( outfile[x].remstat==0 ) // remote nyitható
+        if( outfile[x].remstat==0 ) // remote nyithato
         {
             int rop=remopen(x,fname,additive);
             outfile[x].remstat=(rop?1:-1);
@@ -205,7 +194,7 @@ while(stack<base+2)PUSHNIL();
 
         if( outfile[x].remstat<=0 ) // nincs nyitva remote
         {
-            int lop=locopen(x,fname,additive); //megnyitni lokálisan
+            int lop=locopen(x,fname,additive); //megnyitni lokalisan
             //printf("LOCOPEN %s %d\n",fname,lop);fflush(0);
         }
     }
@@ -292,8 +281,8 @@ static int out0(int x)
         (outfile[x].def!=0) )
     {
         //nincs megnyitva, 
-        //de van default filé,
-        //röptében megnyitja
+        //de van default file,
+        //ropteben megnyitja
         
         stringnb(outfile[x].def);
         setfp(1,x);
@@ -553,3 +542,4 @@ void _clp_fflush(int argno)
 }
 
 //------------------------------------------------------------------------
+
