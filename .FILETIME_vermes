@@ -1,3 +1,5 @@
+93031455475bbf2825ba68e13605873d15e020a4 2018022402:56:48-UTC ./ccclib/src/windows/filecreat.cpp
+c7d62c95acf0c94de0fcea187b114ca502f7de7d 2018022321:04:31-UTC ./CHANGELOG_vermes
 4037cf055e63bed54356a24c7d193e9cc0e7c57a 2018022320:34:05-UTC ./log-install
 7fcfd2e09ad10a546d9c81f2bda90feee6b98b11 2018022320:34:05-UTC ./usr/bin/linux/gitnav
 d465c044c5a4ebbbb3fc610fea78480f5c64b66e 2018022320:34:05-UTC ./usr/bin/linux/gitref
@@ -62,7 +64,6 @@ b999051dbca4174ce51c7f8763a4af6f16b85e13 2018022320:33:13-UTC ./usr/bin/linux/re
 038f0ef538848b334f91ce0e4c105853d0b8d10d 2018022320:33:03-UTC ./usr/bin/linux/ppo2cpp
 98fdd6ee83bccaec7006e9d7fa3b56fc3c2aec1b 2018022320:32:53-UTC ./usr/bin/linux/flex
 7346b9526d3aafebc12b26bddd81848ab068626d 2018022320:32:53-UTC ./usr/bin/linux/lemon
-46d92d86122e78376267f9d4199f5fde25075970 2018022320:26:23-UTC ./CHANGELOG_vermes
 cd7f5aa588514cf43771cc843b44ccce87071b3f 2018022320:12:46-UTC ./usr/include/clp2cpp.h
 5a1d9e2e848f4162e3cdba994d4564c4067f0295 2018022320:08:55-UTC ./tools/zgrep/ss.b
 beb3770026c55ee8da049d3c07ee305e52cdfc29 2018022319:58:09-UTC ./tools/zgrep/zgrep_view.prg
@@ -70,6 +71,7 @@ e6d39845fdd262b9a2948d0bb2cefdf099b0c4a2 2018022215:25:43-UTC ./tools/z/z.ver
 b1b0159cfe3d03ed281f4cfe805013c0b259270f 2018022215:19:01-UTC ./tools/z/zloop.prg
 54c0e9d723d6abe4eb34302fdd90bdc79999aed7 2018022215:18:13-UTC ./tools/z/z.prg
 099c7cf4bfd5fe5bfb4630b7a7f7ebfcce010883 2018022213:48:31-UTC ./install.bat
+30abfe94c22f2c5c041f324335c214850822ee2a 2018022211:16:28-UTC ./setup/setup-unix/filecreat.cpp
 1621a4d290f9416f8275ccec7f1f7e4c595341bc 2018022112:40:48-UTC ./ccclib/src/qout.cpp
 6b4218c6fe5b0bc1440ddc7ca1beada4d3084290 2018021409:07:27-UTC ./install.b
 6245a9fddc0f5a11ca0c0491a643c00447b948b5 2018021409:05:41-UTC ./ccclib/src/i2bin.cpp
@@ -952,8 +954,6 @@ bb76fa995bf2cda4a56bd330f813edb95f1e159e 2014120906:35:52-UTC ./tools/crypto/sha
 af7b9b430d962880e92803677893d563c044f883 2014042718:49:47-UTC ./jt/jterminal/jterminal.hu.ver
 82ef537e3819aafb72a686664c31349ce31b346c 2014042718:45:03-UTC ./jt/jterminal/m
 79732df40b1973fe3c69308580668d88df7e20e0 2014041008:10:12-UTC ./usr/include/fileio.ch
-ec867370da3380c5130b9831e87d6989fe4a5f19 2014041008:09:18-UTC ./ccclib/src/windows/filecreat.cpp
-ee42b4a7ba0e964cbadaace91990e8cfbbc18229 2014041008:08:48-UTC ./setup/setup-unix/filecreat.cpp
 f65a85983aee6bcfd1bb149cdc8f94bb9dcceb15 2014040110:58:13-UTC ./usr/options/net/compile.opt
 0be7bfe53ed280f89be688b54aef6f63545851af 2014040110:57:44-UTC ./usr/options/fre/compile-gcc.opt
 9e4ec7adc2f9a29fa4929b491e5386c1f8cf438d 2014031912:19:23-UTC ./setup/setup-unix/stvar.cpp

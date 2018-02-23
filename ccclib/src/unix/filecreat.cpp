@@ -39,18 +39,18 @@
 
 #define DOSNAME_LEN           4
  
-static int ccc_defsharemode=0;  //nem kell szinkronizálni
-static int unix_defsharemode=UNIX_FO_SHARED;  //nem kell szinkronizálni 
- 
+static int ccc_defsharemode=0;  //nem kell szinkronizalni
+static int unix_defsharemode=UNIX_FO_SHARED;  //nem kell szinkronizalni 
+
 //----------------------------------------------------------------------------
-void _clp_getshare(int argno) //CA-tools fopen és fcreate default nyitási módja
+void _clp_getshare(int argno) //CA-tools fopen es fcreate default nyitasi modja
 {
     stack-=argno;
     number(ccc_defsharemode);
 }
 
 //----------------------------------------------------------------------------
-void _clp_setshare(int argno) //CA-tools fopen és fcreate default nyitási módja 
+void _clp_setshare(int argno) //CA-tools fopen es fcreate default nyitasi modja 
 {
     CCC_PROLOG("setshare",1);
     unsigned int defmod = _parni(1);
@@ -62,7 +62,7 @@ void _clp_setshare(int argno) //CA-tools fopen és fcreate default nyitási módja
         UNIX_FO_EXCLUSIVE,  // 2
         UNIX_FO_EXCLUSIVE,  // 3
         UNIX_FO_SHARED,     // 4
-        UNIX_FO_NOLOCK      // 5  (bõvítés)
+        UNIX_FO_NOLOCK      // 5  (bovites)
     };
    
     if( defmod < sizeof(openmode)/sizeof(openmode[0]) )
@@ -81,7 +81,7 @@ void _clp_setshare(int argno) //CA-tools fopen és fcreate default nyitási módja
 //----------------------------------------------------------------------------
 static int ulock(int hnd, int unixShareMode) 
 {
-    // lock a share módok emulálására
+    // lock a share modok emulalasara
     // Vissza: 0=OK, -1=sikertelen
 
     if( unixShareMode==UNIX_FO_NOLOCK )
@@ -122,46 +122,46 @@ static int ulock(int hnd, int unixShareMode)
 }
 
 //----------------------------------------------------------------------------
-static int startlpr(char *str)
+static int startlpr(char *printer)
 {
-    // Nyomtatást indít az lprccc script segítségével az str által
-    // kijelölt DOS-os nyomtatóra. A tényleges nyomtatót az lprccc-nak
-    // kell kitalálnia. Vissza: fd>=0, amibe írni kell, vagy -1.
+    // Nyomtatas az CCCLPR_CAPTURE scripttel printer-re
+    // Visszateres: fd>=0, amibe irni kell, vagy -1
 
-    int child;
+    char *lpr=getenv("CCCLPR_CAPTURE");
+    if( lpr==0 || lpr[0]==0 )
+    {
+        return -1;
+    }
+
     int p[2];
-
     if( pipe(p) )
     {
         return -1;
     }
 
-    if( !(child=fork()) )
+    if( fork()==0 )
     {
         // gyerek processz
 
-        // stdint áttesszük.
         close(p[1]);
         close(0);
-        if( dup(p[0]) )
-        {
-            close(p[0]);
-            exit(2);
-        }
-      
-        char buf[1024];
-        const char *lprccc=getenv("CCC_LPR");
-        if( lprccc==NULL || lprccc[0]=='\0' )
-        {
-            lprccc="/usr/bin/ccc/lprccc";
-        }
-        snprintf(buf,sizeof(buf),"%s %s",lprccc,str);
-        buf[sizeof(buf)-1]='\0';
-        int retcode=system(buf);
-        exit(3);     
+        int retval=dup(p[0]);
+        close(p[0]);
+        
+        char *argv[3];
+        argv[0]=lpr;
+        argv[1]=printer;
+        argv[2]=0;
+
+        execv(argv[0],argv);    // abszolut spec vagy workdir
+        //execvp(argv[0],argv);   // path-bol is indit
+
+        //ide csak hiba eseten jon 
+        fprintf(stderr,"script not found (CCCLPR_CAPTURE=%s)\n",lpr);
+        exit(1);     
     }
 
-    // szülõ processz
+    // szulo processz
     close(p[0]);
     return p[1];
 }
@@ -169,11 +169,10 @@ static int startlpr(char *str)
 //----------------------------------------------------------------------------
 static char *dosname(char *str, char *dnamebuf)
 {
-    // Ha str 'drive:' alakú akkor a drive-ot adja, 
-    // egyébként a filénevet path és kiterjesztés nélkül.
-    // A filéspecbõl a path-t, a space-eket, a kiterjesztést törli. 
-    // Ha a kapott név üres, vagy  hosszabb, mint 4, akkor NULL-t ad.
-    // Ha az eredmény nem NULL, akkor a buffert törölni kell (free).
+    // Ha str 'drive:' alaku akkor a drive-ot adja, 
+    // egyebkent a filenevet path es kiterjesztes nelkul.
+    // A filespecbol a path-t, a space-eket, a kiterjesztest torli. 
+    // Ha a kapott nev ures, vagy  hosszabb, mint 4, akkor NULL-t ad.
 
     if( str==NULL || str[0]=='\0' )
     {
@@ -189,7 +188,7 @@ static char *dosname(char *str, char *dnamebuf)
         return NULL;
     }
 
-    if( str[i]==':' ) // drive: alakú név. 
+    if( str[i]==':' ) // drive: alaku nev. 
     {
         for(j=0; j<i; j++)
         {
@@ -216,7 +215,7 @@ static char *dosname(char *str, char *dnamebuf)
     }
     else
     {
-        // path\file alakú név.
+        // path\file alaku nev.
 
         for( j=i; j>=0 && !(str[j]==':'||str[j]=='\\'||str[j]=='/'); j-- );
 
@@ -247,10 +246,6 @@ static char *dosname(char *str, char *dnamebuf)
 //----------------------------------------------------------------------------
 static int isdosprinter(char *str)
 {
-    // Megállapítja, hogy DOS-os printernév-e az str,
-    // nem teljesen kompatibilis, mert a DOS a space-eket
-    // kitörli a filék nevébõl.
-    
     static const char *pr[]={"lpt1",  "lpt2",  "lpt3",  "prn", NULL}; 
 
     int i;
@@ -332,7 +327,6 @@ static int determineUnixAccessMode(int fomode)
     if( fomode & FO_CREATE    ) unixmode |= O_CREAT; 
     if( fomode & FO_TRUNCATE  ) unixmode |= O_TRUNC; 
     if( fomode & FO_APPEND    ) unixmode |= O_APPEND;
-
     #if defined O_CLOEXEC
     if( fomode & FO_NOINHERIT ) unixmode |= O_CLOEXEC;
     #endif
@@ -366,12 +360,8 @@ void _clp_fopen(int argno) //Clipper
 {
     CCC_PROLOG("fopen",2);
 
-    PUSH(base);
-    _clp_convertfspec2nativeformat(1);
-    *base=*TOP();
-    POP();
- 
-    char *fspec=_parc(1);
+    convertfspec2nativeformat(base);
+    char *fspec=_parb(1);
 
     int unixShareMode=unix_defsharemode; 
     int unixAccessMode=O_RDONLY; 
@@ -412,13 +402,8 @@ void _clp_fopen(int argno) //Clipper
 void _clp_fcreate(int argno) //Clipper
 {
     CCC_PROLOG("fcreate",2);
-
-    PUSH(base);
-    _clp_convertfspec2nativeformat(1);
-    *base=*TOP();
-    POP();
-
-    char *fspec=_parc(1);
+    convertfspec2nativeformat(base);
+    char *fspec=_parb(1);
 
     int unixShareMode=unix_defsharemode;
     int unixAccessMode=(O_RDWR|O_CREAT|O_TRUNC);
