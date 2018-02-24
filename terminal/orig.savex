@@ -1,7 +1,0 @@
--s/opt/ccc3/terminal
--r:ppo:
--lrobj*
-
--r:xtest:
--x.savex.bak.exe.
--mw
