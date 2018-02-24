@@ -1,10 +1,15 @@
+126259301ef6bdfd351482e8bb07c235affb22cb 2018022410:33:10-UTC ./CHANGELOG_vermes
+b893d9bc70d9d98e814d431c3a786a24a99a56cc 2018022409:55:37-UTC ./tools/xstart/xstart.prg
 93031455475bbf2825ba68e13605873d15e020a4 2018022402:56:48-UTC ./ccclib/src/windows/filecreat.cpp
-c7d62c95acf0c94de0fcea187b114ca502f7de7d 2018022321:04:31-UTC ./CHANGELOG_vermes
-4037cf055e63bed54356a24c7d193e9cc0e7c57a 2018022320:34:05-UTC ./log-install
-7fcfd2e09ad10a546d9c81f2bda90feee6b98b11 2018022320:34:05-UTC ./usr/bin/linux/gitnav
-d465c044c5a4ebbbb3fc610fea78480f5c64b66e 2018022320:34:05-UTC ./usr/bin/linux/gitref
-5eaa8169e7ab1787aeffdb04b86c70d86a682cca 2018022320:34:05-UTC ./usr/bin/linux/gitstat
-59eaa4ecc27e5f028ce0eef01ae4ba224168244c 2018022320:34:05-UTC ./usr/bin/linux/gitview
+6873fb9f5cca669f74c9fc50e08a5bd6f059a855 2018022321:10:34-UTC ./log-install
+47e6ef3bd354456eb94a03dc6df268918b7773e6 2018022321:10:34-UTC ./usr/bin/linux/gitstat
+b328c5c74e9b800a30f47033bb4e92c52298fe85 2018022321:10:33-UTC ./usr/bin/linux/gitnav
+ddcadf54c08636ff1388597c8605a88bea35e835 2018022321:10:33-UTC ./usr/bin/linux/gitref
+d18a9a86684f80e4b49b739c779806e7a5085af4 2018022321:10:33-UTC ./usr/bin/linux/gitview
+6b99df479a17a1fe2d7fa2733d82c1497d3b5a95 2018022321:10:04-UTC ./usr/bin/linux/xstart
+b11c7382642b86c9f92358042d7ee89ca3da0f1b 2018022321:09:40-UTC ./usr/bin/linux/prg2ppo
+4b7f8096f9636fa92c3f9dceae1fa0846b651c06 2018022321:09:40-UTC ./usr/bin/linux/removecr
+7aee9248eb94fb7d8cfae36b622b1b3e270d56ff 2018022321:09:38-UTC ./usr/bin/linux/build
 ac554177136f82123f965bb6139c692de59c1163 2018022320:34:03-UTC ./usr/bin/linux/filetime-restore
 ded382242a857b506f8670bac2c6ccca6ca3dfc0 2018022320:34:03-UTC ./usr/bin/linux/filetime-save
 f6ec25bf5bd5a919992e26b28bee16d85db72d6b 2018022320:34:03-UTC ./usr/bin/linux/firstpar
@@ -28,7 +33,6 @@ b517032539b8ad2bcd8a09a770e4b92f979e5692 2018022320:33:42-UTC ./usr/bin/linux/de
 b55a7964f940fa4103f02a74a580b3d719044d6f 2018022320:33:38-UTC ./usr/bin/linux/zg
 fc592882f21689b8bc06b2d7a8b85c7a8ff3f16b 2018022320:33:38-UTC ./usr/bin/linux/zgrep
 94d73324061494ed99ea79ae1bef6c0d5424f858 2018022320:33:38-UTC ./usr/bin/linux/zhist
-800fca7555d13ca9e99a217527b2e21f87c1ae3e 2018022320:33:36-UTC ./usr/bin/linux/xstart
 cc5f55e50a27e40a8e6f1a1de6f618d2217a7225 2018022320:33:31-UTC ./usr/bin/linux/prg2tdc
 268bedb3e9e35c302165830a3e8234b935a0ce43 2018022320:33:31-UTC ./usr/bin/linux/tabsuper
 3fe782e789163f40df88232b0a4ed55fa07a2e6d 2018022320:33:31-UTC ./usr/bin/linux/tdc2prgch
@@ -58,9 +62,6 @@ d0aa1f1d0f9a95a2d1ba1b5c1e0bc6a1e7d083a1 2018022320:33:15-UTC ./usr/bin/linux/ss
 3c2bd6efbc18b119ccd075ef63782e1e3e5607d5 2018022320:33:14-UTC ./usr/bin/linux/terminal
 bfbe0176e90406081f532315c0a94b5de6c7a482 2018022320:33:14-UTC ./usr/bin/linux/terminal-xft
 529702d325883a8e1099878ae0d759d40f569da6 2018022320:33:13-UTC ./usr/bin/linux/mklink
-81114437c17d09d43cca389c31ed2161fc669e55 2018022320:33:13-UTC ./usr/bin/linux/prg2ppo
-b999051dbca4174ce51c7f8763a4af6f16b85e13 2018022320:33:13-UTC ./usr/bin/linux/removecr
-7a4850e1b4ea4faeeae2707cfc0a035969138ab6 2018022320:33:12-UTC ./usr/bin/linux/build
 038f0ef538848b334f91ce0e4c105853d0b8d10d 2018022320:33:03-UTC ./usr/bin/linux/ppo2cpp
 98fdd6ee83bccaec7006e9d7fa3b56fc3c2aec1b 2018022320:32:53-UTC ./usr/bin/linux/flex
 7346b9526d3aafebc12b26bddd81848ab068626d 2018022320:32:53-UTC ./usr/bin/linux/lemon
@@ -345,7 +346,6 @@ e91cfb664b0fb48bc20953ac5c06393b33069f73 2017042522:23:58-UTC ./tools/mask/maskd
 b62243a44f54361d5b8ae70259c6e296e040ef91 2017042120:58:33-UTC ./tools/sql2/driver-mysql/sqlutil.prg
 df97ca1eb6813491cd0f37254f850f5dc245e117 2017042120:58:01-UTC ./tools/sql2/driver-db2/sqlutil.prg
 b6772c75b4cb0850b96ff5c5bc7a350d803cc1f4 2017042120:55:57-UTC ./tools/sql2/driver-sqlite3/sqlutil.prg
-6f0e1b0aa093c8cbedd968dbfb0b15ffc22f8599 2017041919:08:10-UTC ./tools/xstart/xstart.prg
 70ffa5f098ac42aed1c0023ceebbd37f2db9254c 2017040613:42:20-UTC ./ccctools/build/build.hu.ver
 2856ecacab40077840c56e103b4da985aad2aed0 2017040613:36:14-UTC ./ccctools/build/build.prg
 ddb1cf929f4c5ffb3dfc7bd563c9e44d1ab82f36 2017032419:47:07-UTC ./tools/ddict2/ddict2.prg
