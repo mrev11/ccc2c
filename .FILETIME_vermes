@@ -1,6 +1,10 @@
+529495bc774a4d8fbd77bd5aa1b5eb10f262b010 2018022509:13:30-UTC ./CHANGELOG_vermes
+40f338a8eff94dc144611e4141b318030fad419d 2018022508:51:14-UTC ./terminal/terminal-test/remtest.b
+e7e4bd0737fa5ba9c9ad802cc644dba1269d894e 2018022508:50:09-UTC ./terminal/terminal-test/remio/remio.prg
+2119f8e30ef760eba8693a906cd8837b3e94356c 2018022508:31:54-UTC ./terminal/common/tcpio.cpp
+68cf93107bae634950f9918b1971907cf4b5156c 2018022508:26:59-UTC ./terminal/common/startlpr.cpp
 6c58839f903c091c8dca0bf21d824554a809d79f 2018022423:34:23-UTC ./ccclib/src/windows/filecreat.cpp
 76885d1ed43346a445a9cecb10647ada6de44664 2018022420:05:26-UTC ./terminal/terminal-test/remtest.bat
-683ce8c7d46c50e971bb01f405159c1a909e1bac 2018022419:54:30-UTC ./terminal/common/startlpr.cpp
 b17d5376142fe17a5911cde8cc7271f3543d458e 2018022415:47:11-UTC ./log-install
 add9ce8499193820455d20233ed93e9abf6c3553 2018022415:47:11-UTC ./usr/bin/linux/gitnav
 e65f6172ce53c40d5df3f0c81449f1d15cd4f0ee 2018022415:47:11-UTC ./usr/bin/linux/gitref
@@ -15,10 +19,7 @@ b75fa6765bba982e5df6ff8cab6b4bb7150fdc9c 2018022415:47:11-UTC ./usr/bin/linux/gi
 01916ad30e8ee57a4b498fd9a25de30f390c99ce 2018022415:46:19-UTC ./usr/bin/linux/prg2ppo
 3fa2d2e48404ca8b0aa002f3e86dbf555da38f5f 2018022415:46:19-UTC ./usr/bin/linux/removecr
 daa5da55d87975d433842ca1506bf010e81b04e0 2018022415:46:18-UTC ./usr/bin/linux/build
-63ec8f4ce804c0a26cd8a441da8f6626d286f7ed 2018022415:45:49-UTC ./CHANGELOG_vermes
 f6a8280f9c2aff466a80bdce95ca5db9a9119cd6 2018022414:05:38-UTC ./setup/setup-unix/filecreat.cpp
-2ac3fb930aa4d7b18f53fd0c222095bc1615c3d5 2018022410:44:09-UTC ./terminal/common/tcpio.cpp
-fdd3708f9397663da2f42a10afbc98f13c04172b 2018022410:41:43-UTC ./terminal/terminal-test/remtest.b
 91a84bb2e7858b63fdfc377bb5488be293b0122c 2018022410:28:32-UTC ./terminal/terminal-test/clean
 6f9af4caf093bd12958f5e80650c59b1a1d2953a 2018022410:27:30-UTC ./terminal/terminal-test/remio/ccclpr.bat
 454a940a0078165d287bfbd9b32098650edc1ec7 2018022410:22:05-UTC ./terminal/terminal-test/m.bat
@@ -1041,7 +1042,6 @@ f81d5c8b9758536119bab6b44d6a6d8464a8c250 2013030810:20:38-UTC ./tabobj/tbwrapper
 2a5526cae2984d8fcd7c4d114c8368f6eb09da82 2013030810:20:04-UTC ./tabobj/tbwrapper/symgen/symgen.txt
 68638d45ef6c53e8ea4e288ec13a9c6713ee8fca 2013022307:45:31-UTC ./setup/setup-unix/fileconv.cpp
 e58df8cdf798e9554ce31279c50d0bec73d426de 2013021711:01:24-UTC ./terminal/unix/readme.hu.txt
-34d2821923011d327765902f342abb45e36485ec 2013011709:05:49-UTC ./terminal/terminal-test/remio/remio.prg
 3f0a3796641800342f3778280d87130d517fa61d 2013011617:55:46-UTC ./terminal/terminal-test/xstart.par
 b8ca1b2b67cd2e9ebd86dbb55555200e2932fc85 2012121316:44:50-UTC ./tabobj/tbbtbtx/btindex.prg
 addb16cd38a689b08f8d0e6d9fb6fbe5da2c8fce 2012103007:11:38-UTC ./terminal/xtest/xstart.par
