@@ -536,6 +536,7 @@ function sayLTOutObj(mskLeiroTomb,file,srTomb)
 //mskLeiroTomb-bõl objektumos típusú .say filét állít elõ
 
 local rect:=mskLeiroTomb[MSKL_RECT] 
+local vers:="//msk2say-"+ver()+endofline()
 local prog:=""
 local defi:=""
 local decl:=""
@@ -551,7 +552,7 @@ local i,w
 
     startRow:=TOP
     startCol:=LEFT
-    decl+=newl+"static function "+upper(BaseName(ExtractName(file)))+"(bLoad,bRead,bStore)"
+    decl+=newl+"static function msk"+upper(BaseName(ExtractName(file)))+"create(bLoad,bRead,bStore)"
 
     oTomb:=mskLeiroTomb[MSKL_OBJTOMB]
     glsta:={}
@@ -594,16 +595,18 @@ local i,w
     prog+=newl+"    mskColorGet() //push"
     prog+=glst
     prog+=newl+"    mskColorRestore() //pop"
+    prog+=newl+"    return msk"
 
     prog+=newl
+
+    prog+=newl+"static function "+upper(BaseName(ExtractName(file)))+"(bLoad,bRead,bStore)"
+    prog+=newl+"local msk:=msk"+upper(BaseName(ExtractName(file)))+"create(bLoad,bRead,bStore)"
     prog+=newl+"    mskShow(msk)"
     prog+=newl+"    mskLoop(msk)"
     prog+=newl+"    mskHide(msk)"
-
-    prog+=newl
     prog+=newl+"    return lastkey()"
 
-    return( memowrit(file,LAT(CCC(defi+newl+decl+newl+prog+newl))) )
+    return( memowrit(file,LAT(CCC(vers+defi+newl+decl+newl+prog+newl))) )
 
     //LAT(CCC(x)) -> Latin ékezetek + Csiszár féle dobozrajzolók
     //hogy a régi msk-kból ne kerüljön a kódba CWI ékezetes karakter
@@ -639,6 +642,6 @@ local i,j,t:={},tg:={}
 
 *************************************************************************
 static function ver()
-   return "1.1.0"
+    return "2.1.1-Latin2"
 
 *************************************************************************

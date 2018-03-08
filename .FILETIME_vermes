@@ -1,5 +1,7 @@
-e10001bca06b0ef25f84c2827fc24ef37e126c38 2018030809:14:29-UTC ./CHANGELOG_vermes
-1a0a3af4856b997740b644df271bf2c9ebd2bee6 2018030808:51:56-UTC ./log-install
+cb41ea90950231beb6d225d40a905f0b9b281b5e 2018030810:01:13-UTC ./CHANGELOG_vermes
+f924f38dd564da91240bddd3ea1fc921ead2c6db 2018030809:56:23-UTC ./usr/bin/linux/msk2say
+ad371b2515c3045d4256b31596c6516d4a271adf 2018030809:56:02-UTC ./tools/mask/msk2say/msk2say.prg
+c7b5a9ff4513e32a714f898c57031eebb04f3ef8 2018030809:30:52-UTC ./log-install
 22505e73fa6c10d13fc06e39b66869d4f02243f5 2018030808:51:56-UTC ./usr/bin/linux/xstart
 661f87be6fb6b7dbd23c6938e51368b020577ec1 2018030808:51:53-UTC ./usr/bin/linux/terminal-gtk3
 ea6a31e5ff9f191b4959c67e023f34201cbc4b86 2018030808:51:52-UTC ./usr/bin/linux/terminal-gtk
@@ -72,7 +74,6 @@ a13edb6e9f1b0d282d407f35734a9fe0b1cae0a6 2018022320:33:27-UTC ./usr/bin/linux/li
 ef1d0acb31fdc129b31bea3533f497306f72f3d0 2018022320:33:18-UTC ./usr/bin/linux/msk2pge
 deb7ff86468c00e3c7c3396487b4229397160f79 2018022320:33:18-UTC ./usr/bin/linux/page
 877cb06f2012f85e3e60244b832df2231870b826 2018022320:33:18-UTC ./usr/bin/linux/pge2wro
-ecde37bd9cd3d1c66097d2317009ca39093018f3 2018022320:33:16-UTC ./usr/bin/linux/msk2say
 d0aa1f1d0f9a95a2d1ba1b5c1e0bc6a1e7d083a1 2018022320:33:15-UTC ./usr/bin/linux/sslforw-serv
 3fbb7f72bd6e25964e54e295211da4fa9db5998f 2018022320:33:15-UTC ./usr/bin/linux/sslforw-term
 1d58f0dd2cf5810a6be267ab7f674ce00336f39c 2018022320:33:14-UTC ./usr/bin/linux/sslforward
@@ -326,7 +327,6 @@ d28a9bbe0ea2461d5c0a37449fa9184942f91fa6 2017052407:22:50-UTC ./terminal/common/
 9c3b568832cdddec3d6730ee3b0bd5c23faf82e8 2017051905:18:06-UTC ./tutor/control/config
 b1a85b03222051ab43282310b261297e12bce683 2017051905:14:08-UTC ./tutor/control/s
 80565bfbf1773a1970e258c91baa6846fb8310fe 2017051814:13:44-UTC ./ccclib/src/ccc_config.prg
-9edc17a865e76bc6ed31306f3d2999cbea742465 2017051513:12:23-UTC ./tools/mask/msk2say/msk2say.prg
 499a7b56418204e068606a458db3b9f4a4843510 2017051512:23:00-UTC ./ccclib/src/uic/listbox.prg
 af6d7cd1ff3d733d67b73b803efb820defe38cde 2017051505:58:40-UTC ./ccclib/src/uic/checkbox.prg
 fe9e04b6141006725d19e78964e7f0636f4e7131 2017051414:17:33-UTC ./tutor/control/control.msk
