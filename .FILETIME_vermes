@@ -1,4 +1,4 @@
-bc7b03cb1573c3b21854d730768365476b5d7534 2018030809:04:45-UTC ./CHANGELOG_vermes
+e10001bca06b0ef25f84c2827fc24ef37e126c38 2018030809:14:29-UTC ./CHANGELOG_vermes
 1a0a3af4856b997740b644df271bf2c9ebd2bee6 2018030808:51:56-UTC ./log-install
 22505e73fa6c10d13fc06e39b66869d4f02243f5 2018030808:51:56-UTC ./usr/bin/linux/xstart
 661f87be6fb6b7dbd23c6938e51368b020577ec1 2018030808:51:53-UTC ./usr/bin/linux/terminal-gtk3
@@ -11,6 +11,7 @@ ea6a31e5ff9f191b4959c67e023f34201cbc4b86 2018030808:51:52-UTC ./usr/bin/linux/te
 54e6bcc6bbd1a165714297e59096e6a25986f45c 2018030808:51:51-UTC ./usr/bin/linux/terminal-xft
 c5d61069cdfdef02c8479fe7c46e1dbbea928de6 2018030807:45:41-UTC ./ccclib/src/procline.cpp
 9bb49c50feadf07a7f1fea7e3bad1fa2e778f11a 2018030807:23:44-UTC ./ccclib/src/uic/ialert.prg
+953e3fd54d860b4d86e8701bfdfd00f71e4587a1 2018030507:47:23-UTC ./ccclib/src/uic/mask.prg
 eea683029c915244c0ec23e400f6e017ee8e1290 2018030308:13:46-UTC ./ccclib/src/uic/pushbutton.prg
 40f338a8eff94dc144611e4141b318030fad419d 2018022508:51:14-UTC ./terminal/terminal-test/remtest.b
 e7e4bd0737fa5ba9c9ad802cc644dba1269d894e 2018022508:50:09-UTC ./terminal/terminal-test/remio/remio.prg
@@ -324,7 +325,6 @@ d28a9bbe0ea2461d5c0a37449fa9184942f91fa6 2017052407:22:50-UTC ./terminal/common/
 4e5ebc29baf4aaff61856c17139f75098e0cf390 2017051905:35:17-UTC ./tutor/xbrwarr/s
 9c3b568832cdddec3d6730ee3b0bd5c23faf82e8 2017051905:18:06-UTC ./tutor/control/config
 b1a85b03222051ab43282310b261297e12bce683 2017051905:14:08-UTC ./tutor/control/s
-03f6a26c0ed567717866669c331a4eb54dea22bf 2017051814:23:03-UTC ./ccclib/src/uic/mask.prg
 80565bfbf1773a1970e258c91baa6846fb8310fe 2017051814:13:44-UTC ./ccclib/src/ccc_config.prg
 9edc17a865e76bc6ed31306f3d2999cbea742465 2017051513:12:23-UTC ./tools/mask/msk2say/msk2say.prg
 499a7b56418204e068606a458db3b9f4a4843510 2017051512:23:00-UTC ./ccclib/src/uic/listbox.prg
