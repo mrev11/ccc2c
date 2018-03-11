@@ -1,4 +1,15 @@
-d1999c735bff0f1ba58ac2d6c3fdcec89e88ba80 2018030912:59:13-UTC ./CHANGELOG_vermes
+8c789b9537579b02ffc522c57bdbc10503556c18 2018031108:45:26-UTC ./CHANGELOG_vermes
+64024185c8593adb25fb241d6ae3279a42c5798d 2018031108:44:00-UTC ./tools/sql2/sql2.hu.ver
+a68410019187ecd17347d2f5fe00733649519c14 2018031013:02:34-UTC ./tools/sql2/driver-postgres/tableentity.prg
+fd30a662c1f44a3ea6dcbfbda891cb63cda68091 2018031012:51:14-UTC ./tools/sql2/util/tdsutil/dom2prg.prg
+3d75e0c6edc9f9f1aa2fcee5db7a1f4e86b8660b 2018031012:47:46-UTC ./tools/sql2/driver-sqlite3/columndef.prg
+da63fea3efeb4ee8c81b2fcd7a13d03844137b3b 2018031012:47:33-UTC ./tools/sql2/driver-postgres/columndef.prg
+cd23b27177c6cf7ca2b307fa77f0af58d10ccbb4 2018031012:47:22-UTC ./tools/sql2/driver-oracle/columndef.prg
+f79636b328865807d76935c6b67adfeda6fc30fe 2018031012:47:12-UTC ./tools/sql2/driver-mysql/columndef.prg
+29cb8c70f83c03c6127edc737e30f16e9a464cdb 2018031012:47:01-UTC ./tools/sql2/driver-db2/columndef.prg
+1911726afcb556d81a0f1fbe32eaa3f25f7f4705 2018031012:44:49-UTC ./tools/sql2/util/tdsutil/columndef.prg
+d23a9a2467e85311106bba03b6d50ca50a03a50e 2018031012:43:31-UTC ./tools/sql2/util/tdsutil/tdsparse.prg
+3252f47ae325f48939888ff12facbd4e5bb3637f 2018031012:40:32-UTC ./tools/sql2/util/tdsutil/tds2dom.prg
 17b67fdf61b0c196db2877944ac2e6655fb5aa9c 2018030912:56:47-UTC ./tutor/control/control.say
 bd29222ad08d364a857dfc1d51ae296230cf5edd 2018030912:56:44-UTC ./tutor/control/demo2.prg
 694af48533b65882f6b293a69848a758fba4de0c 2018030912:50:03-UTC ./tutor/control/s2
@@ -353,7 +364,6 @@ d7ea36a6f97a1e0c626662f2a4656bedc576dff5 2017050820:14:33-UTC ./tools/mask/m
 c68eae2f0f59b2d7d2948ae893d83e5549b2d5da 2017050415:14:20-UTC ./usr/include/clprun.h
 f00044b3e99ca0fc5c236226c98cd498eb5a96c0 2017042706:18:12-UTC ./ccclib/src/uic/setcursor.cpp
 e91cfb664b0fb48bc20953ac5c06393b33069f73 2017042522:23:58-UTC ./tools/mask/maskdemo.sor
-7d7cfb8d76b07bb7f036b78c6585f82c3386043e 2017042121:07:21-UTC ./tools/sql2/sql2.hu.ver
 4acb9ac7be2a8c2981e0040dc0cfec5b6aa0c194 2017042121:00:36-UTC ./tools/sql2/driver-postgres/sqlutil.prg
 94deeaaa27250ee4a0f6b33fa7a81c4c2d96efef 2017042121:00:06-UTC ./tools/sql2/driver-oracle/sqlutil.prg
 b62243a44f54361d5b8ae70259c6e296e040ef91 2017042120:58:33-UTC ./tools/sql2/driver-mysql/sqlutil.prg
@@ -790,7 +800,6 @@ e78b41fd9c035c8d83a86edc01bde4df48dc56fb 2016031520:59:48-UTC ./terminal/unix-nc
 e56e2a618af7cc8751cd43d6eccced80cad0fb57 2016031414:17:17-UTC ./terminal/unix-ncurses/learnkey/m
 f7d6cd82521e3508ecf4c9885562fb212e75641f 2016031413:22:35-UTC ./terminal/unix-ncurses/learnkey/testkey.cpp
 d4fd66b115292e9d2d6a00ccf6995c64f32bbb58 2016031007:54:37-UTC ./tools/socket/socket.cpp
-dee7a4c839de5c7d1d4564ca66c6dd2753f9fb4f 2016021915:12:30-UTC ./tools/sql2/util/tdsutil/dom2prg.prg
 80bddf6c6ef96fd120ed77ab17b66cd5edf99302 2016021017:26:40-UTC ./terminal/sslforw/ssl-test/OLVASS
 40f9869509ec47f056b1dfea6c2f94908d82c323 2016021015:45:17-UTC ./jt/sslforward/m
 6e4ae4e649607844e341157c1f0875e6ea17d7be 2015121214:15:20-UTC ./ccctools/prg2ppo/input.lex
@@ -833,7 +842,6 @@ afe6f3cf6490024b99b1cf07db875f25c10128e6 2015020313:03:26-UTC ./tools/sql2/drive
 24988eea0fdd89675a277e1ee1b6b517530262f4 2015020313:02:50-UTC ./tools/sql2/driver-db2/tableentity.prg
 485c2d1f9e4aaa0ea6108930ca8fa4b3faa88fa8 2015020308:19:43-UTC ./tools/sql2/driver-mysql/sqlconnection.prg
 4a23bf69e895a9f493275120ca4b435c8c66db6f 2015020308:19:22-UTC ./tools/sql2/driver-mysql/tableentity.prg
-b3e6b31d4979ebf979fea774ec03400f42cdadd2 2015020308:13:44-UTC ./tools/sql2/driver-postgres/tableentity.prg
 8a826cc606b92f2325d13d63e922d3df99098b67 2015020308:12:08-UTC ./tools/sql2/driver-postgres/sqlconnection.prg
 6b8beee34468b9a93d744de553d307d1e41b0d5a 2015020308:08:08-UTC ./tools/sql2/driver-sqlite3/sqlconnection.prg
 68435349ed1e9181ee4f28f624bad7cbb24218cf 2015020308:07:03-UTC ./tools/sql2/driver-sqlite3/rowset.prg
@@ -904,7 +912,6 @@ ec91f59f8021b1f123e3145f59a2c3324be6614e 2015011817:19:22-UTC ./tools/sql2/drive
 910efac4f3919fc77d3a25b8f75073c3ae5aef48 2015011811:10:15-UTC ./tools/sql2/driver-db2/hello/hello.cpp
 b5ae42409cbb7c3b7d7dd6c7d2120d767c8cb9cf 2015011811:03:14-UTC ./tools/sql2/driver-db2/proba/proba3.prg
 72f1e7cf606b8d62ff97ce294f2238f46347aa42 2015011810:59:56-UTC ./tools/sql2/driver-db2/db2.ch
-7fcfd3aed3a79c5a6e3f6cd846fc4c998a4eb15b 2015011807:46:31-UTC ./tools/sql2/driver-db2/columndef.prg
 e3427f0444948604de1882f419b53b39dce7207a 2015011807:44:41-UTC ./tools/sql2/driver-db2/proba/s
 bee48bf244006604ed8fe9538bbbcaf249e129e9 2015011708:02:59-UTC ./tools/sql2/driver-db2/proba/proba4.prg
 44bcf41e54644b3a6f15a65ccfa4a67292502c09 2015011707:47:50-UTC ./tools/sql2/driver-db2/rowentity.prg
@@ -947,7 +954,6 @@ f51e146ccc46bd26e5fb8370a82103e270c02876 2015010214:39:51-UTC ./tools/sql2/drive
 95519d0e40a9cd1e5e8be9e29ea32311a3cda7b4 2015010213:35:20-UTC ./tools/sql2/driver-db2/proba/tds-proba.tds
 b7f9d1f5918d2c92e56ba5190e40c6600dcd2986 2015010211:31:48-UTC ./tools/sql2/driver-mysql/rowentity.prg
 77dfe4cf49ba1c99c330231efbe76d4aae8a4ca0 2015010210:08:49-UTC ./tools/sql2/driver-mysql/sqltabalias.lex
-47f751f7182fd062f9a111871223880c03afadca 2015010210:06:14-UTC ./tools/sql2/driver-mysql/columndef.prg
 d80453e909235563c7398df74e224a03dcb8dc55 2015010210:01:35-UTC ./tools/sql2/driver-mysql/indexdef.prg
 108466a41bb1d809019d1b15beba763982d42f21 2015010210:01:20-UTC ./tools/sql2/driver-mysql/columnref.prg
 cb1e95130c58fdfdfbac664728f2d1f69d86e839 2015010209:45:31-UTC ./tools/sql2/driver-mysql/proba/hex.prg
@@ -1114,7 +1120,6 @@ d13e0d733b0bab64c3b059673f13e2d9af878495 2012092008:24:43-UTC ./tools/sql2/test/
 470a8c8a2ca30d2eeccdf3be1d04669fa3a5c6d0 2012073107:50:26-UTC ./tabobj/common.src/ccc_naplozas.txt
 dc447a3333d1c5044e031381cced59f47386870c 2012072706:16:34-UTC ./tools/sql2/driver-sqlite3/OLVASS
 80b2c865c8543e4f1054065347105bce1915bd82 2012071710:26:23-UTC ./tutor/readline/firstpar.prg
-a2ff1dab81d0144ec5b9123f87e0459eb80dad92 2012062917:15:54-UTC ./tools/sql2/driver-sqlite3/columndef.prg
 d003a4eea8d1e3eb952d7468b187265db6aa7340 2012062705:48:12-UTC ./setup/setup-flex/mkskel/d
 5fa68d8e201f1916876dca8c7c30a263086e108c 2012062620:43:27-UTC ./setup/setup-flex/mkskel/OLVASS
 e91a16f8d77ac546b825947ec17f7478b1a3667f 2012062619:39:56-UTC ./setup/setup-flex/s2.savex
@@ -1170,7 +1175,6 @@ aa3fa034fd45bf4e7611bdc56ed7f2a4bb805de1 2011080614:36:15-UTC ./jt/jterminal/jtf
 331f2d37bd06be42f8fa724aa0ddc53a073ec38f 2011072106:31:25-UTC ./tools/sql2/test/basicdemo/regression/save-log
 a4a465f3faedc85e8a374bdaba882e8f321fbbcb 2011072105:37:43-UTC ./tools/sql2/util/jeed/jtentityeditor.prg
 5f57849b83d21f912b82d588b02b150f9e3cc232 2011072021:11:21-UTC ./tools/sql2/util/tdsutil/dom2tabent.prg
-54a34226f805df60bc910848a03e71b7141f3613 2011072021:06:34-UTC ./tools/sql2/util/tdsutil/tdsparse.prg
 e14f7ef445f027d8761a5d223715b7f27a7c805a 2011072021:01:15-UTC ./tools/sql2/util/tdsutil/columnref.prg
 41bafba89c9a09aff442ecda4aa11f87fd551483 2011071312:10:54-UTC ./tools/xmlrpc-framework/texdoc/t
 adf812162eff1707db8c22a716ccb584162ab67e 2011071107:07:29-UTC ./tabobj/utility.src/stru.prg
@@ -1195,8 +1199,6 @@ a2c35f45d024089d1015448f751ed2dbf67b9b72 2011042016:33:43-UTC ./tools/sql2/test/
 52c40006b96cd9685af2e3754d9a545d3fd51a42 2011041920:00:44-UTC ./tools/sql2/driver-oracle/rowentity.prg
 1ed6500a9cfdab31d9477f91b712e0b1ac257a5e 2011040111:24:24-UTC ./tools/sql2/test/dirtyflags/clean-all
 c8f21cf6d94305ab7f1d3d846c04208b92aa5ac8 2011032421:01:55-UTC ./jt/jtlib/jtcolumn.prg
-86eeba3e1b9ea46f1d0664c6df7afe1f4d52a068 2011030516:34:01-UTC ./tools/sql2/driver-postgres/columndef.prg
-57e137454bedb53111e23525b75f264e8680b546 2011030515:22:33-UTC ./tools/sql2/driver-oracle/columndef.prg
 928294b7f4bcfd5c13e2f433c0c792ef11bd5b90 2010110817:55:41-UTC ./tutor/filemap/demo.prg
 ef684b941d93bc38528fe9489c07bbffc6f950e0 2010110716:22:51-UTC ./setup/setup-unix/replicate.cpp
 ae9580c9f70f60e2591a1c47de8d7becf5619165 2010110716:22:39-UTC ./setup/setup-unix/pad.cpp
@@ -1350,7 +1352,6 @@ cb66cf49b37bfb2ac96e7380e0514c77c92e39eb 2009031512:06:46-UTC ./jt/jterminal/get
 8f521209a34e4881ec8db16ad276b5d5cfd0c047 2009021808:23:50-UTC ./tools/sql2/test/basicdemo/date1.prg
 526023b7011c22af0d58e7631da4ba754b2947e1 2009021808:22:06-UTC ./tools/sql2/test/basicdemo/te-insupd.prg
 73c0c9542e51bc5eb87828cd53ed9c70d52e505a 2009021808:21:47-UTC ./tools/sql2/test/basicdemo/moredata.prg
-1232d18973d86c536fca78cf927f8f1e740b47f5 2009021219:29:25-UTC ./tools/sql2/util/tdsutil/tds2dom.prg
 eb10231d1ea5177fa333460296e19606060667da 2009020423:06:28-UTC ./jt/jtdemo/jtconnect/main.prg
 0d49553573d3a38be5ed0e9b7250732bdc0d077d 2009020423:00:57-UTC ./jt/jtdemo/jtconnect/s
 691ee349c046fa2314cfb94b1a22d98d235fb0aa 2009020422:19:44-UTC ./tools/socket/ssl/sslctx_class.prg
@@ -1779,7 +1780,6 @@ d8acf471cf4044184106342d28130bcb6c70278f 2006081319:58:45-UTC ./jt/jterminal/s
 e4bd40181b7dbaa9e83567839cfb9aa504caab5e 2006081217:53:12-UTC ./tools/sql2/util/btimport/demo/bank.tds
 27ddcc6dbe4f344c0d81b44f4d405504ac9ceb79 2006081217:53:12-UTC ./tools/sql2/util/btimport/demo/s1
 2358ef6eed99c119bf5450851dd5a03c9094aa2f 2006073009:23:11-UTC ./tools/sql2/util/tdsutil/replacename_cb.prg
-9133ea37badddcc7959df095c1eb38799b3f6e26 2006072818:41:44-UTC ./tools/sql2/util/tdsutil/columndef.prg
 ebfc4de03fa795c833ab1b393ed7da7fc84a64db 2006072818:25:55-UTC ./tools/sql2/util/tdsutil/fspec.prg
 ec830a78ed3ad11a7830a55940fdd4a8481e0e6d 2006072818:12:56-UTC ./tools/sql2/util/tdsutil/tds2ted.prg
 6a7d047763c4257e2c614fe244830e98bc9e19d6 2006072818:12:42-UTC ./tools/sql2/util/tdsutil/tds2prg.prg
