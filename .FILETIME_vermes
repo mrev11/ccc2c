@@ -1,4 +1,4 @@
-541bbaa29fc216f7922c54b9ceb985cc8a4d5fa8 2018032813:42:52-UTC ./CHANGELOG_vermes
+f7b42f196ed6503e17df6f88416072c07db2eea7 2018032813:53:25-UTC ./CHANGELOG_vermes
 079a352008179ade64fd056eb88924f10134f117 2018032519:45:26-UTC ./log-install
 77755f3c35ca1222c0d9202b6a998d78b6280d34 2018032519:45:26-UTC ./usr/bin/linux/gitnav
 c4726743559173facdae036b399714eef8bee787 2018032519:45:26-UTC ./usr/bin/linux/gitref
@@ -14,6 +14,7 @@ acabdccdebbd951f3ec1815d25aa889562914a20 2018032519:44:34-UTC ./usr/bin/linux/pr
 8af9a161f1d6ada03f7cfd361efc15b8de2714a9 2018032514:39:07-UTC ./tutor/filemap/filemap.cpp
 56ee3c2307f1d4ccb1728223266ee32dcd734f93 2018032514:17:01-UTC ./tools/z/zsetpos.prg
 0e4ea75637e6e0ca6db6efb5952aad47dc15d7c8 2018032513:40:56-UTC ./ccclib/src/rat.cpp
+66ae6c7288617a8339c859e90a1e5e5c8b2bfa50 2018032414:55:39-UTC ./tools/mask/msk2say/msk2say.prg
 bd4a6ff6bc620ad2c15ae60d7a57a43c7d09592c 2018032413:12:31-UTC ./ccclib/src/uic/mask.prg
 9922d00778357df74af134db181ab1269d080cfc 2018032317:33:05-UTC ./ccclib/src/uic/getbrw.prg
 3704afb599912c9e1698a81a39e87083d779aba3 2018031710:21:50-UTC ./tools/sql2/sql2.hu.ver
@@ -54,7 +55,6 @@ db6a5dd8e503a1b30cfd159098757ef23f71aee4 2018030810:05:13-UTC ./usr/bin/linux/dd
 c2fafff1022363ec9330c333b62a597185f8095d 2018030810:05:10-UTC ./usr/bin/linux/tview
 d48ffc6d870248b11b1658fc215277b6dbdfb7d3 2018030810:05:09-UTC ./tabobj/utility.src/kdirseek.say
 812162df42504c805043a2553f58dd6c3f9e484d 2018030810:05:03-UTC ./tools/mask/maskdemo.say
-ad371b2515c3045d4256b31596c6516d4a271adf 2018030809:56:02-UTC ./tools/mask/msk2say/msk2say.prg
 661f87be6fb6b7dbd23c6938e51368b020577ec1 2018030808:51:53-UTC ./usr/bin/linux/terminal-gtk3
 ea6a31e5ff9f191b4959c67e023f34201cbc4b86 2018030808:51:52-UTC ./usr/bin/linux/terminal-gtk
 98ac041744517ba3b6c97b14f03dde77090dcebd 2018030808:51:51-UTC ./usr/bin/linux/ncterm
