@@ -1,12 +1,15 @@
-736ca2fa6a811a6dead96d615bd3621aee743fc2 2018033012:16:29-UTC ./CHANGELOG_vermes
-1b251131b7b151afdebe1eef1543382113e218d1 2018033012:09:03-UTC ./tools/textview/test/s
-6358ee9135b82ef88013c7fbfb15951092597d0d 2018033012:07:44-UTC ./tools/textview/test/data.prg
+eacc2a7f7c55b134aff008b54831eaf7992f954e 2018040108:39:53-UTC ./CHANGELOG_vermes
+7643f533463333ba9e3ebf4b4ea8c4b2ff07cc65 2018040108:00:41-UTC ./tools/textview/test/data.prg
+88694423ba9c46c6b6f6b34c7a15871e4aac9083 2018040107:38:22-UTC ./tools/textview/test/s
+952bcc619b8093da2df45b88eb6079e7bfb353b5 2018040107:35:48-UTC ./tools/textview/tv.prg
+3fcf9bd3746bb85a3b32bfb33e0593565a9c958c 2018040107:20:50-UTC ./tools/textview/tvmove.prg
+17632bd2be61c15adc1d814d6d305d7f83b880b1 2018033120:21:10-UTC ./tools/textview/tvsetpos.prg
+1cf78104202bf91a11ca647ad34cc710dc792b29 2018033119:38:29-UTC ./tools/textview/textview.prg
+da56cc20f37e4b1d8519009b4137fae0fcf9be70 2018033119:22:47-UTC ./tools/textview/tvtext.prg
+ec8d145528d11021275524fc98410ad9418d1cb5 2018033112:10:45-UTC ./tools/sql2/util/tdsutil/splitpar.cpp
 0f209f24a7b2c32f89e646f93f3f1f0316344e96 2018033012:06:55-UTC ./tools/textview/parfile.bld
-c189eb55e0a158765d93a6805418b70bb06b31d9 2018032910:41:11-UTC ./tools/textview/tvsetpos.prg
 5a4a553f3662216c75af126c990ed7cb03a5c1c6 2018032910:34:49-UTC ./tools/textview/tvloop.prg
 ed68e4cf58ac204e9d9457c9690e279a7eb359cc 2018032910:32:16-UTC ./tools/textview/tvdisplay.prg
-1bdc683ac566f4f592028190cc4e76023cb852da 2018032910:29:48-UTC ./tools/textview/tv.prg
-46ada49abd691d60d44300c67a55591dc61a9322 2018032908:13:31-UTC ./tools/textview/tvmove.prg
 59d18aec8c18f5c2ddd3d1777ba55e267bfdd53d 2018032814:06:31-UTC ./tutor/control/s3
 8333d39bcd1ce57060c6182e78b64ffd53eaa811 2018032814:05:50-UTC ./tutor/control/browse_in_mask.say
 f486a85c9a447b2e2d9f38e089276aee69182041 2018032814:04:34-UTC ./tutor/control/control.say
@@ -22,8 +25,6 @@ b16ec84a72266d99f7ce707fa120f1a8eed29e47 2018032813:55:15-UTC ./tools/dbfview/se
 979421fabad053c14bf3fd19d78aa16a92b70311 2018032813:55:07-UTC ./tools/mask/maskdemo.say
 f49f22a168bd9374d50a191952d82bbf0ee254ee 2018032813:55:07-UTC ./usr/bin/linux/msk2say
 0edb9fcfb7fc5d83741f37cf0167756883179d5b 2018032813:09:56-UTC ./tools/textview/tvsearch.prg
-7fb2dff79fea4178ce001f7023e7bf492c39b1f4 2018032812:43:57-UTC ./tools/textview/textview.prg
-b68a7b5566fb69b876938d0d86bcd5cf18c893c1 2018032809:38:10-UTC ./tools/textview/tvtext.prg
 3e65abe83f73d750b8b1f4dd25ebcfca06878d6f 2018032706:40:46-UTC ./tools/textview/test/d
 77755f3c35ca1222c0d9202b6a998d78b6280d34 2018032519:45:26-UTC ./usr/bin/linux/gitnav
 c4726743559173facdae036b399714eef8bee787 2018032519:45:26-UTC ./usr/bin/linux/gitref
@@ -39,7 +40,6 @@ acabdccdebbd951f3ec1815d25aa889562914a20 2018032519:44:34-UTC ./usr/bin/linux/pr
 56ee3c2307f1d4ccb1728223266ee32dcd734f93 2018032514:17:01-UTC ./tools/z/zsetpos.prg
 4fcc362ba3443533417ff59e846ed6b82992504f 2018032513:43:31-UTC ./tools/z/ver2/zsearch.say
 0e4ea75637e6e0ca6db6efb5952aad47dc15d7c8 2018032513:40:56-UTC ./ccclib/src/rat.cpp
-382c0f7a0086f528a15ddbd8810d3cf82b641668 2018032509:26:58-UTC ./tools/textview/ver3/zsearch.say
 66ae6c7288617a8339c859e90a1e5e5c8b2bfa50 2018032414:55:39-UTC ./tools/mask/msk2say/msk2say.prg
 bd4a6ff6bc620ad2c15ae60d7a57a43c7d09592c 2018032413:12:31-UTC ./ccclib/src/uic/mask.prg
 22602817ecd1232951453f1fd9ba57eca9ae9263 2018032409:06:23-UTC ./tutor/control/demo3.prg
@@ -1602,7 +1602,6 @@ b0dd3b6b23d0e4d58b6209eaead8b366523f1c04 2007080112:33:11-UTC ./jt/jtdemo/dlgdem
 ec16c15b6b04ef3b0bc04d1ec528636ac90ef405 2007080111:36:49-UTC ./tools/sql2/util/tdsutil/sqlidqoute.lex
 7a5296673b0a120ab6bd0369ed7912de946ced79 2007080111:36:46-UTC ./tools/sql2/util/tdsutil/sqlescape.lex
 092c6666ed5802a740a02a599f289b7c4fe8ec64 2007080111:36:42-UTC ./tools/sql2/util/tdsutil/splittds.lex
-942b9771a1937b6d433c4c8170be8e4df2c1362d 2007080111:36:38-UTC ./tools/sql2/util/tdsutil/splitpar.cpp
 a989a144cae15b45775ff606bf60d11caa8aa5bb 2007080111:36:31-UTC ./tools/sql2/util/tdsutil/atsymbol.lex
 3ed28bf06eeafe9037b37e5b4e1ab61c83666a26 2007080111:36:22-UTC ./tools/sql2/driver-postgres/sqlidqoute.lex
 56ba137886b40d945be4489acca30cc5a885b3f6 2007080111:36:19-UTC ./tools/sql2/driver-postgres/sqlidcase.lex
