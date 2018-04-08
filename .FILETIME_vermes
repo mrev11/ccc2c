@@ -1,7 +1,14 @@
-eacc2a7f7c55b134aff008b54831eaf7992f954e 2018040108:39:53-UTC ./CHANGELOG_vermes
+aca660378c2cf8c23bc89e6df265fa8a557831e6 2018040817:16:09-UTC ./tools/textview/test/d.bat
+6ff60ec176e57b78457a1cdaf708415497b8bdf8 2018040817:14:56-UTC ./tools/textview/test/s.bat
+7ca54947d4d4fbf803fa544f595893b53fabf458 2018040817:13:35-UTC ./tools/textview/test/m.bat
+c99fab6e761365ef2cffaf285ae2d9a460af83ed 2018040817:12:43-UTC ./tools/textview/m.bat
+b0a6774325a2aa42eaa6d9c97e161bcdda571d56 2018040812:16:41-UTC ./CHANGELOG_vermes
+34e813af8d98cf750a92ccf536cd7e2a4f27ca94 2018040806:55:02-UTC ./tools/textview/test/s
+c1d7fbd6ee75809ae534ad5824a6e3d2742cb8bd 2018040708:43:59-UTC ./terminal/common/environment.txt
+eba6e91c36acdc181193a3cbdccbbb061fd6eb96 2018040708:03:54-UTC ./terminal/unix-ncurses/scc
+509deefdaa424e788ae3b046eeb52ce500863282 2018040607:17:08-UTC ./tools/textview/tv.prg
+b0b1cd72b77e6219b4b5a6bec9cc6e0d660d45ec 2018040514:12:10-UTC ./terminal/common/tcpio.cpp
 7643f533463333ba9e3ebf4b4ea8c4b2ff07cc65 2018040108:00:41-UTC ./tools/textview/test/data.prg
-88694423ba9c46c6b6f6b34c7a15871e4aac9083 2018040107:38:22-UTC ./tools/textview/test/s
-952bcc619b8093da2df45b88eb6079e7bfb353b5 2018040107:35:48-UTC ./tools/textview/tv.prg
 3fcf9bd3746bb85a3b32bfb33e0593565a9c958c 2018040107:20:50-UTC ./tools/textview/tvmove.prg
 17632bd2be61c15adc1d814d6d305d7f83b880b1 2018033120:21:10-UTC ./tools/textview/tvsetpos.prg
 1cf78104202bf91a11ca647ad34cc710dc792b29 2018033119:38:29-UTC ./tools/textview/textview.prg
@@ -85,7 +92,6 @@ c5d61069cdfdef02c8479fe7c46e1dbbea928de6 2018030807:45:41-UTC ./ccclib/src/procl
 eea683029c915244c0ec23e400f6e017ee8e1290 2018030308:13:46-UTC ./ccclib/src/uic/pushbutton.prg
 40f338a8eff94dc144611e4141b318030fad419d 2018022508:51:14-UTC ./terminal/terminal-test/remtest.b
 e7e4bd0737fa5ba9c9ad802cc644dba1269d894e 2018022508:50:09-UTC ./terminal/terminal-test/remio/remio.prg
-2119f8e30ef760eba8693a906cd8837b3e94356c 2018022508:31:54-UTC ./terminal/common/tcpio.cpp
 68cf93107bae634950f9918b1971907cf4b5156c 2018022508:26:59-UTC ./terminal/common/startlpr.cpp
 6c58839f903c091c8dca0bf21d824554a809d79f 2018022423:34:23-UTC ./ccclib/src/windows/filecreat.cpp
 76885d1ed43346a445a9cecb10647ada6de44664 2018022420:05:26-UTC ./terminal/terminal-test/remtest.bat
@@ -1950,7 +1956,6 @@ e918773d58df0b9a2f02804c0d0bd0d20f368a42 2006040416:09:54-UTC ./terminal/windows
 934f6b5acebfcf2b64cf12211f62cafec251ae46 2006040209:09:35-UTC ./ccclib/src/uic/termapi/m
 f1574231ca40f02b0503094c4d73b5387915e8fa 2006040116:18:09-UTC ./terminal/xtest/x
 770328f928fe5d180a2258c9bf0a35ecc5238846 2006040115:13:43-UTC ./tools/xstart/x
-3009863c789557f54ad2052e197b8dfc6a296af7 2006033013:35:52-UTC ./terminal/common/environment.txt
 a81490d5ee845bce9bab1f183816406fce741b75 2006033010:02:07-UTC ./terminal/xtest/m.bat
 eac1ea078f6bf21bcb7317367eefb6d153fb74bd 2006033008:25:01-UTC ./terminal/windows/m.bat
 58727db04532d2236f04c6fdc62846360d064b36 2006033007:42:49-UTC ./terminal/xtest/s.bat
