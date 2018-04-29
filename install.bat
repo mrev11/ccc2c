@@ -6,7 +6,7 @@ set CCCVER=2
 :initial setup
 :-------------------
 
-pushd setup\setup-windows 
+pushd setup\setup-windows
 call m.bat
 popd
 
