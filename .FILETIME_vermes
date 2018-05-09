@@ -1,10 +1,11 @@
-9271fc45b78957e4984287fcbdbfd75ca46d97e3 2018042911:15:20-UTC ./CHANGELOG_vermes
+a0dd6fb2f6d584a10b6e9c2cd3acde4648017d65 2018050908:05:02-UTC ./CHANGELOG_vermes
+cce2a7adff9e0e3872fe6be98b05e4a2525eaa32 2018050814:48:01-UTC ./tools/tdc2prgch/tdc2prgch.prg
 afcda2e30a441d0e36eafb2b71751892b3ca70aa 2018042908:51:12-UTC ./install.bat
 05ed29ab2d4997d1e43c9d5d5eede3907ee5205c 2018042819:25:05-UTC ./setup/setup-windows-alt/m.bat
-dad57080db3b6dc1cfe4325f2df4656e0dad8935 2018042819:25:05-UTC ./terminal/common/tcpio.cpp
-86787a2d3133df66776ddb1861b322c977e97bc1 2018042819:25:05-UTC ./usr/build/windows/_compile.bat
 fe007eb2e3e910bfb4d31866e77f942516c65d66 2018042819:25:05-UTC ./usr/options/mng/compile.opt
-4ef429987384346d2c18cda035980a20638e5d0c 2018042819:25:04-UTC ./ccclib/src/uic/termapi/remoteio.cpp
+4ef429987384346d2c18cda035980a20638e5d0c 2018042818:56:44-UTC ./ccclib/src/uic/termapi/remoteio.cpp
+dad57080db3b6dc1cfe4325f2df4656e0dad8935 2018042818:56:44-UTC ./terminal/common/tcpio.cpp
+86787a2d3133df66776ddb1861b322c977e97bc1 2018042818:56:44-UTC ./usr/build/windows/_compile.bat
 1db2df86069c316171a6b233e58940d87a315839 2018042818:42:40-UTC ./setup/setup-windows-alt/lib2/thread.cpp
 64eeffd04b67a59fff67733d723f5949a020ef08 2018042818:08:34-UTC ./setup/setup-windows-alt/comp/compile0.bat
 dfb507244fd23b743e047e8932f9ff6dc05c924b 2018042818:08:20-UTC ./setup/setup-windows-alt/comp/compile.bat
@@ -17,7 +18,6 @@ a45abffb8e3d41e971abbd95a93b451c821b4f4b 2018042817:04:32-UTC ./setup/setup-wind
 72e5e7514e95f2aad8bb60d62d3f2cc2be977c1c 2018042816:12:02-UTC ./setup/setup-windows-alt/lib3/OLVASS
 569934b2d1194476a4ed87992e8658f49dc5e199 2018042816:10:54-UTC ./setup/setup-windows-alt/lib2/OLVASS
 56f090c2cec16b68cbe9cf970d459537de0946d0 2018042816:06:56-UTC ./setup/setup-windows-alt/comp/comp.prg
-8fe740ad9876cf295e27ada225bf30dc6d6d02d0 2018042722:25:47-UTC ./setup/setup-windows-alt/comp/m.bat
 9e50e55ac2eaad6409824d16e8faef585aba327e 2018042716:32:22-UTC ./setup/setup-windows-alt/_prg2ppo/xtlex.cpp
 62049987efd3585fe576823ac7b2b653b40977e5 2018042716:32:21-UTC ./setup/setup-windows-alt/_prg2ppo/trinp.cpp
 0cfd04d0486fc8cbbf15a022ac2fa2d0654ec9ac 2018042716:32:20-UTC ./setup/setup-windows-alt/_prg2ppo/input.cpp
@@ -370,7 +370,6 @@ e16f8234d5d6661793d1727b6c790361566548d8 2017120909:05:53-UTC ./tools/pcre/pcre_
 11257e992097139aa23693fdc6ce113b3d97765d 2017120507:56:07-UTC ./ccctools/buildp/build.prg
 4897cedfc9140d18f50fd09e3311b9193af25a46 2017120507:55:38-UTC ./ccctools/buildp/build.hu.ver
 ecffbd01481b28da808c0ef0f7b66d68b19d7af1 2017120209:15:29-UTC ./terminal/unix-ncurses/ncterm.cpp
-91dc7c7ed1245d27cb573da4b0f55ab6f91be11a 2017112616:42:53-UTC ./tools/tdc2prgch/tdc2prgch.prg
 fce79f3c75233f8fb69392edd1c5d48dcc0fc62e 2017112612:00:09-UTC ./tools/tdccmp/parfile.bld
 d591640a695dd272f92db7bc082ad05ac110dd2b 2017112611:47:05-UTC ./tools/tdccmp/mkdiff1
 e5c33891d88a6fc03d6633c64fe05082288b1c84 2017112611:42:07-UTC ./tools/tdccmp/mkdiff
@@ -509,6 +508,7 @@ e2b977657dc0f891385fd6ee115e9e749e3197c4 2016100208:42:52-UTC ./tools/savex/save
 cf63fe140195bcac0e1a5f57cedf6087a275428f 2016100107:19:14-UTC ./ccclib/src/uic/termapi/termio.h
 b513249cf35a258e927ae71269e98d2093897fd8 2016093022:07:05-UTC ./ccclib/src/uic/termapi/termapi.cpp
 38e9313d79fffb44c3da9d559844d88d6dd11699 2016093008:52:28-UTC ./tutor/fpath/parfile.bld
+8fe740ad9876cf295e27ada225bf30dc6d6d02d0 2016093008:51:00-UTC ./setup/setup-windows-alt/comp/m.bat
 3fa71f440f2d9cf0488538b72f1673b9ae4272e3 2016092913:43:49-UTC ./jt/jtdemo/superdemo.prg
 e3b5862385d6c772d5c168545f088c8eb0af23a5 2016092913:43:17-UTC ./tabobj/common.src/tabslock.prg
 d908962187f0b628db54dac23b3ca9bebf728390 2016092913:40:46-UTC ./ccctools/pack/pack.prg
