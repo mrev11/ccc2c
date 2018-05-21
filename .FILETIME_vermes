@@ -1,4 +1,7 @@
-5298b720a5b1c56fc3f8e157f4bde0331b3fc5d4 2018051315:35:50-UTC ./log-install
+17894a4f122f8946640888b226aa31475dbd8a3b 2018052106:21:28-UTC ./CHANGELOG_vermes
+46ab6605cd4834caaa3775fc92f23edd5125d20a 2018052106:20:16-UTC ./ccclib/m
+b21ed23c668cc659010e2a29c990ed7a49f9f6c5 2018052106:15:46-UTC ./log-install
+31182b7ea472aecdb5d459af6a2a33f93310da5f 2018052106:15:13-UTC ./usr/bin/linux/tv
 29e9698cfd6720f76eed71f8aa11ebf0ffbefc85 2018051315:35:50-UTC ./usr/bin/linux/gitfollow
 2e88d15e2e419ad08935b4a5b917e965049bc12a 2018051315:35:50-UTC ./usr/bin/linux/gitnav
 09a4cddcb22c217357cae2660cbbb5db9a1d438c 2018051315:35:50-UTC ./usr/bin/linux/gitref
@@ -10,7 +13,6 @@ b87d9ec8cdbaf4c4f94ce4fc20090fd98091e4ad 2018051315:35:00-UTC ./usr/bin/linux/te
 1bacfe11d3cad9ec60d7cda3d4977afec199b714 2018051315:34:59-UTC ./usr/bin/linux/ncterm
 8e79534939fa40fe4235d0ce8c1a886192b015a3 2018051315:34:59-UTC ./usr/bin/linux/terminal
 89c1cc2b7093c5faa1d216b3542576992d9ec503 2018051315:34:59-UTC ./usr/bin/linux/terminal-xft
-570c38a14644e56f37308e2848e2b9860255851b 2018051315:32:10-UTC ./CHANGELOG_vermes
 35fc6ed7207602a85a121087ff092fec587e2118 2018051122:34:00-UTC ./tools/socket/ssl/sslctx_funif.cpp
 0fcf91ca3d25a486120fa8fd28048cec4655a98e 2018051121:51:27-UTC ./tools/crypto/rand.cpp
 8f6c16431a69b853b2ad19068453d4e1b650cdce 2018051121:27:03-UTC ./tools/crypto/sign.cpp
@@ -760,7 +762,6 @@ d23dc5a67ea2126321c40bbb8085e195a2a1e73a 2016052410:19:34-UTC ./tools/list/m
 f62367af2c65f03e203f2414140f5a169e955d31 2016052408:12:00-UTC ./setup/setup-unix/prg2ppo/input.cpp
 ac9f01c4429b1d0b0702c4617d41ea779fb44dd1 2016052407:47:39-UTC ./ccclib/uic.bld
 56e03d80966876488da18e9f99d1806ee51bad2d 2016052407:39:01-UTC ./ccclib/ccc.bld
-dad18bbcda597f35429a5f715b448fc3ac631c8b 2016052407:34:39-UTC ./ccclib/m
 461d2e570bf0b111ca43018cca7e0857c275df56 2016052212:11:54-UTC ./terminal/sslforw/ssl-test/pem/rehash
 a6649f575721b839bd323d98c4feb8bad4f20203 2016052212:11:08-UTC ./terminal/sslforw/ssl-test/pem/OLVASS
 437100fa695ead955bcf6a950599731365b41fe0 2016052211:15:42-UTC ./terminal/sslforw/ssl-test/t--host
@@ -1101,7 +1102,6 @@ e58df8cdf798e9554ce31279c50d0bec73d426de 2013021711:01:24-UTC ./terminal/unix/re
 3f0a3796641800342f3778280d87130d517fa61d 2013011617:55:46-UTC ./terminal/terminal-test/xstart.par
 b8ca1b2b67cd2e9ebd86dbb55555200e2932fc85 2012121316:44:50-UTC ./tabobj/tbbtbtx/btindex.prg
 addb16cd38a689b08f8d0e6d9fb6fbe5da2c8fce 2012103007:11:38-UTC ./terminal/xtest/xstart.par
-f97c336c1a01aebb27ecdb7da90311ffbce34fd3 2012102311:53:16-UTC ./setup/setup-unix/i2bin.cpp
 d9f64eb5a808d41a91199bcabd3c756d3fb75600 2012102117:47:44-UTC ./tools/xstart/xstart.par
 493aa183a916f3f7ce655334eb27fb923f0d99f7 2012102114:39:13-UTC ./terminal/terminal-test/remio/m.bat
 24e75028d7a896d97da0cc0d6127f802dffc5f24 2012102111:26:26-UTC ./terminal/terminal-test/screenwr/m
@@ -1111,7 +1111,6 @@ a7839950aa632c17cf9c4d6a3cf6609674882bf5 2012101309:30:17-UTC ./setup/setup-unix
 0efc769c33bad675fc154b588c7c4f9db9648cfd 2012101309:22:24-UTC ./setup/setup-unix/at.cpp
 7535e5140b5b8c68a1cc8f6f8fbd66da0ab831c8 2012101309:16:07-UTC ./setup/setup-unix/empty.cpp
 a51f0db401adfdd2f29a67bd2f1b0b955c920bbb 2012101309:14:02-UTC ./setup/setup-unix/fileio.cpp
-85507cc5038e032e87851d673218ac04df9b1f9d 2012101309:08:30-UTC ./setup/setup-unix/rat.cpp
 02d98b6fd4b530325246591dc700bc0fdae1dd4c 2012101309:06:50-UTC ./setup/setup-unix/slice.cpp
 d3e8f740e963995798ee71c7d738dfec1a684042 2012101309:03:33-UTC ./setup/setup-unix/substr.cpp
 5a549c92b276cc403961ef0a5fe161766410767e 2012101308:59:44-UTC ./setup/setup-unix/trim.cpp
@@ -1197,7 +1196,6 @@ b83ad38258c8931898b31e13c128d245b4afb19f 2012052512:24:01-UTC ./tools/xmldom/par
 a8f87446421cce99e2f021f3493297ddec667f19 2012022517:37:47-UTC ./tools/xmldom/xmldom_lemon.prg
 288a6f5d94c9500de2ae7aee91e3a667ac712f29 2011112819:41:13-UTC ./tools/xmldom/xmldom_parser.lem
 48d097b59230eb572d8ef06adfc1ca9e3d412248 2011111509:53:17-UTC ./jt/jtlib/jtdialog.prg
-49e4b1df683dc03fdfefc08bea093d198ae2e112 2011091909:34:38-UTC ./setup/setup-unix/procline.cpp
 aced054833775fd62ee062df6382ed88106e5551 2011091216:36:35-UTC ./tabobj/commonui.src/tabedrec.prg
 669948b7ed23d31ae3ceb42d336177890f459a4f 2011082818:55:05-UTC ./ccclib/src/uic/o_get.prg
 735bb46c02e3c1f3ed97b033dfe0a370724077d0 2011081215:34:08-UTC ./tools/mask/mask.hu.ver
@@ -1489,7 +1487,6 @@ f5d2413a0484e14e30b1d910dedbbd5cc49e99c7 2008031322:52:44-UTC ./jt/jterminal/get
 eeaad7126c0dc5dbf03d465ee882c36070d332b5 2008031322:06:43-UTC ./jt/jterminal/getutil/getcolor.java
 5082bf83d9af7f7b8b55653958de0c290846020f 2008031312:44:11-UTC ./ccctools/ppo2cpp/test-slice/s.prg
 e1269de7d475a2dfa2e55663bc389178ce3e93ad 2008030522:42:10-UTC ./ccctools/prg2ppo/xtxlegal.h
-db1e3ea054264c82e2415b4986447493322a7bc6 2008022211:45:47-UTC ./setup/setup-unix/variablex.cpp
 1f5b006a031ca52c2cfb27ace48b2781f42de268 2008022211:20:04-UTC ./tutor/hash/hashtable.prg
 b3c224f0602333aeddd11ec8a8b0a2c61c9ff5f4 2008020516:27:04-UTC ./tools/socket/ssl/sslsocket-demo/s1.bat
 fd53d2759bbe16d10bc5d5c61047fe5e3e57472f 2008020516:26:54-UTC ./tools/socket/ssl/sslsocket-demo/c1.bat
@@ -2036,7 +2033,6 @@ ffd519124bc093ff46b9118c90353501f5a94270 2005120120:11:23-UTC ./jt/jterminal/cle
 d811aefd4158f1de7c032d7e440da8c926161713 2005113000:17:06-UTC ./ccctools/autolink/build/linux/htm2ctm.bat
 bbdb5fc1a85da322fe42cbb633f93c3cd434532b 2005110316:22:17-UTC ./ccclib/src/unix/utime.cpp
 2056a5282d195460e7217356790c2f941f00c781 2005092916:08:46-UTC ./ccctools/ppo2cpp/test/while.prg
-7290e501a6ae876d8c89993d10926334a313da40 2005091717:44:16-UTC ./tabobj/utility.src/srcw32/keyb32c.cpp
 c875ace05bfed59170cfc10e96397daefa58569c 2005091717:41:51-UTC ./tabobj/common.src/srccpp/mutex.cpp
 e862f448145e1c24d6b4fe8904b72648deab8d23 2005091717:39:20-UTC ./ccclib/src/windows/systime.cpp
 c653465af23182b863a646d43f7afe6907f4f430 2005091717:39:03-UTC ./ccclib/src/windows/fdup.cpp
@@ -2383,7 +2379,6 @@ b69087b272e9104d4f66fc8d079e9eaa6f270ae3 2003082009:59:12-UTC ./tools/ddict2/m.b
 694aaf544122fd8b8841b539c96c23e7d21d7455 2003081914:36:32-UTC ./tabobj/tbbtbtx/btree/swap.cpp
 a0a87a4ccc37ce33ebd1539dba3cc67a6aa19456 2003081914:36:24-UTC ./tabobj/tbbtbtx/btree/bt_swap.cpp
 cbae7587a6aba3afd719ac8b3977436c95b7dd38 2003081914:35:46-UTC ./tabobj/tbbtbtx/btree/bt_lock.cpp
-ddf4ef5480b2370eebcda2eec1c70bb78e5554dd 2003081914:34:50-UTC ./tabobj/utility.src/srcw32/termapi.h
 01763b8e87dc61b15507400b02ac63b59e82ac79 2003081913:23:44-UTC ./ccctools/prg2ppo/xtrans.ch
 7d2a93ed3b8a38a378b8779aec67dfc44ad42079 2003081913:16:26-UTC ./ccctools/ccomp/readme.hu.txt
 38b0d5dd0621a263fe8e03703f6d131cd5e4d9ed 2003081911:54:52-UTC ./setup/setup-unix/eval.cpp
@@ -2651,7 +2646,6 @@ db9989d55b2c43be3f12c0265f694ac359342a31 2002101408:11:28-UTC ./tabobj/common.sr
 ef8375095f996b4806ffaffc4a67dad391355394 2002101408:11:24-UTC ./tabobj/utility.src/getutil.prg
 ea344dac3311d7ef04fb65406951e77125ed7de7 2002101408:11:24-UTC ./tabobj/utility.src/kdirmodi.prg
 03077d9dc52a9599768a172cf72391e60af61e6f 2002101408:11:24-UTC ./tabobj/utility.src/kdirseek.prg
-10961c9a745fc11a43647bdec0f0ff126f4ba057 2002101408:11:24-UTC ./tabobj/utility.src/srcw32/v2i.cpp
 f7fa71d208699331e2fc5724f6095b987ddc9f82 2002101322:05:52-UTC ./tools/socket/socket-demo/recv0.prg
 a000c745931e27744da9577b955c18538c206f9f 2002100709:07:38-UTC ./jt/jterminal/jtfilefilter.java
 f0a018aa457235a39b206449b7a0027cfde441bf 2002091917:57:46-UTC ./jt/jterminal/clean.bat
@@ -2746,7 +2740,6 @@ ebf8a49b9834be4bb3c7d56d2f60babdc930b747 2000011211:38:42-UTC ./usr/include/simp
 f31078e66dd8828387b797d7068e4d242116c9a5 2000010113:19:58-UTC ./tutor/xddict/d.bat
 4aeaa158f066e511ac8018224b9f285707eceefc 2000010113:19:56-UTC ./tutor/xclass/m.bat
 4b60be25d56a80430706f88fcac65494fa455db4 2000010112:40:18-UTC ./tutor/numtxt_hu/m.bat
-3fc8ad264bf30afc020ce50a8dae4877e7b9291c 1999123016:51:34-UTC ./tabobj/utility.src/srcw32/readme.hu.txt
 46f4e05b46cbacdf81d0acdc414e2866c1cfdfa2 1999121414:36:38-UTC ./ccclib/src/memoline.prg
 30e72718afd33e705295ab86ef7771f66059941c 1999063018:25:10-UTC ./ccclib/src/time2sec.prg
 a7274e41c5fd823c8472f8f1080d6603124c315b 1999062915:27:46-UTC ./ccclib/src/like.prg
