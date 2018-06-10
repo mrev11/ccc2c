@@ -1,4 +1,12 @@
-df8e41013052b8684f3b8106558934e5e759daa8 2018060318:08:35-UTC ./CHANGELOG_vermes
+ea1f99fe9a9ef5fd49324e1f31a64fce5085da47 2018061015:05:03-UTC ./CHANGELOG_vermes
+e74ef0b855b3d0d1be96039aa4c349d7fa74e003 2018061015:00:01-UTC ./tutor/pm/linux/2/search.say
+06e3293816c95fb76fea760d2d4f2506f19cedb4 2018061015:00:01-UTC ./usr/bin/linux/pm
+c2b5a2dd9770c51b7dc667488191452137daa9a2 2018061014:58:59-UTC ./tutor/pm/linux/pm.prg
+158865e1afb30c2e80545789270c10400aeedaf0 2018061014:47:47-UTC ./tutor/pm/linux/2/search.msk
+e2bd11d372d39f0d80450dc59505fe34210cfea9 2018061014:33:51-UTC ./tutor/pm/linux/appkey_serach.prg
+92e88be78b58517ae94e8c51cfc6d1231fa197d9 2018061013:15:55-UTC ./tutor/pm/linux/3/search.msk
+62b25d442b9ab4f4001d56507528c24370a5630d 2018061013:02:23-UTC ./tutor/pm/linux/parfile.bld
+754c9f4f9c1f5fa4f41c9d4452137bc6c68d6a17 2018061013:01:36-UTC ./tutor/pm/linux/m
 0fa35a6061db2fce1320dc454de960fac3dfa8ac 2018060318:07:39-UTC ./usr/bin/linux/tv
 e635a9d04889ce54033f33c63481b7fa5970a11d 2018060311:29:35-UTC ./tools/textview/tv.prg
 88601391ac0c834e26d5928bb797eaee6036e41a 2018060307:09:25-UTC ./tools/textview/history.prg
@@ -84,7 +92,6 @@ b517032539b8ad2bcd8a09a770e4b92f979e5692 2018032813:55:32-UTC ./usr/bin/linux/de
 676c37421bb710659410b6203fce3762b344b7ce 2018032813:55:32-UTC ./usr/bin/linux/delppo
 508c58a6fa99b31ba9a5ee791b762cb9f3d73d02 2018032813:55:32-UTC ./usr/bin/linux/dtree
 9b70f25b7caae3e6c459d40fdd7f6d0eb2b573a5 2018032813:55:32-UTC ./usr/bin/linux/lower
-39a43067100494c80866296576354cd1670f13c2 2018032813:55:32-UTC ./usr/bin/linux/pm
 7bb45024be61b70e1923a5a7824e2ecf729c117d 2018032813:55:28-UTC ./usr/bin/linux/stred
 b55a7964f940fa4103f02a74a580b3d719044d6f 2018032813:55:28-UTC ./usr/bin/linux/zg
 fc592882f21689b8bc06b2d7a8b85c7a8ff3f16b 2018032813:55:28-UTC ./usr/bin/linux/zgrep
@@ -1402,7 +1409,6 @@ ec3c716ae1ef44c3eeb67456a8914761626a5c14 2009011018:04:56-UTC ./ccctools/prg2ppo
 79f52db6858a6bcda4a8c08b9ad1b2c1c4ea4bfa 2008113013:23:31-UTC ./ccclib/src/unix/closeonexec.cpp
 66e4fcd615e653e3f724804065a96c8b2055aee3 2008113011:40:55-UTC ./ccclib/src/windows/closeonexec.cpp
 7c7db0851322537bb9ea7211eddb4c627a73bfcc 2008112711:06:07-UTC ./tutor/pm/solaris/pm.prg
-23120832f8407bb0235dee54b150523a49d6c8e2 2008112711:05:59-UTC ./tutor/pm/linux/pm.prg
 c795e5b1970d9b98e5c15ee9a98368bd5ebba439 2008112711:05:48-UTC ./tutor/pm/netbsd/pm.prg
 5f55fe4a24105b79d1cf05d6bc9c7dc68f494ba2 2008112710:39:11-UTC ./tools/socket/ssl/unix/set_callback.cpp
 f5345ecc02df039d3e572bca9c6727e6496c196f 2008111311:11:19-UTC ./ccclib/src/windows/signals.cpp

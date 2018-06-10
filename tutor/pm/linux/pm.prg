@@ -18,7 +18,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//primitív process manager Linuxra
+//primitiv process manager Linuxra
+
 
 *********************************************************************************************
 function main()
@@ -28,6 +29,7 @@ local b, sig:={}
 //  set printer to log 
 //  set printer on
 //  setcolor("w/b,b/w")
+    setcursor(0)
     
     b:=brwCreate()    
     brwColumn(b,"",{|p|p:=brwArrayPos(b),brwArray(b)[p][1]},maxcol()-2)
@@ -39,6 +41,7 @@ local b, sig:={}
     aadd(sig,{"SIGTERM",{||send(b,"TERM")}})
     aadd(sig,{"SIGHUP",{||send(b,"HUP")}})
     aadd(sig,{"SIGINT",{||send(b,"INT")}})
+    aadd(sig,{"SIGPIPE",{||send(b,"PIPE")}})
     aadd(sig,{"SIGABRT",{||send(b,"ABRT")}})
     aadd(sig,{"SIGSTOP",{||send(b,"STOP")}})
     aadd(sig,{"SIGCONT",{||send(b,"CONT")}})
@@ -47,6 +50,8 @@ local b, sig:={}
     brwMenu(b,"Files","View open files",{||files(b),.t.})
     brwMenu(b,"Status","View process status",{||status(b),.t.})
     brwMenu(b,"Envir","View environment variables",{||envir(b),.t.})
+
+    brwApplyKey(b,{|b,k|appkey_search(b,k)})
  
     brwShow(b)
     brwLoop(b)
@@ -61,7 +66,6 @@ local t, n, ps, args:=argv()
     //run( "ps -A -f >"+pmtemp()  )
     //run( "ps u >"+pmtemp() )
 
-
     if( empty(args) )
         args:={"-A","-f"}
     end
@@ -74,7 +78,7 @@ local t, n, ps, args:=argv()
 
     t:=memoread( pmtemp() )
     ferase( pmtemp() )
-    t:=wordlist(t,chr(10))
+    t:=split(t,chr(10))
 
     b:column[1]:heading:=t[1]
     for n:=2 to len(t)
@@ -127,7 +131,7 @@ local t,n,p
 
     t:=memoread( pmtemp() )
     ferase( pmtemp() )
-    t:=wordlist(t,chr(10))
+    t:=split(t,chr(10))
     if( empty(t) )
         return NIL
     end
@@ -152,7 +156,7 @@ local t, n
 
     t:=memoread( pmtemp() )
     ferase( pmtemp() )
-    t:=wordlist(t,chr(10))
+    t:=split(t,chr(10))
     for n:=1 to len(t)
         t[n]:={t[n]}
     next
@@ -178,11 +182,11 @@ local t, n
         alert(t)
         return NIL
     end
-    t:=memoread( pmtemp() )
+    t:=memoread(pmtemp(),.t.) //binary
     ferase( pmtemp() )
-    t:=wordlist(t,chr(0))
+    t:=split(t,bin(0))
     for n:=1 to len(t)
-        t[n]:={t[n]}
+        t[n]:={bin2str(t[n])}
     next
     if( empty(t) )
         return NIL
@@ -220,7 +224,7 @@ local row:=alltrim(brwArray(b)[pos][1])
     while( "  "$row  )
         row:=strtran(row,"  "," ")
     end
-    row:=wordlist(row," ")
+    row:=split(row," ")
     return row
 
 *********************************************************************************************
