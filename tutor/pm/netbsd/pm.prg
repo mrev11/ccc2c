@@ -18,7 +18,7 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//primitív process manager FreeBSD-re
+//primitiv process manager FreeBSD-re
 
 static PIDPOS:=1
 
@@ -30,6 +30,7 @@ local b, sig:={}
 //  set printer to log 
 //  set printer on
 //  setcolor("w/b,b/w")
+    setcursor(0)
     
     b:=brwCreate()    
     brwColumn(b,"",{|p|p:=brwArrayPos(b),brwArray(b)[p][1]},maxcol()-2)
@@ -47,10 +48,16 @@ local b, sig:={}
     aadd(sig,{"SIGKILL",{||send(b,"KILL")}})
     brwMenu(b,"Send","Send signal to process",sig)
 
-    //Ezek nem mûködnek
+    //Linuxon ezek a /proc fs-bol veszik az adataikat.
+    //FreeBSD-n is lehet /proc (kulon mountolni kell: mount -t procfs proc /proc).
+    //Sajnos azonban a FreeBSD-s /proc-ban nincs hasznalhato info.
+    //A vegeredmeny, hogy FreeBSD-n az alabbiak nem mukodnek:
+
     //brwMenu(b,"Files","View open files",{||files(b),.t.})
     //brwMenu(b,"Status","View process status",{||status(b),.t.})
     //brwMenu(b,"Envir","View environment variables",{||envir(b),.t.})
+
+    brwApplyKey(b,{|b,k|appkey_search(b,k)})
  
     brwShow(b)
     brwLoop(b)
@@ -60,23 +67,40 @@ local b, sig:={}
 
 *********************************************************************************************
 static function reload(b)
-local t, n
+local t, n, ps, line1, args:=argv()
 
-    run( "ps  >"+pmtemp() ); PIDPOS:=1
+    //run( "ps  >"+pmtemp() ); PIDPOS:=1
     //run( "ps -A  >"+pmtemp() ); PIDPOS:=1
     //run( "ps -jA >"+pmtemp() ); PIDPOS:=2
     //run( "ps -uA >"+pmtemp() ); PIDPOS:=2
 
+    if( empty(args) )
+        args:={"-A"}
+    end
+    ps:="ps "
+    for n:=1 to len(args)
+        ps+=args[n]+" "
+    next
+    run( ps+">"+pmtemp() )
+
     t:=memoread( pmtemp() )
     ferase( pmtemp() )
-    t:=wordlist(t,chr(10))
+    t:=split(t,chr(10))
+        
+    line1:=alltrim(t[1])
+    while("  "$line1)
+        line1::=strtran("  "," ")
+    end
+    line1::=split(" ")
+    PIDPOS:=ascan(line1,{|x|x=="PID"}) //signal kuldeshez kell
+
 
     b:column[1]:heading:=t[1]
     for n:=2 to len(t)
         t[n-1]:={t[n]}
     next
     asize(t,len(t)-1)
-    asort(t,,,{|x,y|x[1]<y[1]})
+    asort(t,,,{|x,y| x[1]<y[1] })
 
     brwArray(b,t)     
     if( brwArrayPos(b)>len(t) )
@@ -123,7 +147,7 @@ local t,n,p
 
     t:=memoread( pmtemp() )
     ferase( pmtemp() )
-    t:=wordlist(t,chr(10))
+    t:=split(t,chr(10))
     if( empty(t) )
         return NIL
     end
@@ -148,7 +172,7 @@ local t, n
 
     t:=memoread( pmtemp() )
     ferase( pmtemp() )
-    t:=wordlist(t,chr(10))
+    t:=split(t,chr(10))
     for n:=1 to len(t)
         t[n]:={t[n]}
     next
@@ -176,7 +200,7 @@ local t, n
     end
     t:=memoread( pmtemp() )
     ferase( pmtemp() )
-    t:=wordlist(t,chr(0))
+    t:=split(t,chr(0))
     for n:=1 to len(t)
         t[n]:={t[n]}
     next
@@ -216,7 +240,7 @@ local row:=alltrim(brwArray(b)[pos][1])
     while( "  "$row  )
         row:=strtran(row,"  "," ")
     end
-    row:=wordlist(row," ")
+    row:=split(row," ")
     return row
 
 *********************************************************************************************
