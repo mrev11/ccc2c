@@ -1,4 +1,6 @@
-ced9afa543d9476f95dfb7b02f25d5bb0dadc3bb 2018072212:47:33-UTC ./log-install
+5d1dc03f36d4a6621b7cd04ec1ba8436db602666 2018072213:30:28-UTC ./log-install
+625ccff6979718ec7a07f68fe0088aaa9dc7570e 2018072213:27:36-UTC ./CHANGELOG_vermes
+4102e9fe5264b8b124ecc8821fc6fcbbb191ba9a 2018072213:09:41-UTC ./ccclib/src/asortkey.cpp
 3ef6fc2b50f3b7c12345fb1bc8ceb32d154fa4fc 2018072212:47:33-UTC ./usr/bin/linux/gitfollow
 f4c3a7a79a06eab8058f862c0148d2888ecfb088 2018072212:47:33-UTC ./usr/bin/linux/gitnav
 ca75ca1b6f75a101faf80933f68e9bda4e2f38f3 2018072212:47:33-UTC ./usr/bin/linux/gitref
@@ -8,7 +10,6 @@ c5bbe5378e6aec2f204de03b8f6584123298a730 2018072212:47:03-UTC ./usr/bin/linux/xs
 7900844173e3f0fd460c268ca53328ebc87925a7 2018072212:46:41-UTC ./usr/bin/linux/prg2ppo
 4fb1696839968d338724b669a3b14e1c002d97e5 2018072212:46:41-UTC ./usr/bin/linux/removecr
 440c6aca59d9ded668808a8063e3fcfeb4c37f9e 2018072212:46:40-UTC ./usr/bin/linux/build
-6221477bd334dfcae14c9455acad18a17d0f0ae0 2018072212:44:35-UTC ./CHANGELOG_vermes
 3b890093166a2ea6118adf51d50812ed09335613 2018072212:40:19-UTC ./setup/setup-unix/variable.cpp
 f127a692cee9452b0f62430b3d5abc3ae2bd664b 2018072209:52:13-UTC ./setup/setup-unix/asort.cpp
 ad2e1c7be22f7f9cb45c074d3337da15292cb78d 2018072208:54:17-UTC ./setup/setup-windows/make_setup_lib.bat
