@@ -318,6 +318,7 @@ extern long stod(const char*);
 #define maxUS(u,s) ((s)<0 ? (u) : max(u,(unsigned)s))
 
 #define D2INT(x)   ((x)>0?(int)((x)+0.5):(int)((x)-0.5))
+#define D2UINT(x)  ((x)>0?(unsigned)((x)+0.5):(unsigned)((x)-0.5))
 #define D2LONG(x)  ((x)>0?(long)((x)+0.5):(long)((x)-0.5))
 #define D2ULONG(x) ((x)>0?(unsigned long)((x)+0.5):(unsigned long)((x)-0.5)) 
 

@@ -134,7 +134,9 @@ extern void  vartab_ini(void);
 extern void  vartab_setsize( struct VARTAB_SETSIZE *vss );
 extern void  vartab_rebuild(void);
 extern VALUE *newValue(unsigned int len);
+extern void  deleteValue(VALUE*);
 extern char  *newChar(unsigned int len);
+extern void  valuemove(VALUE*,VALUE*,int);
 
 //---------------------------------------------------------------------------
 

@@ -1,3 +1,7 @@
+2018.07.22 array.cpp-bol kulonveve asort.cpp;
+  a setup-ba is be kell rakni 
+  (modularisabb, kod/mukodes nem valtozott)
+
 2018.07.14 A flex-bol kiszedve a register minosites:
    C++ 17-ben a register minosites deprecated.
 
