@@ -22,20 +22,20 @@
 #include <stdlib.h>
 #include <cccapi.h>
 
-static const int EXTSIZ=4; //plusz elemek száma
+static const int EXTSIZ=4; //plusz elemek szama
 
 DEFINE_METHOD(get);
 DEFINE_METHOD(hashitem);
 
-// A simplehash osztály hashitem, get metódusát
-// és a hashitemek {key,value} alakját használja ki
-// az asszociatív tömbindexelés: hash["key"]:=value.
+// A simplehash osztaly hashitem, get metodusat
+// es a hashitemek {key,value} alakjat hasznalja ki
+// az asszociativ tombindexeles: hash["key"]:=value.
  
 //------------------------------------------------------------------------
-VALUE *idxl() // (obsolete) indexkifejezés a baloldalon
+VALUE *idxl() // (obsolete) indexkifejezes a baloldalon
 {
 // stack: a,i ---
-// return: a[i] címe
+// return: a[i] cime
 
     VALUE *i=TOP();
     VALUE *a=TOP2();
@@ -44,32 +44,32 @@ VALUE *idxl() // (obsolete) indexkifejezés a baloldalon
     {
         unsigned int len=ARRAYLEN(a);
         unsigned int idx=D2INT(i->data.number);
-    
+
         if( (idx<1) || (len<idx) )
         {
             error_idx("idxl",a,2);
         }
-    
+        
         VALUE *x=ARRAYPTR(a)+idx-1;
         POP();
         POP();
         return x;
-    
-        //MEGJEGYZÉS: array(1)[1]:=x nem thread safe
-        //(nem javítható, de szerencsére nincs értelme)
+
+        //MEGJEGYZES: array(1)[1]:=x nem thread safe
+        //(nem javithato, de szerencsere nincs ertelme)
     }
 
-    else if( a->type==TYPE_OBJECT && i->type==TYPE_STRING )
+    else if( a->type==TYPE_OBJECT && (i->type==TYPE_STRING || i->type==TYPE_BINARY ) )
     {
         _o_method_hashitem.eval(2); //stack: item={key,value/NIL}
 
-        VALUE *item=TOP(); //item[2] címét kell adni
+        VALUE *item=TOP(); //item[2] cimet kell adni
         VALUE *x=ARRAYPTR(item)+1;
         POP();
         return x;
 
-        //MEGJEGYZÉS: simplehashNew()[key]:=x nem thread safe
-        //(nem javítható, de szerencsére nincs értelme)
+        //MEGJEGYZES: simplehashNew()[key]:=x nem thread safe
+        //(nem javithato, de szerencsere nincs ertelme)
     }
 
     error_arr("idxl",a,2);
@@ -77,10 +77,10 @@ VALUE *idxl() // (obsolete) indexkifejezés a baloldalon
 }
 
 //------------------------------------------------------------------------
-VALUE *idxl0(double i) // (obsolete) indexkifejezés a baloldalon (konstans index)
+VALUE *idxl0(double i) // (obsolete) indexkifejezes a baloldalon (konstans index)
 {
 // stack: a ---
-// return: a[i] címe
+// return: a[i] cime
 
     VALUE *a=TOP();
 
@@ -98,20 +98,20 @@ VALUE *idxl0(double i) // (obsolete) indexkifejezés a baloldalon (konstans index
         error_idx("idxl0",a,2);
         POP();
     }
-
+    
     VALUE *x=ARRAYPTR(a)+idx-1;
     POP();
     return x;
 
-    //MEGJEGYZÉS: array(1)[1]:=x nem thread safe
-    //(nem javítható, de szerencsére nincs értelme)
+    //MEGJEGYZES: array(1)[1]:=x nem thread safe
+    //(nem javithato, de szerencsere nincs ertelme)
 }
 
 //------------------------------------------------------------------------
-VALUE *idxxl() // indexkifejezés a baloldalon
+VALUE *idxxl() // indexkifejezes a baloldalon
 {
 // stack: a,i --- a
-// return: a[i] címe
+// return: a[i] cime
 
     VALUE *i=TOP();
     VALUE *a=TOP2();
@@ -120,22 +120,22 @@ VALUE *idxxl() // indexkifejezés a baloldalon
     {
         unsigned int len=ARRAYLEN(a);
         unsigned int idx=D2INT(i->data.number);
-    
+
         if( (idx<1) || (len<idx) )
         {
             error_idx("idxxl",a,2);
         }
-    
+        
         VALUE *x=ARRAYPTR(a)+idx-1;
         POP();
         return x;
     }
 
-    else if( a->type==TYPE_OBJECT && i->type==TYPE_STRING )
+    else if( a->type==TYPE_OBJECT && (i->type==TYPE_STRING || i->type==TYPE_BINARY ) )
     {
         _o_method_hashitem.eval(2); //stack: item={key,value/NIL}
 
-        VALUE *item=TOP(); //item[2] címét kell adni
+        VALUE *item=TOP(); //item[2] cimet kell adni
         VALUE *x=ARRAYPTR(item)+1;
         return x;
     }
@@ -145,10 +145,10 @@ VALUE *idxxl() // indexkifejezés a baloldalon
 }
 
 //------------------------------------------------------------------------
-VALUE *idxxl0(double i) // indexkifejezés a baloldalon (konstans index)
+VALUE *idxxl0(double i) // indexkifejezes a baloldalon (konstans index)
 {
 // stack: a --- a
-// return: a[i] címe
+// return: a[i] cime
 
     VALUE *a=TOP();
 
@@ -166,25 +166,25 @@ VALUE *idxxl0(double i) // indexkifejezés a baloldalon (konstans index)
         error_idx("idxxl0",a,2);
         POP();
     }
-
+    
     VALUE *x=ARRAYPTR(a)+idx-1;
     return x;
 }
 
 //------------------------------------------------------------------------
-void idxr() // indexkifejezés a jobboldalon
+void idxr() // indexkifejezes a jobboldalon
 {
 // stack: a,i --- a[i]
 
     VALUE *i=TOP();
     VALUE *a=TOP2();
-
+    
     if( i->type==TYPE_NUMBER )
     {
         if( a->type==TYPE_ARRAY )
         {
             unsigned len=ARRAYLEN(a);
-            unsigned idx=D2INT(i->data.number);
+            unsigned idx=D2UINT(i->data.number);
             if( idx<1 || len<idx )
             {
                 error_idx("idxr",a,2);
@@ -195,8 +195,8 @@ void idxr() // indexkifejezés a jobboldalon
 
         else if( a->type==TYPE_STRING )
         {
-            binarysize_t len=STRINGLEN(a);
-            binarysize_t idx=D2ULONGX(i->data.number);
+            unsigned long len=STRINGLEN(a);
+            unsigned long idx=D2ULONGX(i->data.number);
             if( idx<1 || len<idx )
             {
                 error_idx("idxr",a,2);
@@ -207,13 +207,26 @@ void idxr() // indexkifejezés a jobboldalon
             *stringl(1)=c;
         }
 
+        else if( a->type==TYPE_BINARY)
+        {
+            binarysize_t len=BINARYLEN(a);
+            binarysize_t idx=D2ULONGX(i->data.number);
+            if( idx<1 || len<idx )
+            {
+                error_idx("idxr",a,2);
+            }
+            BYTE c=BINARYPTR(a)[idx-1];
+            POP();
+            POP();
+            *binaryl(1)=c;
+        }
         else
         {
             error_arr("idxr",a,2);
         }
     }
 
-    else if( a->type==TYPE_OBJECT && i->type==TYPE_STRING )
+    else if( a->type==TYPE_OBJECT && (i->type==TYPE_STRING || i->type==TYPE_BINARY ) )
     {
         _o_method_get.eval(2);
     }
@@ -222,20 +235,19 @@ void idxr() // indexkifejezés a jobboldalon
     {
         error_arr("idxr",a,2);
     }
-    
 }
 
 //------------------------------------------------------------------------
-void idxr0(double i) // indexkifejezés a jobboldalon (konstans index)
+void idxr0(double i) // indexkifejezes a jobboldalon (konstans index)
 {
 // stack: a --- a[i]
 
     VALUE *a=TOP();
-
+    
     if( a->type==TYPE_ARRAY )
     {
         unsigned len=ARRAYLEN(a);
-        unsigned idx=D2INT(i);
+        unsigned idx=D2UINT(i);
         if( idx<1 || len<idx )
         {
             number(idx);
@@ -246,12 +258,11 @@ void idxr0(double i) // indexkifejezés a jobboldalon (konstans index)
 
     else if( a->type==TYPE_STRING )
     {
-        binarysize_t len=STRINGLEN(a);
-        binarysize_t idx=D2ULONGX(i);
-
+        unsigned long len=STRINGLEN(a);
+        unsigned long idx=D2ULONGX(i);
         if( idx<1 || len<idx )
         {
-            number((double)idx);
+            number(idx);
             error_idx("idxr0",a,2);
         }
         CHAR c=STRINGPTR(a)[idx-1];
@@ -259,15 +270,28 @@ void idxr0(double i) // indexkifejezés a jobboldalon (konstans index)
         *stringl(1)=c;
     }
 
+    else if( a->type==TYPE_BINARY )
+    {
+        binarysize_t len=BINARYLEN(a);
+        binarysize_t idx=D2ULONGX(i);
+        if( idx<1 || len<idx )
+        {
+            number((double)idx);
+            error_idx("idxr0",a,2);
+        }
+        BYTE c=BINARYPTR(a)[idx-1];
+        POP();
+        *binaryl(1)=c;
+    }
+
     else
     {
         error_arr("idxr0",a,1);
     }
-    
 }
 
 //------------------------------------------------------------------------
-void array(int len) //stackrõl levett elemekkel inicializált array
+void array(int len) //stackrol levett elemekkel inicializalt array
 {
 // stack: A1,A2,...,Alen --- A
 
@@ -301,7 +325,7 @@ void array(int len) //stackrõl levett elemekkel inicializált array
 
 
 //------------------------------------------------------------------------
-VALUE *array0(int len) //NIL-ekkel inicializált 1-dimenziós array
+VALUE *array0(int len) //NIL-ekkel inicializalt 1-dimenzios array
 {
 // stack: --- A
 
@@ -334,27 +358,27 @@ VALUE *array0(int len) //NIL-ekkel inicializált 1-dimenziós array
 //------------------------------------------------------------------------
 #ifdef HASZNALATON_KIVUL
 
-VALUE *array0x(int len) //mint array0, de EXTSIZ hozzáadásával
+VALUE *array0x(int len) //mint array0, de EXTSIZ hozzaadasaval
 
-// Jelenleg ez használaton kívül van.
-// Az array-k a megadott mérettel jönnek létre,
-// és csak akkor lesz tartalék bufferük, 
-// ha a program elkezdi változtatgani a méretüket
+// Jelenleg ez hasznalaton kivul van.
+// Az array-k a megadott merettel jonnek letre,
+// es csak akkor lesz tartalek bufferuk, 
+// ha a program elkezdi valtoztatgani a meretuket
 // aadd()-dal vagy asize()-zal.
 //
-// Ha ezt a függvényt tennénk array0() helyére,
-// akkor az objectek is EXTSIZ bufferrel jönnének létre,
-// ami felesleges, mert az objectek mérete nem változik.
+// Ha ezt a fuggvenyt tennenk array0() helyere,
+// akkor az objectek is EXTSIZ bufferrel jonnenek letre,
+// ami felesleges, mert az objectek merete nem valtozik.
 //
-// A blockok mérete sem változik. A blockok saját kóddal 
-// rendezkednek be a block-array-ben (EXTSIZ nélkül).
+// A blockok merete sem valtozik. A blockok sajat koddal 
+// rendezkednek be a block-array-ben (EXTSIZ nelkul).
 //
-// A TYPE_END típusú záró elemnél minden esetben be kell
-// állítani az array kiterjesztett méretét, objecteknél és
-// blockoknál is. Ez kell az object->array konverziónál.
+// A TYPE_END tipusu zaro elemnel minden esetben be kell
+// allitani az array kiterjesztett meretet, objecteknel es
+// blockoknal is. Ez kell az object->array konverzional.
 //
-// A szemétgyûjtés a gráf bejárásakor nem használja az
-// array-k hosszadatát, hanem a TYPE_END elemeket nézi.
+// A szemetgyujtes a graf bejarasakor nem hasznalja az
+// array-k hosszadatat, hanem a TYPE_END elemeket nezi.
 
 {
 // stack: --- A
@@ -395,8 +419,8 @@ void _clp_array(int argno)
     VALUE *base=stack-argno;
     VALUE *a=&NIL;
     
-    // 0 db argumentum esetén 
-    // a visszatérési érték NIL
+    // 0 db argumentum eseten 
+    // a visszateresi ertek NIL
     
     for( int i=1; i<=argno; i++ )
     {
@@ -456,7 +480,7 @@ push_call("aadd",base);
     }
     else
     {
-        //új buffer
+        //uj buffer
  
         VARTAB_LOCK();
  
@@ -470,8 +494,7 @@ push_call("aadd",base);
 
         if( p_old )
         {
-            //delete p_old;
-            MEMFREE(p_old); //99.07.06
+            deleteValue(p_old);
         }
         ARRAYPTR(a)=p_new;
         ARRAYLEN(a)=len_new;
@@ -512,7 +535,7 @@ push_call("asize",base);
         //helyben marad
 
         (p_old+len_new)->type=TYPE_END; //atomi
-        (p_old+len_new)->data.size=len_ext; //nem változik, csak új helyen tároljuk
+        (p_old+len_new)->data.size=len_ext; //nem valtozik, csak uj helyen taroljuk
         int i;
         for( i=len_new-1; len_old<=i; i-- )
         {
@@ -522,7 +545,7 @@ push_call("asize",base);
     }
     else
     {
-        //új buffer
+        //uj buffer
  
         VARTAB_LOCK();
  
@@ -554,8 +577,7 @@ push_call("asize",base);
       
         if( p_old )
         {
-            //delete p_old;
-            MEMFREE(p_old); //99.07.06
+            deleteValue(p_old);
         }
 
         ARRAYPTR(a)=p_new;

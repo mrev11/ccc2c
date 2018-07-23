@@ -44,22 +44,22 @@ VALUE *idxl() // (obsolete) indexkifejezes a baloldalon
     {
         unsigned int len=ARRAYLEN(a);
         unsigned int idx=D2INT(i->data.number);
-    
+
         if( (idx<1) || (len<idx) )
         {
             error_idx("idxl",a,2);
         }
-    
+        
         VALUE *x=ARRAYPTR(a)+idx-1;
         POP();
         POP();
         return x;
-    
+
         //MEGJEGYZES: array(1)[1]:=x nem thread safe
         //(nem javithato, de szerencsere nincs ertelme)
     }
 
-    else if( a->type==TYPE_OBJECT && i->type==TYPE_STRING )
+    else if( a->type==TYPE_OBJECT && (i->type==TYPE_STRING || i->type==TYPE_BINARY ) )
     {
         _o_method_hashitem.eval(2); //stack: item={key,value/NIL}
 
@@ -98,7 +98,7 @@ VALUE *idxl0(double i) // (obsolete) indexkifejezes a baloldalon (konstans index
         error_idx("idxl0",a,2);
         POP();
     }
-
+    
     VALUE *x=ARRAYPTR(a)+idx-1;
     POP();
     return x;
@@ -120,18 +120,18 @@ VALUE *idxxl() // indexkifejezes a baloldalon
     {
         unsigned int len=ARRAYLEN(a);
         unsigned int idx=D2INT(i->data.number);
-    
+
         if( (idx<1) || (len<idx) )
         {
             error_idx("idxxl",a,2);
         }
-    
+        
         VALUE *x=ARRAYPTR(a)+idx-1;
         POP();
         return x;
     }
 
-    else if( a->type==TYPE_OBJECT && i->type==TYPE_STRING )
+    else if( a->type==TYPE_OBJECT && (i->type==TYPE_STRING || i->type==TYPE_BINARY ) )
     {
         _o_method_hashitem.eval(2); //stack: item={key,value/NIL}
 
@@ -166,7 +166,7 @@ VALUE *idxxl0(double i) // indexkifejezes a baloldalon (konstans index)
         error_idx("idxxl0",a,2);
         POP();
     }
-
+    
     VALUE *x=ARRAYPTR(a)+idx-1;
     return x;
 }
@@ -178,13 +178,13 @@ void idxr() // indexkifejezes a jobboldalon
 
     VALUE *i=TOP();
     VALUE *a=TOP2();
-
+    
     if( i->type==TYPE_NUMBER )
     {
         if( a->type==TYPE_ARRAY )
         {
             unsigned len=ARRAYLEN(a);
-            unsigned idx=D2INT(i->data.number);
+            unsigned idx=D2UINT(i->data.number);
             if( idx<1 || len<idx )
             {
                 error_idx("idxr",a,2);
@@ -195,8 +195,8 @@ void idxr() // indexkifejezes a jobboldalon
 
         else if( a->type==TYPE_STRING )
         {
-            binarysize_t len=STRINGLEN(a);
-            binarysize_t idx=D2ULONGX(i->data.number);
+            unsigned long len=STRINGLEN(a);
+            unsigned long idx=D2ULONGX(i->data.number);
             if( idx<1 || len<idx )
             {
                 error_idx("idxr",a,2);
@@ -207,13 +207,26 @@ void idxr() // indexkifejezes a jobboldalon
             *stringl(1)=c;
         }
 
+        else if( a->type==TYPE_BINARY)
+        {
+            binarysize_t len=BINARYLEN(a);
+            binarysize_t idx=D2ULONGX(i->data.number);
+            if( idx<1 || len<idx )
+            {
+                error_idx("idxr",a,2);
+            }
+            BYTE c=BINARYPTR(a)[idx-1];
+            POP();
+            POP();
+            *binaryl(1)=c;
+        }
         else
         {
             error_arr("idxr",a,2);
         }
     }
 
-    else if( a->type==TYPE_OBJECT && i->type==TYPE_STRING )
+    else if( a->type==TYPE_OBJECT && (i->type==TYPE_STRING || i->type==TYPE_BINARY ) )
     {
         _o_method_get.eval(2);
     }
@@ -222,7 +235,6 @@ void idxr() // indexkifejezes a jobboldalon
     {
         error_arr("idxr",a,2);
     }
-    
 }
 
 //------------------------------------------------------------------------
@@ -231,11 +243,11 @@ void idxr0(double i) // indexkifejezes a jobboldalon (konstans index)
 // stack: a --- a[i]
 
     VALUE *a=TOP();
-
+    
     if( a->type==TYPE_ARRAY )
     {
         unsigned len=ARRAYLEN(a);
-        unsigned idx=D2INT(i);
+        unsigned idx=D2UINT(i);
         if( idx<1 || len<idx )
         {
             number(idx);
@@ -246,12 +258,11 @@ void idxr0(double i) // indexkifejezes a jobboldalon (konstans index)
 
     else if( a->type==TYPE_STRING )
     {
-        binarysize_t len=STRINGLEN(a);
-        binarysize_t idx=D2ULONGX(i);
-
+        unsigned long len=STRINGLEN(a);
+        unsigned long idx=D2ULONGX(i);
         if( idx<1 || len<idx )
         {
-            number((double)idx);
+            number(idx);
             error_idx("idxr0",a,2);
         }
         CHAR c=STRINGPTR(a)[idx-1];
@@ -259,11 +270,24 @@ void idxr0(double i) // indexkifejezes a jobboldalon (konstans index)
         *stringl(1)=c;
     }
 
+    else if( a->type==TYPE_BINARY )
+    {
+        binarysize_t len=BINARYLEN(a);
+        binarysize_t idx=D2ULONGX(i);
+        if( idx<1 || len<idx )
+        {
+            number((double)idx);
+            error_idx("idxr0",a,2);
+        }
+        BYTE c=BINARYPTR(a)[idx-1];
+        POP();
+        *binaryl(1)=c;
+    }
+
     else
     {
         error_arr("idxr0",a,1);
     }
-    
 }
 
 //------------------------------------------------------------------------
@@ -470,8 +494,7 @@ push_call("aadd",base);
 
         if( p_old )
         {
-            //delete p_old;
-            MEMFREE(p_old); //99.07.06
+            deleteValue(p_old);
         }
         ARRAYPTR(a)=p_new;
         ARRAYLEN(a)=len_new;
@@ -554,8 +577,7 @@ push_call("asize",base);
       
         if( p_old )
         {
-            //delete p_old;
-            MEMFREE(p_old); //99.07.06
+            deleteValue(p_old);
         }
 
         ARRAYPTR(a)=p_new;
