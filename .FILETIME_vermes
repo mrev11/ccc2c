@@ -1,5 +1,13 @@
-178d18fee1b150756573c7f0db0d9c99859b2767 2018072908:52:28-UTC ./log-install
-0dca2db43eca0f61d1337f152b49dc9815d55176 2018072908:48:05-UTC ./CHANGELOG_vermes
+a08289c833e4df5e03ca193228a1ea2e56150d65 2018073107:05:34-UTC ./CHANGELOG_vermes
+936a3321ade6d0165cf4a699aee4fd1bbaf20406 2018073106:52:26-UTC ./log-install
+683f56000af46ab5e1d2d74215b949069cfd150d 2018073106:51:31-UTC ./setup/setup-unix/prg2ppo/xtlex.cpp
+334808b3a3a90e387fc8443fa649733b7f2ff952 2018073106:51:30-UTC ./setup/setup-unix/prg2ppo/input.cpp
+6b16774df40dd3ea7c7ecd4bbc3e2b34f86476b3 2018073106:51:30-UTC ./setup/setup-unix/prg2ppo/trfind.cpp
+00374ce3c699ab3242f1d410fbf3a8e62876b53b 2018073106:51:30-UTC ./setup/setup-unix/prg2ppo/trinp.cpp
+f9f51b35ed119e413ba3443c29ed8377beab3edc 2018073106:38:51-UTC ./setup/setup-windows/prg2ppo/trinp.cpp
+fc77fe918c0ceee247db3edfd0b1626afc215467 2018073106:38:51-UTC ./setup/setup-windows/prg2ppo/xtlex.cpp
+7c424ad170c6001c39724e1932e509e75826071b 2018073106:38:50-UTC ./setup/setup-windows/prg2ppo/input.cpp
+63951ac650eb1dae0c54295c368e0f6a34b3e995 2018073106:38:50-UTC ./setup/setup-windows/prg2ppo/trfind.cpp
 2db5ccf159ff39423eca99588368f1b437410154 2018072908:42:57-UTC ./setup/setup-unix/build/build.cpp
 c9fc8730123f02b4cdad2eb6d3cd4a83282af7b5 2018072907:42:35-UTC ./terminal/common/uid.cpp
 6405e02c73066e9831dfb9138d0f138ef8620291 2018072907:35:07-UTC ./setup/setup-unix/m
@@ -120,7 +128,6 @@ d0aa1f1d0f9a95a2d1ba1b5c1e0bc6a1e7d083a1 2018070506:49:18-UTC ./usr/bin/linux/ss
 8e79534939fa40fe4235d0ce8c1a886192b015a3 2018070506:49:17-UTC ./usr/bin/linux/terminal
 89c1cc2b7093c5faa1d216b3542576992d9ec503 2018070506:49:17-UTC ./usr/bin/linux/terminal-xft
 038f0ef538848b334f91ce0e4c105853d0b8d10d 2018070506:49:05-UTC ./usr/bin/linux/ppo2cpp
-6dc8c9bfa9c74e0b14d532cab55da86d3951513a 2018070506:49:04-UTC ./setup/setup-unix/prg2ppo/rsplink
 fc6754ca97478f91a090721f749c6abe4d84c074 2018070506:49:04-UTC ./setup/setup-unix/removecr/rsplink
 b486a12d8e72c95e68d242af29d54aa80506a8f4 2018070506:49:02-UTC ./setup/setup-unix/build/rsplink
 9b549a620ef16b116f37efeba3d14afeda479446 2018070506:49:02-UTC ./setup/setup-unix/compopt
@@ -176,10 +183,6 @@ fe007eb2e3e910bfb4d31866e77f942516c65d66 2018042819:25:05-UTC ./usr/options/mng/
 4ef429987384346d2c18cda035980a20638e5d0c 2018042818:56:44-UTC ./ccclib/src/uic/termapi/remoteio.cpp
 dad57080db3b6dc1cfe4325f2df4656e0dad8935 2018042818:56:44-UTC ./terminal/common/tcpio.cpp
 86787a2d3133df66776ddb1861b322c977e97bc1 2018042818:56:44-UTC ./usr/build/windows/_compile.bat
-9e50e55ac2eaad6409824d16e8faef585aba327e 2018042716:32:22-UTC ./setup/setup-windows-alt/_prg2ppo/xtlex.cpp
-62049987efd3585fe576823ac7b2b653b40977e5 2018042716:32:21-UTC ./setup/setup-windows-alt/_prg2ppo/trinp.cpp
-0cfd04d0486fc8cbbf15a022ac2fa2d0654ec9ac 2018042716:32:20-UTC ./setup/setup-windows-alt/_prg2ppo/input.cpp
-6807d8f700fe40d2fcf9b40c4f4b16b3100d110a 2018042716:32:20-UTC ./setup/setup-windows-alt/_prg2ppo/trfind.cpp
 34ea51b7880d29e39056acd22b9a1a3d86042c37 2018042716:32:20-UTC ./setup/setup-windows-alt/_prg2ppo/xtxlegal.cpp
 d44b4e25bcf3740cafe5d7546a08322112e90a62 2018042716:32:18-UTC ./setup/setup-windows-alt/_build/build.cpp
 8720089110fb0753993c80f6c05ee7a19603ca3a 2018042716:32:16-UTC ./setup/setup-windows-alt/_ccomp/ccomp.cpp
@@ -834,7 +837,6 @@ d23dc5a67ea2126321c40bbb8085e195a2a1e73a 2016052410:19:34-UTC ./tools/list/m
 2b15e8b8788d38e9fc2cf4e867ac37f51bf21fd8 2016052409:36:46-UTC ./tabobj/tbbtbtx/par-ntui.bld
 816863ca97bfc55c7c0c89cb6ca6aa2077e29c22 2016052409:36:39-UTC ./tabobj/tbbtbtx/par-nt.bld
 20688f8a83afdb74ab44c31615f8d1cc1aebeb82 2016052409:36:11-UTC ./tabobj/tbbtbtx/par-unix.bld
-f62367af2c65f03e203f2414140f5a169e955d31 2016052408:12:00-UTC ./setup/setup-unix/prg2ppo/input.cpp
 ac9f01c4429b1d0b0702c4617d41ea779fb44dd1 2016052407:47:39-UTC ./ccclib/uic.bld
 56e03d80966876488da18e9f99d1806ee51bad2d 2016052407:39:01-UTC ./ccclib/ccc.bld
 461d2e570bf0b111ca43018cca7e0857c275df56 2016052212:11:54-UTC ./terminal/sslforw/ssl-test/pem/rehash
@@ -1107,9 +1109,6 @@ dcae837932e3106addda9c6d0a98d3c5aa4d27e3 2014031909:48:24-UTC ./setup/setup-lemo
 c265adabe65c47c1d18d07f6c392ab4ba5156366 2014012509:06:37-UTC ./ccctools/ppo2cpp/parsenode.h
 15a530a5d1c2ad706eb860d18b0e38d09a0513ee 2014012509:06:26-UTC ./ccctools/ppo2cpp/lexer.lex
 80d76c41ea05027f5a768f18eb566444b0d17c7c 2014012509:06:14-UTC ./ccctools/ppo2cpp/lexer.h
-384009e54bb5804f5ac1b6d45ba31fca77d93be2 2014012508:29:58-UTC ./setup/setup-unix/prg2ppo/trinp.cpp
-e10dd11594b3455bee756d240e152fd8a90566e2 2014012508:29:58-UTC ./setup/setup-unix/prg2ppo/xtlex.cpp
-667817758c8642df065fa60b6632043727bae93a 2014012508:29:57-UTC ./setup/setup-unix/prg2ppo/trfind.cpp
 a390f354718097e86e81e89aea1a27be899346f2 2014012508:15:20-UTC ./tools/xmldom/xmldom_lexer.h
 0c423077ed208de39f3cd4755e2b3409d3a39bb0 2014012508:15:08-UTC ./tools/xmldom/demo/malloc_dbg/malloc_dbg.cpp
 5885524698b708f4b50f73904b8d5dd56ea7e058 2014012508:14:21-UTC ./ccctools/prg2ppo/xtxlegal.lem
