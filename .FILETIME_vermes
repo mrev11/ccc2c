@@ -1,12 +1,12 @@
-565d7d3e37fd93a67ae0c3ef0ff048900439fbd4 2018081210:16:22-UTC ./CHANGELOG_vermes
+3b29af37694cf7b870f47d18435621496e8dd483 2018081213:28:24-UTC ./CHANGELOG_vermes
+70345072982410544fe7fa1e0780f1bb1ff9e424 2018081213:25:17-UTC ./tools/xmlrpc/xmlrpc.ver
+407dda83ae7870e5fbf60fad3e5f8896158ce21a 2018081213:23:40-UTC ./tools/xmlrpc/rpc_server.prg
+e50d7f44046c89a987c57791da93019ed20d1e8d 2018081213:19:41-UTC ./tools/xmlrpc/demo-rpc/demo-server.prg
 80412c7fad9be5e024ffe292657f088a55d226cf 2018081006:50:25-UTC ./tools/xmlrpc/demo-rpc/ss
 cf5645b71932e9461a15bc790564b65caab686fa 2018081006:50:20-UTC ./tools/xmlrpc/demo-rpc/sc
 90f4e2a5e7d7e1495dba1372c089ef33b07bde69 2018081006:49:41-UTC ./tools/xmlrpc/demo-rpc/demo-client.prg
 824070933fa74e48b6049215c258e0924184ccb3 2018081006:47:50-UTC ./tools/xmlrpc/rpcdata.prg
-268f8d1cd45136731866e84859c6e10168e59daa 2018081006:44:43-UTC ./tools/xmlrpc/xmlrpc.ver
-249a4a38c50839574903b66217af3a5d4e28c377 2018081006:15:35-UTC ./tools/xmlrpc/rpc_server.prg
 cfcc4e9408181a3da36d8a54947f298d0d5af409 2018081006:14:18-UTC ./tools/xmlrpc/rpc_client.prg
-3928fd65be8be1f6ac44919613389a41d4effe36 2018081005:39:55-UTC ./tools/xmlrpc/demo-rpc/demo-server.prg
 4e6938349a7cc3fde1765171df3cf64c04bf3df1 2018080920:12:55-UTC ./tools/xmlrpc/rpcmethod.prg
 559677b147074d5973cdb3af7688dd2f600a241c 2018073107:08:30-UTC ./log-install
 6dc8c9bfa9c74e0b14d532cab55da86d3951513a 2018073107:06:49-UTC ./setup/setup-unix/prg2ppo/rsplink
