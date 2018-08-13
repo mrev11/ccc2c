@@ -48,7 +48,9 @@ objnet_uif/
 ppo/
 error
 error--*
+err-*
 log-*
+log
 
 commit-message
 g-*
