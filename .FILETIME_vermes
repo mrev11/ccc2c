@@ -1,3 +1,7 @@
+332559fde99409ae65c19dce86c4a5210cac2a2b 2018100310:57:03-UTC ./tools/socket/ssl/m.bat
+e971dd4cbfe9cc1ec27f25795d11ae7e78942e64 2018100308:30:00-UTC ./CHANGELOG_vermes
+f9f2815179d58c34deee56d9753be8b2536504a9 2018100308:26:48-UTC ./usr/options/lin/compile.opt
+5408079fce3e9133ebbd7799a77bc135d1c95021 2018100308:22:47-UTC ./tools/socket/ssl/sslctx_verifycb.cpp
 25717193ae6d4f8731e07a785a789a6e7f6f3f3f 2018093006:24:47-UTC ./log-install
 2b28065809341b2c8c46dcc72c3dde834fa6e371 2018093006:24:47-UTC ./usr/bin/linux/gitfollow
 528db7e79067c4a5212119927d5e756869008785 2018093006:24:47-UTC ./usr/bin/linux/gitnav
@@ -65,8 +69,6 @@ bef43d5b0a0defc1d407a774b182fdc0600cb67c 2018093006:23:51-UTC ./usr/bin/linux/bu
 d9beefb0a07ee5870ec7cbf517d320ca5a6b38bb 2018093006:23:37-UTC ./setup/setup-unix/compopt
 87d488c338dd33a8deb6fdffe6d3e8beb1bc246e 2018093006:23:31-UTC ./usr/bin/linux/flex
 6df97770260f9c60eaa1a9b4b5545a7b51266a0c 2018093006:23:31-UTC ./usr/bin/linux/lemon
-435c429a510171a11322aa868b9a00652f1670d7 2018093006:18:37-UTC ./usr/options/lin/compile.opt
-512a50119e4e82eeacdde36fffb9c2e8b08dbfa7 2018093006:17:40-UTC ./CHANGELOG_vermes
 6152b33c9213de79a135895977888660a7eab89c 2018081306:20:51-UTC ./.gitignore
 6771e22048e2fbec967012f60abbcc1a46195a30 2018081306:13:00-UTC ./tools/xmlrpc-framework/server/rpcwrapper/rpcwrapper.ver
 8dfc8261ef47c5450e36ad94ecb64182b0d5b436 2018081306:07:41-UTC ./tools/xmlrpc/xmlrpc.ver
@@ -147,7 +149,6 @@ c38d772409d5e16387bf90eaa8f2ddaf772d25ef 2018070507:06:15-UTC ./tools/socket/ssl
 fc6754ca97478f91a090721f749c6abe4d84c074 2018070506:49:04-UTC ./setup/setup-unix/removecr/rsplink
 b486a12d8e72c95e68d242af29d54aa80506a8f4 2018070506:49:02-UTC ./setup/setup-unix/build/rsplink
 a70a961c898acdcf3f4e592da53336be945d6a45 2018070506:48:56-UTC ./usr/options/lin/gccver.opt
-931dbdb447ae8f267aa0ee2ae927f6f80ea05287 2018063007:57:45-UTC ./tools/socket/ssl/sslctx_verifycb.cpp
 4f3111de222cdc19b995825d964f2033c58dac94 2018062906:53:17-UTC ./tools/socket/ssl/sslsocket-demo/s3.bat
 166e14c888db579e3f954e6b5fd152aad1e0bb0d 2018062906:53:03-UTC ./tools/socket/ssl/sslsocket-demo/s3-ssl.bat
 481ebd93014e039a9ca2f40bfb40995c40e993b7 2018062906:52:50-UTC ./tools/socket/ssl/sslsocket-demo/s2.bat
@@ -1625,7 +1626,6 @@ efbdc75ef34b9c42dbc8975f284a5ec38ab2b7f7 2007090916:09:52-UTC ./jt/jtdemo/mkall.
 1b03038596fcab7f7d60a7e67b65b7266662b050 2007090913:55:06-UTC ./jt/jterminal/t.bat
 a77ea4dda1f7d4aacb2d858abfbd36b834685e05 2007090910:25:13-UTC ./tools/socket/ssl/sslauth-demo/c1.bat
 2518f03a90aedc60a5e44fb3f5cd624f30899a35 2007090910:24:37-UTC ./tools/socket/ssl/sslauth-demo/s1.bat
-939d37b4e51330eaed27aedbdfb1038147f7ab3c 2007090909:26:59-UTC ./tools/socket/ssl/m.bat
 023bd6444bb8c403b10390e9417359fffdab7260 2007082813:58:46-UTC ./jt/jterminal/jtconnect.java
 77b44681eaa323a917ec98432717a9c866004555 2007080918:18:43-UTC ./tools/socket/ssl/ssl.ch
 f5e505adc5e7d207c10326c01c89527b2e81b054 2007080218:42:35-UTC ./tools/sql2/test/testdata/b.bt
