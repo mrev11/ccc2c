@@ -1,3 +1,6 @@
+2018.11.26 javitgatas
+  a pcreposix-ot (egyes rendszereken) explicit linkelni kell;
+
 2018.10.03 windowson wincrypt.h inkludja kikerulve;
 
 2018.09.30 gcc 8.2.1 warningok megszuntetve;
