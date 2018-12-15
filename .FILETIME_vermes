@@ -1,4 +1,11 @@
-88a0f17ad2152b02e9b905ecb4f39f728b965ee9 2018112610:22:59-UTC ./CHANGELOG_vermes
+5b81bfc92e18928746f7779ee9b008b70559bdb9 2018121506:43:29-UTC ./CHANGELOG_vermes
+364df041c0f8d94936b9fb911e6f9ec5b499c474 2018121419:11:42-UTC ./terminal/common/fontspec.cpp
+5af1a0e96dfa639f52377d05fa5e9d759450c75a 2018121415:24:01-UTC ./terminal/terminal-qt5/terminal-qt5.cpp
+471f2be7137b6d49677f6acc83fac10bd3a40387 2018121320:57:16-UTC ./terminal/terminal-qt5/parfile.bld
+26fa4f1ada23c4507c1dfbc1afa9706d82a6a6e3 2018121316:17:07-UTC ./terminal/terminal-qt5/keycode_qt5.cpp
+e245faf42bfb23c0fe16658877eb242e191d1634 2018121115:32:20-UTC ./terminal/terminal-qt5/m
+2ce99b20827aa0fd4ed7df828b4b3a39081401b4 2018112614:45:52-UTC ./jt/jterminal/jterminal.jar
+b7c184491acc461f223026274624f69f367a470a 2018112610:28:32-UTC ./log-install
 27e28576676d7c0262907f5ba9ed6b31afeda573 2018111507:35:11-UTC ./jt/jterminal/base64.class
 c0304be9909911cad315f6e8f471259a6b8100ef 2018111507:35:11-UTC ./jt/jterminal/getutil/cellcolor.class
 2e1482890ba3171826337f8fe851fdd9509f7d44 2018111507:35:11-UTC ./jt/jterminal/getutil/getposition.class
@@ -6,7 +13,6 @@ e4829a5d64ad4c611ef3fc33fee8e575123a1113 2018111507:35:11-UTC ./jt/jterminal/get
 3dd716dca2da8f2362457e3737feecd774b10c3b 2018111507:35:11-UTC ./jt/jterminal/getutil/picturedocument.class
 294772f2e82d095a5bdddc12e1ce6f7116f56b8d 2018111507:35:11-UTC ./jt/jterminal/getutil/radiofield.class
 ff7a9249632f9e916faa12810f94696f7f538770 2018111507:35:11-UTC ./jt/jterminal/jtchange.class
-f004e9bcfd1c186624cd6d263c2ffe34741d7e18 2018111507:35:11-UTC ./jt/jterminal/jterminal.jar
 dc9a88ef77152ba8dbc3975441ee009fba43a12a 2018111507:35:11-UTC ./jt/jterminal/jtmenucheck.class
 644e2325758a93b588bd67a8065dcce10508ce6f 2018111507:35:11-UTC ./jt/jterminal/jtmenuradio.class
 807fda5ff545fdcb6df691956e8c79fe7aa5b37d 2018111507:35:11-UTC ./jt/jterminal/jtradio.class
@@ -81,7 +87,6 @@ c7a4c70d26de027130db44a02b068f45cf69e4f0 2018111507:35:10-UTC ./jt/jterminal/jtw
 4c2e8eccb1a3c5a996e423008d3ae7a3b18486a8 2018111507:35:10-UTC ./jt/jterminal/jtwindow$jtf.class
 73e0bf813d95ba0f321822e996445b90acf92396 2018111507:35:10-UTC ./jt/jterminal/jtwindow.class
 7e2b66f334906a91150ede8e65711f271f1b08e1 2018111507:35:10-UTC ./jt/jterminal/xmlcomponent.class
-f0d621a4ce143d49251465eff5033d6b2709b39b 2018111507:34:56-UTC ./log-install
 e29f9b6411d63f6d2d75d56ff8d47e53c658d8af 2018111507:34:56-UTC ./usr/bin/linux/gitfollow
 020950bae13796a986ce9c9402600df0ee785709 2018111507:34:56-UTC ./usr/bin/linux/gitnav
 82a51ec35c5e7d76fb9b4c652760797127974d60 2018111507:34:56-UTC ./usr/bin/linux/gitref
