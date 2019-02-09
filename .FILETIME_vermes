@@ -1,8 +1,11 @@
-f34148f95abd26fb3d72cd7dea10978ec52a38c6 2019010216:36:16-UTC ./CHANGELOG_vermes
+9b44e44af8117d3d4c4f5b5f3ab457b88f118f32 2019020908:03:04-UTC ./CHANGELOG_vermes
+0a4aaff30a917da8cecdd69a66cadf999d33bb6b 2019020408:06:23-UTC ./log-install
+31cb41b2ee10295bf4fc8e7083dd217e5ea542fa 2019020408:06:19-UTC ./jt/jterminal/jterminal.jar
+875dec5d2d63c19a04b7a9043fc6b3c43ef1bb98 2019020408:05:50-UTC ./usr/bin/linux/dtree
+edd7c924494e66ebfa6a065a7c2a921e3128eb2a 2019020408:05:13-UTC ./usr/bin/linux/terminal-xft
+0487892b146ccc8dc7c18ccb632dc1e5d526704d 2019011707:21:51-UTC ./tutor/dtree/dtree.prg
+762e9d7ca2aadea69412c1459b42db63c671251e 2019011706:54:24-UTC ./terminal/terminal-test/screenwr/s
 4d3309690ec0ac07d6fef1a78598fc9dd3373d1c 2019010216:09:17-UTC ./terminal/unix/terminal-xft.cpp
-ef83f46980b8fe664624e6ebbea6d5d28b916488 2019010215:45:29-UTC ./terminal/terminal-test/screenwr/s
-20d12ab34d3501d72ece933eeb74788a1bafddaf 2018122909:06:09-UTC ./jt/jterminal/jterminal.jar
-1eb3029aec0f69497585fc224ec7981042b376e7 2018122909:05:33-UTC ./log-install
 9c84dfe50ad47bd8446d716b609acd72780756b8 2018122909:05:33-UTC ./usr/bin/linux/gitfollow
 d1dd84246ba79e1d3e8d1de647f680caa39b80f1 2018122909:05:33-UTC ./usr/bin/linux/gitnav
 22fe87280f8f59e51f02df85ae90b571cbb48c58 2018122909:05:33-UTC ./usr/bin/linux/gitref
@@ -25,7 +28,6 @@ a7b73ee5ded11d2cfb1b8c6d2362382e867f69ce 2018122909:05:03-UTC ./usr/bin/linux/fp
 f999ede1b85a6cc1b6012e2ce591abed1e9940b3 2018122909:05:02-UTC ./usr/bin/linux/delempty
 ae5996291e061bb103cce1ad104cbb9ad7aa6723 2018122909:05:02-UTC ./usr/bin/linux/delobj
 63faa1ea2c5eb9a0ff2b5c23de9f8f526c0bc118 2018122909:05:02-UTC ./usr/bin/linux/delppo
-8b2a22a3d56f9b44a1d09457c9c366a376fe89af 2018122909:05:02-UTC ./usr/bin/linux/dtree
 9ca70bd909daac62d0737a76d45f8fb93b3af30a 2018122909:05:02-UTC ./usr/bin/linux/lower
 f971e046620ffdbc9edb823e8c57c27aed3e2c13 2018122909:05:02-UTC ./usr/bin/linux/pm
 05ed3a4ab8ccab1779f83bb5fd14055c6b2abe04 2018122909:04:57-UTC ./usr/bin/linux/stred
@@ -63,7 +65,6 @@ d459151773d04dbbc3759d06cf0097c6d7a441af 2018122909:03:58-UTC ./usr/bin/linux/le
 fef72e426d9b7703264507f862a8e2503b77b367 2018122409:34:02-UTC ./terminal/terminal-qt5/terminal-qt5.cpp
 7157fecc7a71d67a632c75e9f2dad520abe03720 2018121909:51:55-UTC ./usr/bin/linux/ncterm
 3d721ee935dcd02dbaef8fb038bd2c32abe0c1de 2018121909:51:55-UTC ./usr/bin/linux/terminal
-d2e48d0d0fc3bfaf2c54bc0424912e842e30d4f6 2018121909:51:55-UTC ./usr/bin/linux/terminal-xft
 90db3461902cb10503d5990cc6b30d03d5514a02 2018121909:51:54-UTC ./usr/bin/linux/sslforw-serv
 509b6dbcb8bb4523fd017ed2c560114952538f46 2018121909:51:54-UTC ./usr/bin/linux/sslforw-term
 7cd29409a1fd41746e8d2b43072d7531f739023e 2018121909:51:54-UTC ./usr/bin/linux/sslforward
@@ -721,8 +722,7 @@ ea11635d49d379a5aeb9070971e6700c3404d56a 2016092907:21:39-UTC ./jt/jtdemo/dlgdem
 9379333306b3e2a1c3385e5934f001a4f0903868 2016092907:17:08-UTC ./ccctools/pack/copyright.prg
 73867cd7210666c028c0b3c9fb20a42e0f28c3a0 2016092907:14:16-UTC ./tools/savex/dirdirmake.prg
 441be9fd22cb88fad7a588a29c29f021836119fb 2016092907:13:50-UTC ./tools/sql2/util/mkentitylib/mkentitylib.prg
-245fbd345904f2980d2e648b4936479a313268b0 2016092522:19:04-UTC ./tutor/dtree/dtree.prg
-958f408ee70ec1da9262e03700fd0067a61af3fa 2016092522:17:52-UTC ./tutor/dtree/delempty.prg
+958f408ee70ec1da9262e03700fd0067a61af3fa 2016092520:17:52-UTC ./tutor/dtree/delempty.prg
 d9b6f903efcb870ba4658a87829f502d8de01b37 2016092323:40:18-UTC ./tools/zgrep/zgrep_version.prg
 dcb84a99a2ed9335a83238362f3d475592b71c76 2016091810:29:04-UTC ./tools/savex/sx.b
 199a5596ee594968e5bbcab7f22800269cf8eb4a 2016091810:28:40-UTC ./tools/savex/play.prg
@@ -2503,7 +2503,7 @@ cad986af6c21d7d497bba73a9556d40f66f814dc 2003080619:31:33-UTC ./tabobj/common.sr
 aba605b04fa896ad95a84117bef5ca7e50c076e6 2003072911:01:50-UTC ./ccclib/src/unix/chown.cpp
 4e283523c8309b3237957efb230e0e83ba47e237 2003072709:25:36-UTC ./ccclib/src/timeval.cpp
 a10eb055d5002eac2ef2e0be10b738be89ee6eb9 2003072708:40:00-UTC ./tutor/dtree/readme.hu.txt
-8fe12a25cb518e7320e4e290694f88772d9624e0 2003072708:33:58-UTC ./tutor/dtree/m
+8fe12a25cb518e7320e4e290694f88772d9624e0 2003072706:33:58-UTC ./tutor/dtree/m
 803ab013c8a499e447cb0679f3325b86ced13842 2003072617:01:30-UTC ./usr/include/fileconv.ch
 36794c7e683c0b0f0609a1007e0299e9242bb3f8 2003072507:53:34-UTC ./ccclib/src/day.prg
 3900dab3e3cb821d8d0b500c89099125b0d5eeb0 2003072507:32:54-UTC ./ccclib/src/ascan.prg
