@@ -1,3 +1,5 @@
+2019.06.10 msk2html.bat nem adta at a directory nevet, javitva;
+
 2019.05.22 pcre2:
   pcre2.h inkludja elott stdint.h-t is inkludalni kell;
 
