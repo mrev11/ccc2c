@@ -139,6 +139,10 @@ pushd tools\socket
 call m.bat
 popd
 
+pushd tools\tran2cpp
+call m.bat
+popd
+
 pushd tools\xmldom
 call m.bat
 popd

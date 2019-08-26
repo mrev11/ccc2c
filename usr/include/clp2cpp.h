@@ -444,6 +444,7 @@ extern void error_arg(const char *operation, VALUE *base, int argno);
 #include <xmethod.h>
 #include <xmethod2.h>
 #include <xmethod3.h>
+#include <xmethod6.h>
 //------------------------------------------------------------
 #endif // _CLP2CPP_H_
 
