@@ -1,6 +1,0 @@
--s$(CCCDIR)/ccctutor/nlstext
--r.ppo.
--lrobj*
--lxout*
--x.exe.dll.so.obj.lib.bak.
--mw

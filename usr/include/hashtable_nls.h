@@ -23,16 +23,6 @@
 #include <stdio.h>
 
 //-----------------------------------------------------------------------------
-static unsigned int hashcode(const char *p)
-{
-    unsigned int hcode=0;
-    for( ; *p; p++ )
-    {
-        hcode+=(unsigned)*p;
-        hcode*=99817; //prím
-    }
-    return hcode;
-}
 
 //-----------------------------------------------------------------------------
 struct node
@@ -42,7 +32,7 @@ struct node
 };
 
 //-----------------------------------------------------------------------------
-class hashtable
+class hashtable_nls
 {
   private:
 
@@ -50,11 +40,22 @@ class hashtable
     unsigned int buflen;
     unsigned int itemcount;
 
+    static unsigned int hashcode(const char *p)
+    {
+        unsigned int hcode=0;
+        for( ; *p; p++ )
+        {
+            hcode+=(unsigned)*p;
+            hcode*=99817; //prím
+        }
+        return hcode;
+    }
+
     void rebuild()
     {
         //printf("rebuild %d\n",buflen);fflush(0);
 
-        hashtable *temp=new hashtable(buflen+buflen);
+        hashtable_nls *temp=new hashtable_nls(buflen+buflen);
         unsigned int i;
         for(i=0; i<buflen; i++)
         {
@@ -93,7 +94,7 @@ class hashtable
 
   public:
 
-    hashtable(int len=256)
+    hashtable_nls(int len=256)
     {
         itemcount=0;
         buflen=len;
@@ -101,7 +102,7 @@ class hashtable
         memset(buffer,0,sizeof(node)*buflen);
     };
     
-    ~hashtable()
+    ~hashtable_nls()
     {
         free(buffer);
     }

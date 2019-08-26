@@ -1,3 +1,6 @@
+2019-08-26
+  atnevezes: hashtable.h -> hashtable_nls.h
+
 2019.06.20 pcre2.h elott stdint.h-t is inkludalni kell;
    (a 2019-05-22-es javitas tovabbi helyeken is berakva);
 
