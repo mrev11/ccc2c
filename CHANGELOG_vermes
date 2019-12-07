@@ -1,3 +1,10 @@
+2019-12-07 clang forditas windowson:
+  a clang altal jelzett warningok javitva;
+  ezek elnyomva
+    -Wno-incompatible-ms-struct
+    -Wno-unused-value
+    -Wno-invalid-source-encoding (dobozrajzolo karakterek)
+
 2019-12-02
   xmldom-ban plusz hiba info megadva
      unexpected char: subcode=1

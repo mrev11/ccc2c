@@ -14,6 +14,9 @@ set OPT=%OPT% -mms-bitfields
 set OPT=%OPT% -I . 
 set OPT=%OPT% -I %CCCDIR%\usr\include
 set OPT=%OPT% -I %CCCDIR%\ccclib\src\include
+set OPT=%OPT% -Wno-incompatible-ms-struct
+set OPT=%OPT% -Wno-unused-value
+
 
 if exist %1 goto cc-one
 :cc-all
