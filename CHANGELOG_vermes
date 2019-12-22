@@ -1,3 +1,5 @@
+2019-12-22 terminal-gtk: -Wno-deprecated-declarations
+
 2019-12-07 clang forditas windowson:
   a clang altal jelzett warningok javitva;
   ezek elnyomva
