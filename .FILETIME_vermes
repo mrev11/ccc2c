@@ -1,6 +1,6 @@
-43f99ca28c5966b7b1f70a6033865be9742a1274 2020030915:38:18-UTC ./CHANGELOG_vermes
-a2ef748792c76002b6262d57e18ff8fd92300aaf 2020030813:58:54-UTC ./terminal/unix-termkey/readkey.cpp
-964fb197aa390f46e08d2f26573dce0b20dd1b5c 2020030813:33:21-UTC ./terminal/unix-termkey/tktest/tktest.cpp
+715c5a8918b81c311b4811abe66d240c1328bef5 2020032115:12:43-UTC ./CHANGELOG_vermes
+55011ab96c0844db78b4f2d386ed22c4846758c6 2020032016:01:36-UTC ./terminal/unix-termkey/readkey.cpp
+c1788685477d7261a7fbdce5c1486d370792c155 2020032015:59:43-UTC ./terminal/unix-termkey/tktest/tktest.cpp
 71a868c6af2d658a3eab178b7b20819720a937a9 2020030813:05:03-UTC ./terminal/unix-termkey/Xdefaults
 f8628b66ebf940aa563cf023a6182346b73c4447 2020030722:02:26-UTC ./usr/bin/linux/ncterm
 854fd47274268e0dfa37b14722b11a99b0cd06db 2020030709:25:42-UTC ./log-install
