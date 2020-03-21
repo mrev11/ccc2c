@@ -1,0 +1,39 @@
+##!/bin/bash
+
+# Egy 
+#   Ubuntu Xenial->Eoan Server 
+# telepites utan
+# ezeket a csomagokat kell felrakni,
+# hogy a CCC2/CCC3 leforduljon.
+
+sudo apt-get install \
+    g++ \
+    libncursesw5-dev \
+    libtermkey-dev \
+    libx11-dev \
+    libxft-dev \
+    libssl-dev \
+    libpcre2-dev \
+    libpcre3-dev \
+    libreadline-dev \
+    git
+
+exit 0
+
+#opcionalis dokumentacio
+sudo apt-get install \
+    manpages-dev \
+    glibc-doc
+
+#opcionalis forditas clang-gal
+sudo apt-get install \
+    clang
+
+#opcionalis GTK-2 interface
+sudo apt-get install \
+    libgtk2.0-dev
+
+#opcionalis GTK-3 terminal
+sudo apt-get install \
+    libgtk-3-dev
+
