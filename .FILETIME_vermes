@@ -1,3 +1,4 @@
+9e12e4aa08084f976044c14d6d70381e3c30512c 2020050806:52:21-UTC ./CHANGELOG_vermes
 57a92e24813c8be8c8203e091e6aa6ebe2034322 2020050806:48:04-UTC ./log-install
 22b2b3359f40d58d04b41dcddc0c894ea03756b4 2020050806:48:04-UTC ./usr/bin/linux/gitfollow
 17ff5a4d6b8f3331c010795404505017c7e3da48 2020050806:48:04-UTC ./usr/bin/linux/gitnav
@@ -12,12 +13,11 @@ bae48c0fdbf6543cf952999b446b6eb00285ff73 2020050806:47:13-UTC ./usr/bin/linux/te
 3ee21778cdee1fea59b494d1eee9d19fec62eadb 2020050806:47:12-UTC ./usr/bin/linux/ncterm
 b0f34d6e87a187821fdd83f653677381d84758c2 2020050806:47:11-UTC ./usr/bin/linux/terminal
 726b0f8b7012cb7831ff066b318b2f85b0b8c39a 2020050806:47:11-UTC ./usr/bin/linux/terminal-xft
-f35dffab2a763874deb9ebbf011a55daca643cc4 2020050806:45:42-UTC ./CHANGELOG_vermes
+cc26b1d4d2b95a04a73a587346893f02badcc5fa 2020050721:41:13-UTC ./ccclib/src/uic/termapi/termapi.cpp
 b1d245ad13562da341fb44f595616c4a85cba05d 2020050721:36:14-UTC ./ccclib/src/uic/termapi/remoteio.cpp
 747b12c765cc3b440848f5f7ea00f328175d744a 2020050721:25:48-UTC ./terminal/common/tcpio.cpp
 06ea55a15be28ac3a08e554ef2a7110199f38571 2020050712:13:41-UTC ./ccclib/src/uic/termenv.cpp
 b17e9969d534499c17f56b7c08b03f154d17360e 2020050712:07:09-UTC ./ccclib/src/uic/termapi/termcmd.h
-c431877ad4af3b8fee1d2278b0a35a18221a161b 2020050712:07:01-UTC ./ccclib/src/uic/termapi/termapi_async.h
 3a1b60b8353e8fee94d6cec527c25627d5bedf6e 2020042218:37:35-UTC ./usr/bin/linux/xstart
 76d1cb43c0a429e5c57ebc98a237749b25881f9f 2020042113:38:22-UTC ./terminal/unix/keypress.cpp
 9b47ec4ef42f52801cc9e19ba369bc03647e3d5e 2020042113:21:23-UTC ./terminal/terminal-qt5/keycode_qt5.cpp
@@ -740,7 +740,6 @@ a381102b0ed48eedbbb28612d80af5bf83cc140b 2016100211:32:20-UTC ./ccclib/src/setfd
 aaeb6838a68b0f0a04925426ec7c09e0ed3c8187 2016100211:23:40-UTC ./usr/include/compat_ccc3.h
 e2b977657dc0f891385fd6ee115e9e749e3197c4 2016100208:42:52-UTC ./tools/savex/savebrowse.prg
 cf63fe140195bcac0e1a5f57cedf6087a275428f 2016100107:19:14-UTC ./ccclib/src/uic/termapi/termio.h
-b513249cf35a258e927ae71269e98d2093897fd8 2016093022:07:05-UTC ./ccclib/src/uic/termapi/termapi.cpp
 38e9313d79fffb44c3da9d559844d88d6dd11699 2016093008:52:28-UTC ./tutor/fpath/parfile.bld
 3fa71f440f2d9cf0488538b72f1673b9ae4272e3 2016092913:43:49-UTC ./jt/jtdemo/superdemo.prg
 e3b5862385d6c772d5c168545f088c8eb0af23a5 2016092913:43:17-UTC ./tabobj/common.src/tabslock.prg
@@ -1443,7 +1442,6 @@ d3d7ce3a7cdf6e1dcb2dc3c029dd6141593bc4c1 2010090117:17:48-UTC ./terminal/unix/fo
 3122881094b12ef80cb34c70892b1676f9c85259 2010071811:09:14-UTC ./usr/bin/freebsd/__unix.b
 dd35366bf618a8edd04c7a178583ab82983842da 2010071112:52:03-UTC ./ccclib/src/uic/termapi/olvass.txt
 eca926ad276651c44b83bc73e97aa9d861a41ac4 2010071112:30:19-UTC ./ccclib/src/uic/termapi/termutil.h
-7073f1d3e50568652f968b3fc9692bd30a114986 2010071109:16:27-UTC ./ccclib/src/uic/termapi/termapi.cpp_sync
 45a9f532725e56180e271d6933d93763fd6af50f 2010071107:34:11-UTC ./usr/include/thread_data.h
 a7cd8aff55af080dff7278bd0cfbfe16d9e9967b 2010063008:01:55-UTC ./tools/z/zdisplay.prg
 462a89f2ea199b4acf60be9d984415086fe16014 2010062909:56:54-UTC ./ccclib/src/uic/main.cpp
