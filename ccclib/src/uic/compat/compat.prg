@@ -19,12 +19,10 @@
  */
 
 function beep()
-function computername(); return "456" 
 function console_type(); return "CONSOLE" 
 function getkey(w); return inkey(w)
 function refreshscrn()
 function remote_console(); return "Y" 
-function workstatid(); return "123"
 function _setsl_incremental(); return .t.
 
 
