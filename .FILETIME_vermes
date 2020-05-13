@@ -1,3 +1,4 @@
+9451696df9dd9c83edf6e8615186c4d1bab73602 2020051309:26:28-UTC ./CHANGELOG_vermes
 0720e8d8904bdccc1c5ab28add015d1d6b01ce32 2020051309:12:17-UTC ./log-install
 d3bdee37222e1354af7db926875c9fe97661f171 2020051309:12:17-UTC ./usr/bin/linux/gitstat
 bc3700770335e9435abd7e4d4311cfd5af08b864 2020051309:12:16-UTC ./usr/bin/linux/gitfollow
@@ -106,9 +107,10 @@ dffd9a6926aae331dce5cb1dd6dbd1736771ddf1 2020051309:11:25-UTC ./usr/bin/linux/re
 b1db4d63de153337d8f07923df4500dea6d7f951 2020051308:48:12-UTC ./ccctools/ppo2cpp/codegen.cpp
 44647cea08dc9a1f83158b50dc50b83d19dc5f7c 2020051308:45:35-UTC ./ccctools/ppo2cpp/codegen.h
 c020a0c5e5970b818a2610194335f643efb8a49f 2020051308:44:41-UTC ./ccctools/ppo2cpp/parser.lem
-9c83206d79f41d0fc5756183a27ab96dbc792730 2020051308:40:34-UTC ./CHANGELOG_vermes
 5a45a2629b6af03fd2c93b8012ba115b325c040f 2020051308:40:18-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 c02809380e63690e31494efe355993d053a8eab5 2020051308:39:58-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
+7ddda66f86029f658066f889e9a6a6298b8a6cb7 2020051308:25:58-UTC ./tools/crypto/demo/sha512.prg
+63295af453cd5f7bc5c2f4197c674e547beec006 2020051308:24:35-UTC ./tools/crypto/sha512.cpp
 85f3c95184bdba2cb11519e00c9fa5d46ea7436c 2020050807:23:23-UTC ./ccclib/src/uic/compat/computername.prg
 b315dfaf93474d457bd8ea22afe0b2724d222fd0 2020050807:21:11-UTC ./ccclib/src/uic/compat/compat.prg
 8f273252010f966554f338ace2845aefc5fee1e0 2020050806:47:30-UTC ./usr/bin/linux/list
