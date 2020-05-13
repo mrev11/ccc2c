@@ -288,6 +288,7 @@ extern void pointer(void*);     // pointer létrehozása
 extern VALUE prototype_object(void);
 extern void  _clp_break(int);
 extern void  _clp_break0(int);
+extern void  _clp_breakblock(int);
 extern void  begseqpop_ret(void);
 extern void  begseqpop_loop(void);
 extern void  begseqpop_exit(void);

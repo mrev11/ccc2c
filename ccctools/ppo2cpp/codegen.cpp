@@ -2218,7 +2218,20 @@ int codegen_statement_expr(parsenode *p,void *v)//PROTO
 int codegen_begseq_BEGSEQ_newline_lstatement(parsenode *p,void *v)//PROTO
 {
     tabdepth++;
+    nltab();fprintf(code,"_clp_breakblock(0);//BREAKBLOCK");
     cgen(p,1); //lstatement
+    nltab();fprintf(code,"pop();//BREAKBLOCK");
+    tabdepth--;
+    return 0;
+}
+
+//---------------------------------------------------------------------------
+int codegen_begseq_BEGSEQ_expr_newline_lstatement(parsenode *p,void *v)//PROTO
+{
+    tabdepth++;
+    cgen(p,0); fprintf(code,"//BREAKBLOCK");
+    cgen(p,2); //lstatement
+    nltab();fprintf(code,"pop();//BREAKBLOCK");
     tabdepth--;
     return 0;
 }
