@@ -1,5 +1,18 @@
-1421030caf82e4d5a6cf32848eecee8d19690345 2020051809:44:10-UTC ./CHANGELOG_vermes
-e1cbd521f3551396616141b04cfc4b0a1cc4df75 2020051312:37:32-UTC ./log-install
+a6935d58279d44aba74564abd7cf52df198425b9 2020052508:34:58-UTC ./CHANGELOG_vermes
+74ed09ee78e998e95b41635796588abfdda06639 2020052508:31:41-UTC ./log-install
+f1a8eabc949237e600731089ea3a776196cd6d18 2020052508:31:36-UTC ./jt/jterminal/jterminal.jar
+02e825ae6ef8c8aff75a5a9ba0802fd795c80567 2020052508:13:18-UTC ./terminal/windows/terminal.cpp
+6a40d5a852776c93e22037166d613b23d5012d74 2020052508:11:53-UTC ./terminal/terminal-qt5/terminal-qt5.cpp
+bef669f474241fb2088ddbfb67208bea9bf42de3 2020052508:11:38-UTC ./terminal/gtk3/terminal-gtk3.cpp
+6ffdf9b21e95492e11fe112b1a26d0f910b2fa09 2020052508:11:10-UTC ./terminal/gtk/terminal-gtk.cpp
+d4e6204639ea2c836b07957fcad124b1b157c399 2020052508:10:24-UTC ./terminal/common/tcpio.cpp
+f986e78701bf08a221ced8e6348bee3b0a4a51d7 2020052508:08:20-UTC ./ccclib/src/windows/thread.cpp
+ee46671fbc86f709f2fdab94073304d6b9549589 2020052508:07:51-UTC ./ccclib/src/windows/signals.cpp
+8021e7f0fcb66e0aa3a7861ccaa955e8bf752951 2020052508:07:26-UTC ./ccclib/src/uic/termapi/termapi.cpp
+9875f3b4c794dca346b40bb96169f5800aaf6516 2020052508:05:52-UTC ./terminal/unix/terminal.cpp
+7272f60d27c27f1ada35f2430f1040f1a4398854 2020052508:05:46-UTC ./terminal/unix/terminal-xft.cpp
+0d47acfd0565745a0a17bf24d61f6f8852c9cf95 2020052508:05:39-UTC ./terminal/unix-termkey/ncterm.cpp
+c72f566a6dc84ab8604de2bab7beb39182d1eea3 2020052508:05:32-UTC ./terminal/unix-ncurses/ncterm.cpp
 8486efdfba5c951507d802fab93aaa47b80327a3 2020051312:35:20-UTC ./ccclib/src/break.cpp
 d3bdee37222e1354af7db926875c9fe97661f171 2020051309:12:17-UTC ./usr/bin/linux/gitstat
 bc3700770335e9435abd7e4d4311cfd5af08b864 2020051309:12:16-UTC ./usr/bin/linux/gitfollow
@@ -9,7 +22,6 @@ ec239fa8578263ee2c67e3791e11eefdad6e3784 2020051309:12:16-UTC ./usr/bin/linux/gi
 70eeda14d2801b91c50ca14b28f660290427b6a3 2020051309:12:14-UTC ./usr/bin/linux/filetime-restore
 e4b4498717e7182f1679944310d4fb95252a6a49 2020051309:12:14-UTC ./usr/bin/linux/filetime-save
 83f6e7e1232cd429b8d8653a63ec7a1cf12b234a 2020051309:12:14-UTC ./usr/bin/linux/firstpar
-11edd8b57830bf60a47bb49512e2b1455ee23985 2020051309:12:12-UTC ./jt/jterminal/jterminal.jar
 27e28576676d7c0262907f5ba9ed6b31afeda573 2020051309:12:11-UTC ./jt/jterminal/base64.class
 c0304be9909911cad315f6e8f471259a6b8100ef 2020051309:12:11-UTC ./jt/jterminal/getutil/cellcolor.class
 55954935eba6a13c2fd3fe21d9e03c4a99616391 2020051309:12:11-UTC ./jt/jterminal/getutil/checkfield.class
@@ -119,17 +131,13 @@ bae48c0fdbf6543cf952999b446b6eb00285ff73 2020050806:47:13-UTC ./usr/bin/linux/te
 3ee21778cdee1fea59b494d1eee9d19fec62eadb 2020050806:47:12-UTC ./usr/bin/linux/ncterm
 b0f34d6e87a187821fdd83f653677381d84758c2 2020050806:47:11-UTC ./usr/bin/linux/terminal
 726b0f8b7012cb7831ff066b318b2f85b0b8c39a 2020050806:47:11-UTC ./usr/bin/linux/terminal-xft
-cc26b1d4d2b95a04a73a587346893f02badcc5fa 2020050721:41:13-UTC ./ccclib/src/uic/termapi/termapi.cpp
 b1d245ad13562da341fb44f595616c4a85cba05d 2020050721:36:14-UTC ./ccclib/src/uic/termapi/remoteio.cpp
-747b12c765cc3b440848f5f7ea00f328175d744a 2020050721:25:48-UTC ./terminal/common/tcpio.cpp
 06ea55a15be28ac3a08e554ef2a7110199f38571 2020050712:13:41-UTC ./ccclib/src/uic/termenv.cpp
 b17e9969d534499c17f56b7c08b03f154d17360e 2020050712:07:09-UTC ./ccclib/src/uic/termapi/termcmd.h
 76d1cb43c0a429e5c57ebc98a237749b25881f9f 2020042113:38:22-UTC ./terminal/unix/keypress.cpp
 9b47ec4ef42f52801cc9e19ba369bc03647e3d5e 2020042113:21:23-UTC ./terminal/terminal-qt5/keycode_qt5.cpp
 65baadc2efbe1eceefaf5d3c6574cab143b1be18 2020042113:20:16-UTC ./terminal/common/inkey3.ch
 dd46bd177aa444b33e486df6b0041a074e3c24c6 2020042113:18:15-UTC ./terminal/common/keycode.h
-d6c3c9bedbb840d08967e5b8e8e0dcd931d65a72 2020042112:52:42-UTC ./terminal/gtk3/terminal-gtk3.cpp
-abd03b8b0da3762d1399ff305f90c7743a61281d 2020042112:50:05-UTC ./terminal/gtk/terminal-gtk.cpp
 a4a8752fb2054dbe1c09262736402f6d31ba6bb7 2020041121:39:49-UTC ./usr/bin/linux/fpath
 e30e022497446cd7d956041da0b2d796aac0903b 2020041121:39:49-UTC ./usr/bin/linux/lpath
 4104dd2271be81edd1c6291a5538d49a312d60f3 2020041121:39:48-UTC ./usr/bin/linux/pm
@@ -182,7 +190,6 @@ f822c98d9cf361a032fdb9c0d9ae699b76f63cc3 2020030709:12:15-UTC ./terminal/unix-nc
 1b0aacd64e57bd8ec6e3b36ac40a4b6f10d14e57 2020030708:22:11-UTC ./terminal/unix-termkey/parfile.bld
 842d94ed6d232b29dd7614ba3b717fc37a0918e4 2020030708:21:08-UTC ./terminal/unix-termkey/tktest/m
 26ff718dcb2b8f22b79c044cd09c5dfb83fa4005 2020030622:13:17-UTC ./terminal/unix-termkey/m
-c8ab7b5ef2fe83a5b5ea0637efd1fe6239b81286 2020030622:12:37-UTC ./terminal/unix-termkey/ncterm.cpp
 630e37cde0cd6091482e3bd29ab046300a0f8ff3 2020022313:18:42-UTC ./tools/csvreader/OLVASS
 16b8d1da925e95aafa771ed9c2ac2d276c73a107 2020022313:14:29-UTC ./tools/csvreader/regex/OLVASS
 482455b60d3a8cb9dbdc4dad908ee414497cb09f 2020022217:22:22-UTC ./tools/csvreader/a.csv
@@ -220,7 +227,6 @@ efa3b3360195d0786d7f1721f4b683d40beefecf 2019082619:06:37-UTC ./tutor/nlstext/nl
 3e40f3d451441ae74a3a16737bc7c8986ea6872d 2019082618:49:40-UTC ./tools/tran2cpp/tran2cpp.prg
 4cc76d0770912e9c1251c618a6daa921836f1c78 2019082618:32:16-UTC ./usr/include/hashtable_nls.h
 c9c7dca085bd01de0f0f8363a27c9dedb33ea6bc 2019082618:31:03-UTC ./setup/setup-unix/nlstext.cpp
-ad8b19a56d018fdd4f09046126592e1b4e0d63da 2019082614:13:19-UTC ./terminal/terminal-qt5/terminal-qt5.cpp
 b32ed0c7b6aaff2e9f56689beabfebb41e75cced 2019082606:24:50-UTC ./usr/include/xmethod6.h
 a422f2efbfc68e9a7c568c65d0d26e2166d3331b 2019082603:54:13-UTC ./tutor/nlstext/s.bat
 d10604b6de0774cd33122f04fa78c6f580556afc 2019082603:46:58-UTC ./tutor/nlstext/m.bat
@@ -238,8 +244,6 @@ fc2b0542d835dcc1d1dd6c07fb0af92abbfdb6b7 2019061012:44:57-UTC ./usr/build/linux/
 563ba05ea809c2d15e21f8f9c063976a8bba06cd 2019052220:03:03-UTC ./tools/pcre2/pcre2.cpp
 0487892b146ccc8dc7c18ccb632dc1e5d526704d 2019011707:21:51-UTC ./tutor/dtree/dtree.prg
 762e9d7ca2aadea69412c1459b42db63c671251e 2019011706:54:24-UTC ./terminal/terminal-test/screenwr/s
-4d3309690ec0ac07d6fef1a78598fc9dd3373d1c 2019010216:09:17-UTC ./terminal/unix/terminal-xft.cpp
-8affe91d2de683121dccc2b3c89be79ffd767d19 2018121909:39:25-UTC ./terminal/unix/terminal.cpp
 119a7d4be7039965e886cf93e81b4ee556a006fa 2018121419:11:43-UTC ./terminal/common/fontspec.cpp
 471f2be7137b6d49677f6acc83fac10bd3a40387 2018121320:57:16-UTC ./terminal/terminal-qt5/parfile.bld
 e245faf42bfb23c0fe16658877eb242e191d1634 2018121115:32:20-UTC ./terminal/terminal-qt5/m
@@ -352,7 +356,6 @@ d3679c6ec43782dc05e5bdcb1028914514eacd06 2018061014:33:52-UTC ./tutor/pm/netbsd/
 953e62d077b2b6f7f8b870a0c534484e1912552d 2018060311:29:36-UTC ./tools/textview/tv.prg
 9240776e90252d5ef1d29c198c7ab4c887be3583 2018060307:09:26-UTC ./tools/textview/history.prg
 099af730e0108726a06c067fca0727bb9a00c88b 2018052107:43:04-UTC ./setup/setup-windows/m.bat
-97ffc6e866d352d843fbce5404d3c916318cd60c 2018052107:41:18-UTC ./ccclib/src/windows/thread.cpp
 633ab7a645722ed7a6bbe7299d344e4a5e28512e 2018052107:04:54-UTC ./setup/setup-windows/xx.bat
 46ab6605cd4834caaa3775fc92f23edd5125d20a 2018052106:20:16-UTC ./ccclib/m
 c83ed7f449b886779a90a19fc5c3b609eb963ba8 2018052012:22:10-UTC ./setup/setup-windows/copy_from_ppo.bat
@@ -625,7 +628,6 @@ e16f8234d5d6661793d1727b6c790361566548d8 2017120909:05:53-UTC ./tools/pcre/pcre_
 965690042bd6e5e39383df07474e1e0c6d9f992a 2017120508:08:26-UTC ./usr/bin/linux/__unix.b
 11257e992097139aa23693fdc6ce113b3d97765d 2017120507:56:07-UTC ./ccctools/buildp/build.prg
 4897cedfc9140d18f50fd09e3311b9193af25a46 2017120507:55:38-UTC ./ccctools/buildp/build.hu.ver
-ecffbd01481b28da808c0ef0f7b66d68b19d7af1 2017120209:15:29-UTC ./terminal/unix-ncurses/ncterm.cpp
 fce79f3c75233f8fb69392edd1c5d48dcc0fc62e 2017112612:00:09-UTC ./tools/tdccmp/parfile.bld
 d591640a695dd272f92db7bc082ad05ac110dd2b 2017112611:47:05-UTC ./tools/tdccmp/mkdiff1
 e5c33891d88a6fc03d6633c64fe05082288b1c84 2017112611:42:07-UTC ./tools/tdccmp/mkdiff
@@ -647,7 +649,6 @@ a56ee90103e64dc4d6f39bf2792d4a9d74a9dcb4 2017052509:24:08-UTC ./tools/mask/msk2s
 112d4c06758f7b9c6accf18191131d016996ba4a 2017052506:46:02-UTC ./tutor/control/s.bat
 2fad6a9b55ff2de6fe7d10be21dde72e85cbb66a 2017052420:06:22-UTC ./ccclib/src/screenchar.cpp
 8429d67b5aea5402aa29a4d23eda69bd533a535e 2017052419:32:58-UTC ./ccclib/src/uic/brwmenu.prg
-49b47e982e9a54e6196cd58161c94f6567354215 2017052407:23:32-UTC ./terminal/windows/terminal.cpp
 a2419abcd98271bd8f33930cbe92c40654f1c571 2017052407:22:51-UTC ./terminal/common/colorext.cpp
 53dc488329cb25cb55e2aaedf232bfc73f691ff8 2017052315:13:21-UTC ./tutor/xbrwarr/s.bat
 9f6be0e299ff4ddfdb84c3a1bf20ddd678805534 2017052107:28:40-UTC ./tools/zgrep/zgrep.prg
@@ -1596,7 +1597,6 @@ ec3c716ae1ef44c3eeb67456a8914761626a5c14 2009011018:04:56-UTC ./ccctools/prg2ppo
 79f52db6858a6bcda4a8c08b9ad1b2c1c4ea4bfa 2008113013:23:31-UTC ./ccclib/src/unix/closeonexec.cpp
 66e4fcd615e653e3f724804065a96c8b2055aee3 2008113011:40:55-UTC ./ccclib/src/windows/closeonexec.cpp
 7c7db0851322537bb9ea7211eddb4c627a73bfcc 2008112711:06:07-UTC ./tutor/pm/solaris/pm.prg
-f5345ecc02df039d3e572bca9c6727e6496c196f 2008111311:11:19-UTC ./ccclib/src/windows/signals.cpp
 8c029371f2ee3e94bda3d8f7f8df3386a7deaab7 2008110709:18:34-UTC ./terminal/unix-ncurses/learnkey/s
 efece23ff0b8097e731265eaf525e72df88e0ea1 2008110416:01:02-UTC ./tools/sql2/driver-sqlite3/clean-all.b
 e6354f6000d00bafd0d47e3d5761c87ce46cc877 2008090815:02:04-UTC ./tabobj/utility.src/tbl2txt.prg
