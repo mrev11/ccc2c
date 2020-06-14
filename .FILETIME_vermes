@@ -1,6 +1,9 @@
-a6935d58279d44aba74564abd7cf52df198425b9 2020052508:34:58-UTC ./CHANGELOG_vermes
-74ed09ee78e998e95b41635796588abfdda06639 2020052508:31:41-UTC ./log-install
-f1a8eabc949237e600731089ea3a776196cd6d18 2020052508:31:36-UTC ./jt/jterminal/jterminal.jar
+da8e64e11895e8d73f45622805f18f8e23876359 2020061418:11:48-UTC ./CHANGELOG_vermes
+b28c38c16ff29a483eb347035b4c047ef5135e26 2020061415:41:03-UTC ./tools/crypto/demo/bcrypt.prg
+528bc8f74ecba7c13c2e36b7559e2cbeb375dbe3 2020061415:37:24-UTC ./tools/crypto/bcrypt_hash.cpp
+d09739706782bd2bd17e0361d638b38f09581b6d 2020061318:38:10-UTC ./tools/crypto/demo/bcrypt_test.prg
+41d8e7cb8e390e7eb5f201c7d3cd1876c5dc0e72 2020053109:25:52-UTC ./log-install
+7908d6ce01decd7cc76b6f0d452d8309b4e404a4 2020053109:25:47-UTC ./jt/jterminal/jterminal.jar
 02e825ae6ef8c8aff75a5a9ba0802fd795c80567 2020052508:13:18-UTC ./terminal/windows/terminal.cpp
 6a40d5a852776c93e22037166d613b23d5012d74 2020052508:11:53-UTC ./terminal/terminal-qt5/terminal-qt5.cpp
 bef669f474241fb2088ddbfb67208bea9bf42de3 2020052508:11:38-UTC ./terminal/gtk3/terminal-gtk3.cpp
