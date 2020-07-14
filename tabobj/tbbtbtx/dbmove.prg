@@ -59,6 +59,22 @@
 //  állását) a tabPosition()==0 reláció mutatja. 
 
 
+
+******************************************************************************
+// Szûrés
+******************************************************************************
+static function tabInscope(t)
+    if( 42==xvgetbyte(t[TAB_RECBUF],0) )
+        //deleted
+        return .f.
+
+    elseif( t[TAB_FILTER]!=NIL.and.!eval(t[TAB_FILTER]) )
+        //filtered out
+        return .f. 
+    end
+    return .t.
+
+
 ******************************************************************************
 function tabSkip(table,stp)  //skip elõre/hátra
 
