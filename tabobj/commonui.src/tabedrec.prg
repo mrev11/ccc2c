@@ -113,13 +113,13 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
     brwArray(brw,value)
 
-    brwColumn(brw,"Megnevezes",brwABlock(brw,MODR_NAME),widthName)
+    brwColumn(brw,@"Name",brwABlock(brw,MODR_NAME),widthName)
 
     if( "T"$opt )
-        brwColumn(brw,"Tipus",brwABlock(brw,MODR_TYPE),7)
+        brwColumn(brw,@"Type",brwABlock(brw,MODR_TYPE),7)
     end
 
-    brwColumn(brw,"Tartalom",{||formaz(brw)},widthData)
+    brwColumn(brw,@"Data",{||formaz(brw)},widthData)
     dcol:=brw:colcount //editalhato oszlop szama
 
     if( "S"$opt )
@@ -128,13 +128,13 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
     brwMenuName(brw,"["+rightName(tabPathname(tab),30)+"]")
     if( "E"$opt )
-        brwMenu(brw,"Kilep","Kilep a modositasok tarolasa nelkul",{||.f.},"K")
+        brwMenu(brw,@"Quit",@"Quit without saving",{||.f.},"Q")
     end
     if( "M"$opt )
-        brwMenu(brw,"Modosit","Mezotartalmak modositasa",{||edit(brw,dcol),.t.},"M")
+        brwMenu(brw,@"Modify",@"Modify field data",{||edit(brw,dcol),.t.},"M")
     end
     if( "S"$opt )
-        brwMenu(brw,"Tarol","Modositott rekord beirasa az adatbazisba",{||beir(brw,tab),.f.},"T")
+        brwMenu(brw,@"Save",@"Save modified record to database",{||beir(brw,tab),.f.},"S")
     end
     if( opt=="" )
         brwMenu(brw,"","",{||.f.})

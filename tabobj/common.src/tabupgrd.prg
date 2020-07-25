@@ -175,7 +175,7 @@ local logged
 
     //konvertalunk
     
-    toupgrade:="Copy  "+tabPathName(tabfil)
+    toupgrade:=@"Copy  "+tabPathName(tabfil)
     total:="/"+alltrim(str(tabLastrec(tabfil)))
     pos:=0
     msg:=message(msg,toupgrade+str(pos)+total)

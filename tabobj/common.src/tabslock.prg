@@ -69,7 +69,7 @@ local n:=0, cnt, hnd
             if( ++n>50 ) //5 sec alatt 50-szer
 
                 taberrOperation("tabSLock")
-                taberrDescription("Szemaforlock sikertelen")
+                taberrDescription(@"semaphor lock failed")
                 taberrUserblock(usrblk,"PUK")
 
                 if( valtype(usrblk)=="B" )
@@ -123,7 +123,7 @@ local sfil:=sdir+dirsep()+f
         
         if( empty(directory(lower(sdir),"HD")) )
             taberrOperation("tabSlock")
-            taberrDescription("Szemafor directory nem hozhato letre")
+            taberrDescription(@"failed creating semaphor directory")
             taberrFilename(sdir)
             tabError(table)
         end

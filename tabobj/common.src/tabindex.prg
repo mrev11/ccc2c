@@ -59,7 +59,7 @@ local n, column:=index[IND_COL], cix, col
         col:=tabColumn(table)[cix]
         if(tabMemoField(table,col))
             taberrOperation("tabAddIndex")
-            taberrDescription("Memo mezo nem megengedett")
+            taberrDescription(@"memo field not permitted")
             taberrArgs(col)
             tabError(table) 
         end
@@ -94,7 +94,7 @@ local aIndex:=table[TAB_INDEX], name
 
         if( ind==0 )
             taberrOperation("tabGetIndex")
-            taberrDescription("Nemletezo indexnev")
+            taberrDescription(@"unknown index name")
             taberrArgs(name)
             tabError(table) 
         end

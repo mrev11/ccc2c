@@ -146,7 +146,7 @@ local key   :=column[COL_KEYFLAG]
 
     else
         taberrOperation("tabSetColBlock")
-        taberrDescription("Rossz oszlopdefinicio")
+        taberrDescription(@"invalid column specification")
         taberrArgs(column)
         tabError(table)
 
@@ -170,13 +170,13 @@ static function islocked(table)
         //if( tabEof(table) )
         if( tabPosition(table)==0 ) //2019-10-08
             taberrOperation("tabEvalColumn")
-            taberrDescription("Iras EOF-ba")
+            taberrDescription(@"writing EOF")
             tabError(table)
         end
 
         if( !tabIsLocked(table) )
             taberrOperation("tabEvalColumn")
-            taberrDescription("Rekordlock szukseges")
+            taberrDescription(@"record lock requiered")
             tabError(table)
         end
     end

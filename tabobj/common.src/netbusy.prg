@@ -24,13 +24,13 @@
 // Visszaad egy kodblokkot, amit egy sikertelen rlock hajthat vegre.
 //
 function busyRecord()
-    return {||alert("A rekord foglalt!",{"Kilep"}),.f.}
+    return {||alert(@"Record lock failed!",{@"Quit"}),.f.}
 
 ************************************************************************
 // Visszaad egy kodblokkot, amit egy sikertelen append hajthat vegre.
 //
 function busyFile(fname)
 local fn:=if(!empty(fname),": "+fname,"!")
-    return {||alert("A fajl foglalt"+fn,{"Kilep"}),.f.}
+    return {||alert(@"File lock failed"+fn,{@"Quit"}),.f.}
 
 ************************************************************************

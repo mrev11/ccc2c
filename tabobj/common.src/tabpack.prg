@@ -68,7 +68,7 @@ local save:=tabSave(table)
 
     if( tabIsOpen(table)!=OPEN_EXCLUSIVE )
         taberrOperation("tabPack")
-        taberrDescription("Exclusive open szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(table) 
     end
     
@@ -99,7 +99,7 @@ local logged
 
     if( tabIsOpen(table)!=OPEN_EXCLUSIVE )
         taberrOperation("tabPack")
-        taberrDescription("Exclusive open szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(table) 
     end
     
@@ -135,7 +135,7 @@ local logged
 
     if( tabIsOpen(table)!=OPEN_EXCLUSIVE )
         taberrOperation("tabPack")
-        taberrDescription("Exclusive open szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(table) 
     end
     
@@ -151,13 +151,13 @@ local logged
 
         if( !tabBackup(table) )
             taberrOperation("tabPack")
-            taberrDescription("Regi peldany mentese sikertelen")
+            taberrDescription(@"failed saving old file")
             tabError(table) 
         end
 
         if( !tabDelTable(table) )
             taberrOperation("tabPack")
-            taberrDescription("Regi peldany torlese sikertelen")
+            taberrDescription(@"failed deleting old file")
             tabError(table) 
         end
 
@@ -193,7 +193,7 @@ local logged
 
     if( tabIsOpen(table)!=OPEN_EXCLUSIVE )
         taberrOperation("tabPack")
-        taberrDescription("Exclusive open szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(table) 
     end
     
@@ -211,13 +211,13 @@ local logged
 
         if( !tabBackup(table) )
             taberrOperation("tabPack")
-            taberrDescription("Regi peldany mentese sikertelen")
+            taberrDescription(@"failed saving old file")
             tabError(table) 
         end
 
         if( !tabDelTable(table) )
             taberrOperation("tabPack")
-            taberrDescription("Regi peldany torlese sikertelen")
+            taberrDescription(@"failed deleting old file")
             tabError(table) 
         end
 
@@ -249,7 +249,7 @@ local logged
  
     if( tabIsOpen(table)!=OPEN_EXCLUSIVE )
         taberrOperation("tabZap")
-        taberrDescription("Exclusive open szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(table)
     end
     

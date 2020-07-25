@@ -121,7 +121,7 @@ local key,keyf,pos
 
     if( ord<=0 )
         taberrOperation("tabSeek")
-        taberrDescription("Nincs vezerlo index")
+        taberrDescription(@"no control index")
         tabError(table)
 
     elseif( valtype(exp)=="A" )
@@ -188,11 +188,11 @@ static function tabExpIndex(table,aexp) //tombbol indexkifejezes
 // (column az aktualis indexet alkoto oszlopok sorszamanak listaja)
 
 local column:=table[TAB_INDEX][table[TAB_ORDER]][IND_COL],n
-local col,type,width,dec,segval,key:=""
+local col,type,width,dec,segval,key:=x""
 
     if( len(column)<len(aexp) )
         taberrOperation("tabExpIndex")
-        taberrDescription("Kulcslista hosszabb")
+        taberrDescription(@"key list longer")
         taberrArgs(aexp)
         tabError(table)
     end
@@ -217,7 +217,7 @@ local col,type,width,dec,segval,key:=""
             key+=dtos(segval)
 
         elseif( type=="L" )
-            key+=if(segval,"T","F")
+            key+=if(segval,a"T",a"F")
         end
     next
 
@@ -368,7 +368,7 @@ local key,keyf,n:=0
                 loop
             else
                 taberrOperation("tabEstablishPosition")
-                taberrDescription("A file nem pozicionalhato")
+                taberrDescription(@"file not positioned")
                 taberrArgs({KEYORDER,key,keyf}) 
                 tabError(table)
             end
@@ -435,7 +435,7 @@ local err,buffer
     if( table[TAB_RECLEN]!=_db_read(table[TAB_BTREE],buffer,table[TAB_RECPOS]) )
         err:=readerrorNew()
         err:operation:="tabReadOriginalRecordFromDisk"
-        err:description:="_db_read failed"
+        err:description:=@"_db_read failed"
         err:filename:=tabPathName(table)
         err:oscode:=ferror()
         break(err)

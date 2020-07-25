@@ -46,7 +46,7 @@ local msg,msgtotal,msgdbnam
     hnd1:=fopen(db1,FO_READ+FO_EXCLUSIVE)
     if( hnd1<0 )
         taberrOperation("copydbf")
-        taberrDescription("DBF megnyitasa sikertelen")
+        taberrDescription(@"DBF open failed")
         taberrFilename(db1)
         tabError()
     end
@@ -54,7 +54,7 @@ local msg,msgtotal,msgdbnam
     hnd2:=fcreate(db2)
     if( hnd2<0 )
         taberrOperation("copydbf")
-        taberrDescription("DBF letrehozasa sikertelen")
+        taberrDescription(@"DBF create failed")
         taberrFilename(db2)
         tabError()
     end
@@ -63,13 +63,13 @@ local msg,msgtotal,msgdbnam
 
     if( 32>fread(hnd1,@buffer,32) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejlec olvasasi hiba")
+        taberrDescription(@"DBF read error in header")
         taberrFilename(db1)
         tabError()
     end
     if( 32!=fwrite(hnd2,buffer) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejlec irasi hiba")
+        taberrDescription(@"DBF write error in header")
         taberrFilename(db2)
         tabError()
     end
@@ -79,23 +79,23 @@ local msg,msgtotal,msgdbnam
     reclen:=xvgetlit16(buffer,10,0) 
     fldcnt:=(hdrlen-32-(hdrlen%32))/32
 
-    ? "rekordszam   :", reccnt
-    ? "fejlec hossz :", hdrlen
-    ? "rekord hossz :", reclen
-    ? "mezok szama  :", fldcnt 
+    ? @"rekordszam   :", reccnt
+    ? @"fejlec hossz :", hdrlen
+    ? @"rekord hossz :", reclen
+    ? @"mezok szama  :", fldcnt 
     
     header:=space(hdrlen-32)
 
     if( hdrlen-32>fread(hnd1,@header,hdrlen-32) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejlec olvasasi hiba")
+        taberrDescription(@"DBF read error in header")
         taberrFilename(db1)
         tabError()
     end
 
     if( hdrlen-32!=fwrite(hnd2,header) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejlec irasi hiba")
+        taberrDescription(@"DBF write error in header")
         taberrFilename(db2)
         tabError()
     end
@@ -123,7 +123,7 @@ local msg,msgtotal,msgdbnam
 
     if( offs-1!=reclen )
         taberrOperation("copydbf")
-        taberrDescription("DBF formatuma hibas")
+        taberrDescription(@"DBF invalid format")
         taberrFilename(db1)
         tabError()
     end
@@ -144,7 +144,7 @@ local msg,msgtotal,msgdbnam
         if( !left(buffer,1)=="*" ) //nem torolt
             if( fwrite(hnd2,buffer)!=reclen )
                 taberrOperation("copydbf")
-                taberrDescription("DBF irasi hiba")
+                taberrDescription(@"DBF write failed")
                 taberrFilename(db2)
                 tabError()
             end

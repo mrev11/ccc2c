@@ -67,7 +67,7 @@ local pict:=replicate(",999",5)
 ***************************************************************************
 function pozitiv(g)
     if(g:varGet()<0)
-        alert("Csak pozitiv osszeg megengedett",{"Javit"})
+        alert(@"Only positive number allowed here",{@"Fix"})
         return .f.
     end
     return .t.
@@ -81,7 +81,7 @@ function getPozitiv(g,dec,val)
 ***************************************************************************
 function negativ(g)
     if(g:varGet()>0)
-        alert("Csak negativ osszeg megengedett",{"Javit"})
+        alert(@"Only negative number allowed here",{@"Fix"})
         return .f.
     end
     return .t.
@@ -197,7 +197,7 @@ local never:={||.f.}, errobj
                 errobj:severity:=ES_WARNING
                 errobj:subSystem:="GETUTIL"
                 errobj:operation:="getTipValue"
-                errobj:description:="Hibas default ertek"
+                errobj:description:=@"invalid default value"
                 break(errobj)
             end
         end

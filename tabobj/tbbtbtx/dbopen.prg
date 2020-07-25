@@ -92,10 +92,10 @@ local errblk, err
             tabLoadDBF(table,dbf)
 
         else
-            n:=alert(fname+" nem letezik, letre akarja hozni?",{"Letrehoz","Kilep"})
+            n:=alert(fname+@" not found, create?",{@"Create",@"Quit"})
             if( n==2 )
                 taberrOperation("tabOpen")
-                taberrDescription("Nem talalhato")
+                taberrDescription(@"file not found")
                 tabError(table)
             else
                 tabCreate(table)
@@ -113,7 +113,7 @@ local errblk, err
 
     if( valtype(mode)!="N".or.mode<OPEN_READONLY.or.OPEN_APPEND<mode )
         taberrOperation("tabOpen")
-        taberrDescription("Ervenytelen nyitasi mod")
+        taberrDescription(@"invalid open mode")
         taberrArgs(mode)
         tabError(table)
     end
@@ -128,7 +128,7 @@ local errblk, err
             tabSunlock(table)
 
             taberrOperation("tabOpen")
-            taberrDescription("A file foglalt") 
+            taberrDescription(@"open failed") 
             taberrUserBlock(userblock,"PUK")
 
             if( valtype(userblock)=="B" )
@@ -224,7 +224,7 @@ local memohnd
         memohnd:=memoOpen(lower(tabMemoName(table)))
         if( memohnd<0 )
             taberrOperation("tabUse")
-            taberrDescription("Memofile megnyitasa sikertelen")
+            taberrDescription(@"open failed")
             taberrFilename(lower(tabMemoName(table)))
             tabError(table)
         end

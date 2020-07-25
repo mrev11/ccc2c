@@ -41,7 +41,7 @@ local err, msg
     if( hnd<0 )
 
         taberrOperation("tabCopyTo")
-        taberrDescription("File letrehozasa sikertelen")
+        taberrDescription(@"create failed")
         taberrArgs({fileName})
         tabError(table)
     end
@@ -54,13 +54,13 @@ local err, msg
         next
     end
     
-    msg:=message(msg,"Exportalt rekordok:"+str(count))
+    msg:=message(msg,@"Exported:"+str(count))
     
     tabGotop(table)
     while( !tabEof(table) ) 
         count++
         line:=""
-        msg:=message(msg,"Exportalt rekordok:"+str(count))
+        msg:=message(msg,@"Exported:"+str(count))
     
         for n:=1 to len(flist)
 

@@ -40,14 +40,14 @@ local msg,total,cnt:=0
     fd:=fopen(btname,FO_READWRITE+FO_EXCLUSIVE)
     if( fd<0 )
         taberrOperation("tabCopybt")
-        taberrDescription("File nyitasi hiba (fd)")
+        taberrDescription(@"failed opening file (fd)")
         tabError(table) 
     end
 
     db:=_db_open(fd)
     if( db==NIL )
         taberrOperation("tabCopybt")
-        taberrDescription("File nyitasi hiba (db)")
+        taberrDescription(@"failed opening file (db)")
         tabError(table) 
     end
 
@@ -67,7 +67,7 @@ local msg,total,cnt:=0
     //sikere fuggjon a recno index epsegetol, es nem akarok a data
     //page-ek listaba fuzesevel sem veszodni.
 
-    recbuf:=space(ps) //ebbe biztosan belefer
+    recbuf:=replicate(x"20",ps) //ebbe biztosan belefer
 
     for n:=2 to pn-1  //header(0) es resource(1) kihagyva
         i:=0
@@ -86,7 +86,7 @@ local msg,total,cnt:=0
                 table[TAB_RECBUF]:=left(recbuf,rb)
                 tabCommit(table)
                 if( ++cnt%1103==0 )
-                    msg:=message(msg,"Pack "+tfile+str(cnt)+total)
+                    msg:=message(msg,@"Pack "+tfile+str(cnt)+total)
                 end
             end
         end
@@ -136,14 +136,14 @@ local column,memblk,mx,mv
     fd:=fopen(btname,FO_READWRITE+FO_EXCLUSIVE)
     if( fd<0 )
         taberrOperation("tabCopybt")
-        taberrDescription("File nyitasi hiba (fd)")
+        taberrDescription(@"failed opening file (fd)")
         tabError(table) 
     end
 
     db:=_db_open(fd)
     if( db==NIL )
         taberrOperation("tabCopybt")
-        taberrDescription("File nyitasi hiba (db)")
+        taberrDescription(@"failed opening file (db)")
         tabError(table) 
     end
 
@@ -152,7 +152,7 @@ local column,memblk,mx,mv
         mh:=memoOpen(btxname)
         if( mh<0 )
             taberrOperation("tabCopybt")
-            taberrDescription("File nyitasi hiba (mh)")
+            taberrDescription(@"failed opening file (mh)")
             tabError(table) 
         end
     end
@@ -194,7 +194,7 @@ local column,memblk,mx,mv
         aadd(fdkey,fopen(kfilnam,FO_CREATE+FO_TRUNCATE+FO_READWRITE+FO_NOLOCK))
         if( atail(fdkey)<0 )
             taberrOperation("tabCopybt")
-            taberrDescription("File letrehozasi hiba (fdkey)")
+            taberrDescription(@"failed creating file (fdkey)")
             tabError(table) 
         end
     next
@@ -241,16 +241,16 @@ local column,memblk,mx,mv
 
                 //serult file
                 taberrOperation("tabCopybt")
-                taberrDescription("File olvasasi hiba (rb!=reclen)")
+                taberrDescription(@"read failed (rb!=reclen)")
                 tabError(table) 
 
-            elseif( left(recbuf,1)=="*" )
+            elseif( left(recbuf,1)==a"*" )
                 //torolt rekord
  
             else
 
                 if( ++cnt%PRIME==0 )
-                    msg:=message(msg,"COPY "+btname+str(cnt)+total)
+                    msg:=message(msg,@"COPY "+btname+str(cnt)+total)
                 end
 
                 #ifdef MEMOPACK
@@ -336,13 +336,13 @@ local n,rb,stat
 
     if( 0>_db_setord(db1,keynam) )
         taberrOperation("tabCopybt")
-        taberrDescription("Index hianyzik (_db_setord<0)")
+        taberrDescription(@"no index (_db_setord<0)")
         taberrArgs({keynam})
         tabError(table) 
     end
     
     keylen:=tabKeyLength(table,ord)  
-    keyval:=space(keylen)
+    keyval:=replicate(x"00",keylen)
 
     if( ord>0 )
         __bt_sortkey(KEYNAME(table,ord),rcount,keylen)
@@ -352,14 +352,14 @@ local n,rb,stat
     for n:=1 to rcount
     
         if( n%PRIME==0 .and. msg!=NIL )
-            message(msg,"COPY "+btname+" ("+keynam+")"+str(n))
+            message(msg,@"COPY "+btname+" ("+keynam+")"+str(n))
         end
 
         rb:=fread(fd,@keyval,keylen)
 
         if( rb!=keylen )
             taberrOperation("tabCopybt")
-            taberrDescription("File olvasasi hiba (rb!=keylen)")
+            taberrDescription(@"read failed (rb!=keylen)")
             taberrArgs({keynam,ferror()})
             tabError(table) 
         end
@@ -367,7 +367,7 @@ local n,rb,stat
         stat:=_db_put(db1,keyval)
         if( stat!=0 )
             taberrOperation("tabCopybt")
-            taberrDescription("Index epitesi hiba (_db_put!=0)")
+            taberrDescription(@"failed building index (_db_put!=0)")
             taberrArgs({keynam,stat})
             tabError(table) 
         end

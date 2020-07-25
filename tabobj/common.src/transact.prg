@@ -173,7 +173,7 @@ local tranid,recno
 
         if( debug )   
             ? replicate("-",79)
-            ? "Synchronized"
+            ? @"Synchronized"
             ? replicate("-",79)
         end
  
@@ -236,7 +236,7 @@ local err
     if( activetransaction .and. (mode==NIL .or. table[TAB_TRANID]!=NIL) )
         err:=errorNew()
         err:operation:=op
-        err:description:="not allowed in transaction"
+        err:description:=@"not allowed in transaction"
         err:filename:=tabPathName(table)
         break(err)
     end
@@ -267,7 +267,7 @@ local err, n, t
         if( tx<1 .or. len(tranindex)<tx )
             err:=errorNew()
             err:operation:="tranRollback"
-            err:description:="invalid transaction ID"
+            err:description:=@"invalid transaction ID"
             break(err)
         end
  
@@ -309,7 +309,7 @@ local savepos
         if( tx<1 .or. len(tranindex)<tx )
             err:=errorNew()
             err:operation:="tranCommit"
-            err:description:="invalid transaction ID"
+            err:description:=@"invalid transaction ID"
             break(err)
         end
 
@@ -319,7 +319,7 @@ local savepos
     
             if( debug )
                 ? replicate("-",79)
-                ? "Pending updates"
+                ? @"Pending updates"
                 ? replicate("-",79)
             end
             
@@ -418,10 +418,10 @@ local n, keyx
     //alabb mar nem modositjuk a tablat,
     //es a rekordbuffert sem olvassuk
 
-    ? "table:", tabFile(tab), " recno:", pos, " key:", keyx
+    ? @"table:", tabFile(tab), @" recno:", pos, @" key:", keyx
     
     if( !del0 .and. del1 )
-        ?? " deleted"
+        ?? @" deleted"
         for n:=1 to tabFcount(tab)
             v0:=rec0[n]
             if( !empty(v0) )
@@ -430,7 +430,7 @@ local n, keyx
         next
  
     elseif( del0 .and. !del1 )
-        ?? " appended"
+        ?? @" appended"
         for n:=1 to tabFcount(tab)
             v1:=rec1[n]
             if( !empty(v1) )

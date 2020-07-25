@@ -72,7 +72,7 @@ memoError(21,"memoOpen","read error")
 
 ***************************************************************************    
 static blocksize:={}                             //dbm filenkent kulon blocksize
-static formatstr:="DBM Format 1.0"               //formatum azonosito string
+static formatstr:=a"DBM Format 1.0"              //formatum azonosito string
 
 #define MEMO_BLKSIZ   blocksize[hnd+1]           //blokkmeret
 #define MEMO_HDRSIZ   10                         //header meret
@@ -155,7 +155,7 @@ local header, nb
     
         nb:=fwrite(hnd,header,blksiz)
         if( nb!=blksiz )
-            memoError(1,"memoCreate","write error")
+            memoError(1,"memoCreate",@"write error")
         end
         
         fclose(hnd)
@@ -183,21 +183,21 @@ local buffer:=space(16), nb
 
         nb:=fread(hnd,@buffer,16)
         if( nb!=16 )
-            memoError(18,"memoOpen","read error")
+            memoError(18,"memoOpen",@"read error")
         end
 
         nb:=fread(hnd,@buffer,16)
         if( nb!=16 )
-            memoError(19,"memoOpen","read error")
+            memoError(19,"memoOpen",@"read error")
         end
 
         if( buffer!=formatstr )
-            memoError(20,"memoOpen","unknown format")
+            memoError(20,"memoOpen",@"unknown format")
         end
         
         nb:=fread(hnd,@buffer,16)
         if( nb!=16 )
-            memoError(21,"memoOpen","read error")
+            memoError(21,"memoOpen",@"read error")
         end
         
         MEMO_BLKSIZ:=val(buffer)
@@ -269,7 +269,7 @@ local offset, n
         fseek(hnd,offset[n],FS_SET)
         nb:=fwrite(hnd,block)
         if( nb!=MEMO_BLKSIZ )
-            memoError(2,"memoAddValue","write error")
+            memoError(2,"memoAddValue",@"write error")
         end
 
         written+=towrite
@@ -283,7 +283,7 @@ local offset, n
 ***************************************************************************    
 function memoGetValue(hnd,offset)
 
-local value:=""
+local value:=a""
 local buffer:=space(MEMO_BLKSIZ)
 local nbrd,ndat,nofs,lofs
 local blknum:=0
@@ -309,7 +309,7 @@ local blknum:=0
                 //runtime error
                 //valoszinuleg nem az elso elemetol
                 //akarja olvasni a listat
-                memoError(3,"memoGetValue","invalid memo offset")
+                memoError(3,"memoGetValue",@"invalid memo offset")
             end
         else
 
@@ -321,14 +321,14 @@ local blknum:=0
                 //talan beletevedtunk egy masik listaba,
                 //vagy hurkot talaltunk
 
-                memoError(4,"memoGetValue","invalid memo chain")
+                memoError(4,"memoGetValue",@"invalid memo chain")
             end
         end
         
         
         if( ndat<0 .or. MEMO_DATSIZ<ndat )
             //runtime error
-            memoError(5,"memoGetValue","invalid data size in memo block")
+            memoError(5,"memoGetValue",@"invalid data size in memo block")
 
         elseif( nofs==0 ) //utolso blokk
             value+=getdata(buffer,ndat)
@@ -338,7 +338,7 @@ local blknum:=0
                 //a lista nem ott vegzodik, 
                 //ahol az elso elemeben talalt lastoffs
                 //mezo szerint kellene
-                memoError(6,"memoGetValue","invalid end of memo list")
+                memoError(6,"memoGetValue",@"invalid end of memo list")
             end
 
             return value
@@ -350,7 +350,7 @@ local blknum:=0
     end
 
     //runtime error
-    memoError(7,"memoGetValue","invalid memo file format/read error")
+    memoError(7,"memoGetValue",@"invalid memo file format/read error")
 
     return NIL
 
@@ -374,13 +374,13 @@ local nb
     fseek(hnd,0,FS_SET)
     nb:=fread(hnd,@header,MEMO_HDRSIZ)
     if( nb!=MEMO_HDRSIZ )
-        memoError(8,"memoDeleteValue","read error")
+        memoError(8,"memoDeleteValue",@"read error")
     end
 
     fseek(hnd,offset,FS_SET)
     nb:=fread(hnd,@buffer,MEMO_HDRSIZ)
     if( nb!=MEMO_HDRSIZ )
-        memoError(9,"memoDeleteValue","read error")
+        memoError(9,"memoDeleteValue",@"read error")
     end
     
     //itt ellenorzes celjabol
@@ -391,7 +391,7 @@ local nb
         //runtime error
         //valoszinuleg nem az elso elemetol
         //akarja torolni a listat
-        memoError(10,"memoDeleteValue","invalid memo offset")
+        memoError(10,"memoDeleteValue",@"invalid memo offset")
     end
     
     set signal disable
@@ -403,14 +403,14 @@ local nb
         fseek(hnd,offset,FS_SET)
         nb:=fwrite(hnd,buffer,MEMO_HDRSIZ)
         if( nb!=MEMO_HDRSIZ )
-            memoError(11,"memoDeleteValue","write error")
+            memoError(11,"memoDeleteValue",@"write error")
         end
     end
     
     fseek(hnd,lastoffs,FS_SET)
     nb:=fwrite(hnd,header,MEMO_HDRSIZ)
     if( nb!=MEMO_HDRSIZ )
-        memoError(12,"memoDeleteValue","write error")
+        memoError(12,"memoDeleteValue",@"write error")
     end
     
     header:=compileheader(offset,0,0)
@@ -418,7 +418,7 @@ local nb
     fseek(hnd,0,FS_SET)
     nb:=fwrite(hnd,header,MEMO_HDRSIZ)
     if( nb!=MEMO_HDRSIZ )
-        memoError(13,"memoDeleteValue","write error")
+        memoError(13,"memoDeleteValue",@"write error")
     end
 
     set signal enable
@@ -449,7 +449,7 @@ local nb
         fseek(hnd,noffs,FS_SET)
         nb:=fread(hnd,@buffer,MEMO_HDRSIZ)
         if( nb!=MEMO_HDRSIZ )
-            memoError(14,"getfreeblocks","read error")
+            memoError(14,"getfreeblocks",@"read error")
         end
 
         noffs:=getnextoffs(buffer)
@@ -468,7 +468,7 @@ local nb
         fseek(hnd,noffs,FS_SET)
         nb:=fread(hnd,@buffer,MEMO_HDRSIZ)
         if( nb!=MEMO_HDRSIZ )
-            memoError(15,"getfreeblocks","read error")
+            memoError(15,"getfreeblocks",@"read error")
         end
 
         noffs:=getnextoffs(buffer)
@@ -478,7 +478,7 @@ local nb
     buffer:=compileheader(noffs,0,0)
     nb:=fwrite(hnd,buffer,MEMO_HDRSIZ)
     if( nb!=MEMO_HDRSIZ )
-        memoError(16,"getfreeblocks","write error")
+        memoError(16,"getfreeblocks",@"write error")
     end
 
 
@@ -488,7 +488,7 @@ local nb
         noffs:=fseek(hnd,0,FS_END)
         nb:=fwrite(hnd,replicate(chr(0),MEMO_BLKSIZ),MEMO_BLKSIZ)
         if( nb!=MEMO_BLKSIZ )
-            memoError(17,"getfreeblocks","write error")
+            memoError(17,"getfreeblocks",@"write error")
         end
         aadd(blocks,noffs)
     end

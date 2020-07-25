@@ -45,7 +45,7 @@ local fd,o,n
     
         if( empty(o:=tabGetIndex(table,order[n])) )
             taberrOperation(OPERATION)
-            taberrDescription("Invalid control")
+            taberrDescription(@"invalid control")
             taberrArgs({order[n]})
             tabError(table) 
         else
@@ -56,7 +56,7 @@ local fd,o,n
         //if( 0>(fd:=fcreate(KEYFILE(table,o),FO_READWRITE+FO_SHARED)) )
         if( 0>(fd:=fopen(KEYFILE(table,o),FO_CREATE+FO_TRUNCATE+FO_READWRITE+FO_NOLOCK)) )
             taberrOperation(OPERATION)
-            taberrDescription("File letrehozasi hiba (fd<0)")
+            taberrDescription(@"failed creating file (fd<0)")
             tabError(table) 
         else
             aadd(fdkey,fd)
@@ -71,7 +71,7 @@ local fd,o,n
     tabGotop(table)
     while( !tabEof(table) )
         if( ++rcount%PRIME==0 )
-            msg:=message(msg,"Index "+tabFile(table)+str(rcount)+total)
+            msg:=message(msg,@"Index "+tabFile(table)+str(rcount)+total)
         end
         for n:=1 to len(ord)
             fwrite(fdkey[n],tabKeyCompose(table,ord[n]))
@@ -89,7 +89,7 @@ local fd,o,n
     end
     
     if( resource==.t. )
-        _db_addresource(table[TAB_BTREE],_arr2chr(tabIndex(table)),1) 
+        _db_addresource(table[TAB_BTREE],arr2bin(tabIndex(table)),1) 
     end
  
     if( msg!=NIL )
@@ -102,7 +102,7 @@ local fd,o,n
 static function __copy_keys(table,fdkey,rcount,keylen,keynam,msg)
 
 local db1:=table[TAB_BTREE]
-local n,key:=space(keylen),rb,stat
+local n,key:=replicate(x"20",keylen),rb,stat
 local tmpnam:="<#>", total 
  
     _db_delord(db1,keynam) 
@@ -110,7 +110,7 @@ local tmpnam:="<#>", total
 
     if( 0>_db_creord(db1,tmpnam) )
         taberrOperation(OPERATION)
-        taberrDescription("_db_creord failed)")
+        taberrDescription(@"_db_creord failed)")
         taberrArgs({"<*>"})
         tabError(table) 
     end
@@ -121,13 +121,13 @@ local tmpnam:="<#>", total
     fseek(fdkey,0,FS_SET)
     for n:=1 to rcount
         if( n%PRIME==0 .and. msg!=NIL )
-            message(msg,"Build "+tabFile(table)+" ("+keynam+")"+str(n)+total)
+            message(msg,@"Build "+tabFile(table)+" ("+keynam+")"+str(n)+total)
         end
 
         rb:=fread(fdkey,@key,keylen)
         if( rb!=keylen )
             taberrOperation(OPERATION)
-            taberrDescription("File olvasasi hiba (rb!=keylen)")
+            taberrDescription(@"failed reading file (rb!=keylen)")
             taberrArgs({keynam,ferror()})
             tabError(table) 
         end
@@ -135,7 +135,7 @@ local tmpnam:="<#>", total
         stat:=_db_put(db1,key)
         if( stat!=0 )
             taberrOperation(OPERATION)
-            taberrDescription("Index epitesi hiba (_db_put!=0)")
+            taberrDescription(@"failed building index (_db_put!=0)")
             taberrArgs({keynam,stat})
             tabError(table) 
         end
@@ -143,7 +143,7 @@ local tmpnam:="<#>", total
 
     if( 0>_db_renord(db1,tmpnam,keynam) )
         taberrOperation(OPERATION)
-        taberrDescription("_db_renord failed)")
+        taberrDescription(@"_db_renord failed)")
         taberrArgs({tmpnam,keynam})
         tabError(table) 
     end

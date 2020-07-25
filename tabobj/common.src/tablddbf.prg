@@ -39,7 +39,7 @@
 function tabLoadDBF(tab,dbf)
 
 local hnd,hnd1,dbm
-local buffer:=space(32)
+local buffer:=replicate(x"20",32)
 local hdrlen,reclen,reccnt,fldcnt
 local name,type,length,dec
 local konvtab:={},c,blk
@@ -56,7 +56,7 @@ local msg,msgtotal,msgdbnam
 
     if( tabIsopen(tab)<OPEN_EXCLUSIVE )
         taberrOperation("tabLoadDBF")
-        taberrDescription("Exclusive OPEN szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(tab) 
     end
     
@@ -77,14 +77,14 @@ local msg,msgtotal,msgdbnam
 
     if( hnd<0 )
         taberrOperation("tabLoadDBF")
-        taberrDescription("DBF megnyitasa sikertelen")
+        taberrDescription(@"DBF open failed")
         taberrFilename(dbf)
         tabError(tab)
     end
 
     if( 32>fread(hnd,@buffer,32) )
         taberrOperation("tabLoadDBF")
-        taberrDescription("DBF fejlece hibas")
+        taberrDescription(@"DBF invalid header")
         taberrFilename(dbf)
         tabError(tab)
     end
@@ -94,24 +94,24 @@ local msg,msgtotal,msgdbnam
     reclen:=xvgetlit16(buffer,10,0) 
     fldcnt:=(hdrlen-32-(hdrlen%32))/32
 
-    ? "rekordszam   :", reccnt
-    ? "fejlec hossz :", hdrlen
-    ? "rekord hossz :", reclen
-    ? "mezok szama  :", fldcnt 
+    ? @"record count  :", reccnt
+    ? @"header length :", hdrlen
+    ? @"record length :", reclen
+    ? @"field count   :", fldcnt 
     
     for n:=1 to fldcnt
 
         if( 32!=fread(hnd,@buffer,32) )
             taberrOperation("tabLoadDBF")
-            taberrDescription("DBF fejlec olvasasi hiba")
+            taberrDescription(@"DBF read error in header")
             taberrFilename(dbf)
             tabError(tab)
         end
         
         l:=at(chr(0),buffer)-1
         
-        name   := padr(substr(buffer,1,l),10)
-        type   := substr(buffer,12,1)
+        name   := bin2str(padr(substr(buffer,1,l),10))
+        type   := bin2str(substr(buffer,12,1))
         length := asc(substr(buffer,17,1))
         dec    := asc(substr(buffer,18,1))
         
@@ -126,7 +126,7 @@ local msg,msgtotal,msgdbnam
                     blk:=blkmemo(offs,hnd1) //memo field
                 else
                     //nincs meg a memofile
-                    blk:={||""}
+                    blk:={||a""}
                 end
             end
 
@@ -151,7 +151,7 @@ local msg,msgtotal,msgdbnam
         elseif( type!=tabColumn(tab)[i][COL_TYPE] ) 
             //elter a tipusa
             taberrOperation("tabLoadDBF")
-            taberrDescription("Azonos mezonev eltero tipussal")
+            taberrDescription(@"same field name with different type")
             taberrArgs(name)
             tabError(tab)
 
@@ -165,14 +165,14 @@ local msg,msgtotal,msgdbnam
 
     if( offs-1!=reclen )
         taberrOperation("tabLoadDBF")
-        taberrDescription("DBF formatuma hibas")
+        taberrDescription(@"DBF invalid format")
         taberrFilename(dbf)
         tabError(tab)
     end
 
     n:=0
     msgtotal:="/"+alltrim(str(reccnt))
-    msgdbnam:=dbf+" (atmasolt/osszes)"
+    msgdbnam:=dbf+" (loaded/all)"
     msg:=message(msg,msgdbnam+str(n)+msgtotal)
 
     buffer:=xvalloc(reclen)
@@ -184,7 +184,7 @@ local msg,msgtotal,msgdbnam
             message(msg,msgdbnam+str(n)+msgtotal)
         end
         
-        if( !left(buffer,1)=="*" )  //nem  torolt
+        if( !left(buffer,1)==a"*" )  //nem  torolt
 
             tabAppend(tab)
 
@@ -202,7 +202,7 @@ local msg,msgtotal,msgdbnam
         memoClose(hnd1)
     end
     xvfree(buffer)
-    ? "Beolvasott rekordok:",n
+    ? @"Records loaded:",n
 
     sleep(500)
     msg:=message(msg)
@@ -236,10 +236,10 @@ static function blkdate(offs,length)
     return {|r|stod(xvgetchar(r,offs-1,length))}
 
 static function blkflag(offs,length)
-    return {|r|"T"==xvgetchar(r,offs-1,1)}
+    return {|r|a"T"==xvgetchar(r,offs-1,1)}
 
 static function blkmemo(offs,h)
-    return {|r,m|m:=xvgetchar(r,offs-1,10),if(empty(m),"",memoGetValue(h,val(m)))}
+    return {|r,m|m:=xvgetchar(r,offs-1,10),if(empty(m),a"",memoGetValue(h,val(m)))}
 
 
 *************************************************************************

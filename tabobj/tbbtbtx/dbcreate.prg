@@ -47,8 +47,6 @@ local table:=tabNew0(alias)
 function tabNew0(alias) //letrehoz egy uj table objectet (nem teszi listaba)
 local table:=array(TAB_SIZEOF)
 
-    ver_dbtable()
-
     table[TAB_ALIAS   ] := upper(alltrim(alias))
     table[TAB_FILE    ] := upper(alltrim(alias))
     table[TAB_PATH    ] := ""
@@ -96,11 +94,11 @@ function tabObjectList(table) //a table objectek listaja
 ******************************************************************************
 function tabCreate(table,userblock) //krealja a nemletezo fajlt
 local lkcnt:=tabSLock(table)
-local res:=lkcnt>0 .and. _Create(table,userblock)
+local res:=lkcnt>0 .and. create(table,userblock)
     tabSUnlock(table)
     return res
 
-static function _Create(table,userblock) //krealja a nemletezo fajlt
+static function create(table,userblock) //krealja a nemletezo fajlt
 
 local n,rcol,rind,db
 
@@ -110,7 +108,7 @@ local n,rcol,rind,db
         
         if( db==NIL  )
             taberrOperation("tabCreate")
-            taberrDescription("CREATE sikertelen")
+            taberrDescription(@"create failed")
             taberrUserBlock(userblock)
             return tabError(table)
         end
@@ -122,11 +120,12 @@ local n,rcol,rind,db
 
         rind:=aclone(tabIndex(table))
         for n:=1 to len(rind)
+            //asize(rind[n],3)
             asize(rind[n],4) //3 helyett 4 (suppindex info)
         next
         
-        _db_addresource(db,_arr2chr(rcol),0) //fix:pgno=1,indx=0
-        _db_addresource(db,_arr2chr(rind),1) //fix:pgno=1,indx=1
+        _db_addresource(db,arr2bin(rcol),0) //fix:pgno=1,indx=0
+        _db_addresource(db,arr2bin(rind),1) //fix:pgno=1,indx=1
 
 
         _db_creord(db,"recno")
@@ -138,7 +137,7 @@ local n,rcol,rind,db
         if( tabMemoCount(table)>0 )
             if( !memoCreate(lower(tabMemoName(table))) )
                 taberrOperation("tabCreate")
-                taberrDescription("Memofile letrehozasa sikertelen")
+                taberrDescription(@"failed creating memo file")
                 taberrFilename(lower(tabMemoName(table)))
                 taberrUserblock(userblock)
                 return tabError(table)

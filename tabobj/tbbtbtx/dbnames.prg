@@ -19,7 +19,7 @@
  */
 
 function tabSubsystemName()
-    return "BT(BTX) interface"
+    return @"BT(BTX) interface"
  
 function tabDataExt() //adatfilek default kiterjesztese
     return ".BT"

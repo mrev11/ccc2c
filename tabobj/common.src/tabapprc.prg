@@ -36,7 +36,7 @@ local nc, n, result
 
     if( (nc:=len(colto))!=len(colfr) )
         taberrOperation("tabAppendRecord")
-        taberrDescription("Eltero mezoszam")
+        taberrDescription(@"different number of fields")
         tabError(table)
     end
 

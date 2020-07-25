@@ -122,7 +122,7 @@ local result,userblock,key,msg
     
         clear typeahead
         msg:=err:description+" ("+err:filename+")"
-        key:=alert(msg,{"Probal","Uzen","Kilep"})
+        key:=alert(msg,{@"Retry",@"Quit"})
         if( key<2 )
             result:=.t.
         elseif( key==2 )

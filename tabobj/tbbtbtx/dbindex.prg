@@ -60,7 +60,7 @@ local msg, total, n
 
     if( tabIsOpen(table)<OPEN_EXCLUSIVE )
         taberrOperation("tabSuppIndex")
-        taberrDescription("Exclusive open szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(table)
     end
     
@@ -91,7 +91,7 @@ local msg, total, n
 
         n:=0
         total:="/"+alltrim(str(tabLastRec(table)))
-        //msg:=message(msg,"Create index:"+str(n)+total)
+        //msg:=message(msg,@"Create index:"+str(n)+total)
 
         tabGotop(table)
         while( !tabEof(table) )
@@ -101,7 +101,7 @@ local msg, total, n
             _db_put(db,key)
             
             if( ++n%1103==0 )
-                msg:=message(msg,"Create index:"+str(n)+total)
+                msg:=message(msg,@"Create index:"+str(n)+total)
             end
             tabSkip(table)
         end
@@ -111,7 +111,7 @@ local msg, total, n
         //es torli a felbemaradt indexet.
 
         _db_renord(db,ordname,index[IND_NAME]) //vegleges nev
-        _db_addresource(db,_arr2chr(tabIndex(table)),1) //frissit
+        _db_addresource(db,arr2bin(tabIndex(table)),1) //frissit
 
         if( msg!=NIL )
             msg:=message(msg)
@@ -149,7 +149,7 @@ local filno,status
 
     if( tabIsOpen(table)<OPEN_EXCLUSIVE )
         taberrOperation("tabDropIndex")
-        taberrDescription("Exclusive open szukseges")
+        taberrDescription(@"exclusive open requiered")
         tabError(table)
     end
 
@@ -178,7 +178,7 @@ local filno,status
         end
     next
     
-    _db_addresource(table[TAB_BTREE],_arr2chr(tabIndex(table)),1) //frissit
+    _db_addresource(table[TAB_BTREE],arr2bin(tabIndex(table)),1) //frissit
     
     tabRestore(table,state)
     tabSetFieldTable(table)

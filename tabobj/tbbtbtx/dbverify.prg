@@ -68,7 +68,7 @@ local c,n,m
             c[COL_DEC]!=fld[m][COL_DEC] )
 
             taberrOperation("tabVerify")            
-            taberrDescription("DBSTRUCT elteres")
+            taberrDescription(@"different table struct")
             taberrArgs(c)            
             tabStructError(table) //break van benne
         end
@@ -119,7 +119,7 @@ local n, i, indnam, rebuild:={}
     
     if( !empty(rebuild) )
         taberrOperation("tabVerifyIndex")
-        taberrDescription("Inkompatibilis index")
+        taberrDescription(@"incompatible index")
         taberrArgs(rebuild)
         tabIndexError(table) //break van benne
     end
@@ -146,14 +146,14 @@ local n, i, indnam, rebuild:={}
 
 ******************************************************************************
 static function tabReadColumn(table)
-local buffer:=space(4096)
+local buffer:=replicate(x"00",4096)
     _db_read1(table[TAB_BTREE],buffer,1,0)
-    return _chr2arr(buffer)
+    return bin2arr(buffer)
 
 ******************************************************************************
 static function tabReadIndex(table)
-local buffer:=space(4096)
+local buffer:=replicate(x"00",4096)
     _db_read1(table[TAB_BTREE],buffer,1,1)
-    return _chr2arr(buffer)
+    return bin2arr(buffer)
 
 ******************************************************************************

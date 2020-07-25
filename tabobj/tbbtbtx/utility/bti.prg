@@ -129,9 +129,11 @@ local b:=errorblock(),e,order
     end
     tabAddIndex(t,{iname,"",seg,.f.})
     
-    //az uj index strukturaval megnyitjuk a filet,
+    //Az uj index strukturaval megnyitjuk a filet,
     //ha az index inkompatibilis, akkor tabindexerror hiba keletkezik,
-    //amit csendben tovabbengedunk, es tabOpen ujraepiti az indexet
+    //amit csendben tovabbengedunk, es tabOpen ujraepiti az indexet.
+    //Itt kifejezetten az errorblock-os hibakezeles kell,
+    //ui. vissza kell terni tabOpen-be, hogy az folytassa.
 
     errorblock({|x|if(x:candefault,qout("build: "+iname),eval(b,e))}) 
     tabOpen(t,OPEN_EXCLUSIVE)

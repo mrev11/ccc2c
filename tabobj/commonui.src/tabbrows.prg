@@ -82,9 +82,9 @@ local crs:=setcursor(0)
 local state:=tabSave(table)
 local ord:=table[TAB_ORDER]
 local index:=if(ord>0,table[TAB_INDEX][ord][IND_NAME],"NATURAL")
-local ctrl:="Controlling index: "+padr(index,8)
-local position:="  Position:"+str(tabPosition(table),5)
-local found:="  Found:"+if(tabFound(table),"T","F")
+local ctrl:=@"Controlling index: "+padr(index,8)
+local position:=@"  Position:"+str(tabPosition(table),5)
+local found:=@"  Found:"+if(tabFound(table),"T","F")
 
     browse:=tabBrowse(table,0,0,maxrow(),maxcol(),.t.)
    
@@ -92,8 +92,8 @@ local found:="  Found:"+if(tabFound(table),"T","F")
     browse:insColumn(1,posColumn)
     browse:freeze:=1
     
-    brwCaption(browse, "Table: "+tabAlias(table))
-    brwMenuName(browse, "Database file: "+tabPathName(table) )
+    brwCaption(browse, @"Table: "+tabAlias(table))
+    brwMenuName(browse, @"Database file: "+tabPathName(table) )
     brwMenu(browse,"",ctrl+position+found,{||.t.})
     brwShow(browse)
     brwLoop(browse)
@@ -118,7 +118,7 @@ local sbrwBlock:={|t|t:=objectList[brwArrayPos(browse)],;
         alias:=tabAlias(table)
         ord:=tabControlIndex(table)
         index:=if(ord>0,table[TAB_INDEX][ord][IND_NAME],"")
-        mode:={"Closed","Readonly","Shared","Exclusive"}[table[TAB_OPEN]+1]
+        mode:={@"Closed",@"Readonly",@"Shared",@"Exclusive"}[table[TAB_OPEN]+1]
         locks:=len(tabLocklist(table))
         aadd(tab,{alias,mode,index,locks})
     next
@@ -127,18 +127,18 @@ local sbrwBlock:={|t|t:=objectList[brwArrayPos(browse)],;
 
         browse:=brwCreate(8,10,maxrow()-2,maxcol()-10)
         brwArray(browse,tab)
-        brwColumn(browse,"TableName ",brwABlock(browse,1),10)
-        brwColumn(browse,"OpenMode  ",brwABlock(browse,2),10)
-        brwColumn(browse,"ControlInd",brwABlock(browse,3),10)
-        brwColumn(browse,"LockNumber",brwABlock(browse,4),10)
+        brwColumn(browse,@"TableName ",brwABlock(browse,1),10)
+        brwColumn(browse,@"OpenMode  ",brwABlock(browse,2),10)
+        brwColumn(browse,@"ControlInd",brwABlock(browse,3),10)
+        brwColumn(browse,@"LockNumber",brwABlock(browse,4),10)
    
-        brwMenuName(browse,"[TableObjects of Application]")
-        brwMenu(browse,"Browse","Browse current database table",sbrwBlock,"B")
+        brwMenuName(browse,@"[TableObjects of Application]")
+        brwMenu(browse,@"Browse",@"Browse current database table",sbrwBlock,"B")
         brwShow(browse)
         brwLoop(browse)
         brwHide(browse)
     else
-        alert("tabTBrowse: no table object")
+        alert(@"tabTBrowse: no table object")
     end
         
     setcursor(crs)

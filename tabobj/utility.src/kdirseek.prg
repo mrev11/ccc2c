@@ -85,7 +85,7 @@ local pict,value
         gcol[n]:display
  
         if( replicate("X",21)$pict )
-            gseg[n]:picture:=strtran(pict,"@R ","@S20")
+            gseg[n]:picture:=strtran(pict,"@R","@S20")
         else
             gseg[n]:picture:=pict
         end

@@ -113,7 +113,7 @@ local recno,status,modifkey
 
                         if( 0!=status )
                             taberrOperation("tabCommit")
-                            taberrDescription("Kulcs torlese sikertelen")
+                            taberrDescription(@"failed deleting key")
                             taberrArgs({"_db_del",status,keyold})
                             tabError(table)
                         end
@@ -128,7 +128,7 @@ local recno,status,modifkey
         status:=_db_rewrite(table[TAB_BTREE],table[TAB_RECBUF],table[TAB_RECPOS]) 
         if( status!=0 )
             taberrOperation("tabCommit")
-            taberrDescription("Adatrekord kiirasa sikertelen")
+            taberrDescription(@"failed writing data record")
             taberrArgs({"_db_rewrite",status})
             tabError(table)
         end
@@ -145,7 +145,7 @@ local recno,status,modifkey
  
                 if( status!=0 )
                     taberrOperation("tabCommit")
-                    taberrDescription("Kulcs beirasa sikertelen")
+                    taberrDescription(@"failed writing key")
                     taberrArgs({"_db_put",status,keynew})
                     tabError(table)
                 end
@@ -162,7 +162,7 @@ local recno,status,modifkey
  
                     if( status!=0 )
                         taberrOperation("tabCommit")
-                        taberrDescription("Kulcs beirasa sikertelen")
+                        taberrDescription(@"failed writing key")
                         taberrArgs({"addkey",status})
                         tabError(table)
                     end
@@ -208,7 +208,7 @@ local pos:=tabPosition(table)
 
     elseif( !tabIsLocked(table) )
         taberrOperation("tabDelete")
-        taberrDescription("Rekordlock szukseges")
+        taberrDescription(@"record lock requiered")
         tabError(table)
     end
 

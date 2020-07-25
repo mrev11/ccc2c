@@ -18,6 +18,7 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+
 #include "utility.ver"
 
 #include "table.ch"
@@ -43,7 +44,8 @@ local args:={*},n,ctrl,fname
 
     if( fname==NIL )
         ? appname+" "+VERSION+" (C) ComFirm 2002"
-        ? "Usage: "+appname+" [-c ctrl] [-f] fname"
+        ? @"Usage: "+appname+" [-c ctrl] [-f] fname"
+
         ?
         errorlevel(1)
         quit
@@ -54,7 +56,7 @@ local args:={*},n,ctrl,fname
     end
     
     if( !file(fname) )
-        ? fname, "not found"
+        ? fname, @"not found"
         ?
         errorlevel(1)
         quit
@@ -63,7 +65,7 @@ local args:={*},n,ctrl,fname
     table:=open(fname,ctrl)
     
     if( table==NIL )
-        ? fname, "not available"
+        ? fname, @"not available"
         ?
         errorlevel(1)
         quit

@@ -190,9 +190,9 @@ int __bt_read1(BTREE *t, DBT*data, pgno_t pgno, indx_t index)
 {
     PAGE *h;
     int recsiz=0; 
-
-    mpool_count(t->bt_mp,"read1-0");//ellenorzes 
     
+    mpool_count(t->bt_mp,"read1-0");//ellenorzes 
+
     if( (0!=(h=(PAGE*)mpool_get(t->bt_mp,pgno))) &&
         (h->flags==P_DATA) && 
         (index<NEXTINDEX(h)) )

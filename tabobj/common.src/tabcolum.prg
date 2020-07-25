@@ -38,7 +38,7 @@ local column:=table[TAB_COLUMN], num
     num:=ascan(column,{|x|x[COL_NAME]==colName} )
     if(num<=0)
         taberrOperation("tabColNumber")
-        taberrDescription("Nemletezo oszlopnev")
+        taberrDescription(@"unknown column name")
         taberrArgs(colName)
         tabError(table)
     end

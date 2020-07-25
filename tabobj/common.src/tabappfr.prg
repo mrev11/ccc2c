@@ -43,7 +43,7 @@ local err, msg
 
     if( hnd<0 )
         taberrOperation("tabAppendFrom")
-        taberrDescription("File megnyitasa sikertelen")
+        taberrDescription(@"open failed")
         taberrFilename(fileName)
         tabError(table)
     end
@@ -56,21 +56,21 @@ local err, msg
         next
     end
     
-    msg:=message(msg,"Importalt rekordok:"+str(count))
+    msg:=message(msg,@"Imported:"+str(count))
 
     while( len(line:=getLine(hnd,@buffer))>1 ) // CR/LF mindig van benne
         
         if( len(toklist:=parse(line))!=len(flist) )
         
             taberrOperation("tabAppendFrom")
-            taberrDescription("Mezoszam nem egyezik")
+            taberrDescription(@"different number of fields")
             taberrArgs(fieldList)
             tabError(table)
 
         else
             count++
             tabAppend(table)
-            msg:=message(msg,"Importalt rekordok:"+str(count))
+            msg:=message(msg,@"Imported:"+str(count))
     
             for n:=1 to len(flist)
 
@@ -144,7 +144,7 @@ local readok:=.t.
 
     while( 0==(lfpos:=at(chr(10),pBuffer)) .and. readok )
 
-        buffer:=space(BUFSIZE)
+        buffer:=replicate(x"20",BUFSIZE)
 
         if( (count:=fread(hnd,@buffer,BUFSIZE)) < BUFSIZE )
             pBuffer+=left(buffer,count)

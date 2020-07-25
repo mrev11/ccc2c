@@ -236,7 +236,7 @@ local n,e
                 tabspec:=strtran(tabspec,chr(13),"")
                 tabspec:=strtran(tabspec,chr(10),",")
                 tabspec:=strtran(tabspec,"\","/")
-                tabspec:=wordlist(tabspec)
+                tabspec:=split(tabspec)
                 for n:=1 to len(tabspec)
                     tabspec[n]:=upper(tabspec[n])
                 next
@@ -250,7 +250,7 @@ local n,e
                 xtabspec:=strtran(xtabspec,chr(13),"")
                 xtabspec:=strtran(xtabspec,chr(10),",")
                 xtabspec:=strtran(xtabspec,"\","/")
-                xtabspec:=wordlist(xtabspec)
+                xtabspec:=split(xtabspec)
                 for n:=1 to len(xtabspec)
                     xtabspec[n]:=upper(xtabspec[n])
                 next
@@ -264,7 +264,7 @@ local n,e
             if( !empty(envarcdir) )
                 _dirdirmake(envarcdir)
                 if( !direxist(envarcdir) )
-	            e:=apperrorNew()
+                e:=apperrorNew()
                     e:operation:="create directory"
                     e:description:="directory does not exist"
                     e:filename:=envarcdir
@@ -287,9 +287,9 @@ local n,e
                 envlogfunc:=strtran(envlogfunc," ","")
                 envlogfunc:=strtran(envlogfunc,chr(13),"")
                 envlogfunc:=strtran(envlogfunc,chr(10),",")
-                logfunctions:=wordlist(envlogfunc)
+                logfunctions:=split(envlogfunc)
                 for n:=1 to len(logfunctions)
-                    ilogfunctions:=wordlist(logfunctions[n])
+                    ilogfunctions:=split(logfunctions[n])
                     if( len(ilogfunctions)==0 )
                        logfunctions[n]:={"",nil}
                     elseif( len(ilogfunctions)==1 )
@@ -353,7 +353,7 @@ local oldlogname,e
         fclose(fdlog)
         if (!empty(logarcdir))
            if (fileexist(oldlogname) .and. 0<>frename(oldlogname,_afn(logarcdir,oldlogname)))
-	      e:=apperrorNew()
+          e:=apperrorNew()
               e:operation:="Move log file"
               e:description:="Move failed"
               e:filename:=logarcdir
@@ -667,7 +667,7 @@ local e
     if( fwrite(fdlog,buf)!=len(buf) )
         e:=writeerrorNew()
         e:operation:="Transaction log"
-        e:description:="write failed"
+        e:description:=@"write failed"
         e:filename:=logname
         e:oscode:=ferror()
         break(e)
@@ -739,7 +739,7 @@ local e,fd
     while( 0>(fd:=fopen(fspec,FO_NOLOCK+FO_READWRITE+cre)) )
         e:=fnferrorNew()
         e:operation:="tabchlog_open"
-        e:description:="open failed"
+        e:description:=@"open failed"
         e:filename:=fspec
         e:oscode:=ferror()
         e:canretry:=.t.

@@ -150,7 +150,7 @@ local n,tmd,ltmd,mhnd
 ****************************************************************************
 function tabMemoRead(table,memo)
 
-local value:=""
+local value:=a""
 local offset:=val(memo)
 
     if( offset!=0 )
@@ -178,7 +178,7 @@ local offset
         offset:=memoAddValue(tabMemoHandle(table),value)
         memo:=str(offset,MEMO_WIDTH,0)
     end
-    return memo
+    return str2bin(memo)
 
 
 ****************************************************************************
