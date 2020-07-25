@@ -18,9 +18,9 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-// a könyvtár verzió függvénye
-// minden könyvtár tartalmaz ilyen függvényt,
-// hogy az alkalmazás komponensei azonosíthatók legyenek
+// a konyvtar verzio fuggvenye
+// minden konyvtar tartalmaz ilyen fuggvenyt,
+// hogy az alkalmazas komponensei azonosithatok legyenek
 
 #define VERSION   ver_dbtable
 #define VERNAME   "dbtable"

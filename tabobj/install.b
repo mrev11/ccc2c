@@ -5,10 +5,10 @@ pushd tbbtbtx && install.b; popd
 
 if  test -e ctree/lib/$CCCBIN/libctreestd.a; then
 
-#  Megjegyzés:
-#  A libctreestd.a filé "magától" nem létezik, hanem egyes
-#  esetekben létezhet olyan platform specifikus filé, amit
-#  libctreestd.a-ra átnevezve mûködik az installáció.
+#  Megjegyzes:
+#  A libctreestd.a file "magatol" nem letezik, hanem egyes
+#  esetekben letezhet olyan platform specifikus file, amit
+#  libctreestd.a-ra atnevezve mukodik az installacio.
 
    pushd tbdatidx && install.b; popd 
    pushd tbdbfctx && install.b; popd 

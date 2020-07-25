@@ -52,7 +52,7 @@ function lockol(dbfbrw,tab)
 function xopen(brw,tab)
 local save:=tabSave(tab)
     if( tabOpen(tab,OPEN_EXCLUSIVE,busyFile()) )
-        alert("Filé fogva",{"Elenged"})
+        alert("File fogva",{"Elenged"})
     end
     tabOpen(tab)
     tabRestore(tab,save)
@@ -62,7 +62,7 @@ local save:=tabSave(tab)
 ************************************************************************
 function pakkol(brw,tab)
 local save:=tabSave(tab)
-    if( 2<=alert("Packolja az állományt?",{"Kilép","Folytat"}) .and.;
+    if( 2<=alert("Packolja az allomanyt?",{"Kilep","Folytat"}) .and.;
         tabOpen(tab,OPEN_EXCLUSIVE,busyFile()) )
         tabPack(tab)
     end
@@ -75,7 +75,7 @@ local save:=tabSave(tab)
 ************************************************************************
 function zapol(brw,tab)
 local save:=tabSave(tab)
-    if( 2<=alert("Zapolja az állományt?",{"Kilép","Folytat"}) .and.;
+    if( 2<=alert("Zapolja az allomanyt?",{"Kilep","Folytat"}) .and.;
         tabOpen(tab,OPEN_EXCLUSIVE,busyFile()) )
         tabZap(tab)
     end
@@ -88,7 +88,7 @@ local save:=tabSave(tab)
 ************************************************************************
 function torol(brw,tab)
     if( !tabEof(tab) .and.;
-        2<=alert("Törli a rekordot?",{"Meghagy","Folytat"}) .and.;
+        2<=alert("Torli a rekordot?",{"Meghagy","Folytat"}) .and.;
         tabRLock(tab,busyRecord()) )
 
         tabDelete(tab)

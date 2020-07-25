@@ -100,23 +100,23 @@ local modos:={},index:={}
 
     brwCaption(brw,APPVER)
 
-    brwMenu(brw,"Struktúra","Mezõbeosztás megtekintése",{||struktura(brw,tab)},"S")
+    brwMenu(brw,"Struktura","Mezobeosztas megtekintese",{||struktura(brw,tab)},"S")
 
     for n:=1 to len(tabIndex(tab))
         aadd(index,{tabIndex(tab)[n][1],blkControl(tab,brw,n)})
     next
     aadd(index,{"fizikai sorrend",{||setControl(tab,brw,0)}})
-    brwMenu(brw,"Index","Vezérlõ index (sorrend) beállítása",index,"I")
+    brwMenu(brw,"Index","Vezerlo index (sorrend) beallitasa",index,"I")
 
-    aadd(modos,{"A kiválasztott rekord módosítása",{||modosit(brw,tab)}})
-    aadd(modos,{"Üres rekord hozzáadása",{||ujrekord(brw,tab)}})
-    aadd(modos,{"A kiválasztott rekord törlése",{||torol(brw,tab)}})
-    aadd(modos,{"A kiválasztott rekord lockolása",{||lockol(brw,tab)}})
-    aadd(modos,{"Az aktuális állomány PACKolása",{||pakkol(brw,tab)}})
-    aadd(modos,{"Az aktuális állomány ZAPolása",{||zapol(brw,tab)}})
-    aadd(modos,{"Az állomány exkluzív megnyitása",{||xopen(brw,tab)}})
+    aadd(modos,{"A kivalasztott rekord modositasa",{||modosit(brw,tab)}})
+    aadd(modos,{"Ures rekord hozzaadasa",{||ujrekord(brw,tab)}})
+    aadd(modos,{"A kivalasztott rekord torlese",{||torol(brw,tab)}})
+    aadd(modos,{"A kivalasztott rekord lockolasa",{||lockol(brw,tab)}})
+    aadd(modos,{"Az aktualis allomany PACKolasa",{||pakkol(brw,tab)}})
+    aadd(modos,{"Az aktualis allomany ZAPolasa",{||zapol(brw,tab)}})
+    aadd(modos,{"Az allomany exkluziv megnyitasa",{||xopen(brw,tab)}})
  
-    brwMenu(brw,"Módosít","A kiválasztott rekord módosítása, törlése, packolás",modos,"M")
+    brwMenu(brw,"Modosit","A kivalasztott rekord modositasa, torlese, packolas",modos,"M")
 
 
     brwApplyKey(brw,{|b,k|appkey(b,k,tab)})
@@ -167,7 +167,7 @@ local str:=tabColumn(tab), n, total:=0
     brwColumn(brw,"Dec",brwABlock(brw,4),"@Z 999")
 
     brwMenuName(brw,rightName(tabPathname(tab),26))
-    brwMenu(brw,"","adatbázis mezõbeosztása",{||.f.})
+    brwMenu(brw,"","adatbazis mezobeosztasa",{||.f.})
     brwSetFocus(brw)
     brwShow(brw)
     brwLoop(brw)
@@ -194,7 +194,7 @@ local indname
     end
 
     tabControl(tab,ord)
-    brwFooting(brw,{"Állomány: "+rightName(tabPathName(tab),28),,"Sorrend: "+indname})
+    brwFooting(brw,{"Allomany: "+rightName(tabPathName(tab),28),,"Sorrend: "+indname})
     brw:refreshAll()
     return .t.
 

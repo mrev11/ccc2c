@@ -18,8 +18,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//TARTALOM  : táblaobjektum hibakezelés
-//STATUS    : közös, ifdef
+//TARTALOM  : tablaobjektum hibakezeles
+//STATUS    : kozos, ifdef
 //
 //
 //function taberrRetry(p)
@@ -122,7 +122,7 @@ local result,userblock,key,msg
     
         clear typeahead
         msg:=err:description+" ("+err:filename+")"
-        key:=alert(msg,{"Próbál","Üzen","Kilép"})
+        key:=alert(msg,{"Probal","Uzen","Kilep"})
         if( key<2 )
             result:=.t.
         elseif( key==2 )

@@ -25,10 +25,10 @@
 #define KEYFILE(t,o)   lower(tabPathName(t)+alltrim(str(o)))
 #define OPERATION      "build_bt_index"
 
-//Felépíti (vagy újraépíti) az {order} sorszámú index(ek)et.
-//A táblának exkluzívan nyitva kell lennie.
-//Kötelezõen ord>0, azaz order nem tartalmazhatja a recno indexet.
-//Ha resource==.t., akkor frissíti a filében a resource infót.
+//Felepiti (vagy ujraepiti) az {order} sorszamu index(ek)et.
+//A tablanak exkluzivan nyitva kell lennie.
+//Kotelezoen ord>0, azaz order nem tartalmazhatja a recno indexet.
+//Ha resource==.t., akkor frissiti a fileben a resource infot.
 
 ******************************************************************************
 function build_bt_index(table,order,resource)
@@ -56,7 +56,7 @@ local fd,o,n
         //if( 0>(fd:=fcreate(KEYFILE(table,o),FO_READWRITE+FO_SHARED)) )
         if( 0>(fd:=fopen(KEYFILE(table,o),FO_CREATE+FO_TRUNCATE+FO_READWRITE+FO_NOLOCK)) )
             taberrOperation(OPERATION)
-            taberrDescription("Filé létrehozási hiba (fd<0)")
+            taberrDescription("File letrehozasi hiba (fd<0)")
             tabError(table) 
         else
             aadd(fdkey,fd)
@@ -127,7 +127,7 @@ local tmpnam:="<#>", total
         rb:=fread(fdkey,@key,keylen)
         if( rb!=keylen )
             taberrOperation(OPERATION)
-            taberrDescription("Filé olvasási hiba (rb!=keylen)")
+            taberrDescription("File olvasasi hiba (rb!=keylen)")
             taberrArgs({keynam,ferror()})
             tabError(table) 
         end
@@ -135,7 +135,7 @@ local tmpnam:="<#>", total
         stat:=_db_put(db1,key)
         if( stat!=0 )
             taberrOperation(OPERATION)
-            taberrDescription("Index építési hiba (_db_put!=0)")
+            taberrDescription("Index epitesi hiba (_db_put!=0)")
             taberrArgs({keynam,stat})
             tabError(table) 
         end

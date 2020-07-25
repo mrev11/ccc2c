@@ -24,10 +24,10 @@
 ******************************************************************************
 //Public interface
 //
-//function tabNew(alias)                //létrehoz egy új table objectet
-//function tabDestruct(table)           //megszünteti az objektumot
-//function tabObjectList(table)         //a table objectek listája
-//function tabCreate(table,userblock)   //a nemlétezõ dbf-et kreálja
+//function tabNew(alias)                //letrehoz egy uj table objectet
+//function tabDestruct(table)           //megszunteti az objektumot
+//function tabObjectList(table)         //a table objectek listaja
+//function tabCreate(table,userblock)   //a nemletezo dbf-et krealja
 
 ******************************************************************************
 
@@ -39,12 +39,12 @@ function tabLibName()
 
 
 ******************************************************************************
-function tabNew(alias) //létrehoz egy új table objectet
+function tabNew(alias) //letrehoz egy uj table objectet
 local table:=tabNew0(alias)
     aadd(tabobjectList,table)
     return table 
 
-function tabNew0(alias) //létrehoz egy új table objectet (nem teszi listába)
+function tabNew0(alias) //letrehoz egy uj table objectet (nem teszi listaba)
 local table:=array(TAB_SIZEOF)
 
     ver_dbtable()
@@ -75,7 +75,7 @@ local table:=array(TAB_SIZEOF)
 
 
 ******************************************************************************
-function tabDestruct(table) //megszünteti az objektumot
+function tabDestruct(table) //megszunteti az objektumot
 local n, tlist:={}
     tabClose(table)
     asize(table,0)
@@ -89,18 +89,18 @@ local n, tlist:={}
 
 
 ******************************************************************************
-function tabObjectList(table) //a table objectek listája
+function tabObjectList(table) //a table objectek listaja
    return tabobjectList
 
 
 ******************************************************************************
-function tabCreate(table,userblock) //kreálja a nemlétezõ fájlt
+function tabCreate(table,userblock) //krealja a nemletezo fajlt
 local lkcnt:=tabSLock(table)
 local res:=lkcnt>0 .and. _Create(table,userblock)
     tabSUnlock(table)
     return res
 
-static function _Create(table,userblock) //kreálja a nemlétezõ fájlt
+static function _Create(table,userblock) //krealja a nemletezo fajlt
 
 local n,rcol,rind,db
 
@@ -122,7 +122,7 @@ local n,rcol,rind,db
 
         rind:=aclone(tabIndex(table))
         for n:=1 to len(rind)
-            asize(rind[n],4) //3 helyett 4 (suppindex infó)
+            asize(rind[n],4) //3 helyett 4 (suppindex info)
         next
         
         _db_addresource(db,_arr2chr(rcol),0) //fix:pgno=1,indx=0
@@ -138,14 +138,14 @@ local n,rcol,rind,db
         if( tabMemoCount(table)>0 )
             if( !memoCreate(lower(tabMemoName(table))) )
                 taberrOperation("tabCreate")
-                taberrDescription("Memófilé létrehozása sikertelen")
+                taberrDescription("Memofile letrehozasa sikertelen")
                 taberrFilename(lower(tabMemoName(table)))
                 taberrUserblock(userblock)
                 return tabError(table)
             end
         end
  
-        //vissza kell zárni
+        //vissza kell zarni
         _db_close(db)
 
         tabWriteChangeLogCreate(table)         

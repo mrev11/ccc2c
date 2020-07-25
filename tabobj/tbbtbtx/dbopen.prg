@@ -25,10 +25,10 @@
 //Public interface
 
 //function tabOpen(table,mode,userblock)  //megnyitja a table-t 
-//function tabGoEOF(table)                //EOF-ra áll (belsõ)
-//function tabClose(table)                //lezárja a table-t
-//function tabCloseAll()                  //minden table-t lezár
-//function tabIsOpen(table)               //nyitási mód
+//function tabGoEOF(table)                //EOF-ra all (belso)
+//function tabClose(table)                //lezarja a table-t
+//function tabCloseAll()                  //minden table-t lezar
+//function tabIsOpen(table)               //nyitasi mod
 
 
 ******************************************************************************
@@ -84,7 +84,7 @@ local errblk, err
  
     if( !file(fname) )
 
-        //teszteléshez automatikus dbf->dat konverzió
+        //teszteleshez automatikus dbf->dat konverzio
         dbf:=lower(tabPath(table)+tabFile(table)+".dbf")
         if( file(dbf)  )
             tabCreate(table)
@@ -92,10 +92,10 @@ local errblk, err
             tabLoadDBF(table,dbf)
 
         else
-            n:=alert(fname+" nem létezik, létre akarja hozni?",{"Létrehoz","Kilép"})
+            n:=alert(fname+" nem letezik, letre akarja hozni?",{"Letrehoz","Kilep"})
             if( n==2 )
                 taberrOperation("tabOpen")
-                taberrDescription("Nem található")
+                taberrDescription("Nem talalhato")
                 tabError(table)
             else
                 tabCreate(table)
@@ -113,12 +113,12 @@ local errblk, err
 
     if( valtype(mode)!="N".or.mode<OPEN_READONLY.or.OPEN_APPEND<mode )
         taberrOperation("tabOpen")
-        taberrDescription("Érvénytelen nyitási mód")
+        taberrDescription("Ervenytelen nyitasi mod")
         taberrArgs(mode)
         tabError(table)
     end
 
-    if( mode>OPEN_EXCLUSIVE ) //OPEN_APPEND implementációja késõbb
+    if( mode>OPEN_EXCLUSIVE ) //OPEN_APPEND implementacioja kesobb
         mode:=OPEN_EXCLUSIVE
     end
  
@@ -128,7 +128,7 @@ local errblk, err
             tabSunlock(table)
 
             taberrOperation("tabOpen")
-            taberrDescription("A filé foglalt") 
+            taberrDescription("A file foglalt") 
             taberrUserBlock(userblock,"PUK")
 
             if( valtype(userblock)=="B" )
@@ -140,30 +140,30 @@ local errblk, err
         tabSunlock(table)
         
         begin
-            tabVerify(table)  //kiszámítja table[TAB_RECLEN]-t
-            //Az új begin/recover/finally-ból szabad kiugrani.
+            tabVerify(table)  //kiszamitja table[TAB_RECLEN]-t
+            //Az uj begin/recover/finally-bol szabad kiugrani.
             exit //OK
 
-            //Ha az objektum és a filé inkompatibilisek,
+            //Ha az objektum es a file inkompatibilisek,
             //akkor tabVerify tabindexerror/tabstructerror-t dob,
-            //és err:args-ban az inkompatibilis indexek neve van,
-            //amit meg kell jegyezni a konverzióhoz.
+            //es err:args-ban az inkompatibilis indexek neve van,
+            //amit meg kell jegyezni a konverziohoz.
 
         recover err <tabindexerror>
 
             err:candefault:=.t.
             break(err)
 
-            //Csak akkor jön vissza, 
-            //ha az interaktív alertben a "Default"-ot választották.
-            //Probléma, ha a breaket eltéríti egy külsõ recover.
+            //Csak akkor jon vissza, 
+            //ha az interaktiv alertben a "Default"-ot valasztottak.
+            //Problema, ha a breaket elteriti egy kulso recover.
 
-            //visszazár
+            //visszazar
             tabClose(table)
             
             if( 0<tabSlock(table,{||0}) .and. tabUse(table,OPEN_EXCLUSIVE) )
                 tabSunlock(table)
-                //konverzió (reindex)
+                //konverzio (reindex)
                 tabAlloc(table) 
                 tabGotop(table) 
                 build_bt_index(table,err:args,.t.)
@@ -205,7 +205,7 @@ local memohnd
         return .f.
     else
         #ifdef _UNIX_
-          //fdup elvesztené a protokoll lockot
+          //fdup elvesztene a protokoll lockot
           setcloexecflag(table[TAB_FHANDLE],.t.)
         #else
           table[TAB_FHANDLE]:=fdup(table[TAB_FHANDLE],.f.,.t.)
@@ -217,14 +217,14 @@ local memohnd
         return .f.
     end
     
-    //esetleges beragadt index törlése 
+    //esetleges beragadt index torlese 
     _db_delord(table[TAB_BTREE],"<#>") 
  
     if( 0<tabMemoCount(table) )
         memohnd:=memoOpen(lower(tabMemoName(table)))
         if( memohnd<0 )
             taberrOperation("tabUse")
-            taberrDescription("Memófilé megnyitása sikertelen")
+            taberrDescription("Memofile megnyitasa sikertelen")
             taberrFilename(lower(tabMemoName(table)))
             tabError(table)
         end
@@ -236,7 +236,7 @@ local memohnd
 
 
 ******************************************************************************
-function tabGoEOF(table) // EOF-ra áll
+function tabGoEOF(table) // EOF-ra all
     tabCommit(table)
     xvputfill(table[TAB_RECBUF],0,table[TAB_RECLEN],32) //space
     table[TAB_EOF]:=.t.
@@ -245,7 +245,7 @@ function tabGoEOF(table) // EOF-ra áll
 
 
 ******************************************************************************
-function tabClose(table) //lezárja a fájlt
+function tabClose(table) //lezarja a fajlt
 
     tranNotAllowedInTransaction(table,"close",.t.)
  
@@ -284,7 +284,7 @@ function tabClose(table) //lezárja a fájlt
 
 
 ******************************************************************************
-function tabCloseAll() //minden táblaobjektumot lezár
+function tabCloseAll() //minden tablaobjektumot lezar
 local objectlist:=tabObjectList(), n
     for n:=1 to len(objectList)
          tabClose(objectList[n])
@@ -293,7 +293,7 @@ local objectlist:=tabObjectList(), n
 
 
 ******************************************************************************
-function tabIsOpen(table) //visszaadja a megnyitási módot
+function tabIsOpen(table) //visszaadja a megnyitasi modot
     return table[TAB_OPEN]
 
 

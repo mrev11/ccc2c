@@ -18,8 +18,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//TARTALOM  : DBF átmásolása töröltek kihagyásával
-//STATUS    : közös utility
+//TARTALOM  : DBF atmasolasa toroltek kihagyasaval
+//STATUS    : kozos utility
 //
 //function copydbf(dbfsrc,dbfdest)
 
@@ -40,13 +40,13 @@ local hnd1,hnd2
 local buffer, header, buf4
 local hdrlen,reclen,reccnt,fldcnt
 local name,type,length,dec
-local n,l,offs:=2 //elsõ byte=deleted flag
+local n,l,offs:=2 //elso byte=deleted flag
 local msg,msgtotal,msgdbnam
 
     hnd1:=fopen(db1,FO_READ+FO_EXCLUSIVE)
     if( hnd1<0 )
         taberrOperation("copydbf")
-        taberrDescription("DBF megnyitása sikertelen")
+        taberrDescription("DBF megnyitasa sikertelen")
         taberrFilename(db1)
         tabError()
     end
@@ -54,7 +54,7 @@ local msg,msgtotal,msgdbnam
     hnd2:=fcreate(db2)
     if( hnd2<0 )
         taberrOperation("copydbf")
-        taberrDescription("DBF létrehozása sikertelen")
+        taberrDescription("DBF letrehozasa sikertelen")
         taberrFilename(db2)
         tabError()
     end
@@ -63,13 +63,13 @@ local msg,msgtotal,msgdbnam
 
     if( 32>fread(hnd1,@buffer,32) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejléc olvasási hiba")
+        taberrDescription("DBF fejlec olvasasi hiba")
         taberrFilename(db1)
         tabError()
     end
     if( 32!=fwrite(hnd2,buffer) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejléc írási hiba")
+        taberrDescription("DBF fejlec irasi hiba")
         taberrFilename(db2)
         tabError()
     end
@@ -79,23 +79,23 @@ local msg,msgtotal,msgdbnam
     reclen:=xvgetlit16(buffer,10,0) 
     fldcnt:=(hdrlen-32-(hdrlen%32))/32
 
-    ? "rekordszám   :", reccnt
-    ? "fejléc hossz :", hdrlen
+    ? "rekordszam   :", reccnt
+    ? "fejlec hossz :", hdrlen
     ? "rekord hossz :", reclen
-    ? "mezõk száma  :", fldcnt 
+    ? "mezok szama  :", fldcnt 
     
     header:=space(hdrlen-32)
 
     if( hdrlen-32>fread(hnd1,@header,hdrlen-32) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejléc olvasási hiba")
+        taberrDescription("DBF fejlec olvasasi hiba")
         taberrFilename(db1)
         tabError()
     end
 
     if( hdrlen-32!=fwrite(hnd2,header) )
         taberrOperation("copydbf")
-        taberrDescription("DBF fejléc írási hiba")
+        taberrDescription("DBF fejlec irasi hiba")
         taberrFilename(db2)
         tabError()
     end
@@ -123,7 +123,7 @@ local msg,msgtotal,msgdbnam
 
     if( offs-1!=reclen )
         taberrOperation("copydbf")
-        taberrDescription("DBF formátuma hibás")
+        taberrDescription("DBF formatuma hibas")
         taberrFilename(db1)
         tabError()
     end
@@ -141,10 +141,10 @@ local msg,msgtotal,msgdbnam
             message(msg,msgdbnam+str(n)+msgtotal)
         end
         
-        if( !left(buffer,1)=="*" ) //nem törölt
+        if( !left(buffer,1)=="*" ) //nem torolt
             if( fwrite(hnd2,buffer)!=reclen )
                 taberrOperation("copydbf")
-                taberrDescription("DBF írási hiba")
+                taberrDescription("DBF irasi hiba")
                 taberrFilename(db2)
                 tabError()
             end
@@ -155,7 +155,7 @@ local msg,msgtotal,msgdbnam
     fwrite(hnd2,chr(26)) //EOF=1A
     fseek(hnd2,4,FS_SET)
     xvputlit32(buf4:=space(4),0,reccnt)
-    fwrite(hnd2,buf4) //fejléc: rekordszám
+    fwrite(hnd2,buf4) //fejlec: rekordszam
 
     message(msg,msgdbnam+str(n)+msgtotal)
 
@@ -164,7 +164,7 @@ local msg,msgtotal,msgdbnam
 
     sleep(100)
     msg:=message(msg)
-    return n //rekordszám
+    return n //rekordszam
 
 
 *************************************************************************

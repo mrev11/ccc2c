@@ -23,42 +23,42 @@
  
 ******************************************************************************
 //Public interface
-//function tabSetChangeLogInfo()           // programfüggõ információ hozzáadása
-//function tabIsChangeLogEnabled()         // be van-e kapcsolva a napló (globálisan)
-//function tabIsTableLogged(table)         // kell-e naplózni a táblát
-//function tabChangeLogLock()              // lockolja a naplót
-//function tabChangeLogUnlock()            // unlocklolja a naplót
-//function tabWriteChangeLog(table)        // a tábla változásainak naplózása
-//function tabWriteChangeLogPack(table)    // a táblát packolták
-//function tabWriteChangeLogZap(table)     // a táblát zapolták
-//function tabWriteChangeLogCreate(table)  // tábla létrehozás
-//function tabWriteChangeLogDrop(table)    // tábla megszüntetés
-//function tabWriteChangeLogUpgrade(table) // tábla átalakítása
+//function tabSetChangeLogInfo()           // programfuggo informacio hozzaadasa
+//function tabIsChangeLogEnabled()         // be van-e kapcsolva a naplo (globalisan)
+//function tabIsTableLogged(table)         // kell-e naplozni a tablat
+//function tabChangeLogLock()              // lockolja a naplot
+//function tabChangeLogUnlock()            // unlocklolja a naplot
+//function tabWriteChangeLog(table)        // a tabla valtozasainak naplozasa
+//function tabWriteChangeLogPack(table)    // a tablat packoltak
+//function tabWriteChangeLogZap(table)     // a tablat zapoltak
+//function tabWriteChangeLogCreate(table)  // tabla letrehozas
+//function tabWriteChangeLogDrop(table)    // tabla megszuntetes
+//function tabWriteChangeLogUpgrade(table) // tabla atalakitasa
  
 
 // FILES:
 //
 // Name             Content             Descriptor
 //
-// changelog        [changelog123456]   fdlog0      aktuális napló neve
-// changelog000001  [XML<close/>]                   lezárt napló
-// changelog000002  [XML<close/>]                   lezárt napló 
+// changelog        [changelog123456]   fdlog0      aktualis naplo neve
+// changelog000001  [XML<close/>]                   lezart naplo
+// changelog000002  [XML<close/>]                   lezart naplo 
 // ...
 // ...
-// changelog123456  [XML]               fdlog       aktuális napló 
-// mutex            []                  fdmutex     mutex (lock) filé
-// tabspec          [f1,f2,...]                     naplózandó táblák
+// changelog123456  [XML]               fdlog       aktualis naplo 
+// mutex            []                  fdmutex     mutex (lock) file
+// tabspec          [f1,f2,...]                     naplozando tablak
  
 
-#define LOG_FILE    "CCC_TRANSACTION_LOG_FILE"      //logilé neve
-#define LOG_MUTEX   "CCC_TRANSACTION_LOG_MUTEX"     //lockfilé neve
-#define LOG_CREATE  "CCC_TRANSACTION_LOG_CREATE"    //=auto esetén létrehozza
-#define LOG_TABLES  "CCC_TRANSACTION_LOG_TABLES"    //naplózandó táblák
-#define LOG_XTABLES "CCC_TRANSACTION_LOG_XTABLES"   //nem naplózandó táblák
-#define LOG_SIZE    "CCC_TRANSACTION_LOG_SIZE"      //logfilé max mérete
-#define LOG_ARCDIR  "CCC_TRANSACTION_LOG_ARCDIR"    //logfiléket ide mozgatja, amikor lezáródnak.
-#define LOG_LEVEL   "CCC_TRANSACTION_LOG_LEVEL"     //logolás szint. 'all' vagy egy szám.
-#define LOG_FUNC    "CCC_TRANSACTION_LOG_FUNC"      //logolás szintek funkciónként. 'nev:level' felsorolások.
+#define LOG_FILE    "CCC_TRANSACTION_LOG_FILE"      //logile neve
+#define LOG_MUTEX   "CCC_TRANSACTION_LOG_MUTEX"     //lockfile neve
+#define LOG_CREATE  "CCC_TRANSACTION_LOG_CREATE"    //=auto eseten letrehozza
+#define LOG_TABLES  "CCC_TRANSACTION_LOG_TABLES"    //naplozando tablak
+#define LOG_XTABLES "CCC_TRANSACTION_LOG_XTABLES"   //nem naplozando tablak
+#define LOG_SIZE    "CCC_TRANSACTION_LOG_SIZE"      //logfile max merete
+#define LOG_ARCDIR  "CCC_TRANSACTION_LOG_ARCDIR"    //logfileket ide mozgatja, amikor lezarodnak.
+#define LOG_LEVEL   "CCC_TRANSACTION_LOG_LEVEL"     //logolas szint. 'all' vagy egy szam.
+#define LOG_FUNC    "CCC_TRANSACTION_LOG_FUNC"      //logolas szintek funkcionkent. 'nev:level' felsorolasok.
 
 
 static info
@@ -74,8 +74,8 @@ static logarcdir
 static loglevel
 static logfunctions // {{funName,level},...}
 
-// A programok beállítják, hogy milyen funkciót milyen szinten
-// csinálnak éppen.
+// A programok beallitjak, hogy milyen funkciot milyen szinten
+// csinalnak eppen.
 static prog_logfunction:=nil
 static prog_loglevel:=0
  
@@ -123,17 +123,17 @@ local dir:="",tok,bslash,code:=0
     return code
     
 
-//  code lehets‚ges ‚rt‚kei:
+//  code lehetseges ertekei:
 //
 //  0 - ok
 // -2 - file not found (?)
 // -3 - path not found 
-// -5 - access denied  (ezt adja akkor is, ha m r l‚tezett)
+// -5 - access denied  (ezt adja akkor is, ha mar letezett)
    
 ******************************************************************************
 function tabSetLogFunction(functionName,level)
 
-    tabIsChangeLogEnabled() // Beolvassa a log paramétereket.
+    tabIsChangeLogEnabled() // Beolvassa a log parametereket.
 
     prog_loglevel   :=level
     if (prog_logfunction==functionName)
@@ -175,9 +175,9 @@ return logfunction_enabled
 
 ******************************************************************************
 function tabSetLogFunction_enabled()
-// Megállapítja, hogy éppen logolhatunk-e funkcio:level szempontból.
-// 'all' esetén minden logol,
-// szám esetén, annál többet, minél magasabb a szám
+// Megallapitja, hogy eppen logolhatunk-e funkcio:level szempontbol.
+// 'all' eseten minden logol,
+// szam eseten, annal tobbet, minel magasabb a szam
 local i
 
     if ( !empty(logfunctions) )
@@ -190,7 +190,7 @@ local i
         end
     end
 
-    // Ha nincsenek funkciók megadva, akkor csak a loglevel játszik
+    // Ha nincsenek funkciok megadva, akkor csak a loglevel jatszik
     logfunction_level:=loglevel
     logfunction_enabled:=if(logfunction_level==nil,.t.,logfunction_level>=prog_loglevel)
 
@@ -229,7 +229,7 @@ local n,e
             end
  
             if( !empty(envtsp) )
-                fclose( xopen(envtsp) ) //csak ellenõrzés 
+                fclose( xopen(envtsp) ) //csak ellenorzes 
 
                 tabspec:=memoread(envtsp)
                 tabspec:=strtran(tabspec," ","")
@@ -243,7 +243,7 @@ local n,e
             end
 
             if( !empty(envxtsp) )
-                fclose( xopen(envxtsp) ) //csak ellenõrzés 
+                fclose( xopen(envxtsp) ) //csak ellenorzes 
 
                 xtabspec:=memoread(envxtsp)
                 xtabspec:=strtran(xtabspec," ","")
@@ -258,7 +258,7 @@ local n,e
 
             if( !empty(envsiz) )
                 logmaxsize:=1024*1024*max(1,val(envsiz))
-                //logfile maximális mérete MB-ban, legalább 1MB
+                //logfile maximalis merete MB-ban, legalabb 1MB
             end
 
             if( !empty(envarcdir) )
@@ -400,7 +400,7 @@ local offs,width,name,type,dec
     table[TAB_RECBUF]:=r1
 
     if( xvisequal(r0,0,r1,0,len(r0)) )
-        //mégsincs módosítás
+        //megsincs modositas
         //(sok ilyen eset van)
         return NIL
     end

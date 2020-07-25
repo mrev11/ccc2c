@@ -92,8 +92,8 @@ local err
     end
     
 
-    //az index oszlopok sorszámokkal vannak nyilvántartva
-    //mivel az editálás során a sorszámok elcsúszhatnak,
+    //az index oszlopok sorszamokkal vannak nyilvantartva
+    //mivel az editalas soran a sorszamok elcsuszhatnak,
     //meg kell jegyezni az oszlopneveket
     
     aidx:=tabIndex(tab)
@@ -106,7 +106,7 @@ local err
     
     sav:=aclone(tab)
 
-    while( NIL!=(upg:=struktura(tab)) ) //struktúra editálás
+    while( NIL!=(upg:=struktura(tab)) ) //struktura editalas
         
         //tab:=tabNew0(fname)
         tab:=tabNew0(tabFile(sav)) //2011.07.08
@@ -126,7 +126,7 @@ local err
             next
 
         recover err <tabobjerror>
-            result:=alert("tabAddIndex hiba",{"Javít","Kilép"})
+            result:=alert("tabAddIndex hiba",{"Javit","Kilep"})
             if( result!=1 )
                 return NIL
             end
@@ -137,14 +137,14 @@ local err
         result:=tabUpgrade(tab)
           
         if( result==NIL )
-            alert("A filé foglalt: "+tabPathName(tab))
+            alert("A file foglalt: "+tabPathName(tab))
 
         elseif( result==.f. )
 
-            if( 2<=alert("Nem minden mezõ konvertálható!",{"Kilép","Tovább"}) )
+            if( 2<=alert("Nem minden mezo konvertalhato!",{"Kilep","Tovabb"}) )
                 result:=tabUpgrade(tab,.t.)
                 if( result==.f. )
-                    alert("Nem konvertálható!")
+                    alert("Nem konvertalhato!")
                 end
             end
         end
@@ -190,16 +190,16 @@ local upgrade:=.f.
 
     brwMenuName(brw,"["+tabPathName(tab)+"]")
 
-    brwMenu(brw,"App" ,"Új mezõ a lista végére",{||fld_append(brw)})
-    brwMenu(brw,"Ins" ,"Mezõ beszúrása a kurzor helyén",{||fld_insert(brw)})
-    brwMenu(brw,"Mod" ,"A kiválasztott mezõ editálása",{||fld_modify(brw)})
-    brwMenu(brw,"Del" ,"A kiválasztott mezõ törlése",{||fld_delete(brw)})
+    brwMenu(brw,"App" ,"Uj mezo a lista vegere",{||fld_append(brw)})
+    brwMenu(brw,"Ins" ,"Mezo beszurasa a kurzor helyen",{||fld_insert(brw)})
+    brwMenu(brw,"Mod" ,"A kivalasztott mezo editalasa",{||fld_modify(brw)})
+    brwMenu(brw,"Del" ,"A kivalasztott mezo torlese",{||fld_delete(brw)})
 
     if( !tabIndexExt()==".CTX" )
-        brwMenu(brw,"Xnd" ,"Indexek karbantartása",{||brwKillFocus(brw),index(upg,brwArray(brw)),brwSetFocus(brw),.t.})
+        brwMenu(brw,"Xnd" ,"Indexek karbantartasa",{||brwKillFocus(brw),index(upg,brwArray(brw)),brwSetFocus(brw),.t.})
     end
 
-    brwMenu(brw,"Upg" ,"Módosítások kiírása",{||upgrade:=.t.,.f.})
+    brwMenu(brw,"Upg" ,"Modositasok kiirasa",{||upgrade:=.t.,.f.})
 
     brwCaption(brw,APPVER)
     brwSetFocus(brw)
@@ -224,13 +224,13 @@ local pos:=brwArrayPos(brw)
 local name:=g:varget(), n
 
     if( empty(name) )
-        alert( "Nem lehet üres!" )
+        alert( "Nem lehet ures!" )
         return .f.
     end
 
     for n:=1 to len(str)
         if( n!=pos .and. alltrim(name)==alltrim(str[n][1]) )
-            alert( "Ilyen oszlop már van!" )
+            alert( "Ilyen oszlop mar van!" )
             return .f.
         end
     next
@@ -329,7 +329,7 @@ static function fld_insert(brw)
 local arr:=brwArray(brw)
 local pos:=brwArrayPos(brw)
 
-    aadd(arr,NIL) //ains kicsúsztatja az utolsó elemet!
+    aadd(arr,NIL) //ains kicsusztatja az utolso elemet!
     ains(arr,pos)
     arr[pos]:=BLANKROW
     brw:refreshall()
@@ -395,9 +395,9 @@ local upg:=NIL
 
     brwMenuName(brw,"["+tabIndexName(tab)+"]")
 
-    brwMenu(brw,"App" ,"Új index létrehozása",{||idx_append(brw)})
-    brwMenu(brw,"Mod" ,"A kiválasztott index editálása",{||idx_modify(brw)})
-    brwMenu(brw,"Del" ,"A kiválasztott index törlése",{||idx_delete(brw)})
+    brwMenu(brw,"App" ,"Uj index letrehozasa",{||idx_append(brw)})
+    brwMenu(brw,"Mod" ,"A kivalasztott index editalasa",{||idx_modify(brw)})
+    brwMenu(brw,"Del" ,"A kivalasztott index torlese",{||idx_delete(brw)})
     
     brw:getcolumn(1):cargo:={{|g|valid_idxname(brw)}}
     brw:getcolumn(2):cargo:={{|g|valid_segnames(g,str)}}
@@ -425,13 +425,13 @@ local pos:=brwArrayPos(brw)
 local name:=upper(alltrim(arr[pos][1])),n
 
     if( empty(name) )
-        alert("Az index neve nem lehet üres!")
+        alert("Az index neve nem lehet ures!")
         return .f.
     end
     
     for n:=1 to len(arr)
         if( pos!=n .and. name==arr[n][1] )
-            alert("Ilyen nevû index már van!")
+            alert("Ilyen nevu index mar van!")
             return .f.
         end
     end
@@ -462,7 +462,7 @@ local seg, n, i
         next
         
         if( i>len(str) )
-            alert( "Téves oszlopnév: "+seg )
+            alert( "Teves oszlopnev: "+seg )
             return .f.
         end
     next

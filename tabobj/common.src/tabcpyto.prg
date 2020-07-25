@@ -19,7 +19,7 @@
  */
 
 //TARTALOM  : copy to
-//STATUS    : közös
+//STATUS    : kozos
 //
 //function tabCopyTo(table,fileName,fieldList)
 
@@ -41,7 +41,7 @@ local err, msg
     if( hnd<0 )
 
         taberrOperation("tabCopyTo")
-        taberrDescription("Filé létrehozása sikertelen")
+        taberrDescription("File letrehozasa sikertelen")
         taberrArgs({fileName})
         tabError(table)
     end
@@ -54,17 +54,17 @@ local err, msg
         next
     end
     
-    msg:=message(msg,"Exportált rekordok:"+str(count))
+    msg:=message(msg,"Exportalt rekordok:"+str(count))
     
     tabGotop(table)
     while( !tabEof(table) ) 
         count++
         line:=""
-        msg:=message(msg,"Exportált rekordok:"+str(count))
+        msg:=message(msg,"Exportalt rekordok:"+str(count))
     
         for n:=1 to len(flist)
 
-            value:=eval(flist[n][COL_BLOCK]) //adatbázismezõ kiolvasása
+            value:=eval(flist[n][COL_BLOCK]) //adatbazismezo kiolvasasa
             
             if( (type:=flist[n][COL_TYPE])=="C" )
                 line+='"'+trim(value)+'"'

@@ -23,24 +23,24 @@
 ******************************************************************************
 //Public interface
 
-//function tabAddColumn(table,column)   //oszlop hozzáadása az objektumhoz
-//function tabSetColBlock(table,column) //oszlop block újra beállítása
+//function tabAddColumn(table,column)   //oszlop hozzaadasa az objektumhoz
+//function tabSetColBlock(table,column) //oszlop block ujra beallitasa
 
 ******************************************************************************
-function tabAddColumn(table,column) //oszlop hozzáadása az objektumhoz
+function tabAddColumn(table,column) //oszlop hozzaadasa az objektumhoz
 
 // column szerkezete: {name,type,width,dec,pict,block,keyflag,offs}
-// az elsõ négy elem megadása kötelezõ
+// az elso negy elem megadasa kotelezo
 //
 // name     alltrim, upper
-// dec      nem számmezõknél 0
-// pict     kitöltjük 
-// offs     kitöltjük (késõbb változhat)
-// block    kitöltjük (változik, ha offs, vagy key változik
-// keyflag  kitöltjük (egyelõre nem ismert, default .f.)
+// dec      nem szammezoknel 0
+// pict     kitoltjuk 
+// offs     kitoltjuk (kesobb valtozhat)
+// block    kitoltjuk (valtozik, ha offs, vagy key valtozik
+// keyflag  kitoltjuk (egyelore nem ismert, default .f.)
 //
-// a sorszám szerinti oszlophivatkozás mindig a tabAddColumn()
-// szerinti sorrendet jelenti, és nem a filé-beli sorrendet
+// a sorszam szerinti oszlophivatkozas mindig a tabAddColumn()
+// szerinti sorrendet jelenti, es nem a file-beli sorrendet
 
 local type  :=column[COL_TYPE]
 local width :=column[COL_WIDTH]
@@ -55,8 +55,8 @@ local pict
     asize(column, COL_SIZEOF)
 
     column[COL_NAME]    := upper(alltrim(column[COL_NAME]))
-    column[COL_OFFS]    := table[TAB_RECLEN] //késõbb még változhat
-    column[COL_KEYFLAG] := .f. //még nem ismert, változhat
+    column[COL_OFFS]    := table[TAB_RECLEN] //kesobb meg valtozhat
+    column[COL_KEYFLAG] := .f. //meg nem ismert, valtozhat
     
     if( type!="N" )
         column[COL_DEC]:=0
@@ -86,24 +86,24 @@ local pict
 
     column[COL_PICT]:=pict
 
-    tabSetColBlock(table,column) //kitölti az oszlop kódblokkját
+    tabSetColBlock(table,column) //kitolti az oszlop kodblokkjat
     
-    //blokkok további állítgatása tabAddindex/tabVerify-ban
+    //blokkok tovabbi allitgatasa tabAddindex/tabVerify-ban
     //
-    //Az adatfilében olyan mezõk is lehetnek, 
-    //amik az objektumból hiányoznak, ezért az objektum alapján
-    //számított mezõoffsetek a valódi offsettõl eltérhetnek.
-    //A már megnyitott dbf-ben a mezõk a fejlécbõl név alapján 
-    //kikereshetõk, és a pontos helyük szerinti blokk képezhetõ.
+    //Az adatfileben olyan mezok is lehetnek, 
+    //amik az objektumbol hianyoznak, ezert az objektum alapjan
+    //szamitott mezooffsetek a valodi offsettol elterhetnek.
+    //A mar megnyitott dbf-ben a mezok a fejlecbol nev alapjan 
+    //kikereshetok, es a pontos helyuk szerinti blokk kepezheto.
     //
-    //A tabAddIndex az oszlopok némelyikét kulcsnak minõsíti,
-    //ezeknek ki kell cserélni a blokkját olyanra, amelyik a commitban
-    //kiváltja az index karbantartását: a régi kulcsértéket törölni, 
-    //az újat berakni kell. (TAB_KEYFLAG beállítás)
+    //A tabAddIndex az oszlopok nemelyiket kulcsnak minositi,
+    //ezeknek ki kell cserelni a blokkjat olyanra, amelyik a commitban
+    //kivaltja az index karbantartasat: a regi kulcserteket torolni, 
+    //az ujat berakni kell. (TAB_KEYFLAG beallitas)
     //
-    //További bonyodalom, hogy a filé további, az objektumból
-    //nem ismert indexeket is tartalmazhat, amiket szintén karban 
-    //kell tartani, ezért ezeknek a blokkját is cserélni kell.
+    //Tovabbi bonyodalom, hogy a file tovabbi, az objektumbol
+    //nem ismert indexeket is tartalmazhat, amiket szinten karban 
+    //kell tartani, ezert ezeknek a blokkjat is cserelni kell.
 
     aadd(table[TAB_COLUMN],column)
 
@@ -146,7 +146,7 @@ local key   :=column[COL_KEYFLAG]
 
     else
         taberrOperation("tabSetColBlock")
-        taberrDescription("Rossz oszlopdefiníció")
+        taberrDescription("Rossz oszlopdefinicio")
         taberrArgs(column)
         tabError(table)
 
@@ -161,29 +161,29 @@ static function islocked(table)
     if( !table[TAB_MODIF] )
         table[TAB_MODIF]:=.t.
 
-        //Engedjük-e az írást EOF-ba?
-        //Ha kulcsmezôt írnak át EOF-ban, akkor ronda hibát kapunk:
-        //nem tudjuk törölni az indexbôl a kulcs korábbi példányát.
-        //Ha viszont itt megállunk, akkor jónak tudott programokról
-        //derülhet ki váratlanul, hogy EOF-ba írnak.
+        //Engedjuk-e az irast EOF-ba?
+        //Ha kulcsmezot irnak at EOF-ban, akkor ronda hibat kapunk:
+        //nem tudjuk torolni az indexbol a kulcs korabbi peldanyat.
+        //Ha viszont itt megallunk, akkor jonak tudott programokrol
+        //derulhet ki varatlanul, hogy EOF-ba irnak.
 
         //if( tabEof(table) )
         if( tabPosition(table)==0 ) //2019-10-08
             taberrOperation("tabEvalColumn")
-            taberrDescription("Írás EOF-ba")
+            taberrDescription("Iras EOF-ba")
             tabError(table)
         end
 
         if( !tabIsLocked(table) )
             taberrOperation("tabEvalColumn")
-            taberrDescription("Rekordlock szükséges")
+            taberrDescription("Rekordlock szukseges")
             tabError(table)
         end
     end
     return .t.
 
 
-static function xislocked(table) //kulcsszegmenseknél speciális
+static function xislocked(table) //kulcsszegmenseknel specialis
 
 local index,ord
 
@@ -191,12 +191,12 @@ local index,ord
         table[TAB_MODIFKEY]:=.t.
         islocked(table)
 
-        //meg kell jegyezni, hogy mi volt a kulcs értéke
-        //a mezõ átírása elõtt, hogy késõbb (tabCommit)
-        //meg lehessen találni az eredeti kulcsokat
+        //meg kell jegyezni, hogy mi volt a kulcs erteke
+        //a mezo atirasa elott, hogy kesobb (tabCommit)
+        //meg lehessen talalni az eredeti kulcsokat
         
-        //bármely kulcsot alkotó mezõ módosítása kiváltja
-        //az összes kulcs update-jét
+        //barmely kulcsot alkoto mezo modositasa kivaltja
+        //az osszes kulcs update-jet
         
         index:=tabIndex(table)
         for ord:=1 to len(index)
@@ -257,8 +257,8 @@ static function xblkflag(table,offs)  //megj: T=84, F=70
                 (xvputbyte(table[TAB_RECBUF],offs,if(x,84,70)),x)) }
 
 
-//Megj: egy xvgetnumber/xvputnumber függvénypárral a számmezõk 
-//kezelése lényegesen felgyorsítható volna!
+//Megj: egy xvgetnumber/xvputnumber fuggvenyparral a szammezok 
+//kezelese lenyegesen felgyorsithato volna!
 
 
 ******************************************************************************

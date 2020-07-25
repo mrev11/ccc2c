@@ -19,7 +19,7 @@
  */
 
 //TARTALOM  : append from (delimited)
-//STATUS    : közös
+//STATUS    : kozos
 //
 //function tabAppendFrom(table,fileName,fieldList)
 
@@ -43,7 +43,7 @@ local err, msg
 
     if( hnd<0 )
         taberrOperation("tabAppendFrom")
-        taberrDescription("Filé megnyitása sikertelen")
+        taberrDescription("File megnyitasa sikertelen")
         taberrFilename(fileName)
         tabError(table)
     end
@@ -56,21 +56,21 @@ local err, msg
         next
     end
     
-    msg:=message(msg,"Importált rekordok:"+str(count))
+    msg:=message(msg,"Importalt rekordok:"+str(count))
 
     while( len(line:=getLine(hnd,@buffer))>1 ) // CR/LF mindig van benne
         
         if( len(toklist:=parse(line))!=len(flist) )
         
             taberrOperation("tabAppendFrom")
-            taberrDescription("Mezõszám nem egyezik")
+            taberrDescription("Mezoszam nem egyezik")
             taberrArgs(fieldList)
             tabError(table)
 
         else
             count++
             tabAppend(table)
-            msg:=message(msg,"Importált rekordok:"+str(count))
+            msg:=message(msg,"Importalt rekordok:"+str(count))
     
             for n:=1 to len(flist)
 
@@ -95,7 +95,7 @@ local err, msg
 
                 end
 
-                eval(flist[n][COL_BLOCK],value) //írás az adatbázismezõbe
+                eval(flist[n][COL_BLOCK],value) //iras az adatbazismezobe
             end
             tabUnlock(table)
         end
@@ -114,7 +114,7 @@ local toklist:={}, s,t,c
     while(.t.)
         if( left(line,1)=='"' )
             s:=2
-          //t:=at('",',line) //nem jól kezeli a "," mezõket!! 1997.09.22
+          //t:=at('",',line) //nem jol kezeli a "," mezoket!! 1997.09.22
             t:=at('",',substr(line,2))+1
             c:=t+2
         else

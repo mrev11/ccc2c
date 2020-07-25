@@ -39,14 +39,14 @@ static widthWind:=60
 function tabEditRecord(tab,opt,fld)
  
 // opt - "EMST"  Exit,Modify,Store,Type
-// fld - {{"FIELD","Megnevezés","PICTURE"},{...},{...},...}
+// fld - {{"FIELD","Megnevezes","PICTURE"},{...},{...},...}
 
 local margin:=int((maxcol()-widthWind)/2)
 local col:=tabColumn(tab),value:={},n,m,c,v,dcol
 local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
     #ifndef _cl_
-    brw:flushright:=.f. //számok balra igazítva
+    brw:flushright:=.f. //szamok balra igazitva
     #endif
 
     if( opt==NIL )
@@ -68,11 +68,11 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
                     aadd(v,"@R "+replicate("X",MEMOLENGTH))
                 else
                     //2011.09.12
-                    //A picture browseoláshoz volt méretezve.
-                    //Egy browseban nem szerencsés, ha túl széles egy oszlop,
-                    //ezért a széles oszlopok a tényleges szélességüknél
-                    //rövidebb picturet kapnak. Itt viszont az oszlopot 
-                    //a teljes szélességében editálhatóvá kell tenni.
+                    //A picture browseolashoz volt meretezve.
+                    //Egy browseban nem szerencses, ha tul szeles egy oszlop,
+                    //ezert a szeles oszlopok a tenyleges szelesseguknel
+                    //rovidebb picturet kapnak. Itt viszont az oszlopot 
+                    //a teljes szelessegeben editalhatova kell tenni.
                     if( replicate("X",32)$col[n][COL_PICT] )
                         aadd(v,"@R "+replicate("X",col[n][COL_WIDTH]))
                     else
@@ -113,14 +113,14 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
     brwArray(brw,value)
 
-    brwColumn(brw,"Megnevezés",brwABlock(brw,MODR_NAME),widthName)
+    brwColumn(brw,"Megnevezes",brwABlock(brw,MODR_NAME),widthName)
 
     if( "T"$opt )
-        brwColumn(brw,"Típus",brwABlock(brw,MODR_TYPE),7)
+        brwColumn(brw,"Tipus",brwABlock(brw,MODR_TYPE),7)
     end
 
     brwColumn(brw,"Tartalom",{||formaz(brw)},widthData)
-    dcol:=brw:colcount //editálható oszlop száma
+    dcol:=brw:colcount //editalhato oszlop szama
 
     if( "S"$opt )
         brwColumn(brw,"",{||status(brw,tab)},1)
@@ -128,13 +128,13 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
     brwMenuName(brw,"["+rightName(tabPathname(tab),30)+"]")
     if( "E"$opt )
-        brwMenu(brw,"Kilép","Kilép a módosítások tárolása nélkül",{||.f.},"K")
+        brwMenu(brw,"Kilep","Kilep a modositasok tarolasa nelkul",{||.f.},"K")
     end
     if( "M"$opt )
-        brwMenu(brw,"Módosít","Mezõtartalmak módosítása",{||edit(brw,dcol),.t.},"M")
+        brwMenu(brw,"Modosit","Mezotartalmak modositasa",{||edit(brw,dcol),.t.},"M")
     end
     if( "S"$opt )
-        brwMenu(brw,"Tárol","Módosított rekord beírása az adatbázisba",{||beir(brw,tab),.f.},"T")
+        brwMenu(brw,"Tarol","Modositott rekord beirasa az adatbazisba",{||beir(brw,tab),.f.},"T")
     end
     if( opt=="" )
         brwMenu(brw,"","",{||.f.})

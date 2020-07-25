@@ -40,14 +40,14 @@ local msg,total,cnt:=0
     fd:=fopen(btname,FO_READWRITE+FO_EXCLUSIVE)
     if( fd<0 )
         taberrOperation("tabCopybt")
-        taberrDescription("Filé nyitási hiba (fd)")
+        taberrDescription("File nyitasi hiba (fd)")
         tabError(table) 
     end
 
     db:=_db_open(fd)
     if( db==NIL )
         taberrOperation("tabCopybt")
-        taberrDescription("Filé nyitási hiba (db)")
+        taberrDescription("File nyitasi hiba (db)")
         tabError(table) 
     end
 
@@ -61,25 +61,25 @@ local msg,total,cnt:=0
     tabOpen(table,OPEN_EXCLUSIVE)
     tabZap(table)
     
-    //A rekordok sorrendje eltérhet a felvitel idõrendi sorrendjétõl,
-    //ui. a page-ek növekvõ sorrendjében haladunk, ami a szabadlista miatt
-    //nem feltétlenül lineáris. Nem akarom azonban, hogy a recovery
-    //sikere függjön a recno index épségétõl, és nem akarok a data
-    //page-ek listába fûzésével sem veszõdni.
+    //A rekordok sorrendje elterhet a felvitel idorendi sorrendjetol,
+    //ui. a page-ek novekvo sorrendjeben haladunk, ami a szabadlista miatt
+    //nem feltetlenul linearis. Nem akarom azonban, hogy a recovery
+    //sikere fuggjon a recno index epsegetol, es nem akarok a data
+    //page-ek listaba fuzesevel sem veszodni.
 
-    recbuf:=space(ps) //ebbe biztosan belefér
+    recbuf:=space(ps) //ebbe biztosan belefer
 
-    for n:=2 to pn-1  //header(0) és resource(1) kihagyva
+    for n:=2 to pn-1  //header(0) es resource(1) kihagyva
         i:=0
         while( .t. )
             rb:=_db_read1(db,recbuf,n,i++) 
 
             if( rb==0 )
-                //nincs több rekord, vagy nem is datapage 
+                //nincs tobb rekord, vagy nem is datapage 
                 exit 
 
             elseif( left(recbuf,1)=="*" )
-                //törölt rekord
+                //torolt rekord
 
             elseif( rb==table[TAB_RECLEN] )
                 tabAppend(table)
@@ -101,19 +101,19 @@ local msg,total,cnt:=0
     
     ferase(btname)
     frename(lower(tabPathName(table)),btname)
-    tabFile(table,tfile) //visszaállít
+    tabFile(table,tfile) //visszaallit
  
     return .t.
  
 
 ******************************************************************************
-#else //OPTIMIZED aktuális változat, a kulcsokat rendezi
+#else //OPTIMIZED aktualis valtozat, a kulcsokat rendezi
 
-#define ORDERBY_RECNO     //megtartja a rekordok eredeti sorrendjét
+#define ORDERBY_RECNO     //megtartja a rekordok eredeti sorrendjet
 //#define ORDERBY_PAGE      //elveszhet a rekordok eredeti sorrendje
  
-//2002.12.18 memók packolása (opcionális)
-#define MEMOPACK  //packolja-e a memókat?
+//2002.12.18 memok packolasa (opcionalis)
+#define MEMOPACK  //packolja-e a memokat?
  
 function tabCopybt(table)
 
@@ -127,7 +127,7 @@ local ord,key
 local column,memblk,mx,mv
 
     //-----------------------
-    //régi adatfilé
+    //regi adatfile
     //-----------------------
  
     btname:=lower(tabPathName(table))
@@ -136,14 +136,14 @@ local column,memblk,mx,mv
     fd:=fopen(btname,FO_READWRITE+FO_EXCLUSIVE)
     if( fd<0 )
         taberrOperation("tabCopybt")
-        taberrDescription("Filé nyitási hiba (fd)")
+        taberrDescription("File nyitasi hiba (fd)")
         tabError(table) 
     end
 
     db:=_db_open(fd)
     if( db==NIL )
         taberrOperation("tabCopybt")
-        taberrDescription("Filé nyitási hiba (db)")
+        taberrDescription("File nyitasi hiba (db)")
         tabError(table) 
     end
 
@@ -152,14 +152,14 @@ local column,memblk,mx,mv
         mh:=memoOpen(btxname)
         if( mh<0 )
             taberrOperation("tabCopybt")
-            taberrDescription("Filé nyitási hiba (mh)")
+            taberrDescription("File nyitasi hiba (mh)")
             tabError(table) 
         end
     end
     #endif
  
     //-----------------------
-    //új adatfilé
+    //uj adatfile
     //-----------------------
  
     tfile:=tabFile(table) 
@@ -185,7 +185,7 @@ local column,memblk,mx,mv
     #endif
  
     //-----------------------
-    //ideiglenes kulcsfilék
+    //ideiglenes kulcsfilek
     //-----------------------
  
     for ord:=0 to len(tabIndex(table)) 
@@ -194,7 +194,7 @@ local column,memblk,mx,mv
         aadd(fdkey,fopen(kfilnam,FO_CREATE+FO_TRUNCATE+FO_READWRITE+FO_NOLOCK))
         if( atail(fdkey)<0 )
             taberrOperation("tabCopybt")
-            taberrDescription("Filé létrehozási hiba (fdkey)")
+            taberrDescription("File letrehozasi hiba (fdkey)")
             tabError(table) 
         end
     next
@@ -204,19 +204,19 @@ local column,memblk,mx,mv
     recbuf:=table[TAB_RECBUF]  
 
 #ifdef ORDERBY_PAGE
-    //Ha tabAppend használja a szabadlistát, akkor a pack utáni
-    //rekordsorrend eltérhet a felvitel idõrendi sorrendjétõl.
+    //Ha tabAppend hasznalja a szabadlistat, akkor a pack utani
+    //rekordsorrend elterhet a felvitel idorendi sorrendjetol.
 
     ps:=_db_pagesize(db)
     pn:=fseek(fd,0,FS_END)/ps
 
-    for n:=2 to pn-1  //header(0) és resource(1) kihagyva
+    for n:=2 to pn-1  //header(0) es resource(1) kihagyva
         i:=0
         while( .t. )
             rb:=_db_read1(db,recbuf,n,i++) 
 
             if( rb==0 )
-                //nincs több rekord, vagy nem datapage 
+                //nincs tobb rekord, vagy nem datapage 
                 exit 
 
             elseif( rb!=reclen )
@@ -224,9 +224,9 @@ local column,memblk,mx,mv
 
 #ifdef ORDERBY_RECNO
 
-    //Csak akkor mûködik, ha épségben van a recno index,
-    //lassabb is, viszont megtartja a rekordok eredeti sorrendjét.
-    //Ez szükséges ahhoz, hogy a tabPack replikálható legyen.
+    //Csak akkor mukodik, ha epsegben van a recno index,
+    //lassabb is, viszont megtartja a rekordok eredeti sorrendjet.
+    //Ez szukseges ahhoz, hogy a tabPack replikalhato legyen.
 
         _db_setord(db,"recno")
         key:=_db_first(db) 
@@ -239,13 +239,13 @@ local column,memblk,mx,mv
             if( rb!=reclen )
 #endif
 
-                //sérült filé
+                //serult file
                 taberrOperation("tabCopybt")
-                taberrDescription("Filé olvasási hiba (rb!=reclen)")
+                taberrDescription("File olvasasi hiba (rb!=reclen)")
                 tabError(table) 
 
             elseif( left(recbuf,1)=="*" )
-                //törölt rekord
+                //torolt rekord
  
             else
 
@@ -256,16 +256,16 @@ local column,memblk,mx,mv
                 #ifdef MEMOPACK
                 if( memblk!=NIL )
                     set signal block
-                    table[TAB_EOF]:=.f.           //EOF törölve
+                    table[TAB_EOF]:=.f.           //EOF torolve
                     table[TAB_POSITION]:=1        //nem lehet 0 (ideiglenesen)
                     for mx:=1 to len(memblk)
-                        table[TAB_MEMOHND]:=mh    //régi memó
-                        mv:=eval(memblk[mx])      //olvasás a memóból
-                        table[TAB_MEMOHND]:=mh1   //új memó
-                        eval(memblk[mx],mv)       //írás a memóba
+                        table[TAB_MEMOHND]:=mh    //regi memo
+                        mv:=eval(memblk[mx])      //olvasas a memobol
+                        table[TAB_MEMOHND]:=mh1   //uj memo
+                        eval(memblk[mx],mv)       //iras a memoba
                     next
-                    table[TAB_MODIF]:=.f.         //commit törölve
-                    table[TAB_MEMODEL]:=NIL       //memodel törölve
+                    table[TAB_MODIF]:=.f.         //commit torolve
+                    table[TAB_MEMODEL]:=NIL       //memodel torolve
                     set signal unblock  
                 end
                 #endif                
@@ -336,7 +336,7 @@ local n,rb,stat
 
     if( 0>_db_setord(db1,keynam) )
         taberrOperation("tabCopybt")
-        taberrDescription("Index hiányzik (_db_setord<0)")
+        taberrDescription("Index hianyzik (_db_setord<0)")
         taberrArgs({keynam})
         tabError(table) 
     end
@@ -359,7 +359,7 @@ local n,rb,stat
 
         if( rb!=keylen )
             taberrOperation("tabCopybt")
-            taberrDescription("Filé olvasási hiba (rb!=keylen)")
+            taberrDescription("File olvasasi hiba (rb!=keylen)")
             taberrArgs({keynam,ferror()})
             tabError(table) 
         end
@@ -367,7 +367,7 @@ local n,rb,stat
         stat:=_db_put(db1,keyval)
         if( stat!=0 )
             taberrOperation("tabCopybt")
-            taberrDescription("Index építési hiba (_db_put!=0)")
+            taberrDescription("Index epitesi hiba (_db_put!=0)")
             taberrArgs({keynam,stat})
             tabError(table) 
         end

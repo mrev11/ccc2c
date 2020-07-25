@@ -18,8 +18,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//TARTALOM  : alias->field kezelés
-//STATUS    : közös, DBFNTX-ben nem kell
+//TARTALOM  : alias->field kezeles
+//STATUS    : kozos, DBFNTX-ben nem kell
 //
 //function tabSetFieldTable(table)
 //function tabDeleteFieldTable(table)
@@ -29,8 +29,8 @@
 ***************************************************************************
 #ifndef _DBFNTX_
 
-//Ezek a függvények az alias->field mezõhivatkozások
-//CCC-beli kezeléséhez kellenek. Clipperben nem kell.
+//Ezek a fuggvenyek az alias->field mezohivatkozasok
+//CCC-beli kezelesehez kellenek. Clipperben nem kell.
 
 function tabSetFieldTable(table)
 local aliasname:=tabAlias(table)
