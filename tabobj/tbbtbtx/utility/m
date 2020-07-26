@@ -1,3 +1,5 @@
 #!/bin/bash
-bapp_unixc.b  @par-unix.bld 
+bapp_unix_.b @parlib.bld
 
+bapp_unix_.b -xbti -xbt2dbf -xbt2txt  @parexe.bld
+bapp_unixc.b -xtstru -xtview  @parexe.bld  -bccc2_btbtxui

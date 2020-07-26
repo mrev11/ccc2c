@@ -63,7 +63,7 @@ local state:=tabSave(table)
         tabRestore(table,state)
 
         taberrOperation("tabLock")
-        tabErrDescription("A file foglalt")
+        tabErrDescription(@"file lock failed")
 
         if( valtype(userblock)=="B" )
             taberrUserBlock(userblock)
@@ -143,7 +143,7 @@ local n,s
         end
        
         taberrOperation("tabRecLock")
-        taberrDescription("A rekord foglalt")
+        taberrDescription(@"record lock failed")
        
         if( valtype(userblock)=="B" )
             taberrUserblock(userblock)
@@ -285,7 +285,7 @@ static function tabReRead(table) //rekord ujraolvasas
 local len:=_db_read(table[TAB_BTREE],table[TAB_RECBUF],table[TAB_RECPOS])
     if( len!=table[TAB_RECLEN] )
         taberrOperation("tabReRead")
-        taberrDescription("Rekord ujraolvasas hibas")
+        taberrDescription(@"failed rereading record")
         tabError(table)
     end
     return NIL

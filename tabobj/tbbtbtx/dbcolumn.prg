@@ -63,11 +63,14 @@ local pict
     end
 
     if( type=="C" )
-        pict:="@R "+replicate("X",min(width,64))
-
         if( tabMemoField(table,column) )
             pict:=tabMemoPict()
+        else
+            pict:="@R "+replicate("X",min(width,64))
         end
+
+    elseif( type=="X" )
+        pict:="@R "+replicate("X",min(width,64))
 
     elseif( type=="D" )
         pict:="D"
@@ -123,7 +126,6 @@ local dec   :=column[COL_DEC]
 local offs  :=column[COL_OFFS]
 local key   :=column[COL_KEYFLAG]
 
-
     //? name,type,key
 
     if(type=="C")
@@ -134,12 +136,14 @@ local key   :=column[COL_KEYFLAG]
             column[COL_BLOCK]:=if(key,xblkchar(table,offs,width),blkchar(table,offs,width))
         end
 
+    elseif(type=="X")
+        column[COL_BLOCK]:=if(key,xblkbin(table,offs,width),blkbin(table,offs,width))
+
     elseif(type=="N")
         column[COL_BLOCK]:=if(key,xblknumber(table,offs,width,dec),blknumber(table,offs,width,dec))
 
     elseif(type=="D")
         column[COL_BLOCK]:=if(key,xblkdate(table,offs),blkdate(table,offs))
-
 
     elseif(type=="L")
         column[COL_BLOCK]:=if(key,xblkflag(table,offs),blkflag(table,offs))
@@ -209,18 +213,24 @@ local index,ord
 ******************************************************************************
 static function blkchar(table,offs,width)
     return {|x| if(x==NIL.or.!islocked(table),;
+                bin2str(xvgetchar(table[TAB_RECBUF],offs,width)),;
+                (xvputbin(table[TAB_RECBUF],offs,width,str2bin(x)),x)) }
+
+static function blkbin(table,offs,width)
+//u.a. mint blkchar csak olvasaskor nem konvertal stringre
+    return {|x| if(x==NIL.or.!islocked(table),;
                 xvgetchar(table[TAB_RECBUF],offs,width),;
-                (xvputbin(table[TAB_RECBUF],offs,width,x),x)) }
+                (xvputbin(table[TAB_RECBUF],offs,width,str2bin(x)),x)) }
 
 static function blknumber(table,offs,width,dec)
     return {|x| if(x==NIL.or.!islocked(table),;
                 val(xvgetchar(table[TAB_RECBUF],offs,width)),;
-                (xvputchar(table[TAB_RECBUF],offs,width,str(x,width,dec)),x)) }
+                (xvputchar(table[TAB_RECBUF],offs,width,str2bin(str(x,width,dec))),x)) }
     
 static function blkdate(table,offs)
     return {|x| if(x==NIL.or.!islocked(table),;
                 stod(xvgetchar(table[TAB_RECBUF],offs,8)),;
-                (xvputchar(table[TAB_RECBUF],offs,8,dtos(x)),x)) }
+                (xvputchar(table[TAB_RECBUF],offs,8,str2bin(dtos(x))),x)) }
 
 static function blkflag(table,offs)  //megj: T=84, F=70
     return {|x| if(x==NIL.or.!islocked(table),;
@@ -230,7 +240,7 @@ static function blkflag(table,offs)  //megj: T=84, F=70
 static function blkmemo(table,offs,width)  
     return {|x| if(x==NIL.or.!islocked(table),;
                 tabMemoRead(table,xvgetchar(table[TAB_RECBUF],offs,width)),;
-                (xvputchar(table[TAB_RECBUF],offs,width,tabMemoWrite(table,xvgetchar(table[TAB_RECBUF],offs,width),x)),x))}
+                (xvputchar(table[TAB_RECBUF],offs,width,tabMemoWrite(table,xvgetchar(table[TAB_RECBUF],offs,width),str2bin(x))),x))}
 
 
 // xblk... = blk... (islocked <- xislocked)
@@ -238,18 +248,24 @@ static function blkmemo(table,offs,width)
 
 static function xblkchar(table,offs,width)
     return {|x| if(x==NIL.or.!xislocked(table),;
+                bin2str(xvgetchar(table[TAB_RECBUF],offs,width)),;
+                (xvputbin(table[TAB_RECBUF],offs,width,str2bin(x)),x)) }
+
+static function xblkbin(table,offs,width) 
+//u.a. mint xblkchar csak olvasaskor nem konvertal stringre
+    return {|x| if(x==NIL.or.!xislocked(table),;
                 xvgetchar(table[TAB_RECBUF],offs,width),;
-                (xvputbin(table[TAB_RECBUF],offs,width,x),x)) }
+                (xvputbin(table[TAB_RECBUF],offs,width,str2bin(x)),x)) }
 
 static function xblknumber(table,offs,width,dec)
     return {|x| if(x==NIL.or.!xislocked(table),;
                 val(xvgetchar(table[TAB_RECBUF],offs,width)),;
-                (xvputchar(table[TAB_RECBUF],offs,width,str(x,width,dec)),x)) }
+                (xvputchar(table[TAB_RECBUF],offs,width,str2bin(str(x,width,dec))),x)) }
     
 static function xblkdate(table,offs)
     return {|x| if(x==NIL.or.!xislocked(table),;
                 stod(xvgetchar(table[TAB_RECBUF],offs,8)),;
-                (xvputchar(table[TAB_RECBUF],offs,8,dtos(x)),x)) }
+                (xvputchar(table[TAB_RECBUF],offs,8,str2bin(dtos(x))),x)) }
 
 static function xblkflag(table,offs)  //megj: T=84, F=70
     return {|x| if(x==NIL.or.!xislocked(table),;

@@ -20,7 +20,6 @@
 
 #include "utility.ver"
 
- 
 #include "table.ch"
 #include "fileio.ch"
  
@@ -44,7 +43,7 @@ local args:={*},n,ctrl,fname
 
     if( fname==NIL )
         ? appname+" "+VERSION+" (C) ComFirm 2001"
-        ? "Usage: "+appname+" [-c ctrl] [-f] fname"
+        ? @"Usage: "+appname+" [-c ctrl] [-f] fname"
         ?
         errorlevel(1)
         quit
@@ -55,7 +54,7 @@ local args:={*},n,ctrl,fname
     end
     
     if( !file(fname) )
-        ? fname, "not found"
+        ? fname, @"not found"
         ?
         errorlevel(1)
         quit
@@ -64,7 +63,7 @@ local args:={*},n,ctrl,fname
     table:=open(fname,ctrl)
     
     if( table==NIL )
-        ? fname, "not available"
+        ? fname, @"not available"
         ?
         errorlevel(1)
         quit
@@ -114,10 +113,10 @@ local total:="/"+alltrim(str(tabLastrec(table)))
         if( file(dbfname) )
             err:=ioerrorNew()
             err:operation("createdbf")
-            err:description("ferase failed (data)")
+            err:description(@"ferase failed (data)")
             break(err)
         else
-            ?  "deleted", dbfname
+            ?  @"deleted", dbfname
         end
     end
 
@@ -126,10 +125,10 @@ local total:="/"+alltrim(str(tabLastrec(table)))
         if( file(dbmname) )
             err:=ioerrorNew()
             err:operation("createdbf")
-            err:description("ferase failed (memo)")
+            err:description(@"ferase failed (memo)")
             break(err)
         else
-            ? "deleted", dbmname
+            ? @"deleted", dbmname
         end
     end
  
@@ -137,20 +136,20 @@ local total:="/"+alltrim(str(tabLastrec(table)))
     if( hnd<0 )
         err:=ioerrorNew()
         err:operation("createdbf")
-        err:description("fcreate failed")
+        err:description(@"fcreate failed")
         break(err)
     else
-        ? "created", dbfname
+        ? @"created", dbfname
     end
 
     if( tabMemoCount(table)>0 )
         if( !memoCreate(dbmname) )
             err:=ioerrorNew()
             err:operation("createdbf")
-            err:description("memoCreate failed")
+            err:description(@"memoCreate failed")
             break(err)
         else
-            ? "created", dbmname
+            ? @"created", dbmname
         end
 
         hnd1:=memoOpen(dbmname)
@@ -158,7 +157,7 @@ local total:="/"+alltrim(str(tabLastrec(table)))
         if( hnd1<0 )
             err:=ioerrorNew()
             err:operation("createdbf")
-            err:description("memoOpen failed")
+            err:description(@"memoOpen failed")
             break(err)
         end
     end
@@ -174,15 +173,15 @@ local total:="/"+alltrim(str(tabLastrec(table)))
         width  := col[COL_WIDTH]
         dec    := col[COL_DEC]
 
-        buffer := padr(alltrim(name)+chr(0),11)
-        buffer += type
-        buffer += space(4)
+        buffer := padr(alltrim(str2bin(name))+bin(0),11)
+        buffer += str2bin(type)
+        buffer += replicate(a" ",4)
         
         //? name,type,width,dec
 
         if( type=="C" )
-            buffer += chr(width%256)
-            buffer += chr((width-width%256)/256)
+            buffer += bin(width%256)
+            buffer += bin((width-width%256)/256)
             
             if( !tabMemoField(table,col) )
                 blk:=blkchar(reclen,width)
@@ -191,31 +190,31 @@ local total:="/"+alltrim(str(tabLastrec(table)))
             end
             
         elseif( type=="N" )
-            buffer += chr(width)
-            buffer += chr(dec)
+            buffer += bin(width)
+            buffer += bin(dec)
             blk:=blknumber(reclen,width,dec)
  
         elseif( type=="D" )
-            buffer += chr(8)
-            buffer += chr(0)
+            buffer += bin(8)
+            buffer += bin(0)
             blk:=blkdate(reclen)
  
         elseif( type=="L" )
-            buffer += chr(1)
-            buffer += chr(0)
+            buffer += bin(1)
+            buffer += bin(0)
             blk:=blkflag(reclen)
  
         else
-            buffer += chr(0)
-            buffer += chr(0)
+            buffer += bin(0)
+            buffer += bin(0)
             blk:=blkdummy()
         end
 
-        buffer += space(14)
+        buffer += replicate(a" ",14)
         if( 32!=fwrite(hnd,buffer,32)  )
             err:=writeerrorNew()
             err:operation("createdbf")
-            err:description("fwrite failed")
+            err:description(@"fwrite failed")
             break(err)
         end
         
@@ -223,14 +222,14 @@ local total:="/"+alltrim(str(tabLastrec(table)))
         reclen+=width
     end
 
-    if( 2!=fwrite(hnd,chr(13)+chr(0),2)  )
+    if( 2!=fwrite(hnd,x"0d00",2)  )
         err:=writeerrorNew()
         err:operation("createdbf")
-        err:description("fwrite failed")
+        err:description(@"fwrite failed")
         break(err)
     end
     
-    msg:=message(msg,dbfname+" created")
+    msg:=message(msg,dbfname+@" created")
 
     tabGotop(table)
     while( !tabEof(table) )
@@ -239,7 +238,7 @@ local total:="/"+alltrim(str(tabLastrec(table)))
             msg:=message(msg,dbfname+str(lastrec)+total)
         end
  
-        buffer:=space(reclen)
+        buffer:=replicate(a" ",reclen)
         for n:=1 to tabFcount(table)
              eval(wblock[n],buffer,tabEvalColumn(table,n))
         next
@@ -247,7 +246,7 @@ local total:="/"+alltrim(str(tabLastrec(table)))
         if( reclen!=fwrite(hnd,buffer,reclen)  )
             err:=writeerrorNew()
             err:operation("createdbf")
-            err:description("fwrite failed")
+            err:description(@"fwrite failed")
             break(err)
         end
 
@@ -256,10 +255,10 @@ local total:="/"+alltrim(str(tabLastrec(table)))
     end
 
 
-    if( 1!=fwrite(hnd,chr(26),1)  )
+    if( 1!=fwrite(hnd,bin(26),1)  )
         err:=writeerrorNew()
         err:operation("createdbf")
-        err:description("fwrite failed")
+        err:description(@"fwrite failed")
         break(err)
     end
     
@@ -274,7 +273,7 @@ local total:="/"+alltrim(str(tabLastrec(table)))
 
     msg:=message(msg)
     
-    ? "written", alltrim(str(lastrec)), "records to", dbfname
+    ? @"written", alltrim(str(lastrec)), @"records to", dbfname
     ?
     return NIL
 
@@ -283,7 +282,7 @@ local total:="/"+alltrim(str(tabLastrec(table)))
 static function writeheader(hnd,hdrlen,reclen,lastrec)
 
 local err
-local buf:=space(32)
+local buf:=replicate(a" ",32)
 local dat:=date()
     
     xvclear(buf)
@@ -300,7 +299,7 @@ local dat:=date()
     if( 32!=xvwrite(hnd,buf,32) )
         err:=writeerrorNew()
         err:operation:="writeheader"
-        err:description:="xvwrite failed"
+        err:description:=@"xvwrite failed"
         break(err)
     end
 
@@ -308,19 +307,19 @@ local dat:=date()
 
 ******************************************************************************
 static function blkchar(offs,length)
-    return {|r,x|xvputchar(r,offs,length,x)}
+    return {|r,x|xvputchar(r,offs,length,str2bin(x))}
 
 static function blkmemo(offs,hnd)
-    return {|r,x|xvputchar(r,offs,10,if(empty(x),space(10),str(memoAddValue(hnd,x),10,0)))} //2001.08.06
+    return {|r,x|xvputchar(r,offs,10,str2bin(if(empty(x),space(10),str(memoAddValue(hnd,x),10,0))))}
  
 static function blknumber(offs,length,dec)
-    return {|r,x|xvputchar(r,offs,length,str(x,length,dec))}
+    return {|r,x|xvputchar(r,offs,length,str2bin(str(x,length,dec)))}
     
 static function blkdate(offs)
-    return {|r,x|xvputchar(r,offs,8,dtos(x))}
+    return {|r,x|xvputchar(r,offs,8,str2bin(dtos(x)))}
  
 static function blkflag(offs)
-    return {|r,x|xvputchar(r,offs,1,if(x,"T","F"))}
+    return {|r,x|xvputchar(r,offs,1,if(x,a"T",a"F"))}
 
 static function blkdummy()
     return {||NIL}

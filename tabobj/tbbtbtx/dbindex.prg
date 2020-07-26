@@ -190,30 +190,27 @@ function tabKeyCompose(table,order) //kulcs az aktualis rekordbol
 
 local aindex:=tabIndex(table)
 local idxcol:=if(order>0,aindex[order][IND_COL],{})
-local col,type,width,dec,n
-local segval,key:=""
- 
+local col,type,offs,width,dec,n
+local segval,key:=x""
+
     for n:=1 to len(idxcol)
 
         col    := tabGetColumn(table,idxcol[n])
         type   := col[COL_TYPE]
+        offs   := col[COL_OFFS]
         width  := col[COL_WIDTH]
         dec    := col[COL_DEC]
-        segval := eval(col[COL_BLOCK])
-        
 
-        if( type=="C" )
-            key+=segval  //nem kell transzformalni
+        //2013.09.26 atirva, sajnos ez kivetel:
+        //Az olvasas az oszlopblokk megkerulesevel,
+        //kozvetlenul a rekordbufferbol tortenik.
+        //hogy elkeruljuk az odavissza tipuskonverziot.
+        segval := xvgetchar(table[TAB_RECBUF],offs,width)
 
-        elseif( type=="N" )
-            key+=_db_numseg(segval,width,dec) 
-
-        elseif( type=="D" )
-            key+=dtos(segval) //nem kell transzformalni
- 
-        elseif( type=="L" )
-            key+=if(segval,"T","F")
+        if( type=="N" )
+            segval:=_db_numseg(val(segval),width,dec)
         end
+        key+=segval
     next
 
     key+=_db_wrbig32(tabPosition(table))+table[TAB_RECPOS]

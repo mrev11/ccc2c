@@ -107,7 +107,7 @@ static function getlastoffs(buf)
     return xvgetlit32(buf,4)
     
 static function compileheader(noffs,loffs,ndat)    
-local hdr:=space(MEMO_HDRSIZ)
+local hdr:=replicate(x"20",MEMO_HDRSIZ)
     //return l2bin(noffs)+l2bin(loffs)+i2bin(ndat)
     xvputlit32(hdr,0,noffs)
     xvputlit32(hdr,4,loffs)
@@ -148,10 +148,10 @@ local header, nb
         end
         blksiz:=max(64,blksiz)
 
-        header:=replicate(chr(0),16)
-        header+=padr(formatstr,16,chr(0))
-        header+=padr(str(blksiz,8),16,chr(0))
-        header:=padr(header,blksiz,chr(0))
+        header:=replicate(bin(0),16)
+        header+=padr(formatstr,16,bin(0))
+        header+=padr(str2bin(str(blksiz,8)),16,bin(0))
+        header:=padr(header,blksiz,bin(0))
     
         nb:=fwrite(hnd,header,blksiz)
         if( nb!=blksiz )
@@ -168,7 +168,7 @@ local header, nb
 function memoOpen(fname)
 
 local hnd:=fopen(fname,FO_READWRITE+FO_SHARED) 
-local buffer:=space(16), nb
+local buffer:=replicate(x"20",16), nb
 
     if( hnd>=0 )
         #ifdef _UNIX_
@@ -284,7 +284,7 @@ local offset, n
 function memoGetValue(hnd,offset)
 
 local value:=a""
-local buffer:=space(MEMO_BLKSIZ)
+local buffer:=replicate(x"20",MEMO_BLKSIZ)
 local nbrd,ndat,nofs,lofs
 local blknum:=0
 
@@ -361,8 +361,8 @@ function memoDeleteValue(hnd,offset)
 //az offset kezdetu listat
 //be kell tenni a szabad lista elejere
 
-local header:=space(MEMO_HDRSIZ)
-local buffer:=space(MEMO_HDRSIZ)
+local header:=replicate(x"20",MEMO_HDRSIZ)
+local buffer:=replicate(x"20",MEMO_HDRSIZ)
 local lastoffs,nextoffs
 local nb
 
@@ -433,7 +433,7 @@ local nb
 static function getfreeblocks(hnd,nblock)
 
 local blocks:={}
-local buffer:=space(MEMO_HDRSIZ)
+local buffer:=replicate(x"20",MEMO_HDRSIZ)
 local noffs:=0
 local nb
 

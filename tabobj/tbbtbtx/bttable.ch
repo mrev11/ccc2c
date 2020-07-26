@@ -103,7 +103,7 @@
 //---------------------------------------------------------------------------
 
 #define xvfree(hnd)      hnd:=NIL
-#define xvalloc(size)    space(size)
+#define xvalloc(size)    replicate(x"00",size)
 
 //---------------------------------------------------------------------------
 // Tranzakciok

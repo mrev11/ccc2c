@@ -75,7 +75,7 @@ local err
 
     //set printer to (APPNAME+".REP")
     //set printer on
-    
+
 
     if( !file(fnamex) )
         tab:=tabNew0(fname)
@@ -126,7 +126,7 @@ local err
             next
 
         recover err <tabobjerror>
-            result:=alert("tabAddIndex hiba",{"Javit","Kilep"})
+            result:=alert(@"tabAddIndex error",{@"Fix",@"Quit"})
             if( result!=1 )
                 return NIL
             end
@@ -137,14 +137,14 @@ local err
         result:=tabUpgrade(tab)
           
         if( result==NIL )
-            alert("A file foglalt: "+tabPathName(tab))
+            alert(@"File busy: "+tabPathName(tab))
 
         elseif( result==.f. )
 
-            if( 2<=alert("Nem minden mezo konvertalhato!",{"Kilep","Tovabb"}) )
+            if( 2<=alert(@"Cannot convert all fields!",{@"Cancel",@"Continue"}) )
                 result:=tabUpgrade(tab,.t.)
                 if( result==.f. )
-                    alert("Nem konvertalhato!")
+                    alert(@"Conversion failed!")
                 end
             end
         end
@@ -172,34 +172,29 @@ local upgrade:=.f.
         aadd(str,BLANKROW)
     end
 
-    brwFooting(brw,{"Rekordhossz: "+alltrim(str(total,4))+" byte","",""})
+    brwFooting(brw,{@"Record length: "+alltrim(str(total,4))+" byte","",""})
     brw:headSep:=B_HS+B_HS+B_HS 
     brw:colSep:="   "
     brw:footSep:=B_HS+B_HS+B_HS
     brwArray(brw,str)
 
-    if( APPNAME=="XSTRU" .or. APPNAME=="TSTRU" ) //datidx vagy btbtx
-        brwColumn(brw,"Name",brwABlock(brw,1),"@!S16 NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
-    else
-        brwColumn(brw,"Name",brwABlock(brw,1),"@! NNNNNNNNNN")
-    end
-
-    brwColumn(brw,"Typ" ,brwABlock(brw,2),"@! A")
-    brwColumn(brw,"Len" ,brwABlock(brw,3),"@Z 999")
-    brwColumn(brw,"Dec" ,brwABlock(brw,4),"@Z 99")
+    brwColumn(brw,@"Name",brwABlock(brw,1),"@!S16 NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
+    brwColumn(brw,@"Typ" ,brwABlock(brw,2),"@! A")
+    brwColumn(brw,@"Len" ,brwABlock(brw,3),"@Z 999")
+    brwColumn(brw,@"Dec" ,brwABlock(brw,4),"@Z 99")
 
     brwMenuName(brw,"["+tabPathName(tab)+"]")
 
-    brwMenu(brw,"App" ,"Uj mezo a lista vegere",{||fld_append(brw)})
-    brwMenu(brw,"Ins" ,"Mezo beszurasa a kurzor helyen",{||fld_insert(brw)})
-    brwMenu(brw,"Mod" ,"A kivalasztott mezo editalasa",{||fld_modify(brw)})
-    brwMenu(brw,"Del" ,"A kivalasztott mezo torlese",{||fld_delete(brw)})
+    brwMenu(brw,@"App" ,@"New field to the end",{||fld_append(brw)})
+    brwMenu(brw,@"Ins" ,@"New field at the cursor position",{||fld_insert(brw)})
+    brwMenu(brw,@"Mod" ,@"Edit selected field",{||fld_modify(brw)})
+    brwMenu(brw,@"Del" ,@"Delete selected field",{||fld_delete(brw)})
 
     if( !tabIndexExt()==".CTX" )
-        brwMenu(brw,"Xnd" ,"Indexek karbantartasa",{||brwKillFocus(brw),index(upg,brwArray(brw)),brwSetFocus(brw),.t.})
+        brwMenu(brw,@"Xnd" ,@"Maintain indexes",{||brwKillFocus(brw),index(upg,brwArray(brw)),brwSetFocus(brw),.t.})
     end
 
-    brwMenu(brw,"Upg" ,"Modositasok kiirasa",{||upgrade:=.t.,.f.})
+    brwMenu(brw,@"Upg" ,@"Save modifications",{||upgrade:=.t.,.f.})
 
     brwCaption(brw,APPVER)
     brwSetFocus(brw)
@@ -224,13 +219,13 @@ local pos:=brwArrayPos(brw)
 local name:=g:varget(), n
 
     if( empty(name) )
-        alert( "Nem lehet ures!" )
+        alert( @"Empty value not allowed!" )
         return .f.
     end
 
     for n:=1 to len(str)
         if( n!=pos .and. alltrim(name)==alltrim(str[n][1]) )
-            alert( "Ilyen oszlop mar van!" )
+            alert( @"Column name must be unique!" )
             return .f.
         end
     next
@@ -253,7 +248,7 @@ local type:=g:varget()
         str[pos][4]:=0
     end
 
-    return type$"CNDL"
+    return type$"CXNDL"
  
 
 ************************************************************************
@@ -278,7 +273,7 @@ local str:=brwArray(brw)
 local pos:=brwArrayPos(brw)
 local type:=str[pos][2]
 
-    return  type$"CN"
+    return  type$"CXN"
  
 
 ************************************************************************
@@ -390,14 +385,14 @@ local upg:=NIL
 
     brwArray(brw,idx)
 
-    brwColumn(brw,"Name"   ,brwABlock(brw,1),"@! XXXXXXXXXX")
-    brwColumn(brw,"Column" ,brwABlock(brw,3),"@S40! "+replicate("X",128) )
+    brwColumn(brw,@"Name"   ,brwABlock(brw,1),"@! XXXXXXXXXX")
+    brwColumn(brw,@"Column" ,brwABlock(brw,3),"@S40! "+replicate("X",128) )
 
     brwMenuName(brw,"["+tabIndexName(tab)+"]")
 
-    brwMenu(brw,"App" ,"Uj index letrehozasa",{||idx_append(brw)})
-    brwMenu(brw,"Mod" ,"A kivalasztott index editalasa",{||idx_modify(brw)})
-    brwMenu(brw,"Del" ,"A kivalasztott index torlese",{||idx_delete(brw)})
+    brwMenu(brw,@"App" ,@"Create new index",{||idx_append(brw)})
+    brwMenu(brw,@"Mod" ,@"Edit selected index",{||idx_modify(brw)})
+    brwMenu(brw,@"Del" ,@"Delete selected index",{||idx_delete(brw)})
     
     brw:getcolumn(1):cargo:={{|g|valid_idxname(brw)}}
     brw:getcolumn(2):cargo:={{|g|valid_segnames(g,str)}}
@@ -410,7 +405,7 @@ local upg:=NIL
     asize(tabIndex(tab),0)
     for i:=1 to len(idx)
         if( !empty(idx[i][1]) )
-            aadd(tabIndex(tab),{idx[i][1],tabFile(tab)+alltrim(str(i)),wordlist(idx[i][3])})
+            aadd(tabIndex(tab),{idx[i][1],tabFile(tab)+alltrim(str(i)),split(idx[i][3])})
         end
     next
     
@@ -425,13 +420,13 @@ local pos:=brwArrayPos(brw)
 local name:=upper(alltrim(arr[pos][1])),n
 
     if( empty(name) )
-        alert("Az index neve nem lehet ures!")
+        alert(@"Empty name not allowed!")
         return .f.
     end
     
     for n:=1 to len(arr)
         if( pos!=n .and. name==arr[n][1] )
-            alert("Ilyen nevu index mar van!")
+            alert(@"Index name must be unique!")
             return .f.
         end
     end
@@ -443,11 +438,11 @@ local name:=upper(alltrim(arr[pos][1])),n
 static function valid_segnames(g,str)
 
 local colnames:=g:varget() 
-local segname:=wordlist(colnames)
+local segname:=split(colnames)
 local seg, n, i 
 
     if( empty(segname) .or. empty(colnames) )
-        alert("Az indexnek nincs egy oszlopa sem!")
+        alert(@"Index must have columns!")
         return .f.
     end
     
@@ -462,7 +457,7 @@ local seg, n, i
         next
         
         if( i>len(str) )
-            alert( "Teves oszlopnev: "+seg )
+            alert( @"Invaild column name: "+seg )
             return .f.
         end
     next

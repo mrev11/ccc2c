@@ -1,6 +1,6 @@
 
 
-#define VERSION "CCC2-1.0.13"
+#define VERSION "CCC3-1.0.13"
 
 #ifdef _HISTORY_
 
@@ -11,8 +11,8 @@
 2008.09.08 -- 1.0.12
    bt2dbf/bt2txt [-c ctrl] [-f] fname
 
-2008.05.29 -- 1.0.10
-   datidx es btbtx formatumnal 10-nel hosszabb (max 32) mezonevek.
+2008.06.02 -- 1.0.11"
+   10-nel hosszabb (max 32) mezonevek.
 
    Maguk a motorok nem valtoztak.
    A DATIDX es BTBTX motor magatol mukodik hosszu mezonevekkel is
@@ -29,6 +29,9 @@
    tablaobjektumban (mert pl. lerovidult a neve) nem importalja.
 
    Tehat csak az interaktiv tablaeditalo programokban van valtozas.
+
+2006.08.17 -- 1.0.10"
+   kdirseek-ben a szeles mezok picture-je javitva.
 
 2006.02.20 -- 1.0.09
   Tview inditasakor beallithato az index (-c opcio).

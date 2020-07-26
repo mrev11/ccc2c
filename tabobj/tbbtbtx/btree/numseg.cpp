@@ -30,7 +30,7 @@ void _clp__db_wrbig32(int argno)
     recno_t recno=_parnu(1);
     char buf[4];
     store32(buf,recno);
-    _retclen(buf,4);
+    _retblen(buf,4);
     CCC_EPILOG();
 }
 
@@ -39,8 +39,8 @@ void _clp__db_wrbig32(int argno)
 void _clp__db_rdbig32(int argno)
 {
     CCC_PROLOG("_db_rdbig32",1);
-    char *buf=_parc(1);
-    if( _parclen(1)!=4 )
+    char *buf=_parb(1);
+    if( _parblen(1)!=4 )
     {
         ARGERROR();
     }
@@ -81,7 +81,7 @@ void _clp__db_numseg(int argno)
             }
         }
     }
-    _retc( buf );
+    _retb( buf );
     CCC_EPILOG();
 }
 

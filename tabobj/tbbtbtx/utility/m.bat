@@ -1,2 +1,5 @@
 @echo off
-bapp_w32c_btbtx @par-nt.bld
+call bapp_w320  @parlib.bld
+
+call bapp_w32_ -xbti -xbt2dbf -xbt2txt  @parexe.bld
+call bapp_w32c -xtstru -xtview -bccc2_btbtxui @parexe.bld

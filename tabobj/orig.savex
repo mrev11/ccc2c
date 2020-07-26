@@ -1,8 +1,0 @@
--s/opt/ccc2/tabobj
--r:ppo:
--lrobj*
-
--r:ctree:tbdatidx:tbdbfctx:
--lxinstall.bat
--x.savex.bak.
--mw

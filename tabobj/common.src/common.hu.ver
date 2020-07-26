@@ -1,10 +1,9 @@
+2016.12.05
+  tabchlog.prg-ben Cs.L. valtozatatasai CCC2-bol athozva.
+
 2008.04.21
   Az indexek neve nagybetusen van tarolva a fajlban,
   ezert tabScanIndex-ben is nagybetusen kell keresni.
-
-2006.06.04
-  "Szemafor directory nem hozhato letre" hiba javitva
-  (kimaradt a lower a szemafor directory vizsgalatabol).
 
 2004.03.10
   Naplozas bovult: tabWriteChangeLogDrop, Create, Upgrade.

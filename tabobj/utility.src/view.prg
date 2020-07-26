@@ -27,7 +27,7 @@
 #define APPVER APPNAME+" "+VERSION
 
 static APPNAME
- 
+
 *********************************************************************
 function appview(app)
 
@@ -44,7 +44,7 @@ local fname,control,n:=0,v
             fname:=v
         end
     end
-
+    
     if( fname==NIL )
         ? APPVER, " Copyright (C) ComFirm BT. 1998."
         ? @"Usage: "+lower(APPNAME)+@" <filename>"
@@ -72,8 +72,8 @@ local fname,control,n:=0,v
 
     //set printer to (APPNAME+".REP")
     //set printer on
-
     
+
     if( !file(fname) )
         ? fname,@"not found"
         ?
@@ -92,31 +92,36 @@ local modos:={},index:={}
     if( empty(tab:=kdirOpen(fname)) )
         return NIL
     end
-        
+    
     brw:=tabBrowse(tab,0,0,maxrow(),maxcol(),.t.)
-    recnum:=TBColumnNew(" Rec#",{||tabPosition(tab)},"9999999")
+    recnum:=TBColumnNew(@" Rec#",{||tabPosition(tab)},"9999999")
     brw:insColumn(1,recnum)
     brw:freeze:=1
 
     brwCaption(brw,APPVER)
 
-    brwMenu(brw,"Struktura","Mezobeosztas megtekintese",{||struktura(brw,tab)},"S")
+    brwMenu(brw,@"Structure",@"View field structure",{||struktura(brw,tab)},"S")
 
     for n:=1 to len(tabIndex(tab))
         aadd(index,{tabIndex(tab)[n][1],blkControl(tab,brw,n)})
     next
-    aadd(index,{"fizikai sorrend",{||setControl(tab,brw,0)}})
-    brwMenu(brw,"Index","Vezerlo index (sorrend) beallitasa",index,"I")
+    aadd(index,{@"natural order",{||setControl(tab,brw,0)}})
+    brwMenu(brw,@"Index",@"Set controlling index (order)",index,"I")
 
-    aadd(modos,{"A kivalasztott rekord modositasa",{||modosit(brw,tab)}})
-    aadd(modos,{"Ures rekord hozzaadasa",{||ujrekord(brw,tab)}})
-    aadd(modos,{"A kivalasztott rekord torlese",{||torol(brw,tab)}})
-    aadd(modos,{"A kivalasztott rekord lockolasa",{||lockol(brw,tab)}})
-    aadd(modos,{"Az aktualis allomany PACKolasa",{||pakkol(brw,tab)}})
-    aadd(modos,{"Az aktualis allomany ZAPolasa",{||zapol(brw,tab)}})
-    aadd(modos,{"Az allomany exkluziv megnyitasa",{||xopen(brw,tab)}})
+    aadd(modos,{@"Modify current record",{||modosit(brw,tab)}})
+    aadd(modos,{@"Append empty record",{||ujrekord(brw,tab)}})
+    aadd(modos,{@"Delete current record",{||torol(brw,tab)}})
+    aadd(modos,{@"Goto record position",{||goto(brw,tab)}})
+    aadd(modos,{@"Lock current record",{||lockcur(brw,tab)}})
+    aadd(modos,{@"Lock records by position",{||lockpos(brw,tab)}})
+    aadd(modos,{@"Lock multiple records",{||lockmul(brw,tab)}})
+    aadd(modos,{@"Unlock records by position",{||unlockpos(brw,tab)}})
+    aadd(modos,{@"Unlock all records",{||tabunlock(tab)}})
+    aadd(modos,{@"Pack database file",{||pakkol(brw,tab)}})
+    aadd(modos,{@"Zap database file",{||zapol(brw,tab)}})
+    aadd(modos,{@"Lock database file",{||lockfil(brw,tab)}})
  
-    brwMenu(brw,"Modosit","A kivalasztott rekord modositasa, torlese, packolas",modos,"M")
+    brwMenu(brw,@"Modify",@"Modify selected record, append, delete, pack",modos,"M")
 
 
     brwApplyKey(brw,{|b,k|appkey(b,k,tab)})
@@ -154,20 +159,20 @@ local str:=tabColumn(tab), n, total:=0
     for n:=1 to len(str)
          total+=str[n][3]
     next
-    brwFooting(brw,{"Rekordhossz: "+alltrim(str(total,4))+" byte","",""})
+    brwFooting(brw,{@"Record length: "+alltrim(str(total,4))+" byte","",""})
     brw:headSep:=B_HD
     brw:colSep:="  "
     brw:footSep:=B_HD
     brw:colorSpec:="n/w,w/n,,,n/w"
     brwArray(brw,str)
 
-    brwColumn(brw,"Name",brwABlock(brw,1),32)
-    brwColumn(brw,"Typ",brwABlock(brw,2),3)
-    brwColumn(brw,"Len",brwABlock(brw,3),"@Z 999")
-    brwColumn(brw,"Dec",brwABlock(brw,4),"@Z 999")
+    brwColumn(brw,@"Name",brwABlock(brw,1),32)
+    brwColumn(brw,@"Typ",brwABlock(brw,2),3)
+    brwColumn(brw,@"Len",brwABlock(brw,3),"@Z 999")
+    brwColumn(brw,@"Dec",brwABlock(brw,4),"@Z 999")
 
     brwMenuName(brw,rightName(tabPathname(tab),26))
-    brwMenu(brw,"","adatbazis mezobeosztasa",{||.f.})
+    brwMenu(brw,"",@"database structure",{||.f.})
     brwSetFocus(brw)
     brwShow(brw)
     brwLoop(brw)
@@ -186,7 +191,7 @@ static function setControl(tab,brw,ord)
 local indname
     
     if( empty(ord) )
-        indname:="fizikai sorrend"
+        indname:=@"natural order"
     elseif( valtype(ord)=="N" )
         indname:=tabIndex(tab)[ord][1]
     else
@@ -194,7 +199,7 @@ local indname
     end
 
     tabControl(tab,ord)
-    brwFooting(brw,{"Allomany: "+rightName(tabPathName(tab),28),,"Sorrend: "+indname})
+    brwFooting(brw,{@"Database: "+rightName(tabPathName(tab),28),,@"Order: "+indname})
     brw:refreshAll()
     return .t.
 
@@ -204,7 +209,7 @@ static function kdirOpen(fname)
 local tab:=tabResource(fname)
 
     if( valtype(tab)!="A" .or.  empty(tab) )
-        alert(fname+" foglalt!")
+        alert(fname+" busy!")
         tab:=NIL 
     else
         tabOpen(tab)

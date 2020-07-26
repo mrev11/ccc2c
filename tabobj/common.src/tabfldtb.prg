@@ -26,12 +26,10 @@
 
 #include "tabobj.ch"
 
-***************************************************************************
-#ifndef _DBFNTX_
-
 //Ezek a fuggvenyek az alias->field mezohivatkozasok
 //CCC-beli kezelesehez kellenek. Clipperben nem kell.
 
+***************************************************************************
 function tabSetFieldTable(table)
 local aliasname:=tabAlias(table)
 local column:=tabColumn(table),n,col
@@ -43,6 +41,7 @@ local column:=tabColumn(table),n,col
     next
     return NIL
 
+***************************************************************************
 function tabDeleteFieldTable(table)
 local aliasname:=tabAlias(table)
 
@@ -50,12 +49,4 @@ local aliasname:=tabAlias(table)
     //? "delete", aliasname
     return NIL
 
-#else    
-    
-function tabSetFieldTable(table)
-    return NIL
-function tabDeleteFieldTable(table)
-    return NIL
-
-#endif
 ***************************************************************************

@@ -1,12 +1,13 @@
 
-#define VERDATE  "2015.11.12 -- 1.1.19"
-
 #ifdef _HISTORY_
 
-2015.11.12 -- 1.1.19
+2016.12.05 -- 2.1.0
+  tabchlog.prg-ben Cs.L. valtozatatasai CCC2-bol athozva.
+
+2015.11.12 -- 2.0.5
   mpool.cpp warning javitas
 
-2015.09.03 -- 1.1.18
+2015.09.03 -- 2.0.4
   mpool.cpp
     reszletesebb debug info
     mpool_put-ben CRC iras, mpool_get-ben CRC ellenorzes
@@ -20,25 +21,50 @@
        CRC hibas filet is tud packolni,
        ha a recno index es az adatlapok hibatlanok
 
-2008.10.02 -- 1.1.16"
-  gcc 4.3.2 warningok javitva.
+2013.09.26 -- 2.0.3
+   tabKeyCompose() atirva.
+   A korabbi valtozat oszlopblokkal olvasta a kulcsszegmenseket.
+   Az oszlopblokk beepitett tipuskonverziot hajt vegre az erteken,
+   amit vissza kellett konvertalni binary tipusra. Az odavissza 
+   konverzio miatt egy karakteres mezobol kepzett kulcs elterhetett 
+   a mezotol, ha a mezo ervenytelen UTF-8 kodot tartalmazott. 
+   Pelda: Egy CCC2-vel keszult adatbazis C tipusu mezojeben legyen 
+   mondjuk egy Latin-2 'a'. Ha ezt indexeltuk CCC3-ban, akkor az a-bol
+   az indexben '?' lett. Ezutan a rekordot nem lehetett seek-kel megtalalni.
+   Az uj valtozat xvgetchar-ral (tipuskonverzio nelkul) olvas,
+   igy az indexbe mindig a mezovel egyezo ertek kerul (fuggetlenul
+   a kodolastol).
 
-2008.04.21 -- 1.1.15"
-  Sun/Solarison nem mukodott a filemapping a file-share protokoll miatt,
-  ezert a kulcsok rendezesere szolgalo ideiglenes file letrehozasa
+2009.10.02 -- 2.0.2
+   gcc 4.3.2 warningok javitva.
+
+2008.04.21 -- 2.0.1
+   Sun/Solarison nem mukodott a filemapping a file-share protokoll miatt,
+   ezert a kulcsok rendezesere szolgalo ideiglenes file letrehozasa
     fcreate(KEYFILE(table,o),FO_READWRITE+FO_SHARED) helyett
     fopen(KEYFILE(table,o),FO_CREATE+FO_TRUNCATE+FO_READWRITE+FO_NOLOCK)-kal.
-  Ket helyen is javitva: 1) a packolasnal 2) a suppindexeknel.
+   Ket helyen is javitva: 1) a packolasnal 2) a suppindexeknel.
+ 
+   Az eredeti fcreate-os valtozatnak mas hibai is vannak:
+   FO_READWRITE felesleges, mivel fcreate-nal az a default.
+   FO_SHARED hatastalan, mivel az fcreate nem veszi figyelembe.
+   (Megj: Clipper orokseg, hogy az fcreate nem allitja be a share modot. 
+   A CA-Tools setshare() fuggvennyel globalisan allithato az fcreate 
+   altal hasznalt share mode.)
+ 
+   Az indexinfot tabCreate-ban 3 helyett 4 hosszan kell a resourceba irni, 
+   maskulonben a packolas atvaltoztatja a suppindexeket permanens indexsze.
 
-  Az eredeti fcreate-os valtozatnak mas hibai is vannak:
-  FO_READWRITE felesleges, mivel fcreate-nel az a default.
-  FO_SHARED hatastalan, mivel az fcreate nem veszi figyelembe.
-  (Megj: Clipper orokseg, hogy az fcreate nem allitja be a share modot. 
-  A CA-Tools setshare() fuggvennyel globalisan allithato az fcreate 
-  altal hasznalt share mode.)
+2006.04.20 -- 2.0.0
+   Portolas unicode-ra.
+   Uj mezotipus: X.
+   A C mezok str2bin-nel tarolodnak, es bin2str-rel olvasodnak ki.
+   Az X mezok str2bin-nel tarolodnak, es binary-kent olvasodnak.
+   A memo mezok str2bin-nel tarolodnak, es binary-kent olvasodnak.
 
-  Az indexinfot tabCreate-ban 3 helyett 4 hosszan kell a resourceba irni, 
-  maskulonben a packolas atvaltoztatja a suppindexeket permanens indexsze.
+   Megjegyzes: A program nincs az elejetol a vegeig atvizsgalva,
+   sem tesztelve (ahogy lennie kellene), hanem ahol a probalgatas
+   kihozta a string<-->binary konfliktusokat, ott javitottam.
 
 2005.08.08 -- 1.1.14"
    A quitblock-ban csak akkor szabad tovabbi adatbazismuveleteket

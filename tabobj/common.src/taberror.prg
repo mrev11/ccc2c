@@ -125,9 +125,7 @@ local result,userblock,key,msg
         key:=alert(msg,{@"Retry",@"Quit"})
         if( key<2 )
             result:=.t.
-        elseif( key==2 )
-            result:=.t.
-        elseif(key>=3)
+        else
             break(err)
         end
 

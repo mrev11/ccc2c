@@ -1,7 +1,6 @@
--ltutil 
 -d. 
--d$(CCCDIR)/tabobj/utility.src 
+-b$(BUILD_OBJ)/tutil
 -bccc2_btbtx
--bccc2_btbtxui
+
 BUILD_EXE=$(CCCDIR)/usr/bin/$(CCCUNAME)
 

@@ -71,7 +71,6 @@ local eoffs:=rat(".",dbfspec)
         tabFile(table,file)
         tabExt(table,ext)
         
-
         column:=readColumn(db)
         for n:=1 to len(column)
             tabAddColumn(table,column[n])
@@ -90,16 +89,16 @@ local eoffs:=rat(".",dbfspec)
 
 ******************************************************************************
 static function readColumn(btree)
-local buffer:=space(4096)
+local buffer:=replicate(x"00",4096)
     _db_read1(btree,buffer,1,0)
-    return _chr2arr(buffer)
+    return bin2arr(buffer)
 
 
 ******************************************************************************
 static function readIndex(btree)
-local buffer:=space(4096)
+local buffer:=replicate(x"00",4096)
     _db_read1(btree,buffer,1,1)
-    return _chr2arr(buffer)
+    return bin2arr(buffer)
 
 
 ******************************************************************************

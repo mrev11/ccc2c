@@ -23,6 +23,5 @@ function main(fname)
     set dosconv fileshare
     appstru(fname,"TSTRU")
 
-
 *********************************************************************
  

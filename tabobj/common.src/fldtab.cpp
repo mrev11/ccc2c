@@ -20,8 +20,11 @@
 
 #include <stdio.h>
 #include <string.h>
-
 #include <cccapi.h>
+
+DEFINE_METHOD(args);
+DEFINE_METHOD(description);
+DEFINE_METHOD(operation);
 
 
 #define MAXFIELD  1024
@@ -31,11 +34,12 @@ typedef struct
   char  *alias;    //alias nev
   char  *field;    //mezo nev
   VALUE codeblk;   //oszlop blokk
-  long  ninsert;   //ellenorzo szam
+  int   ninsert;   //ellenorzo szam
 } FIELDREF;
 
+
 static FIELDREF ftab[MAXFIELD];
-static long ninsert=0;
+static int ninsert=0;
 static int lastpos=0;
 static int initflag=0;
 
@@ -44,8 +48,6 @@ static int initflag=0;
 void _clp__field_insert(int argno)
 {
     CCC_PROLOG("_field_insert",3);
-    
-    //printf("\n_field_insert");getchar();
     
     if( !initflag )
     {
@@ -62,39 +64,44 @@ void _clp__field_insert(int argno)
     while( ftab[n].ninsert )
     {
         if( MAXFIELD<=++n ) n=0;
-        if( n==lastpos ) {printf("\nftab overflow");exit(1);}
+        if( n==lastpos ) 
+        {
+            fprintf(stderr,"\nftab overflow");
+            fflush(0);
+            exit(1);
+        }
     }
     lastpos=n;
 
-    //printf("\n %d %d %s %s",lastpos,ninsert,_parc(1),_parc(2)); //getchar();
-
-    ftab[n].alias   = _parc(1);
-    ftab[n].field   = _parc(2);
+    ftab[n].alias   = strdup((str2bin(base),_parb(1)));
+    ftab[n].field   = strdup((str2bin(base+1),_parb(2)));
     ftab[n].codeblk = *PARPTR(3);
     ftab[n].ninsert = ninsert;
+
+    //printf("_field_insert %3d %3d %s %s\n",lastpos,ninsert,_parb(1),_parb(2));
     
     _ret();
     CCC_EPILOG();
 }
 
-
 //----------------------------------------------------------------------
 void _clp__field_delete(int argno)
 {
     CCC_PROLOG("_field_delete",1);
-    char *alias=_parc(1);
+    char *alias=(str2bin(base),_parb(1));
     int n;
     
-    //printf("\n _field_delete:%s",alias);getchar();
+    //printf("_field_delete %s\n",alias);
     
     if( initflag )
     {
         for(n=0; n<MAXFIELD; n++)
         {
-            if( (ftab[n].alias!=NULL)  && (0==stricmp(ftab[n].alias,alias)) )
+            if( (ftab[n].alias!=NULL)  && (0==strcasecmp(ftab[n].alias,alias)) )
             {
-                ftab[n].alias   = NULL;
-                ftab[n].field   = NULL;
+                //printf("_field_delete %3d %3d %s %s\n",n,ftab[n].ninsert,ftab[n].alias,ftab[n].field);
+                if(ftab[n].alias){free(ftab[n].alias); ftab[n].alias=NULL;}
+                if(ftab[n].field){free(ftab[n].field); ftab[n].field=NULL;}
                 ftab[n].ninsert = 0;
             }
         }
@@ -103,21 +110,16 @@ void _clp__field_delete(int argno)
     CCC_EPILOG();
 }
 
-
 //----------------------------------------------------------------------
 static void fsearch_error(const char*alias, const char*field)
 {
-    extern void _clp_taberroperation(int);  
-    extern void _clp_taberrdescription(int);  
-    extern void _clp_taberrargs(int);  
-    extern void _clp_taberror(int);  
-    
-    string("Invalid field reference"); _clp_taberrdescription(1); pop();
-    string("dbfield:fsearch"); _clp_taberroperation(1); pop();
-    stringn(alias); stringn(field); array(2); _clp_taberrargs(1);pop();
-    _clp_taberror(0); pop();
+    fprintf(stderr,"invalid field reference: %s->%s\n",alias,field);fflush(0);
+    _clp_errornew(0);
+    DUP();stringnb("invalid field reference");_o_method_description.eval(2);POP();
+    DUP();stringnb("dbfield:fsearch");_o_method_operation.eval(2);POP();
+    DUP();stringnb(alias);stringnb(field);array(2);_o_method_args.eval(2);POP();
+    _clp_break(1);
 }
-
 
 //----------------------------------------------------------------------
 #ifndef CLASS_DBFIELD
@@ -147,8 +149,6 @@ dbfield::dbfield(char*a, char*f)
     ftabidx=-1;
     alias=(const char*)a;
     field=(const char*)f;
-
-    //printf("\nconstructed: %s->%s",a,f);flushall();
 };
 
 //----------------------------------------------------------------------
@@ -157,15 +157,11 @@ dbfield::dbfield(const char*a, const char*f)
     ftabidx=-1;
     alias=a;
     field=f;
-
-    //printf("\nconstructed: %s->%s",a,f);flushall();
 };
 
 //----------------------------------------------------------------------
 void dbfield::fsearch(void)
 {
-    //printf("\nfsearch");getchar();
-
     ftabidx=-1;
     int n;
 
@@ -179,10 +175,9 @@ void dbfield::fsearch(void)
             //       field,
             //       (ftab[n].alias?ftab[n].alias:"????"),
             //       (ftab[n].field?ftab[n].field:"????") );
-            //getchar();
         
-            if( ftab[n].alias && (stricmp(ftab[n].alias,alias)==0) &&
-                ftab[n].field && (stricmp(ftab[n].field,field)==0) )
+            if( ftab[n].alias && (strcasecmp(ftab[n].alias,alias)==0) &&
+                ftab[n].field && (strcasecmp(ftab[n].field,field)==0) )
             {
                 ftabidx=n;
                 ninsert=ftab[n].ninsert;
@@ -190,16 +185,12 @@ void dbfield::fsearch(void)
             }
         }
     }
-    
     fsearch_error(alias,field);
 }
-
 
 //----------------------------------------------------------------------
 void dbfield::fget(void)  //stack:   --- value
 {
-    //printf("\nfget");getchar();
-
     if( (ftabidx<0) || ftab[ftabidx].ninsert!=ninsert )
     {
         fsearch();
@@ -208,23 +199,16 @@ void dbfield::fget(void)  //stack:   --- value
     _clp_eval(1);
 }
 
-
 //----------------------------------------------------------------------
 void dbfield::fput(void)  //stack: value --- value
 {
-    //printf("\nfput");getchar();
-
     if( (ftabidx<0) || ftab[ftabidx].ninsert!=ninsert )
     {
         fsearch();
     }
-    
-    //printf("\n %s %s ",ftab[ftabidx].alias,ftab[ftabidx].field);flushall();
-    
     DUP();
     *TOP2()=ftab[ftabidx].codeblk;
     _clp_eval(2);
-
 }
 
 //----------------------------------------------------------------------

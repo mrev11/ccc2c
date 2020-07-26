@@ -45,9 +45,7 @@ local margin:=int((maxcol()-widthWind)/2)
 local col:=tabColumn(tab),value:={},n,m,c,v,dcol
 local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
 
-    #ifndef _cl_
     brw:flushright:=.f. //szamok balra igazitva
-    #endif
 
     if( opt==NIL )
         opt:="EMST"
@@ -67,17 +65,16 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
                 elseif( tabMemoField(tab,col[n]) )
                     aadd(v,"@R "+replicate("X",MEMOLENGTH))
                 else
-                    //2011.09.12
-                    //A picture browseolashoz volt meretezve.
-                    //Egy browseban nem szerencses, ha tul szeles egy oszlop,
-                    //ezert a szeles oszlopok a tenyleges szelesseguknel
-                    //rovidebb picturet kapnak. Itt viszont az oszlopot 
-                    //a teljes szelessegeben editalhatova kell tenni.
+                    //aadd(v,col[n][COL_PICT])
+                    //ha hosszu, akkor teljes hossz (2011.09.19)
+
                     if( replicate("X",32)$col[n][COL_PICT] )
                         aadd(v,"@R "+replicate("X",col[n][COL_WIDTH]))
                     else
                         aadd(v,col[n][COL_PICT])
                     end
+
+
                 end
 
                 aadd(v,tabMemoField(tab,col[n]))
@@ -96,11 +93,15 @@ local brw:=brwCreate(3,margin,maxrow()-1,maxcol()-margin)
             if( tabMemoField(tab,col[n]) )
                 aadd(v,"@R "+replicate("X",MEMOLENGTH))
             else
+                //aadd(v,col[n][COL_PICT])
+                //ha hosszu, akkor teljes hossz (2011.09.19)
+
                 if( replicate("X",32)$col[n][COL_PICT] )
                     aadd(v,"@R "+replicate("X",col[n][COL_WIDTH]))
                 else
                     aadd(v,col[n][COL_PICT])
                 end
+
             end
 
             aadd(v,tabMemoField(tab,col[n]))
@@ -180,7 +181,6 @@ local value:=col[MODR_VALUE]
 local field:=col[MODR_FIELD]
     return if(tabEvalColumn(tab,field)==value,"","*")
 
-
 ************************************************************************
 static function beir(brw,tab)
 local arr:=brwArray(brw), n
@@ -219,7 +219,6 @@ local memoflg,memotxt,scrn,curs
  
         if( replicate("X",widthData+1)$pict )
             pict:=strtran(pict,"@R","@S"+alltrim(str(widthData)))
-            //alert(pict)
         end
          
         column:=brw:getcolumn(dcol) 
@@ -227,7 +226,7 @@ local memoflg,memotxt,scrn,curs
         saveb:=column:block
         savep:=column:picture
 
-        column:block:={|x|if(x==NIL,arr[pos][MODR_VALUE],arr[pos][MODR_VALUE]:=if(len(pict)>MEMOLENGTH,rtrim(x),x))} 
+        column:block:={|x|setget(arr,pos,pict,x)} 
         column:picture:=pict
 
         key:=brwEditCell(brw,dcol)
@@ -245,10 +244,10 @@ local memoflg,memotxt,scrn,curs
             if( memoflg )
                 scrn:=savescreen(brw:ntop,brw:nleft,brw:nbottom,brw:nright) 
                 curs:=setcursor(SC_NORMAL)
-                memotxt:=rtrim(arr[pos][MODR_VALUE])
+                memotxt:=bin2str(rtrim(arr[pos][MODR_VALUE]))
                 memotxt:=memoedit(memotxt,brw:ntop,brw:nleft,brw:nbottom,brw:nright)
                 if(lastkey()!=K_ESC)
-                    arr[pos][MODR_VALUE]:=rtrim(memotxt)
+                    arr[pos][MODR_VALUE]:=str2bin(rtrim(memotxt))
                 end
                 restscreen(brw:ntop,brw:nleft,brw:nbottom,brw:nright,scrn) 
                 setcursor(curs)
@@ -260,6 +259,22 @@ local memoflg,memotxt,scrn,curs
     brw:refreshcurrent()
     return key
 
+************************************************************************
+static function setget(arr,pos,pict,x)
+//A getek stringeket (C) editalnak, binary (X) adatokat nem!
+//Ezert, amikor egy memo vagy binary mezo bekerul a getbe editalasra,
+//akkor automatikusan stringre konvertalodik (itt info veszhet el).
+//Amikor az editalt stringet kivesszuk, vissza kell konvertalni binaryra.
+
+    if( x==NIL )
+        x:=arr[pos][MODR_VALUE]
+    else
+        if( valtype(arr[pos][MODR_VALUE])=="X" )
+            x:=str2bin(x) //visszakonvertal
+        end
+        arr[pos][MODR_VALUE]:=if(len(pict)>MEMOLENGTH,rtrim(x),x)
+    end
+    return x
 
 ************************************************************************
 static function rightName(name,length)

@@ -59,7 +59,7 @@ local msg,msgtotal,msgdbnam
         tabError()
     end
 
-    buffer:=space(32) 
+    buffer:=replicate(x"20",32) 
 
     if( 32>fread(hnd1,@buffer,32) )
         taberrOperation("copydbf")
@@ -84,7 +84,7 @@ local msg,msgtotal,msgdbnam
     ? @"rekord hossz :", reclen
     ? @"mezok szama  :", fldcnt 
     
-    header:=space(hdrlen-32)
+    header:=replicate(x"20",hdrlen-32)
 
     if( hdrlen-32>fread(hnd1,@header,hdrlen-32) )
         taberrOperation("copydbf")
@@ -132,7 +132,7 @@ local msg,msgtotal,msgdbnam
     msgtotal:="/"+alltrim(str(reccnt))
     msgdbnam:="Pack  "+upper(db1)
     msg:=message(msg,msgdbnam+str(n)+msgtotal)
-    buffer:=space(reclen)
+    buffer:=replicate(x"20",reclen)
     reccnt:=0
 
     while( reclen==fread(hnd1,@buffer,reclen) )
@@ -154,7 +154,7 @@ local msg,msgtotal,msgdbnam
     
     fwrite(hnd2,chr(26)) //EOF=1A
     fseek(hnd2,4,FS_SET)
-    xvputlit32(buf4:=space(4),0,reccnt)
+    xvputlit32(buf4:=replicate(x"20",4),0,reccnt)
     fwrite(hnd2,buf4) //fejlec: rekordszam
 
     message(msg,msgdbnam+str(n)+msgtotal)

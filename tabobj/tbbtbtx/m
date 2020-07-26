@@ -1,4 +1,5 @@
 #!/bin/bash
+#export CCC_STRING_TAB=STRTAB
 bapp_unix0.b @par-unix.bld  
 bapp_unix0.b @par-unixui.bld  
  
@@ -7,10 +8,11 @@ cp -pf obj$CCCBIN/*.lib $CCCDIR/usr/lib/$CCCBIN
 
 #so kozvetlen cp helyett mv-vel kerul a helyere,
 #hogy az eppen futo programok nem szalljanak el
-for so in obj$CCCBIN/*.so; do
+find obj$CCCBIN/*.so | while read so; do
     cp -pf $so $so.new
     mv $so.new  $CCCDIR/usr/lib/$CCCBIN/`basename $so`
 done
+
 
  
 cd utility

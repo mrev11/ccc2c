@@ -118,8 +118,7 @@ pushd tools/mask; m; popd
 #tabobj
 #-------------------
 
-pushd tabobj/tbbtbtx; install.b; popd 
-pushd tabobj/tbwrapper; install.b; popd 
+pushd tabobj/tbbtbtx; m; popd 
 
 
 #-------------------

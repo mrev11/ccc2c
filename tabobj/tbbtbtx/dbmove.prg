@@ -59,7 +59,6 @@
 //  allasat) a tabPosition()==0 relacio mutatja. 
 
 
-
 ******************************************************************************
 // Szures
 ******************************************************************************
@@ -208,13 +207,16 @@ local col,type,width,dec,segval,key:=x""
         segval := aexp[n]
 
         if( type=="C" )
+            key+=padr(str2bin(segval),width)
+
+        elseif( type=="X" )
             key+=padr(segval,width)
 
         elseif( type=="N" )
             key+=_db_numseg(segval,width,dec) 
 
         elseif( type=="D" )
-            key+=dtos(segval)
+            key+=str2bin(dtos(segval))
 
         elseif( type=="L" )
             key+=if(segval,a"T",a"F")
@@ -431,7 +433,7 @@ function tabFound(table)  //found()
 ******************************************************************************
 function tabReadOriginalRecordFromDisk(table) //naplozashoz
 local err,buffer
-    buffer:=space(table[TAB_RECLEN]) 
+    buffer:=replicate(x"20",table[TAB_RECLEN]) 
     if( table[TAB_RECLEN]!=_db_read(table[TAB_BTREE],buffer,table[TAB_RECPOS]) )
         err:=readerrorNew()
         err:operation:="tabReadOriginalRecordFromDisk"

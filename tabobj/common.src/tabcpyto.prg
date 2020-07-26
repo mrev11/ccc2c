@@ -67,7 +67,14 @@ local err, msg
             value:=eval(flist[n][COL_BLOCK]) //adatbazismezo kiolvasasa
             
             if( (type:=flist[n][COL_TYPE])=="C" )
-                line+='"'+trim(value)+'"'
+                if( !tabMemoField(table,flist[n]) )
+                    line+='"'+trim(value)+'"'
+                else
+                    line+='"'+trim(bin2str(value))+'"'
+                end
+
+            elseif( (type:=flist[n][COL_TYPE])=="X" )
+                line+='"'+trim(bin2str(value))+'"'
 
             elseif( type=="N" )
                 line+=alltrim(str(value,flist[n][COL_WIDTH],flist[n][COL_DEC]))

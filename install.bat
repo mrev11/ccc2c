@@ -99,7 +99,7 @@ popd
 :tabobj
 :-------------------
 pushd tabobj\tbbtbtx
-call install.bat
+call m.bat
 popd 
 
 
