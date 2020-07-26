@@ -1,4 +1,4 @@
--lccc2_btbtxui
+-lccc$(CCCVER)_btbtxui
 -d../commonui.src
 
  
