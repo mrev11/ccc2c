@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cfe57df07c314fdb9bcfd2de8250a0bbd7cd04e5 2020080715:46:06-UTC ./tools/sql2/util/jeed/m.bat
 2c24157bf4e45857e1436a662a11e62d489a7e35 2020080715:45:45-UTC ./CHANGELOG_vermes
 212dea67257b4094873eec6a313335ca2b2b442e 2020073012:41:25-UTC ./tabobj/log-install
@@ -16,10 +17,18 @@ cfe57df07c314fdb9bcfd2de8250a0bbd7cd04e5 2020080715:46:06-UTC ./tools/sql2/util/
 =======
 f6004a3cece2f5c8e20adc978fe21aae3d7ef4fb 2020072614:37:55-UTC ./log-install
 d3487699c14aaabc82384bba379ff1f8f2e1d7b0 2020072614:37:49-UTC ./jt/jterminal/jterminal.jar
+=======
+233f7a42c91835428d961cad276734156781da02 2020072713:19:49-UTC ./CHANGELOG_vermes
+5205eb1a6fcabae6a87f1a4e6bce00e0b91d07e0 2020072712:47:30-UTC ./log-install
+7be3ac057c42d82ab30be69575d453f8828b5a87 2020072712:47:24-UTC ./jt/jterminal/jterminal.jar
+021372d2033d0d4a4040e048b1d3e1093d30ee3f 2020072712:46:59-UTC ./usr/bin/linux/tdc2prgch
+10c313c0c5c28cd1bd9f5b85977f04d86a4abf74 2020072712:42:48-UTC ./tabobj/tbbtbtx/dbcolumn.prg
+91d600b34667c7d3693d0511fed02cdf69c5050b 2020072712:39:03-UTC ./tabobj/common.src/tabmemo.prg
+ae26378148247ae55f431ca27f92f13425b9d222 2020072616:49:56-UTC ./tools/tdc2prgch/olvassel.txt
+276636fdf22b091ea8071cbb04ebeed1178828fb 2020072616:48:31-UTC ./tools/tdc2prgch/tdc2prgch.prg
+>>>>>>> c089dd4... 2020-07-27 tbbtbtx fejlesztesek:
 f0763d5b71dd3867352dde14bdfbbb1ad62f7f7b 2020072614:37:45-UTC ./usr/bin/linux/tv
-0768bf98c3b245044a70a13db76b1c341339f1e0 2020072614:37:21-UTC ./usr/bin/linux/tdc2prgch
 0a5468e0d09eada97d421ef3783090e7900ac82a 2020072614:30:35-UTC ./tabobj/tbbtbtx/utility/parlib.bld
-2f3c3410cbedba6b34532441c38e8729d225a850 2020072614:24:33-UTC ./CHANGELOG_vermes
 9c43298510adceb229a1e96de993da07d823df8a 2020072614:19:42-UTC ./usr/bin/linux/bti
 2d69e371f26e7d21cf19742a3df1f8bbdd8eb52a 2020072614:18:35-UTC ./tabobj/tbbtbtx/utility/m.bat
 c3d799bc65d4c1b88ccbd97c1ca221972748c0db 2020072614:18:15-UTC ./tabobj/tbbtbtx/utility/m
@@ -29,8 +38,11 @@ c3d799bc65d4c1b88ccbd97c1ca221972748c0db 2020072614:18:15-UTC ./tabobj/tbbtbtx/u
 fec62eb032e4b0b059b0712e22ac08e02c183323 2020072614:13:54-UTC ./tabobj/tbbtbtx/par-ntui.bld
 743f5514c04a783200b285ba10bad8567db5382e 2020072614:12:48-UTC ./tabobj/tbbtbtx/par-nt.bld
 16411978c551c25d5db93a18e6f8b74413b3f73e 2020072614:08:04-UTC ./tabobj/tbbtbtx/btbtx.hu.ver
+<<<<<<< HEAD
 497cf81d76edc0696adf5207c762ba42481be4a9 2020072609:59:47-UTC ./tools/tdc2prgch/tdc2prgch.prg
 >>>>>>> e3d04ce... 2020-07-26 tbbtbtx: torolt rekordok szurese az indexek modositasaval:                                                                   ║
+=======
+>>>>>>> c089dd4... 2020-07-27 tbbtbtx fejlesztesek:
 0125c410a355b2a1e9569bd40b291a42e0a5084e 2020072600:04:31-UTC ./usr/bin/linux/tdccmp
 c20b436a12a7870337f6356dcb1460e5d1e87972 2020072600:04:24-UTC ./usr/bin/linux/ddict2
 52b0e69a36781285cae647558e23be2652496b32 2020072600:04:22-UTC ./usr/bin/linux/dbfview
@@ -316,7 +328,6 @@ a0ab973b1794caffcfbe74efa3c731d4e8d247a4 2019111914:36:08-UTC ./tools/xmldom/xml
 b4123b6619092bf373821f7b5d4424decf8a9a6b 2019111914:24:41-UTC ./tools/xmldom/xmldom_parser.lem
 21b413e363fa77431c7c0dba6dcaeb458f44c0d7 2019111914:13:59-UTC ./tools/xmldom/xmldom_lexer.lex
 6eda17e49fd230e10b89da83db2cc4cc17560158 2019111309:00:29-UTC ./usr/build/linux/for2obj.bat
-06afd626475551018b983a253bf56206551bde87 2019100812:59:46-UTC ./tabobj/tbbtbtx/dbcolumn.prg
 c4e9325df668eaab0d0e0667a4a8402f9a3fdd0b 2019090211:39:52-UTC ./setup/setup-unix/xmethod6.cpp
 49c2f0d2411c79d735896e825db698e5a447c692 2019082619:42:39-UTC ./setup/setup-windows/make_setup_lib.bat
 98f8eaf354ec1edda43df71a01410147993bb7d9 2019082619:07:37-UTC ./tutor/nlstext/translation/hu/nlstext.hu.cpp
@@ -798,7 +809,6 @@ e3da661cb6e9cdc67af93bb5ec3b89b0d44a9f62 2017011812:34:46-UTC ./tools/sql2/sql2.
 05899f6b98d4a58f0473c4758b2127264312ac31 2016112910:59:41-UTC ./tools/savex/compfile.prg
 2283a54b23ba19cee6c8616fcdc113f02adc8c4e 2016112521:21:21-UTC ./tools/mask/parfile.bld
 d6e07985e871369c01e321e22e7fdebdd1d08e85 2016112213:08:03-UTC ./tools/tdc2prgch/parfile.bld
-057ff73b8e79cbf09c5f541cc1224bd0196e56cc 2016112211:50:02-UTC ./tools/tdc2prgch/olvassel.txt
 64c80ebb4f7b18175081b11426feb3f9d48bfb91 2016112211:39:55-UTC ./tools/tdc2prgch/util/lftrim.prg
 5dfce1f5f9ade3c59ff7aa8489084149c58b23e9 2016112211:38:38-UTC ./tools/tdc2prgch/util/ereadline.prg
 5ad087414c4e2239af424e58cd72402c0744e370 2016112208:31:46-UTC ./tools/tdc2prgch/clean.b
@@ -2064,7 +2074,6 @@ f646ac49980858e0251a96fea0291ebeb6b45566 2006071813:26:07-UTC ./tools/sql2/test/
 16acabadad10a2c9491f099e5e389344ed1105ab 2006071508:10:38-UTC ./tools/sql2/util/bt2tds/bt2ted.prg
 bf7b6c006f9198055daa9474465ebe84c7fce2d5 2006070106:43:30-UTC ./setcopyright.b
 0d5bc588a39d40d49c6231dc45bd01b4a827afa1 2006061907:21:05-UTC ./terminal/unix/xstart.par
-d0f5ec4912f29691041405188c4b10069edd14fb 2006060719:51:52-UTC ./tabobj/common.src/tabmemo.prg
 b11e129e64d0d781fee7e5efda7e3569066f1916 2006060607:41:05-UTC ./ccctools/prg2ppo/prg2ppo.hu.txt
 da922e0ecaccdb71e193b9a4c887add2a46af656 2006060607:41:05-UTC ./ccctools/prg2ppo/xtrans.hu.txt
 77db5941a13ce406eee620926ba831dcff0d5355 2006060607:40:59-UTC ./tools/xmlrpc/readme.hu.txt
