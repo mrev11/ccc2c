@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cfe57df07c314fdb9bcfd2de8250a0bbd7cd04e5 2020080715:46:06-UTC ./tools/sql2/util/jeed/m.bat
 2c24157bf4e45857e1436a662a11e62d489a7e35 2020080715:45:45-UTC ./CHANGELOG_vermes
 212dea67257b4094873eec6a313335ca2b2b442e 2020073012:41:25-UTC ./tabobj/log-install
@@ -22,6 +23,9 @@ d3487699c14aaabc82384bba379ff1f8f2e1d7b0 2020072614:37:49-UTC ./jt/jterminal/jte
 233f7a42c91835428d961cad276734156781da02 2020072713:19:49-UTC ./CHANGELOG_vermes
 =======
 a61ad7c8ffcf1e379ed7e21589312287055bec79 2020072919:31:35-UTC ./CHANGELOG_vermes
+=======
+a5c5efd3d25559d94b5ff511233c7e8be9b60ab4 2020072919:32:17-UTC ./CHANGELOG_vermes
+>>>>>>> fb905ed... 2020-07-29 tbbtbtx fejlesztesek: lock szamlalas;
 3ae08c4261bcaf7723461a6ce84ec73c443c3357 2020072918:49:44-UTC ./tabobj/tbbtbtx/utility/tsema.prg
 19047144d7025a48156a64ea7fee92a677f798fd 2020072918:40:32-UTC ./tabobj/tbbtbtx/dblock.prg
 a39fcec85349b10bce3815d76c71b0931d54a5b1 2020072913:15:34-UTC ./tabobj/tbbtbtx/fwaitlock.cpp
