@@ -1,4 +1,5 @@
-a4578ee70e9881269454db62b7e72cb11227b07e 2020091911:38:29-UTC ./CHANGELOG_vermes
+14ca7326f841e7814e7a09e77d964911662bac84 2020092011:31:09-UTC ./CHANGELOG_vermes
+864c803e366160a39f71d39e182cb065ac5c0559 2020091913:29:42-UTC ./terminal/common/tcpio.cpp
 90edb88640b7396d14e54a1aa0fa528438eb028c 2020091911:32:45-UTC ./tabobj/tbbtbtx/dbmodif.prg
 5caae7cd4d433fcdc3fb6d4a3626c611b1acc66d 2020091820:56:56-UTC ./log-install
 8e22b5e67acef82db8a5ec219271fc8e68daa550 2020091820:56:56-UTC ./usr/bin/linux/gitfollow
@@ -66,6 +67,14 @@ fc4afa1e2bff30a7180830d396d551036aec90de 2020091820:55:42-UTC ./setup/setup-unix
 2348c30dc08c9d14cac6532457dc44c30ebb1953 2020091820:55:34-UTC ./usr/bin/linux/lemon
 23d16ffbca78f8a0b51ea6984344e9494ed699fb 2020091820:55:34-UTC ./usr/options/lin/gccver.opt
 649be779d8991dbbd68fb347b73bf8432a85572a 2020091818:33:02-UTC ./tabobj/tbbtbtx/dbopen.prg
+8bb86b706f14c909dd8e30f2a63d8a5a9aa95881 2020091620:33:55-UTC ./terminal/terminal-test/remio/ccclpr
+210554accbc03d76058471b3ad42fcabcc7d6425 2020091620:16:37-UTC ./terminal/common/startlpr.cpp
+168d17e7e7eff3394f51d82189c931cc2cc387fa 2020091612:47:29-UTC ./terminal/m
+159af672ed4f739b4433e54c07c334be99be8b5f 2020091413:11:19-UTC ./ccclib/src/uic/termapi/termio.cpp
+6f8169744899cb916d3d6f09a5909c0f6c2d0615 2020091213:54:07-UTC ./ccclib/src/uic/listbox.prg
+772983ae814472eeba8c54c20c9d1fe3f963274e 2020090910:22:49-UTC ./ccclib/src/sckutil.cpp
+b2db5f6b5cfc63021c074b9e2a50298f69e8c00b 2020090909:57:40-UTC ./usr/include/sckutil.h
+c9f0a14d28429c00191e94f6331fd394de8972b4 2020090909:56:43-UTC ./tools/socket/socket.cpp
 0d0a44bdfe999b6a05cbef3f877bc68af7df1fb6 2020082021:22:40-UTC ./terminal/sslforw/sslforw-term.cpp
 f1a506d97d020f9d96384f82a3d0858d9eaf22e7 2020081516:11:16-UTC ./tools/socket/socket-demo/http-client.prg
 cfe57df07c314fdb9bcfd2de8250a0bbd7cd04e5 2020080715:36:53-UTC ./tools/sql2/util/jeed/m.bat
@@ -110,7 +119,6 @@ d09739706782bd2bd17e0361d638b38f09581b6d 2020061318:38:10-UTC ./tools/crypto/dem
 6a40d5a852776c93e22037166d613b23d5012d74 2020052508:11:53-UTC ./terminal/terminal-qt5/terminal-qt5.cpp
 bef669f474241fb2088ddbfb67208bea9bf42de3 2020052508:11:38-UTC ./terminal/gtk3/terminal-gtk3.cpp
 6ffdf9b21e95492e11fe112b1a26d0f910b2fa09 2020052508:11:10-UTC ./terminal/gtk/terminal-gtk.cpp
-d4e6204639ea2c836b07957fcad124b1b157c399 2020052508:10:24-UTC ./terminal/common/tcpio.cpp
 f986e78701bf08a221ced8e6348bee3b0a4a51d7 2020052508:08:20-UTC ./ccclib/src/windows/thread.cpp
 ee46671fbc86f709f2fdab94073304d6b9549589 2020052508:07:51-UTC ./ccclib/src/windows/signals.cpp
 8021e7f0fcb66e0aa3a7861ccaa955e8bf752951 2020052508:07:26-UTC ./ccclib/src/uic/termapi/termapi.cpp
@@ -225,7 +233,6 @@ a6ebfd084f3d396ff0438abb02f8dc1be48c82cd 2020032114:50:42-UTC ./ccctools/pack/co
 55011ab96c0844db78b4f2d386ed22c4846758c6 2020032016:01:36-UTC ./terminal/unix-termkey/readkey.cpp
 c1788685477d7261a7fbdce5c1486d370792c155 2020032015:59:43-UTC ./terminal/unix-termkey/tktest/tktest.cpp
 71a868c6af2d658a3eab178b7b20819720a937a9 2020030813:05:03-UTC ./terminal/unix-termkey/Xdefaults
-0e31b6d0bc6235041d31819364544f4ea180289c 2020030709:18:50-UTC ./terminal/m
 955571b358e229b1a3b78fe1421664775a5dd5aa 2020030709:17:26-UTC ./terminal/unix-termkey/OLVASS
 f822c98d9cf361a032fdb9c0d9ae699b76f63cc3 2020030709:12:15-UTC ./terminal/unix-ncurses/parfile.bld
 8f9cb9e4db3ae36b8d293273b0fb906ea05bf21a 2020030708:22:27-UTC ./terminal/unix-termkey/tktest/s
@@ -342,7 +349,6 @@ c06719082de927da27a0c38577ded50286ae006d 2018070511:16:08-UTC ./tools/socket/ccc
 2e8b2cae8af310746fb96062e89f89aa087324ca 2018070507:49:41-UTC ./tools/socket/socket-demo/recv.prg
 ea2dc638cd229bf911ad80da17e06eee7dbb7f9c 2018070507:42:56-UTC ./tools/socket/scknames.cpp
 3c57d4a27bf9831eed028ccf921368a2e87bb637 2018070507:42:50-UTC ./tools/socket/select_sckdesc.cpp
-bf2986940f8d15fbfbd571af222caca7be662341 2018070507:42:45-UTC ./tools/socket/socket.cpp
 d1c92203ddd44570bda88a6c9f39fd8f82fb0ec7 2018070507:42:39-UTC ./tools/socket/http_io.prg
 05c70cd8dd3ae06d0ba307f5036a7e473c43cb39 2018070507:42:28-UTC ./tools/socket/select.prg
 2eec78b5e23addfc99f89d3104d796dd69720354 2018070507:42:19-UTC ./tools/socket/select_sckobj.prg
@@ -479,14 +485,12 @@ c5d61069cdfdef02c8479fe7c46e1dbbea928de6 2018030807:45:41-UTC ./ccclib/src/procl
 19c1730dcdeb69e0d2cffc76ca66538a7dff61bb 2018030308:13:47-UTC ./ccclib/src/uic/pushbutton.prg
 40f338a8eff94dc144611e4141b318030fad419d 2018022508:51:14-UTC ./terminal/terminal-test/remtest.b
 e7e4bd0737fa5ba9c9ad802cc644dba1269d894e 2018022508:50:09-UTC ./terminal/terminal-test/remio/remio.prg
-53ff6b1fcbf705eaea1f017b2059df0b6a95cc86 2018022508:27:00-UTC ./terminal/common/startlpr.cpp
 6c58839f903c091c8dca0bf21d824554a809d79f 2018022423:34:23-UTC ./ccclib/src/windows/filecreat.cpp
 76885d1ed43346a445a9cecb10647ada6de44664 2018022420:05:26-UTC ./terminal/terminal-test/remtest.bat
 f6a8280f9c2aff466a80bdce95ca5db9a9119cd6 2018022414:05:38-UTC ./setup/setup-unix/filecreat.cpp
 91a84bb2e7858b63fdfc377bb5488be293b0122c 2018022410:28:32-UTC ./terminal/terminal-test/clean
 6f9af4caf093bd12958f5e80650c59b1a1d2953a 2018022410:27:30-UTC ./terminal/terminal-test/remio/ccclpr.bat
 454a940a0078165d287bfbd9b32098650edc1ec7 2018022410:22:05-UTC ./terminal/terminal-test/m.bat
-49c8de6957073f013a7dfc1f4cc21c4d3c2676bd 2018022410:11:31-UTC ./terminal/terminal-test/remio/ccclpr
 e54cbae7e5a6a4a776fa3868c84078cb0b6e61a3 2018022409:56:08-UTC ./terminal/terminal-test/m
 5a1d9e2e848f4162e3cdba994d4564c4067f0295 2018022320:08:55-UTC ./tools/zgrep/ss.b
 beb3770026c55ee8da049d3c07ee305e52cdfc29 2018022319:58:09-UTC ./tools/zgrep/zgrep_view.prg
@@ -673,7 +677,6 @@ a018b932f1ece7ad2b73c2938215f33e926e5868 2017102813:00:20-UTC ./terminal/common/
 b412967b578538db77d2b52334ce735b0ea39e50 2017102508:05:39-UTC ./tutor/xbrwarr/config
 3342309244459e9a622c3ec680a08850f78e9540 2017101519:35:45-UTC ./jt/sslforward/socketpair.cpp
 b1beeb306509233fafbb2a80467d83fd8a82058f 2017101519:24:32-UTC ./jt/sslforward/serveclient.cpp
-43c4587492fc95a7cb2acec6b5099710bc099edf 2017100513:21:13-UTC ./ccclib/src/uic/termapi/termio.cpp
 8bfa0a99021e5bd50fb4a37eed5d23d9d6dafa02 2017080214:21:11-UTC ./usr/build/windows/lib2exe.bat
 5311b606374e09dfc75c54a2c749275a28e88ef0 2017080214:20:48-UTC ./usr/build/windows/obj2exe.bat
 d8434c066b71fc4b36f1f58bb2f2889a39bba218 2017080212:45:33-UTC ./terminal/gtk3/m
@@ -693,7 +696,6 @@ a2419abcd98271bd8f33930cbe92c40654f1c571 2017052407:22:51-UTC ./terminal/common/
 9c3b568832cdddec3d6730ee3b0bd5c23faf82e8 2017051905:18:06-UTC ./tutor/control/config
 b1a85b03222051ab43282310b261297e12bce683 2017051905:14:08-UTC ./tutor/control/s
 9a9d317112d35c30b7cd17e8540d8b825a1ac7ae 2017051814:13:45-UTC ./ccclib/src/ccc_config.prg
-499a7b56418204e068606a458db3b9f4a4843510 2017051512:23:00-UTC ./ccclib/src/uic/listbox.prg
 af6d7cd1ff3d733d67b73b803efb820defe38cde 2017051505:58:40-UTC ./ccclib/src/uic/checkbox.prg
 fe9e04b6141006725d19e78964e7f0636f4e7131 2017051414:17:33-UTC ./tutor/control/control.msk
 8264de53d44a97041082f1660ef576316ada8667 2017051407:38:38-UTC ./ccclib/src/color.cpp
@@ -879,12 +881,10 @@ aad6b10efb717853fa00539ac951d6801dcc3f54 2016061418:50:27-UTC ./tutor/xddict/xdd
 2ba884b605879d46e79ee241e23d85a766c73092 2016061010:57:06-UTC ./ccctools/ppo2cpp/m.bat
 af48cc66998ed095b3191ad174b6a97f87988abb 2016061010:56:46-UTC ./ccctools/removecr/m.bat
 d47969d8a000b35eb13b1fd37c39741b7ac67b38 2016061010:56:30-UTC ./ccctools/prg2ppo/m.bat
-cd107707989ab13d6692535304ca23aba38a04e9 2016061010:51:15-UTC ./ccclib/src/sckutil.cpp
 c343702e95cdc63bb09e26fd258ec38d71f40a7c 2016061006:42:38-UTC ./ccclib/mk_uic.bat
 6dbf780503088d20d7682dfef18f6978676552f4 2016061006:42:22-UTC ./ccclib/mk_ui_.bat
 2bf1717e959dba7186dab353219eef29cca2c46b 2016061006:42:10-UTC ./ccclib/mk_ccc.bat
 0745c885896e63d975d7deca5e2d2db8d6b8d679 2016061005:20:32-UTC ./usr/include/sckcompat.h
-0741379d26761bcb887bee3e102f0c608dc5aa1d 2016061005:19:19-UTC ./usr/include/sckutil.h
 6fcbfdb405e363ab55ca98acf8f7e85a450779bd 2016060915:26:34-UTC ./tools/zgrep/stred.prg
 10b266dce820360fc3fed76b198e8c9e6d08a284 2016060915:26:18-UTC ./tools/zgrep/zg.prg
 ad23d6702087ba9cda58968a3f444632eb23b0cc 2016060915:24:08-UTC ./tools/zgrep/zgrep_lines.prg
