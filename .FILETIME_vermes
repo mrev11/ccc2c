@@ -1,4 +1,12 @@
-a50e29729ca97a736b33314d302c12b1ffbf873c 2020092120:01:05-UTC ./log-install
+a7806574df7ff97c7498251ccb64752515df9dc1 2020092313:52:04-UTC ./log-install
+28b210c9ed6a5d275c6f881f9ad2fbe965e90ad6 2020092313:51:59-UTC ./usr/bin/linux/build
+8cb34fbbdd40e77d5c6248953b1eba3fd37a402b 2020092313:51:54-UTC ./CHANGELOG_vermes
+ecad46d61b68d639adbb98a10fce58ca53607478 2020092313:50:24-UTC ./usr/bin/linux/ncterm
+41fe150888745b20bcc6c84997d026496bce34f9 2020092313:50:24-UTC ./usr/bin/linux/terminal
+513b95a558dc7d791e939beb9aba339fe3b1ae20 2020092313:50:24-UTC ./usr/bin/linux/terminal-xft
+f16eb557b1dfcbe9167b4c8a98631529960ea02b 2020092313:50:23-UTC ./usr/bin/linux/terminal-gtk
+38b95dbafc20f5c99fd560caf4c8c734d1c6c27a 2020092313:50:23-UTC ./usr/bin/linux/terminal-gtk3
+0c91fd3b614677ceec708cf6a9b775c9e432f7e6 2020092313:49:21-UTC ./terminal/common/startlpr.cpp
 19c6a12de1a399fb952b427c0bc2f1f30e662008 2020092120:01:05-UTC ./usr/bin/linux/gitfollow
 8dc24319b71b58f66288c5eca56c1a784c2c8f20 2020092120:01:05-UTC ./usr/bin/linux/gitnav
 e7610ace565161e64f0a42482f1eefe7e6302b0a 2020092120:01:05-UTC ./usr/bin/linux/gitref
@@ -8,16 +16,10 @@ fab4e2f6dc29780ae018ef87a9930a62f5f6047a 2020092120:01:00-UTC ./jt/jterminal/jte
 2dad5740ae07c3fb0fdc20ec3950b85971019386 2020092120:00:57-UTC ./usr/bin/linux/terminal-qt5
 0b14f69f947d5a3037e6eab86e41f78885a7dd20 2020092120:00:43-UTC ./usr/bin/linux/xstart
 bc95d59cfc29ae4ce4e29b4347ec699318ae5ec2 2020092120:00:29-UTC ./usr/bin/linux/list
-51fc1963d6a44ea7d63f4a177a8f12804e55f0fc 2020092120:00:12-UTC ./usr/bin/linux/terminal-gtk3
-076f8fe1a9aee0eac94de748059eb097b8f641b7 2020092120:00:11-UTC ./usr/bin/linux/terminal-gtk
-e1d019c74d40d42ddd3169d37f1ebe484de82a06 2020092120:00:10-UTC ./usr/bin/linux/ncterm
 28623be78f11a2d3c1197b5ed616770bf613d32a 2020092120:00:10-UTC ./usr/bin/linux/sslforw-serv
 fb9a42515de01fe8f40ffc1fcfbf1a6960386adf 2020092120:00:10-UTC ./usr/bin/linux/sslforw-term
 d4a0b42a81ed0daecfedc4f5e8773b5d1080f3c1 2020092120:00:10-UTC ./usr/bin/linux/sslforward
-ed22bf856238d1ef713a4eb25532ab1001143974 2020092120:00:09-UTC ./usr/bin/linux/terminal
-d107230e9e945255fe7d44f12decbfe64bbcda43 2020092120:00:09-UTC ./usr/bin/linux/terminal-xft
 b93f1bdad730dd04b4d280d945ceccf9fd9e63f9 2020092114:33:09-UTC ./terminal/common/tcpio.cpp
-f59aaa207d490f0abec80ff2df35b76de5868a50 2020092011:34:11-UTC ./CHANGELOG_vermes
 90edb88640b7396d14e54a1aa0fa528438eb028c 2020091911:32:45-UTC ./tabobj/tbbtbtx/dbmodif.prg
 c721bc840d0e804e7f930892012273e4a445579d 2020091820:56:53-UTC ./usr/bin/linux/filetime-restore
 14c3dc20f30a42642f0a761db94f8d2d00e8239b 2020091820:56:53-UTC ./usr/bin/linux/filetime-save
@@ -60,7 +62,6 @@ f4cbab3cc295ea7c502783de7bd7b800e6161cda 2020091820:56:09-UTC ./usr/bin/linux/pa
 e7a94af2f6fd171ec45892b84afd418d9470a57a 2020091820:56:03-UTC ./usr/bin/linux/mklink
 a144628c38685d62ecd32655dd8ef2c174b23796 2020091820:56:02-UTC ./usr/bin/linux/prg2ppo
 21dde5ab5ea7681037ec8b2bd90592149bee033e 2020091820:56:02-UTC ./usr/bin/linux/removecr
-04b7c43997a5b1313d2f9b3cd2014ba10ac2b3aa 2020091820:56:00-UTC ./usr/bin/linux/build
 d5b2352cca68d7358a597c99e7eb5df26a63157a 2020091820:55:47-UTC ./usr/bin/linux/ppo2cpp
 fc4afa1e2bff30a7180830d396d551036aec90de 2020091820:55:42-UTC ./setup/setup-unix/compopt
 57c1826df4256cb04bf44adb1657a3a93bbd7d3b 2020091820:55:34-UTC ./usr/bin/linux/flex
@@ -68,7 +69,6 @@ fc4afa1e2bff30a7180830d396d551036aec90de 2020091820:55:42-UTC ./setup/setup-unix
 23d16ffbca78f8a0b51ea6984344e9494ed699fb 2020091820:55:34-UTC ./usr/options/lin/gccver.opt
 649be779d8991dbbd68fb347b73bf8432a85572a 2020091818:33:02-UTC ./tabobj/tbbtbtx/dbopen.prg
 8bb86b706f14c909dd8e30f2a63d8a5a9aa95881 2020091620:33:55-UTC ./terminal/terminal-test/remio/ccclpr
-210554accbc03d76058471b3ad42fcabcc7d6425 2020091620:16:37-UTC ./terminal/common/startlpr.cpp
 168d17e7e7eff3394f51d82189c931cc2cc387fa 2020091612:47:29-UTC ./terminal/m
 159af672ed4f739b4433e54c07c334be99be8b5f 2020091413:11:19-UTC ./ccclib/src/uic/termapi/termio.cpp
 6f8169744899cb916d3d6f09a5909c0f6c2d0615 2020091213:54:07-UTC ./ccclib/src/uic/listbox.prg
