@@ -1,4 +1,4 @@
-130bff01bb5f1a17cfdc34b75ff1bac1d41ee11a 2020101515:53:31-UTC ./CHANGELOG_vermes
+2fb4e544f24b4ef2876e92cba1b291ff15da0805 2020101516:30:29-UTC ./CHANGELOG_vermes
 43a3fa0a43246494ac9160a1e297af3ea28c3361 2020101515:46:36-UTC ./tools/csvreader/log-demo
 e5939ec157d27bf89d6d222d2c5564bd2969cda1 2020101515:46:03-UTC ./usr/bin/linux/tv
 241fb217ee29142f5cbd9926a976d0eb399c2920 2020101515:45:41-UTC ./log-install
@@ -10,7 +10,10 @@ d4e81fd47cfea52bd3edf370e90cc0dd7f2e2b77 2020101515:45:41-UTC ./usr/bin/linux/gi
 03961a9f0cecf296c51cdc7f0a88323815106fb1 2020101515:45:36-UTC ./jt/jterminal/jterminal.jar
 73571510315066ab9d85a9e91c653a518fb5c817 2020101515:45:34-UTC ./usr/bin/linux/terminal-qt5
 04b7c43997a5b1313d2f9b3cd2014ba10ac2b3aa 2020101515:44:43-UTC ./usr/bin/linux/build
+37098f6b354ee262c37c9ca0118a1fda6f0d98e6 2020101119:19:50-UTC ./tutor/shm/shm_child.prg
+445d351f2c7f1c4627b07bad96076d2f0c3bf828 2020101119:19:10-UTC ./tutor/shm/shm_parent.prg
 ad1b0e7c63e98fbd6299e52066c20e376ff48e47 2020101119:12:27-UTC ./ccclib/src/unix/shm.cpp
+ded31b59dc126d3225d405b5d28dcc8980f5914f 2020101116:09:40-UTC ./tutor/shm/s
 892fafd1a407e01afffc5f3d7ecb36827bb1c671 2020101108:30:45-UTC ./usr/include/shm.ch
 ecad46d61b68d639adbb98a10fce58ca53607478 2020092313:50:24-UTC ./usr/bin/linux/ncterm
 41fe150888745b20bcc6c84997d026496bce34f9 2020092313:50:24-UTC ./usr/bin/linux/terminal
