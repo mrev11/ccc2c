@@ -22,6 +22,7 @@
 #include <string.h>
 
 #include <cccapi.h>
+#include <utf8conv.h>
 
 #define H1 0x80  //1000 0000
 #define H2 0xc0  //1100 0000
@@ -33,8 +34,8 @@
 void _clp_utf8len(int argno)
 {
     CCC_PROLOG("utf8len",1);
-    char *p=_parc(1);
-    unsigned blen=_parclen(1);
+    char *p=_parb(1);
+    unsigned blen=_parblen(1);
     unsigned clen=0;
     unsigned i;
     for( i=0; i<blen; i++ )
@@ -52,8 +53,8 @@ void _clp_utf8len(int argno)
 void _clp_utf8left(int argno)
 {
     CCC_PROLOG("utf8left",2);
-    char *p=_parc(1);
-    unsigned blen=_parclen(1);
+    char *p=_parb(1);
+    unsigned blen=_parblen(1);
     int clen=_parni(2);
 
     unsigned i;
@@ -77,7 +78,7 @@ void _clp_utf8left(int argno)
             }
         }
     }
-    _retclen(p,i);
+    _retblen(p,i);
     CCC_EPILOG();
 }
 
@@ -86,8 +87,8 @@ void _clp_utf8left(int argno)
 void _clp_utf8right(int argno)
 {
     CCC_PROLOG("utf8right",2);
-    char *p=_parc(1);
-    unsigned blen=_parclen(1);
+    char *p=_parb(1);
+    unsigned blen=_parblen(1);
     int clen=_parni(2);
 
     unsigned i;
@@ -98,7 +99,7 @@ void _clp_utf8right(int argno)
             clen--;
         }
     }
-    _retclen(p+i,blen-i);
+    _retblen(p+i,blen-i);
     CCC_EPILOG();
 }
 
@@ -107,8 +108,8 @@ void _clp_utf8right(int argno)
 void _clp_utf8substr(int argno)
 {
     CCC_PROLOG("utf8substr",3);
-    char *p=_parc(1);
-    unsigned blen=_parclen(1);
+    char *p=_parb(1);
+    unsigned blen=_parblen(1);
     int cbeg=_parni(2);
 
     unsigned i=0;
@@ -150,11 +151,11 @@ void _clp_utf8substr(int argno)
     
     if( _parni(2)==0 )
     {
-        _retc("");
+        _retb("");
     }
     else if( ISNIL(3) )
     {
-        _retclen(p+i,blen-i);
+        _retblen(p+i,blen-i);
     }
     else
     {
@@ -182,39 +183,41 @@ void _clp_utf8substr(int argno)
                 }
             }
         }
-        _retclen(p+pbeg,i-pbeg);
+        _retblen(p+pbeg,i-pbeg);
     }
 
     CCC_EPILOG();
 }
 
 //----------------------------------------------------------------------------
-void _clp_utf8chr(int argno)
+void _clp_utf8seq(int argno)
 {
     // UCS4 kod -> UTF-8 bytesorozat 
     // a chr() fuggveny utf8 megfeleloje
 
-    CCC_PROLOG("utf8chr",1);
+    CCC_PROLOG("utf8seq",1);
     unsigned code=_parnu(1);
     char seq[8];
     unsigned len=ucs_to_utf8(code,seq);
-    _retclen(seq,len);
+    _retblen(seq,len);
     CCC_EPILOG();
 }
 
+
 //----------------------------------------------------------------------------
-void _clp_ucs(int argno)
+void _clp_utf8ucs(int argno)
 {
     // UTF-8 bytesorozat -> UCS4 kod 
     // az asc() fuggveny utf8 megfeleloje
     // ha a bytesorozat ervenytelen az eredmeny 0
 
-    CCC_PROLOG("ucs",1);
-    int code;
-    utf8_to_ucs(_parc(1),&code);
+    CCC_PROLOG("utf8ucs",1);
+    unsigned code;
+    utf8_to_ucs(_parb(1),&code);
     _retni(code);
     CCC_EPILOG();
 }
+
 
 //----------------------------------------------------------------------------
 void _clp_ucsarr_to_utf8(int argno)
@@ -222,7 +225,7 @@ void _clp_ucsarr_to_utf8(int argno)
     // UCS4 kodokat (szamokat) tartalmazo 
     // arraybol UTF-8 kodolasu string
 
-    CCC_PROLOG("ucs_to_utf8",1);
+    CCC_PROLOG("ucsarr_to_utf8",1);
     unsigned alen=_paralen(1);
 
     unsigned inc=1024;
@@ -243,15 +246,16 @@ void _clp_ucsarr_to_utf8(int argno)
             utf8=(char*)realloc(utf8,size);
         }
         char seq[8];
-        unsigned code=D2INT(_parax(1,i)->data.number);
+        unsigned code=D2UINT(_parax(1,i)->data.number);
         unsigned lseq=ucs_to_utf8(code,seq);
         memmove(utf8+blen,seq,lseq);
         blen+=lseq;
     }
-    _retclen(utf8,blen);
+    _retblen(utf8,blen);
     free(utf8);
     CCC_EPILOG();
 }
+
 
 //----------------------------------------------------------------------------
 void _clp_utf8_to_ucsarr(int argno)
@@ -259,15 +263,15 @@ void _clp_utf8_to_ucsarr(int argno)
     // UTF-8 kodolasu stringbol UCS4 
     // kodokat (szamokat) tartalmazo array
 
-    CCC_PROLOG("utf8_to_ucs",1);
-    char* utf8=_parc(1);
-    unsigned blen=_parclen(1);
+    CCC_PROLOG("utf8_to_ucsarr",1);
+    char* utf8=_parb(1);
+    unsigned blen=_parblen(1);
     unsigned len=0;
     
     array(0);
     while( len<blen )
     {
-        int code;
+        unsigned code;
         unsigned lseq=utf8_to_ucs(utf8+len,&code);
         len+=lseq;
         if( code<=0 )
@@ -283,6 +287,32 @@ void _clp_utf8_to_ucsarr(int argno)
     CCC_EPILOG();
 }
 
+
+//----------------------------------------------------------------------------
+void _clp_utf8valid(int argno) // .t., ha a bemenet valid UTF-8 kodolasu
+{
+    CCC_PROLOG("utf8valid",1);
+    char* utf8=_parb(1);
+    unsigned blen=_parblen(1);
+    unsigned len=0;
+    int result=1;
+        
+    while( result && len<blen )
+    {
+        unsigned code;
+        unsigned lseq=utf8_to_ucs(utf8+len,&code);
+        if( (code<=0) && (utf8[len]!=0) )
+        {
+            result=0;
+        }
+        len+=lseq;
+    }
+    _retl(result);
+    CCC_EPILOG();
+}
+
+
+#ifdef _CCC2_
 //----------------------------------------------------------------------------
 void _clp_wstr_to_utf8(int argno)
 {
@@ -334,7 +364,7 @@ void _clp_utf8_to_wstr(int argno)
     
     while( len<blen )
     {
-        int code;
+        unsigned code;
         unsigned lseq=utf8_to_ucs(utf8+len,&code);
         len+=lseq;
         if( code<=0 )
@@ -354,4 +384,4 @@ void _clp_utf8_to_wstr(int argno)
 }
 
 //----------------------------------------------------------------------------
-
+#endif

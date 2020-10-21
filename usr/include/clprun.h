@@ -383,8 +383,6 @@ extern void _clp_ucsarr_to_utf8(int argno);
 extern void _clp_utf8_to_ucsarr(int argno);
 extern void _clp_wstr_to_utf8(int argno);
 extern void _clp_utf8_to_wstr(int argno);
-extern int utf8_to_ucs(const char *utf8, int *ucs);
-extern int ucs_to_utf8(int ucs, char*utf8);
 
 //File hashcode.cpp
 extern unsigned int hashcode(const char *p);
