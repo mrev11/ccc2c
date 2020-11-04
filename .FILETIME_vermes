@@ -1,5 +1,9 @@
+fb0eb965c53678ada2d638e4347328f8a90b6c7c 2020110414:14:51-UTC ./CHANGELOG_vermes
+75ba661e7fdfafbfded324309a714dcbe311069a 2020110414:08:50-UTC ./tutor/sckpair/socketpair.prg
+aefd09a48fdb4a1e7d7571b54beb25a1a9346ed2 2020102709:28:07-UTC ./tutor/sckpair/parfile.bld
+5a4a4aa5033096ee7cdb0cfa65be45c18fb7a497 2020102709:20:16-UTC ./tutor/sckpair/sckpairdemo.prg
+c6409d327e2dd028cc2b08ccbd5c22b87828b449 2020102709:17:02-UTC ./tutor/sckpair/unix/unix_socketpair.cpp
 61ed4c7ddb76b63ee283ce33c5af4405e37f0b34 2020102108:08:36-UTC ./ccclib/src/i2bin.cpp
-5eaa7ff78410d09e3f1fc7e2335e501d871a096d 2020102108:05:32-UTC ./CHANGELOG_vermes
 34a8b5dd122cfa80db0a2761d6ddda1cba654635 2020102022:54:36-UTC ./log-install
 eb20d8c7bcdf20d28541e7b60d679662d18d2748 2020102022:54:31-UTC ./jt/jterminal/jterminal.jar
 b4ed79947b3c86ca0a0d1c02b2dc2bca921f9508 2020102022:54:29-UTC ./usr/bin/linux/terminal-qt5
@@ -290,6 +294,7 @@ a0ab973b1794caffcfbe74efa3c731d4e8d247a4 2019111914:36:08-UTC ./tools/xmldom/xml
 b4123b6619092bf373821f7b5d4424decf8a9a6b 2019111914:24:41-UTC ./tools/xmldom/xmldom_parser.lem
 21b413e363fa77431c7c0dba6dcaeb458f44c0d7 2019111914:13:59-UTC ./tools/xmldom/xmldom_lexer.lex
 6eda17e49fd230e10b89da83db2cc4cc17560158 2019111309:00:29-UTC ./usr/build/linux/for2obj.bat
+97920a0f87159152de97b142561e6c940f62dd80 2019102011:11:01-UTC ./tutor/sckpair/s
 c4e9325df668eaab0d0e0667a4a8402f9a3fdd0b 2019090211:39:52-UTC ./setup/setup-unix/xmethod6.cpp
 49c2f0d2411c79d735896e825db698e5a447c692 2019082619:42:39-UTC ./setup/setup-windows/make_setup_lib.bat
 98f8eaf354ec1edda43df71a01410147993bb7d9 2019082619:07:37-UTC ./tutor/nlstext/translation/hu/nlstext.hu.cpp
@@ -942,7 +947,6 @@ bc3a3ca9219abed0f0e05b39af6454b15e36f2ab 2016060808:35:34-UTC ./usr/bin/windows/
 05d2f3b09c0cccd0d9167c751e29260900c92530 2016060806:10:27-UTC ./tutor/xbrwarr/m.bat
 f29714a20441666ca5ecabff05ef3aec20242d00 2016060806:10:09-UTC ./tutor/xbrwarr/m
 4108cd2f36e65aff25e027cf7d289afd35492076 2016060614:47:02-UTC ./ccctools/autolink/OLVASS
-ba64fa0e8ba1c9db982424114f903dcbd6dbf66e 2016060607:21:45-UTC ./tutor/sckpair/sckpair.prg
 7bf2a61499a02208c7e4bc0287a411c9e8b85c47 2016060516:37:12-UTC ./ccctools/autolink/autolink.prg
 1fbff9168c5132f823378f7b9757c20f1f92b3c0 2016060515:06:14-UTC ./ccctools/autolink/build/linux/obj2exe.bat
 d6e75e5308b2c1407cc31393c7233cbb66ec7a1e 2016060515:06:09-UTC ./ccctools/autolink/build/linux/lib2exe.bat
@@ -2507,8 +2511,6 @@ c12f3e9a9a3caa34454a93de13ff22e4f2dad5ea 2003100210:15:22-UTC ./jt/msk2dlg/s
 a9913af8ce93a32d528a1fc9f39f4ebbb683e405 2003093020:53:26-UTC ./jt/jtdemo/scroll/proba.msk
 10a04c4a54df6b63bc2995026ebe84e828bd57d0 2003092307:55:08-UTC ./ccclib/src/windows/wait.cpp
 01505e1977c96f70126cc0939e59e0e0a44d9e36 2003092220:41:57-UTC ./ccclib/src/unix/fork.cpp
-2777ce2e7df46ab39ab600adce75e282b3377fef 2003091621:15:40-UTC ./tutor/sckpair/m.bat
-21a6827753b6d5022654b8eea2a20ae932d36546 2003091620:35:13-UTC ./tutor/sckpair/m
 79888c1b3eb4108868640b60ed55eb256b7ea8b5 2003091608:51:36-UTC ./ccclib/src/chmod.cpp
 518f37e9cb3ec7ecacd16e5b8cb8288e9ded5e50 2003091514:15:09-UTC ./tutor/redir/redir.prg
 14cf8878877a8c7f836e30f588576d88d733dea0 2003091506:56:58-UTC ./tutor/redir/child.prg

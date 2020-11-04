@@ -22,7 +22,13 @@
 function main()
 local thr,thw,sp
 
+#ifdef _UNIX_
+    //Windowson ez nincs
+    ? "unix_socketpair",sp:=unix_socketpair()
+#else
+    //Linux vagy Windows
     ? sp:=socketpair()
+#endif
 
     thr:=thread_create({||read(sp[1])})
     thw:=thread_create({||write(sp[2])})
@@ -37,9 +43,9 @@ local thr,thw,sp
 
 *****************************************************************************
 static function write(s)
-local x:=memoread("sckpair.prg"),n
+local x:=memoread("socketpair.prg"),n
     for n:=1 to len(x) 
-        swrite(s,substr(x,n,1),1)
+        swrite(s,substr(x,n,1))
         sleep(1)
     next
     sclose(s)
@@ -54,24 +60,4 @@ local x
     sclose(s)
     return NIL
 
-
 *****************************************************************************
-function socketpair(p:=0x8000)
-local s,a,c
-     s:=socket() 
-     while( 0>bind(s,p) )
-         if( ++p>0xffff )
-             ? "no free port"
-             return NIL 
-         end
-     end
-     listen(s)
-     c:=socket()
-     connect(c,"127.0.0.1",p)
-     a:=accept(s)
-     sclose(s)
-     return {a,c}
-
-
-*****************************************************************************
-     

@@ -1,1 +1,2 @@
-bapp_w32_ -bccc2_socket
+@echo off
+bapp_w32_ @parfile.bld
