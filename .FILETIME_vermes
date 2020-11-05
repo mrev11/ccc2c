@@ -1,6 +1,9 @@
-fb0eb965c53678ada2d638e4347328f8a90b6c7c 2020110414:14:51-UTC ./CHANGELOG_vermes
+a28d2894543e9a9ad9666f01f146a52cdca5a652 2020110520:11:17-UTC ./ccctools/buildp/build.prg
+7e7300880131ab0766160289988ca356d77ce9ed 2020110509:27:30-UTC ./CHANGELOG_vermes
+ab816caf87f3c9eb65e9cc0a95dfc609c2469ef3 2020110509:10:35-UTC ./ccctools/buildp/build.hu.ver
+2577c4203ffc3fcfdbb9ed81efaa147c3ba1143f 2020110508:36:22-UTC ./tutor/sckpair/m
+26b0f488d56a15ddbc20add6544675264c958b08 2020110508:36:11-UTC ./tutor/sckpair/parfile.bld
 75ba661e7fdfafbfded324309a714dcbe311069a 2020110414:08:50-UTC ./tutor/sckpair/socketpair.prg
-aefd09a48fdb4a1e7d7571b54beb25a1a9346ed2 2020102709:28:07-UTC ./tutor/sckpair/parfile.bld
 5a4a4aa5033096ee7cdb0cfa65be45c18fb7a497 2020102709:20:16-UTC ./tutor/sckpair/sckpairdemo.prg
 c6409d327e2dd028cc2b08ccbd5c22b87828b449 2020102709:17:02-UTC ./tutor/sckpair/unix/unix_socketpair.cpp
 61ed4c7ddb76b63ee283ce33c5af4405e37f0b34 2020102108:08:36-UTC ./ccclib/src/i2bin.cpp
@@ -696,8 +699,6 @@ c4ee60340656918ce42c69741ef353e5d2b5f1ca 2017120910:17:04-UTC ./tools/pcre/pcre_
 3c1deed5862ff2910b7a5a3a76eb6233b7c96f4f 2017120909:06:22-UTC ./tools/pcre/pcre_example/parfile.bld
 e16f8234d5d6661793d1727b6c790361566548d8 2017120909:05:53-UTC ./tools/pcre/pcre_example/m
 965690042bd6e5e39383df07474e1e0c6d9f992a 2017120508:08:26-UTC ./usr/bin/linux/__unix.b
-11257e992097139aa23693fdc6ce113b3d97765d 2017120507:56:07-UTC ./ccctools/buildp/build.prg
-4897cedfc9140d18f50fd09e3311b9193af25a46 2017120507:55:38-UTC ./ccctools/buildp/build.hu.ver
 fce79f3c75233f8fb69392edd1c5d48dcc0fc62e 2017112612:00:09-UTC ./tools/tdccmp/parfile.bld
 d591640a695dd272f92db7bc082ad05ac110dd2b 2017112611:47:05-UTC ./tools/tdccmp/mkdiff1
 e5c33891d88a6fc03d6633c64fe05082288b1c84 2017112611:42:07-UTC ./tools/tdccmp/mkdiff
