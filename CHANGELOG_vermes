@@ -1,3 +1,5 @@
+2020.11.11 helyesiras: required;
+
 2020.11.05  build.prg 1.4.11;
   build.prg-ben a lower() fuggveny makroval hatastalanitva,
   ezzel minden filespecifikacio case sensitive lett,

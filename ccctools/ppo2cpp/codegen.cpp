@@ -788,9 +788,9 @@ static int dotlast(const char *txt)
 }
 
 //---------------------------------------------------------------------------
-static void codeblock_requiered(parsenode *p)
+static void codeblock_required(parsenode *p)
 {
-    fprintf(stderr,"Error: codeblock requiered at #line %d %s (%s)\n",
+    fprintf(stderr,"Error: codeblock required at #line %d %s (%s)\n",
             p->lineno?p->lineno:lexer->getinputlineno(),
             lexer->getinputfspec(),
             p->text);
@@ -836,7 +836,7 @@ static void function_call_expected(parsenode *p)
         return;
     }
 
-    fprintf(stderr,"Error: function call requiered at #line %d %s (%s)\n",
+    fprintf(stderr,"Error: function call required at #line %d %s (%s)\n",
             p->lineno?p->lineno:lexer->getinputlineno(),
             lexer->getinputfspec(),
             p->text);
