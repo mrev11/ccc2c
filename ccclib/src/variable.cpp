@@ -83,7 +83,7 @@ void vartab_unlock(){ SIGNAL_UNLOCK(); }
 void valuemove(VALUE *to, VALUE *fr, int n)  //egyszalu 
 {
     SIGNAL_LOCK();
-    memmove(to,fr,n*sizeof(VALUE));
+    memmove((void*)to,(void*)fr,n*sizeof(VALUE));
     SIGNAL_UNLOCK();
 }
 
@@ -109,14 +109,14 @@ void valuemove(VALUE *to, VALUE *fr, int n)
     else if( thread_data::tdata_count==1 )
     {
         SIGNAL_LOCK();
-        memmove(to,fr,n*sizeof(VALUE));
+        memmove((void*)to,(void*)fr,n*sizeof(VALUE));
         SIGNAL_UNLOCK();
     }
     else
     {
         SIGNAL_LOCK();
         thread_data_ptr->lock();
-        memmove(to,fr,n*sizeof(VALUE));
+        memmove((void*)to,(void*)fr,n*sizeof(VALUE));
         thread_data_ptr->unlock();
         SIGNAL_UNLOCK();
     }
@@ -602,7 +602,7 @@ VALUE *newValue(unsigned int len)
             exit(1);
         }
     }
-    memset(p,0,len*sizeof(VALUE));
+    memset((void*)p,0,len*sizeof(VALUE));
     return p;
 }
 
