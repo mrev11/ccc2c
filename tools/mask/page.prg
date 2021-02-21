@@ -25,10 +25,11 @@
 
 #define  CCC(x) _charconv(x,CHARTAB_CWI2CCC)
 #define  CWI(x) _charconv(x,CHARTAB_CCC2CWI)
- 
+#define  LAT(x) _charconv(x,CHARTAB_CCC2LAT)
 
-#define VERZIO  "1.06"  //2001.11.10  (emprow tot_col*2 hossz˙) 
+#define VERZIO  "1.7"   //2021-02-20 felulvizsgalat
 
+//#define VERZIO  "1.06"  //2001.11.10  (emprow tot_col*2 hossz˙) 
 //#define VERZIO  "1.05"  //2001.05.08 (inicializ·l·s javÌtva, kis/nagybet˚ megtartva) 
 //#define VERZIO  "1.04"  //2000.01.26 (batch mÛd nemtˆrli a kÈpernyıt)
 //#define VERZIO  "1.03"  //2000.01.12 (CCC kÛdrendszer) 
@@ -218,7 +219,7 @@ static empty_chr
 function screenedit(pagefile)
 local key, choice:=1
 local posr, posc, screen, rect
-local menukey:={K_F1,K_F2,K_F3,K_F4,K_F5,K_F6,K_F7,K_F8,K_F9,K_CTRL_F9,K_F10,K_F11,K_CTRL_DEL,K_CTRL_INS,K_ALT_DEL,K_ALT_INS}
+local menukey:={K_F1,K_F2,K_F3,K_F4,K_F5,K_F6,K_F7,K_F8,K_F9,K_CTRL_F9,K_F11,K_CTRL_DEL,K_CTRL_INS,K_ALT_DEL,K_ALT_INS}
 local color
 
     if( pagefile==NIL )
@@ -283,7 +284,7 @@ local color
            posr:=min(row(),maxrow()-17)
            posc:=min(col(),maxcol()-25)
            color:=revcolor()
-           choice:=ChoiceBox(posr,posc,posr+17,posc+25,{;
+           choice:=ChoiceBox(posr,posc,posr+16,posc+25,{;
                  "F1        Help",;
                  "F2        Save",;
                  "F3        Load",;
@@ -294,7 +295,6 @@ local color
                  "F8        Line double",;
                  "F9        SAY output",;
                  "CTRL-F9   OUT output",;
-                 "F10       Print",;
                  "F11       Position",;
                  "CTRL-DEL  Delete line",;
                  "CTRL-INS  Insert line",;
@@ -320,8 +320,8 @@ local color
        elseif( key==KEY_PROGQ )
            PrgOutQ(ExtractName(pagefile),page)  //pageq.prg-ben
 
-       elseif( key==KEY_PRINT )
-           PrintOut()
+       elseif( key==K_ENTER )
+           ShowPosition()
 
        elseif( key==KEY_POS )
            ShowPosition()
@@ -396,57 +396,6 @@ static prev:=""
 
 
 *************************************************************************
-function PrintOut()
-local n, m, chr, col
-local spec:=pageprn()
-
-    if(spec!=NIL)
-        if( !empty(spec[1]) )
-            set printer to (spec[1])
-        end
-        
-        #ifdef _cl_
-        set device to printer
-        #endif
-
-        devout(chr(27)+"E")
-        LayoutHP(if(spec[2]=="P",0,1))
-        PitchHP(spec[3])
-        if( spec[3]>=15 )
-            LinesHP(12)
-        elseif( spec[3]>=11 )
-            LinesHP(6)
-        elseif( spec[3]>=9 )
-            LinesHP(6)
-        end
-
-        for n:=1 to tot_row
-            devpos(n,0)
-            for m:=1 to tot_col 
-                chr:=substr(page[n],2*m-1,1)
-                col:=asc(substr(page[n],2*m,1))
-                if( col>=16 )
-                    devout(chr(27)+"&f0S")   // push
-                    devout(chr(27)+"*p+12Y") // move down
-                    devout(".")
-                    devout(chr(27)+"&f1S")   // push
-                end
-                devout( hpcwi(chr) )
-            next
-        next
-
-        eject
-        devout(chr(27)+"E")
-
-        #ifdef _cl_
-        set device to screen
-        #endif
-
-        set printer to
-    end
-    return NIL
-
-*************************************************************************
 function LoadPage(filnam)
 local aFile:=SelectFile("*.pge",,4,23,18,57)
 
@@ -463,7 +412,7 @@ local aFile:=SelectFile("*.pge",,4,23,18,57)
 *************************************************************************
 static function readpge(filnam)
 
-local totpage:=CCC(memoread(filnam))
+local totpage:=LAT(CCC(memoread(filnam)))
 local totlen:=len(totpage)
 local begrow, n
 
@@ -971,8 +920,8 @@ local s:=savescreen(posr,posc,posr,posc)
 * algoritmus: @ r,c say ...; setpos(r,c,); ReplaceChar(); MoveCursor()
 *************************************************************************
 static function nu()
-static grchr:=CCC("⁄√≥∆¿¬≈ÿ¡ƒ“◊Œ–ø¥µŸ…«Ã»—œÕÀ ª∂∫πº÷”∑Ω’’∏æ")
-static grd  :="1111011100222011102220100202222020201010"
+static grchr:=x'cfb5a4b8b2b4b7ccb3b6c5cbc0c3b1a5a6cebbb9bebac4c2bfbdbcada8acabaecac6a9afc8c7aab0'
+static grd  :=    "1111011100222011102220100202222020201010"
 local n:=0, ch, r:=row()-1, c:=col()
    if( r>=0 ) 
        ch:=left(savescreen(r,c,r,c), 1)
@@ -984,8 +933,8 @@ local n:=0, ch, r:=row()-1, c:=col()
    
 *************************************************************************
 static function nd()
-static grchr:=CCC("⁄√≥∆¿¬≈ÿ¡ƒ“◊Œ–ø¥µŸ…«Ã»—œÕÀ ª∂∫πº÷”∑Ω’’∏æ")
-static gru  :="0111101110022201110222010020222202020101"
+static grchr:=x'cfb5a4b8b2b4b7ccb3b6c5cbc0c3b1a5a6cebbb9bebac4c2bfbdbcada8acabaecac6a9afc8c7aab0'
+static gru  :=    "0111101110022201110222010020222202020101"
 local n:=0, ch, r:=row()+1, c:=col()
    if( r<=maxrow() ) 
        ch:=left(savescreen(r,c,r,c), 1)
@@ -997,8 +946,8 @@ local n:=0, ch, r:=row()+1, c:=col()
 
 *************************************************************************
 static function nl()
-static grchr:=CCC("⁄√≥∆¿¬≈ÿ¡ƒ“◊Œ–ø¥µŸ…«Ã»—œÕÀ ª∂∫πº÷”∑Ω’’∏æ")
-static grr  :="1102111211112100002122222220000011002200"
+static grchr:=x'cfb5a4b8b2b4b7ccb3b6c5cbc0c3b1a5a6cebbb9bebac4c2bfbdbcada8acabaecac6a9afc8c7aab0'
+static grr  :=    "1102111211112100002122222220000011002200"
 local n:=0, ch, r:=row(), c:=col()-1
    if( c>=0 ) 
        ch:=left(savescreen(r,c,r,c), 1)
@@ -1010,8 +959,8 @@ local n:=0, ch, r:=row(), c:=col()-1
 
 *************************************************************************
 static function nr()
-static grchr:=CCC("⁄√≥∆¿¬≈ÿ¡ƒ“◊Œ–ø¥µŸ…«Ã»—œÕÀ ª∂∫πº÷”∑Ω’’∏æ")
-static grl  :="0000011211112111210000222222102200110022"
+static grchr:=x'cfb5a4b8b2b4b7ccb3b6c5cbc0c3b1a5a6cebbb9bebac4c2bfbdbcada8acabaecac6a9afc8c7aab0'
+static grl  :=    "0000011211112111210000222222102200110022"
 local n:=0, ch, r:=row(), c:=col()+1
    if( c<=maxcol() ) 
        ch:=left(savescreen(r,c,r,c), 1)
@@ -1023,53 +972,15 @@ local n:=0, ch, r:=row(), c:=col()+1
 
 *************************************************************************
 function DrawLine(line)
-static r:=;
-CCC("ƒ⁄÷¿√¿”⁄«ƒ¬“¡≈¡–¬◊")
-//000000000111111111 l
-//000111222000111222 u
-//012012012012012012 d
 
-static u:=;
-CCC("≥Ÿæ¿¡¿’Ÿœ≥¥µ√≈√∆¥ÿ")
-//000000000111111111 d
-//000111222000111222 r
-//012012012012012012 l
-
-static l:=;
-CCC("ƒø∑Ÿ¥ŸΩø∂ƒ¬“¡≈¡–¬◊")
-//000000000111111111 r
-//000111222000111222 u
-//012012012012012012 d
-
-static d:=;
-CCC("≥ø∏⁄¬⁄’ø—≥¥µ√≈√∆¥ÿ")
-//000000000111111111 u
-//000111222000111222 r
-//012012012012012012 l
-
-static rr:=;
-CCC("Õ’…’∆…»»ÃÕ—ÀœÿÀ  Œ")
-//000000000222222222 l
-//000111222000111222 u
-//012012012012012012 d
-
-static uu:=;
-CCC("∫Ωº”–º»» ∫∂π«◊πÃÃŒ")
-//000000000222222222 d
-//000111222000111222 r
-//012012012012012012 l
-
-static ll:=;
-CCC("Õ∏ªæµªººπÕ—ÀœÿÀ  Œ")
-//000000000222222222 r
-//000111222000111222 u
-//012012012012012012 d
-
-static dd:=;
-CCC("∫∑ª÷“ª……À∫∂π«◊πÃÃŒ")
-//000000000222222222 u
-//000111222000111222 r
-//012012012012012012 l
+static r:=x'b6cfcab2b5b2c6cfb9b6b4c5b3b7b3c3b4cb'
+static u:=x'a4ceb0b2b3b2c7cec2a4a5a6b5b7b5b8a5cc'
+static l:=x'b6b1a9cea5ceafb1a8b6b4c5b3b7b3c3b4cb'
+static d:=x'a4b1aacfb4cfc8b1c4a4a5a6b5b7b5b8a5cc'
+static rr:=x'bfc8bbc7b8bbbababebfc4bdc2ccbdbcbcc0'
+static uu:=x'acafaec6c3aebababcaca8abb9cbabbebec0'
+static ll:=x'bfaaadb0a6adaeaeabbfc4bdc2ccbdbcbcc0'
+static dd:=x'aca9adcac5adbbbbbdaca8abb9cbabbebec0'
 
 local arrow:=chr(K_UP)+chr(K_DOWN)+chr(K_LEFT)+chr(K_RIGHT)
 local ind, key, cpr, cpc
@@ -1175,56 +1086,5 @@ local ind, key, cpr, cpc
 
     end
     return NIL
-
-*************************************************************************
-#define item_redir  get redir;  //21
-                        valid empty(redir).or.;
-                              !file(redir).or.;
-                              alert("File exists, overwrite?",{"No","Yes"})==2
-                              
-#define item_o      get o picture "@! A"; 
-                        valid o=="P".or.o=="L".or.;                         
-                              alert("Valid letters: L,P")<0
-
-#define item_pi     get pi picture "99";
-                        valid pi==10.or.pi==12.or.pi==16.or.;
-                              alert("Valid pitches: 10,12,16")<0
-
-
-function PAGEPRN()
-local redir       :=padr("",21)
-local o           :=padr("P", 1)
-local pi          :=10
-local getlist:={}
-local screen:=savescreen(14,44,21,68)
-local savecursor:=setcursor()
-
-   revcolor()
-   @ 14, 44 clear to 21,68
-   @ 14, 44 say "…ÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕª"
-   @ 15, 44 say "∫ Redirected to:        ∫"
-   @ 16, 44 say "∫ "
-   @ 16, 46 item_redir //21
-   @ 16, 67 say " ∫"
-   @ 17, 44 say "∫                       ∫"
-   @ 18, 44 say "∫ Landscape/Portrait: "
-   @ 18, 66 item_o // 1
-   @ 18, 67 say " ∫"
-   @ 19, 44 say "∫                       ∫"
-   @ 20, 44 say "∫ Pitch: "
-   @ 20, 53 item_pi // 2
-   @ 20, 55 say "             ∫"
-   @ 21, 44 say "»ÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕÕº"
-
-   dispbox(14,44,21,68,B_DOUBLE) //utÛlag betÈve 
-   
-   readexit(.f.)
-   readinsert(.t.)
-   setcursor(1)
-   readmodal(getlist)
-   setcursor(savecursor)
-   RESTSCREEN(14,44,21,68,screen)
-   revcolor()
-   return if(lastkey()==K_ESC,NIL,{redir,o,pi})
 
 *************************************************************************

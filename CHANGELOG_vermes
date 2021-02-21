@@ -1,3 +1,16 @@
+20121-02-19 mask es tarsai felulvizsgalva:
+  (megjegyzes: az msk es pge fajlokban hagyomanyosan CWI kodolas van!)
+  page.exe forrasaban a dobozrajzolok atirva hexa kodokra (mint a mask-ban); 
+  msk2pge.exe forrasaban a dobozrajzolok atirva box szimbolumokra; 
+  (megjegyzes: ezekben hibas volt a B_DS1 rajzolasa);
+  A kodgeneratorok tiszta Latin2-t keszitenek. Ennek erdekeben:
+    1) a prg-kben CWI mindenhol atkonvertalva Latin2-re;
+    2) page.exe beolvaskor CWI-rol Latin2-re konvertal;
+    3) pge2wro.exe beolvaskor CWI-rol Latin2-re konvertal;  
+  wro demo atirva magyarra, hogy az ekezetes betuk latszodjanak;
+  mask -G,-F opcioi visszaallitva -g,-f-re;
+  nem mukodo nyomtatasok kiszedve;
+
 2021-02-13 terminalokban xsigset(SIGCHLD,SIG_IGN);
   Ha xsigset(SIGCHLD,SIG_IGN) be van allitva, akkor nem keletkeznek zombik.
   A CCC programokban sajnos nem lehet beallitani, mert kihat waitpid()-re.

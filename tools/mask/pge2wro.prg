@@ -28,6 +28,7 @@
 
 #define  CCC(x) _charconv(x,CHARTAB_CWI2CCC)
 #define  CWI(x) _charconv(x,CHARTAB_CCC2CWI)
+#define  LAT(x) _charconv(x,CHARTAB_CCC2LAT)
  
 *************************************************************************
 // Mj.: A cr_lf() függvény ide nem jó!
@@ -90,7 +91,7 @@ local srTomb
       quit
    endif
    pgefile:=addEKieg(pgefile,".pge")
-   pgestr:=CCC(memoread(pgefile))
+   pgestr:=LAT(CCC(memoread(pgefile)))
    if (len(pgestr)==PGE_MAXROW*PGE_MAXCOL*2+1)
       // Billy meglepetése hiszékenyeknek, a Ctrl-Z ott van a végén!!!
       // @#$%^&!
@@ -558,6 +559,6 @@ local wlist:={}, n:=0, i
 
 *************************************************************************
 function ver()
-return "v2.2.01 "
+return "v2.3 "
 
 *************************************************************************

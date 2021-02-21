@@ -29,8 +29,9 @@
 #define  CWI(x) _charconv(x,CHARTAB_CCC2CWI)
 #define  LAT(x) _charconv(x,CHARTAB_CCC2LAT)
  
-#define VERZIO  "1.10"  //2016.05.02 (msk beolvasásakor ccc->lat konverzió)
+#define VERZIO  "1.11"  //2021.02.20 folulvizsgalat
 
+//#define VERZIO  "1.10"  //2016.05.02 (msk beolvasásakor ccc->lat konverzió)
 //#define VERZIO  "1.09"  //2014.03.04 (ENTER mutatja a pozíciót (mint a CCC3-ban))
 //#define VERZIO  "1.08"  //2014.01.15 (nagyobb maszkok)
 //#define VERZIO  "1.07"  //2011.08.12 (dosconv megszüntetve, hexa kódok)
@@ -147,13 +148,13 @@ local n:=0, a, line
         elseif( file(a+MASKEXT) )
             batch_mskfile:=a+MASKEXT
 
-        elseif( "-F"$a )
+        elseif( "-f"$a )
             if( !MASKEXT$a )
                 a+=MASKEXT
             end
             batch_mskfile:=substr(a,3)
 
-        elseif( "-G"$a )
+        elseif( "-g"$a )
             batch_codegen:=substr(a,3,1)
             
             if( batch_codegen=="T" )
@@ -282,7 +283,7 @@ function usage()
 function screenedit(maskfile)
 local key, choice:=1
 local posr, posc, screen
-local menukey:={K_F1,K_F2,K_F3,K_F4,K_F5,K_F6,K_F7,K_F8,K_F9,K_F10}
+local menukey:={K_F1,K_F2,K_F3,K_F4,K_F5,K_F6,K_F7,K_F8,K_F9}
 local aFile
 local ins:=.f.
 
@@ -368,7 +369,7 @@ local ins:=.f.
        elseif(key==KEY_HELP)
            posr:=min(row(), MAXROW-11)
            posc:=min(col(), MAXCOL-18)
-           choice:=ChoiceBox(posr,posc,posr+11,posc+18,{;
+           choice:=ChoiceBox(posr,posc,posr+10,posc+18,{;
                  "F1  - Help",;
                  "F2  - Save",;
                  "F3  - Load",;
@@ -377,8 +378,7 @@ local ins:=.f.
                  "F6  - Move rect",;
                  "F7  - Line single",;
                  "F8  - Line double",;
-                 "F9  - PRG output",;
-                 "F10 - Printer"})
+                 "F9  - PRG output"})
            if(choice>0)
                keyboard( chr(255) )
            end
@@ -408,9 +408,6 @@ local ins:=.f.
        elseif( key==KEY_PROG )
            PrgOut(ExtractName(maskfile))
 
-       elseif( key==KEY_PRNT )
-           PrintOut(maskfile)
-           
        else 
        
            if(ins .and. col()<MAXCOL)
@@ -428,60 +425,6 @@ local ins:=.f.
     end
     return key
 
-
-*************************************************************************
-//  A képernyõt printerre nyomja landscape orientációval,
-//  az inverz mezõket alápontozva
-//
-function PrintOut(caption)
-local screen:=savescreen(), i, j, n, color, char
-
-    if(isprinter())
-
-        set console off
-        set printer on
-        
-        ?? chr(27)+"E"        // inicializálás
-        ?? chr(27)+"&l1O"     // landscape
-        ?? chr(27)+"&l12E"    // top margin
-        ?? chr(27)+"&a16L"    // left margin
-        ?? chr(27)+"(8Q"      // IBM-PC Character Set
-        
-        for i:=0 to 24
-            for j:=1 to 80
-                n:=2*(80*i+j)
-                char:=substr(screen,n-1,1)             
-                color:=asc(substr(screen,n,1))
-
-                ?? chr(27)+"&f0S" // push
-                if(color<16)  
-                    // normál
-                    //?? chr(177)
-                    ?? chr(159)
-                else
-                    // inverz
-                    ?? chr(27)+"*p+12Y"
-                    ?? "."
-                end
-                ?? chr(27)+"&f1S" // pop
-                ?? char
-            next
-            ?
-        next
-        
-        ?
-        ?
-        ?  chr(27)+"(s1S"+padc(upper(alltrim(caption)),80)
-
-        eject
-        ?? chr(27)+"E" // inicializálás
-        set printer off
-        set console on
-
-    else
-        alert("A printer nincs bekapcsolva!")
-    end
-    return NIL
 
 *************************************************************************
 function CopyRect(key)

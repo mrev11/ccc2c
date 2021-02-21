@@ -22,7 +22,8 @@
 
 // Utility mask filék page filékre való konvertálására
 
-#include "inkey.ch"
+#include "box.ch"
+#include "charconv.ch"
 
 *************************************************************************
 // Mj.: A cr_lf() függvény ide nem jó!
@@ -31,10 +32,23 @@
 *************************************************************************
 // A sor-ból kitörli/helyettesíti a rajzoló karaktereket.
 
-#define MSK_RAJZOLO "³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÕÕÖ×ØÙÚ"
-#define MSK_DUPLA_VIZSZINT "µ¸¹»¼¾ÆÈÉÊËÌÍÎÏÑÕÕØ"
-#define MSK_EGYKE_VIZSZINT "´¶·½¿ÀÁÂÃÄÅÇĞÒÓÖ×ÙÚ"
-#define MSK_FUGGOLEGES "³º"
+static hor_simple:=(B_HS+;
+    B_SS1+B_SS2+B_SS3+B_SS4+B_SS5+B_SS6+B_SS7+B_SS8+B_SS9+;
+    B_SD1+B_SD2+B_SD3+B_SD4+B_SD5+B_SD6+B_SD7+B_SD8+B_SD9)::_charconv(CHARTAB_CCC2CWI)
+
+static hor_double:=(B_HD+;
+    B_DD1+B_DD2+B_DD3+B_DD4+B_DD5+B_DD6+B_DD7+B_DD8+B_DD9+; 
+    B_DS1+B_DS2+B_DS3+B_DS4+B_DS5+B_DS6+B_DS7+B_DS8+B_DS9)::_charconv(CHARTAB_CCC2CWI) 
+
+static vert:=(B_VS+B_VD)::_charconv(CHARTAB_CCC2CWI)
+
+static box:=vert+hor_simple+hor_double
+
+#define MSK_RAJZOLO           box
+#define MSK_DUPLA_VIZSZINT    hor_double
+#define MSK_EGYKE_VIZSZINT    hor_simple
+#define MSK_FUGGOLEGES        vert
+
  
 *************************************************************************
 

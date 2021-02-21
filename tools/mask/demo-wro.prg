@@ -29,11 +29,14 @@ function main()
 local pgelist:=array(PGELIST)
 local screen:=createScr(25,80)
 
-    p_redir:="pr√≥ba szerencse"
-    p_o    :="L"
+    p_redir:="PR”BA SZERENCSE"
+    p_o    :="¡"
     p_pi   :=16
     
     wrpageprn(screen,pgelist)
+
+    set printer to log-demo
+    set printer on
     
     
     ? scrstr(screen) //screen to string

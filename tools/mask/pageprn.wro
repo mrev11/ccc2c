@@ -1,4 +1,4 @@
-// pge2wro v2.2.01 
+// pge2wro v2.3 
 
 #ifndef I_SCRSTR                                        
 #define I_SCRSTR                                        
@@ -23,13 +23,12 @@
 static function wrpageprn(scr,pgelist)
 
    @  0, 44 screen scr say "========================="
-   @  1, 46 screen scr say "Redirected"
-   @  1, 57 screen scr say "to:"
+   @  1, 46 screen scr say "Átirányítva:"
    @  2, 46 screen scr say xtrpadr(p_redir, , 21)
-   @  4, 46 screen scr say "Landscape/Portrait:"
-   @  4, 66 screen scr say xtrpadr(p_o, ,  1)
-   @  6, 46 screen scr say "Pitch:"
-   @  6, 53 screen scr say xtrpadr(p_pi, ,  2)
+   @  4, 46 screen scr say "Fekvõ/Álló:"
+   @  4, 58 screen scr say xtrpadr(p_o, ,  1)
+   @  6, 46 screen scr say "Fontméret:"
+   @  6, 57 screen scr say xtrpadr(p_pi, ,  2)
    @  7, 44 screen scr say "========================="
 return scr
 

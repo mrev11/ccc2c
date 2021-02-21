@@ -33,6 +33,7 @@ static inthash hash_cwi2lat(256,cwi,lat);
 
 int convtab_cwi2lat(int cwi)
 {
+    return cwi;
     return hash_cwi2lat.getx(cwi);
 }
 
