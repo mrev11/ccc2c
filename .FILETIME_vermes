@@ -1,4 +1,6 @@
-40e7ae0f3fdbb9586bd294a0357a88ce8df564a6 2021032308:37:39-UTC ./CHANGELOG_vermes
+72ef64a701bb1c090e04da2005fe61f73a74e3a1 2021032410:22:58-UTC ./CHANGELOG_vermes
+7a5b01bedcb37a6431900c1cabff9fb1fbcc4a8a 2021032409:52:57-UTC ./terminal/gtk3/terminal-gtk3.cpp
+ef9afe377030cb8f9ad2af9e6b6782fe37a072d8 2021032409:46:50-UTC ./terminal/gtk/terminal-gtk.cpp
 9f0145e7b1f051e427d4e80e52e35c4b7df0cb30 2021031610:31:44-UTC ./tabobj/common.src/tabchlog.prg
 da690ac36547494ce6a1667714daf2fcacfa70d1 2021030408:20:08-UTC ./log-install
 c5037427bf5dc529e93c3c1f304b8e7fea57cdb4 2021030408:20:08-UTC ./usr/bin/linux/gitfollow
@@ -106,8 +108,6 @@ a052f7520b2e44be82711680441edf897c7d2e63 2021021322:46:35-UTC ./terminal/common/
 d142b5c4b49ba3e924e07b0ef94b503891d22083 2021021322:38:22-UTC ./terminal/unix/terminal.cpp
 2eac5571ffba114268ff9c5df1ec5d3369da18b0 2021021322:38:14-UTC ./terminal/unix/terminal-xft.cpp
 613e9d9c05cd1ea819a59dbeb9ae2c012f1c25c8 2021021322:38:04-UTC ./terminal/terminal-qt5/terminal-qt5.cpp
-a289b3947b03a5ecab2bd984e4a9a989799f8bc9 2021021322:37:56-UTC ./terminal/gtk3/terminal-gtk3.cpp
-841984025fe11efe4f3da74ca884f251a8283c52 2021021322:37:48-UTC ./terminal/gtk/terminal-gtk.cpp
 4ca80cf9a528e8638c12c1b2cb4d79b6d6951c47 2021021322:37:41-UTC ./terminal/common/xsigset.h
 5a7dcb8d42a7a039c57575092f7edc075a51999b 2021021321:30:55-UTC ./terminal/unix-termkey/ncterm.cpp
 c272ebdb25f4308d0ffec3b84bc8d0e42d59a383 2021021321:28:44-UTC ./terminal/unix-ncurses/ncterm.cpp
