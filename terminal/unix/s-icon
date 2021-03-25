@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export CCCTERM_CONNECT="$CCCDIR/usr/bin/$CCCUNAME/terminal.exe"
+export CCCTERM_CONNECT="$CCCDIR/usr/bin/$CCCUNAME/terminal-xft.exe"
+export CCCTERM_ICONFILE=terminal.xpm
+
+z.exe s-icon
