@@ -858,9 +858,10 @@ int codegen_prg_header_lfunction(parsenode *p,void *v)//PROTO
 }
 
 //---------------------------------------------------------------------------
-int codegen_header_lnewline0_namespace_lusing_lstatdefin(parsenode *p,void *v)//PROTO
+int codegen_header_lnewline0_namespace_lusing_lstatdefin_clang(parsenode *p,void *v)//PROTO
 {
     cgen(p,3);
+    cgen(p,4);
 
     int i;
     for(i=0; i<nodetab_inistat->top; i++)
@@ -1124,6 +1125,23 @@ int codegen_statdef_SYMBOL_ASSIGN_expr(parsenode *p,void *v)//PROTO
         nltab();fprintf(code,"}");
     }
 
+    return 0;
+}
+
+//---------------------------------------------------------------------------
+int codegen_clang(parsenode *p,void *v)//PROTO  
+{
+    return 0;
+}
+
+//---------------------------------------------------------------------------
+int codegen_clang_CLANG(parsenode *p,void *v)//PROTO  
+{
+    fprintf(code,"\n");
+    fprintf(code,"//CLANG");
+    fprintf(code,"%s",rtxt(p,0));
+    fprintf(code,"//CEND");
+    fprintf(code,"\n");
     return 0;
 }
 
@@ -2203,6 +2221,32 @@ int codegen_statement_EXIT(parsenode *p,void *v)//PROTO
     {
         nltab();fprintf(code,"goto lab_%d_2;//exit",label(0));
     }
+    return 0;
+}
+
+//---------------------------------------------------------------------------
+int codegen_statement_CLANG(parsenode *p,void *v)//PROTO
+{
+    int i;
+    parsenode *q;
+
+    nltab();fprintf(code,"//clang");
+    i=0;
+    while( 0!=(q=(parsenode*)(nodetab_local->get(i))) )
+    {
+        nltab();fprintf(code,"#define LOCAL_%s (base+%d)",q->text,i);
+        ++i;
+    }
+
+    nltab();fprintf(code,"{%s}",rtxt(p,0));
+
+    i=0;
+    while( 0!=(q=(parsenode*)(nodetab_local->get(i))) )
+    {
+        nltab();fprintf(code,"#undef LOCAL_%s",q->text);
+        ++i;
+    }
+    nltab();fprintf(code,"//cend");
     return 0;
 }
 

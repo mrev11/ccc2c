@@ -103,6 +103,34 @@ class ppo2cpp_lexer : public yyFlexLexer
         return 0;
     }
 
+    char *clang_text;
+    int clang_textsize;
+    int clang_buffersize;
+
+    void clang_cat()
+    {
+        int len=YYLeng();
+        char *txt=(char*)YYText();
+
+        if( clang_textsize+len+1>clang_buffersize )
+        {
+            clang_text=(char*)realloc(clang_text,clang_buffersize+=(len+RAWBUF));
+        }
+        memcpy(clang_text+clang_textsize,txt,len+1);
+        clang_textsize+=len;
+    }
+
+    void clang_cat(const char *txt)
+    {
+        int len=strlen(txt);
+        if( clang_textsize+len+1>clang_buffersize )
+        {
+            clang_text=(char*)realloc(clang_text,clang_buffersize+=(len+RAWBUF));
+        }
+        memcpy(clang_text+clang_textsize,txt,len+1);
+        clang_textsize+=len;
+    }
+
     int ttype(int c)
     {
              if( c=='.' ) return DOT;
@@ -253,6 +281,7 @@ class ppo2cpp_lexer : public yyFlexLexer
 
         raw_textsize=0;
         raw_symbol=0;
+        clang_textsize=0;
 
         int id=yylex();
 
@@ -266,6 +295,17 @@ class ppo2cpp_lexer : public yyFlexLexer
         {
             free(raw_symbol);
             parsenode *token=(new parsenode)->token(STRING,strdup(raw_text),inputlineno);
+            if( debugflag )
+            {
+                token->print();
+                fflush(0);
+            }
+            return token;
+        }
+
+        if( clang_textsize )
+        {
+            parsenode *token=(new parsenode)->token(CLANG,strdup(clang_text),inputlineno);
             if( debugflag )
             {
                 token->print();

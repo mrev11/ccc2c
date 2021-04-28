@@ -34,7 +34,7 @@ extern void  ParseFree(void*,void(*)(void*));
 extern void  ParseTrace(FILE*,const char*); 
 extern void  Parse(void*,int,parsenode*);  //3th arg: %token_type {parsenode*} 
 
-static const char *version_number="4.5.1";
+static const char *version_number="4.6.0";
 
 ppo2cpp_lexer *lexer;
 
@@ -227,6 +227,7 @@ int main(int argc, char**argv)
 
     printf("//input: %s (%s)\n\n",input,version_number);
     printf("#include <clp2cpp.h>\n");
+    printf("#include <clprun.h>\n");
 
     fundecl_list();
     flddecl_list();
