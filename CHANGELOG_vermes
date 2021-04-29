@@ -1,3 +1,7 @@
+2021-04-28 #clang:
+  a headerben levo #clang beallitja a global namespace-t,
+  a #clang section utan visszaallitodik az eredeti namespace;
+
 2021-04-28 #clang tamogatas:
   prg2ppo: 1.4.3 -> 1.5.0
   ppo2cpp: 4.5.1 -> 4.6.0  (clprun.h-t is inkludalja)

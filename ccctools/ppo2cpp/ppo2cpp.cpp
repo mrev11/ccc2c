@@ -227,20 +227,19 @@ int main(int argc, char**argv)
 
     printf("//input: %s (%s)\n\n",input,version_number);
     printf("#include <clp2cpp.h>\n");
-    printf("#include <clprun.h>\n");
 
     fundecl_list();
     flddecl_list();
     metdecl_list();
 
     code=fopen(ppo2cpp_code,"r");
-    namespace_begin(current_namespace);
+    namespace_begin(current_namespace,stdout);
     int c;
     while( EOF!=(c=fgetc(code)) )
     {
         putchar(c);
     }
-    namespace_end(current_namespace);
+    namespace_end(current_namespace,stdout);
     putchar('\n');
     
     fclose(code);
