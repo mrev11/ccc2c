@@ -258,6 +258,7 @@ extern void idxr();             // indexkifejezés értéke
 extern VALUE* idxl0(double);    // indexkifejezés címe (konstans index) obsolete
 extern VALUE* idxxl0(double);   // indexkifejezés címe (konstans index)
 extern void idxr0(double);      // indexkifejezés értéke (konstans index)
+extern void idxr0nil(double);   // mint idxr0, kivetel helyett NIL-t ad
 extern void assign(VALUE*); 
 extern void assign2(VALUE*); 
 extern void block(void(*code)(int),int); 
