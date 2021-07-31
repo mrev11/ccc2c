@@ -18,18 +18,12 @@ export CCCTERM_SIZE=120x40
 
 export TEMP=~/.temp
 export GREP='grep --text -i -H -n'
-export FIND='savex.exe . -y -f -i.js.less.bat.prg.cpp.c.ch.h.lex.lem.java.tds.IMP.EXP. -r.ppo. -lrobj* -lr*.nopack'
+export FIND='savex.exe . -y -f -i.prg.cpp.c.ch.h.lex.lem.java.tds. -r.ppo. -lrobj*'
 
-
-if echo "$CCCTERM_CONNECT" | grep "ncterm.exe" >/dev/null; then
-    export CCCTERM_INHERIT=yes
-    zgrep.exe "$1" "$2"         #must not run in background
-
-elif echo "$CCCTERM_CONNECT" | grep "SOCKET:" >/dev/null; then
-    zgrep.exe "$1" "$2"         #must not run in background
-
+if [ "$CCCTERM_INHERIT" == "yes" ]; then
+    #must not run in background
+    zgrep.exe "$1" "$2"         
 else    
-    export CCCTERM_INHERIT=no   #choice: separate window
-    #export CCCTERM_INHERIT=yes  #choice: inherited window
-    zgrep.exe "$1" "$2" &       #may run in bacground
+    #may run in bacground
+    zgrep.exe "$1" "$2" &       
 fi    

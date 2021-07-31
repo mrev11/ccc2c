@@ -1,4 +1,4 @@
-//input: wordlist.ppo (4.5.1)
+//input: wordlist.ppo (4.7.0)
 
 #include <clp2cpp.h>
 

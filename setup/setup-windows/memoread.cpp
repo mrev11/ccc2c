@@ -1,4 +1,4 @@
-//input: memoread.ppo (4.6.0)
+//input: memoread.ppo (4.7.0)
 
 #include <clp2cpp.h>
 

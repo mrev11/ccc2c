@@ -1,4 +1,4 @@
-//input: ccomp.ppo (4.4.28)
+//input: ccomp.ppo (4.7.0)
 
 #include <clp2cpp.h>
 

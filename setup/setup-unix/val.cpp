@@ -26,9 +26,17 @@ void _clp_val(int argno)
 {
     double d=0;
     VALUE *base=stack-argno;
-    if( argno>=1 && base->type==TYPE_STRING && STRINGLEN(base)>0 )
+    if( argno<1 )
     {
-        sscanf(STRINGPTR(base),"%lf",&d);
+        error_arg("val",base,1);
+    }
+    else if( base->type==TYPE_STRING )
+    {
+        d=strtod(STRINGPTR(base),0);
+    }
+    else
+    {
+        error_arg("val",base,1);
     }
     stack=base;
     number(d);

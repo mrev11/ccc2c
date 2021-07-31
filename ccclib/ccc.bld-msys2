@@ -1,0 +1,9 @@
+-lccc2
+
+-d.
+-dwindows
+-duic/screenbuf
+-iinclude
+
+BUILD_SRC=src
+ 
