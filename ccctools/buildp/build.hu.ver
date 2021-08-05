@@ -3,7 +3,7 @@
   MSYS2-ben a scripteket run() helyett spawn(bash.exe)-vel inditja.
   A scriptek kiterjesztese lehet: ".bat", ".bash", ".sh", ".msys2".
   A program a prg2obj.XXX kiterjesztesebol talalja ki, hogy melyik 
-  iterjesztessel kell dolgozni.
+  kiterjesztessel kell dolgozni.
   Az fspec.prg fuggvenyek transzparensen kezelik a "/" es "\" dirsep-et. 
 
 2020.11.05 -- 1.4.11

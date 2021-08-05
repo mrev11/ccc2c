@@ -1,10 +1,20 @@
-a8d797efe74542ac7c552d28393229446607ebdc 2021073117:09:55-UTC ./CHANGELOG_vermes
-effa281c7e5904303fcb79a17b9943ca1615f72d 2021073110:47:34-UTC ./log-install
-89e7a8e42e2a80054bf05118fe2b5ea73cbcb2e7 2021073110:47:34-UTC ./usr/bin/linux/gitstat
-c5c4b174356e56d37ce2a4bf089f4f5455f6ca4a 2021073110:47:33-UTC ./usr/bin/linux/gitfollow
-1dfa71b2a590793ca43f6a67adcecd56eb1f7b93 2021073110:47:33-UTC ./usr/bin/linux/gitnav
-6999ad97830b133545d9e3dea022031a937bb1d9 2021073110:47:33-UTC ./usr/bin/linux/gitref
-408e3b48a79c10f936b4adad81a5a81208e28d18 2021073110:47:33-UTC ./usr/bin/linux/gitview
+725b9eba04430a7f407eafa5abbaaec48b6374a8 2021080508:58:40-UTC ./CHANGELOG_vermes
+66465ac3d45feb4b0df26fcac3780cf6e1438872 2021080507:42:35-UTC ./tools/z/zcolor.prg
+807290a75c73f2723197c49e8472c40942e9aee5 2021080507:18:58-UTC ./usr/bin/linux/ncterm
+1eda8151976495b40d2508f8a6e1651a98fb7201 2021080507:18:33-UTC ./log-install
+1cdab81a91e040d356d2b71259dc6a63859c56c3 2021080507:18:33-UTC ./usr/bin/linux/gitfollow
+6eaff49b9ca41e7ac90ec0f90967df8da4ba49c7 2021080507:18:33-UTC ./usr/bin/linux/gitnav
+e63021fde4746bbc4202a535ad49575137dd625c 2021080507:18:33-UTC ./usr/bin/linux/gitref
+f2071201a7c1d3e23361a5f039dfeae0069e7047 2021080507:18:33-UTC ./usr/bin/linux/gitstat
+4cb9f4f34c147b50d0ae6ddadc8624d6e0e61666 2021080507:18:33-UTC ./usr/bin/linux/gitview
+70c90d5f503a0802f42196c35c0d68b6e8f7fbbf 2021080507:18:28-UTC ./jt/jterminal/jterminal.jar
+303c3740368f1ab8f043a42ff8f7b4f5196b00d9 2021080507:17:32-UTC ./usr/bin/linux/list
+02b266deb130e6c6c844c7951e48bda30a67702a 2021080506:52:08-UTC ./terminal/unix-ncurses/x
+289026caaa152ee1b24590a131a1c33e0083c59b 2021080506:32:28-UTC ./terminal/unix-ncurses/m.msys2
+9da921ba2e231a2ee938b741a20075d8abf4c2ae 2021080420:09:02-UTC ./ccclib/src/uic/termapi/termio.cpp
+4d4a2deb0bcdf5e7757c92a770e7ea5c6dda0cb1 2021080416:53:24-UTC ./terminal/unix-ncurses/ccclib/OLVASS
+9c88426f33728d8270d8465a1294d723eadcdef9 2021080416:49:47-UTC ./terminal/unix-ncurses/parfile.bld
+2e5c177605390eb0a90f58d7d48c0a24b506e6d2 2021080407:32:13-UTC ./tools/z/zloop.prg
 7c6b1d7af18baa438ff01cb57ed31340d1b7f3a8 2021073110:47:31-UTC ./usr/bin/linux/filetime-restore
 2d668b3a2e20fa0e6f73ddeaabecfc92588b6761 2021073110:47:31-UTC ./usr/bin/linux/filetime-save
 68901b44b0dadf5bdf73a9d72f24f8c36a67eda5 2021073110:47:31-UTC ./usr/bin/linux/firstpar
@@ -13,7 +23,6 @@ c0304be9909911cad315f6e8f471259a6b8100ef 2021073110:47:28-UTC ./jt/jterminal/get
 e4829a5d64ad4c611ef3fc33fee8e575123a1113 2021073110:47:28-UTC ./jt/jterminal/getutil/pictnulldocument.class
 3dd716dca2da8f2362457e3737feecd774b10c3b 2021073110:47:28-UTC ./jt/jterminal/getutil/picturedocument.class
 ff7a9249632f9e916faa12810f94696f7f538770 2021073110:47:28-UTC ./jt/jterminal/jtchange.class
-0ae891de8c9173bcc1b54c77a3926a387757fd2b 2021073110:47:28-UTC ./jt/jterminal/jterminal.jar
 dc9a88ef77152ba8dbc3975441ee009fba43a12a 2021073110:47:28-UTC ./jt/jterminal/jtmenucheck.class
 644e2325758a93b588bd67a8065dcce10508ce6f 2021073110:47:28-UTC ./jt/jterminal/jtmenuradio.class
 95216adf60d5ce0233e880397cadac9656bcf378 2021073110:47:28-UTC ./jt/jterminal/ksutil.class
@@ -122,7 +131,6 @@ cc5b2dab92644d1548e68fce1f8c7776e4a89648 2021073110:46:38-UTC ./usr/bin/linux/td
 2b40541b38ad4efbe2b74b9eae7fd73188de2949 2021073110:46:38-UTC ./usr/bin/linux/tdccmp
 9af0eb3e4360f77ee83b7c68a345f536dbf293f7 2021073110:46:35-UTC ./usr/bin/linux/setperm
 279644162730f8b85dd8f1ac65cd35eacc6dc8d4 2021073110:46:34-UTC ./usr/bin/linux/savex
-0d07ecc7a342444cf3f78a934c4d44ad7c9f0e21 2021073110:46:32-UTC ./usr/bin/linux/list
 d1e4b6389c0493be80a827508634c42102dcccf4 2021073110:46:31-UTC ./usr/bin/linux/dddel
 c0e116f7f3b29dbc2be91b642641de312e17ea3d 2021073110:46:31-UTC ./usr/bin/linux/ddict2
 31e419eee836830845373c0b75be50ef3ee59cc5 2021073110:46:29-UTC ./usr/bin/linux/dbfview
@@ -142,7 +150,6 @@ f04e4492af6ae0609b43788ee851c3a763335b3e 2021073110:46:17-UTC ./usr/bin/linux/ms
 9ed661cd038c4600bdb9ada9145627ac308f9997 2021073110:46:14-UTC ./usr/bin/linux/sslforw-serv
 ab174710f5532d84b14646ed6137e97307d58b4f 2021073110:46:14-UTC ./usr/bin/linux/sslforw-term
 f45d6199c54239c0890dc52b9ec335ef56a8a87e 2021073110:46:14-UTC ./usr/bin/linux/sslforward
-569b5164c39b54eec1490832e588ba45c983d2df 2021073110:46:13-UTC ./usr/bin/linux/ncterm
 58dc427534a7c88ca8c1eb3ce107c872270ed7dc 2021073110:46:12-UTC ./usr/bin/linux/terminal
 e6c2843e11508aa2a03851f34733a1c863b1ec23 2021073110:46:12-UTC ./usr/bin/linux/terminal-xft
 6bded57eb87833801edf2b7a24f78f23084b0451 2021073110:46:11-UTC ./usr/bin/linux/mklink
@@ -158,7 +165,7 @@ c803db2778dd0fa4e17a30aaabb567aacf76dd31 2021073110:45:41-UTC ./usr/bin/linux/fl
 d0bb213df7bca1a8b6159877e7951b1e4c8dc158 2021073110:45:41-UTC ./usr/bin/linux/lemon
 148e8c48d919ecaa1721d7e8cd204036622f7664 2021073110:45:41-UTC ./usr/options/lin/gccver.opt
 046c4252395c1b30db2e3cf148385b3ebd85dd40 2021073022:28:43-UTC ./setup/setup-windows/m.msys2
-56f8800e5085fe538ffc185845b7024e2e91f9af 2021073022:00:14-UTC ./ccctools/buildp/build.hu.ver
+269b45b3135c5ac827ff08fd4b33c6d2f65a4c51 2021073021:59:27-UTC ./ccctools/buildp/build.hu.ver
 50543eac21695416624c27dd1ff44c7a0433b058 2021073021:15:10-UTC ./install.msys2
 fa2f59628087e4c225c4d52f968f9b700981b90f 2021073019:44:37-UTC ./ccclib/uic.bld-msys2
 5eeb4cd1e079924e464f057e52647694750a056a 2021073013:46:05-UTC ./ccclib/ui_.bld-msys2
@@ -278,7 +285,6 @@ d964370e8400a8616e4e33edd422cc950673c19c 2021072909:28:33-UTC ./tabobj/tbbtbtx/m
 962868ac88567df77d761058234c79e05aaf05a2 2021072909:24:40-UTC ./tabobj/m.msys2
 9a531e787fc345de0b96a871d762ac0eb85b806a 2021072909:08:55-UTC ./tools/mask/m.msys2
 79c6f03443cebaca5fb5568380514efb22940155 2021072907:56:56-UTC ./tools/mask/msk2say/m.msys2
-4e5b2de8ead0e438b69964d42d77b92308346011 2021072907:37:01-UTC ./terminal/unix-ncurses/m.msys2
 a14d2e6cbd263f8f0629da61ea59dc0c6f95a6c1 2021072907:35:38-UTC ./terminal/gtk3/m.msys2
 06cca3f56426bc13a30a128d2b90ae26c9c13dc9 2021072907:34:51-UTC ./terminal/gtk/m.msys2
 8abe50925f35b46afed322aa5031f15bf0bd7b97 2021072907:15:16-UTC ./tools/list/m.msys2
@@ -439,7 +445,6 @@ ded31b59dc126d3225d405b5d28dcc8980f5914f 2020101116:09:40-UTC ./tutor/shm/s
 649be779d8991dbbd68fb347b73bf8432a85572a 2020091818:33:02-UTC ./tabobj/tbbtbtx/dbopen.prg
 8bb86b706f14c909dd8e30f2a63d8a5a9aa95881 2020091620:33:55-UTC ./terminal/terminal-test/remio/ccclpr
 168d17e7e7eff3394f51d82189c931cc2cc387fa 2020091612:47:29-UTC ./terminal/m
-159af672ed4f739b4433e54c07c334be99be8b5f 2020091413:11:19-UTC ./ccclib/src/uic/termapi/termio.cpp
 6f8169744899cb916d3d6f09a5909c0f6c2d0615 2020091213:54:07-UTC ./ccclib/src/uic/listbox.prg
 0d0a44bdfe999b6a05cbef3f877bc68af7df1fb6 2020082021:22:40-UTC ./terminal/sslforw/sslforw-term.cpp
 f1a506d97d020f9d96384f82a3d0858d9eaf22e7 2020081516:11:16-UTC ./tools/socket/socket-demo/http-client.prg
@@ -500,7 +505,6 @@ a6ebfd084f3d396ff0438abb02f8dc1be48c82cd 2020032114:50:42-UTC ./ccctools/pack/co
 c1788685477d7261a7fbdce5c1486d370792c155 2020032015:59:43-UTC ./terminal/unix-termkey/tktest/tktest.cpp
 71a868c6af2d658a3eab178b7b20819720a937a9 2020030813:05:03-UTC ./terminal/unix-termkey/Xdefaults
 955571b358e229b1a3b78fe1421664775a5dd5aa 2020030709:17:26-UTC ./terminal/unix-termkey/OLVASS
-f822c98d9cf361a032fdb9c0d9ae699b76f63cc3 2020030709:12:15-UTC ./terminal/unix-ncurses/parfile.bld
 8f9cb9e4db3ae36b8d293273b0fb906ea05bf21a 2020030708:22:27-UTC ./terminal/unix-termkey/tktest/s
 1b0aacd64e57bd8ec6e3b36ac40a4b6f10d14e57 2020030708:22:11-UTC ./terminal/unix-termkey/parfile.bld
 842d94ed6d232b29dd7614ba3b717fc37a0918e4 2020030708:21:08-UTC ./terminal/unix-termkey/tktest/m
@@ -662,7 +666,6 @@ ca97f7e0020d6bc508ed133c2f0d9bd09de9d860 2018052008:37:00-UTC ./setup/setup-wind
 8f6c16431a69b853b2ad19068453d4e1b650cdce 2018051121:27:03-UTC ./tools/crypto/sign.cpp
 86787a2d3133df66776ddb1861b322c977e97bc1 2018042818:56:44-UTC ./usr/build/windows/_compile.bat
 02e31411cf15d2c16ea7d8ba0e5a1f5b0dfc4f81 2018042607:29:03-UTC ./tools/z/z.ver
-8c285f6fea20ee5e8ad6fd59736e29d76210336d 2018042606:44:22-UTC ./tools/z/zcolor.prg
 afb1b9a2ebf0cd2697d2d04795361b545338dcb8 2018042007:10:38-UTC ./usr/bin/freebsd/make.b
 b327275a5252d2824eae12f4ba92d81e89edfcef 2018041915:21:21-UTC ./tools/z/zcopy.prg
 357b2a9bb967a2c01a8a688394f19878c8c1d88c 2018041311:56:10-UTC ./tools/textview/tvdisplay.prg
@@ -729,7 +732,6 @@ f6a8280f9c2aff466a80bdce95ca5db9a9119cd6 2018022414:05:38-UTC ./setup/setup-unix
 454a940a0078165d287bfbd9b32098650edc1ec7 2018022410:22:05-UTC ./terminal/terminal-test/m.bat
 e54cbae7e5a6a4a776fa3868c84078cb0b6e61a3 2018022409:56:08-UTC ./terminal/terminal-test/m
 beb3770026c55ee8da049d3c07ee305e52cdfc29 2018022319:58:09-UTC ./tools/zgrep/zgrep_view.prg
-b1b0159cfe3d03ed281f4cfe805013c0b259270f 2018022215:19:01-UTC ./tools/z/zloop.prg
 2aa599ebfec615b252e165035d808650935eac6e 2018021408:57:29-UTC ./terminal/gtk3/parfile.bld
 9c6949480e8407a9f34d440d444a81bed22c9fea 2018020613:54:19-UTC ./setup/setup-unix/prg2ppo/xtxlegal.cpp
 3acddd25827a0a99746784484771a52dc64ae373 2018020613:53:27-UTC ./setup/setup-unix/build/s_buildp_ppo.savex
@@ -2635,7 +2637,7 @@ db65eb44a29eb4eb5c0537cb6846f8e5d3310f33 2003100210:15:38-UTC ./jt/msk2dlg/pdial
 c12f3e9a9a3caa34454a93de13ff22e4f2dad5ea 2003100210:15:22-UTC ./jt/msk2dlg/s
 a9913af8ce93a32d528a1fc9f39f4ebbb683e405 2003093020:53:26-UTC ./jt/jtdemo/scroll/proba.msk
 10a04c4a54df6b63bc2995026ebe84e828bd57d0 2003092307:55:08-UTC ./ccclib/src/windows/wait.cpp
-01505e1977c96f70126cc0939e59e0e0a44d9e36 2003092220:41:57-UTC ./ccclib/src/unix/fork.cpp
+01505e1977c96f70126cc0939e59e0e0a44d9e36 2003092218:41:57-UTC ./ccclib/src/unix/fork.cpp
 79888c1b3eb4108868640b60ed55eb256b7ea8b5 2003091608:51:36-UTC ./ccclib/src/chmod.cpp
 518f37e9cb3ec7ecacd16e5b8cb8288e9ded5e50 2003091514:15:09-UTC ./tutor/redir/redir.prg
 14cf8878877a8c7f836e30f588576d88d733dea0 2003091506:56:58-UTC ./tutor/redir/child.prg
