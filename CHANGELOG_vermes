@@ -1,3 +1,15 @@
+2021-11-21 ppo2cpp 4.8.0;
+  bevezetve az [x] parameter atadas: funcall(x,@y,[z])
+    parameter atadas derefelve: x
+    parameter atadas refesitve: @y
+    parameter atadas ahogy van: [z] (uj eset);
+  tamogatva az alabbi postfix fuggvenyhivasi alakok
+    @x::fun(y,z) -> fun(@x,y,z)
+    [x]::fun(y,z) -> fun([x],y,z);
+  uj fuggveny:
+    reftype([x]) -> .t./.f.,  true, ha x ref;
+
+
 2021.10.16 memotran: ures implementacio potolva;
 
 2021.10.07 xstart: eliras javitva, substr() helyett strtran() kell;
