@@ -1,4 +1,4 @@
-//input: srchdef.ppo (4.7.0)
+//input: srchdef.ppo (4.8.0)
 
 #include <clp2cpp.h>
 
@@ -125,10 +125,10 @@ while(stack<base+2)PUSHNIL();
 argno=2;
 push_call("_blk_searchdefine_0",base);
 //
-    push_blkarg(base+1);//r
+    push_symbol(base+1);//r
     idxr0(1);
     idxr0(1);
-    push_blkenv(env+0);//symbol
+    push_symbol(env+0);//symbol
     eqeq();
 //
 {*base=*(stack-1);stack=base+1;pop_call();}
