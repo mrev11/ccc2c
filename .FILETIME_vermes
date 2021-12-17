@@ -1,5 +1,9 @@
-286d40296b1654c51cea7e17dddd7384b02222db 2021120909:17:12-UTC ./log-install
-213705a6eb581004e9230eb4590da0ce24bb894b 2021120909:17:07-UTC ./jt/jterminal/jterminal.jar
+c96e2dc8df16d3c5e0216afdee25a24316aab8e2 2021121710:46:55-UTC ./CHANGELOG_vermes
+38ad9f820aea9b7974ebeffa94b7fd192c768e94 2021121519:35:28-UTC ./bashrcx
+76ac62956c8e63e355ce4c641be12833b38cf9cd 2021121517:36:22-UTC ./envccc
+4e5e5b24d9337f4d398dc272be6bdd30099762a5 2021121511:12:47-UTC ./ccc-dependencies-manjaro
+7970514f6c0fd6660fade3afacfa60ddf20b4939 2021120909:46:18-UTC ./log-install
+5f1956660b74f730a31c842a26f2f52efea0365f 2021120909:46:08-UTC ./jt/jterminal/jterminal.jar
 2d09c1649843412ae1b3a5caaeef6cea68b47a1d 2021120909:17:05-UTC ./usr/bin/linux/terminal-qt5
 638a2a771c57296aa600a10ce53958eaf03cacaa 2021120909:15:58-UTC ./usr/bin/linux/terminal-gtk3
 2eca11857e7ff3dd5e2d0d4632d88afd3c4f1e7e 2021120909:15:57-UTC ./usr/bin/linux/terminal-gtk
@@ -38,7 +42,6 @@ c11ea1d8eb11d884d845b6ab04e42a5dc62d075a 2021120909:12:38-UTC ./setup/setup-unix
 6f4c406aa08b59de3caa36a9eb91e4d44aae20f9 2021120909:12:38-UTC ./setup/setup-unix/day.cpp
 663cf5a1739cca2883f5c6e5bd8343bf1f836dc2 2021120909:12:38-UTC ./setup/setup-unix/deferror.cpp
 da60c0a6e9aa3b725a1e05bba95c85005f8a9cb7 2021120909:12:38-UTC ./setup/setup-unix/directory.cpp
-b955a3f1952fb48647c4c7f736e22ea08f33273e 2021120909:12:06-UTC ./CHANGELOG_vermes
 d39ee4700e3941c73036f2b11a82b816aac98377 2021120814:23:29-UTC ./terminal/unix-ncurses/ccclib/utf8conv.cpp
 bb1e1b1fc5c4a76235017becaac6a2beca8ab5ca 2021112416:36:49-UTC ./usr/bin/linux/prg2ppo
 070e5370c613d973a3b9ae943b0915dd25966dca 2021112311:19:29-UTC ./ccctools/prg2ppo/prg2ppo.ver
@@ -456,7 +459,6 @@ db7c14d728cd652db2cd0305f82d17824614bdf5 2021011910:21:50-UTC ./usr/include/scku
 dfde31eb0035e4ff586a77969be50d995fe9f355 2020122917:54:43-UTC ./tabobj/tbbtbtx/utility/bti.prg
 90b90a2c6c8119607bbfcc7da48ff4301013a649 2020120410:38:21-UTC ./tools/sql2/driver-oracle/oci2.cpp
 62b3923ebfbf8d2fa954cbfe97280dbe0e0d53be 2020120409:15:57-UTC ./usr/options/lin/link.opt
-f1d203944f5320de50461ebe1a3b959f64633e06 2020112114:30:07-UTC ./bashrcx
 aaff98c7114c89e50009c5bbf5ba256b40f2cda3 2020111910:38:28-UTC ./ccclib/src/variable.cpp
 09f5d23a7b150407003fcf73a329dd09693ae42a 2020111910:26:10-UTC ./usr/options/lin/compile.opt
 ac529b69b2bbe0e234f52214a710c06ddf9e6d9f 2020111910:02:42-UTC ./ccclib/src/xmethod6.cpp
@@ -553,7 +555,6 @@ b17e9969d534499c17f56b7c08b03f154d17360e 2020050712:07:09-UTC ./ccclib/src/uic/t
 dd46bd177aa444b33e486df6b0041a074e3c24c6 2020042113:18:15-UTC ./terminal/common/keycode.h
 a6ebfd084f3d396ff0438abb02f8dc1be48c82cd 2020032114:50:42-UTC ./ccctools/pack/copyright.prg
 6ea6f6a2452baa8f5f2d0da24e998b302ed30ff2 2020032114:14:49-UTC ./ccc-dependencies-ubuntu
-64540268b7b013ebf8146aebc3ba22bb9e5498bb 2020032109:48:14-UTC ./envccc
 55011ab96c0844db78b4f2d386ed22c4846758c6 2020032016:01:36-UTC ./terminal/unix-termkey/readkey.cpp
 c1788685477d7261a7fbdce5c1486d370792c155 2020032015:59:43-UTC ./terminal/unix-termkey/tktest/tktest.cpp
 71a868c6af2d658a3eab178b7b20819720a937a9 2020030813:05:03-UTC ./terminal/unix-termkey/Xdefaults
