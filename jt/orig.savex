@@ -1,7 +1,0 @@
--s/opt/ccc2/jt
--r:ppo:
--lrobj*
--lr*.nopack
--lxlog-*
--x.savex.bak.class.pnl.dlg.msk.jar.log.
--mw

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+source make_verf 2
+
+( cd jt/jtlib               && m )
+
+( cd tools/dbaseiii         && m )
+( cd tools/dbfview          && m )
+( cd tools/ddict2           && m )
+( cd tools/list             && m )
+( cd tools/pcre             && m )                                
+( cd tools/savex            && m )
+( cd tools/setperm          && m )
+( cd tools/sql2             && m )
+( cd tools/tdccmp           && m )
+( cd tools/zgrep            && m )
+
+( cd tutor/dtree            && m )
+( cd tutor/fpath            && m )
+( cd tutor/pm/$CCCUNAME     && m )
+( cd tutor/rename           && m )
+
+( cd jt/jterminal           && m )
+

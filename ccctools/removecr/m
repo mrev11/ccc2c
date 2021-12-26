@@ -1,3 +1,2 @@
 #!/bin/bash
 bapp_unix_.b  "BUILD_EXE=$CCCDIR/usr/bin/$CCCUNAME" "BUILD_SHR=static"
-ldd `which removecr.exe`

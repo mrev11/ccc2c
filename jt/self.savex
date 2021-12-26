@@ -1,5 +1,0 @@
--s$(CCCDIR)/jt
-@$(CCCDIR)/content.savex
--lr*.nopack
--x.zip.savex.
--mw

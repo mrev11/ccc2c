@@ -38,4 +38,3 @@ cat prg2ppo\log-link        >>log-install
 :: less log-install
 
 :stop
-
