@@ -18,6 +18,8 @@ pushd tutor\dtree       & call m.bat & popd
 pushd tutor\fpath       & call m.bat & popd
 pushd tutor\rename      & call m.bat & popd
                          
+javac -version 2>NUL
+if %errorlevel% == 0 (
 pushd jt\jterminal      & call m.bat & popd
-
+)
 

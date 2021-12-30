@@ -1,4 +1,4 @@
-//input: memoread.ppo (4.7.0)
+//input: memoread.ppo (4.8.0)
 
 #include <clp2cpp.h>
 
@@ -11,7 +11,6 @@ extern void _clp_fseek(int argno);
 extern void _clp_fwrite(int argno);
 extern void _clp_len(int argno);
 extern void _clp_memoread(int argno);
-extern void _clp_memotran(int argno);
 extern void _clp_memowrit(int argno);
 extern void _clp_space(int argno);
 
@@ -140,23 +139,6 @@ push_call("memowrit",base);
     if_3_0:;
     line(51);
     push(&FALSE);
-    {*base=*(stack-1);stack=base+1;pop_call();return;}
-//
-stack=base;
-push(&NIL);
-pop_call();
-}
-//=======================================================================
-void _clp_memotran(int argno)
-{
-VALUE *base=stack-argno;
-stack=base+min(argno,1);
-while(stack<base+1)PUSHNIL();
-argno=1;
-push_call("memotran",base);
-//
-    line(55);
-    push_symbol(base+0);//txt
     {*base=*(stack-1);stack=base+1;pop_call();return;}
 //
 stack=base;

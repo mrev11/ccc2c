@@ -1,4 +1,4 @@
-//input: ascan.ppo (4.7.0)
+//input: ascan.ppo (4.8.0)
 
 #include <clp2cpp.h>
 
@@ -459,8 +459,8 @@ while(stack<base+3)PUSHNIL();
 argno=3;
 push_call("_blk__asort_ascendblock_0",base);
 //
-    push_blkarg(base+1);//x
-    push_blkarg(base+2);//y
+    push_symbol(base+1);//x
+    push_symbol(base+2);//y
     lt();
 //
 {*base=*(stack-1);stack=base+1;pop_call();}

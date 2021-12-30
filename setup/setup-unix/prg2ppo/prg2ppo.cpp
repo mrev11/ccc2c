@@ -719,7 +719,7 @@ push_call("logo",base);
 //
     line(202);
     string(nls_text("CCC Preprocessor "));
-    string("1.5.1");
+    string("1.5.2");
     add();
     string(" Copyright (C) ComFirm Bt.");
     add();

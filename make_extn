@@ -20,5 +20,6 @@ source make_verf 2
 ( cd tutor/pm/$CCCUNAME     && m )
 ( cd tutor/rename           && m )
 
+if (javac -version 2>/dev/null); then
 ( cd jt/jterminal           && m )
-
+fi
