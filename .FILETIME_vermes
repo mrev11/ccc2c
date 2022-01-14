@@ -1,6 +1,10 @@
-94003af3e943befbc8002c34143cf8e24371c6ed 2021123022:35:47-UTC ./CHANGELOG_vermes
-3ce61560825102bbb74a10cb855a3c894f22b630 2021123022:33:08-UTC ./log-install
-725b7112f0ad33a2993574c0497ff51f4c6c22f3 2021123022:32:53-UTC ./jt/jterminal/jterminal.jar
+49473e4e174088a42e6b6df728f95bda2d2bd71a 2022011410:32:28-UTC ./usr/bin/linux/sslforw-serv
+0f18cd238c7617e02278021e3b91ac8a1bb80acc 2022011410:32:28-UTC ./usr/bin/linux/sslforw-term
+84bd84bda217d578f0692451bc347379c36dad68 2022011410:32:28-UTC ./usr/bin/linux/sslforward
+26e9799e507c96492e60aa8b230889d684f6a57e 2022011410:30:43-UTC ./CHANGELOG_vermes
+5547cb049829b6d8d912e63c177575ece1b89f3f 2022011410:21:07-UTC ./jt/sslforward/context.cpp
+3e9e97c5b36b002b249696fce3426f98925b660d 2022010910:02:29-UTC ./jt/jterminal/jterminal.jar
+f7fcd5d38331fce512da0dc1947de2a75794a368 2022010910:02:29-UTC ./log-install
 29ef4f6c4346b557d466e8c327398588e6a774a8 2021123022:32:51-UTC ./usr/bin/linux/pm
 5455a1bfcfc446e0a847ad16416bfe5c88f1c44b 2021123022:32:51-UTC ./usr/bin/linux/rnm
 a59cd67d344f04ff371e998c6a95de74dfde2f47 2021123022:32:50-UTC ./tutor/pm/linux/2/search.say
@@ -48,9 +52,6 @@ ebb8bbff09ba12dd650a5ffb954052fdffdf8cd9 2021123022:31:43-UTC ./usr/bin/linux/pa
 e2592a77237fd4d34d0a9e8b9c99b145bfb507c6 2021123022:31:39-UTC ./usr/bin/linux/msk2say
 638a2a771c57296aa600a10ce53958eaf03cacaa 2021123022:31:38-UTC ./usr/bin/linux/terminal-gtk3
 2eca11857e7ff3dd5e2d0d4632d88afd3c4f1e7e 2021123022:31:36-UTC ./usr/bin/linux/terminal-gtk
-eb78dc1e071e8b6d4b2832b262469b8343b1a413 2021123022:31:34-UTC ./usr/bin/linux/sslforw-serv
-7546934fa7c9477a8350cabb4c1d4d2d4d5a66a4 2021123022:31:34-UTC ./usr/bin/linux/sslforw-term
-c7cdf1409d0d87e62ae5061ced8c9adf1d7f54ee 2021123022:31:34-UTC ./usr/bin/linux/sslforward
 20626b383b49647e8842710bddf344d6da5bdac9 2021123022:31:33-UTC ./usr/bin/linux/ncterm
 59c4c26be827e66caae18dbcdec2332e0e6b1f9b 2021123022:31:33-UTC ./usr/bin/linux/terminal
 5ffbcf93a1f38495f3d19a076df25d5cfe765ab7 2021123022:31:33-UTC ./usr/bin/linux/terminal-xft
@@ -1174,7 +1175,6 @@ c230f9c80effc91516aac258dba127e5c6ea2e84 2016060209:17:48-UTC ./terminal/sslforw
 293695de43e1b139f36d9e179fd13f2febd5fe39 2016060209:17:16-UTC ./terminal/sslforw/ssl-test/t-auth-s.bat
 61bfcbdfd0d029131183891c33c63b13c6abe4aa 2016060209:16:34-UTC ./terminal/sslforw/ssl-test/t-plain.bat
 bcfbf071024ebbb5952e9ff06d398c3baf1df664 2016060209:14:59-UTC ./terminal/sslforw/ssl-test/t--host.bat
-044054d597e84125a062d5109204fb35e5f358c6 2016060208:45:32-UTC ./jt/sslforward/context.cpp
 93b9ce2a85c512a2d8f3d4d3621fa2352bf80888 2016060206:45:13-UTC ./jt/sslforward/forward.cpp
 de54377abeda8b49295ef3d41c49492017e3ca2a 2016060206:42:35-UTC ./jt/sslforward/m.bat
 fde27d672f75c3b176dba0d8621c7644e89bb328 2016060119:49:48-UTC ./terminal/windows/parfile.bld
