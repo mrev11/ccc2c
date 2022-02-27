@@ -77,6 +77,7 @@
 
 #define ISREF(i)       (PARTYPE(i)==TYPE_REF)
 #define ISREFSTR(i)    (ISREF(i) && PARPTR(i)->data.vref->value.type==TYPE_STRING)
+#define ISREFBIN(i)    (ISREF(i) && PARPTR(i)->data.vref->value.type==TYPE_STRING)
 #define REFVALUE(i)    (&(PARPTR(i)->data.vref->value))
 #define REFSTRPTR(i)   (ISREFSTR(i)?STRINGPTR(REFVALUE(i)):(ARGERROR(),(char*)0))
 #define REFSTRLEN(i)   (ISREFSTR(i)?REFVALUE(i)->data.string.len:(ARGERROR(),0)) 
