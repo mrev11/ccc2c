@@ -1,6 +1,17 @@
-d02c98d86dc6a905a8244d59a7ab241bb81ae080 2022022715:26:51-UTC ./CHANGELOG_vermes
-0ea5a7fe7268f96ba22c91d9fcd91b6febb8e74f 2022022715:16:31-UTC ./jt/jterminal/jterminal.jar
-6da728242a7007cbc60e79ad86eb09cd9c4e115b 2022022715:16:31-UTC ./log-install
+56c377f4076c8544c25e2c00b1511efe430cbf62 2022030310:38:07-UTC ./CHANGELOG_vermes
+c060afb309e4864acdcff13353cca6eeacfe4135 2022030310:34:19-UTC ./log-install
+ff2c2d8bdff25e7dc072a5d9e65a0be548021f4d 2022030310:34:18-UTC ./usr/bin/linux/xstart
+2f727eba250772d3daaf132e907d7951592d4b90 2022030310:34:14-UTC ./usr/bin/linux/build
+1e670df1d523ce8cef612bc5e7db4562c61653c5 2022030310:29:44-UTC ./ccclib/src/simplehash.prg
+f7b17cf07d8c3630d0b7531bbd3eb68d39f65fbd 2022022716:35:14-UTC ./usr/bin/linux/gitfollow
+9812d7ad3fb11c7c9145348eff5b77602cb3e6fe 2022022716:35:14-UTC ./usr/bin/linux/gitnav
+6c1b292349ef76f059298f189bb65929acad2741 2022022716:35:14-UTC ./usr/bin/linux/gitref
+d4bfd33c5b3ddc43d5914d2132cc9c69894f5b19 2022022716:35:14-UTC ./usr/bin/linux/gitstat
+8dd09cf5bfca12005e69d8c883ecef082911227e 2022022716:35:14-UTC ./usr/bin/linux/gitview
+8202306da98a829bf4116e2912ae75831fbe7e4c 2022022716:35:11-UTC ./usr/bin/linux/filetime-restore
+aaaac038e94d64215284da49fa7493e5f6e04651 2022022716:35:11-UTC ./usr/bin/linux/filetime-save
+059796fb53ac26153bcd5066be4cd1b0c58d70b6 2022022716:35:11-UTC ./usr/bin/linux/firstpar
+b8cca67a925504a903a1e3122c457e20a5809fce 2022022716:35:09-UTC ./jt/jterminal/jterminal.jar
 5ba36d50547588be4db2ceee82d732d647df4206 2022022715:16:29-UTC ./usr/bin/linux/rnm
 24149ad00d01fe8eefaf6b8bd953dda583a01249 2022022715:16:28-UTC ./usr/bin/linux/fpath
 9fcc83ab709cd615d7dbd17e210643bcec84aee2 2022022715:16:28-UTC ./usr/bin/linux/lpath
@@ -29,7 +40,6 @@ ef52a04693eb32e1ed4bf22235f11c3d15dc8d04 2022022715:16:09-UTC ./usr/bin/linux/sa
 0255f7236d7391139a185736e4c5a97b17a32a1b 2022022715:16:05-UTC ./usr/bin/linux/dbfview
 729c31a20d3e4cf109561ff08b7ff864c9a53905 2022022715:15:59-UTC ./usr/bin/linux/z
 69df835bde45c945e847c7cc37d3523e3dfd675e 2022022715:15:59-UTC ./usr/bin/linux/zhist
-39a7fe4280ef6fa4f832751ec6d77c0cf477a244 2022022715:15:56-UTC ./usr/bin/linux/xstart
 fba5d70c96878caf16b31adfa895658a9993017f 2022022715:15:53-UTC ./usr/bin/linux/tv
 a9f135d50f6d3632bc957fea3feddc1e66a700d9 2022022715:15:52-UTC ./usr/bin/linux/prg2tdc
 946b119a1de165484b00bffbf621a586038cf160 2022022715:15:52-UTC ./usr/bin/linux/tabsuper
@@ -56,7 +66,6 @@ fe076ea7a8d950a15b4d71bcb7cc376cf592379e 2022022715:15:33-UTC ./usr/bin/linux/te
 13b0c5a78e021d24107555fb8546a663a798a09f 2022022715:15:32-UTC ./usr/bin/linux/mklink
 29e29bed126d6e74752cef7f65ff8a26e1620444 2022022715:15:32-UTC ./usr/bin/linux/removecr
 43ffdc2704d2ee570c73b19f2648bc9baa56844e 2022022715:15:31-UTC ./usr/bin/linux/prg2ppo
-dd1667f8bbbb2dc5622da57a0d5573dddf44d248 2022022715:15:30-UTC ./usr/bin/linux/build
 a26e87b57523be604fb2cf6393df439c71077f2d 2022022715:15:16-UTC ./usr/bin/linux/ppo2cpp
 04e338fe934ea568d57dedc2bd904a1706a2c8db 2022022715:15:11-UTC ./setup/setup-unix/compopt
 c0f3d361ed5821c9e9f962890ab949cd9fb7f00c 2022022715:15:02-UTC ./usr/bin/linux/flex
@@ -1562,7 +1571,6 @@ d13e0d733b0bab64c3b059673f13e2d9af878495 2012092008:24:43-UTC ./tools/sql2/test/
 03018411e298f6a0d8ebe4e9b755048f9bd13e3a 2012091917:18:48-UTC ./tools/sql2/driver-sqlite3/sqlite3.cpp
 8cae9231699114cb7587b1bec73ea3a634e52458 2012091917:18:32-UTC ./tools/sql2/driver-sqlite3/sqlite3_load.cpp
 7a2aee322d189414197a7bf70cad61403553c4e3 2012091917:17:58-UTC ./tools/sql2/driver-sqlite3/sqlite3.ch
-7d63c99734c17e9db9030229941567d02d76dcc6 2012083108:31:12-UTC ./ccclib/src/simplehash.prg
 dc447a3333d1c5044e031381cced59f47386870c 2012072706:16:34-UTC ./tools/sql2/driver-sqlite3/OLVASS
 80b2c865c8543e4f1054065347105bce1915bd82 2012071710:26:23-UTC ./tutor/readline/firstpar.prg
 d003a4eea8d1e3eb952d7468b187265db6aa7340 2012062705:48:12-UTC ./setup/setup-flex/mkskel/d
