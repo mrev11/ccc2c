@@ -1,3 +1,6 @@
+2022.03.25 -- 4.8.1
+   strtoul helyett strtoull-lel konvertalja a hex szamokat;
+
 2021.11.21 -- 4.8.0
   funcall(x,@y,[z])
     parameter atadas derefelve: x

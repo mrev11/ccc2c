@@ -1,3 +1,9 @@
+2022-03-28 ppo2cpp 4.8.1:
+  A kodgenerator strtoul helyett strtoull-lel konvertalja a hexa szamokat.
+  (Windowson a C++ kodba csonkitva irodtak ki a 32 bitnel nagyobb hexa szamok.)
+  Windowson a mingw forditasi opcioiba bekerult a -DFILE_OFFSET_BITS=64.   
+  (Ezzel Windowson is sizeof(off_t)==8, Linuxon ez korabban is igy volt.) 
+
 2022-03-06 csvreader javitas;
 
 2022-03-03 simplehashClass-ban uj metodusok: toarr,toarrkey,toarrvalue;
@@ -13,7 +19,7 @@
 2022.01.14
   sslforward-ban beallithato az SSL_CTX_set_verify_depth() parametere;
   export SSLFORW_CADEPTH=depth # default=100;
-  Az a tapasztalat, hogy a hitelesítés eggyel hosszabb láncot fogad el, 
+  Az a tapasztalat, hogy a hitelesites eggyel hosszabb lancot fogad el, 
   mint ami meg van adva SSL_CTX_set_verify_depth-ben.
 
 
