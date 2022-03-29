@@ -1,3 +1,9 @@
+2022-03-29
+  Linux/Windows kozos lock interfesz: flock.cpp-ben _ccc_lock() es _ccc_unlock(); 
+  fsetlock/fwaitlock/funlock atirva _ccc_lock()/_ccc_unlock()-ra;
+  filecreat.cpp-ben a fileshare protokol lock atirva _ccc_lock()-ra;
+  fileshare lock offsetek helye valtozott: low=0, high=LK_OFFSET_FILE;
+
 2022-03-28 CCC3-Windows stat javitas:
   Win1709-en nem lehet (struct *_stat)-ot (struct *stat)-ra castolni.
   (Korabban lehetett, ujabb Windowsokon most is lehet.)   Javitva stat(), 

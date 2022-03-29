@@ -411,6 +411,11 @@ extern void _clp_classinheritstruct(int);
 //dispbegin.obj:
 extern void _clp_dispend(int);
 extern void _clp_dispbegin(int);
+
+//fsetlock.obj:
+extern void _clp_funlock(int);
+extern void _clp_fsetlock(int);
+extern void _clp_fwaitlock(int);
  
 #endif
 
