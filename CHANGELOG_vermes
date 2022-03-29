@@ -1,3 +1,13 @@
+2022-03-29  atteres btbtx konyvtarban az uj lockokra:
+  tabobj: _writechangelog_mutex atirva fwaitlock-ra (cpp->prg);
+  tabobj: __bt_pagelock() atirva _ccc_lock()/_ccc_unlock()-ra;
+  protokoll lock offsetek (valtozott a helyuk):
+    filelock : low=0        high=LK_OFFSET_FILE     (253)
+    pagelock : low=2*pgno   high=LK_OFFSET_PAGE     (254)
+    reclock  : low=recpos   high=LK_OFFSET_RECORD   (255)
+  tabobj: __bt_read()-ben es __bt_read1()-ben shared pagelock;
+  tabobj: mpool.cpp-ben a lapolvasas tobbszor probalva;
+
 2022-03-29
   Linux/Windows kozos lock interfesz: flock.cpp-ben _ccc_lock() es _ccc_unlock(); 
   fsetlock/fwaitlock/funlock atirva _ccc_lock()/_ccc_unlock()-ra;

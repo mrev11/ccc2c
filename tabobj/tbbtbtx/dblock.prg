@@ -21,9 +21,6 @@
 #include "fileio.ch"
 #include "tabobj.ch"
 
-//rekord lock: (2GB-1MB-recno) pozicion 1 byte
-static OFFSET:=2*(1024*1024*1024)-(1024*1024)
-
 
 ******************************************************************************
 //Public interface
@@ -53,8 +50,8 @@ static semafd:=semafd()
 
         if(semafd!=NIL .and. lkcount==1)
             //elsot megfogja
-            fwaitlock_w(semafd,1,1)
-            fwaitlock_r(semafd,0,1)
+            fwaitlock(semafd,1,1,.t.) //exclusive
+            fwaitlock(semafd,0,1,.f.) //shared
             funlock(semafd,1,1)
         end
 
@@ -303,11 +300,7 @@ local result
     if( pos==NIL )
         pos:=tabPosition(table)
     end
-    #ifdef _UNIX_
-      result:=fsetlock(table[TAB_FHANDLE],OFFSET-pos,256,1) //LFS 1024 GB
-    #else
-      result:=fsetlock(table[TAB_FHANDLE],OFFSET-pos,1)
-    #endif
+    result:=fsetlock(table[TAB_FHANDLE],pos,LK_OFFSET_RECORD,1)
     if( result!=0 )
         tabLockCount(table,-1)
     end
@@ -319,11 +312,7 @@ local result
     if( pos==NIL )
         pos:=tabPosition(table)
     end
-    #ifdef _UNIX_
-      result:=funlock(table[TAB_FHANDLE],OFFSET-pos,256,1) //LFS 1024 GB 
-    #else
-      result:=funlock(table[TAB_FHANDLE],OFFSET-pos,1)
-    #endif
+    result:=funlock(table[TAB_FHANDLE],pos,LK_OFFSET_RECORD,1)
     if( result==0 )
         tabLockCount(table,-1)
     end
