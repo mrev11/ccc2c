@@ -1,5 +1,12 @@
-080f72d103d5349056d39c5b20dc694fb8933d63 2022041508:21:14-UTC ./CHANGELOG_vermes
-c5a008aea57fe8187f5b313babee33339fd2ded0 2022041508:18:32-UTC ./tools/xmldom/xmldom.hu.ver
+8a583913d1260f7427a6cc9da248fa804f6c0c3e 2022041617:44:00-UTC ./CHANGELOG_vermes
+992c2b90cce8cc2abf7be7651c604f6b50d02099 2022041617:17:54-UTC ./tools/xmldom/demo/nsdemo.prg
+e6367a9e0a7cddad5b7b32d63922344561c41fd7 2022041617:03:32-UTC ./tools/xmldom/xmlattr.prg
+570dc3eaeed1127de543d8a9e70e202572c7cc09 2022041616:33:35-UTC ./tools/xmldom/xmldom.hu.ver
+40348e92fc4be4e97c345368fa2ad3dcbdc37fa4 2022041615:54:17-UTC ./tools/xmldom/xmldom_lemon.prg
+657c350119dbfa8080a348c91048c284286cf50b 2022041508:42:32-UTC ./tools/xmldom/xmldom_lexer.lex
+fca017a5c596738222f43e3211b4ab4025e3385d 2022041420:29:44-UTC ./tools/xmldom/xmldom_parser.lem
+a73711ac968263b4734f42504b017cac50ea3218 2022041420:16:54-UTC ./tools/xmldom/xmldom_parser.h
+fe1958cfb6d74623d3341ac1f50888baddf12bf4 2022041418:51:06-UTC ./tools/xmldom/xmldom_lexer.h
 4f6be995423b92cd26158182e0b97e91a8f699d8 2022041115:41:00-UTC ./jt/jterminal/jterminal.jar
 8e396ce19f26b569167b031571a07d474bc609ae 2022041115:41:00-UTC ./log-install
 2d9f212e8a67f8425317b4c10eac740d0f3bce84 2022041115:40:26-UTC ./usr/bin/linux/xstart
@@ -432,14 +439,10 @@ fdfa7d591d8c1010407ef5ad3355becee3d0a712 2021042712:13:56-UTC ./ccctools/ppo2cpp
 e6959a3932f6d5c6c804d921599655a663ca0c34 2021042712:03:02-UTC ./ccctools/ppo2cpp/lexer.h
 afc6ef8fcca7f7cd868d079e3d4005e9eb0fb683 2021042711:59:05-UTC ./ccctools/ppo2cpp/lexer.lex
 e9c09879ffc76b4c0a4f1f93a24c9af4ff398824 2021042112:49:49-UTC ./ccctools/ppo2cpp/proto-codegen
-239b90504bd8170c929815cf71a28b200428d527 2021041412:08:23-UTC ./tools/xmldom/xmldom_parser.h
-95895024062152f07ad365846545f0d47594abfc 2021041412:08:16-UTC ./tools/xmldom/xmldom_parser.lem
-3a1b4fa60ab113514f9e9bf0ebc13076a364ece8 2021041412:06:30-UTC ./tools/xmldom/xmldom_lexer.lex
 35ce53fb7e505c7d5ae27dda2c53618c9b937098 2021041018:52:30-UTC ./tabobj/tbbtbtx/btree/bt_open.cpp
 1d11a15726dee890bb5f7d2c4e37e2ec9d07f048 2021040807:45:59-UTC ./tabobj/tbbtbtx/btree/db.cpp
 dfdadc72fd74881ec97702cdc49e6c92acb273a9 2021040807:45:39-UTC ./tabobj/tbbtbtx/btree/extern.h
 cd14c901a9d6e8e0de4acdc9683e3f2cacb2f696 2021040721:27:55-UTC ./tools/xmldom/xmlpars.prg
-88854f7241564876d551129deaba2a848edf5e08 2021040513:08:52-UTC ./tools/xmldom/xmldom_lemon.prg
 a78182ddf2d1896e2773f91c92adc5f5ca15aadf 2021032513:57:08-UTC ./terminal/unix/m
 d866348a425f6c401d70bb017895182b45f43cf3 2021032511:12:49-UTC ./ccclib/src/uic/setcaption.cpp
 5fa7b36986b04e00839d8fd74f41af851a828701 2021032510:42:54-UTC ./terminal/unix/terminal.cpp
@@ -519,7 +522,6 @@ b4b2b7949b8d31aee7f470b6f2f53689a5e6778b 2020102011:20:36-UTC ./tools/sql2/drive
 d922d3753a9a0679022073ea340e44435d801ef9 2020102011:20:17-UTC ./tools/sql2/driver-oracle/sqltabalias.lex
 5363fdc32f22d24018a04085e1679c3e692834dc 2020102011:19:58-UTC ./tools/sql2/driver-postgres/sqltabalias.lex
 8e5a9e57b30d093290eda38478f79e1132603bf7 2020102011:19:35-UTC ./tools/sql2/driver-sqlite3/sqltabalias.lex
-825439ce570315c3ef6a24c2586a2341c2eade06 2020102007:53:17-UTC ./tools/xmldom/xmldom_lexer.h
 7a1bd42112eafcb252d8993eac25cad77061a9de 2020102007:48:44-UTC ./tools/list/list.cpp
 ce57d80f2371010c0ffe14de29bfde30944c5fcd 2020102007:13:30-UTC ./usr/include/utf8conv.h
 507d77ffd75401107145b6aad7a54b543f700c65 2020101707:29:02-UTC ./tools/crypto/demo/bcrypt.prg
@@ -1726,7 +1728,6 @@ be7f853c994a5083e8d704486b941588bebeea52 2009110617:37:00-UTC ./tools/xmldom/lat
 b87cabff941b7b914f4b2637dd6d990ca372820d 2009110617:10:39-UTC ./tools/xmldom/8859-2.txt
 531022ccd24fa985ecc170d778ebd2dea412fcac 2009110609:25:37-UTC ./tools/xmldom/demo/example2.xml
 79a5ec16d7840427d1350606af449f02bfd1c7ce 2009110609:25:31-UTC ./tools/xmldom/demo/example1.xml
-f31e00fbd20c891e66bba989df539d4290197dd1 2009110509:47:44-UTC ./tools/xmldom/xmlattr.prg
 808d636814414028b70e6cdc4f1995f624f58e8c 2009092719:52:06-UTC ./tools/sql2/test/isolation/v.psql
 0c5d032dff7faa433a10818289507e0650e6ae9f 2009092509:43:41-UTC ./tools/sql2/driver-oracle/oci-serializable-blob.txt
 6105c6b5c6a949f04735602d010c56ba23f40e12 2009080813:40:43-UTC ./jt/jtdemo/ping/connect.prg
