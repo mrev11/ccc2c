@@ -1,7 +1,8 @@
-8a583913d1260f7427a6cc9da248fa804f6c0c3e 2022041617:44:00-UTC ./CHANGELOG_vermes
+2c617e0ae94cc1d6e5f9c5bb05c649eb104eb4da 2022041913:57:26-UTC ./CHANGELOG_vermes
+0136dfcd3828b93ed631c349dcf829a77a4086b7 2022041913:53:20-UTC ./tools/xmldom/xmldom.hu.ver
+c707fd084c37d863c63e3ebc8f8ef0dba2872f8d 2022041812:18:47-UTC ./tools/xmldom/xmlnode.prg
 992c2b90cce8cc2abf7be7651c604f6b50d02099 2022041617:17:54-UTC ./tools/xmldom/demo/nsdemo.prg
 e6367a9e0a7cddad5b7b32d63922344561c41fd7 2022041617:03:32-UTC ./tools/xmldom/xmlattr.prg
-570dc3eaeed1127de543d8a9e70e202572c7cc09 2022041616:33:35-UTC ./tools/xmldom/xmldom.hu.ver
 40348e92fc4be4e97c345368fa2ad3dcbdc37fa4 2022041615:54:17-UTC ./tools/xmldom/xmldom_lemon.prg
 657c350119dbfa8080a348c91048c284286cf50b 2022041508:42:32-UTC ./tools/xmldom/xmldom_lexer.lex
 fca017a5c596738222f43e3211b4ab4025e3385d 2022041420:29:44-UTC ./tools/xmldom/xmldom_parser.lem
@@ -454,7 +455,6 @@ b15b2dd9b42da37dea1779c82bbe06a3f20cfd43 2021032510:10:01-UTC ./terminal/unix/te
 df1a6c4d1a18361dd4cef5e46fc61a478fd5e2aa 2021032509:09:24-UTC ./terminal/unix/terminal.ico
 7a5b01bedcb37a6431900c1cabff9fb1fbcc4a8a 2021032409:52:57-UTC ./terminal/gtk3/terminal-gtk3.cpp
 ef9afe377030cb8f9ad2af9e6b6782fe37a072d8 2021032409:46:50-UTC ./terminal/gtk/terminal-gtk.cpp
-261968194ed4a3a6b0aa1ce59b67a2fdafc00e5a 2021032120:21:19-UTC ./tools/xmldom/xmlnode.prg
 9f0145e7b1f051e427d4e80e52e35c4b7df0cb30 2021031610:31:44-UTC ./tabobj/common.src/tabchlog.prg
 1851d680da9755fc5586a0149c592914d61fc6ec 2021022111:00:50-UTC ./tools/mask/page.prg
 97b10eaf6a9438564cf7e6c86aaa868a63850c8b 2021022110:59:38-UTC ./tools/mask/msk2pge.prg
