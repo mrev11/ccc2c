@@ -1,4 +1,4 @@
-6e363ea39cb7bbf97b56cf62c21feeba18f248fc 2022041914:58:23-UTC ./CHANGELOG_vermes
+4e23f78f5defdf4d2782dc49ad1863b3d3810642 2022041915:06:17-UTC ./CHANGELOG_vermes
 e326910c0ad8d492375bf159251f291086f17c27 2022041914:52:55-UTC ./tools/xmldom/xmldom.hu.ver
 56e4a37d0ebbb60c163408255a66b95a91946440 2022041914:26:01-UTC ./jt/jterminal/jterminal.jar
 395540bc9bd77c524f3337baaecae7fbacec9075 2022041914:16:40-UTC ./tools/xmldom/demo-odt/content.xml
@@ -24,6 +24,7 @@ dc71fd74f73ecda5e2216337288d3f8a621bcb8b 2022041914:13:36-UTC ./tools/xmldom/dem
 f3687f5b0948c26e3884e7d5ff301e301d2f6951 2022041914:13:36-UTC ./tools/xmldom/demo/log-syntax-03
 590f4325ba6604cc4df0cad5236a4f10564c5a2f 2022041914:13:36-UTC ./tools/xmldom/demo/log-syntax-04
 2f52782579dd68d17dc8e616d24d8d5ec59a3871 2022041914:13:36-UTC ./tools/xmldom/demo/log-syntax-05
+76da74d26460a47939339adc7acf1eff5d310ad3 2022041907:34:04-UTC ./tools/xmlrpc/rpcdata.prg
 cb6b339897fdd9f05475a5c4a2e587248eb960bf 2022041907:31:25-UTC ./tools/xmldom/demo/syntax-05.prg
 9d26ecc5b9b2d34813f08247a5d60b9cbce29c57 2022041907:31:21-UTC ./tools/xmldom/demo/syntax-04.prg
 79508887dbb8ac6351eaa417ab2f9f86db92f966 2022041907:31:17-UTC ./tools/xmldom/demo/syntax-03.prg
@@ -715,7 +716,6 @@ dc50f1705fe360b43c66c8412b2c97ac1507c13a 2018111121:13:27-UTC ./tools/regex/rege
 6771e22048e2fbec967012f60abbcc1a46195a30 2018081306:13:00-UTC ./tools/xmlrpc-framework/server/rpcwrapper/rpcwrapper.ver
 8dfc8261ef47c5450e36ad94ecb64182b0d5b436 2018081306:07:41-UTC ./tools/xmlrpc/xmlrpc.ver
 6152b33c9213de79a135895977888660a7eab89c 2018081304:20:51-UTC ./.gitignore
-2a1eb3b5ceaf68ba10922dd1576fbe24495816ab 2018081216:42:07-UTC ./tools/xmlrpc/rpcdata.prg
 98e9d52bb7c058266d3e0583aa702924c38132ee 2018081216:37:02-UTC ./tools/xmlrpc-framework/server/rpcwrapper/rpcwrapper.prg
 407dda83ae7870e5fbf60fad3e5f8896158ce21a 2018081213:23:40-UTC ./tools/xmlrpc/rpc_server.prg
 e50d7f44046c89a987c57791da93019ed20d1e8d 2018081213:19:41-UTC ./tools/xmlrpc/demo-rpc/demo-server.prg
