@@ -1,4 +1,5 @@
-4a6ed74bdee9a19e89715822a690b837724fef6f 2022041914:32:10-UTC ./CHANGELOG_vermes
+e326910c0ad8d492375bf159251f291086f17c27 2022041914:52:55-UTC ./tools/xmldom/xmldom.hu.ver
+23e1529bc450c7411154b7dcc9b73656f788ebc7 2022041914:52:30-UTC ./CHANGELOG_vermes
 56e4a37d0ebbb60c163408255a66b95a91946440 2022041914:26:01-UTC ./jt/jterminal/jterminal.jar
 395540bc9bd77c524f3337baaecae7fbacec9075 2022041914:16:40-UTC ./tools/xmldom/demo-odt/content.xml
 d1022fbd7c05323c8e846243b185b9fc569c3af0 2022041914:16:40-UTC ./tools/xmldom/demo-odt/upper.odt
@@ -23,7 +24,6 @@ dc71fd74f73ecda5e2216337288d3f8a621bcb8b 2022041914:13:36-UTC ./tools/xmldom/dem
 f3687f5b0948c26e3884e7d5ff301e301d2f6951 2022041914:13:36-UTC ./tools/xmldom/demo/log-syntax-03
 590f4325ba6604cc4df0cad5236a4f10564c5a2f 2022041914:13:36-UTC ./tools/xmldom/demo/log-syntax-04
 2f52782579dd68d17dc8e616d24d8d5ec59a3871 2022041914:13:36-UTC ./tools/xmldom/demo/log-syntax-05
-0136dfcd3828b93ed631c349dcf829a77a4086b7 2022041913:53:20-UTC ./tools/xmldom/xmldom.hu.ver
 cb6b339897fdd9f05475a5c4a2e587248eb960bf 2022041907:31:25-UTC ./tools/xmldom/demo/syntax-05.prg
 9d26ecc5b9b2d34813f08247a5d60b9cbce29c57 2022041907:31:21-UTC ./tools/xmldom/demo/syntax-04.prg
 79508887dbb8ac6351eaa417ab2f9f86db92f966 2022041907:31:17-UTC ./tools/xmldom/demo/syntax-03.prg
@@ -44,6 +44,8 @@ caedf8444ea5aebe24974749a4055758d5b9b1d5 2022041907:30:15-UTC ./tools/xmldom/dem
 67e2c6036b3752f2f025389140cdb094700b856e 2022041907:30:07-UTC ./tools/xmldom/demo/demo2.prg
 c02fd1e63d8bd3a0828032f65c55ed8647ad45fa 2022041907:30:02-UTC ./tools/xmldom/demo/demo1.prg
 a02bb9d29b3f109d3c752ab3724741f32040e4bd 2022041907:29:57-UTC ./tools/xmldom/demo/demo0.prg
+53428fb6dd8857b3daabf7a1e526b27aed7687fa 2022041901:39:31-UTC ./tools/sql2/util/tdsutil/ted2prg.prg
+f3952889faa8e890701135f8517554f731653256 2022041901:39:25-UTC ./tools/sql2/util/mkentitylib/mkentitylib.prg
 c14dec7e90e2d3b1119e7155b26da2b66793554e 2022041901:39:17-UTC ./jt/jtlib/jtutil.prg
 2935f98805181fb24a76126bd59cebea3012b3bf 2022041901:39:04-UTC ./jt/jtlib/jtupload.prg
 a8f579aaf9728b6476ae45ac131e470f0e279055 2022041901:38:55-UTC ./jt/jtlib/jtpassw.prg
@@ -57,6 +59,9 @@ e193161432553fe0940676c6ed6dea87d24f45d5 2022041901:37:38-UTC ./jt/jtlib/jtdirli
 233bca2fb91beae638cc0b19a430da16a59ddad3 2022041901:37:21-UTC ./jt/jtlib/jtcertificate.prg
 cfe51d3780cc41920f58025b52869900b0483352 2022041901:37:12-UTC ./jt/jtlib/jtalert.prg
 84db1a92db1afdaa9e3eb6b13d33d44d559d2f22 2022041901:37:01-UTC ./jt/jtdemo/alert/alert1.prg
+e05fa8591149284a7b00aa90c4a05dab64de93ec 2022041901:35:27-UTC ./tools/xstart/xstart.prg
+ac1f5b25273b0a146ed2c5b76200ea969a2ae30f 2022041901:31:21-UTC ./tools/sql2/util/tdsutil/tdsparse.prg
+5772860bf1b21578e40a6f18e9e11736d12b6814 2022041900:43:10-UTC ./tools/sql2/util/tdsutil/tds2dom.prg
 c6c3533f07f48314b7323524830e992f151db432 2022041823:05:00-UTC ./jt/jtdemo/htmldemo/htmldemo.prg
 58610c5c3946aae0986b9798d7f12fae609cb54a 2022041822:19:39-UTC ./jt/jtdemo/cccdown/s
 7efa2d9468835edb3bf1d04a36d10c6461756db6 2022041822:09:25-UTC ./jt/jtdemo/browse/m-static
@@ -307,7 +312,6 @@ c289a34612d3a86195f49a701573764d29cefca4 2021111914:45:13-UTC ./ccctools/prg2ppo
 7080708917a5db96d646fe8f117a87cb96b1f34f 2021111420:37:35-UTC ./ccclib/src/memotran.prg
 f09139d8b8d2a42717f74676816a9a31fc369881 2021111420:36:13-UTC ./ccclib/src/argerror.prg
 dcd3b2becbf223fbd3f76af6b1693d3fa553ad21 2021111416:03:15-UTC ./ccclib/src/memoread.prg
-8ea4012be7c1688e729bbe41de4ed4600dac20dd 2021100710:16:01-UTC ./tools/xstart/xstart.prg
 985ea2298eb78ebe58b25810a909edc9e04bfbf3 2021100609:50:26-UTC ./tutor/rename/rnm.say
 52f5091385677f8cbed07332dc40dd86a5aab7e2 2021100609:50:15-UTC ./tools/textview/ver2/zsearch.say
 b6773e58d5fc403447a0dd5c5d83914131bffd69 2021100609:50:15-UTC ./tools/z/ver2/zreplace.say
@@ -861,8 +865,6 @@ cd23b27177c6cf7ca2b307fa77f0af58d10ccbb4 2018031012:47:22-UTC ./tools/sql2/drive
 f79636b328865807d76935c6b67adfeda6fc30fe 2018031012:47:12-UTC ./tools/sql2/driver-mysql/columndef.prg
 29cb8c70f83c03c6127edc737e30f16e9a464cdb 2018031012:47:01-UTC ./tools/sql2/driver-db2/columndef.prg
 1911726afcb556d81a0f1fbe32eaa3f25f7f4705 2018031012:44:49-UTC ./tools/sql2/util/tdsutil/columndef.prg
-d23a9a2467e85311106bba03b6d50ca50a03a50e 2018031012:43:31-UTC ./tools/sql2/util/tdsutil/tdsparse.prg
-3252f47ae325f48939888ff12facbd4e5bb3637f 2018031012:40:32-UTC ./tools/sql2/util/tdsutil/tds2dom.prg
 bd29222ad08d364a857dfc1d51ae296230cf5edd 2018030912:56:44-UTC ./tutor/control/demo2.prg
 694af48533b65882f6b293a69848a758fba4de0c 2018030912:50:03-UTC ./tutor/control/s2
 c5d61069cdfdef02c8479fe7c46e1dbbea928de6 2018030807:45:41-UTC ./ccclib/src/procline.cpp
@@ -1132,7 +1134,6 @@ ea11635d49d379a5aeb9070971e6700c3404d56a 2016092907:21:39-UTC ./jt/jtdemo/dlgdem
 0b9ebdbd0551d54f1fa830999633830e9ed02ad2 2016092907:21:33-UTC ./jt/jtdemo/dlgdemo/main2.prg
 26fab9cce0943eca90d8f6e1ed2b675a5cd1e7f1 2016092907:21:25-UTC ./jt/jtdemo/dlgdemo/main0.prg
 73867cd7210666c028c0b3c9fb20a42e0f28c3a0 2016092907:14:16-UTC ./tools/savex/dirdirmake.prg
-441be9fd22cb88fad7a588a29c29f021836119fb 2016092907:13:50-UTC ./tools/sql2/util/mkentitylib/mkentitylib.prg
 94eb2a6ec66689f6ea5544bbda25327d01b36657 2016092522:22:04-UTC ./tabobj/common.src/tabslock.prg
 958f408ee70ec1da9262e03700fd0067a61af3fa 2016092520:17:52-UTC ./tutor/dtree/delempty.prg
 d9b6f903efcb870ba4658a87829f502d8de01b37 2016092323:40:18-UTC ./tools/zgrep/zgrep_version.prg
@@ -2160,7 +2161,6 @@ e4bd40181b7dbaa9e83567839cfb9aa504caab5e 2006081217:53:12-UTC ./tools/sql2/util/
 27ddcc6dbe4f344c0d81b44f4d405504ac9ceb79 2006081217:53:12-UTC ./tools/sql2/util/btimport/demo/s1
 2358ef6eed99c119bf5450851dd5a03c9094aa2f 2006073009:23:11-UTC ./tools/sql2/util/tdsutil/replacename_cb.prg
 ec830a78ed3ad11a7830a55940fdd4a8481e0e6d 2006072818:12:56-UTC ./tools/sql2/util/tdsutil/tds2ted.prg
-40fb2613415313196c17764dff0c169391dc2e36 2006072818:11:13-UTC ./tools/sql2/util/tdsutil/ted2prg.prg
 97582c0a6a8f6689c22757faab46d901934fc04d 2006072818:09:34-UTC ./tools/sql2/util/tdsutil/hashtable.prg
 2a5bad116d0a22c7c14302a933f815e2d3ce0e00 2006072817:28:59-UTC ./tools/sql2/util/tdsutil/indexdef.prg
 28d880603bed4d4feee0624fdf615abdb4f083d9 2006072807:47:28-UTC ./tools/sql2/util/tdsutil/tdserror.prg
