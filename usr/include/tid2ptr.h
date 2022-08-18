@@ -18,26 +18,24 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <stdio.h>
-#include <string.h>
-#include <cccapi.h>
 
-//----------------------------------------------------------------------
-void _clp___gpf(int argno)
+#include <pthread.h>
+
+typedef union{void *p; pthread_t t;} POINTER;  
+
+static void* tid2ptr(pthread_t t)
 {
-    CCC_PROLOG("__gpf",0);
-    
-    char *txt=NULL;
-    int  c=*txt;
-
-    printf("\nNULL pointer használat GPF szándékos elõidézése céljából!");
-    fflush(0);
-    printf("%d",c);
-    fflush(0);
-    
-    _ret();
-    CCC_EPILOG();
+    POINTER ptr;
+    ptr.p=0;
+    ptr.t=t;
+    return ptr.p;
+}
+static pthread_t  ptr2tid(void *p)
+{
+    POINTER ptr;
+    ptr.t=0;
+    ptr.p=p;
+    return ptr.t;
 }
 
 
-//----------------------------------------------------------------------
