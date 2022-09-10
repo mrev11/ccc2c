@@ -1,7 +1,11 @@
-046940325f31b0803d6de7f9f23d62a26a715d65 2022090607:22:11-UTC ./jt/jterminal/jterminal.jar
-8ad187ecbddc91d8d185708eb65636b9fa47d851 2022090607:22:11-UTC ./log-install
+d9f92d8ef9cb54d897ff5ad8db07609cfc65e198 2022091008:05:44-UTC ./jt/jterminal/jterminal.jar
+69edaca151d4b7c49acaa02a6568c0105f9f3582 2022091008:05:44-UTC ./log-install
+f467c657da9cbe1413aac7e574de7b8eab4f85a4 2022091008:05:19-UTC ./usr/bin/linux/list
+f26c7e365a0c341fd9f37101edcdc14a4df3a729 2022091008:03:35-UTC ./CHANGELOG_vermes
+d5c9878fc7029dc5e22736e16a5ea51fe450ce33 2022090919:24:39-UTC ./ccclib/src/uic/termapi/termio.cpp
+91bb17284adf6e55034d8687ea3a4ab835b50a39 2022090917:52:03-UTC ./terminal/unix-ncurses/ccclib/flock.cpp
+5135724a3087ce8a9480605ffed51e6d452b8390 2022090917:34:42-UTC ./tabobj/common.src/trantimer.cpp
 e5f009148b654a128e3beba502b795ce15cf36ac 2022090607:20:02-UTC ./usr/bin/linux/ppo2cpp
-9e37f91c2a4c36c46343a5f2ffbc6439a7177de8 2022090607:18:25-UTC ./CHANGELOG_vermes
 26d56c3247aac52e0aad06f992b721a2f09a1075 2022090607:17:47-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 5fb1417f378f4c9d794c03292851b39a7b9fd741 2022090607:17:20-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
 599693bd5bb6a98d2f09093465175c951b9ac2e3 2022090607:12:55-UTC ./ccctools/ppo2cpp/codegen.cpp
@@ -29,7 +33,6 @@ e65db81b6dc0dd9b6432fd6ecbd6266295cf2eb3 2022082608:18:24-UTC ./tabobj/tbbtbtx/d
 5806efe84e300535a3e0c64328938f5829f6d995 2022082608:17:59-UTC ./tabobj/common.src/transact.prg
 af0fd77f85ad2b198cb0b5370ef5d83c4530ced6 2022082512:43:56-UTC ./usr/include/table.ch
 f90417fa11d5ce65a2f7d6783cd3ea04e792ab10 2022082510:04:35-UTC ./ccclib/src/syserror.prg
-b3ca982d05d4818c5ed2b167a5378565bc486093 2022082508:32:34-UTC ./tabobj/common.src/trantimer.cpp
 053d650c0c62ce292010b63e5bfed55e1e3795a2 2022082413:21:14-UTC ./ccclib/src/flock.cpp
 a9318b2370456cd8a54df10b472521d8971f96eb 2022082411:51:53-UTC ./tabobj/tbbtbtx/btree/mpool.cpp
 27e28576676d7c0262907f5ba9ed6b31afeda573 2022082213:57:53-UTC ./jt/jterminal/base64.class
@@ -138,7 +141,6 @@ b7e7853f8ea0acd8fbfb3d2ef9de867625d726ef 2022082213:57:46-UTC ./usr/bin/linux/te
 ea306b3f9c44b231cb0a9f2f0d8a2e01b930d434 2022082213:57:29-UTC ./usr/bin/linux/setperm
 dd25e587f19666e46e9f83f2a74f85103458a4fb 2022082213:57:26-UTC ./usr/bin/linux/dddel
 c6746b1f0b03b079176b03c75aa2c1314a2f90ea 2022082213:57:26-UTC ./usr/bin/linux/ddict2
-acb4bea2d37d521a39e8c271dd3da7a2a6b5f33d 2022082213:57:26-UTC ./usr/bin/linux/list
 dc91c16d38b3bb6cd0d2ae4ec218d444107298d8 2022082213:57:24-UTC ./usr/bin/linux/dbfview
 1dc7a5d50d585b225fd0170ed66a9047c0ba8545 2022082213:57:18-UTC ./usr/bin/linux/z
 8539155eb1b4f012d4449190106637f3f2718ee3 2022082213:57:18-UTC ./usr/bin/linux/zhist
@@ -182,7 +184,6 @@ dcea9503714226acdf99b394635362a02ef85c86 2022081717:48:00-UTC ./tools/socket/ssl
 5bcf01495d944fd982514b126861210a9483e085 2022081709:36:23-UTC ./tools/sql2/util/tdsutil/sqlidqoute.lex
 2fe0f9a1c292a6e0116a6b09dd3ba0f599edc1e0 2022081709:35:57-UTC ./tools/sql2/util/tdsutil/sqlescape.lex
 eb3bb6afdcb952e1cd0cd40033b16ff1e2250779 2022081709:06:05-UTC ./tools/zlib/zlib.cpp
-7a3413bd1d7d5cdc7e864927ad7bc572f376b658 2022081708:29:08-UTC ./terminal/unix-ncurses/ccclib/flock.cpp
 4216af67cda45c5f291c4cfe0742cb96996e4934 2022081708:24:41-UTC ./setup/setup-lemon/lemon.c
 7142298f013b536c7536e16353d5b71054e5cabc 2022081506:56:57-UTC ./usr/options/lin/link.opt
 9628a31e4408a9c6200cb491c10b5da5f615171c 2022081409:14:31-UTC ./ccclib/src/fsetlock.cpp
@@ -462,7 +463,6 @@ ce40d05c18f2ffcd651ad3251ca943e25b52f9f7 2021081213:21:00-UTC ./ccclib/src/uic/m
 66465ac3d45feb4b0df26fcac3780cf6e1438872 2021080507:42:35-UTC ./tools/z/zcolor.prg
 02b266deb130e6c6c844c7951e48bda30a67702a 2021080506:52:08-UTC ./terminal/unix-ncurses/x
 289026caaa152ee1b24590a131a1c33e0083c59b 2021080506:32:28-UTC ./terminal/unix-ncurses/m.msys2
-9da921ba2e231a2ee938b741a20075d8abf4c2ae 2021080420:09:02-UTC ./ccclib/src/uic/termapi/termio.cpp
 4d4a2deb0bcdf5e7757c92a770e7ea5c6dda0cb1 2021080416:53:24-UTC ./terminal/unix-ncurses/ccclib/OLVASS
 fa2f59628087e4c225c4d52f968f9b700981b90f 2021073019:44:37-UTC ./ccclib/uic.bld-msys2
 5eeb4cd1e079924e464f057e52647694750a056a 2021073013:46:05-UTC ./ccclib/ui_.bld-msys2
