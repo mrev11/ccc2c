@@ -1,4 +1,7 @@
-c1634abb560f671249125871d783059fdc9010c1 2022091015:50:29-UTC ./CHANGELOG_vermes
+32f9e5b4ee24d7ab3f2b7eb19aa4a5a9c3746b3c 2022091210:50:22-UTC ./CHANGELOG_vermes
+914907f5bf30a91d71db1f61fe440698c5dc6423 2022091210:47:22-UTC ./tabobj/tabobjclass/demo/.gitignore
+49dac792a33ea54376eba0e2f901beaa3b499dff 2022091210:42:18-UTC ./tabobj/tabobjclass/demo/m
+f2a8e939765db4f8d4ecae5c9718abf978cc1618 2022091210:40:17-UTC ./tabobj/tabobjclass/tdc2tabobj/m
 9e496e4251d19cfae2f16ce0b991c2dbbc810d43 2022091015:39:57-UTC ./usr/bin/linux/ncterm
 cd77b6edc8fe4c5ce1cfb6f8a64d420933060ed8 2022091015:39:56-UTC ./usr/bin/linux/terminal
 80f7a032be394512f519a2bfa6cf5a9f4451a182 2022091015:39:56-UTC ./usr/bin/linux/terminal-xft
@@ -19,10 +22,14 @@ e5f009148b654a128e3beba502b795ce15cf36ac 2022090607:20:02-UTC ./usr/bin/linux/pp
 5fb1417f378f4c9d794c03292851b39a7b9fd741 2022090607:17:20-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
 599693bd5bb6a98d2f09093465175c951b9ac2e3 2022090607:12:55-UTC ./ccctools/ppo2cpp/codegen.cpp
 130ecaa8aa30283537741e25a0b63b134d9c7bf6 2022090607:11:37-UTC ./ccctools/ppo2cpp/lexer.lex
+0614531287b70734271e39207ecdf161ee66bc78 2022090212:05:04-UTC ./tabobj/tabobjclass/tabobj.prg
 de6a7cb25671a4fb3d68d525a88d943babb47f75 2022090211:59:19-UTC ./usr/bin/linux/xstart
 24faf4357b861addd26f90b8bb6b0aefcf15074b 2022090211:58:54-UTC ./usr/bin/linux/prg2ppo
 47df413f767f31733fcb9126b6f1e8e5d18fd9a0 2022090211:58:54-UTC ./usr/bin/linux/removecr
 3fb1f816c92efd3869aa932f373be7ad7a4a0ce9 2022090211:58:52-UTC ./usr/bin/linux/build
+adc07f4cb531955cd37cda6fb82345856bcb3d41 2022090207:27:59-UTC ./tabobj/tabobjclass/demo/demo.prg
+8d6519ef3e58c7570bbe355bbd8e6539f1e68c27 2022090207:20:44-UTC ./tabobj/tabobjclass/demo/_cassa.tdc
+2e7f5fcb4322d06964fdb4064e9c6b72bbe32caa 2022090121:40:39-UTC ./tabobj/tabobjclass/tdc2tabobj/tdc2tabobj.prg
 d0c963a575b029352fa590f33ef45ef4d821f675 2022090115:03:24-UTC ./ccclib/src/class.prg
 5e7a9a18708a35e6c4ebbca1040fffe4dfbb312a 2022090109:45:19-UTC ./ccclib/src/array.cpp
 1151bfee53d7b2129d256e6f9d03669343d39bb7 2022083108:27:31-UTC ./tutor/control/OLVASS
