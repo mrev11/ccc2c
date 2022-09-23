@@ -55,9 +55,8 @@ local offset
             // korlatlan
         end
     end
-    ++counter[level]
-    ? ">> tranSemaON ",level,counter
-    return counter[level]
+
+    return ++counter[level]
 
 
 ******************************************************************************************
@@ -70,9 +69,8 @@ function tranSemaOff(level)
             trantimer_delete(level)
         end
     end
-    ? "<< tranSemaOFF",level,counter
-    return counter[level]
 
+    return counter[level]
 
 ******************************************************************************************
 static function semafd()

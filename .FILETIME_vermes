@@ -1,4 +1,9 @@
-88f81f3e440f3daa7750c3e4ebc412596c57d0f1 2022091310:29:11-UTC ./CHANGELOG_vermes
+fa8602c863ef05aacba1525e4e3f7a51a251df53 2022092311:16:17-UTC ./CHANGELOG_vermes
+dc7250d3173a2cdb5df0bf2370d5b10ea7ff5b3d 2022092311:06:25-UTC ./ccclib/src/class.prg
+7c6c90a1e8ade30f149944587c03a12176821d45 2022092311:06:25-UTC ./ccclib/src/o_error.prg
+9ec5b05497f522c842e6fd34dfa6e4e7161e10a3 2022092311:06:25-UTC ./ccclib/src/o_object.prg
+059384d0213763c5b266fb762e814ca9942f878a 2022092307:37:53-UTC ./tabobj/common.src/transema.prg
+6c903eaf980fa129620c60416c21354c6877d173 2022092016:48:59-UTC ./tabobj/tabobjclass/demo/tabobj_cassa.prg
 b8f04d66b156ac279c93196e6261a0305ff81914 2022091310:06:48-UTC ./log-install
 12efb2097155d129c10c1fb2c5e2d49f970fce17 2022091310:06:47-UTC ./usr/bin/linux/xstart
 35066e46db8fb570a23f7397df359e796c82b3a6 2022091310:06:44-UTC ./usr/bin/linux/sslforw-serv
@@ -43,14 +48,12 @@ e5f009148b654a128e3beba502b795ce15cf36ac 2022090607:20:02-UTC ./usr/bin/linux/pp
 adc07f4cb531955cd37cda6fb82345856bcb3d41 2022090207:27:59-UTC ./tabobj/tabobjclass/demo/demo.prg
 8d6519ef3e58c7570bbe355bbd8e6539f1e68c27 2022090207:20:44-UTC ./tabobj/tabobjclass/demo/_cassa.tdc
 2e7f5fcb4322d06964fdb4064e9c6b72bbe32caa 2022090121:40:39-UTC ./tabobj/tabobjclass/tdc2tabobj/tdc2tabobj.prg
-d0c963a575b029352fa590f33ef45ef4d821f675 2022090115:03:24-UTC ./ccclib/src/class.prg
 5e7a9a18708a35e6c4ebbca1040fffe4dfbb312a 2022090109:45:19-UTC ./ccclib/src/array.cpp
 1151bfee53d7b2129d256e6f9d03669343d39bb7 2022083108:27:31-UTC ./tutor/control/OLVASS
 e83618aee3a17169bec0525381feb8c316e32c40 2022083108:17:49-UTC ./usr/bin/linux/tsema
 e377c9cf58e1c9de74ad7905da2dab945306e797 2022083020:58:57-UTC ./ccclib/src/uic/getbrw.prg
 2065d86681ca6135598cee0d0309b59a91f36ab8 2022083020:49:30-UTC ./ccclib/src/uic/mask.prg
 ae95dece90d8a4a23aa6168a9d90d547b0ac8484 2022083020:21:40-UTC ./ccclib/src/uic/getsys.prg
-dd9855eed9040578ed7d647c4f8eda5bdbd891c9 2022082815:51:31-UTC ./tabobj/common.src/transema.prg
 26b57368c473242cdfc7623c34dde29a38743fef 2022082708:02:07-UTC ./tabobj/tbbtbtx/dbopen.prg
 714291ba99cc18400d9ded0d614cd03de78bde38 2022082612:25:16-UTC ./tabobj/tbbtbtx/utility/tsema.prg
 e65db81b6dc0dd9b6432fd6ecbd6266295cf2eb3 2022082608:18:24-UTC ./tabobj/tbbtbtx/dblock.prg
@@ -2035,7 +2038,6 @@ a64f0f1443891b7dd9bebe28e75ba88ef922597b 2007060813:34:19-UTC ./tools/sql2/util/
 b81a7d0b0f6c3ff28df286c26f238877f82ee586 2007060812:49:29-UTC ./tools/sql2/util/jeed/m
 4f9b450ffb10450577ebc343f2a742d5014342be 2007060715:09:56-UTC ./jt/jtlib/readme.hu.txt
 c0b4da9e3d2ce0cd2ad2f62abd3d8d95a189e5ab 2007060714:21:01-UTC ./jt/jterminal/readme.hu.txt
-ac9440dde6db6dbcb4fedd516414e36278de3d8f 2007060518:38:18-UTC ./ccclib/src/o_object.prg
 924929fdf457d1e4ad2cfc10d71482c85ff71a21 2007053120:12:10-UTC ./tools/sql2/test/basicdemo/deadlock2.prg
 4d74aff17c43260e551d3c0de7964a283d9f5fbe 2007052115:47:02-UTC ./jt/jtlib/jttoolbar.prg
 3dfe17ef57b12440372270ea024f89d3f742725a 2007050509:19:47-UTC ./tools/xmldom/demo/malloc_dbg/mdbg.b
@@ -2500,7 +2502,6 @@ dcb87b8498213d67265ea0944ba2f8a6c40897e2 2004090211:22:48-UTC ./tools/sql2/drive
 6b04ff4b7fec7ed6a2a188c8160fdc804ab877bc 2004090114:26:05-UTC ./usr/bin/netbsd/z
 201e36a72655012288d5daa3343aa11500088b5f 2004082709:52:00-UTC ./tools/sql2/driver-postgres/script/pg-stop
 dc0decd94335d20abea3807f3a05e02cf79454c5 2004082709:51:20-UTC ./tools/sql2/driver-postgres/script/pg-start
-32ae98c9b5361c9a1aa6556f880c0997522cab52 2004082308:33:01-UTC ./ccclib/src/o_error.prg
 10176d7ab444ecd3c1d43d0896756502c99290c7 2004072708:43:37-UTC ./jt/texdoc/jtobj.tex
 7c4d46a62c6dd279a7da75e2c2f952173e4ed640 2004072708:29:01-UTC ./jt/texdoc/jtmsg.tex
 dc632a07d0cbcdf95244a0bfccaf69ccf5904fad 2004071619:26:22-UTC ./ccclib/src/xmethod.cpp
