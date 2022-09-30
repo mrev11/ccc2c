@@ -14,9 +14,11 @@
 -funsigned-char
 -mms-bitfields
 -Wno-unused
+-Wno-unused-value
 -Wno-trigraphs
 -Wno-empty-body
 -Wno-int-to-pointer-cast
 -Wno-incompatible-ms-struct
--Wno-unused-value
 -Wno-invalid-source-encoding
+-Wno-unknown-warning-option
+
