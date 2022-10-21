@@ -1,5 +1,11 @@
-9203d4f1d0032f9399c770c03640faf94e9fa643 2022102111:01:19-UTC ./jt/jterminal/jterminal.jar
-b1f57cae21a2806b3d81f48e03d18b98ecff87a4 2022102111:01:19-UTC ./log-install
+c2c4c5781b5d71c724e3f3f4f1c3bdea9d3b58fc 2022102115:38:01-UTC ./CHANGELOG_vermes
+14a66a54b553e8e4ce7a7ea9aacc0f9fbdec48e0 2022102113:56:59-UTC ./tools/xmlrpc-framework/client/rpcmonitor/login.say
+ea591d426736c752197aa4edddb0f68e7872ebe5 2022102113:46:37-UTC ./usr/build/windows/pge2out.bat
+89c3476fcd08b7f643a189e5dc59f9cab593d94a 2022102113:45:41-UTC ./usr/build/netbsd/pge2out.bat
+8f18e1a271d9e9d2c9cc2600eb34112e67853189 2022102113:40:51-UTC ./tools/mask/pge2out.prg
+783bb1d8d2ffa755aa2d913cffc29427183446b9 2022102113:26:30-UTC ./tools/mask/m
+2d5509137e139be06772fa0ba85e46b2e24de1df 2022102112:10:40-UTC ./jt/jterminal/jterminal.jar
+f4189d41d0cd44deb2ff31a5446638f07c548977 2022102112:10:40-UTC ./log-install
 04c3dd04a199f9abc1d834b2b28eb7d2600b6df3 2022102111:01:15-UTC ./usr/bin/linux/dtree
 bb8fb9e478155fe10b189eaa8c29f48de22fc291 2022102111:01:14-UTC ./usr/bin/linux/jeed
 ac1d32bb40f587cdc306adb05f21cc14a0eb846d 2022102111:01:14-UTC ./usr/bin/linux/tdccmp
@@ -30,7 +36,6 @@ f2f0a79badb86c386f7a8541734c69846af399db 2022102110:59:59-UTC ./usr/bin/linux/pp
 c937cace48e7645f8d371196ac814834f224ead6 2022102110:49:16-UTC ./ccctools/ppo2cpp/nodetab.h
 69beb4ae370b42c309088f6935a37beead7334b0 2022102110:49:00-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 a396e64e0ac0fac640037b478f874fa1018d0fd7 2022102110:47:24-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
-16fe76bf318eeff129b1aff0ea351e94d757ace1 2022102110:46:24-UTC ./CHANGELOG_vermes
 0a7d5d4c68b967dd6dcd5b78f79a5f77fa4f0e85 2022101207:36:09-UTC ./usr/bin/linux/pm
 e6d58412bfe3a942cc3e82135946fa10a7a673d3 2022101207:36:09-UTC ./usr/bin/linux/rnm
 04ce26c5285bd9f5c6bce0615f68a2c8822d0b43 2022101207:36:08-UTC ./usr/bin/linux/delobj
@@ -232,7 +237,6 @@ f97e0f32c8d798f4106b26309dec9a9deb6b9dfb 2022060521:45:30-UTC ./usr/include/msgo
 1f3bb56597e4a909343e1883cd4a552940c74fc7 2022050518:31:13-UTC ./ccclib/src/cccver.cpp
 0f41f6496966aa600a196c4673a092d342878f3f 2022043014:13:40-UTC ./terminal/terminal-test/xstart.par
 616b1b2f8a07ca0a8460e5604f60c4c3913559cb 2022043014:01:29-UTC ./setup/setup-unix/m
-22c58e83e39066f9b1819c6127fc4d59130a4713 2022042922:17:47-UTC ./tools/mask/m
 a6153726990e648567ffc405e883bdcdbc34d425 2022042922:15:16-UTC ./tools/socket/m
 e7b25b1eb60535d9f2c00ad05c888a13cb015f00 2022042922:12:47-UTC ./ccclib/src/uic/termapi/m
 a8f6cd7762254591289b941b13d45b3226cebd51 2022042922:12:06-UTC ./ccclib/src/uic/m
