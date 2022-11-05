@@ -8,4 +8,4 @@
 !field UID          C  16  0
 !field TID          C  16  0
 !field DATETIME     C  16  0
-!field DBMDATA      C  10  0
+!field DBMDATA      X  10  0
