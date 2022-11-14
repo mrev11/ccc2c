@@ -21,4 +21,5 @@
 -Wno-format-overflow
 -Wno-parentheses
 -Wno-unknown-warning-option
+-Wno-deprecated-declarations
 
