@@ -1,4 +1,8 @@
-b7a9f8df83818b77a890e937525e6d79d20e7bac 2022111712:29:49-UTC ./CHANGELOG_vermes
+6ab1a8c3be2db5e65e6ca79cbc2d5162cb2d62e2 2022112408:43:48-UTC ./CHANGELOG_vermes
+1ee1bb00d13521abf4424f3b3401d1d5416c0b32 2022112408:38:37-UTC ./tools/z/zloop.prg
+1f2bc064477fdddea51c6c25a6ce34909ba7d9b5 2022112408:38:05-UTC ./tools/z/zclass.prg
+15c3a363a9b2db2c7b42b51863b1ebef81a51cc1 2022112408:32:06-UTC ./tools/z/ztrim.prg
+1ba6f3a26a289290279ced42d15ae8bc5a5ea7be 2022112408:31:20-UTC ./usr/options/lin/compile.opt
 008283e51b7c116291aef8b3e9fc68d9117c122d 2022111708:31:04-UTC ./usr/bin/linux/z
 bb246bf437d21258abedad2a7dc5730135edd0fc 2022111708:29:30-UTC ./jt/jterminal/jterminal.jar
 48930ee2e6535c8598c5dcf2b989dedd2cf0e10a 2022111708:29:30-UTC ./log-install
@@ -82,11 +86,7 @@ e94d76fe5665155f84ef3b93c7d378532e65f7a5 2022111708:29:28-UTC ./jt/jterminal/jtw
 ed371d68304552cdf6b8b3dfe8997b63bc6c5bce 2022111708:29:28-UTC ./jt/jterminal/jtwindow.class
 735fad7e89c8cffe196d753a5fc038c3502a6367 2022111708:29:28-UTC ./jt/jterminal/xmlcomponent.class
 14bed65ef812336d8ee0c0699e9fd5b600146eae 2022111708:28:02-UTC ./setup/setup-unix/compopt
-8183feec3a66cb57af1445b5c24cde1f20309758 2022111611:56:26-UTC ./tools/z/zclass.prg
 ea6b8574c59d31d1cef23b3658948736a9cb7d7d 2022111611:32:13-UTC ./tools/z/z.ver
-a48d55be74ad9d5ad402f46ceb15ca344ad1da0e 2022111611:29:05-UTC ./tools/z/ztrailingsp.prg
-9352ea7472ffc2c6070baa295ffe73a2e49e334e 2022111611:23:16-UTC ./tools/z/zloop.prg
-195351a5ee1fab700f013e9db54da01fb7be225a 2022111420:59:52-UTC ./usr/options/lin/compile.opt
 df974f71f62563bb9ea513099b5e2741ddd29a90 2022111418:33:39-UTC ./usr/bin/linux/jeed
 4a07704d39a74fef0393e698e2cc55c40e0bc415 2022111418:32:41-UTC ./usr/bin/linux/sslforw-serv
 3ceb37b4bee5a4a153b689eebe361c116912ab48 2022111418:32:41-UTC ./usr/bin/linux/sslforw-term
@@ -913,6 +913,7 @@ ec8d145528d11021275524fc98410ad9418d1cb5 2018033112:10:45-UTC ./tools/sql2/util/
 3b4e0275d852e6a59be89104d56a883b15ac1ff1 2018032409:06:24-UTC ./tutor/control/demo3.prg
 f488331a074be93901d972f7d66f26e790148d77 2018032317:59:16-UTC ./tutor/control/browse_in_mask.msk
 51fbcd3f67cfcb7b562e13861f5b32ad82086ff8 2018032313:03:54-UTC ./tutor/control/browse_in_mask.sor
+0becdb71248dca2249658a5a085d155a8efe7935 2018031811:22:12-UTC ./usr/bin/linux/ccc_cls2och
 3704afb599912c9e1698a81a39e87083d779aba3 2018031710:21:50-UTC ./tools/sql2/sql2.hu.ver
 51d2a9d520a08af11ad765a22e0d7e0eceb23069 2018031710:17:28-UTC ./tools/sql2/driver-sqlite3/sqlutil.prg
 82dbb0b13269ac3e7a3a2da821d6f88e92cffe88 2018031710:17:20-UTC ./tools/sql2/driver-sqlite3/sqldebug.prg
@@ -1065,6 +1066,10 @@ fce79f3c75233f8fb69392edd1c5d48dcc0fc62e 2017112612:00:09-UTC ./tools/tdccmp/par
 d591640a695dd272f92db7bc082ad05ac110dd2b 2017112611:47:05-UTC ./tools/tdccmp/mkdiff1
 e5c33891d88a6fc03d6633c64fe05082288b1c84 2017112611:42:07-UTC ./tools/tdccmp/mkdiff
 144a5f23e1f42c87bd6a8c59887a6b9f51e8989a 2017112611:29:54-UTC ./tools/tdccmp/tdccmp.prg
+3eb744131fe0dd91b636eb536d2ae78c6961b5df 2017112011:12:03-UTC ./usr/include/behavior.och
+3a28fa37650a8bcc328e2fefb71cf77cfe7283ea 2017112011:12:03-UTC ./usr/include/meta.och
+9754e338f02ec6d34cb8a6b24b02f5b9c09f3b45 2017112011:12:03-UTC ./usr/include/metaclas.och
+8546e46f3afe2853e87c5d16a5e2ea39fd0178a3 2017112011:12:03-UTC ./usr/include/object.och
 b412967b578538db77d2b52334ce735b0ea39e50 2017102508:05:39-UTC ./tutor/xbrwarr/config
 3342309244459e9a622c3ec680a08850f78e9540 2017101519:35:45-UTC ./jt/sslforward/socketpair.cpp
 b1beeb306509233fafbb2a80467d83fd8a82058f 2017101519:24:32-UTC ./jt/sslforward/serveclient.cpp
@@ -2949,6 +2954,9 @@ f64f8c7137632f8275be7a7ab6a27a8e52ecb20d 2001070304:19:42-UTC ./ccctools/autolin
 77f35fb2d728d8aa89aa98079514cd4ffa5484e6 2001070217:12:44-UTC ./tools/xmlrpc-framework/rpcutil/xdel.prg
 a2ddf58fd006460371998ba73023994bbb53e6ed 2001070204:40:54-UTC ./ccctools/autolink/build/linux/pge2out.bat
 a507e606b8ebd7543546903889969180883841f3 2001061607:35:02-UTC ./tools/xmlrpc/demo-rpc/client.php
+364d32e8f03f114ff4d4cba21da732346c95903b 2001042823:23:12-UTC ./usr/include/behavior.cls
+b9272a09f6709d92b60609aa8eed63f5f270deb3 2001042823:01:53-UTC ./usr/include/object.cls
+8778873df1939616092ba3712e2836117ccc07f6 2001042823:01:31-UTC ./usr/include/meta.cls
 d1a3ab814981842ab12857d7742ae18bb8290573 2001032216:22:24-UTC ./ccctools/prg2ppo/test/prg2ppo.opt
 94ccdd74f2e733e48554734e7e33e053fba597a5 2001032210:36:46-UTC ./ccctools/prg2ppo/dbundef.prg
 9fa375d9f09cf5560d7ed43032b585bcf9eb526d 2001022614:58:16-UTC ./jt/jtdemo/dlgdemo/texmenu/t.bat
@@ -3026,6 +3034,7 @@ bad767272d2b4f982d7344493196fcd4f2713c6b 1998112003:01:28-UTC ./tools/ddict2/msk
 c76b610d20e57831ab0efe68a4deb51cc032709f 1998102800:17:01-UTC ./jt/jtdemo/tabedit/dd/_szamla.ch
 5e127090d294408d0997f50d2198f4cb69e3f92f 1998102800:17:01-UTC ./jt/jtdemo/tabedit/dd/_szamla.prg
 cc77a4973df9ef67cf93f6ced94b8b6aa0d6354b 1998072909:23:42-UTC ./tools/mask/kivonugy.pge
+5032f3e4048ffff558d0d13848c62657ca2d5f15 1998051705:11:16-UTC ./usr/include/metaclas.cls
 88be495a061474159a77cf55e0bc543954517112 1997072702:32:20-UTC ./setup/setup-flex/yylex.c
 1ccd7014eacecd8c942a3765bde99446f6ce799a 1997062111:28:47-UTC ./tools/mask/scrstr.ch
 c33ad3778c0aa0aa57dcf8a038c3c0627dd34bec 1997020117:53:18-UTC ./tools/ddict2/mskowner.msk
