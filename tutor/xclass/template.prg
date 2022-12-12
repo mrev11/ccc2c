@@ -44,7 +44,6 @@ local clid:=templateClass()
 
 ****************************************************************************
 function templateIni(this)
-    objectIni(this)
     return this
     
 

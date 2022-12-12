@@ -1,7 +1,24 @@
-1c820c6433f36b435aff4bfab8cde804c3b37bb3 2022120710:43:05-UTC ./CHANGELOG_vermes
-34e4e8ce3728c76b78c975232e1f11e97220043b 2022120619:04:21-UTC ./jt/jterminal/jterminal.jar
-29fbd712d59499e8a7e0eee751530a35790a2686 2022120619:04:21-UTC ./log-install
-9f9c54bab136b7768fd9eb9f53a073e953f5bf1c 2022120619:03:16-UTC ./usr/bin/linux/build
+92dd2d9a641b125603bf61a64dced843fce68fdf 2022121215:59:40-UTC ./tutor/multithread/threads.prg
+b3ea121b0637a68344458218b4991223d01e204c 2022121215:57:21-UTC ./tutor/multithread/clid_ext.prg
+135d9bebfc8f458c6231d7d9b2698b0c4b5edb1f 2022121215:55:51-UTC ./tutor/multithread/pi.prg
+a2558398306b7103fccee1ec5cf4665792664c89 2022121215:42:09-UTC ./tutor/multithread/waitx.prg
+e0cfdde2141c5f2386685870b68d6dd8bc1de814 2022121215:40:49-UTC ./CHANGELOG_vermes
+d3bd2f742a66bdf38e9e996124faf9dfe18874b4 2022121121:27:01-UTC ./tutor/multithread/wait.prg
+f00fa0e6a6e6dbbd9bbe6c6bcbe25357c0fce914 2022121120:17:08-UTC ./tutor/threadpool/threadpool.prg
+898738483de874c9985822486555b3319366e490 2022121116:49:55-UTC ./jt/jterminal/jterminal.jar
+7b973a6d02c9f49a9b68d60097b4ca13617dcf76 2022121116:49:55-UTC ./log-install
+757dea5faedf1408af1c71396a2997b87caf5973 2022121116:49:16-UTC ./usr/bin/linux/xstart
+25b9f2315de47db26b4814cb6bad3921690304d8 2022121116:48:51-UTC ./usr/bin/linux/prg2ppo
+e0648552c0b171c06205887bd3f94481cfbf7254 2022121116:48:51-UTC ./usr/bin/linux/removecr
+98138e430531afe8af82ba028937d6ade0940e1e 2022121116:48:49-UTC ./usr/bin/linux/build
+09e4d3053aec8eea85d8adcb1a4a3f3300db89ce 2022121116:46:44-UTC ./jt/msk2dlg/msk2dlg.prg
+fcb0fbbd462d3323f207619c742f845a13cc6bbd 2022121116:44:57-UTC ./tutor/xclass/template.prg
+694e4e61aaee4fbf1177e95419755f8616929806 2022121112:45:06-UTC ./ccclib/src/o_object.prg
+d7a5295565feea30c9a7f70f53de82644ef03e63 2022121112:03:54-UTC ./ccclib/src/o_error.prg
+15418b021df0693fa6f3531bb1553e6ad7d61777 2022121111:53:58-UTC ./tools/savex/arrcls.prg
+7d8c38e070dc1be26fb417107f196f4c9e836a91 2022121111:53:52-UTC ./tools/dbaseiii/dbfclass.prg
+988917303ccd2ac9b1d682a7e6cd563c9d5b274b 2022121111:53:07-UTC ./ccctools/prg2ppo/cloutput.prg
+bf3c0e1f3f7ea415aa01ca07b1cfb9feafa555fe 2022121111:53:03-UTC ./ccctools/prg2ppo/clinput.prg
 77fbed590c19e29b9fc8e7d74edc8a3bb11dfa89 2022120614:04:12-UTC ./ccctools/build/build.prg
 c157c3065138aa1d75a2237432c5037f3579b7ee 2022120614:03:03-UTC ./ccctools/build/build.hu.ver
 05d5d5edfcb4f377b94085d104530e62db988b05 2022120613:57:11-UTC ./ccctools/build/xsplit.prg
@@ -26,7 +43,6 @@ b62c190dc85ca9e1214b78e6e4b065868f1f533c 2022120613:56:06-UTC ./ccctools/build/m
 d47c7342e66f2745abf9e926c7b63312dd4cb03b 2022120613:55:58-UTC ./ccctools/build/ftime.prg
 a3d90f7b479d3d56b0b013e59a69c61aa6c33c9f 2022120613:55:51-UTC ./ccctools/build/extension_types.prg
 8c042d98189d1e2b9536e76c4fc2b2238cf72297 2022120613:55:45-UTC ./ccctools/build/buildenv.prg
-df76d5149851154e41dd74279d38b8baaacfbb03 2022120409:36:41-UTC ./tutor/threadpool/threadpool.prg
 ae393a4e76c1b5c1ecf512fd5dddacea427b240b 2022120409:33:38-UTC ./tutor/threadpool/pool1.prg
 cc18b4150440311ec0f5b6284bf39229b5c0d23e 2022120409:14:42-UTC ./tutor/threadpool/clean
 4c7185e5a612d06ac297b9a39880fd1d5617f8fc 2022120408:22:45-UTC ./tutor/threadpool/m.msys2
@@ -182,7 +198,6 @@ ea591d426736c752197aa4edddb0f68e7872ebe5 2022102113:44:31-UTC ./usr/build/window
 5e35e866374c26cf0f44957af1b83cba127663a2 2022102111:00:56-UTC ./usr/bin/linux/savex
 90d65b509f0233772889a3560cf9ba90d1b54697 2022102111:00:56-UTC ./usr/bin/linux/setperm
 8a6a273acbcb2c690a9faf89001d45cce88fdd84 2022102111:00:51-UTC ./usr/bin/linux/dbfview
-e74d56abf5cf3f48672b2dec1a7ed65ae22f7dd7 2022102111:00:41-UTC ./usr/bin/linux/xstart
 dbe0868755255a42e22b4bf5d26148d90f57249a 2022102111:00:39-UTC ./usr/bin/linux/tv
 48760ab0a8b322bdb8d3898d60cd2923451f1753 2022102111:00:38-UTC ./usr/bin/linux/prg2tdc
 1891ce29692fb7952ecad814eecf0078d021cb10 2022102111:00:38-UTC ./usr/bin/linux/tabsuper
@@ -191,8 +206,6 @@ f05a2a52390207a0860ed9c62d91528cc0ce11e7 2022102111:00:24-UTC ./usr/bin/linux/ma
 784803896cbf7e45e35d162cdc45cf3fe7954948 2022102111:00:24-UTC ./usr/bin/linux/msk2pge
 db8248957dbf0859fd30cc34c8388d62a2d5dce6 2022102111:00:24-UTC ./usr/bin/linux/page
 2391e40fbd9860c331ec66738f193f06b6f5178b 2022102111:00:22-UTC ./usr/bin/linux/msk2say
-10f41caabd09ecc1fc467065a47d46a850e1df22 2022102111:00:17-UTC ./usr/bin/linux/removecr
-5b98eac84c67cedb1c090fc6db1d92fcd1b602ce 2022102111:00:16-UTC ./usr/bin/linux/prg2ppo
 f2f0a79badb86c386f7a8541734c69846af399db 2022102110:59:59-UTC ./usr/bin/linux/ppo2cpp
 85eb61d5454d1de2d00d8ddc0274614b3d78c099 2022102110:57:59-UTC ./ccctools/ppo2cpp/codegen.cpp
 5be3835aebc636d3f01d0c6e16f8389b93c9c15a 2022102110:50:22-UTC ./ccctools/ppo2cpp/fundecl.cpp
@@ -232,8 +245,6 @@ edf01422829a467528b3b3008b9fc1b7b90be221 2022093014:20:58-UTC ./usr/options/lin/
 6cac761617878b4bad26591335288f24cae888b9 2022093014:04:32-UTC ./setup/setup-windows/cc.msys2
 1a7bb707ebf7febc94cd6ed3b479d033c17e97bf 2022093014:03:17-UTC ./usr/options/mng/compile.opt
 dc7250d3173a2cdb5df0bf2370d5b10ea7ff5b3d 2022092311:06:25-UTC ./ccclib/src/class.prg
-7c6c90a1e8ade30f149944587c03a12176821d45 2022092311:06:25-UTC ./ccclib/src/o_error.prg
-9ec5b05497f522c842e6fd34dfa6e4e7161e10a3 2022092311:06:25-UTC ./ccclib/src/o_object.prg
 059384d0213763c5b266fb762e814ca9942f878a 2022092307:37:53-UTC ./tabobj/common.src/transema.prg
 a662e27ec3f1c9722c6592da98fd32083e58ab2a 2022091309:18:17-UTC ./ccclib/src/windows/realpath.cpp
 48490c27e477c7f6e6cfd8b78b4e5a4aede6c809 2022091308:35:13-UTC ./ccclib/src/unix/realpath.cpp
@@ -1033,7 +1044,6 @@ e62dec701c47d0facfef5f065713215d43d3b78d 2018011610:51:36-UTC ./tools/mask/msk2s
 d8eccd0a8d2e3cdec064d77143bdea0efbb9faf6 2018011607:50:43-UTC ./tools/dbfview/parfile.bld
 a0e5538665f018cc72e106e8c379e443fd0c31a2 2018011607:32:48-UTC ./tools/dbfview/dbfview.prg
 e397a7c875ab0c21cef20753a88cd6bf4adb4608 2018011607:26:37-UTC ./tools/dbaseiii/dbfbrowse.prg
-3eb815e6cb7f0a29d8251685f602fbcba4df8fd9 2018011607:26:37-UTC ./tools/dbaseiii/dbfclass.prg
 40149f48b6a352b37839efd953ce34ff9b4d9e8c 2018011607:26:37-UTC ./tools/dbaseiii/dbfedrec.prg
 35a0f75f48702bdcb5dbeb2f75e30785160c9766 2018011607:26:37-UTC ./tools/dbaseiii/m
 795fdb333817f5aadaa114fdeabf877e8ca68702 2018011607:26:37-UTC ./tools/dbaseiii/m.bat
@@ -1252,7 +1262,6 @@ e311394bb61da5e90b8e385034f3be4e0f46f00c 2016072815:53:52-UTC ./ccclib/src/uic/o
 508749920190fb155ac4a3911627f9250d73ae57 2016072812:17:40-UTC ./tools/xmlrpc-framework/client/test/parfile.bld
 3ae8ac858c369c824828df08a4f9cf1e5b0add85 2016072812:02:36-UTC ./tools/xstart/parfile.bld
 eb390a0b82b3e4e5bb76a36d324d95152190a779 2016072807:12:41-UTC ./terminal/unix-ncurses/m
-223f887c625da3446a19eac4436d368364f13f45 2016071405:44:38-UTC ./tools/savex/arrcls.prg
 1832e530dce71dd19668295c57cd1d3fd79f2baa 2016071405:35:32-UTC ./tools/savex/alike.prg
 4ce3f4496ed9e1e05d6f13c7f62cf0d6c0b8bc9f 2016071319:54:28-UTC ./tools/savex/statvar.ch
 ddade872a3114b11a50564239c7fa4bd193dd989 2016071319:38:58-UTC ./tools/savex/formfile.prg
@@ -2121,7 +2130,6 @@ c83c6ecc1bd4d20b7fa48e148cf689d58b504ca9 2007010218:03:35-UTC ./tabobj/common.sr
 aeec0e847bd7d19fe7612f913085a7e23e2003af 2007010217:58:10-UTC ./tabobj/common.src/cumemo.prg
 140efde3b132a0c819ba99dd9927022ba87895de 2007010217:56:29-UTC ./tabobj/common.src/cucpydbf.prg
 700970f7e75adbecbc6256609f83d708ac4cc1c2 2007010217:51:24-UTC ./ccctools/prg2ppo/dbdefine.prg
-d08be679fcad6ee0910cfdec1b8fb4b04e9f6fae 2007010217:50:35-UTC ./ccctools/prg2ppo/clinput.prg
 fdf956b47e5540e7db08253d5a0b5f374c86b34a 2006122911:31:58-UTC ./tools/sql2/test/basicdemo/sequence.prg
 d67161413f760a4f0c2bf7c0c1e40ad488face24 2006113013:51:41-UTC ./tools/crypto/demo/priv.pem
 1f6f4f89598e7e43f0b903ecbc543b33dab0adf1 2006113013:50:31-UTC ./tools/crypto/demo/pub.pem
@@ -2313,7 +2321,6 @@ c5ed672de5f8c1baaab16dc3bf6daeb986a67e86 2006041415:29:44-UTC ./tools/xstart/m.b
 5340a584e6551527b49dd4bbe11160a725daf7ed 2006041411:25:10-UTC ./tools/xmldom/parserinfo
 7d0d607ab7aae9a662e5a844e1646f39201ffc60 2006041410:46:10-UTC ./ccclib/src/uic/compat/global.h
 fea05cf1939cf43df847707588d62955dfee6beb 2006041409:00:08-UTC ./tutor/readline/libcontent.prg
-71bdf342e019232d0cb941eb8b4dd7903d93dabe 2006041409:00:07-UTC ./ccctools/prg2ppo/cloutput.prg
 7d4d1423839b01d2474d896e70604e7c20acc985 2006041409:00:07-UTC ./ccctools/prg2ppo/outline.prg
 85d3452a9954dd1b4a64845de013d4bda0778e35 2006041409:00:07-UTC ./ccctools/prg2ppo/srchdef.prg
 60790de0873007c0431d33fde6515d00834bd13f 2006041409:00:04-UTC ./ccclib/src/uic/topwnd.prg
@@ -2369,7 +2376,6 @@ aeaf7f4a9f06ffe7511045f4ce8a2aecf83a726b 2006013112:14:58-UTC ./jt/jtpython/ubx.
 41fd763bf54f61a746a80bbecc5d4d0cada66a8e 2006012616:11:35-UTC ./ccctools/ccomp/ccomp.prg
 f23756b8783069e5d1fbf72b8dfedbe970b2797c 2006012518:37:58-UTC ./usr/options/mng/readme.hu.txt
 aaab3313a01e0e72c64470e16274e77ee54466fa 2006011817:01:51-UTC ./tutor/xclass/xclass.prg
-950f9196354a74aa8be900b6b838eef85cdea9c5 2006011817:01:43-UTC ./tutor/xclass/template.prg
 4a7a64079d913a7a646ac720fe9afe467983e712 2006010810:06:55-UTC ./ccctools/ppo2cpp/self.savex
 77b07e539689ae48ac3770e3e8acd0567125105e 2006010810:05:49-UTC ./ccctools/ppo2cpp/test-vararg/sref
 2ec3681de0b37b7a6ee835e4d5112057bb42ccf0 2006010810:05:45-UTC ./ccctools/ppo2cpp/test-vararg/sfun
@@ -2377,13 +2383,10 @@ aaab3313a01e0e72c64470e16274e77ee54466fa 2006011817:01:51-UTC ./tutor/xclass/xcl
 c0b97e90e1924038459e85e8570b4f1db23ee1dd 2006010809:55:34-UTC ./ccctools/ppo2cpp/test-vararg/vararg-blk.prg
 6aa572e4d4bacf0b7690038667750364877d2eaa 2006010809:48:39-UTC ./ccctools/ppo2cpp/test-vararg/logref.txt
 e17cf69cf9ab1a29afa3fd708c275fabd7548d11 2006010809:48:33-UTC ./ccctools/ppo2cpp/test-vararg/logblk.txt
-48c884910dd79893e5ad45623548b0bc69c9b9f5 2006010718:44:50-UTC ./jt/msk2dlg/msk2dlg.prg
 d56c4acd10fe40c8919022e5835bd1d95e76b3c5 2006010716:17:58-UTC ./ccctools/ppo2cpp/test-vararg/vararg-ref.prg
 14c6451271d91ac8eb4abb84db036d2cc972924b 2006010612:44:03-UTC ./ccctools/ppo2cpp/test-vararg/logfun.txt
 381315fddda50e9c9829c7df7079eaf452b6f09a 2006010612:44:00-UTC ./ccctools/ppo2cpp/test-vararg/vararg-fun.prg
 6d67bf178747d8b86f4d579aa71be414f6f8b2b4 2006010608:32:29-UTC ./ccctools/ppo2cpp/test-attrindex/attrindex.prg
-44b5da2b801e71dbc3dc85a104a369a26211d97a 2006010208:52:14-UTC ./tutor/multithread/clid_ext.prg
-676dab2d82d07ec023da417e89bc344ef7b578c9 2006010208:46:51-UTC ./tutor/multithread/threads.prg
 2fb529fd466f78e50c74085f2e114c6cda6ff696 2005122909:27:09-UTC ./ccctools/ppo2cpp/test-codeblk/codeblock.prg
 bb3d15bf5358e259aa348f0d85e602ac9a9d5bb6 2005122814:14:55-UTC ./ccctools/ppo2cpp/test-class/szerencse.prg
 4e075d24feefa90c1a27b22d904be5d9ce6860f6 2005122814:13:27-UTC ./ccctools/ppo2cpp/test-class/proba.prg
@@ -2424,12 +2427,6 @@ d6d79b981a995fdd31a9cf49cd6ba0d0f2f132a7 2005073120:12:12-UTC ./setup/setup-unix
 c2a9bc4ddb8d2bd7fac56a38b6de08921a31f320 2005073120:11:42-UTC ./ccclib/src/power.cpp
 4ddc00428f5b51aa06315acb1394b11b5392ce75 2005073120:11:18-UTC ./setup/setup-unix/max.cpp
 722defca5397e433e3a2f6d9528fb8fc9b99c924 2005073120:10:40-UTC ./setup/setup-unix/charconv.cpp
-3a2e471cbc0fea9947e6a3a6494c08695cb321d6 2005073117:26:29-UTC ./tutor/multithread/x-crash/x-array0.prg
-5d922de65283882657a7123e6114c96db63057d1 2005072912:40:12-UTC ./tutor/multithread/x-crash/s
-63965714758b7de6d2bb0fefbfecc0ad381ccd05 2005072906:40:53-UTC ./tutor/multithread/x-crash/x-valuesort.prg
-65cc7b383a806cba5920d3f715a1eb34866e975e 2005072906:40:46-UTC ./tutor/multithread/x-crash/x-valueassign.prg
-dea8ca364e3a7378b6cc849c8cce08b85803f3dc 2005072906:32:30-UTC ./tutor/multithread/x-crash/b
-0dd46ba559761c915ef22e049f967421643b1760 2005072805:01:19-UTC ./tutor/multithread/x-crash/k
 fc4d6345f489250a5e677ba8a4f9ba9d5ea5712e 2005072607:18:54-UTC ./tools/sql2/driver-postgres/pq.ch
 bfede5fa51d32d0454222969a5bd2f13b51ab8f9 2005072308:40:36-UTC ./setup/setup-unix/m1
 103dd3446ac919e10b535be212a6e077f0c58e72 2005072107:10:18-UTC ./tutor/pipedemo/m
@@ -2744,7 +2741,6 @@ ac6abf26b0413a01011023e1e9adf048c35fdd8f 2003071308:31:06-UTC ./ccclib/src/ui_/c
 648903e017d4bc2d5ea613dc3d3c1eae75ec5c2b 2003071206:44:00-UTC ./ccclib/src/ui_/beep.prg
 a8dfbe7995f559724a1672d0579af00b83c8993f 2003071206:42:58-UTC ./ccclib/src/ui_/setcursor.prg
 e3c0ce622a8cae9a1da6aaa397564118c13acf7a 2003071206:03:40-UTC ./ccclib/src/printrdy.prg
-5b16a26b6c294c8629dbdfe37046e11eaf903527 2003070912:53:18-UTC ./tutor/multithread/pi.prg
 06935d79063d453c92b6744ae99bc493178418e4 2003062716:39:45-UTC ./tools/xmlrpc-framework/rpcutil/dd/rpcbase/session.btx
 c5365413b611ce8dad9560d06c17cb5f3f6499a5 2003061007:42:14-UTC ./jt/jtdemo/enable/enable.dlg
 5323d7778c05f5cf194265b4d13f66c5f2e1d63f 2003061007:41:42-UTC ./jt/jtdemo/enable/enable.msk
