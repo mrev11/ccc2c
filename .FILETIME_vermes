@@ -1,4 +1,7 @@
-67d940ef1420613fc3ccbc99276cc2e1f88ed377 2022122616:01:12-UTC ./CHANGELOG_vermes
+ba7e4ef1ed7ba5516c760db263189b5dd3fe2259 2022123019:11:27-UTC ./CHANGELOG_vermes
+a96633aed213682dc764b14bd8f85bfcbbc6341c 2022123018:56:18-UTC ./tabobj/common.src/tabobjclass.prg
+dab42718229a58c1ea299af6ef97ddbcb06dcb68 2022123018:55:16-UTC ./tabobj/log-install
+c2335f3f9de83c5c859e486164f937df36909fe2 2022122710:20:56-UTC ./tutor/threadpool/threadpool.prg
 2b365907c3be7ad8fdd6dfbb25bae1e8529be7fb 2022122612:57:39-UTC ./ccclib/src/windows/thread.cpp
 2f69f73233530437ac1e14eb38c17e8d33e64ddd 2022122612:54:09-UTC ./jt/jterminal/jterminal.jar
 2bf6b47eace43ea2afba9fbad807c8e959687538 2022122612:54:09-UTC ./log-install
@@ -68,7 +71,6 @@ b3ea121b0637a68344458218b4991223d01e204c 2022121215:57:21-UTC ./tutor/multithrea
 135d9bebfc8f458c6231d7d9b2698b0c4b5edb1f 2022121215:55:51-UTC ./tutor/multithread/pi.prg
 a2558398306b7103fccee1ec5cf4665792664c89 2022121215:42:09-UTC ./tutor/multithread/waitx.prg
 d3bd2f742a66bdf38e9e996124faf9dfe18874b4 2022121121:27:01-UTC ./tutor/multithread/wait.prg
-f00fa0e6a6e6dbbd9bbe6c6bcbe25357c0fce914 2022121120:17:08-UTC ./tutor/threadpool/threadpool.prg
 09e4d3053aec8eea85d8adcb1a4a3f3300db89ce 2022121116:46:44-UTC ./jt/msk2dlg/msk2dlg.prg
 fcb0fbbd462d3323f207619c742f845a13cc6bbd 2022121116:44:57-UTC ./tutor/xclass/template.prg
 694e4e61aaee4fbf1177e95419755f8616929806 2022121112:45:06-UTC ./ccclib/src/o_object.prg
@@ -219,7 +221,6 @@ a1ed05a753d1275bbe6ec08553f3f5847efa78f6 2022103114:01:47-UTC ./tools/tdc2prgch/
 50d25dfb62eda6ce917366b8181ce76cd60ffd46 2022103114:01:44-UTC ./tools/tdc2prgch/tabobj/list0.prg
 0fb7d165802b5d126c9d82254c1710e8e1dff0a9 2022103113:51:15-UTC ./tools/tdc2prgch/tabobj/m
 2e395fdfead8369c825bfc197c6591b5e20bc72a 2022103113:35:25-UTC ./tools/tdc2prgch/tabobj/s
-c5e00a68afd86daa06c26b56ee09e5d038f43e15 2022103113:31:28-UTC ./tabobj/common.src/tabobjclass.prg
 1c9fc4db072fa57670b99faa14445a5412a7f2b1 2022103113:26:49-UTC ./tools/tdc2prgch/tabobj/parfile.bld
 bb4c078be43635e963f57f76747fe5c743d1bbce 2022103112:36:00-UTC ./tools/tdc2prgch/tabobj/tdc/_cassa.ch
 72750bccca43934523981f9d9b797e75e3c24a75 2022103109:53:39-UTC ./tools/tdc2prgch/tabobj/tdc/_cassa.tdc
