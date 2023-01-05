@@ -1,4 +1,6 @@
-dda5a033f38fd37622d6f139f30dd18ecce39e32 2023010511:15:49-UTC ./CHANGELOG_vermes
+9cbc48ca617081003259a76743b6ae2d3a307e82 2023010511:23:40-UTC ./CHANGELOG_vermes
+a657586e56a952dbc2457cb708ed8ba27932d3f7 2023010511:22:34-UTC ./ccctools/build/build.prg
+577848985fb4d6f05129d736ce0646add0cbb61e 2023010511:22:23-UTC ./ccctools/build/build.hu.ver
 9a0d65a62da8425f950142000a1797e8199350bf 2023010510:34:24-UTC ./tabobj/common.src/charconv/btcharconv.ch
 0f2635ba8b6ba8252081c1101f1d99a19ff21aab 2023010510:33:06-UTC ./tabobj/tbbtbtx/m
 05296ece0b448f740344b53760cbe38311af64bf 2023010510:30:23-UTC ./tabobj/tbbtbtx/par-unixui.bld
@@ -92,8 +94,6 @@ d7a5295565feea30c9a7f70f53de82644ef03e63 2022121112:03:54-UTC ./ccclib/src/o_err
 7d8c38e070dc1be26fb417107f196f4c9e836a91 2022121111:53:52-UTC ./tools/dbaseiii/dbfclass.prg
 988917303ccd2ac9b1d682a7e6cd563c9d5b274b 2022121111:53:07-UTC ./ccctools/prg2ppo/cloutput.prg
 bf3c0e1f3f7ea415aa01ca07b1cfb9feafa555fe 2022121111:53:03-UTC ./ccctools/prg2ppo/clinput.prg
-77fbed590c19e29b9fc8e7d74edc8a3bb11dfa89 2022120614:04:12-UTC ./ccctools/build/build.prg
-c157c3065138aa1d75a2237432c5037f3579b7ee 2022120614:03:03-UTC ./ccctools/build/build.hu.ver
 05d5d5edfcb4f377b94085d104530e62db988b05 2022120613:57:11-UTC ./ccctools/build/xsplit.prg
 baec1cb08167d3b43d7610a9b7cefecebd7ddab0 2022120613:57:07-UTC ./ccctools/build/verifdep.prg
 37fd9719d744aa9b18375c9ade8c022e024b7c4f 2022120613:57:03-UTC ./ccctools/build/threadpool.prg
