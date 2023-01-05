@@ -1,4 +1,5 @@
-5b334d4b20fe116f3f97b02bd0923ac27ca21793 2023010511:04:19-UTC ./CHANGELOG_vermes
+fd33cb8d90f009f3b259f0bdf209e2f21c0fe8b6 2023010511:06:26-UTC ./CHANGELOG_vermes
+d7c1caed69ad063dd2719e204db93623a426c86a 2023010412:40:03-UTC ./ccctools/build/search_library.prg
 3b82c6ccd3fae5fe3615de05cdcbd98c10df2e6c 2023010207:50:21-UTC ./jt/jterminal/jterminal.jar
 f5da8e3a7e3156f32925c7d7493ee0a7438f469d 2023010207:50:21-UTC ./log-install
 f2124793e4b2b4e4899cc9c031a2cd7c6978b448 2023010207:50:14-UTC ./usr/bin/linux/jeed
@@ -89,7 +90,6 @@ c157c3065138aa1d75a2237432c5037f3579b7ee 2022120614:03:03-UTC ./ccctools/build/b
 baec1cb08167d3b43d7610a9b7cefecebd7ddab0 2022120613:57:07-UTC ./ccctools/build/verifdep.prg
 37fd9719d744aa9b18375c9ade8c022e024b7c4f 2022120613:57:03-UTC ./ccctools/build/threadpool.prg
 fab1214f4b1d108d2f3f738dd1b58afc20fea25b 2022120613:57:00-UTC ./ccctools/build/srcroot.prg
-471305cbd9a1f68fe21e6e91ab1fe8949fcd6d89 2022120613:56:56-UTC ./ccctools/build/search_library.prg
 425dc5cf54b3a82d01f2bfd6e6d4ee4a16de98f4 2022120613:56:52-UTC ./ccctools/build/search_include.prg
 4846a79c17c728426596c89f38fef10fc4c52066 2022120613:56:48-UTC ./ccctools/build/run1.prg
 aba8d8b134d35cf7e4e7fdb0297903a8a9116e69 2022120613:56:44-UTC ./ccctools/build/rules_from_build_bat.prg
