@@ -1,3 +1,10 @@
+2022-01-05 btbtx konyvtar
+  dbcolumn.prg: a blkchar oszlopblokkokban a karakterkonverzio makrozva;
+  tabobjclass.prg: blkchar metodus blokkokban a karakterkonverzio makrozva;                    
+  tabobjclass.prg: open beteszi, close kiveszi a tablat az objectlistbol;                    
+  dbopen.prg: tabCloseAll() kulon foglalkozik a nemstatic tabla objektumokkal;
+  idehozva a latin2/utf8 konverzios fuggvenyek;
+
 2022-01-05 kdirseek.prg: megadhato kulcsszegmensek szama 8-ra novelve;
 
 2022-01-05 tranDepth() visszaadja az egymasba agyazott tranzakciok melyseget;
