@@ -1,4 +1,7 @@
-9cbc48ca617081003259a76743b6ae2d3a307e82 2023010511:23:40-UTC ./CHANGELOG_vermes
+d5242960edbd2c5836158bb0812186d7135f3749 2023010714:16:38-UTC ./CHANGELOG_vermes
+ae825a886f96e452f5772ad43da24c8dff7263fa 2023010712:43:10-UTC ./tabobj/common.src/transact.prg
+8f4f1640e1c6b5014e54a7677cba500c42ed2b82 2023010712:33:47-UTC ./tabobj/tbbtbtx/tabobjclass.prg
+735d8c33c9028cba1f50eb73d3323a9cadc6e5d5 2023010616:12:44-UTC ./tabobj/common.src/tabfldtb.prg
 a657586e56a952dbc2457cb708ed8ba27932d3f7 2023010511:22:34-UTC ./ccctools/build/build.prg
 577848985fb4d6f05129d736ce0646add0cbb61e 2023010511:22:23-UTC ./ccctools/build/build.hu.ver
 9a0d65a62da8425f950142000a1797e8199350bf 2023010510:34:24-UTC ./tabobj/common.src/charconv/btcharconv.ch
@@ -7,10 +10,8 @@ a657586e56a952dbc2457cb708ed8ba27932d3f7 2023010511:22:34-UTC ./ccctools/build/b
 f39905e19a7205b43a0d84a7a24f29af04237564 2023010510:26:28-UTC ./tabobj/tbbtbtx/par-unix.bld
 a42ed497e3614d9ffb53e8eb0b1d1415edf17680 2023010510:16:21-UTC ./tabobj/tbbtbtx/par-nt.bld
 c0961adef14068670894ef1f3f1c97b4e413087e 2023010509:32:01-UTC ./tabobj/tbbtbtx/dbcolumn.prg
-a95bd3fcbbd5e5e879476e6bfe4b52ba86b4eaaa 2023010509:31:52-UTC ./tabobj/tbbtbtx/tabobjclass.prg
 d7c1caed69ad063dd2719e204db93623a426c86a 2023010412:40:03-UTC ./ccctools/build/search_library.prg
 67150cf8d4699e1002aafd0c66f2f10d22f6ab90 2023010315:25:50-UTC ./tabobj/tbbtbtx/dbopen.prg
-b6224395354f8a6a740c27ea054182e1e6f7ccf2 2023010212:20:16-UTC ./tabobj/common.src/transact.prg
 3b82c6ccd3fae5fe3615de05cdcbd98c10df2e6c 2023010207:50:21-UTC ./jt/jterminal/jterminal.jar
 f5da8e3a7e3156f32925c7d7493ee0a7438f469d 2023010207:50:21-UTC ./log-install
 f2124793e4b2b4e4899cc9c031a2cd7c6978b448 2023010207:50:14-UTC ./usr/bin/linux/jeed
@@ -2310,7 +2311,6 @@ b5ea4d9a55405c9b6ef148013f5c6412e4ec8df1 2006042515:42:18-UTC ./usr/bin/windows/
 4ea0146b9237efde7cdcc66e694eeec87b2eb27f 2006042214:29:29-UTC ./tools/crypto/rsapubenc.cpp
 89807763146b264b3b4e5a58da46c70108ef53df 2006042214:16:48-UTC ./tools/crypto/bin2hex.cpp
 dd9f2e5f4ac876b65cf7f634019f776658f264f3 2006042209:51:31-UTC ./ccclib/src/uic/brwedit.prg
-d09d9aaedf04a976a919ea15eb23e7eb137d7881 2006042207:49:50-UTC ./tabobj/common.src/tabfldtb.prg
 4d097884ba66724fe3e92869c8cf83be64fdf17a 2006042017:51:14-UTC ./setup/setup-unix/pushcall.cpp
 963c9de0a4e57aaaee89460d177a147c4bf3c173 2006042017:37:52-UTC ./tutor/spawn/test2.prg
 02a17e8a72871acc5bdb5ce9d07e65ddd1af70b9 2006042014:39:43-UTC ./tutor/nlstext/s
