@@ -1,3 +1,4 @@
+f027822527c21bed85eafff82483111a4ba5faa6 2023012010:39:00-UTC ./CHANGELOG_vermes
 11c4b5bb40fc3ca4769ce9601ebe6a4d158835db 2023012010:14:29-UTC ./jt/jterminal/jterminal.jar
 ebe782baf95ac394c71024618aecf08c88104370 2023012010:14:29-UTC ./log-install
 1a98c2fae2c3f82e374b060e1bf27719d0ed4057 2023012010:13:05-UTC ./usr/bin/linux/ppo2cpp
@@ -5,7 +6,6 @@ da88e64c85b24d640b8fce39a8b9bd0a0e350567 2023012010:11:18-UTC ./ccctools/ppo2cpp
 e4dc223ab1a955e775152a5eb32870e06eb8fa8c 2023012010:09:40-UTC ./ccctools/ppo2cpp/codegen.cpp
 fa371b79fbeb23760a2b0ee193686dc609e214d8 2023012010:05:08-UTC ./ccctools/ppo2cpp/parser.lem
 9f5a19980891ae7d1eb4202920e29935ed1203b7 2023012010:03:01-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
-65674b30e93d20793806fb01f926f07564136ec5 2023012010:02:06-UTC ./CHANGELOG_vermes
 0a7d5d4c68b967dd6dcd5b78f79a5f77fa4f0e85 2023012009:56:56-UTC ./usr/bin/linux/pm
 e6d58412bfe3a942cc3e82135946fa10a7a673d3 2023012009:56:56-UTC ./usr/bin/linux/rnm
 c63ef98f70789e5a1a3b0ffe03d377ca959c6e62 2023012009:56:55-UTC ./usr/bin/linux/delempty
@@ -66,7 +66,8 @@ a8d962ca5c33bc61db5beb2a19d6d69e8d15f01d 2023012009:55:54-UTC ./usr/bin/linux/re
 d4f3bee2333888bb0b491c3a3cf888410ed945f0 2023012009:55:52-UTC ./usr/bin/linux/build
 32680200a163ff3fd09ec371d64d0c9f9e19bfaf 2023012009:44:04-UTC ./ccctools/ppo2cpp/.gitignore
 3db4cd664aea2cfee5c28db8e07c515105c0e945 2023012009:38:47-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
-fdfa2ad700d07819f184906f07e1703ab4855da0 2023011712:27:43-UTC ./tabobj/tbbtbtx/tabobjclass.prg
+d6b2964f0cd069b2a5b46991b218fc5f16ae8845 2023011917:14:49-UTC ./tabobj/tbbtbtx/dbcolumn.prg
+8e3545a2f03aa0dee0cad0a05f9a39f22d882d94 2023011917:09:51-UTC ./tabobj/tbbtbtx/tabobjclass.prg
 7de81ca58f383e77ac0ac9629ead9191332a5e3a 2023011613:24:28-UTC ./tools/tdc2prgch/tdc2tabobj.prg
 b0e12964b9c238823250a4175824bf9639fdf32e 2023011612:22:28-UTC ./tabobj/commonui.src/tabbrows.prg
 823a88e19a6263eb035c0eb2530e14c8e2b7f358 2023011612:01:25-UTC ./ccclib/src/class.prg
@@ -83,7 +84,6 @@ a657586e56a952dbc2457cb708ed8ba27932d3f7 2023010511:22:34-UTC ./ccctools/build/b
 05296ece0b448f740344b53760cbe38311af64bf 2023010510:30:23-UTC ./tabobj/tbbtbtx/par-unixui.bld
 f39905e19a7205b43a0d84a7a24f29af04237564 2023010510:26:28-UTC ./tabobj/tbbtbtx/par-unix.bld
 a42ed497e3614d9ffb53e8eb0b1d1415edf17680 2023010510:16:21-UTC ./tabobj/tbbtbtx/par-nt.bld
-c0961adef14068670894ef1f3f1c97b4e413087e 2023010509:32:01-UTC ./tabobj/tbbtbtx/dbcolumn.prg
 d7c1caed69ad063dd2719e204db93623a426c86a 2023010412:40:03-UTC ./ccctools/build/search_library.prg
 9bbc12a13d9a5fc5ab34b6ca3597d9dafe95ff98 2023010207:49:30-UTC ./tabobj/utility.src/ver2/kdirseek.say
 917e4b58d49d0585301c7798dcd1ca030cd602f2 2022123108:48:32-UTC ./tabobj/utility.src/ver2/kdirseek.msk
