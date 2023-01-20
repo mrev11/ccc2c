@@ -1,3 +1,8 @@
+2023-01-20 -- 4.10.0
+  kerek zarojeles kodblokk: olyan mint a kapcsos zarojeles, 
+  kiveve, hogy nem refesednek a benne elofordulo valtozok;
+  pelda: (||x+y), x es y nem valik referenciava; 
+
 2023.01.19 -- 4.9.1
   r/r conflict-ok miatt megszuntetve az alabbi formak tamogatasa:
     @x::fun(y,z)   hibas, helyette fun(@x,y,z)
