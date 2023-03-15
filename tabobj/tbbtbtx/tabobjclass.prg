@@ -79,6 +79,7 @@ class tabobj(object)
     method  INDEX                {|*|tabINDEX        (*)}
     method  INSERT               {|*|tabINSERT       (*)}
     method  ISOPEN               {|*|tabISOPEN       (*)}
+    method  KEEPDELETED          {|*|tabKEEPDELETED  (*)}
     method  LASTREC              {|*|tabLASTREC      (*)}
     method  LOADDBF              {|*|tabLOADDBF      (*)}
     method  LOCK                 {|*|tabLOCK         (*)}
@@ -109,8 +110,8 @@ class tabobj(object)
   //method  SBROWSE              {|*|tabSBROWSE      (*)}
   //method  EDITRECORD           {|*|tabEDITRECORD   (*)}
 
-    method  lock                 {|t|thread_mutex_lock(t:__mutex__)}
-    method  unlock               {|t|thread_mutex_unlock(t:__mutex__)}
+    method  mutex_lock           {|t|thread_mutex_lock(t:__mutex__)}
+    method  mutex_unlock         {|t|thread_mutex_unlock(t:__mutex__)}
     method  freeze
     method  list
 
@@ -379,14 +380,14 @@ local memo  := tabMemoField(this,this:column[x])
 
     if( type=="C" )
         if( memo )
-            return blkmemoc(offs,width)
+            return blkmemoc(offs,width,dec)
         else
             return if(key,xblkchar(offs,width),blkchar(offs,width))
         end
 
     elseif( type=="X" )
         if( memo )
-            return blkmemox(offs,width)
+            return blkmemox(offs,width,dec)
         else
             return if(key,xblkbin(offs,width),blkbin(offs,width))
         end
@@ -405,15 +406,15 @@ local memo  := tabMemoField(this,this:column[x])
 
 
 ******************************************************************************************
-static function blkmemoc(offs,width)
+static function blkmemoc(offs,width,dec)
     return (|t,x| if( x==NIL.or.!islocked(t),;
-                      bin2str(tabMemoRead(t,xvgetchar(t[TAB_RECBUF],offs,width))),;
-                      (xvputchar(t[TAB_RECBUF],offs,width,tabMemoWrite(t,xvgetchar(t[TAB_RECBUF],offs,width),str2bin(x))),x)))
+                      bin2str(CHARCONV_LOAD(tabMemoRead(t,offs,width,dec))),;
+                      (xvputchar(t[TAB_RECBUF],offs,width,tabMemoWrite(t,offs,width,dec,CHARCONV_STORE(str2bin(x)))),x)))
 
-static function blkmemox(offs,width)
+static function blkmemox(offs,width,dec)
     return (|t,x| if( x==NIL.or.!islocked(t),;
-                      tabMemoRead(t,xvgetchar(t[TAB_RECBUF],offs,width)),;
-                      (xvputchar(t[TAB_RECBUF],offs,width,tabMemoWrite(t,xvgetchar(t[TAB_RECBUF],offs,width),str2bin(x))),x)))
+                      tabMemoRead(t,offs,width,dec),;
+                      (xvputchar(t[TAB_RECBUF],offs,width,tabMemoWrite(t,offs,width,dec,str2bin(x))),x)))
 
 
 ******************************************************************************************

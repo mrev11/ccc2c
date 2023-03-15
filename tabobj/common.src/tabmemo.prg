@@ -132,6 +132,18 @@ local count:=0
 
 ****************************************************************************
 function tabMemoDel(table)
+local n,tmd,ltmd
+    if( (tmd:=table[TAB_MEMODEL])!=NIL )
+        ltmd:=len(tmd)
+        for n:=1 to ltmd
+            _db_memodel(table[TAB_BTREE],tmd[n])
+        next
+        table[TAB_MEMODEL]:=NIL
+    end
+    
+
+****************************************************************************
+function _v1_tabMemoDel(table)
 
 local n,tmd,ltmd,mhnd
 
@@ -148,7 +160,48 @@ local n,tmd,ltmd,mhnd
 
     
 ****************************************************************************
-function tabMemoRead(table,memo)
+function tabMemoRead(table,offs,width,dec)
+
+local memo,value,cnt:=0
+
+    memo:=xvgetchar(table[TAB_RECBUF],offs,width)
+
+    while( !empty(memo) .and. value==NIL )
+        value:=_db_memoread(table[TAB_BTREE],memo,tabPosition(table),dec)
+        if( value==NIL )
+            tabReRead(table)
+            memo:=xvgetchar(table[TAB_RECBUF],offs,width)
+
+            // ? "REREAD"
+            // A rekordbuffer beolvasasa utan (de a memo beolvasasa elott)
+            // egy masik processz atirhatja a memo-t, es azert itt egy masik
+            // rekord memojat is kaphatnank. Ezt az esetet a _db_memoread
+            // felismeri (a memoval egyutt tarolt recno es offset megvaltozasabol)
+            // Ilyenkor ujra kell olvasni a rekordot, es probalkozni az uj memo-val.
+            // Az ujraolvasas nem rontja-e el a korabbi mezo ertekadasokat?
+            // Nem, mert mezo ertekadas csak rlock alatt lehetseges, 
+            // ilyenkor azonban masik processz nem irhatja at a memot,
+            // es ezert nincs szukseg ujraolvasasra. 
+            
+            if(++cnt>10)
+                // adathiba eseten ne beragadas legyen
+                // hanem adjon valami lathato jelzest
+            
+                taberrOperation("tabMemoRead")
+                taberrDescription(@"corrupt memo field/page")
+                taberrArgs({tabPosition(table),offs,memo})
+                tabError(table) 
+            end
+        end
+    end
+    return if(value==NIL,a"",value)
+    
+    // megjegyzes: {tabPosition(table),dec} a memo azonosito 
+    
+
+
+****************************************************************************
+function _v1_tabMemoRead(table,memo)
 
 local value:=a""
 local offset:=val(memo)
@@ -160,7 +213,25 @@ local offset:=val(memo)
 
     
 ****************************************************************************
-function tabMemoWrite(table,memo,value)
+function tabMemoWrite(table,offs,width,dec,value)
+local memo:=xvgetchar(table[TAB_RECBUF],offs,width)
+local vlen:=len(value)
+    if( !empty(memo) )
+        if( table[TAB_MEMODEL]==NIL )
+            table[TAB_MEMODEL]:={memo}
+        else
+            aadd(table[TAB_MEMODEL],memo)
+        end
+    end
+    memo:=a""
+    if( vlen>0 )
+        memo:=_db_memowrite(table[TAB_BTREE],value,tabPosition(table),dec)
+    end
+    return memo
+
+
+****************************************************************************
+function _v1_tabMemoWrite(table,memo,value)
 
 local vlen:=len(value)
 local offset
@@ -186,57 +257,4 @@ function tabMemoPict()
     return "@RS48 "+replicate("X",256)
                          
 
-****************************************************************************
-/*
-function tabMemoPack(table)
-
-//vazlat arra, 
-//  hogyan kell a memo filet packolni,
-//  a hatekonysag kedveert bele fogom szoni
-//  a kodot a tabPack-ba, hogy ne kelljen 
-//  ketszer vegigmenni a filen
-
-local mname:=tabMemoName(table)                                  //eredeti
-local tname:=tabPath(table)+TMPCHR+tabFile(table)+tabMemoExt(table) //temporalis
-local bname:=tabPath(table)+tabFile(table)+"_DBM"+".BAK"         //backup
-
-local mhnd:=tabMemoHandle(table), thnd
-local column:=tabColumn(table),n
-local blk:={},v
-
-    memoCreate(tname)
-    thnd:=memoOpen(tname)
-    
-    for n:=1 to len(column)
-        if( tabMemoField(table,column[n]) )
-            aadd(blk,column[n][COL_BLOCK])
-        end
-    next
-    
-    tabGoTop(table)
-    while( !tabEof(table) )
-    
-        for n:=1 to len(blk)
-            v:=eval(blk[n])            //olvasas a memobol
-            table[TAB_MEMOHND]:=thnd   //temporalis handler 
-            eval(blk[n],v)             //iras a temporalis memoba
-            table[TAB_MEMOHND]:=mhnd   //memo handler vissza
-        next
-        
-        tabSkip(table)
-    end
-    
-    fclose(mhnd); ferase(bname); frename(mname,bname)
-    fclose(thnd); ferase(mname); frename(tname,mname)
-
-    table[TAB_MEMOHND]:=fopen(tabMemoName(table),FO_READWRITE+FO_SHARED)
-    #ifdef _UNIX_   
-      setcloexecflag(table[TAB_MEMOHND],.t.)
-    #else
-      table[TAB_MEMOHND]:=fdup(table[TAB_MEMOHND],.f.,.t.)
-    #endif
-    
-    return NIL
-
-*/
 ****************************************************************************

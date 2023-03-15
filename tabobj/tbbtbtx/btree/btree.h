@@ -24,7 +24,7 @@
 #define  _BTREE_H_
 
 #define  BTREEMAGIC    0x053162
-#define  BTREEVERSION  1
+#define  BTREEVERSION  2
  
 #define  F_SET(p,f)     (p)->flags |= (f)
 #define  F_CLR(p,f)     (p)->flags &= ~(f)
@@ -180,7 +180,7 @@ typedef struct _btree
 
   pgno_t     bt_free;                  // next free page 
   pgno_t     bt_lastdatapage;          // last data page
-  u_int32_t  reserved;               
+  pgno_t     bt_memo;                  // next memo page
   u_int32_t  bt_nords;                 // number of orders
  
   ORDER      bt_order[BT_MAXORDER];    // array of orders

@@ -23,9 +23,35 @@
 #include <swap.h>
 #include <btree.h>
 
+
+#define MASKFLAG                0xf0000000
+#define FLAGMEMO                0x8
+#define GETFLAG(link)           (((link)&MASKFLAG)>>28)
+
+
 //----------------------------------------------------------------------------
 void __bt_swapin(PAGE *h)
 {
+    u_int32_t link=h->linkpg;
+    M_32_SWAP(link);
+    if( (GETFLAG(link)&FLAGMEMO)!=0  )
+    {
+        // MEMOPAGE
+
+        u_int32_t *memopg=(u_int32_t*)h;
+        u_int32_t lower=memopg[2];
+        M_32_SWAP(lower);
+
+        for( u_int32_t i=0; i<lower; i++ )
+        {
+            P_32_SWAP(memopg+i);
+        }
+        return;
+    }
+    
+
+    u_int32_t flags=h->flags;
+    M_32_SWAP(flags);
     indx_t i, top;
 
     M_32_SWAP(h->pgno);
@@ -65,6 +91,21 @@ void __bt_swapin(PAGE *h)
 //----------------------------------------------------------------------------
 void __bt_swapout(PAGE *h)
 {
+    if( (GETFLAG(h->linkpg)&FLAGMEMO)!=0 )
+    {
+        // MEMOPAGE
+
+        u_int32_t *memopg=(u_int32_t*)h;
+        u_int32_t lower=memopg[2];
+
+        for( u_int32_t i=0; i<lower; i++ )
+        {
+            P_32_SWAP(memopg+i);
+        }
+        return;
+    }
+
+    u_int32_t flags=h->flags;
     indx_t i, top;
     top=NEXTINDEX(h);
 

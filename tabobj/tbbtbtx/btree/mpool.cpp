@@ -57,7 +57,7 @@ MPOOL *mpool_open(int fd, int pagesize)
         return (MPOOL*)0; //error
     }
 #endif    
-    
+
     mp=(MPOOL*)malloc(sizeof(MPOOL));
     memset(mp,0,sizeof(MPOOL));
     mp->fd=fd;
@@ -79,15 +79,20 @@ int mpool_close(MPOOL *mp)
 //---------------------------------------------------------------------------
 void mpool_dump(MPOOL *mp, void *page)
 {
-    int i,n; 
+    int i,n,offs=0; 
     for( i=0; i<mp->pagesize; )
     {
-        printf("\n");
+        printf("\n%02x ",offs);
         for( n=0; n<16; n++,i++ )
         {
+            if( (n%4)==0 )
+            {
+                printf(" ");
+            }
             printf("%02x ", 255&*(((char*)page)+i) );
             fflush(0); 
         }
+        offs+=16;
     }
     printf("\n");
 }
@@ -161,18 +166,17 @@ void *mpool_get(MPOOL *mp, pgno_t pgno)
         if( code==pgno )
         {
             //ok, pgno egyezik
-            //fprintf(stderr,"pgno egyezik %x\n",pgno);
             break;
         }
         else if( code==crc32(buf,mp->pagesize) ) //disk byte order!
         {
             //ok, CRC egyezik
-            //fprintf(stderr,"code egyezik %x\n",code);
+            //fprintf(stderr,"page verified: fd=%d pgno=%x crc=%x\n",mp->fd,pgno,code);
             break;
         }
         else if( ++attempt>10 )
         {
-            fprintf(stderr,"corrupt page in fd=%d pgno=%d(%x) at offset %lx\n", mp->fd, pgno, code, ((unsigned long)pgno)*mp->pagesize );
+            fprintf(stderr,"page corrupt: fd=%d pgno=%x code=%x crc=%x\n", mp->fd, pgno, code, crc32(buf,mp->pagesize) );
             //raise(SIGABRT);
             raise(SIGTERM);
         }
