@@ -1,10 +1,9 @@
-52fbe6af951c903a21843f01d79c5159b77809fa 2023031513:28:29-UTC ./CHANGELOG_vermes
-98a5dc4428fbb4fa3dd1eced5d663bc0c8d55810 2023031419:43:24-UTC ./tabobj/tbbtbtx/memotest/log-PAGE
-04eb551692e7500694a712ac2580c37af2325c61 2023031419:43:24-UTC ./tabobj/tbbtbtx/memotest/log-pgview
-36e8c6b73a4cbb28e49a3df2fc77b4b3b1f7549d 2023031419:41:58-UTC ./tabobj/tbbtbtx/memotest/log-pgstat
-db797f6d5341c663d56a71c88e4aaed2d8a2f8c4 2023031419:41:18-UTC ./tabobj/tbbtbtx/memotest/proba.bt
-229cbf145dc7620a04d1c8e03dbe8f94efa28465 2023031419:41:13-UTC ./tabobj/tbbtbtx/memotest/log-write-2185413
-3271a086434f96fe16104703bdd025a854cfc615 2023031419:41:08-UTC ./tabobj/tbbtbtx/memotest/log-create
+7acb8b56e4124f3a1b33b12eac9e2ea87ba44512 2023031521:21:00-UTC ./CHANGELOG_vermes
+d29b30db5ba2e676c60fa196f9cfa5ea0a850cd6 2023031521:16:17-UTC ./tabobj/tbbtbtx/btree/bt_memo.cpp
+b2446d71647c88960d51536860cd3ae1a2d19c24 2023031521:14:30-UTC ./tabobj/tbbtbtx/btree/bt_error.cpp
+acd0212a5bffbe738317a7b5479985a2f5e4a5de 2023031513:30:28-UTC ./jt/jterminal/jterminal.jar
+931400d5fa5b035078bdff1497c60b481ecb014e 2023031513:30:28-UTC ./log-install
+5774558f10294050b04a04265401429fef2a3da2 2023031513:29:41-UTC ./usr/bin/linux/pgview
 f4b5280eef73806bde078b24d2308d6f41194b87 2023031412:37:40-UTC ./tabobj/tbbtbtx/memotest/write.prg
 1512b3e79865cb8e47ee6d5e7805a5fabf3b570b 2023031412:35:29-UTC ./tabobj/tbbtbtx/memotest/pack.prg
 a10bdd50740651137108ac8d6626ae266f7b2831 2023031412:32:31-UTC ./tabobj/tbbtbtx/memotest/.gitignore
@@ -19,8 +18,6 @@ ca62d10d3b2dcbbfd6ebf1b7e12e5b5ded7af889 2023031412:06:11-UTC ./tabobj/tbbtbtx/m
 3d46814a3364f6605183d66a0ff32750b2d757fc 2023031412:04:22-UTC ./tabobj/tbbtbtx/memotest/tabobj.proba.prg
 9c8f15d9743a865635c73745624c093aa4599685 2023031412:02:18-UTC ./tabobj/tbbtbtx/memotest/read.prg
 fe77bf177875a6545b73b9ebea2a87c7375cb7ba 2023031412:01:14-UTC ./tabobj/tbbtbtx/memotest/_proba.tdc
-ba1c8e39ca7b71e95e323bf7e3a215b5f93e214a 2023031309:36:01-UTC ./jt/jterminal/jterminal.jar
-4993c3ecf069e9fae36440025341f1d59f70f8f1 2023031309:36:01-UTC ./log-install
 e4db347f66224186dc6765287b0254b379e4d48f 2023031309:35:57-UTC ./usr/bin/linux/rnm
 a526d8d0e1d66979dcb35d5515f52dfd48b7d7d7 2023031309:35:56-UTC ./usr/bin/linux/fpath
 3c05a4b5f220b85a33c0241fb50f5063bb98c354 2023031309:35:56-UTC ./usr/bin/linux/lpath
@@ -59,7 +56,6 @@ e404b5cfd136d7f9e95007a4155b016e686df65e 2023031309:35:13-UTC ./usr/bin/linux/bt
 97ac5ec310a29adfbd0b51fdb7ea7e7bb274ebba 2023031309:35:13-UTC ./usr/bin/linux/bt2txt
 ba795e760f9524026010dc84df4ac8e8f25ca4f7 2023031309:35:13-UTC ./usr/bin/linux/bti
 d9ab0afea22b5972a65337e67ac27f7f8cc0f4c8 2023031309:35:13-UTC ./usr/bin/linux/pgstat
-b06afc98c7830714f1d590e795fdaa19bace2a9d 2023031309:35:13-UTC ./usr/bin/linux/pgview
 cd4c4899e29c2d1a1e82bbe78e1c5cbcaea81ec9 2023031309:35:13-UTC ./usr/bin/linux/tsema
 6bffcb3ee78936bf70e45dd655358c9377272dc5 2023031309:35:13-UTC ./usr/bin/linux/tstru
 36bb429a9a70da9b4991a7ff520767eb5aa81700 2023031309:35:13-UTC ./usr/bin/linux/tview
@@ -86,7 +82,6 @@ c077f204564e684807a04714840b0eb00bd9b324 2023031309:34:24-UTC ./usr/bin/linux/le
 2cacf9c68d34fc04c8aa13918e661753d3400c0b 2023031309:34:23-UTC ./usr/bin/linux/flex
 202832227f5d0a904132cbc66d1c731ccc202570 2023031309:22:47-UTC ./tabobj/tbbtbtx/btree/bt_swap.cpp
 e8bdd5cf0909e579ed7ea03f938289b0be554ebb 2023031308:52:58-UTC ./tabobj/tbbtbtx/utility/pgstat.prg
-bca4d89bee80abfe2efebdb30fc7c61cbb870943 2023031308:41:01-UTC ./tabobj/tbbtbtx/btree/bt_memo.cpp
 0a495e8aabe3308901c1a11df4245d1cfd642ee4 2023031220:52:26-UTC ./tabobj/tbbtbtx/btree/btree.h
 dfe3b1dcd658fb53df358c33494b019fc7d308c3 2023031214:27:44-UTC ./tabobj/tbbtbtx/tabobjclass.prg
 e97dcc2aa7908c725356533844442208f8453a57 2023031210:57:24-UTC ./tabobj/tbbtbtx/dbopen.prg
@@ -96,7 +91,6 @@ f4096ee5693eaf0c3fb84d1f1ff55d8344ed056c 2023031208:49:32-UTC ./tabobj/common.sr
 3516124b2808fa89564ba0e809b768f1f347856d 2023031123:35:36-UTC ./tabobj/tbbtbtx/memotest/pgstat
 946bc79322bbe21871087c85e218dff165c5a3e1 2023031118:35:25-UTC ./tabobj/tbbtbtx/dblock.prg
 f0e22a6c59e990c116b5a9e3a7465dbf4f5776e2 2023031010:44:38-UTC ./tabobj/common.src/cumemo.prg
-9b13822e8de69c41c174a40b1c67c6c7affe05dd 2023031010:42:09-UTC ./tabobj/tbbtbtx/btree/bt_error.cpp
 772343310652ea925a87c17c1671ce0e924a6831 2023031009:06:39-UTC ./tabobj/utility.src/tbl2dbf.prg
 2f3f47af7bb6a91fa0b6549858fcc4c6d645fdaa 2023030914:52:30-UTC ./tabobj/tbbtbtx/btree/bt_open.cpp
 6f13ca8adf2314203f79d6ea8cbea05a57d5bc56 2023030914:45:40-UTC ./tabobj/tbbtbtx/btree/db.cpp
