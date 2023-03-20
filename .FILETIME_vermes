@@ -1,4 +1,10 @@
-6412dd13c676f19c3c94790565ea00c774148378 2023031611:47:03-UTC ./CHANGELOG_vermes
+7d53e064a083a34021c53a6cb144e8942e2363fc 2023032011:21:21-UTC ./CHANGELOG_vermes
+96d4178c48395af39b06f8caff0f48cd79c209e0 2023032011:18:58-UTC ./ccclib/src/uic/memoedit.prg
+d1259ba4195d646bb184b3ff1ea0dde2668e56fc 2023032011:13:45-UTC ./ccclib/src/uic/getsys.prg
+cd487ece571825671003d146da8d0da36f51f3d7 2023032011:09:00-UTC ./ccclib/src/uic/pushbutton.prg
+ecc36ad442a3e89a9517e6f03e40991ba0f1382e 2023032011:08:08-UTC ./ccclib/src/uic/brwedit.prg
+02d188d523e999257d5fda5514a39801e876fefc 2023032011:07:54-UTC ./ccclib/src/uic/altbutton.prg
+cf6e4733b8daa7cc163ab0bde217767ca40a5d55 2023032010:53:32-UTC ./ccclib/src/uic/o_tbrowse.prg
 328b716c37e509b8ef189cc8cf42acd3b9bfb59f 2023031608:14:54-UTC ./tabobj/tbbtbtx/btree/bt_memo.cpp
 6fe8ef575bae85019ced4e9563dff33a72102ea0 2023031608:14:42-UTC ./tabobj/tbbtbtx/btree/bt_head.cpp
 2861a8a9059d7d14c00dd81aa1cde0b1931a7c88 2023031608:14:15-UTC ./tabobj/tbbtbtx/btree/btree.h
@@ -95,6 +101,7 @@ f0e22a6c59e990c116b5a9e3a7465dbf4f5776e2 2023031010:44:38-UTC ./tabobj/common.sr
 772343310652ea925a87c17c1671ce0e924a6831 2023031009:06:39-UTC ./tabobj/utility.src/tbl2dbf.prg
 2f3f47af7bb6a91fa0b6549858fcc4c6d645fdaa 2023030914:52:30-UTC ./tabobj/tbbtbtx/btree/bt_open.cpp
 6f13ca8adf2314203f79d6ea8cbea05a57d5bc56 2023030914:45:40-UTC ./tabobj/tbbtbtx/btree/db.cpp
+6610ba1b8c716e32a4e6337fffc6559e815d8284 2023030911:02:59-UTC ./tools/tdc2prgch/tdc2tabobj.prg
 2231785cc0380b115d725f35f49bc0907dac3786 2023030910:05:47-UTC ./tabobj/common.src/tabrenam.prg
 5704b4c3bbdea3e96b9c7181473755f712fea2cb 2023030909:45:14-UTC ./tabobj/common.src/tabcpyto.prg
 6daa2f758200a3932d0d06d350374deaa29080af 2023030909:41:11-UTC ./tabobj/common.src/tabpack.prg
@@ -198,7 +205,6 @@ e4dc223ab1a955e775152a5eb32870e06eb8fa8c 2023012010:09:40-UTC ./ccctools/ppo2cpp
 fa371b79fbeb23760a2b0ee193686dc609e214d8 2023012010:05:08-UTC ./ccctools/ppo2cpp/parser.lem
 9f5a19980891ae7d1eb4202920e29935ed1203b7 2023012010:03:01-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
 32680200a163ff3fd09ec371d64d0c9f9e19bfaf 2023012009:44:04-UTC ./ccctools/ppo2cpp/.gitignore
-7de81ca58f383e77ac0ac9629ead9191332a5e3a 2023011613:24:28-UTC ./tools/tdc2prgch/tdc2tabobj.prg
 b0e12964b9c238823250a4175824bf9639fdf32e 2023011612:22:28-UTC ./tabobj/commonui.src/tabbrows.prg
 823a88e19a6263eb035c0eb2530e14c8e2b7f358 2023011612:01:25-UTC ./ccclib/src/class.prg
 fa56c92808d1e11015936bb9a4a2a83cf461b60a 2023011612:00:46-UTC ./ccclib/src/o_object.prg
@@ -301,10 +307,7 @@ c937cace48e7645f8d371196ac814834f224ead6 2022102110:49:16-UTC ./ccctools/ppo2cpp
 43bce20be72fc805bbfe87cff8886a33a0c08971 2022102109:31:58-UTC ./ccctools/ppo2cpp/decllist.h
 6a78eed102a9819d694b3e6df3b364b1e44f1c36 2022101207:27:32-UTC ./ccclib/src/uic/ialert.prg
 8c9e82ffff24d4493cfddd5e4288086b10afb944 2022100616:31:15-UTC ./tools/z/alert.prg
-f5564aa6f643675f2c5d7e0d7c38b2748a86773b 2022100216:08:10-UTC ./ccclib/src/uic/getsys.prg
 7a447afdabf34c29f7b23c30da43dc905bcc09cb 2022100215:33:43-UTC ./ccclib/src/uic/getbrw.prg
-1ab86a6e299cd254cee603c0b4d888b6c416d450 2022100215:05:21-UTC ./ccclib/src/uic/altbutton.prg
-2d1e8e26778dbfdf0aea617269f578c19c68e0fa 2022100215:01:19-UTC ./ccclib/src/uic/pushbutton.prg
 6cac761617878b4bad26591335288f24cae888b9 2022093014:04:32-UTC ./setup/setup-windows/cc.msys2
 059384d0213763c5b266fb762e814ca9942f878a 2022092307:37:53-UTC ./tabobj/common.src/transema.prg
 a662e27ec3f1c9722c6592da98fd32083e58ab2a 2022091309:18:17-UTC ./ccclib/src/windows/realpath.cpp
@@ -599,7 +602,6 @@ c7a9acd41013d2b8fdf13bcb223d1a7c0ec7d540 2021091013:31:26-UTC ./tools/xstart/x
 ffa945e75bddbc023256682fc2e50bda69116f2d 2021091011:21:51-UTC ./tools/xstart/xstart.par
 4093766b0ab66b527527e92d93101270dddb7bd2 2021082309:21:23-UTC ./tools/socket/socket-demo/udp/m.msys2
 e4edffddffbc3b86fa6497133a02c335d623ff30 2021081213:47:23-UTC ./tabobj/commonui.src/tabedrec.prg
-ce40d05c18f2ffcd651ad3251ca943e25b52f9f7 2021081213:21:00-UTC ./ccclib/src/uic/memoedit.prg
 66465ac3d45feb4b0df26fcac3780cf6e1438872 2021080507:42:35-UTC ./tools/z/zcolor.prg
 02b266deb130e6c6c844c7951e48bda30a67702a 2021080506:52:08-UTC ./terminal/unix-ncurses/x
 289026caaa152ee1b24590a131a1c33e0083c59b 2021080506:32:28-UTC ./terminal/unix-ncurses/m.msys2
@@ -1525,7 +1527,6 @@ a590956552ebef0199db498bce49dcaf65d3d2a8 2016051514:30:37-UTC ./usr/include/inke
 fb760361a2588c744fa1e44338f82ff95e261084 2016051509:58:23-UTC ./ccclib/src/uic/OLVASS
 f80b54b1afd787267fb2698c8cc72a4eeb79b42d 2016051418:57:53-UTC ./ccclib/src/uic/compat/init_ui.cpp
 0f7f924ff4155907d81d3255ca38414e8466d675 2016050710:43:14-UTC ./ccclib/src/uic/compat/convtab_lat2ucs.cpp
-93f70295adc9b97f6eea55769b60fbedbfedb36a 2016050214:17:22-UTC ./ccclib/src/uic/o_tbrowse.prg
 0eb52edd489b96a342774cfe7d07520beb928365 2016050214:15:29-UTC ./ccclib/src/uic/devout.cpp
 536fc66624ab0f21beed0b0bca72ca4fcf8b3740 2016050122:01:37-UTC ./ccclib/src/uic/compat/inthash.h
 945be820f479d19dc13674ee030e2060a2340df5 2016041918:21:39-UTC ./tools/z/ver2/ztoascii.prg
@@ -2337,7 +2338,6 @@ b5ea4d9a55405c9b6ef148013f5c6412e4ec8df1 2006042515:42:18-UTC ./usr/bin/windows/
 6b4fbcdb30e33f82e37b4be8f657d83a9b8423f7 2006042510:48:33-UTC ./ccclib/src/uic/o_tbcolumn.prg
 4ea0146b9237efde7cdcc66e694eeec87b2eb27f 2006042214:29:29-UTC ./tools/crypto/rsapubenc.cpp
 89807763146b264b3b4e5a58da46c70108ef53df 2006042214:16:48-UTC ./tools/crypto/bin2hex.cpp
-dd9f2e5f4ac876b65cf7f634019f776658f264f3 2006042209:51:31-UTC ./ccclib/src/uic/brwedit.prg
 4d097884ba66724fe3e92869c8cf83be64fdf17a 2006042017:51:14-UTC ./setup/setup-unix/pushcall.cpp
 963c9de0a4e57aaaee89460d177a147c4bf3c173 2006042017:37:52-UTC ./tutor/spawn/test2.prg
 02a17e8a72871acc5bdb5ce9d07e65ddd1af70b9 2006042014:39:43-UTC ./tutor/nlstext/s
