@@ -1,4 +1,5 @@
-7d53e064a083a34021c53a6cb144e8942e2363fc 2023032011:21:21-UTC ./CHANGELOG_vermes
+1e8c8f456b0d44490008b54e8f5a1ec28dda989a 2023032011:44:05-UTC ./CHANGELOG_vermes
+8bb3821663a06b2eef92a0da473e24606c4a8d6c 2023032011:40:05-UTC ./ccclib/src/uic/o_get.prg
 96d4178c48395af39b06f8caff0f48cd79c209e0 2023032011:18:58-UTC ./ccclib/src/uic/memoedit.prg
 d1259ba4195d646bb184b3ff1ea0dde2668e56fc 2023032011:13:45-UTC ./ccclib/src/uic/getsys.prg
 cd487ece571825671003d146da8d0da36f51f3d7 2023032011:09:00-UTC ./ccclib/src/uic/pushbutton.prg
@@ -1802,7 +1803,6 @@ ea2284344a422ef4fd1c4e02d9edf276c249d1a7 2012052512:24:01-UTC ./tools/xmldom/par
 2a171d3ce702c08d6533ee59798b572290f6c336 2012040710:47:03-UTC ./tools/sql2/util/btimport/btimport.prg
 295c09c612011e8076ce7ad1b8b17c9184269447 2012040710:07:28-UTC ./tools/sql2/util/bt2tds/bt2tds.prg
 eba817faa96cdae9bd89a7cb05a99e6098a95760 2011123109:08:56-UTC ./tools/sql2/driver-mysql/my.ch
-669948b7ed23d31ae3ceb42d336177890f459a4f 2011082818:55:05-UTC ./ccclib/src/uic/o_get.prg
 bec8a8bbfd1a5631988620db748d5a92106b95d2 2011081213:20:39-UTC ./tools/mask/box.msk
 6d0cce593cd5d4af8edc726366ec3d6259d2dc4f 2011081213:15:13-UTC ./tools/mask/filter.msk
 1cb8ac51187dd1569884a59e4c3a57b95c47e5cb 2011081210:24:27-UTC ./tools/mask/haz.msk
