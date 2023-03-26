@@ -1,4 +1,6 @@
-1e8c8f456b0d44490008b54e8f5a1ec28dda989a 2023032011:44:05-UTC ./CHANGELOG_vermes
+9521edb3ecb343d83a292e78b8d9f1cef1794bb5 2023032517:32:52-UTC ./ccclib/src/uic/termapi/termapi.cpp
+7df365f34a56b93836abf41d92636d2f57971ab4 2023032514:01:18-UTC ./CHANGELOG_vermes
+9d9e16a83551955f494740b4dc2d82aa78e8b80f 2023032418:50:51-UTC ./terminal/unix-termkey/readkey.cpp
 8bb3821663a06b2eef92a0da473e24606c4a8d6c 2023032011:40:05-UTC ./ccclib/src/uic/o_get.prg
 96d4178c48395af39b06f8caff0f48cd79c209e0 2023032011:18:58-UTC ./ccclib/src/uic/memoedit.prg
 d1259ba4195d646bb184b3ff1ea0dde2668e56fc 2023032011:13:45-UTC ./ccclib/src/uic/getsys.prg
@@ -374,7 +376,6 @@ d7d5342de9acd9969b036395b8951a1a8639ca88 2022042921:07:03-UTC ./tabobj/m
 c29f02ca3c9272891b9a6b6fec57fce748cf388f 2022042811:55:16-UTC ./terminal/common/debug.h
 127873b0d7c4af172d2d347201fe015fc73c9047 2022042807:31:01-UTC ./usr/include/msgout.h
 69c44d11aa42e7543f20a0c7169100d8ed73b0f8 2022042616:26:17-UTC ./ccclib/src/uic/termenv.cpp
-1d0563b5a81851ce3b27838502e1ee1369b51f8e 2022042616:24:28-UTC ./ccclib/src/uic/termapi/termapi.cpp
 e4acc97d8bc7b6c054e8f4636efe77d5aae6f283 2022042615:42:40-UTC ./ccclib/src/uic/termapi/termcmd.h
 d4d690b6decb67f4cf34e9906622f4419cf4dd0e 2022042214:37:49-UTC ./tools/xmldom/xmldom18/OLVASS
 2661dba3307ac8e0857853291bc0d51cd26e8e57 2022042214:33:32-UTC ./tools/xmldom/xmlpars.prg
@@ -819,7 +820,6 @@ b1d245ad13562da341fb44f595616c4a85cba05d 2020050721:36:14-UTC ./ccclib/src/uic/t
 dd46bd177aa444b33e486df6b0041a074e3c24c6 2020042113:18:15-UTC ./terminal/common/keycode.h
 a6ebfd084f3d396ff0438abb02f8dc1be48c82cd 2020032114:50:42-UTC ./ccctools/pack/copyright.prg
 6ea6f6a2452baa8f5f2d0da24e998b302ed30ff2 2020032114:14:49-UTC ./ccc-dependencies-ubuntu
-55011ab96c0844db78b4f2d386ed22c4846758c6 2020032016:01:36-UTC ./terminal/unix-termkey/readkey.cpp
 c1788685477d7261a7fbdce5c1486d370792c155 2020032015:59:43-UTC ./terminal/unix-termkey/tktest/tktest.cpp
 71a868c6af2d658a3eab178b7b20819720a937a9 2020030813:05:03-UTC ./terminal/unix-termkey/Xdefaults
 955571b358e229b1a3b78fe1421664775a5dd5aa 2020030709:17:26-UTC ./terminal/unix-termkey/OLVASS
