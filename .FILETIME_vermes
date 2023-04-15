@@ -1,3 +1,15 @@
+3d3ae4e428ca04f35957c6c2325a26b757d6cb5a 2023041513:20:01-UTC ./CHANGELOG_vermes
+b9577c7d78a9df19ffaada9cb36a01b71db20aa4 2023041513:01:40-UTC ./tools/xmlrpc/demo-rpc/demo-server.prg
+4ec5d73d219503a8017d73506bf6c65a281ceb36 2023041410:42:25-UTC ./tools/socket/ssl/sslauth-demo/demo_client1.prg
+f5f26d2fee5e0947c9a7c98bfbf5a0d1af727d74 2023041410:31:36-UTC ./tools/socket/ssl/sslauth-demo/cert/OLVASS.TXT
+0c6f04cd9daf38c1eec7d1be5d64bb20d1d39578 2023041410:31:10-UTC ./tools/socket/ssl/sslauth-demo/demo_server1.prg
+e107a44be8323f45e5cd9ad89d5aba569c4dee6b 2023041410:24:44-UTC ./tools/socket/ssl/sslauth-demo/demo-cert.pem
+af0214af27a4b20dfade0a04a75ebcf7735d44a7 2023041410:24:44-UTC ./tools/socket/ssl/sslauth-demo/demo-key.pem
+10058a4ffab9f6e90ef965e07ff8cc48ea4979c7 2023041409:22:59-UTC ./tools/socket/ssl/sslsocket-demo/demo_client1.prg
+a27b04079b48c840d92856d3a54c3b73e483bd56 2023041409:22:21-UTC ./tools/socket/ssl/sslsocket-demo/demo_server2.prg
+bdb611816367f18ed7b4d8930d684f507e6407b9 2023041409:21:08-UTC ./tools/socket/ssl/sslsocket-demo/demo_server3.prg
+02007d8ea74c3450c7711be8e399cfda8b9a8479 2023041409:16:49-UTC ./tools/socket/ssl/sslsocket-demo/demo_server1.prg
+fe3b069cd88f7f80d72cecc6edb71f8203d1ab35 2023041409:16:01-UTC ./tools/socket/ssl/sslctx_funif.cpp
 1b5e58c128a75bc93fa17157dc3d805702dea52d 2023040812:38:53-UTC ./jt/jterminal/jterminal.jar
 9e862cce6ae6ce4014979d41b28a81cdfd4dd52b 2023040812:38:53-UTC ./log-install
 10a24429307464ab9b40f2e44c68597ab0a0fcdb 2023040812:31:44-UTC ./make_base
@@ -5,7 +17,6 @@ a17523e67ddceaef1d16c75d8fbecab3d1c1088a 2023040812:28:33-UTC ./terminal/m
 cff0c82cfa3a78298febe7bcfe071e0a31b54b4a 2023040721:10:40-UTC ./terminal/unix-cterm/OLVASS
 3175d0cebc9faee2485b94152b01aa8e5a95c236 2023040714:57:32-UTC ./usr/bin/linux/cterm
 4579146baf9310a672ba477c659f3ae502c9478b 2023040714:57:31-UTC ./usr/bin/linux/ncterm
-640428314006a8597961f4f125d926a2901fc18e 2023040714:50:31-UTC ./CHANGELOG_vermes
 4a73beaa7e0f74d6b5b5fb9f55c6be7d0c68d437 2023040714:35:13-UTC ./terminal/common/readkey_simple/test/m
 77079099ffc359e86a4275fef33248c6a1ed3de8 2023040714:32:50-UTC ./terminal/common/readkey_simple/test/test.cpp
 c11052f17341813f21707f0b337fbc228aab4ee1 2023040714:30:34-UTC ./terminal/common/readkey_termkey/test/test.cpp
@@ -898,7 +909,6 @@ dc50f1705fe360b43c66c8412b2c97ac1507c13a 2018111121:13:27-UTC ./tools/regex/rege
 5408079fce3e9133ebbd7799a77bc135d1c95021 2018100308:22:47-UTC ./tools/socket/ssl/sslctx_verifycb.cpp
 8dfc8261ef47c5450e36ad94ecb64182b0d5b436 2018081306:07:41-UTC ./tools/xmlrpc/xmlrpc.ver
 407dda83ae7870e5fbf60fad3e5f8896158ce21a 2018081213:23:40-UTC ./tools/xmlrpc/rpc_server.prg
-e50d7f44046c89a987c57791da93019ed20d1e8d 2018081213:19:41-UTC ./tools/xmlrpc/demo-rpc/demo-server.prg
 80412c7fad9be5e024ffe292657f088a55d226cf 2018081006:50:25-UTC ./tools/xmlrpc/demo-rpc/ss
 cf5645b71932e9461a15bc790564b65caab686fa 2018081006:50:20-UTC ./tools/xmlrpc/demo-rpc/sc
 90f4e2a5e7d7e1495dba1372c089ef33b07bde69 2018081006:49:41-UTC ./tools/xmlrpc/demo-rpc/demo-client.prg
@@ -926,7 +936,6 @@ b2f82308f0b5ed7af7963ef8b60e26f025453e7c 2018071315:43:06-UTC ./setup/setup-flex
 e530b8fc5549a8207858e0a1bef9abe26528bd06 2018071315:37:32-UTC ./setup/setup-flex/scan.c
 2336712ccfa6bfa457ac6e198426f1cafd64d832 2018071315:31:26-UTC ./setup/setup-flex/skel.c
 c06719082de927da27a0c38577ded50286ae006d 2018070511:16:08-UTC ./tools/socket/ccc_socket.hu.ver
-1b055dba64f9db33514dc8da3e53a68e44fe2bbf 2018070510:50:55-UTC ./tools/socket/ssl/sslauth-demo/demo_httpreq.prg
 1bc8d3a8cc87a707bfdfce9c7b5d72538fce073b 2018070509:25:23-UTC ./tools/socket/ssl/windows/set_callback.cpp
 95ca47a426224c9dfacb11a82befc4a7f39a74d9 2018070509:24:24-UTC ./tools/socket/ssl/sslerror.prg
 2e8b2cae8af310746fb96062e89f89aa087324ca 2018070507:49:41-UTC ./tools/socket/socket-demo/recv.prg
@@ -938,20 +947,13 @@ d1c92203ddd44570bda88a6c9f39fd8f82fb0ec7 2018070507:42:39-UTC ./tools/socket/htt
 7a9e1463e061427e894e406c47e93a2315fd1e36 2018070507:42:13-UTC ./tools/socket/socket_class.prg
 4c57638aebf96f4934125078662e5aebafd258f0 2018070507:40:56-UTC ./tools/socket/ssl/sslctx_class.prg
 0d8a821c2ea0bde9eb14dada49c310d58f4b673e 2018070507:40:47-UTC ./tools/socket/ssl/sslcon_class.prg
-a974ae8c4f2454a294f028baa0c979d03b399c77 2018070507:40:31-UTC ./tools/socket/ssl/sslctx_funif.cpp
 e1e0373e764144ef177d49059d116a760cfa052f 2018070507:40:11-UTC ./tools/socket/ssl/sslcon_funif.cpp
 a84fecd5f4febe06d181a6a0bc4be4b596290754 2018070507:34:44-UTC ./tools/socket/socket-demo/send.prg
 f327131edde5fa08b8d2038e407374d4c88d3d15 2018070507:34:34-UTC ./tools/socket/socket-demo/send0.prg
 67314b4db64e06f8d9ebfb5439f61a34bfc1eb20 2018070507:32:32-UTC ./tools/socket/socket-demo/listener.prg
 188e8a81ea864ab2b2ebab902425f388716e58d8 2018070507:24:52-UTC ./tools/socket/socket-demo/http-server.prg
 9c3184bcdba03cc6763d1403e3a1e155e343cbdf 2018070507:19:41-UTC ./tools/socket/socket-demo/smessage.prg
-a4092914dd6d205c051cb663d7f81a505b002d14 2018070507:06:34-UTC ./tools/socket/ssl/sslauth-demo/demo_server1.prg
-c38d772409d5e16387bf90eaa8f2ddaf772d25ef 2018070507:06:15-UTC ./tools/socket/ssl/sslauth-demo/demo_client1.prg
-2ea2cb6b2fa4f85f0246178549d050763634e3d3 2018070506:58:52-UTC ./tools/socket/ssl/sslsocket-demo/demo_server3.prg
-49009e9454105b39451724ddc691d60f12cb791b 2018070506:58:42-UTC ./tools/socket/ssl/sslsocket-demo/demo_server2.prg
 2e09fe8cd915d616d4dbba9de4d308288a59e298 2018070506:58:14-UTC ./tools/socket/ssl/sslsocket-demo/demo_client2.prg
-4bc80b33049386de7ce48e8b1298f7580c3b5166 2018070506:58:06-UTC ./tools/socket/ssl/sslsocket-demo/demo_client1.prg
-7a95773d8af1a7d3fcf5a1a07f01bc0bc0850d63 2018070506:57:47-UTC ./tools/socket/ssl/sslsocket-demo/demo_server1.prg
 2c08eb2d91eea0269bc3cc6723fd013485817388 2018070506:56:57-UTC ./tools/socket/ssl/sslsocket-demo/pidexe.prg
 4f3111de222cdc19b995825d964f2033c58dac94 2018062906:53:17-UTC ./tools/socket/ssl/sslsocket-demo/s3.bat
 166e14c888db579e3f954e6b5fd152aad1e0bb0d 2018062906:53:03-UTC ./tools/socket/ssl/sslsocket-demo/s3-ssl.bat
@@ -973,7 +975,6 @@ dd0d33e5ece102c436a377ce8bf7c766883c9384 2018062906:45:59-UTC ./tools/socket/ssl
 d4e8cc7bd0822e7ee7d85194dd2ab0a142a25233 2018062906:45:52-UTC ./tools/socket/ssl/sslsocket-demo/c2
 9ea5338e7b42b0dbff661707f01f9d46d88fe712 2018062906:45:47-UTC ./tools/socket/ssl/sslsocket-demo/c1-ssl
 19c1a8630860eab75d6012520c064d85f5cfa1ab 2018062906:45:41-UTC ./tools/socket/ssl/sslsocket-demo/c1
-d99b40e68cbe5f09cb6e4174de480a768ac3b019 2018061805:59:17-UTC ./tools/socket/ssl/sslauth-demo/comfirm.hu-cert.pem
 180a37d5f76290e1d415643921a6aa03a0829921 2018061107:08:14-UTC ./tutor/pm/freebsd/pm.prg
 c2b5a2dd9770c51b7dc667488191452137daa9a2 2018061014:58:59-UTC ./tutor/pm/linux/pm.prg
 158865e1afb30c2e80545789270c10400aeedaf0 2018061014:47:47-UTC ./tutor/pm/linux/2/search.msk
@@ -1841,8 +1842,6 @@ b4b5f956697f29ad9b204853369db4ea863494b1 2011070821:15:53-UTC ./tabobj/utility.s
 4d08fdf8d18c992e0c5f23152bff9affc4469a15 2011070821:08:12-UTC ./tabobj/tbbtbtx/utility/tstru.prg
 71f39dcbd18c10148000c54bec3cdb79e2c3f476 2011070506:40:20-UTC ./ccclib/src/uic/drawbox.prg
 f11df7009460d29d3461fa3f898cbeadeca047d5 2011061216:18:50-UTC ./terminal/sslforw/ssl-test/pem/clnpkey/demo.pem
-7108f826e15f6db6eb487b71c3a4d1892fa742c3 2011061216:18:50-UTC ./tools/socket/ssl/sslauth-demo/demo-cert.pem
-19054616f5f865b4a29866f87eb3b2fb28b83303 2011061216:18:50-UTC ./tools/socket/ssl/sslauth-demo/demo-key.pem
 a6f7a1ea02dd2c12a639e2c76b0884d3270e373a 2011061216:17:20-UTC ./jt/sslforward/ssl-test/localhost-cert.pem
 671536d301ac199b14af87bc3eb645da2efdf630 2011061216:17:20-UTC ./jt/sslforward/ssl-test/localhost.pem
 7b71c976e6cd865ed1e7e45fb48f851ff98f7f76 2011052008:25:23-UTC ./ccctools/prg2ppo/prg2ppo.prg
@@ -2115,7 +2114,6 @@ b20aac2df8885469af2d3621721a9c41d4d7cc79 2007073009:29:53-UTC ./jt/jtdemo/tabedi
 b2ed2df592d23368b482648ea7a8a69f2045191f 2007073008:56:53-UTC ./jt/jtdemo/dlgdemo/alert.prg
 b6aa4cee677ed8d3eb477a91d49122b5b8be6c35 2007073008:23:41-UTC ./jt/jtdemo/dlgdemo/main1x.prg
 c598424f5488da78d5e07549dbb6339ff5ae171f 2007073007:59:10-UTC ./jt/jtdemo/tabedit/dlg_szamla.dlg
-89f329bac7305f680ee1946fa545c65ce5a5fcb5 2007073005:14:37-UTC ./tools/socket/ssl/sslauth-demo/cert/OLVASS.TXT
 ea8858dc416a77e6d13b269d6e8e7e99d0346dbf 2007072914:45:10-UTC ./tools/socket/ssl/sslauth-demo/s1
 7dc72d17202649cf1b309864b8c66f557195f4e4 2007072914:45:02-UTC ./tools/socket/ssl/sslauth-demo/c1
 925ca6d6125d35d5c3fedc94c6348347b5497fc9 2007072912:19:12-UTC ./tools/socket/ssl/sslauth-demo/cert/rehash.b
