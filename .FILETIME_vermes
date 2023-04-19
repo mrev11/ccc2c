@@ -1,4 +1,13 @@
-3d3ae4e428ca04f35957c6c2325a26b757d6cb5a 2023041513:20:01-UTC ./CHANGELOG_vermes
+d990ea6835be184ad47a1b71fa9737e99c9c58c9 2023041911:45:32-UTC ./jt/jterminal/jterminal.jar
+b8b28a79bbf308a8a8f441cd737ae0b6de896292 2023041911:45:32-UTC ./log-install
+98745121ceb8edbe95e402ec866fb8957f40ef02 2023041911:43:45-UTC ./usr/bin/linux/terminal-gtk2
+aa44fd9b88c983760a109fc236855b4d2c57e05b 2023041911:42:43-UTC ./CHANGELOG_vermes
+6ff93b31dde9aefa3f2c9cc41a0e0603edcbfe5f 2023041911:35:19-UTC ./terminal/gtk2/parfile.bld
+e72b94a76f60d82f709557274ab00a8a637579ea 2023041911:20:33-UTC ./terminal/m
+3486f556f4735abb92da5f0a8e48342f9632c06a 2023041911:18:53-UTC ./make_base
+b95ef815b2b42208fa5c131a0ee21635d54dd7c8 2023041911:17:55-UTC ./make_base.msys2
+e40e3208893a892bb1c8c61aa3237b8662e1a495 2023041911:17:39-UTC ./make_base.bat
+417987e6139ddafecf2b8116473ee46fb2ab46ea 2023041911:10:08-UTC ./envccc
 b9577c7d78a9df19ffaada9cb36a01b71db20aa4 2023041513:01:40-UTC ./tools/xmlrpc/demo-rpc/demo-server.prg
 4ec5d73d219503a8017d73506bf6c65a281ceb36 2023041410:42:25-UTC ./tools/socket/ssl/sslauth-demo/demo_client1.prg
 f5f26d2fee5e0947c9a7c98bfbf5a0d1af727d74 2023041410:31:36-UTC ./tools/socket/ssl/sslauth-demo/cert/OLVASS.TXT
@@ -10,10 +19,6 @@ a27b04079b48c840d92856d3a54c3b73e483bd56 2023041409:22:21-UTC ./tools/socket/ssl
 bdb611816367f18ed7b4d8930d684f507e6407b9 2023041409:21:08-UTC ./tools/socket/ssl/sslsocket-demo/demo_server3.prg
 02007d8ea74c3450c7711be8e399cfda8b9a8479 2023041409:16:49-UTC ./tools/socket/ssl/sslsocket-demo/demo_server1.prg
 fe3b069cd88f7f80d72cecc6edb71f8203d1ab35 2023041409:16:01-UTC ./tools/socket/ssl/sslctx_funif.cpp
-1b5e58c128a75bc93fa17157dc3d805702dea52d 2023040812:38:53-UTC ./jt/jterminal/jterminal.jar
-9e862cce6ae6ce4014979d41b28a81cdfd4dd52b 2023040812:38:53-UTC ./log-install
-10a24429307464ab9b40f2e44c68597ab0a0fcdb 2023040812:31:44-UTC ./make_base
-a17523e67ddceaef1d16c75d8fbecab3d1c1088a 2023040812:28:33-UTC ./terminal/m
 cff0c82cfa3a78298febe7bcfe071e0a31b54b4a 2023040721:10:40-UTC ./terminal/unix-cterm/OLVASS
 3175d0cebc9faee2485b94152b01aa8e5a95c236 2023040714:57:32-UTC ./usr/bin/linux/cterm
 4579146baf9310a672ba477c659f3ae502c9478b 2023040714:57:31-UTC ./usr/bin/linux/ncterm
@@ -40,7 +45,6 @@ c06b473fe6ae1c0a8f7fc3f19e34a862931ba309 2023040522:57:36-UTC ./terminal/unix-ct
 066d20a479bc402843a951d2d983f6d005273d34 2023040413:59:04-UTC ./usr/bin/linux/list
 62b3ec139afdcfa67dd1526038d968ded0c09250 2023040413:58:48-UTC ./usr/bin/linux/tdc2tabobj
 1570253a94ce2529036e8c9f8f807ba592cc261e 2023040413:58:30-UTC ./usr/bin/linux/terminal-gtk3
-4b2f39bcdaebae67b87ba1aa8d4c55f5fa6d7716 2023040413:58:29-UTC ./usr/bin/linux/terminal-gtk
 16e281635ea8f6a7ba940d320baa3bf0d35b76bb 2023040413:24:25-UTC ./terminal/unix-xterm/ansi_colors/colors.prg
 51cd757cdc023a995ab4f9a1630f8479945b2e35 2023040323:07:20-UTC ./terminal/unix-xterm/ansi_colors/ansi_colors.h
 a628c40d07a5f2ea8f10a525c7c3fa0a712f62b3 2023040322:58:56-UTC ./terminal/unix-xterm/ansi_colors/colorext_palette.cpp
@@ -532,8 +536,6 @@ d61c6cbfa7cd2576dad4dbbe5e6da47f39f42da5 2021123013:26:30-UTC ./setup/setup-unix
 11deea9f7376c6539ac5d5f84b94cdb8681d2c20 2021123013:25:26-UTC ./make_extn.msys2
 14536163862d8e114c5236865d4fd9a9d6547a94 2021123013:24:56-UTC ./make_extn.bat
 0ebd3ce4731683fe9a8762a397c14f03549b8f55 2021123013:23:56-UTC ./make_extn
-06de9ce0944af56ea9688c8260026ddb5f52b43c 2021123013:23:15-UTC ./make_base.msys2
-cb389ebc5965ebaf823badceb1274131966c0540 2021123013:22:56-UTC ./make_base.bat
 72bd080d57db636af13f94ee685e9c5f1f1fc350 2021122923:01:30-UTC ./usr/build/windows/tds2obj.bat
 bbf064e8795c0cbd5b747772e4788877351653fd 2021122923:01:17-UTC ./usr/build/windows/prg2obj.bat
 d167f9c47495ddb2b9dcc04c66e8138fff306c94 2021122922:10:50-UTC ./m
@@ -588,7 +590,6 @@ b1508363bddd23b4194e6fb7e412c855b58ea1bf 2021122316:39:19-UTC ./tools/sql2/util/
 f540983bc9ad0e77b59ddb11e9f43177d69b6750 2021122310:04:18-UTC ./tools/sql2/test/m.bat
 5cde272651b9ba8d0ba1e91adb07e84523878a85 2021122309:11:03-UTC ./terminal/gtk3/m.bat
 67f7b9559c52be74523766c07e3d7a2fc8159a46 2021122309:10:00-UTC ./terminal/gtk/m.bat
-3e04ed52868865b159b3a231a144a65b27858747 2021122221:44:41-UTC ./envccc
 dda188b2a7fa5719b9203acc6f168e209c459314 2021122221:09:57-UTC ./tools/sql2/m
 9b94ab452086a1fe19f845908ded12fd7867578a 2021122221:03:22-UTC ./tools/sql2/test/m
 3dd508a9d95efb383572129f8c5f17794fd258e3 2021122221:01:37-UTC ./tools/sql2/util/m
@@ -1258,7 +1259,6 @@ d202baa472fa45a102f6737e80a8c49b9a7c75c1 2016110522:48:38-UTC ./usr/options/mng/
 0b03cd729f70cd1b5dc1c60d1e045fb6957b05df 2016110506:39:01-UTC ./terminal/windows/keycode_win.cpp
 bddc25dbeb918dfde7be2d56685d615bed63a293 2016110418:30:51-UTC ./terminal/windows/keydown.cpp
 028551e9d49fb1a88900b4e63a7fc3a4c3af3408 2016110418:30:18-UTC ./terminal/unix/keycode_x.cpp
-74cbf46c26515d54ea20367117e2f87d19b56595 2016110317:32:00-UTC ./terminal/gtk/parfile-unx.bld
 4a47eefe9d97bc880901eaa28991a775500b1ef1 2016110306:56:53-UTC ./usr/build/linux/lib2exe.bat
 adcaf08c8a80823dfda0768798491f53896968d5 2016110306:56:09-UTC ./usr/build/linux/obj2exe.bat
 0e202aed397646daaff3fb6f0ca00aedff8ffb86 2016101907:48:24-UTC ./tools/savex/usage.prg
