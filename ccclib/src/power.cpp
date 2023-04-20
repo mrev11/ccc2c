@@ -23,7 +23,7 @@
 #include <cccapi.h>
 
 //------------------------------------------------------------------------
-void power()
+void power() // erre fordul az a**x kifejezes
 {
 // stack: a,x --- a^x
 
@@ -46,79 +46,52 @@ void power()
 }
 
 //------------------------------------------------------------------------
+void _clp_power(int argno)  // CCC-bol hivhato: power(a,x)
+{
+    CCC_PROLOG("power",2);
+    double a=_parnd(1);
+    double x=_parnd(2);
+    if( a<0 || a==0&&x<=0 )
+    {
+        error_arg("power",base,2);
+    }
+    _retnd(pow(a,x));
+    CCC_EPILOG();
+}
+
+//------------------------------------------------------------------------
 void _clp_exp(int argno)
 {
-VALUE *base=stack-argno;
-stack=base+min(argno,1);
-while(stack<base+1)PUSHNIL();
-push_call("exp",base);
-//
-    VALUE *v=base;
-
-    if( v->type==TYPE_NUMBER )
-    {
-        v->data.number=exp(v->data.number);
-    }
-    else
-    {
-        error_arg("exp",base,1);
-    }
-
-//
-pop_call();
-stack=base+1;
-return;
+    CCC_PROLOG("exp",1);
+    double x=_parnd(1);
+    _retnd(exp(x));
+    CCC_EPILOG();
 }
 
 //------------------------------------------------------------------------
 void _clp_log(int argno)
 {
-VALUE *base=stack-argno;
-stack=base+min(argno,1);
-while(stack<base+1)PUSHNIL();
-push_call("log",base);
-//
-    VALUE *v=base;
-
-    if( v->type==TYPE_NUMBER && v->data.number>0 )
-    {
-        v->data.number=log(v->data.number);
-    }
-    else
+    CCC_PROLOG("log",1);
+    double x=_parnd(1);
+    if( x<=0 )
     {
         error_arg("log",base,1);
     }
-
-//
-pop_call();
-stack=base+1;
-return;
+    _retnd(log(x));
+    CCC_EPILOG();
 }
 
 //------------------------------------------------------------------------
 void _clp_sqrt(int argno)
 {
-VALUE *base=stack-argno;
-stack=base+min(argno,1);
-while(stack<base+1)PUSHNIL();
-push_call("sqrt",base);
-//
-    VALUE *v=base;
-
-    if( v->type==TYPE_NUMBER && v->data.number>0 )
-    {
-        v->data.number=sqrt(v->data.number);
-    }
-    else
+    CCC_PROLOG("sqrt",1);
+    double x=_parnd(1);
+    if( x<0 )
     {
         error_arg("sqrt",base,1);
     }
-
-//
-pop_call();
-stack=base+1;
-return;
+    _retnd(sqrt(x));
+    CCC_EPILOG();
 }
 
 //------------------------------------------------------------------------
-
