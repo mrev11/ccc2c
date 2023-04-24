@@ -1,4 +1,5 @@
 @echo off 
 set CCCTERM_CONNECT=term://cterm.exe
-set ZCOLOR_TEXT=w/n,n/221
-z.exe cterm.cpp
+call bapp_w32c.bat 
+draw_ccc_scale
+
