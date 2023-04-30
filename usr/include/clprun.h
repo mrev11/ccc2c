@@ -286,7 +286,8 @@ extern void _clp_devout(int argno); //ideiglenesen
 extern void _clp_createdisplay(int argno);
 
 //File CLPCOLOR.CPP:
-extern int  gettextattr(void);
+extern int  gettext_fg(void);
+extern int  gettext_bg(void);
 extern void setcoloridx(int idx);
 extern void _clp___clr2num(int argno);
 
