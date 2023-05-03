@@ -32,11 +32,13 @@
 
 #define MAXROW    24
 #define MAXCOL    79
-#define NORMAL     7
-#define INVERS   112
 
-#define attr(n)  asc(substr(linea,n,1))
-#define char(n)  substr(linec,n,1)
+#define CHAR(n)   (substr(linec,n,1))
+#define ATTR(n)   (substr(linea,n,1)::asc)  // fg
+#define NORMAL    7   // white
+#define INVERS    0   // black
+
+
 #define STR(n)   alltrim(str(n))
 
 // getfield (inverse)
@@ -118,7 +120,7 @@ local path, prgcode
         ? "  Input file  :", input:=msk
         ? "  Output file :", output:=path+fname(msk)+extension
 
-        screen:=memoread(input)
+        screen:=readmask(input)
         prgcode:=prgoutput(fname(msk), screen)
         prgcode:=_charconv(prgcode,CHARTAB_CCC2LAT)
         prgcode:="//MSK2DLG "+VERZIO+chr(10)+chr(10)+prgcode
@@ -134,7 +136,7 @@ local path, prgcode
         input:=msk
         output:=path+fname(msk)+extension
 
-        screen:=memoread(input)
+        screen:=readmask(input)
         prgcode:=prgoutput(fname(msk), screen)
         prgcode:=_charconv(prgcode,CHARTAB_CCC2LAT)
         prgcode:="//MSK2DLG "+VERZIO+chr(10)+chr(10)+prgcode
@@ -158,11 +160,11 @@ local n,cbeg,c
 
         line:=substr(screen,2*i*(MAXCOL+1)+1,2*(MAXCOL+1))
         linec:=screenchar(line)
-        linea:=screenattribs(line)
+        linea:=screen_fg(line)
 
         for n:=1 to MAXCOL+2
 
-            if( attr(n)==NORMAL .or. n==MAXCOL+2 )
+            if( ATTR(n)==NORMAL .or. n==MAXCOL+2 )
 
                 if( cbeg!=NIL )
 
@@ -177,7 +179,7 @@ local n,cbeg,c
                     cbeg:=NIL
                 end
 
-            elseif( attr(n)==INVERS )
+            elseif( ATTR(n)==INVERS )
 
                 if( cbeg==NIL )
                     cbeg:=n
@@ -195,17 +197,17 @@ local n,cbeg,c
 
         line:=substr(screen,2*i*(MAXCOL+1)+1,2*(MAXCOL+1))
         linec:=box2spc(screenchar(line))
-        linea:=screenattribs(line)
+        linea:=screen_fg(line)
 
         for n:=1 to MAXCOL+2
 
-            if( attr(n)==NORMAL )
+            if( ATTR(n)==NORMAL )
 
-                if( cbeg==NIL .and. !char(n)==" " )
+                if( cbeg==NIL .and. !CHAR(n)==" " )
                     cbeg:=n
                 end
 
-            elseif( attr(n)==INVERS .or. n==MAXCOL+2 )
+            elseif( ATTR(n)==INVERS .or. n==MAXCOL+2 )
 
                 if( cbeg!=NIL )
                     c:=label(substr(linec,cbeg,n-cbeg),i,cbeg)
