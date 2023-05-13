@@ -19,11 +19,11 @@
  */
 
 #include "box.ch"
-#include "browse_in_mask.say"
+#include "browse.say"
 
 *************************************************************************************************
 function main()
-    browse_in_mask({|g|load(g)},{|g|setcursor(1),readmodal(g)},{|g|store(g)})
+    browse({|g|load(g)},{|g|setcursor(1),readmodal(g)},{|g|store(g)})
     ?
 
 
@@ -55,12 +55,12 @@ local g2:={}
     g_aa:picture:="@S10 "+replicate("X",64)
 #ifdef _CCC3_
     //UTF-8 kodolas
-    g_aa:item("1 Van, aki forr贸n szereti!")
-    g_aa:item("2 Pr贸ba szerencse")
-    g_aa:item("3 脰t sz茅p sz疟zl谩ny 艖r眉lt 铆r贸t ny煤z")
-    g_aa:item("4 Van, aki forr贸n szereti!")
-    g_aa:item("5 Pr贸ba szerencse")
-    g_aa:item("6 脰t sz茅p sz疟zl谩ny 艖r眉lt 铆r贸t ny煤z")
+    g_aa:item("1 Van, aki forr髇 szereti!")
+    g_aa:item("2 Pr骲a szerencse")
+    g_aa:item("3 謙 sz閜 sz鹺l醤y 鮮黮t 韗髏 ny鷝")
+    g_aa:item("4 Van, aki forr髇 szereti!")
+    g_aa:item("5 Pr骲a szerencse")
+    g_aa:item("6 謙 sz閜 sz鹺l醤y 鮮黮t 韗髏 ny鷝")
 #else
     //lehetne itt latin2 kodolas
     //de akkor CCC3-bol nezve a z.exe 

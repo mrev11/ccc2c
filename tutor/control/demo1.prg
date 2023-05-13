@@ -59,15 +59,14 @@ local g2:={}
 
     g_lst2:menu:=crm.orszagkod()
     g_lst2:block:={|x|g_lst2:menu[g_lst2:select(x)][1..2]}
+    g_lst2:select("HU")
     g_lst2:picture:="XX"
-    g_lst2:varput("US")
+    g_lst2:varput:="  "
   
     g_alt1:alternatives("Kutya/Macska/Nyúl")
-    g_alt1:varput(2)
 
-    g_alt2:alternatives({"Magszem","Vállalk"}) 
+    g_alt2:alternatives({"Magszem","Vállalk"}); g_alt2:choice("V")
     g_alt2:block:={|x|g_alt2:alternatives[g_alt2:choice(x)][1..1]}
-    g_alt2:varput("V")
     
     
     //g_a:postblock:={|g|if(g:varget,(alert("WRONG"),.f.),.t.)}
