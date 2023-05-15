@@ -1,10 +1,17 @@
-82dea716b595746a12f9c9991efa0521c42194c8 2023051513:48:53-UTC ./CHANGELOG_vermes
+a668cecc8f145a0239581ce4e20213895a4d94f7 2023051518:25:41-UTC ./tutor/xbrwarr/config
+099de67447e08b1221f5ada03dda75e1cdddcafc 2023051518:19:06-UTC ./ccclib/src/uic/brwmenu.prg
+2c5843d4a383a641857eba6f0efa62b772dbf5ff 2023051517:46:56-UTC ./CHANGELOG_vermes
+bae62e0d4b0e036a29cf553e4cabc7ae3cc70e61 2023051517:05:48-UTC ./ccclib/src/ccc_config.prg
+c92358b5aaabf0e38db527841dbd6dd5af2339ca 2023051513:57:55-UTC ./jt/jterminal/jterminal.jar
+220dd6c676b92c683d21086a13bfcf1d0a74019c 2023051513:57:55-UTC ./log-install
+d330a20fa580eb62e328c819948886f47e2ff0fd 2023051513:57:24-UTC ./usr/bin/linux/xstart
+70d67030e1624768167b7d60434c827a59893188 2023051513:56:59-UTC ./usr/bin/linux/removecr
+e3f9475af3b062b7e753572df36e827bddd12517 2023051513:56:58-UTC ./usr/bin/linux/prg2ppo
+111f4b40e5264b5c6a52e1faba0decbe534dd242 2023051513:56:57-UTC ./usr/bin/linux/build
 d6d80c5296aeb36c1a553525e8907c2fa55ae455 2023051513:30:50-UTC ./ccclib/src/color.cpp
 204a2766a765ca1c43714dbe684f6ebae73e3fe1 2023051513:12:39-UTC ./terminal/common/ansi_colors/draw_ansi_color.prg
 b2541a947241b8c56cca7b232cd95cd32d3e19de 2023051512:59:39-UTC ./terminal/common/ansi_colors/m.msys2
 313422eba288a86c939f7650cb312ad5ef8e5faa 2023051512:54:18-UTC ./usr/bin/linux/jeed
-17fe0edc1b9bda3b0c3c03d3454f2c026b0ada1f 2023051512:52:47-UTC ./jt/jterminal/jterminal.jar
-08adc5726078039aa352a9bf6c8c9dd2dad1ef07 2023051512:52:47-UTC ./log-install
 35415c661d8f5247060abace15b525daf8c8498e 2023051512:41:29-UTC ./tools/sql2/util/jeed/jeed.prg
 a93cb873e89e40060dc7469ae8fb7502b1dc7162 2023051512:27:22-UTC ./tools/sql2/util/jeed/parfile.bld
 3abccf606c353ceab45ab258c776ff66b60ba639 2023051512:06:38-UTC ./tools/sql2/m.msys2
@@ -17,10 +24,6 @@ a93cb873e89e40060dc7469ae8fb7502b1dc7162 2023051512:27:22-UTC ./tools/sql2/util/
 596d9b4a2d2dc4f2203365e228f02ba9d9e9866d 2023051509:07:49-UTC ./terminal/common/ansi_colors/draw_ansi_cube.prg
 ecfc389400fc16aefb9c26154d14235d83f9eaf9 2023051420:26:53-UTC ./tutor/colors/colors.prg
 b29af9fef6c7f0518e9db2ffb7be6af3004d71d6 2023051416:50:04-UTC ./terminal/common/ansi_colors/log-ext_to_leg
-8b4a8be8dec0035ad33b030fedcbf1e37424ef1a 2023051416:48:55-UTC ./usr/bin/linux/xstart
-6f0fc8f697fa2a87c8f71088ce8fb1a8833f154e 2023051416:48:49-UTC ./usr/bin/linux/prg2ppo
-01c572afafaf5afa7634363c47c288c1b487ea0b 2023051416:48:49-UTC ./usr/bin/linux/removecr
-5fa9343f8d8f3ea79d0c7c11ecb43ad8f4fab1a0 2023051416:48:48-UTC ./usr/bin/linux/build
 2e663e02c74536b8dacaf0a0c724c5067580c478 2023051309:17:16-UTC ./ccclib/src/uic/textarea.prg
 ad590f067a91405fae9d606d4b6ffe05f03b8b3f 2023051113:11:07-UTC ./ccclib/src/uic/mask.prg
 16de233bd7e7d62609174bb3e468b113b03b46be 2023051111:25:48-UTC ./usr/bin/linux/msk2say
@@ -124,7 +127,6 @@ f0ec362b7198aa5f69a1e3e1a0b637db524d1e8d 2023050514:30:12-UTC ./tools/textview/t
 b328501a87619a746b5249cc8788ffd0740843e1 2023050310:17:53-UTC ./jt/msk2dlg/pdialog.dlg
 b309d6a207d079094288a06e219bf4a6b1555097 2023050310:17:53-UTC ./jt/msk2dlg/pdialog.pnl
 720fcd0bae8382056abc719691c77a31b847c42f 2023050310:13:41-UTC ./jt/msk2dlg/msk2dlg.prg
-905d028e72d15e9944b6c47806fb5c2c8e0c9871 2023050309:48:31-UTC ./ccclib/src/uic/brwmenu.prg
 7f0ab92641162fe8bd3c623f039813865a18b06d 2023050309:00:11-UTC ./tools/mask/.gitignore
 dbe073395738dd8a7f1a293096f60ced21359c0f 2023050308:58:52-UTC ./tools/mask/test/proba.msk
 f49ea51d2819a54fc1c0a39c0c0963e212a9594c 2023050308:41:07-UTC ./tools/mask/readpage.prg
@@ -821,7 +823,6 @@ a2c0344d395baec5841635c15b3b7e9cfcc33d27 2021021914:41:41-UTC ./tools/mask/pagep
 22b241f5c03802eec94187e72b6e572a8f2c8af8 2021021408:40:08-UTC ./ccclib/src/unix/signals.cpp
 38ad9bed8053396f629a56c2f641a9c87df83b3c 2021021322:46:36-UTC ./terminal/common/xsigset.cpp
 51ddfa47ef2039588123a844c0293bdf0f9b614e 2021021322:37:42-UTC ./terminal/common/xsigset.h
-d3deabdf3e00a979d2b63ebc7a2601e9bb755a00 2021021015:04:51-UTC ./ccclib/src/ccc_config.prg
 ce86f4d4209c0186bbab48f3b7b92a62c6c1486a 2021020514:38:41-UTC ./usr/bin/linux/__unix.b
 11a9d6c3c0be32903f4f07451853c1be18e60769 2021012008:41:22-UTC ./tools/socket/socket-demo/udp/udp-server.prg
 f3b66ee05c0ef7323b114113bb54a70d5048513c 2021012008:41:10-UTC ./tools/socket/socket-demo/udp/udp-client.prg
@@ -1208,7 +1209,6 @@ fce79f3c75233f8fb69392edd1c5d48dcc0fc62e 2017112612:00:09-UTC ./tools/tdccmp/par
 d591640a695dd272f92db7bc082ad05ac110dd2b 2017112611:47:05-UTC ./tools/tdccmp/mkdiff1
 e5c33891d88a6fc03d6633c64fe05082288b1c84 2017112611:42:07-UTC ./tools/tdccmp/mkdiff
 144a5f23e1f42c87bd6a8c59887a6b9f51e8989a 2017112611:29:54-UTC ./tools/tdccmp/tdccmp.prg
-b412967b578538db77d2b52334ce735b0ea39e50 2017102508:05:39-UTC ./tutor/xbrwarr/config
 3342309244459e9a622c3ec680a08850f78e9540 2017101519:35:45-UTC ./jt/sslforward/socketpair.cpp
 b1beeb306509233fafbb2a80467d83fd8a82058f 2017101519:24:32-UTC ./jt/sslforward/serveclient.cpp
 7481cb8186696a2e4ccd6372f71d78f164f0ce60 2017082008:13:51-UTC ./tools/zlib/zlib.ch
