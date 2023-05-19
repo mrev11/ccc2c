@@ -1,3 +1,9 @@
+2023-05-19
+  windows-console/console.cpp eliras javitva;
+  unix-cterm/screensize.cpp alternativ implementacio;
+
+2023-05-17  windows-console/console.cpp eliras javitva;
+
 2023-05-15 brwColor() konfiguracio valtozott:
   Ha a brwloop()-ok melyebben vannak egymasba agyazva,
   mint ahany szin konfiguralva van, akkor az utolso konfiguralt 
