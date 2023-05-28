@@ -1,7 +1,14 @@
-5c3a87ffb1133159098526fadb67652daac30aa9 2023052319:44:50-UTC ./jt/jterminal/jterminal.jar
-2fddab2a955c2aa09aa2a5ba2277f666f6a11e5b 2023052319:44:50-UTC ./log-install
+1651010b74f430d37c77484eeea61a5c12196bb3 2023052811:02:00-UTC ./CHANGELOG_vermes
+91943245d95cea752b755b61bf3895a287533f06 2023052808:24:28-UTC ./jt/jterminal/jterminal.jar
+93a38f9706d5e7f21da3dbc6716c0f54fc9c94ee 2023052808:24:28-UTC ./log-install
+7f3c92dfd06dbd60288a8f821b1556325657c3ba 2023052808:23:56-UTC ./usr/bin/linux/xstart
+f78650ae41672ededb603807461333ac9fbcab25 2023052808:23:29-UTC ./usr/bin/linux/prg2ppo
+e33dda9daa089a545a7834286654f1039a63afb8 2023052808:23:29-UTC ./usr/bin/linux/removecr
+14fa72f3550f6b78e978aa1b901371f4bfb68ec9 2023052808:23:27-UTC ./usr/bin/linux/build
+fa44b7835ea716d87eb7fb3d83c569d010e20129 2023052808:21:39-UTC ./usr/include/std1.ch
+e52dcc061ddc2fd89d38dd546eae1e9de8ad7ed4 2023052807:35:45-UTC ./ccclib/src/channel.prg
+538918e5b3866e520177c58ca6e47089a8a424f9 2023052722:36:18-UTC ./ccclib/src/qout.cpp
 4e0e918ef27d3c9b29a7945abbdb620fb7e2715a 2023052319:43:56-UTC ./usr/bin/linux/cterm
-f41b33498d38f4b5e3162210e97d99a52fa0a5c4 2023052319:39:43-UTC ./CHANGELOG_vermes
 388cb4c22caeec2183d0999213f3144de3fde314 2023052319:35:14-UTC ./terminal/common/ansi_rgb.h
 6065d0203fe2b7de0e4b862db1e86c2d4941a2a0 2023052319:35:12-UTC ./terminal/common/ansi_colors/gen_ansi_rgb_h.prg
 64ac35bf9a2a85f026a11303621ac132dbfc8207 2023052319:22:53-UTC ./terminal/common/xcurses/xcurses.cpp
@@ -28,10 +35,6 @@ deebeadc524efbaeecb1191bfeb3fcdeeee46e1e 2023051811:26:08-UTC ./terminal/common/
 a668cecc8f145a0239581ce4e20213895a4d94f7 2023051518:25:41-UTC ./tutor/xbrwarr/config
 099de67447e08b1221f5ada03dda75e1cdddcafc 2023051518:19:06-UTC ./ccclib/src/uic/brwmenu.prg
 bae62e0d4b0e036a29cf553e4cabc7ae3cc70e61 2023051517:05:48-UTC ./ccclib/src/ccc_config.prg
-d330a20fa580eb62e328c819948886f47e2ff0fd 2023051513:57:24-UTC ./usr/bin/linux/xstart
-70d67030e1624768167b7d60434c827a59893188 2023051513:56:59-UTC ./usr/bin/linux/removecr
-e3f9475af3b062b7e753572df36e827bddd12517 2023051513:56:58-UTC ./usr/bin/linux/prg2ppo
-111f4b40e5264b5c6a52e1faba0decbe534dd242 2023051513:56:57-UTC ./usr/bin/linux/build
 d6d80c5296aeb36c1a553525e8907c2fa55ae455 2023051513:30:50-UTC ./ccclib/src/color.cpp
 204a2766a765ca1c43714dbe684f6ebae73e3fe1 2023051513:12:39-UTC ./terminal/common/ansi_colors/draw_ansi_color.prg
 b2541a947241b8c56cca7b232cd95cd32d3e19de 2023051512:59:39-UTC ./terminal/common/ansi_colors/m.msys2
@@ -1217,7 +1220,6 @@ b1beeb306509233fafbb2a80467d83fd8a82058f 2017101519:24:32-UTC ./jt/sslforward/se
 d8434c066b71fc4b36f1f58bb2f2889a39bba218 2017080212:45:33-UTC ./terminal/gtk3/m
 34b7320bcfcd6770c45e3444c01796f71f0b0cd0 2017080209:23:15-UTC ./terminal/gtk3/keycode_gtk.cpp
 7d132e459e82157cd8533396aa9000a1886bbe30 2017072511:29:08-UTC ./ccclib/src/uic/inkey.cpp
-062a2c2ba512ed5eb4bde18be466287127658a77 2017072511:06:24-UTC ./usr/include/std1.ch
 53dc488329cb25cb55e2aaedf232bfc73f691ff8 2017052315:13:21-UTC ./tutor/xbrwarr/s.bat
 9f6be0e299ff4ddfdb84c3a1bf20ddd678805534 2017052107:28:40-UTC ./tools/zgrep/zgrep.prg
 4e5ebc29baf4aaff61856c17139f75098e0cf390 2017051905:35:17-UTC ./tutor/xbrwarr/s

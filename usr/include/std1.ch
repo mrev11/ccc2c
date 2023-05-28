@@ -87,6 +87,14 @@
       => Set( _SET_PRINTFILE, <(file)>, <.add.> )
 
 
+#command SET CHANNEL(<c>)  <x:ON,OFF>   => <c>:<x>
+#command SET CHANNEL OFF                => channel.off()
+#command CLOSE CHANNEL(<c>)             => <c>:close
+#command SET CHANNEL(<c>) to            => <c>:close
+#command SET CHANNEL(<c>) to <(file)> [<add:ADDITIVE>];
+      => (<c>:=channelNew(<(file)>)):open(<.add.>)
+
+
 //#command SET DEVICE TO SCREEN           => Set( _SET_DEVICE, "SCREEN" )
 //#command SET DEVICE TO PRINTER          => Set( _SET_DEVICE, "PRINTER" )
 
