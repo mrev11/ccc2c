@@ -1,3 +1,12 @@
+6baf42568d73a7618fb6825916f92d41ee25b1cc 2023060513:59:15-UTC ./log-install
+985ea2298eb78ebe58b25810a909edc9e04bfbf3 2023060513:59:12-UTC ./tutor/rename/rnm.say
+ac5ca03fff842aa03704d1868f82212ee157487e 2023060513:56:40-UTC ./tools/ddict2/mskmerge.say
+78ea3791fdd34ee9786f70d85097df3cb967ffa8 2023060513:56:40-UTC ./tools/ddict2/mskowner.say
+fcd3702be841a433da2e1b2fa0d3ed24b1315586 2023060513:56:40-UTC ./tools/ddict2/msksor.say
+612da8b77ae01ba799336a3bde536a7b72dd629c 2023060513:56:36-UTC ./tools/dbfview/search.say
+457a7fa471354b9000d96433e251f4ad177c494e 2023060513:47:00-UTC ./usr/options/mng/gccver.opt
+de5fe9ebcc0156006616fdb3e5130cc0ad54cb93 2023060416:52:12-UTC ./setup/setup-windows/prg2ppo/input.cpp
+f5ba42e0d188d51f55a87cc942e270f67bf2cf45 2023060416:52:10-UTC ./setup/setup-windows/prg2ppo/xtxlegal.cpp
 ba33aa7c7c9a918c1c9de14a64c7956e5424eebf 2023060415:05:04-UTC ./setup/setup-windows/cc.msys2
 c3f5777562f946619afc600a1e96c19a0cb339d5 2023060413:43:08-UTC ./setup/setup-windows/setcursor.cpp
 3309b14ebf2299f37cc69c53ee81ed596e8031f3 2023060413:43:03-UTC ./setup/setup-windows/alert.cpp
@@ -13,11 +22,6 @@ a4049f2d2ebef48f767a6ded25eab852fa036ca2 2023060413:35:55-UTC ./setup/setup-wind
 feeebf303e1b202e7244471126d500dfd4e45dc6 2023060413:35:54-UTC ./setup/setup-windows/prg2ppo/dbtransl.cpp
 63881c909e22b2fc8149b7a1ed18ee74d3d45241 2023060413:35:52-UTC ./setup/setup-windows/prg2ppo/clinput.cpp
 f1312d0e1f453b9891b77fb53e9b9b93c18eb787 2023060413:35:52-UTC ./setup/setup-windows/prg2ppo/cloutput.cpp
-fc77fe918c0ceee247db3edfd0b1626afc215467 2023060413:35:52-UTC ./setup/setup-windows/prg2ppo/xtlex.cpp
-f9f51b35ed119e413ba3443c29ed8377beab3edc 2023060413:35:51-UTC ./setup/setup-windows/prg2ppo/trinp.cpp
-cab397b2d053e3c9f6ffd50f981c23adab79e961 2023060413:35:48-UTC ./setup/setup-windows/prg2ppo/input.cpp
-63951ac650eb1dae0c54295c368e0f6a34b3e995 2023060413:35:48-UTC ./setup/setup-windows/prg2ppo/trfind.cpp
-2f32ae1fa7c834c2475c8cbd1c4faf43d33faa86 2023060413:35:48-UTC ./setup/setup-windows/prg2ppo/xtxlegal.cpp
 e57a7892a879e14cd376d0dc14a172334b330326 2023060413:35:46-UTC ./setup/setup-windows/build/xsplit.cpp
 a75f7125750296f88d56f8dd1ff58d78a04ceb6a 2023060413:35:45-UTC ./setup/setup-windows/build/verifdep.cpp
 4ea24580410e4b12c24ce137543b63e3d2aae65e 2023060413:35:44-UTC ./setup/setup-windows/build/srcroot.cpp
