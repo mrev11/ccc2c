@@ -1,16 +1,10 @@
-5fce937c66e18e3895ca88c2d2c0bfc9e967cc88 2023061012:58:47-UTC ./CHANGELOG_vermes
-3f7c9595d6ea396e5a9f0e3d794a925907ba0c33 2023061012:41:51-UTC ./usr/lib/lin/log-content
+efac9bf557c2556bdf0d488afe9088e675195af0 2023061608:11:31-UTC ./CHANGELOG_vermes
+13996975a80b9fac425f1e165d0128ff57311491 2023061608:06:39-UTC ./jt/jterminal/jterminal.jar
+663accf293943ede69b80f2d8f963e9af2b4e3f4 2023061608:06:39-UTC ./log-install
+5783bdf8d30abac082f06bed224fe4f5afa5c244 2023061608:06:22-UTC ./usr/bin/linux/setperm
+ee5149828175a773dcf1ff73ac780ded4ad05cb1 2023061607:38:08-UTC ./ccclib/src/lat2utf8.lex
+065c91ea0ff017cb3d85db50ad4df6c81dc75040 2023061307:28:31-UTC ./tools/setperm/setperm.prg
 6b8785736b9e55c11b1ec2744d19367a12702107 2023061012:41:49-UTC ./usr/lib/lin/content
-7544052557dd558de21e1495fa7ef0923efbc803 2023061012:32:25-UTC ./log-install
-50521fc2ca3b45e01560afe5efba60c3c621f0ef 2023061012:22:18-UTC ./usr/bin/linux/gitfollow
-d0871b1fedd29ddea138bab2eda72c1c7c4a2ba2 2023061012:22:18-UTC ./usr/bin/linux/gitnav
-75a8238f30673851d9edfe31871c59f3b03f3907 2023061012:22:18-UTC ./usr/bin/linux/gitref
-d3673eee66c8c3f2fa0f5ce10c0c2ae95e6d5866 2023061012:22:18-UTC ./usr/bin/linux/gitstat
-ad71df23d7151251b0352adf8a71453b1bea2e1a 2023061012:22:18-UTC ./usr/bin/linux/gitview
-fd5f0e087d6a86a765ee6fef27e22fb6b13491fa 2023061012:22:15-UTC ./usr/bin/linux/filetime-restore
-53e8e36c913e4ebc072de4a94d563ef5fbaca29f 2023061012:22:15-UTC ./usr/bin/linux/filetime-save
-80b601edd9072f51061f18d9a8b5b17b11ebce28 2023061012:22:15-UTC ./usr/bin/linux/firstpar
-023e92b33200bc546ddddef6af72dddfc91e72c1 2023061012:22:12-UTC ./jt/jterminal/jterminal.jar
 869b032157b18b4b22beaf99f63720356d320742 2023061012:22:11-UTC ./jt/jterminal/base64.class
 30b017f69ae9b3b8cc2789fbbae4672516f0c9c1 2023061012:22:11-UTC ./jt/jterminal/getutil/cellcolor.class
 b5dc01e98374526785744a45811d32ab4e137ff8 2023061012:22:11-UTC ./jt/jterminal/getutil/checkfield.class
@@ -112,7 +106,6 @@ bf8c4c87800bb0bbde610d67aea28575db4cf23b 2023061012:22:07-UTC ./usr/bin/linux/zg
 c1d3d961f29fbeb2d08d61ba91836b694c348545 2023061012:22:02-UTC ./usr/bin/linux/bt2ted
 2596e84a22125fcb2994825ec30b16cafed7ba8e 2023061012:22:02-UTC ./usr/bin/linux/mkentitylib
 887ada877f55482710c19448052dba7f5f0c479e 2023061012:21:56-UTC ./usr/bin/linux/savex
-e2a326d6b3d872360cba9b51cb40fc867d75c3d8 2023061012:21:56-UTC ./usr/bin/linux/setperm
 acea9baf73ec7f977f5cbe10b948afec42fe9d41 2023061012:21:53-UTC ./usr/bin/linux/dddel
 1be7ed1e912ad79d047aabe91924044b2d70ac5d 2023061012:21:53-UTC ./usr/bin/linux/ddict2
 2ec13aae4f0300283b090b970af39a7da0afb27a 2023061012:21:53-UTC ./usr/bin/linux/list
@@ -712,7 +705,6 @@ ab92ba20056556a3be72f9d8093abfde72baf2f5 2021122422:17:43-UTC ./make_verf
 a1f44642bb687b8ea0af03f7c5689076dcfbccb1 2021122320:22:42-UTC ./tools/xmlrpc-framework/m.msys2
 8c7cab44db42c4298ad76cf934e9ff5670cfe226 2021122320:21:24-UTC ./tools/xmlrpc-framework/m
 995095c7fdb4cff21a4733fecac0612e0e8016c9 2021122320:14:39-UTC ./jt/jtdemo/mkall
-a5d028d3e7696a322b035c60c041236f2ebddd7e 2021122319:57:39-UTC ./tools/setperm/setperm.prg
 90d33d13ac6929f59f8cd7f7e31faaa9da6c580e 2021122317:10:32-UTC ./tools/socket/m.msys2
 478b86af40d3c048bb5603f65e29c94a1960cfa3 2021122317:05:02-UTC ./tools/sql2/test/entitybrowse/m.msys2
 a640be365345316490c36916a8fc4abe0e4d3acd 2021122317:02:34-UTC ./tools/sql2/test/entitybrowse/mo.msys2
@@ -1317,7 +1309,6 @@ fb2fdd2ed8dcc0de718f7df6051dcb6d7a40de7c 2017021118:39:34-UTC ./usr/build/window
 e3da661cb6e9cdc67af93bb5ec3b89b0d44a9f62 2017011812:34:46-UTC ./tools/sql2/sql2.md.md
 53990704edc042671181633fb79efbaf9950ccbe 2017011614:01:20-UTC ./ccctools/build/build.md
 7eb77f0d8a826a87f5a8bd90ee4acfd6ecf957e3 2016121619:34:36-UTC ./ccclib/src/windows/filetime.cpp
-f33436be9a0009e81cca7bda4660c5b47afd134b 2016120705:12:11-UTC ./ccclib/src/lat2utf8.lex
 290c77e6523713d0ec697964f1e7fccff8dfb8f1 2016120513:56:54-UTC ./tabobj/common.src/common.hu.ver
 0a4560d3a1cd0caef189948e9a14e644144bbc87 2016120314:46:46-UTC ./usr/build/linux/tdc2ch.bat
 000adf8852af5ee8ecd1c03f896da505833dc62c 2016120314:23:30-UTC ./tools/tdc2prgch/valt.dok
