@@ -1,6 +1,13 @@
-0b68f51b2cde39bcaa44dd0fb359514c23e7925b 2023061608:16:00-UTC ./CHANGELOG_vermes
-13996975a80b9fac425f1e165d0128ff57311491 2023061608:06:39-UTC ./jt/jterminal/jterminal.jar
-663accf293943ede69b80f2d8f963e9af2b4e3f4 2023061608:06:39-UTC ./log-install
+032e4c2fd04b2a3cedb2ca27832ddaf19ccd516b 2023061809:31:16-UTC ./ccctools/build/build.prg
+cf410a42f8208088d588b7a389fa8ac7ddc2f895 2023061809:25:39-UTC ./usr/bin/linux/build
+91d6c786db7fb4859764918a7dcae6b73e16c2ad 2023061714:54:24-UTC ./CHANGELOG_vermes
+c1b88301fb0a6f96c822a8915cdf456420034e0f 2023061714:49:35-UTC ./ccctools/build/build.hu.ver
+7e0a1c0e8b80168b746b34e09989559012b2743d 2023061714:48:35-UTC ./jt/jterminal/jterminal.jar
+a428e081904c7a3d894ed3690b7b9766277cf19e 2023061714:48:35-UTC ./log-install
+062aab1f236a82eb458ad1539a0c34b9b38be2dd 2023061714:48:18-UTC ./usr/bin/linux/savex
+2f26a1cf0bf7b3bc1afb3451d95bea005008cca3 2023061714:46:52-UTC ./setup/setup-unix/m
+fd9f4843c786b4c737d41665298082b7e6854a2c 2023061711:25:49-UTC ./tools/savex/sortname.prg
+4e7fab351a011138d10d3b67cc4e886a979d406b 2023061711:23:47-UTC ./tools/savex/savebrowse.prg
 5783bdf8d30abac082f06bed224fe4f5afa5c244 2023061608:06:22-UTC ./usr/bin/linux/setperm
 ee5149828175a773dcf1ff73ac780ded4ad05cb1 2023061607:38:08-UTC ./ccclib/src/lat2utf8.lex
 065c91ea0ff017cb3d85db50ad4df6c81dc75040 2023061307:28:31-UTC ./tools/setperm/setperm.prg
@@ -105,7 +112,6 @@ bf8c4c87800bb0bbde610d67aea28575db4cf23b 2023061012:22:07-UTC ./usr/bin/linux/zg
 61de16227fe8b919c2e155415c38087dc5712ab7 2023061012:22:02-UTC ./usr/bin/linux/bt2tds
 c1d3d961f29fbeb2d08d61ba91836b694c348545 2023061012:22:02-UTC ./usr/bin/linux/bt2ted
 2596e84a22125fcb2994825ec30b16cafed7ba8e 2023061012:22:02-UTC ./usr/bin/linux/mkentitylib
-887ada877f55482710c19448052dba7f5f0c479e 2023061012:21:56-UTC ./usr/bin/linux/savex
 acea9baf73ec7f977f5cbe10b948afec42fe9d41 2023061012:21:53-UTC ./usr/bin/linux/dddel
 1be7ed1e912ad79d047aabe91924044b2d70ac5d 2023061012:21:53-UTC ./usr/bin/linux/ddict2
 2ec13aae4f0300283b090b970af39a7da0afb27a 2023061012:21:53-UTC ./usr/bin/linux/list
@@ -144,7 +150,6 @@ e68275cff775d5047f7c771c58efdf296db4566f 2023061012:21:23-UTC ./usr/bin/linux/pg
 8326237a6f779c925c5a4bdbce4812deb381a27d 2023061012:21:16-UTC ./usr/bin/linux/mklink
 a33d24919f4f8cb1d0e3f4a94b5a480806c27a02 2023061012:21:16-UTC ./usr/bin/linux/prg2ppo
 9d080fa25fb585737f7ccb2f37eed6aa291f871d 2023061012:21:16-UTC ./usr/bin/linux/removecr
-a79427b7274bcbbe485677afc769cc6fb0a61cb6 2023061012:21:14-UTC ./usr/bin/linux/build
 1119857f7909302125fdc4ed85c0c1a7f8ca5666 2023061012:20:57-UTC ./usr/bin/linux/ppo2cpp
 b48987323ace24a9924c5cccceea82a7fde13892 2023061012:20:56-UTC ./setup/setup-unix/prg2ppo/rsplink
 57bc62e8951615a463566392e76d6ea22b793094 2023061012:20:56-UTC ./setup/setup-unix/removecr/rsplink
@@ -412,8 +417,6 @@ f83bc74bb36b7508503b67878e48aad82d1c815b 2023011610:27:58-UTC ./tabobj/tbbtbtx/b
 927b8c4f7a34284185d8c95b1f837773932e6bf9 2023011523:36:26-UTC ./ccclib/src/blkenv.cpp
 ae825a886f96e452f5772ad43da24c8dff7263fa 2023010712:43:10-UTC ./tabobj/common.src/transact.prg
 735d8c33c9028cba1f50eb73d3323a9cadc6e5d5 2023010616:12:44-UTC ./tabobj/common.src/tabfldtb.prg
-a657586e56a952dbc2457cb708ed8ba27932d3f7 2023010511:22:34-UTC ./ccctools/build/build.prg
-577848985fb4d6f05129d736ce0646add0cbb61e 2023010511:22:23-UTC ./ccctools/build/build.hu.ver
 9a0d65a62da8425f950142000a1797e8199350bf 2023010510:34:24-UTC ./tabobj/common.src/charconv/btcharconv.ch
 0f2635ba8b6ba8252081c1101f1d99a19ff21aab 2023010510:33:06-UTC ./tabobj/tbbtbtx/m
 05296ece0b448f740344b53760cbe38311af64bf 2023010510:30:23-UTC ./tabobj/tbbtbtx/par-unixui.bld
@@ -553,7 +556,6 @@ db79710c2facfb06298cf56ee1b38b7634cd6be7 2022081012:06:42-UTC ./tabobj/utility.s
 f97e0f32c8d798f4106b26309dec9a9deb6b9dfb 2022060521:45:30-UTC ./usr/include/msgout.ch
 1f3bb56597e4a909343e1883cd4a552940c74fc7 2022050518:31:13-UTC ./ccclib/src/cccver.cpp
 0f41f6496966aa600a196c4673a092d342878f3f 2022043014:13:40-UTC ./terminal/terminal-test/xstart.par
-616b1b2f8a07ca0a8460e5604f60c4c3913559cb 2022043014:01:29-UTC ./setup/setup-unix/m
 a6153726990e648567ffc405e883bdcdbc34d425 2022042922:15:16-UTC ./tools/socket/m
 e7b25b1eb60535d9f2c00ad05c888a13cb015f00 2022042922:12:47-UTC ./ccclib/src/uic/termapi/m
 a8f6cd7762254591289b941b13d45b3226cebd51 2022042922:12:06-UTC ./ccclib/src/uic/m
@@ -1003,6 +1005,7 @@ a036c7ed0efa2d135c90e15135edcb50693d66ea 2019062012:06:47-UTC ./tools/pcre2/pcre
 9ac30c207cdef91beaea1508c1d8c998cd822c28 2019062012:06:43-UTC ./tools/pcre2/pcre2demo/pcre2demo-0-32.cpp
 fc2b0542d835dcc1d1dd6c07fb0af92abbfdb6b7 2019061012:44:57-UTC ./usr/build/linux/msk2html.bat
 563ba05ea809c2d15e21f8f9c063976a8bba06cd 2019052220:03:03-UTC ./tools/pcre2/pcre2.cpp
+f9e8af5f837a39d8457d139a237d47e0a2a32a94 2019022405:52:43-UTC ./usr/bin/linux/rep2pdf/rep2pdf
 0487892b146ccc8dc7c18ccb632dc1e5d526704d 2019011707:21:51-UTC ./tutor/dtree/dtree.prg
 762e9d7ca2aadea69412c1459b42db63c671251e 2019011706:54:24-UTC ./terminal/terminal-test/screenwr/s
 119a7d4be7039965e886cf93e81b4ee556a006fa 2018121419:11:43-UTC ./terminal/common/fontspec.cpp
@@ -1023,7 +1026,6 @@ cfcc4e9408181a3da36d8a54947f298d0d5af409 2018081006:14:18-UTC ./tools/xmlrpc/rpc
 683f56000af46ab5e1d2d74215b949069cfd150d 2018073106:05:58-UTC ./setup/setup-unix/prg2ppo/xtlex.cpp
 80f319369ac1b6e3dd664518c07857d7bc2f301f 2018072310:01:39-UTC ./ccclib/src/asortkey.cpp
 3a5c6ee85396a0b2e25202994cca6736779eef2b 2018072310:01:02-UTC ./setup/setup-unix/asort.cpp
-eccc65ac89fded00523e26cced570135e8c6e60a 2018072308:05:58-UTC ./tools/savex/sortname.prg
 50a582b2abb5264dd480d9a07522f3ccb5f90593 2018072208:47:18-UTC ./usr/include/variable.h
 b87289382b32cfc2c8f5725ebfd094eb107c47ad 2018071406:15:54-UTC ./setup/setup-flex/olvass.txt
 9efc6d6f53e93884bce3dd92c3dd28a37d9d0095 2018071315:47:20-UTC ./setup/setup-flex/version.h
@@ -1358,7 +1360,6 @@ a468563c3e7a62dfad2eab7f0ca09d2df1977a7e 2016101308:42:14-UTC ./ccclib/src/windo
 be3af9f37837f4c03986e809d1f1ba1e27688f63 2016100211:49:53-UTC ./tools/savex/findfile.prg
 a381102b0ed48eedbbb28612d80af5bf83cc140b 2016100211:32:20-UTC ./ccclib/src/setfdati.prg
 aaeb6838a68b0f0a04925426ec7c09e0ed3c8187 2016100211:23:40-UTC ./usr/include/compat_ccc3.h
-e2b977657dc0f891385fd6ee115e9e749e3197c4 2016100208:42:52-UTC ./tools/savex/savebrowse.prg
 cf63fe140195bcac0e1a5f57cedf6087a275428f 2016100107:19:14-UTC ./ccclib/src/uic/termapi/termio.h
 38e9313d79fffb44c3da9d559844d88d6dd11699 2016093008:52:28-UTC ./tutor/fpath/parfile.bld
 3fa71f440f2d9cf0488538b72f1673b9ae4272e3 2016092913:43:49-UTC ./jt/jtdemo/superdemo.prg
