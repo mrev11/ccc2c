@@ -1,9 +1,11 @@
+2023-06-21 windows setup keszlet frissitve;
+
 2023-06-21 unix setup keszlet frissitve;
 
 2023-06-17 build 1.6.3 include-ok keresese javitva;
 
 2023-06-16 lat2utf8 javitva:
-  Az ismeretlen karaktereket '?'-re csereli (enélkül 
+  Az ismeretlen karaktereket '?'-re csereli (enelkul 
   a latex2pdf konverzio fennakad a hibas karakteren).
 
 2023-06-16 
