@@ -1,4 +1,4 @@
-//input: strtran.ppo (4.8.0)
+//input: strtran.ppo (4.10.0)
 
 #include <clp2cpp.h>
 

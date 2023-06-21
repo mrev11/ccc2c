@@ -1,4 +1,4 @@
-//input: day.ppo (4.8.0)
+//input: day.ppo (4.10.0)
 
 #include <clp2cpp.h>
 
@@ -26,8 +26,6 @@ extern void _clp_strtran(int argno);
 extern void _clp_substr(int argno);
 extern void _clp_val(int argno);
 extern void _clp_year(int argno);
-static void _ini__clp_cdow_d(VALUE*);
-static void _ini__clp_cmonth_m(VALUE*);
 
 //=======================================================================
 void _clp_day(int argno)
@@ -104,7 +102,21 @@ argno=1;
 push_call("_clp_cdow",base);
 //
     line(39);
-    static stvarloc _st_d(_ini__clp_cdow_d,base);
+    static stvar _st_d;
+    static int _ini_d=[=](){
+        string("");
+        string("Sunday");
+        string("Monday");
+        string("Tuesday");
+        string("Wednesday");
+        string("Thursday");
+        string("Friday");
+        string("Saturday");
+        array(8);
+        assign(_st_d.ptr);
+        pop();
+        return 1;
+    }();
     line(40);
     push_symbol(_st_d.ptr);//_clp_cdow
     push_symbol(base+0);//dat
@@ -116,19 +128,6 @@ push_call("_clp_cdow",base);
 stack=base;
 push(&NIL);
 pop_call();
-}
-
-static void _ini__clp_cdow_d(VALUE* base)
-{
-    string("");
-    string("Sunday");
-    string("Monday");
-    string("Tuesday");
-    string("Wednesday");
-    string("Thursday");
-    string("Friday");
-    string("Saturday");
-    array(8);
 }
 //=======================================================================
 void _clp_month(int argno)
@@ -173,7 +172,26 @@ argno=1;
 push_call("_clp_cmonth",base);
 //
     line(54);
-    static stvarloc _st_m(_ini__clp_cmonth_m,base);
+    static stvar _st_m;
+    static int _ini_m=[=](){
+        string("");
+        string("January");
+        string("February");
+        string("March");
+        string("April");
+        string("May");
+        string("June");
+        string("July");
+        string("August");
+        string("September");
+        string("October");
+        string("November");
+        string("December");
+        array(13);
+        assign(_st_m.ptr);
+        pop();
+        return 1;
+    }();
     line(56);
     push_symbol(_st_m.ptr);//_clp_cmonth
     push_symbol(base+0);//dat
@@ -185,24 +203,6 @@ push_call("_clp_cmonth",base);
 stack=base;
 push(&NIL);
 pop_call();
-}
-
-static void _ini__clp_cmonth_m(VALUE* base)
-{
-    string("");
-    string("January");
-    string("February");
-    string("March");
-    string("April");
-    string("May");
-    string("June");
-    string("July");
-    string("August");
-    string("September");
-    string("October");
-    string("November");
-    string("December");
-    array(13);
 }
 //=======================================================================
 void _clp_year(int argno)
