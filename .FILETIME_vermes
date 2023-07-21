@@ -1,4 +1,5 @@
-2709e14d8a6dad91c1e4c60abd099cf878793e7c 2023071707:33:30-UTC ./CHANGELOG_vermes
+fbcd64db790df417844af0403776f13f2b9ba337 2023072112:49:12-UTC ./CHANGELOG_vermes
+610f1a083a935732d5372dc7e4b676e6cceb4f2f 2023072112:30:22-UTC ./tabobj/common.src/tabchlog.prg
 4bd4697448ad106e4867be78fa453c114694886e 2023070213:44:51-UTC ./jt/jterminal/jterminal.jar
 38c200baf978d6e11716eb631d115e06e76805fc 2023070213:44:51-UTC ./log-install
 869b032157b18b4b22beaf99f63720356d320742 2023070213:44:50-UTC ./jt/jterminal/base64.class
@@ -850,7 +851,6 @@ d6b2df18f84998e1f9ef5aaa02cc5aeab7ebae85 2021032510:21:17-UTC ./terminal/unix/te
 b15b2dd9b42da37dea1779c82bbe06a3f20cfd43 2021032510:10:01-UTC ./terminal/unix/terminal.xpm
 8d233b09251e4e5a9799f9459e9e0d3c7d9fad36 2021032509:11:28-UTC ./terminal/unix/parfile.bld
 df1a6c4d1a18361dd4cef5e46fc61a478fd5e2aa 2021032509:09:24-UTC ./terminal/unix/terminal.ico
-9f0145e7b1f051e427d4e80e52e35c4b7df0cb30 2021031610:31:44-UTC ./tabobj/common.src/tabchlog.prg
 1851d680da9755fc5586a0149c592914d61fc6ec 2021022111:00:50-UTC ./tools/mask/page.prg
 97b10eaf6a9438564cf7e6c86aaa868a63850c8b 2021022110:59:38-UTC ./tools/mask/msk2pge.prg
 6c393404fdea109336897c2da19d3211e4151d26 2021022110:58:41-UTC ./tools/mask/mask.prg
