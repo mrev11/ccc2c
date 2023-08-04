@@ -1,9 +1,9 @@
-a19abc6cb1dc86549bac17a50970b2027596b0e8 2023080321:16:43-UTC ./CHANGELOG_vermes
+d01f925c80a6ec367d29c1388c59d6713abcf5a3 2023080410:43:54-UTC ./CHANGELOG_vermes
+dc973cb1b207aa49779116ef4a82219c7f8be1f6 2023080410:34:48-UTC ./tabobj/common.src/tabchlog.prg
 afb39ea25ac8afc7fb23fb0ae8c0b3b654dc5ec3 2023080320:59:14-UTC ./ccclib/src/set.prg
 19a8fed3848f0c1eae0c632e5bf687cdaa9ba52a 2023080215:24:42-UTC ./jt/jterminal/jterminal.jar
 d16d0b075f12661808fb437261c78d8a1b23e885 2023080215:24:42-UTC ./log-install
 8479ccecce68c6c804b4527a9d7d8033890dff2e 2023080215:24:05-UTC ./usr/bin/linux/dbfview
-596996851c458f19035ca3a6f91280d96ca187cd 2023080212:21:29-UTC ./tabobj/common.src/tabchlog.prg
 8bd8c07163af7a195eda085e558a3b4e22864fbd 2023080111:34:22-UTC ./ccclib/src/channel.prg
 9a6abb26d8d22e86820d5f19b34b79ba3ea57f2c 2023072814:31:06-UTC ./usr/bin/linux/rnm
 db4da16afd7d63d73510bac66a1c1297d377cc72 2023072814:31:05-UTC ./usr/bin/linux/fpath
