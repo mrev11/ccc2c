@@ -1,9 +1,0 @@
-#!/bin/bash
-if [ "$CCC_TERMINAL" == "term" ]; then
-    export ZCOLOR_1="w/b"
-    export ZCOLOR_2="b/w"
-    export ZCOLOR_3="b/w"
-    z.exe "$@"
-else
-    z.exe "$@" &
-fi

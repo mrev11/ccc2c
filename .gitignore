@@ -17,6 +17,8 @@ outcpp
 rsplib
 rsplink
 gccver.opt
+cppver.opt
+cppver.exp
 
 *.exe
 

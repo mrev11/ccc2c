@@ -1,6 +1,5 @@
 #!/bin/bash
 . $CCCDIR/usr/bin/solaris/__unix.b
-export BUILD_LIB=ccc2_btbtx,ccc2_btbtxui,ccc2,ccc2_uic
+export BUILD_LIB=ccc${CCCVER}_btbtx,ccc${CCCVER}_btbtxui,ccc${CCCVER},ccc${CCCVER}_uic
 
 build.exe "$@"
- 
