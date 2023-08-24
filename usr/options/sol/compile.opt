@@ -20,6 +20,7 @@
 -Wno-unknown-warning-option
 -Wno-invalid-source-encoding
 -Wno-deprecated-declarations
+-Wno-unknown-warning-option
 -g
 -I/usr/X11/include
 -I/usr/sfw/include

@@ -23,4 +23,5 @@
 -Wno-parentheses
 -Wno-unknown-warning-option
 -Wno-deprecated-declarations
+-Wno-unknown-warning-option
 

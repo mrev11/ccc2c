@@ -1,9 +1,18 @@
 323f82fbf7caf70a7e348fcdb9451183234d50ed 2023082418:02:29-UTC ./setenv/unix/setenv
 9a00ec8237e914be61fcc0933ad92711099ba9af 2023082417:51:37-UTC ./setenv/addpath
-0d8c75d8beff3052c2c49937b3f014fa5bc01a9a 2023082411:02:52-UTC ./CHANGELOG_vermes
+95d1440f82ff9c31064d7aa3ab5c50eb95144651 2023082414:21:28-UTC ./CHANGELOG_vermes
+3763a292281b554d4fb1905fcdd1014775544647 2023082414:19:52-UTC ./usr/options/fre/compile.opt
+5f5cd24a153bee76ef52c93ef7e24ecccf231ef1 2023082414:17:32-UTC ./usr/options/sol/compile.opt
+e62e3fa518d377814bfb360925a68ac9c3fd42d1 2023082414:17:25-UTC ./usr/options/net/compile.opt
+2bacfe5f97a91227506189ffb69cd7ea56c1b9eb 2023082414:17:16-UTC ./usr/options/mng/compile.opt
+439cdebe94d5c1d4a1d6772094df5ddd45284211 2023082414:17:05-UTC ./usr/options/lin/compile.opt
+d20f65c14216861961b7e73ae85d72ff2a4ee5ba 2023082413:35:48-UTC ./usr/options/lin/cppver.opt
+d239a809a6b609e2e4333c37bb760e5d1cd69484 2023082413:06:38-UTC ./usr/setenv/unix/envccc
+dc7ce4f98ae68b86900664c19d97afac69a36d6d 2023082412:25:56-UTC ./usr/bin/freebsd/cppver.b
+01b4853ef500eeada5647a702a724ffbca63d4d5 2023082411:27:29-UTC ./setup/setup-lemon/m
+d6a714d51733be07d0b6eb86ed05a19cb4148ef3 2023082411:21:09-UTC ./setup/setup-flex/m
 9649e560e82f737cf129e3e982277cdf28c9d542 2023082409:53:59-UTC ./setenv/msys2/bashrcx
 3fc17050e3428a174b9606258e781b4a43594c08 2023082409:53:59-UTC ./setenv/unix/bashrcx
-92fdd7fa8e80f61bae0a4e22756205d1448b646e 2023082409:53:14-UTC ./setenv/unix/envccc
 4143e04a973d8fc781e1bff758b9db12afc4e6d4 2023082409:41:28-UTC ./setenv/msys2/envccc
 ba2f83a8324c0dc3977fe3255b3c420b7ddcf0b8 2023082409:19:03-UTC ./setenv/OLVASS
 fd69e16214beb73b4e9575c2d5c7c60ea36b9e68 2023082321:25:26-UTC ./log-install
@@ -39,7 +48,6 @@ a07ebb73e89cd5148902adac5a0f14f8e422406d 2023082321:02:06-UTC ./usr/bin/linux/se
 f7ec9936ae64de96337834231e2619bacffee72b 2023082321:02:04-UTC ./usr/bin/linux/ddict2
 6f2d8dd509cdaf33e6a20f198a2d49f2f36587ac 2023082321:02:04-UTC ./usr/bin/linux/list
 ee2de78e970ab98e6a91108af1e30b0e9da84279 2023082321:02:02-UTC ./usr/bin/linux/dbfview
-e7bee8777664a7397141485ca93f250ff25bfafe 2023082321:01:58-UTC ./usr/bin/linux/z
 f0ea4742d9409180862caf9af55414c8cb587113 2023082321:01:58-UTC ./usr/bin/linux/zhist
 19e30bd8be64c2382e8aa2d1f70e28bb66f116e6 2023082321:01:56-UTC ./usr/bin/linux/xstart
 b429bc4599d9995263138e3764031e8c0baebe1a 2023082321:01:54-UTC ./usr/bin/linux/tv
@@ -74,7 +82,6 @@ ca125fce4f01b00cec58d0cfe0a95694d8aab99e 2023082321:01:37-UTC ./usr/bin/linux/mk
 96633a31b8321dfccbd6f134f4eca92ff8263299 2023082321:01:24-UTC ./usr/bin/linux/ppo2cpp
 dd9772488b05008f057b7867fc89b744c0f39488 2023082321:01:13-UTC ./setup/setup-unix/compopt
 995daa4a273375ec24f148d768058c5bdf124f1c 2023082321:01:12-UTC ./usr/options/lin/cppver.exp
-479286699f11a3990b4e088559393bb7f7e0cc67 2023082321:01:12-UTC ./usr/options/lin/cppver.opt
 4ada0f1d19bd7fd3b8616f37782d681119872a85 2023082320:43:39-UTC ./make_verf
 a5839c58e13d178c24265075c2bae103f0d2d10b 2023082320:43:39-UTC ./make_verf.msys2
 ad21a304e39ddb9ff524ca75ae7e6eae49175a04 2023082320:43:39-UTC ./usr/bin/freebsd/__unix.b
@@ -138,7 +145,6 @@ c95cc84e3dda10a4bbe5b73bdb88299a5542b265 2023082309:14:16-UTC ./usr/bin/freebsd/
 0b92f0f564c01f366f53577437b2fbc972d664d8 2023082309:13:01-UTC ./usr/bin/linux/term.b
 3de0e7db9227181891bd9891720069ef342e150c 2023082309:12:50-UTC ./usr/bin/linux/bapp_unixc_btbtx.b
 8d12e426d7547b1b693f60b52c0180ba15384c4c 2023082309:12:43-UTC ./usr/bin/linux/bapp_unix_btbtx.b
-0c29b3a1d8dddccaba6fcd0d7d65f846b42324a1 2023082309:12:19-UTC ./usr/bin/linux/ce
 9870cb9cd5a67a824a62b1aed405f66b59df0310 2023082118:50:41-UTC ./usr/bin/netbsd/.gitignore
 869b032157b18b4b22beaf99f63720356d320742 2023082022:11:35-UTC ./jt/jterminal/base64.class
 30b017f69ae9b3b8cc2789fbbae4672516f0c9c1 2023082022:11:35-UTC ./jt/jterminal/getutil/cellcolor.class
@@ -247,12 +253,9 @@ d5182d212d0b7a448e8a25f49dc61a4a58ef3b89 2023082021:21:31-UTC ./usr/bin/freebsd/
 3a9cca4125c6f5935920f282d5f79ccc4b58873b 2023082020:59:25-UTC ./.gitignore
 829bc5b382b6a6ffd8f9feb176160030f3ebb2d9 2023082020:50:59-UTC ./setup/setup-unix/equalto.cpp
 907a7ef1f8852df40cd7950c63d13eea62a7dc92 2023082015:00:59-UTC ./ccclib/src/sckutil.cpp
-51135f71c21decba3f2ae8dd480c61f95a7de547 2023082015:00:59-UTC ./setup/setup-flex/m
-85cbab3cf97b0dba1e21ef2b71298effcd00ab04 2023082015:00:59-UTC ./setup/setup-lemon/m
 6c4f50cf909dbfa270553c3cdb7092ab1a6e97fe 2023082015:00:59-UTC ./terminal/windows-console/parfile.bld
 4e67c98f1f888ca296d815b503c11c2abf3ee070 2023082015:00:59-UTC ./terminal/windows-console/screensize.cpp
 574076d283e7b4b2a28bb5608b0fc211511e933f 2023082015:00:59-UTC ./terminal/windows/terminal.cpp
-8a0b74262d22e3ee80b1839fbb06fdddaee8c000 2023082015:00:59-UTC ./usr/options/mng/compile.opt
 046797ba8c5302f0928c9d2750ee496a7110ebd1 2023082001:02:55-UTC ./terminal/windows-console/console.cpp
 3dcb228125cfe4dede882b0b99b6ac7a937b4f7b 2023081822:29:48-UTC ./tutor/xbrwarr/m.msys2
 d8484384623743c335325fc609c9ff4088b11e6f 2023081805:41:28-UTC ./terminal/m.msys2
@@ -271,7 +274,6 @@ e42e4a483f7f70be2a1204afd2e11b61c85cb866 2023081416:12:05-UTC ./tools/crypto/sha
 046896302f74fcbf1b9a9406b501f18e9163b2fb 2023081416:11:35-UTC ./tools/crypto/sha1.cpp
 f808d16cc69694c7273afdf173ccb72730b52c24 2023081416:10:09-UTC ./tools/crypto/md5.cpp
 e16b5a34a8ea566cbf17aa8386f4c85ab36db760 2023081209:53:42-UTC ./terminal/windows-console/cterm.cpp
-2e1940b37408cf72a8add1cca3a6b21f911f83f5 2023080815:00:20-UTC ./usr/options/lin/compile.opt
 3098656548efced941aaa40fc8ac03674089e7fc 2023080714:03:23-UTC ./tools/textview/demo/demo.prg
 ed08e2716a62722b6a46f85ee02d68c315a67295 2023080713:53:30-UTC ./tools/textview/tvdisplay.prg
 f2d3e8b3dee5b93b2c1f066f918b802791ef9198 2023080713:34:16-UTC ./tools/textview/demo/s
@@ -530,9 +532,6 @@ c12e2d790604d2c0c66b51e0bddaa90bd334b316 2023030711:39:06-UTC ./tabobj/tbbtbtx/b
 71b015bd4ce047ba87eee4e87ab5b3ae7ff8dbbf 2023020816:00:26-UTC ./ccclib/src/unix/filecreat.cpp
 914fbc0f1d3fe14755f3293bb53e7c2f70bb3c94 2023020815:58:43-UTC ./usr/include/fileio.ch
 4ba003de333e6dc5d4cb8ae3385fbe66c9e3b08e 2023012514:00:29-UTC ./ccclib/src/unix/thread.cpp
-2ea1df46fed22f49cd6e4cec99242d5c8ac8528c 2023012509:08:13-UTC ./usr/options/sol/compile.opt
-6c6248be8ff021f24d7d2086eff1d6d5ad0d4a81 2023012509:08:05-UTC ./usr/options/net/compile.opt
-0c8ba9df9a7ad0cd42cffcceb51893b8bbcb8c4d 2023012509:07:45-UTC ./usr/options/fre/compile.opt
 d0414646969e1bed2879a7e7b9506dc5214a38b1 2023012415:07:52-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 da88e64c85b24d640b8fce39a8b9bd0a0e350567 2023012010:11:18-UTC ./ccctools/ppo2cpp/codegen.h
 e4dc223ab1a955e775152a5eb32870e06eb8fa8c 2023012010:09:40-UTC ./ccctools/ppo2cpp/codegen.cpp
