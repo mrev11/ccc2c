@@ -1,3 +1,10 @@
+50dce86ba2c60fc14982941343384869db0114ec 2023092018:15:13-UTC ./CHANGELOG_vermes
+67f1c6a94c62eb325fe54b7f150c82d349e848b9 2023092018:10:52-UTC ./tools/zlib/demo/m
+54cf58d1a1c97d6dd0fd89b682c4a09f0b9fd1e4 2023092018:02:20-UTC ./tools/zlib/demo/gzread.prg
+fd848531c9e213505cac1feff0b388a2ca1cb44a 2023092017:59:20-UTC ./tools/zlib/demo/gzwrite.prg
+2c8be02889e44ad30e66f1cf1a1a1ae9066f5ac8 2023091917:58:41-UTC ./tools/zlib/demo/deflate.prg
+a2a3394115cf9d281aca76258ed5d9f6c303d537 2023091917:50:54-UTC ./tools/zlib/demo/inflate.prg
+3c9c588d0490c1fdda0fecac6f71da56d9825684 2023091816:51:04-UTC ./ccclib/src/string.cpp
 f52329f13409ef9b5e8953aecbd949b038cbe3dd 2023091612:47:31-UTC ./jt/jterminal/jterminal.jar
 8767dbedc623682ba03dbf960b4b50d9124014d5 2023091612:47:31-UTC ./log-install
 5337e16b261ed3e5a4bf3863bfab70a9e9853614 2023091612:47:27-UTC ./usr/bin/linux/delobj
@@ -68,7 +75,6 @@ bd24950d0079e2da1bff6f329d7758854e9e0dd6 2023091612:46:22-UTC ./setup/setup-unix
 f7cc80e3583adbba69afcf32cb58a6bd0a406666 2023091612:46:21-UTC ./usr/options/lin/cppver.exp
 36ac688ba750d81acf38cd5798f131e3b0a77b31 2023091612:46:21-UTC ./usr/options/lin/cppver.opt
 49be15e14406cfd3afab27f54247b4c143a2dd05 2023091612:39:33-UTC ./tabobj/tbbtbtx/dbinfo.prg
-b4175635753bace2caa0fba5b2110a6641919672 2023091611:19:19-UTC ./CHANGELOG_vermes
 e4b176c66b4112615be7ce1674038e3858507cb3 2023083011:16:45-UTC ./usr/setenv/wincmd/envccc.bat
 7ee6cacdcb1222f1f82a89f5f0d428770506ae10 2023083011:11:35-UTC ./usr/bin/windows/cenv.bat
 5ed330657540b7625b016c1d4d3b487e7cc5b765 2023083010:15:52-UTC ./make_base.bat

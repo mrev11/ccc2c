@@ -21,6 +21,14 @@
 #include <string.h>
 #include <cccapi.h>
 
+
+//------------------------------------------------------------------------
+void _clp___maxbinlen(int argno)
+{
+    stack-=argno;
+    number(MAXBINLEN);
+}
+
 //------------------------------------------------------------------------
 void _clp___maxstrlen(int argno)
 {
