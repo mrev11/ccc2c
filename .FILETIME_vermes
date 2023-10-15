@@ -1,3 +1,6 @@
+f36a74bf09b53e6ab17ee70a832a40b364c9c773 2023101517:09:18-UTC ./CHANGELOG_vermes
+0c87eb5ef8d33dc097adabae2b719305d60226aa 2023101517:00:47-UTC ./tabobj/tbbtbtx/utility/btdecrypt.prg
+2d8e0ff540d3ef0e2041405247f9f90c3456a399 2023101517:00:47-UTC ./tabobj/tbbtbtx/utility/btencrypt.prg
 f96fd81779d652961217255871a1ce5e50dd7901 2023101511:21:03-UTC ./jt/jterminal/jterminal.jar
 dff8ba138377fde7ff4b9d943acfd51e69dddbcc 2023101511:21:03-UTC ./log-install
 b7c99f57d69e11019caa77088b75dd02ea276612 2023101511:20:40-UTC ./usr/bin/linux/xstart
@@ -16,7 +19,6 @@ c6441ce834cb67b2bb97aeac47f8c4d0e1377145 2023101511:20:33-UTC ./usr/bin/linux/bt
 8d8ec689412d9f8f7e12c25bf6e2fa6a700fd5a1 2023101511:20:20-UTC ./usr/bin/linux/prg2ppo
 3e66199348b69c883facc5b0a914b77fb175ec3f 2023101511:20:20-UTC ./usr/bin/linux/removecr
 07e7a539da9f34d676b2baab1ba58a080e2be864 2023101511:20:19-UTC ./usr/bin/linux/build
-e3c0a019f644f9017a97c74c8a2199b25ed60b83 2023101511:14:26-UTC ./CHANGELOG_vermes
 780b094f1d99f253c5008ce45c4ee76ddd4fa6f1 2023101511:11:52-UTC ./.gitignore
 480cae14f29a3d067b970565618cf7a9a73c4e74 2023101416:47:48-UTC ./tabobj/tbbtbtx/utility/btpasswd_windll/btpasswd.cpp
 70be440df01577498c4dfc6b13108fedd2dd7741 2023101411:41:44-UTC ./tabobj/tbbtbtx/dbopen.prg
@@ -27,8 +29,6 @@ a008e27c191e0d3f8fda1dcf7d2ef653c228bbc1 2023101312:17:08-UTC ./tabobj/tbbtbtx/u
 6b5de27b96c997e5b8daf855416b61a4f50553ac 2023101312:17:04-UTC ./tabobj/tbbtbtx/utility/pgstat.prg
 14432a7c025dad7de186653a045972cd9dedec1a 2023101312:17:01-UTC ./tabobj/tbbtbtx/utility/pgmemo.prg
 4cc1e40a29fe60a11bd7309d3a42a33db3463130 2023101312:16:54-UTC ./tabobj/tbbtbtx/utility/bthead.prg
-54d1f83fb668623b8dcf6c4339047335da4bbd9f 2023101312:16:50-UTC ./tabobj/tbbtbtx/utility/btencrypt.prg
-ca517c5f5896c996320e239e907ef59842018d28 2023101312:16:45-UTC ./tabobj/tbbtbtx/utility/btdecrypt.prg
 30dd9c0090d9fe1dff4087af6f44f19a9516161b 2023101312:14:30-UTC ./tabobj/common.src/tabpack.prg
 b5734aebd4889b254d61a92dcbf28a5bcc4fcdf0 2023101311:58:43-UTC ./tabobj/common.src/tabupgrd.prg
 65caa5247b676c5abdd37683121f33be0672c8ea 2023101221:36:15-UTC ./tabobj/tbbtbtx/btree/bt_head.cpp
