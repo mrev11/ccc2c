@@ -1,4 +1,24 @@
 
+/*
+ *  CCC - The Clipper to C++ Compiler
+ *  Copyright (C) 2005 ComFirm BT.
+ *
+ *  This library is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Lesser General Public
+ *  License as published by the Free Software Foundation; either
+ *  version 2 of the License, or (at your option) any later version.
+ *
+ *  This library is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *  Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public
+ *  License along with this library; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+
 // Vegigkoveti es kiirja egy memo ertek szegmenseit.
 // Igy kell hasznalni: pgmemo <btfile> [<recno>] [<memix>]
 // ahol <recno> a rekordsorszam, <memix> a memo index (decimalisok).
@@ -23,26 +43,27 @@
 function main(btfile,recno,memix:="0")
 
 local tab,column,n
-local memopos,pgno,indx
-local map,pgsize,offset,page
+local btree,memopos,pgno,indx,page
 local memohead,recmix,poslen
 local rec,mix,pos,len,memseg
 
-    map:=btopen(@btfile)
-    if( map::empty )
-        usage()
-    end
-
-    if( recno==NIL )
-        freespace(map)
-        quit
-    end
-
     begin
+        if( !".bt"$btfile )
+            btfile+=".bt"
+        end
+        if( empty(btopen(btfile)) )
+            break()
+        end
         tab:=tabResource(btfile)
-    end
-    if( tab==NIL .or. recno==NIL .or. (recno::=val)<=0 )
+        tabOpen(tab)
+        btree:=tab[2]
+    recover
         usage()
+    end
+
+    if( recno==NIL .or. (recno::=val)<=0  )
+        freespace( btree )
+        quit
     end
 
     for n:=1 to len(tabColumn(tab))
@@ -63,7 +84,6 @@ local rec,mix,pos,len,memseg
         quit
     end
 
-    tabOpen(tab)
     tabGoto(tab,recno)
     if( tabEof(tab) )
         ? "recno out of bound"
@@ -72,20 +92,13 @@ local rec,mix,pos,len,memseg
     end
     memopos:=tab[TAB_RECBUF]::substr(column[COL_OFFS]+1,10)
 
-    // tobbet nem kell a tab (lezarhato)
-    // kozvetlenul lapozunk a map-ban
-
-    tabClose(tab)
 
     {pgno,indx}:=parse_memopos(memopos)
     ? "column name   :", column[COL_NAME]
     ? "memo position :", memopos //, "->", {pgno,indx}
 
-    pgsize:=map[9..12]::num
-
     while( pgno>0 )
-        offset:=pgsize*pgno
-        page:=map::substr(offset+1,pgsize) // 1-based
+        page:=_db_pgread(btree,pgno)
         memohead:=page::substr((1+indx)*16+1,16)
         //? memohead::bin2hex
 
@@ -111,7 +124,7 @@ local rec,mix,pos,len,memseg
 
 ******************************************************************************************
 static function usage()
-    ? "Usage:", "pgmemo", "<btfile>", "<recno>", "[<memix>]"
+    ? "Usage: pgmemo <btfile> [<recno>] [<memix>]"
     callstack()
     ?
     quit
@@ -135,21 +148,16 @@ local pgno,indx
 
 
 ******************************************************************************************
-static function freespace(map)
+static function freespace(btree)
 
-local pgsize
 local pgno:=0
-local pgnext
-local offset,page
+local page:=_db_pgread(btree,pgno)
+local pgnext:=page[25..28]::num
 local lower,upper
-
-    pgsize := map[ 9..12]::num
-    pgnext := map[25..28]::num
 
     while( pgno!=pgnext ) // az utolso lap onmagara mutat
         pgno   := pgnext
-        offset := pgsize*pgno
-        page   := map::substr(1+offset,pgsize)
+        page   := _db_pgread(btree,pgno)
         pgnext := page[ 5.. 8]::num::numand(0x7fffffff)
         lower  := page[ 9..12]::num
         upper  := page[13..16]::num

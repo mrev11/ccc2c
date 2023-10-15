@@ -59,6 +59,9 @@
   int    __bt_read           (BTREE*, DBT*, RECPOS*);
   int    __bt_read1          (BTREE*, DBT*, pgno_t, indx_t);
 
+  int    __bt_pgread         (BTREE*, pgno_t, DBT*);
+  void   __bt_pgrewrite      (BTREE*, pgno_t, int);
+
   void   __bt_pagelock       (BTREE*, pgno_t, int);
   void   __bt_pageunlock     (BTREE*, pgno_t);
   int    __bt_header_read    (BTREE*, int);
@@ -66,6 +69,8 @@
   int    __bt_header_sync    (BTREE*);
   int    __bt_header_release (BTREE*);
   int    __bt_lastrec        (BTREE*);
+
+  unsigned  __bt_gensalt(int x);
   
 
 //byte order functions (swap.c)

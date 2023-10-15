@@ -18,14 +18,22 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <signal.h>
- 
-void __bt_error(const char *txt)
-{
-    fprintf(stderr,"\n%s\n",txt);
-    fflush(0);
-    raise(SIGTERM);
-    exit(1);
-}
+
+// helyben BEtitkositja btfile-t
+
+#include "table.ch"
+
+******************************************************************************************
+function main( btfile )
+
+local tab
+
+    tab:=tabResource(btfile)
+    tabOpen(tab,OPEN_EXCLUSIVE)
+    tabCrypt(tab,.t.)
+    tabClose(tab)
+    
+
+******************************************************************************************
+
+

@@ -102,6 +102,7 @@ function tabZap(table)  //fajl kiuritese
 local result
 local save:=tabSave(table)
 local logged
+local cryptflg
 
     tranNotAllowedInTransaction(table,"zap")
  
@@ -114,10 +115,13 @@ local logged
     if( tabSlock(table)>0 )
         logged:=table[TAB_LOGGED]
         table[TAB_LOGGED]:=.f.
+        cryptflg:=tabCrypt(table)       // titkositas lekerdez
         tabClose(table)
         result:=tabDelTable(table) 
+
         tabCreate(table)
         tabOpen(table,OPEN_EXCLUSIVE)
+        tabCrypt(table,cryptflg)        // titkositas beallit
         tabRestore(table,save)
         tabGotop(table)
         table[TAB_LOGGED]:=logged

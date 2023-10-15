@@ -21,6 +21,7 @@ cppver.opt
 cppver.exp
 
 *.exe
+*.dll
 
 objlin/
 objlin_ui_/

@@ -1,4 +1,24 @@
 
+/*
+ *  CCC - The Clipper to C++ Compiler
+ *  Copyright (C) 2005 ComFirm BT.
+ *
+ *  This library is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Lesser General Public
+ *  License as published by the Free Software Foundation; either
+ *  version 2 of the License, or (at your option) any later version.
+ *
+ *  This library is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *  Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public
+ *  License along with this library; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+
 // Listazza a bt fajl egy lapjanak tartalmat.
 // Igy kell hasznalni: pgview <btfile> <pgno>
 // A lapszamot (<pgno>) hexaban kell megadni,
@@ -19,21 +39,35 @@ static pgtype:={"FREE","INTERNAL","BLEAF","DATA","MEMO"}
 ******************************************************************************************
 function main(btfile,pgno:="0")
 
-local map:=btopen(@btfile)
+local tab
+local btree
+local page0,page
 local pgsize
-local offset
-local page
 
-    if( map::empty )
-        ? "Usage:", "pgview", "<btfile>", "[<pgno>]"
-        ?
-        quit
+    begin
+        if( !".bt"$btfile )
+            btfile+=".bt"
+        end
+        if( empty(btopen(btfile)) )
+            break()
+        end
+        tab:=tabResource(btfile)
+        tabOpen(tab)
+        //fd:=tab[1]
+        btree:=tab[2]
+    recover
+        usage()
     end
 
-    pgsize:=map[9..12]::num
-    offset:=pgsize*(pgno::hex2l)
-    page:=map::substr(offset+1,pgsize) // 1-based
 
+    set printer on
+    set printer to log-pgview
+
+    page0:=_db_pgread(btree,0)
+    pgsize:=page0[9..12]::num
+
+    pgno::=hex2l
+    page:=_db_pgread(btree,pgno)
     if( empty(page) )
         ? "pgno out of bound"
         ?
@@ -41,12 +75,9 @@ local page
     end
     memowrit("log-PAGE",page)
 
-    set printer on
-    set printer to log-pgview
+    ? btfile, "pgno=0x"+pgno::l2hex, "offset=0x"+(pgsize*pgno)::l2hex
 
-    ? btfile, "pgno=0x"+pgno, "offset=0x"+offset::l2hex
-
-    if( offset==0 )
+    if( pgno==0 )
         page_root(page)
     elseif( ISMEMO(page) )
         page_memo(page)
@@ -57,6 +88,13 @@ local page
     ?
     ?
 
+******************************************************************************************
+static function usage()
+    ? "Usage: pgview <btfile> [<pgno>]"
+    callstack()
+    ?
+    quit
+
 
 ******************************************************************************************
 static function page_root(page)
@@ -65,7 +103,7 @@ local nords
 local offset
 local n
 
-    ? "magic    :", page[ 1.. 4]::bin2hex, "dskord="+dskord(), "swap="+if(swap(),"TRUE","FALSE")
+    ? "magic    :", page[ 1.. 4]::bin2hex, "diskord="+dskord(), "swap="+if(swap(),"TRUE","FALSE")
     ? "version  :", page[ 5.. 8]::hex
     ? "pagesize :", page[ 9..12]::num , page[ 9..12]::hex
     ? "nrecords :", page[13..16]::num , page[13..16]::hex
@@ -94,7 +132,6 @@ local poslen,pos,len
 local pgnext,ixnext
 local memseg
 
-        ? "CRC32", page[1..4]::bin2hex::padl(8,"0"), crc32(page[5..])::l2hex::padl(8,"0")
         ? "type  ",  type
 
         ? "link  ", "0x"+page[ 5.. 8]::hex
@@ -142,7 +179,6 @@ local lower,upper
 local offset
 local pos,len,rec
 
-        ? "CRC32", page[1..4]::bin2hex::padl(8,"0"), crc32(page[5..])::l2hex::padl(8,"0")
         ? "type  ",  type
 
         ? "link  ", "0x"+page[ 5.. 8]::hex

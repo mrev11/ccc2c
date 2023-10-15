@@ -18,14 +18,41 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <signal.h>
- 
-void __bt_error(const char *txt)
-{
-    fprintf(stderr,"\n%s\n",txt);
-    fflush(0);
-    raise(SIGTERM);
-    exit(1);
-}
+#include "tabobj.ch"
+
+******************************************************************************
+function tabCrypt(table,flag)
+
+local btree,cryptflg,pgno
+
+    if( flag!=NIL .and. tabIsOpen(table)!=OPEN_EXCLUSIVE )
+        taberrOperation("tabCrypt")
+        taberrDescription(@"exclusive open required")
+        tabError(table) 
+    end
+
+    btree:=table[TAB_BTREE]
+    cryptflg:=_db_cryptflg(btree)
+
+    if( flag==NIL )
+        // lekerdezes
+
+    elseif( flag==cryptflg )
+        // valtozatlan
+
+    else
+        // flag==.t. -> encrypt
+        // flag==.f. -> decrypt
+
+        pgno:=1
+        while( _db_pgrewrite(btree,pgno,flag) )
+            pgno++
+        end
+        _db_cryptflg(btree,flag)
+    end
+
+    return cryptflg
+
+
+******************************************************************************
+

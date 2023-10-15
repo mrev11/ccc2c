@@ -24,19 +24,27 @@
 
 typedef struct 
 {
-  int   pagesize;
-  int   fd; 
-  int   count;
-  void  (*pgin)(void*);
-  void  (*pgout)(void*);
+  int       pagesize;
+  int       fd; 
+  int       count;
+  void      (*pgin)(void*);
+  void      (*pgout)(void*);
+  int       cryptflg;
+  unsigned  salt;
 } MPOOL;
  
 
-extern MPOOL * mpool_open(int fd, int pagesize);
-extern int     mpool_close(MPOOL *mp);
-extern int     mpool_count(MPOOL *mp, const char*msg);
-extern void    mpool_dump(MPOOL *mp, void *page);
-extern void  * mpool_new(MPOOL *mp, pgno_t *pgnoaddr);
-extern void  * mpool_get(MPOOL *mp, pgno_t pgno);
-extern int     mpool_put(MPOOL *mp, void *page, int dirty);
+extern MPOOL  * mpool_open(int fd, int pagesize);
+extern int      mpool_close(MPOOL *mp);
+extern int      mpool_count(MPOOL *mp, const char*msg);
+extern void     mpool_dump(MPOOL *mp, void *page);
+extern void   * mpool_new(MPOOL *mp, pgno_t *pgnoaddr);
+extern void   * mpool_get(MPOOL *mp, pgno_t pgno);
+extern int      mpool_put(MPOOL *mp, void *page, int dirty);
+extern void     mpool_encrypt(MPOOL *mp, pgno_t pgno, char *buf);
+extern void     mpool_decrypt(MPOOL *mp, pgno_t pgno, char *buf);
+
+extern unsigned crc32(void*,int);
+
+#define CRCPG(p,s) crc32(((char*)p)+4,s-4) // 0-1-2-3 byteok kihagyva
 
