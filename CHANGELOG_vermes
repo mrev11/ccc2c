@@ -1,3 +1,10 @@
+2023-11-02 valtozasok
+  uj: arev(a) megforditja egy array elemeinek sorrendjet
+  uj: acat(a1,a2) az a1 arrayhez konkatenalja a2-t
+  varstack() kiirja a codeblockok code pointeret is;
+  codeblock kiirasa qout-tal mutatja a code es oref pointert;
+  prg2ppo felismeri kifejezesnek a kerek zarojeles blockokat;
+
 2023-10-15 btencrypt/btdecrypt programok megorzik a fajlidoket;
 
 2023-10-15 bt fajlok titkositasa;

@@ -31,6 +31,7 @@ extern void var_print(VALUE *);
 #define OUTFLG(x)  logical(x);_clp_qqout(1);pop()
 #define OUTPTR(x)  pointer((void*)x);_clp_qqout(1);pop()
 #define OUTOREF(x) OUTSTR(" oref=");if(x){OUTPTR(x);}else{OUTSTR("NULL");}
+#define OUTCODE(x) OUTSTR(" code=");if(x){OUTPTR(x);}else{OUTSTR("NULL");}
 
 //---------------------------------------------------------------------------
 void stack_print(void)
@@ -143,6 +144,7 @@ void var_print(VALUE *v)
 
         case TYPE_BLOCK:
             OUTSTR("BLOCK");
+            OUTCODE(v->data.block.code);
             OUTOREF(v->data.block.oref);
             break;
 
