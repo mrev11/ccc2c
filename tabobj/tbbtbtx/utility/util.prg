@@ -86,7 +86,7 @@ function num(x)  // N tipus
     elseif( len(x)==4 )
         x::=bin2u
     else
-        break("invalid binary length")
+        break("invalid binary length"+len(x)::str)
     end
     return x
 
@@ -98,9 +98,28 @@ function numswap(x)  // N tipus
     elseif( len(x)==4 )
         x::=bin2u
     else
-        break("invalid binary length")
+        break("invalid binary length"+len(x)::str)
     end
     return x
+
+
+******************************************************************************************
+function num2crc(x)  // N tipus -> C(diskord)
+local crc
+    x::=l2hex::padl(8,"0")
+    if( "big"$dskord() )
+        crc:=    x[1..2]
+        crc+=" "+x[3..4]
+        crc+=" "+x[5..6]
+        crc+=" "+x[7..8]
+    else
+        crc:=    x[7..8]
+        crc+=" "+x[5..6]
+        crc+=" "+x[3..4]
+        crc+=" "+x[1..2]
+    end
+    return upper(crc)
+
 
 ******************************************************************************************
 function dec(x)  // C tipus decimalisan
@@ -200,3 +219,25 @@ local lt,rt
 
 
 ******************************************************************************************
+function pagetype(pg)
+
+local memotype:=pg[5..8]::num
+local datatype:=pg[17..20]::num
+
+    if( memotype>=0x80000000 )
+        return "MEMO"
+    elseif(  datatype==0 )
+        return "FREE"
+    elseif(  datatype==1 )
+        return "TREE"
+    elseif(  datatype==2 )
+        return "LEAF"
+    elseif(  datatype==3 )
+        return "DATA"
+    else
+        ? "UNKNOWN PAGE TYPE"
+        quit
+    end
+
+******************************************************************************************
+

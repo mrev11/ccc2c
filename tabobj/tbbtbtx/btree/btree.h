@@ -20,6 +20,7 @@
 
 #include <db.h>
 #include <mpool.h>
+#include <cccapi.h>
 
 #define  _BTREE_H_
 
@@ -41,6 +42,7 @@
 #define  P_ROOT(t)      t->bt_order[t->bt_curord].root
 #define  P_NAME(t)      t->bt_order[t->bt_curord].name
 #define  P_LASTPAGE(t)  t->bt_order[t->bt_curord].lastpage
+#define  P_LASTFREE(t)  t->bt_order[t->bt_curord].lastfree
 
 // There are three page layouts in the btree
 // 1) btree internal pages (P_BINTERNAL)
@@ -157,7 +159,7 @@ typedef struct _order
 {
   pgno_t     root;         // number of root page
   pgno_t     lastpage;     // number of last inserted page
-  u_int32_t  flags;        // flags of the order
+  u_int32_t  lastfree;     // number of last freed page
   u_int32_t  reserved;     // reserved
   char       name[16];     // name of the order
 } ORDER;
@@ -230,10 +232,10 @@ typedef struct _btree1
 
 
 
-#define GETVER(t)     (                (t)->version&0x000000ff               )
-#define GETENC(t)     (               ((t)->version&0x0000ff00)!=0           )
-#define SETVER(t,x)   ((t)->version = ((t)->version&0xffffff00 | ((x&15)<<0)))
-#define SETENC(t,x)   ((t)->version = ((t)->version&0xffff00ff | ((x&15)<<8)))
+#define GETVER(t)    (                (((t)->version) & 0x000000ff)                   )
+#define GETENC(t)    (                (((t)->version) & 0x0000ff00)  != 0             )
+#define SETVER(t,x)  ( (t)->version = (((t)->version) & 0xffffff00)  |  (((x)&15)<<0) )
+#define SETENC(t,x)  ( (t)->version = (((t)->version) & 0xffff00ff)  |  (((x)&15)<<8) )
 
 #define  B_NEEDSWAP    0x00008   // if byte order requires swapping
 
