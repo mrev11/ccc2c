@@ -1,4 +1,7 @@
-f527de1092cfcb9f7283a9767d5447b1d72eb09c 2023110215:45:09-UTC ./tabobj/tbbtbtx/utility/bti.prg
+4db181b839a47459da48a7f3c275e9e6ae66ed12 2023110413:26:18-UTC ./CHANGELOG_vermes
+f4a1d4a856ea8d649e26976d87332b5a5143ea6e 2023110413:16:40-UTC ./tabobj/tbbtbtx/btree/bt_new.cpp
+3ab0d959ecae07396e117302da3edabe98a0accc 2023110412:46:29-UTC ./tabobj/tbbtbtx/utility/bti.prg
+0f0662f1a042432729101e6d768e36ca6fa42b3d 2023110310:18:18-UTC ./tabobj/tbbtbtx/utility/btstat.prg
 357c9358de54b65893f02541c1a7ede4b183ef1c 2023110215:23:27-UTC ./tabobj/tbbtbtx/key2str.prg
 b8e19cb18319656fd45dd63b2d53ee2230b645b2 2023110214:30:18-UTC ./jt/jterminal/jterminal.jar
 5c644149d5e0204b2ddb0eccb66ced9bea4f2ec0 2023110214:30:18-UTC ./log-install
@@ -18,8 +21,6 @@ e41821ff18691772adeb44e2cfd2388e2c0fac08 2023110214:25:14-UTC ./usr/bin/linux/bt
 3a1e730968b8e64ad603ab39449983cdd8586ed0 2023110214:25:14-UTC ./usr/bin/linux/tsema
 37ecc8a677b9e50c6d141c7ae42498ef5ebc9986 2023110214:25:14-UTC ./usr/bin/linux/tstru
 1365a5369d2d995135c3f0e98d118fd2025f383f 2023110214:25:14-UTC ./usr/bin/linux/tview
-40460db5985e09d6900a59840a17a9ee44569261 2023110214:17:10-UTC ./CHANGELOG_vermes
-08155a7b1ead34a80d3ffa91c849206a85dc854c 2023110213:37:56-UTC ./tabobj/tbbtbtx/utility/btstat.prg
 0cc2de04e6019dcc162a227213f3a8d0beea6c71 2023110213:20:02-UTC ./tabobj/tbbtbtx/utility/check
 3bd691feab6d0f244d241904e6b58e9313943319 2023110210:54:16-UTC ./usr/bin/linux/z
 f3a45eaada6ee93a5aa4e01514f73dbe51429c30 2023110210:54:14-UTC ./usr/bin/linux/xstart
@@ -48,7 +49,6 @@ acdaa5e26395be9575fe26517659396c140aafd4 2023110109:23:50-UTC ./tabobj/tbbtbtx/u
 7344c40056aa28bc53deb68982d565a2310b5d8f 2023103112:53:34-UTC ./tabobj/tbbtbtx/btree/bt_memo.cpp
 10904b2f24fcb8e646b8d11cce69588e5183a26c 2023103018:27:33-UTC ./tabobj/tbbtbtx/btree/m
 02d1cb1df65cda478c7dce2a67615986a65cfa05 2023102723:21:47-UTC ./tabobj/VALTOZASOK.txt
-5fcb960c8ba9c1294050e544749f5441980bf81d 2023102721:22:10-UTC ./tabobj/tbbtbtx/btree/bt_new.cpp
 4a700f4f4e8f911252d1e9d89e38297c319e7420 2023102714:10:36-UTC ./tabobj/tbbtbtx/btree/bt_split.cpp
 190edc7d65502b1a8e5f637eb3b999c7e87491a3 2023102714:07:33-UTC ./tabobj/tbbtbtx/btree/bt_order.cpp
 90dcef7c46e888d525221de420a0cc9ead2e282d 2023102713:30:47-UTC ./tabobj/tbbtbtx/btree/bt_head.cpp
