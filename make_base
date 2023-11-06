@@ -90,12 +90,6 @@ fi
 ( cd tools/mask && m )
 
 #-------------------
-# tabobj
-#-------------------
-
-( cd tabobj/tbbtbtx && m )
-
-#-------------------
 # tools
 #-------------------
 
@@ -111,4 +105,10 @@ fi
 ( cd tools/z                && m )
 ( cd tools/zlib             && m )
 
+
+#-------------------
+# tabobj
+#-------------------
+
+( cd tabobj/tbbtbtx && m )
 
