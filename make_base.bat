@@ -55,12 +55,6 @@ if exist %MSYS%\%MSYSTEM%\include\gtk-3.0\gtk\gtk.h (
 pushd tools\mask & call m.bat & popd
 
 :-------------------
-: tabobj
-:-------------------
-
-pushd tabobj\tbbtbtx & call m.bat & popd
-
-:-------------------
 : tools
 :-------------------
  
@@ -74,5 +68,11 @@ pushd tools\xmldom      & call m.bat & popd
 pushd tools\xmlrpc      & call m.bat & popd
 pushd tools\xstart      & call m.bat & popd
 pushd tools\z           & call m.bat & popd
+
+:-------------------
+: tabobj
+:-------------------
+
+pushd tabobj\tbbtbtx & call m.bat & popd
 
 
