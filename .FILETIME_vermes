@@ -1,7 +1,12 @@
-f73f8f87be15cbca13458c7d333dc9ef7f6c9956 2023111513:06:32-UTC ./CHANGELOG_vermes
+62b43d10da17ba080ba1404b5d5333a729690cc1 2023112812:51:50-UTC ./CHANGELOG_vermes
+64a6bfdd6db9684e60af287060cf99dab4e1edc7 2023112811:40:43-UTC ./tabobj/tbbtbtx/utility/bti.prg
+484ec98d7b8f954b4fa27ff683bfd25bebb54f73 2023111518:55:27-UTC ./jt/jterminal/jterminal.jar
+626e17effa7a2e262e5499c8b58a4552bd4f2f91 2023111518:55:27-UTC ./log-install
+326820fb854501a168aa456c85fbe2a62acf6694 2023111518:54:57-UTC ./usr/bin/linux/xstart
+c8fbac22da1295dc6caefdb822508463d6a1c341 2023111518:54:46-UTC ./usr/bin/linux/removecr
+d3daa1bb0e8893f90bd83f037e4cc9fc4622f7de 2023111518:54:45-UTC ./usr/bin/linux/prg2ppo
+06cac990fd4acb8ec54dbfe77b4233d57da44b6b 2023111518:54:44-UTC ./usr/bin/linux/build
 36755ba2db0c2060b9fe7f8532767a51c0f43fa8 2023111513:04:27-UTC ./ccclib/src/str.cpp
-9a1a0e953f7bf4eb88cf7acd19413931c43fcf46 2023111415:15:51-UTC ./jt/jterminal/jterminal.jar
-39e04ec55ffd1bad80660278e5e22c88612ea991 2023111415:15:51-UTC ./log-install
 869b032157b18b4b22beaf99f63720356d320742 2023111415:15:50-UTC ./jt/jterminal/base64.class
 30b017f69ae9b3b8cc2789fbbae4672516f0c9c1 2023111415:15:50-UTC ./jt/jterminal/getutil/cellcolor.class
 b5dc01e98374526785744a45811d32ab4e137ff8 2023111415:15:50-UTC ./jt/jterminal/getutil/checkfield.class
@@ -128,7 +133,6 @@ d7dcda30e3645d3e464275f9c43407c577bf7868 2023111415:15:30-UTC ./usr/bin/linux/bt
 d27ece6af740a370bb54ff885c63610e9e3d6ac0 2023111415:15:30-UTC ./usr/bin/linux/bti
 08d67965504d1406bbc8ed89b8001ecfe6258348 2023111415:15:30-UTC ./usr/bin/linux/btlink
 3bd691feab6d0f244d241904e6b58e9313943319 2023111415:15:22-UTC ./usr/bin/linux/z
-f3a45eaada6ee93a5aa4e01514f73dbe51429c30 2023111415:15:20-UTC ./usr/bin/linux/xstart
 c2bf53d2e711ee702ce1a1f6343343a66187af4f 2023111415:15:18-UTC ./usr/bin/linux/tv
 0a56a6ff1dc73689eb12d1ecbd18773fb0626c21 2023111415:15:17-UTC ./usr/bin/linux/prg2tdc
 dc18971c75bce19155d36847ee3c536956c41a71 2023111415:15:17-UTC ./usr/bin/linux/tabsuper
@@ -149,9 +153,6 @@ d5d18f69c0c35713b39d530684c7019d5e52e0ae 2023111415:15:09-UTC ./usr/bin/linux/ss
 cdbeaaedc7f4fb7617029221b68ef7dd8a4b5d25 2023111415:15:08-UTC ./usr/bin/linux/terminal
 c6b3e28712bbc3f970e7ad681a9ce15836f4e382 2023111415:15:08-UTC ./usr/bin/linux/terminal-xft
 728f108cb6aebe42da2b386d82b191f231bcc345 2023111415:15:07-UTC ./usr/bin/linux/mklink
-4b26dd83c5db56dd927cbdaac0ca78a1f429516a 2023111415:15:07-UTC ./usr/bin/linux/prg2ppo
-74384d22eb6fbcd18a9a2e29d7307273b4565ba8 2023111415:15:07-UTC ./usr/bin/linux/removecr
-b2af4f1ea3bb638cce6762423ddb5dc5fee189f6 2023111415:15:05-UTC ./usr/bin/linux/build
 cc530e60a479fc5e9c18ff1027ddb4199e9d5072 2023111415:14:52-UTC ./usr/bin/linux/ppo2cpp
 d1f12272d2d3aa3058654954d2e3dd6bebaf3741 2023111415:14:51-UTC ./setup/setup-unix/prg2ppo/rsplink
 090384abc21d16fc3b28eb76b21470435c9cf06e 2023111415:14:51-UTC ./setup/setup-unix/removecr/rsplink
@@ -198,7 +199,6 @@ fd00da180bc28a9ed90557bb6a16b7ab0c95990f 2023110509:25:06-UTC ./tabobj/tbbtbtx/u
 e7dca467e2a8831df5d35ef105c0342bd74204cc 2023110509:06:08-UTC ./tabobj/tbbtbtx/utility/parlib.bld
 fcc6c5509e33c14272df179ae48daec1801a3e0a 2023110508:56:45-UTC ./tabobj/tbbtbtx/utility/btpage.prg
 f4a1d4a856ea8d649e26976d87332b5a5143ea6e 2023110413:16:40-UTC ./tabobj/tbbtbtx/btree/bt_new.cpp
-3ab0d959ecae07396e117302da3edabe98a0accc 2023110412:46:29-UTC ./tabobj/tbbtbtx/utility/bti.prg
 e0dc245e8f3fc0a4b077ca0ff44f4652c33a2e81 2023110210:51:51-UTC ./ccclib/src/varprint.cpp
 52f4f4e5ca31b6b69c23fef3f6e50f018979273d 2023110210:14:53-UTC ./ccclib/src/ascan.prg
 4b0ff4c2daa1135a4b9eb1ddd53d8b73790e54a0 2023110123:07:21-UTC ./tabobj/tbbtbtx/utility/btcheck.prg
