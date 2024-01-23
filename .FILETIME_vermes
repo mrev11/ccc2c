@@ -1,4 +1,13 @@
-62b43d10da17ba080ba1404b5d5333a729690cc1 2023112812:51:50-UTC ./CHANGELOG_vermes
+06e3b499617b50aec783a984e660316f08bfcfa9 2024012313:44:38-UTC ./CHANGELOG_vermes
+cdc0b07f0d90854c6692ffe1839712bdbac61b80 2024012313:39:29-UTC ./terminal/icon/terminal.ico
+c553451061fa5f8ff34c0d6d013acbe555bfaa24 2024012313:39:29-UTC ./terminal/icon/terminal.svg
+6bd663c13b32f2d74b7ad785128bc68b390a589b 2024012313:39:29-UTC ./terminal/icon/terminal.xpm
+70d25923dadbd016665ee6ea3cbbeec6c82f6c8a 2024012313:31:15-UTC ./terminal/icon/m
+172d6914ad1bab1b22735f3354e3d2b255bb1d9f 2024012214:46:57-UTC ./terminal/icon/.gitignore
+00125a155d13487973d915420fbba2c4526c5cac 2024012214:42:58-UTC ./terminal/icon/parfile.bld
+db21e104551af6b1d2dd684408f24bf64b43680a 2024012214:38:49-UTC ./ico.savex
+7583614c3e14594a2a5e35c12cf140f53108914e 2024011710:24:55-UTC ./terminal/icon/terminal-icon.cpp
+d9e1d86391bf57536fdb9358e9b04cadcf5b5799 2024011511:07:48-UTC ./usr/bin/windows/__msys2.msys2
 64a6bfdd6db9684e60af287060cf99dab4e1edc7 2023112811:40:43-UTC ./tabobj/tbbtbtx/utility/bti.prg
 484ec98d7b8f954b4fa27ff683bfd25bebb54f73 2023111518:55:27-UTC ./jt/jterminal/jterminal.jar
 626e17effa7a2e262e5499c8b58a4552bd4f2f91 2023111518:55:27-UTC ./log-install
@@ -161,7 +170,6 @@ bd24950d0079e2da1bff6f329d7758854e9e0dd6 2023111415:14:40-UTC ./setup/setup-unix
 2b2b6baec278e0a3f11a98ea7b394da28664f716 2023111415:14:40-UTC ./usr/bin/linux/flex
 30ffcf81679e844deb9f7178ce7712090c26b0af 2023111415:14:40-UTC ./usr/bin/linux/lemon
 f7cc80e3583adbba69afcf32cb58a6bd0a406666 2023111415:14:39-UTC ./usr/options/lin/cppver.exp
-36ac688ba750d81acf38cd5798f131e3b0a77b31 2023111415:14:39-UTC ./usr/options/lin/cppver.opt
 a3fadaffd84f38df6eeb8db71e735dc410f3b50a 2023111414:17:12-UTC ./tabobj/tbbtbtx/utility/bt-verif
 56b722df7de63f90ea978a5d13053ad6ca8fc500 2023111414:17:05-UTC ./tabobj/tbbtbtx/utility/bt-link
 155a2936ef39bfcbbf00f0bf0988bb1705adc10d 2023111414:16:54-UTC ./tabobj/tbbtbtx/utility/bt-check
@@ -176,6 +184,7 @@ accb17d00353d228a4c87eb83004736ea4a18e0b 2023111311:42:22-UTC ./tabobj/tbbtbtx/u
 8a5367721e486baeb921cbdb3aa34c721c66d763 2023111111:49:40-UTC ./tabobj/tbbtbtx/utility/m.bat
 7d77f77b9bdaf7b5f61ece140f06cb28ae8341c0 2023111111:49:39-UTC ./tabobj/tbbtbtx/utility/m
 cd51c854c036658831a467c01ae0ef138ced0e51 2023111111:44:20-UTC ./tabobj/tbbtbtx/utility/parexe_ui.bld
+36ac688ba750d81acf38cd5798f131e3b0a77b31 2023111109:45:41-UTC ./usr/options/lin/cppver.opt
 0b9937582409a4b133dfc640cef5254ddc1adc15 2023111019:43:59-UTC ./tabobj/tbbtbtx/utility/btstat.prg
 8b8bb4792a91e619cc876aabfb552f17be64a2e1 2023111012:32:28-UTC ./tabobj/tbbtbtx/utility/btformat.txt
 8eb386970fba804ad185496533e2b04163af076f 2023111010:43:43-UTC ./tabobj/tbbtbtx/utility/page_header.prg
@@ -272,7 +281,6 @@ e4b176c66b4112615be7ce1674038e3858507cb3 2023083011:16:45-UTC ./usr/setenv/wincm
 9e7a6c217b1f493d625bc921c4fb8d84a5710611 2023082912:51:58-UTC ./usr/setenv/wincmd/OLVASS
 9cf4e7d091a50978c27e3370f1418ebcc9bc7e6b 2023082810:42:07-UTC ./terminal/common/termicon.cpp
 181674466434c8ace8d81ecae695737e39faf346 2023082810:42:07-UTC ./terminal/windows/terminal.cpp
-75883da129fcdd24d6188071d05c044955f921f6 2023082809:44:42-UTC ./usr/bin/windows/terminal.ico
 99eae61dd28228babebed5180c3692a5fc785b0a 2023082721:51:12-UTC ./usr/setenv/OLVASS
 e3fc9db4d000c381e16ce7d5bb46704b8c578a52 2023082721:51:12-UTC ./usr/setenv/wincmd/bench/OLVASS
 c652398452a376095a2dec43d6c12a5c83571b3e 2023082721:51:12-UTC ./usr/setenv/wincmd/bench/x
@@ -331,7 +339,6 @@ d0857ce253e69ba844424dcf2646a6f28ee44a16 2023082320:43:39-UTC ./usr/bin/linux/__
 db8bca653569d84a7d22474bb8b7a4591f78c6d2 2023082320:43:39-UTC ./usr/bin/netbsd/__unix.b
 b6bcaea2aad62250c90d2250091428e97613784b 2023082320:43:39-UTC ./usr/bin/netbsd/cppver.b
 912416497c0505a2a418e63ae39aac7856f90342 2023082320:43:39-UTC ./usr/bin/solaris/__unix.b
-db2fe9fd355b936f087f2c46d4275fa9fa1769fd 2023082320:43:39-UTC ./usr/bin/windows/__msys2.msys2
 6178bc7b2e5bed146af88c59c1d3ee72b7d811f0 2023082320:43:39-UTC ./usr/build/linux/lib2exe.bat
 1b5411fc2b497b925bd9d04c53e159c9a44c61fa 2023082320:43:39-UTC ./usr/build/linux/obj2exe.bat
 53fdb53b522ae1ec1d73366f6c9d90e4f9d8850b 2023082320:43:39-UTC ./usr/build/msys2/_compile.b
@@ -1033,9 +1040,7 @@ cd14c901a9d6e8e0de4acdc9683e3f2cacb2f696 2021040721:27:55-UTC ./tools/xmldom/xml
 a78182ddf2d1896e2773f91c92adc5f5ca15aadf 2021032513:57:08-UTC ./terminal/unix/m
 d866348a425f6c401d70bb017895182b45f43cf3 2021032511:12:49-UTC ./ccclib/src/uic/setcaption.cpp
 d6b2df18f84998e1f9ef5aaa02cc5aeab7ebae85 2021032510:21:17-UTC ./terminal/unix/term_classhint.cpp
-b15b2dd9b42da37dea1779c82bbe06a3f20cfd43 2021032510:10:01-UTC ./terminal/unix/terminal.xpm
 8d233b09251e4e5a9799f9459e9e0d3c7d9fad36 2021032509:11:28-UTC ./terminal/unix/parfile.bld
-df1a6c4d1a18361dd4cef5e46fc61a478fd5e2aa 2021032509:09:24-UTC ./terminal/unix/terminal.ico
 1851d680da9755fc5586a0149c592914d61fc6ec 2021022111:00:50-UTC ./tools/mask/page.prg
 97b10eaf6a9438564cf7e6c86aaa868a63850c8b 2021022110:59:38-UTC ./tools/mask/msk2pge.prg
 6c393404fdea109336897c2da19d3211e4151d26 2021022110:58:41-UTC ./tools/mask/mask.prg

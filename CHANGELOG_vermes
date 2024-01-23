@@ -1,3 +1,9 @@
+2024-01-22 
+  terminal/icon: ikon generalo program
+    Linux   : terminal.svg
+    Linux   : terminal.xpm
+    Windows : terminal.ico 
+
 2023-11-28 bti addindex ellenorzi az uj index nevet: nem szabad leteznie;
 
 2023-11-15 str(x) nagy szamok pontosabb kiirasa;
