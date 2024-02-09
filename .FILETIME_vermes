@@ -1,4 +1,9 @@
-0fa90ac66d31853e30d6bb9bef046cef1262ecf3 2024012812:30:41-UTC ./CHANGELOG_vermes
+ecd2d398b750d74bfdba9f61768d5fb170049c80 2024020919:04:53-UTC ./usr/bin/linux/ppo2cpp.exe4101
+ebe6083ebbc662a3bdab5c52c729a1db1a2bc6de 2024020919:04:24-UTC ./ccctools/ppo2cpp/lexer.lex
+7b4050f839854e5040852bcdfaf87df23d7aa4f6 2024020918:01:27-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
+d7a5fc515576d93d59a26eacc65187ba6257637e 2024020918:00:28-UTC ./CHANGELOG_vermes
+c1d040ac451d5291cdb31b4649059ae670048e57 2024020917:59:21-UTC ./usr/bin/linux/ppo2cpp.exe4100
+f221971c9d6376208fa47c50e0372a8f8bf792f9 2024020917:57:12-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 1f372ef24d9a65d594f783e032df2e5c2a7ceb9f 2024012812:27:58-UTC ./tabobj/tbbtbtx/utility/dbf2bt/dbf2bt_verify.prg
 e3c61a099a7ade3de7afa822dfb9318edd43715d 2024012723:36:47-UTC ./tabobj/tbbtbtx/utility/bti.prg
 0e4824d562c532b0983afd9c0ff4a003febe98e7 2024012719:20:13-UTC ./tabobj/tbbtbtx/utility/dbf2bt/all_import
@@ -170,7 +175,6 @@ d5d18f69c0c35713b39d530684c7019d5e52e0ae 2023111415:15:09-UTC ./usr/bin/linux/ss
 cdbeaaedc7f4fb7617029221b68ef7dd8a4b5d25 2023111415:15:08-UTC ./usr/bin/linux/terminal
 c6b3e28712bbc3f970e7ad681a9ce15836f4e382 2023111415:15:08-UTC ./usr/bin/linux/terminal-xft
 728f108cb6aebe42da2b386d82b191f231bcc345 2023111415:15:07-UTC ./usr/bin/linux/mklink
-cc530e60a479fc5e9c18ff1027ddb4199e9d5072 2023111415:14:52-UTC ./usr/bin/linux/ppo2cpp
 d1f12272d2d3aa3058654954d2e3dd6bebaf3741 2023111415:14:51-UTC ./setup/setup-unix/prg2ppo/rsplink
 090384abc21d16fc3b28eb76b21470435c9cf06e 2023111415:14:51-UTC ./setup/setup-unix/removecr/rsplink
 afe814cd74a856f403a67571fc54e1d72ed611ff 2023111415:14:50-UTC ./setup/setup-unix/build/rsplink
@@ -661,11 +665,9 @@ a09495421b1a4e3b2a5f3164b6fb28e2f851036a 2023030812:30:12-UTC ./tabobj/tbbtbtx/d
 71b015bd4ce047ba87eee4e87ab5b3ae7ff8dbbf 2023020816:00:26-UTC ./ccclib/src/unix/filecreat.cpp
 914fbc0f1d3fe14755f3293bb53e7c2f70bb3c94 2023020815:58:43-UTC ./usr/include/fileio.ch
 4ba003de333e6dc5d4cb8ae3385fbe66c9e3b08e 2023012514:00:29-UTC ./ccclib/src/unix/thread.cpp
-d0414646969e1bed2879a7e7b9506dc5214a38b1 2023012415:07:52-UTC ./ccctools/ppo2cpp/ppo2cpp.cpp
 da88e64c85b24d640b8fce39a8b9bd0a0e350567 2023012010:11:18-UTC ./ccctools/ppo2cpp/codegen.h
 e4dc223ab1a955e775152a5eb32870e06eb8fa8c 2023012010:09:40-UTC ./ccctools/ppo2cpp/codegen.cpp
 fa371b79fbeb23760a2b0ee193686dc609e214d8 2023012010:05:08-UTC ./ccctools/ppo2cpp/parser.lem
-9f5a19980891ae7d1eb4202920e29935ed1203b7 2023012010:03:01-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
 32680200a163ff3fd09ec371d64d0c9f9e19bfaf 2023012009:44:04-UTC ./ccctools/ppo2cpp/.gitignore
 b0e12964b9c238823250a4175824bf9639fdf32e 2023011612:22:28-UTC ./tabobj/commonui.src/tabbrows.prg
 823a88e19a6263eb035c0eb2530e14c8e2b7f358 2023011612:01:25-UTC ./ccclib/src/class.prg
@@ -769,7 +771,6 @@ d5c9878fc7029dc5e22736e16a5ea51fe450ce33 2022090919:24:39-UTC ./ccclib/src/uic/t
 91bb17284adf6e55034d8687ea3a4ab835b50a39 2022090917:52:03-UTC ./terminal/unix-ncurses/ccclib/flock.cpp
 5135724a3087ce8a9480605ffed51e6d452b8390 2022090917:34:42-UTC ./tabobj/common.src/trantimer.cpp
 059384d0213763c5b266fb762e814ca9942f878a 2022090913:49:41-UTC ./tabobj/common.src/transema.prg
-130ecaa8aa30283537741e25a0b63b134d9c7bf6 2022090607:11:37-UTC ./ccctools/ppo2cpp/lexer.lex
 5e7a9a18708a35e6c4ebbca1040fffe4dfbb312a 2022090109:45:19-UTC ./ccclib/src/array.cpp
 1151bfee53d7b2129d256e6f9d03669343d39bb7 2022083108:27:31-UTC ./tutor/control/OLVASS
 50977f41c91517d15460de10b86a754b15250b67 2022083020:43:16-UTC ./tutor/control/control.msk

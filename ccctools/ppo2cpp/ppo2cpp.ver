@@ -1,3 +1,13 @@
+2024.02.09 -- 4.10.1 
+  lex szabalyok valtoztak
+  Ezek a szabalyok, mint 
+        {static}{wspace}{function} {return STFUNCTION;} 
+  megvaltoztak
+        {static}{w1}{function}/{symdel} {return STFUNCTION;} 
+  A static utani space kotelezo, function utan symbol delimeter kotelezo.
+  Hasonloan modosult: 'static class', 'do while', 'begin sequence', stb.
+
+
 2023-01-20 -- 4.10.0
   kerek zarojeles kodblokk: olyan mint a kapcsos zarojeles, 
   kiveve, hogy nem refesednek a benne elofordulo valtozok;
