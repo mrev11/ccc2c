@@ -267,6 +267,7 @@ static void write_strtab(FILE *strtab, parsenode *pnode)
 %left       PLUS MINUS.
 %left       STAR SLASH MODULO.
 %right      DBSTAR.
+%right      PIPE.
 %left       DBPLUS DBMINUS.
 %left       LBRACKET.
 %left       COLON COLCOL.
@@ -1527,6 +1528,13 @@ expr(X) ::= expr(X1) DBSTAR expr(X2).{
     X->outsource=outsource_expr_expr_DBSTAR_expr;
 }
 
+expr(X) ::= expr(X1) PIPE expr(X2).{
+    X=(new parsenode)->rule(2,X1,X2);
+    X->text="expr ::= expr PIPE expr.";
+    X->codegen=codegen_expr_expr_PIPE_expr;
+    X->outsource=outsource_expr_expr_PIPE_expr;
+}
+
 expr(X) ::= MINUS expr(X1). [DBMINUS]{
     X=(new parsenode)->rule(1,X1);
     X->text="expr ::= MINUS expr.";
@@ -1546,6 +1554,10 @@ expr(X) ::= expr(X1) EQEQ expr(X2).{
     X->text="expr ::= expr EQEQ expr.";
     X->codegen=codegen_expr_expr_EQEQ_expr;
     X->outsource=outsource_expr_expr_EQEQ_expr;
+
+    X->nodeid=X1->nodeid;
+    X->cargo=1;
+    X1->cargo=0;
 }
 
 expr(X) ::= expr(X1) EXEQ expr(X2).{
@@ -1553,6 +1565,10 @@ expr(X) ::= expr(X1) EXEQ expr(X2).{
     X->text="expr ::= expr EXEQ expr.";
     X->codegen=codegen_expr_expr_EXEQ_expr;
     X->outsource=outsource_expr_expr_EXEQ_expr;
+
+    X->nodeid=X1->nodeid;
+    X->cargo=1;
+    X1->cargo=0;
 }
 
 expr(X) ::= expr(X1) GTEQ expr(X2).{
@@ -1560,6 +1576,10 @@ expr(X) ::= expr(X1) GTEQ expr(X2).{
     X->text="expr ::= expr GTEQ expr.";
     X->codegen=codegen_expr_expr_GTEQ_expr;
     X->outsource=outsource_expr_expr_GTEQ_expr;
+
+    X->nodeid=X1->nodeid;
+    X->cargo=1;
+    X1->cargo=0;
 }
 
 expr(X) ::= expr(X1) LTEQ expr(X2).{
@@ -1567,6 +1587,10 @@ expr(X) ::= expr(X1) LTEQ expr(X2).{
     X->text="expr ::= expr LTEQ expr.";
     X->codegen=codegen_expr_expr_LTEQ_expr;
     X->outsource=outsource_expr_expr_LTEQ_expr;
+
+    X->nodeid=X1->nodeid;
+    X->cargo=1;
+    X1->cargo=0;
 }
 
 expr(X) ::= expr(X1) GT expr(X2).{
@@ -1574,6 +1598,10 @@ expr(X) ::= expr(X1) GT expr(X2).{
     X->text="expr ::= expr GT expr.";
     X->codegen=codegen_expr_expr_GT_expr;
     X->outsource=outsource_expr_expr_GT_expr;
+
+    X->nodeid=X1->nodeid;
+    X->cargo=1;
+    X1->cargo=0;
 }
 
 expr(X) ::= expr(X1) LT expr(X2).{
@@ -1581,6 +1609,10 @@ expr(X) ::= expr(X1) LT expr(X2).{
     X->text="expr ::= expr LT expr.";
     X->codegen=codegen_expr_expr_LT_expr;
     X->outsource=outsource_expr_expr_LT_expr;
+
+    X->nodeid=X1->nodeid;
+    X->cargo=1;
+    X1->cargo=0;
 }
 
 expr(X) ::= expr(X1) DOLLAR expr(X2).{
