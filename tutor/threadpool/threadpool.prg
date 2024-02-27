@@ -94,11 +94,35 @@ local act
 
 ******************************************************************************************
 static function threadpool.wait(this)
-    this:wait_job  // elfogynak a sorbol a job-ok
-    this:wait_act  // a futo job-ok befejezodnek
+
+//  nem jo
+//  egyszerre mindkettonek uresnek kell lennie
+//  this:wait_job  // elfogynak a sorbol a job-ok
+//  this:wait_act  // a futo job-ok befejezodnek
 
 // VIGYAZAT: ha van orokke futo job, akkor orokre beragad
 
+local wait:=.t.
+
+    //?? "A"
+    while(wait)
+        //??"W"
+        this:actmutx::thread_mutex_lock
+        while( this:active>0 )
+            //?? "a"
+            this:actcond::thread_cond_wait(this:actmutx)
+        end
+        if( this:jobmutx::thread_mutex_trylock==0 )
+            //?? "L"
+            if( this:jobs::len==0 )
+                //?? "0"
+                wait:=.f.
+            end
+            this:jobmutx::thread_mutex_unlock
+        end
+        this:actmutx::thread_mutex_unlock
+    end
+    //?? "Z"
 
 ******************************************************************************************
 static function threadpool.wait_job(this,lwm:=0)
@@ -120,7 +144,7 @@ static function threadpool.wait_act(this,lwm:=0)
 // ha vannak orokke futo jobok, akkor ez orokre beragadhat
 
     this:actmutx::thread_mutex_lock
-    while( this:active>0  )
+    while( this:active>lwm  )
         this:actcond::thread_cond_wait(this:actmutx)
     end
     this:actmutx::thread_mutex_unlock

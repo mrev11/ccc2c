@@ -33,9 +33,11 @@ extern void error_div(const char *operation, VALUE *base, int argno);
 extern void error_neg(const char *operation, VALUE *base, int argno);
 extern void error_blk(const char *operation, VALUE *base, int argno);
 extern void error_cln(const char *operation, VALUE *base, int argno);
+extern void error_bln(const char *operation, VALUE *base, int argno);
 extern void error_nul(const char *operation, VALUE *base, int argno);
 extern void error_wcr(const char *operation, VALUE *base, int argno);
 extern void error_siz(const char *operation, VALUE *base, int argno);
+extern void error_cnd(const char *operation, VALUE *base, int argno);
 
 //File CLPTRACE.CPP:
 extern void _clp_procline(int argno); // Clipper kompatibilis

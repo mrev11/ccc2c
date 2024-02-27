@@ -59,6 +59,5 @@
 #define bin2str(x)          (x)
 #define str2bin(x)          (x)
 
-#define error_bln(o,b,a)    error_cln(o,b,a)
 
 #endif

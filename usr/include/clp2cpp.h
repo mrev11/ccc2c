@@ -301,6 +301,7 @@ extern int  lessthan();         // a stack felsõ két elemének összehasonlítása
 extern int  greaterthan();      // a stack felsõ két elemének összehasonlítása
 extern int  equalto();          // a stack felsõ két elemének összehasonlítása
 extern int  notequal();         // a stack felsõ két elemének összehasonlítása
+extern int  stdcmp(VALUE*,VALUE*,int mode=0);
 extern long stod(const char*);
 
 //------------------------------------------------------------

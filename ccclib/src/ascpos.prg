@@ -18,18 +18,5 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-function ascpos(string,pos) //CA-tools
-
-local c
-
-    if( pos==NIL )
-        pos:=0 
-    end
-    
-    if( pos==0 )
-        c:=right(string,1)
-    else
-        c:=substr(string,pos,1)
-    end
-    
-    return asc(c)
+function ascpos(str,pos) //CA-tools
+    return asc(substr(str,pos,1))

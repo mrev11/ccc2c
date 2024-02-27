@@ -29,17 +29,20 @@ void _clp_base64_encode(int argno)
     static const char*abc="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
     CCC_PROLOG("base64_encode",1);
+    
+    str2bin(base);
 
-    char *bin = _parc(1);
-    unsigned long len = _parclen(1); 
-    if( len>MAXSTRLEN )
+    char *bin=_parb(1);
+    unsigned long len=_parblen(1); 
+    if( len>MAXBINLEN )
     {
-        error_cln("base64_encode",base,1);
+        error_bln("base64_encode",base,1);
     }
-    char *asc = stringl( ((len+2)/3)*4 );
 
-    // 3x8 bitet 4x6 bitbe kódol,
-    // azaz minden 3 byte-ból 4 byte lesz
+    char *asc=binaryl(((len+2)/3)*4);
+
+    // 3x8 bitet 4x6 bitbe kodol,
+    // azaz minden 3 byte-bol 4 byte lesz
 
     for( unsigned int i=0, index=0; i<len; i+=3, index+=4 ) 
     {
@@ -95,15 +98,15 @@ void _clp_base64_decode(int argno)
 
     CCC_PROLOG("base64_decode",1);
 
-    char *asc = _parc(1);
-    unsigned long alen = _parclen(1); 
+    str2bin(base);
 
-    if( alen>MAXSTRLEN )
+    char *asc=_parb(1);
+    unsigned long alen=_parblen(1); 
+    if( alen>MAXBINLEN )
     {
-        error_cln("base64_decode",base,1);
+        error_bln("base64_decode",base,1);
     }
 
- 
     int tlen=alen;
     unsigned long ix;
     
@@ -124,7 +127,7 @@ void _clp_base64_decode(int argno)
     if( (tlen%4)==3 ) blen += 2;
     if( (tlen%4)==2 ) blen += 1;
 
-    char *bin = stringl( blen );
+    char *bin = binaryl( blen );
  
     int shift = 0;   
     int accum = 0;   

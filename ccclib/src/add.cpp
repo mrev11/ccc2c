@@ -18,10 +18,10 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-//#include <stdio.h>
 
 #include <math.h>
 #include <string.h>
+#include <wchar.h>
 #include <cccapi.h>
 
 //------------------------------------------------------------------------
@@ -139,15 +139,16 @@ void add()
                 }
                 else
                 {
-                    if( la>MAXSTRLEN || la>MAXSTRLEN )
+                    // egyik string sem ures
+
+                    if( la>MAXSTRLEN || lb>MAXSTRLEN )
                     {
                         error_cln("add",a,2);
                     }
   
-                    char *sum=stringl(la+lb); 
-                    memcpy(sum,STRINGPTR(a),la);
-                    memcpy(sum+la,STRINGPTR(b),lb);
-                    *(sum+la+lb)=0x00;
+                    CHAR *sum=stringl(la+lb); 
+                    memcpy(sum,STRINGPTR(a),la*sizeof(CHAR));
+                    memcpy(sum+la,STRINGPTR(b),lb*sizeof(CHAR));
                     *a=*TOP();
                 }
 
@@ -155,6 +156,43 @@ void add()
                 return;
             }
             break; 
+
+        #ifdef _CCC3_
+        case TYPE_BINARY:
+
+            if( b->type==TYPE_BINARY )
+            {
+                unsigned long la=BINARYLEN(a);
+                unsigned long lb=BINARYLEN(b);
+                
+                if( lb==0 )
+                {
+                    // OK
+                }
+                else if( la==0 )
+                {
+                    *a=*b;
+                }
+                else
+                {
+                    // egyik sem ures
+
+                    if( la>MAXBINLEN || lb>MAXBINLEN )
+                    {
+                        error_bln("add",a,2);
+                    }
+
+                    BYTE *sum=binaryl(la+lb); 
+                    memcpy(sum,BINARYPTR(a),la*sizeof(BYTE));
+                    memcpy(sum+la,BINARYPTR(b),lb*sizeof(BYTE));
+                    *a=*TOP();
+                }
+
+                stack=b;
+                return;
+            }
+            break; 
+        #endif
     }
 
     error_arg("add",a,2);
@@ -210,8 +248,8 @@ void addneg(double v)
         return;
     }
     
-    //más típust, pl. DATE-t
-    //nem lehet negálni
+    //mas tipust, pl. DATE-t
+    //nem lehet negalni
 
     error_arg("addneg",a,1);
 }
@@ -307,8 +345,8 @@ void modulo()
     if( a->type==TYPE_NUMBER && b->type==TYPE_NUMBER )
     {
         // double xb=abs(b->data.number);
-        // vigyázni az abs függvénnyel, 
-        // nagy számokra rossz, 1-et ad!
+        // vigyazni az abs fuggvennyel, 
+        // nagy szamokra rossz, 1-et ad!
 
         double xb=b->data.number;
         if( xb<0 )
@@ -334,39 +372,29 @@ void modulo()
 
         error_div("modulo",a,2);
     }
-    
+
     error_arg("modulo",a,2);
+}
+
+//------------------------------------------------------------------------
+void _clp_mod(int argno)
+{
+    CCC_PROLOG("mod",2);
+    modulo();
+    CCC_EPILOG();
 }
 
 //------------------------------------------------------------------------
 void _clp_abs(int argno)
 {
-VALUE *base=stack-argno;
-stack=base+min(argno,1);
-while(stack<base+1)PUSHNIL();
-push_call("abs",base);
-//
-    VALUE *v=base;
-
-    // vigyázni az abs függvénnyel, 
-    // nagy számokra rossz, 1-et ad!
-
-    if( v->type==TYPE_NUMBER )
+    CCC_PROLOG("abs",1);
+    double a=_parnd(1);
+    if( a<0 )
     {
-        double a=v->data.number;
-        if( a<0 )
-        {
-            v->data.number=-a;
-        }
+        base->data.number=-a;
     }
-    else
-    {
-        error_arg("abs",base,1);
-    }
-//
-pop_call();
-stack=base+1;
-return;
+    CCC_EPILOG();
 }
 
 //------------------------------------------------------------------------
+
