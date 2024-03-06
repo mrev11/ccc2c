@@ -39,7 +39,7 @@ void _clp_asort(int argno) // asort(arr,[st],[cn],[blk])
     //  asort(a,b)
     //  asort(a,[s],[c],[b])
 
-    if( ISBLOCK(2) )
+    if( ISBLOCK(2) || ISFLAG(2) )
     {
         blk=PARPTR(2);
     }    
@@ -47,11 +47,7 @@ void _clp_asort(int argno) // asort(arr,[st],[cn],[blk])
     {
         start=ISNIL(2)?start:_parnu(2);
         count=ISNIL(3)?count:_parnu(3);
-        if( ISNIL(4) )
-        {
-            blk=PARPTR(4);
-        }
-        else if( ISBLOCK(4) )
+        if( ISNIL(4) || ISFLAG(4) || ISBLOCK(4) )
         {
             blk=PARPTR(4);
         }
@@ -147,6 +143,10 @@ static int valuecompare_cmp(const void *x, const void *y)
     {
         result=stdcmp((VALUE*)x,(VALUE*)y);
     }
+    else if( TOP()->type==TYPE_FLAG )
+    {
+        result=TOP()->data.flag ? stdcmp((VALUE*)x,(VALUE*)y) : stdcmp((VALUE*)y,(VALUE*)x);
+    }
     else
     {
         DUP();
@@ -171,7 +171,7 @@ static int valuecompare_cmp(const void *x, const void *y)
         }
         else
         {
-            error_gen(CHRLIT("compare block gives wrong type"),"valuecompare_cmp",TOP(),1);
+            error_gen(CHRLIT("wrong return type"),"compare block of sorting",TOP(),1);
             exit(1);
         }
     }

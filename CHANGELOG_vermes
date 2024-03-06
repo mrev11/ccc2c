@@ -1,3 +1,10 @@
+2024-03-06
+  asort hivasi formak:
+    - asort(array,block)
+    - asort(array,[start],[count],[block])
+  block lehet: 1) codeblock  2) .t./.f. novekvo/csokkeno  3) NIL novekvo
+  codeblock return erteke lehet: .t./.f. vagy -1/0/1
+
 2024-03-01
    Windows setup upgrade;
 
