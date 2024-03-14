@@ -2276,7 +2276,7 @@ int codegen_statement_CLANG(parsenode *p,void *v)//PROTO
     int i;
     parsenode *q;
 
-    nltab();fprintf(code,"//clang");
+    nltab();fprintf(code,"{//clang");
     i=0;
     while( 0!=(q=(parsenode*)(nodetab_local->get(i))) )
     {
@@ -2284,7 +2284,7 @@ int codegen_statement_CLANG(parsenode *p,void *v)//PROTO
         ++i;
     }
 
-    nltab();fprintf(code,"{%s}",rtxt(p,0));
+    nltab();fprintf(code,"%s",rtxt(p,0));
 
     i=0;
     while( 0!=(q=(parsenode*)(nodetab_local->get(i))) )
@@ -2292,7 +2292,7 @@ int codegen_statement_CLANG(parsenode *p,void *v)//PROTO
         nltab();fprintf(code,"#undef LOCAL_%s",q->text);
         ++i;
     }
-    nltab();fprintf(code,"//cend");
+    nltab();fprintf(code,"}//cend");
     return 0;
 }
 
