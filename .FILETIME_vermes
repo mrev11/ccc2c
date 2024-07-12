@@ -1,6 +1,9 @@
-80516faa6a80d02613792a9f535c089b442c02d9 2024061719:34:56-UTC ./CHANGELOG_vermes
-4b250531960dce4b4e499431c1ed3cdc708139a6 2024061719:31:10-UTC ./jt/jterminal/jterminal.jar
-8efc557407cbff482b97dacfe8d940ae6eb3d0e8 2024061719:31:10-UTC ./log-install
+23bd3861f4c4f77d5dae85e1445231431619e9af 2024071206:50:13-UTC ./jt/jterminal/jterminal.jar
+746cac01e9d0d2930f843292a17d62d8a2e7da5d 2024071206:50:13-UTC ./log-install
+97e0d159743807764ecde8a2dbce74f8298c8fea 2024071206:49:34-UTC ./usr/bin/linux/prg2ppo
+1326b82cdc8e3ba850733eb7eaf5dc52004ec0d7 2024071206:47:08-UTC ./CHANGELOG_vermes
+ede6eb2e23655598c72cc9d2caf6eefa29691466 2024071113:31:44-UTC ./ccctools/prg2ppo/prg2ppo.ver
+f1b5b578490fb7e970c33d74c349692e4dab3cd6 2024071112:17:10-UTC ./ccctools/prg2ppo/input.lex
 acdfe091128a4cf1ea8100e89f8abde548fe2c43 2024061719:31:07-UTC ./usr/bin/linux/rnm
 4482f15b48caacd5671c2c7520bd525e3847fe71 2024061719:31:06-UTC ./usr/bin/linux/delempty
 e6c73777c4bc17142b105460ad5a692bd78f7260 2024061719:31:06-UTC ./usr/bin/linux/delobj
@@ -72,7 +75,6 @@ b4f51a742cdec53fec512c974aafa0cb3b735fa7 2024061719:30:32-UTC ./usr/bin/linux/ct
 3b94e8e1633a8d48306941e9f830d33a5b97f7f4 2024061719:30:32-UTC ./usr/bin/linux/terminal
 5b710fae31b4f5a0583c939c5e97a9e5c45c2275 2024061719:30:32-UTC ./usr/bin/linux/terminal-xft
 3754caabf700d17f202ba800bd3a64a7e276f31b 2024061719:30:31-UTC ./usr/bin/linux/mklink
-2c76bbd34aca3657a8e8a9e8e4c89994b4d0d2ac 2024061719:30:31-UTC ./usr/bin/linux/prg2ppo
 b4ed3bd89adc7d55c568ee93f3f773f80fe68870 2024061719:30:31-UTC ./usr/bin/linux/removecr
 82f29dff0043812485c321ef56b9498b69ad166c 2024061719:30:30-UTC ./usr/bin/linux/build
 67488783588534000b0fc29d78bc98090b856ad1 2024061719:30:19-UTC ./usr/bin/linux/ppo2cpp
@@ -188,7 +190,6 @@ af124077e1881aca9fdb3633a6c6293648f4af1e 2024022413:19:18-UTC ./usr/include/clp2
 f73ebf5b5611a2b94bd1e714a638adf9a907ca7c 2024022213:32:01-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
 55ee8d2665ce504479324a745f760dcec41943e4 2024022213:29:59-UTC ./ccctools/ppo2cpp/parser.lem
 c62625f32ab1b66c59df149c7f340d952f08b937 2024022213:25:33-UTC ./ccctools/ppo2cpp/codegen.h
-9fd044ffaaa4cba7a4ec49ecb322f46ccd88f2c6 2024022213:12:40-UTC ./ccctools/prg2ppo/prg2ppo.ver
 0d0dffb1c9c51718ccbb703010523bf4a702c8da 2024022212:38:29-UTC ./ccctools/prg2ppo/xtxlegal.lem
 cbeaf6bb62ad0706a6053d2d6701b035f20a872d 2024022212:32:14-UTC ./ccctools/prg2ppo/xtxlegal.h
 29d4eb07fea288de9874627021411a42273c30c7 2024022211:20:51-UTC ./ccctools/prg2ppo/rules
@@ -929,7 +930,6 @@ cd8ff439b993cd020b1e240707c4126a68c28799 2022032617:24:23-UTC ./tabobj/common.sr
 de7bb5f596a6533d4e78f4f29ec5d1ba87f4f5ac 2022012520:40:26-UTC ./ccclib/src/oref.cpp
 4f8e1c0b2c40271581c4d3f7d7f2cc7055d86857 2022012413:54:11-UTC ./tabobj/tbbtbtx/dbverify.prg
 11a810c5fe4ebc95ff901f20bf94957fa0f3cbb1 2022012408:56:21-UTC ./tabobj/tbbtbtx/dbprnstru.prg
-5b2d1c8299d86a801fd8f3e001bb15dcdf84361f 2022012011:10:48-UTC ./ccctools/prg2ppo/input.lex
 5547cb049829b6d8d912e63c177575ece1b89f3f 2022011410:21:07-UTC ./jt/sslforward/context.cpp
 6afbe973c291ad5b910f0af73198ef90a1d2b3d2 2021123013:26:58-UTC ./setup/setup-unix/build/s_buildp_ppo.savex
 11deea9f7376c6539ac5d5f84b94cdb8681d2c20 2021123013:25:26-UTC ./make_extn.msys2
