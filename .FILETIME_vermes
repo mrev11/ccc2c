@@ -1,4 +1,4 @@
-c804c52dc05408679de81a73fc292b72283a6d36 2024080613:33:36-UTC ./CHANGELOG_vermes
+7a3c51d4a35224eeed0fdb4faa25f52295f92a38 2024080613:36:03-UTC ./CHANGELOG_vermes
 62cb63ca85187225c9f83d238ee2d288bc02630d 2024080613:24:36-UTC ./tools/sql2/test/basicdemo/exe-sqlite3/log-classprint
 bb4f285789bfb73dd078992646bb931c42a9b886 2024080613:24:36-UTC ./tools/sql2/test/basicdemo/exe-sqlite3/log-entity
 e72f277dbe26d73ba9f60cacea3cf56c23dc243c 2024080613:24:36-UTC ./tools/sql2/test/basicdemo/exe-sqlite3/log-query
