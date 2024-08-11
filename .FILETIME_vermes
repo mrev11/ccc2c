@@ -1,4 +1,5 @@
-7a3c51d4a35224eeed0fdb4faa25f52295f92a38 2024080613:36:03-UTC ./CHANGELOG_vermes
+caa994065502618d06f6ee0d4e0b64ae274f22cf 2024081110:14:08-UTC ./CHANGELOG_vermes
+109c8bc904458a5cf09fd7c5fd4e4d867757588b 2024081110:07:01-UTC ./ccclib/src/ascan.prg
 62cb63ca85187225c9f83d238ee2d288bc02630d 2024080613:24:36-UTC ./tools/sql2/test/basicdemo/exe-sqlite3/log-classprint
 bb4f285789bfb73dd078992646bb931c42a9b886 2024080613:24:36-UTC ./tools/sql2/test/basicdemo/exe-sqlite3/log-entity
 e72f277dbe26d73ba9f60cacea3cf56c23dc243c 2024080613:24:36-UTC ./tools/sql2/test/basicdemo/exe-sqlite3/log-query
@@ -286,7 +287,6 @@ e7dca467e2a8831df5d35ef105c0342bd74204cc 2023110509:06:08-UTC ./tabobj/tbbtbtx/u
 fcc6c5509e33c14272df179ae48daec1801a3e0a 2023110508:56:45-UTC ./tabobj/tbbtbtx/utility/btpage.prg
 f4a1d4a856ea8d649e26976d87332b5a5143ea6e 2023110413:16:40-UTC ./tabobj/tbbtbtx/btree/bt_new.cpp
 e0dc245e8f3fc0a4b077ca0ff44f4652c33a2e81 2023110210:51:51-UTC ./ccclib/src/varprint.cpp
-52f4f4e5ca31b6b69c23fef3f6e50f018979273d 2023110210:14:53-UTC ./ccclib/src/ascan.prg
 4b0ff4c2daa1135a4b9eb1ddd53d8b73790e54a0 2023110123:07:21-UTC ./tabobj/tbbtbtx/utility/btcheck.prg
 6739c4fecc97915d9610671283105323686b5e4b 2023110122:10:27-UTC ./tabobj/tbbtbtx/utility/bthead.prg
 0dc88c724c5ac593772eb4a3078448b6a4017a4c 2023110119:24:50-UTC ./tabobj/tbbtbtx/dbopen.prg
