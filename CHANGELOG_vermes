@@ -1,4 +1,9 @@
 2024-08-11
+  Windows cmd/batch setup javitva:
+  az ss.cpp es stdcmp.cpp (ujabb) modulokat potolni kellett;
+  
+
+2024-08-11
   aeval() az array elem mellett az array indexet is atadja a kodblokknak.
   Ez igy van a regi Clipperben, a CCC-bol ki volt felejtve.
 
