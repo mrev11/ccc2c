@@ -1,4 +1,8 @@
-f31a0965ef75980c333f97061e2f56d5ac1cbde7 2024081117:23:25-UTC ./CHANGELOG_vermes
+41901b5a84dbd5ff3ef56ec18140b770567f8540 2024090511:00:45-UTC ./CHANGELOG_vermes
+dea5d0710d07df4685352775436da4dcf0c03447 2024090417:44:45-UTC ./tools/mask/msk2say.prg
+965009a63d306c8c91385785cb88afce4d2e21df 2024090414:52:24-UTC ./tutor/control/control.say
+f243c0d4769803125e9345c0d1505240060d84ba 2024090414:42:17-UTC ./tutor/control/browse.say
+4f4bef7fdec52f3273b07a906e7cd44a86f07c76 2024090414:42:17-UTC ./tutor/control/textarea.say
 d595b75937dcc19559a61a640241846c432eb4c0 2024081117:18:46-UTC ./tools/tdc2prgch/util/ereadline.prg
 91ce32f4d883ebb0e0f266b61621a9270c200914 2024081116:46:53-UTC ./setup/setup-windows/make_setup_lib.bat
 109c8bc904458a5cf09fd7c5fd4e4d867757588b 2024081110:07:01-UTC ./ccclib/src/ascan.prg
@@ -629,7 +633,6 @@ ad590f067a91405fae9d606d4b6ffe05f03b8b3f 2023051113:11:07-UTC ./ccclib/src/uic/m
 78903e8848cb7be6c1bd6c841e43a4e51cf654e0 2023051107:49:42-UTC ./tutor/control/s1
 bebb3b2f80703769a9886362fcf66940fc2533bf 2023051107:47:22-UTC ./tutor/control/textarea.msk
 05fef9cbade1a66d65ff4685695cbac039815ce1 2023051107:43:59-UTC ./tutor/control/s4
-1a0bc4fc941d181a26799a7d95020c5c89045dd0 2023051107:33:55-UTC ./tools/mask/msk2say.prg
 b9ec8fc0975c9b33ad616ffb114d7f938dbd6cdc 2023051021:44:20-UTC ./jt/msk2dlg/readmask.prg
 ca262128a677534481607c521e1b6c9b9a1754f5 2023051019:09:06-UTC ./ccclib/src/uic/pushbutton.prg
 4aff8243cfe1c3aed76eb44e0109b8fd7f4f7403 2023051019:00:56-UTC ./ccclib/src/uic/getsys.prg
