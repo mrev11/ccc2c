@@ -1,3 +1,6 @@
+adc5945021f700abf5e0d970095b8d0091cf998b 2024090609:01:57-UTC ./CHANGELOG_vermes
+3a46e0b91ce81cb34c0e02678e6df511164ef0c0 2024090608:58:15-UTC ./ccclib/src/levenshtein_dst.cpp
+32cf659ecb29a93f0771087b1b34ed7b02ee9c52 2024090608:51:28-UTC ./ccclib/src/levenshtein_sub.cpp
 776243c0d87b0b07b548baebb5e673f37d3cb13a 2024090511:16:26-UTC ./jt/jterminal/jterminal.jar
 b363fa7f53bdcbad5b2c4a4eebc171106e9c82f2 2024090511:16:26-UTC ./log-install
 64f3ae753d4d8a1e5d9c9ff315f2d3240ca055d6 2024090511:16:23-UTC ./usr/bin/linux/rnm
@@ -87,8 +90,6 @@ cef6149f808dcdf3e399bdd12a64869cff77c688 2024090511:15:47-UTC ./usr/bin/linux/pr
 fb77255aafa7321c19d96ec7b5d2cf62174d6127 2024090511:15:35-UTC ./usr/bin/linux/ppo2cpp
 24fe6e7b0f8271f2ceeece553ace7c7bad0898f8 2024090511:15:24-UTC ./usr/bin/linux/lemon
 db49d2536c3aab3ffc822ff0a626279638de28e2 2024090511:15:23-UTC ./usr/bin/linux/flex
-efc364981c37725bf1515e04a15d35aa0f86ed3d 2024090511:08:55-UTC ./ccclib/src/levenshtein.cpp
-f23c5e42db489211c3f8cba02c89199c0fc0b15f 2024090511:05:27-UTC ./CHANGELOG_vermes
 dea5d0710d07df4685352775436da4dcf0c03447 2024090417:44:45-UTC ./tools/mask/msk2say.prg
 d595b75937dcc19559a61a640241846c432eb4c0 2024081117:18:46-UTC ./tools/tdc2prgch/util/ereadline.prg
 91ce32f4d883ebb0e0f266b61621a9270c200914 2024081116:46:53-UTC ./setup/setup-windows/make_setup_lib.bat
