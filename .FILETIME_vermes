@@ -1,4 +1,5 @@
-adc5945021f700abf5e0d970095b8d0091cf998b 2024090609:01:57-UTC ./CHANGELOG_vermes
+afa0abaa98a54d3c9913ed652515a717897d3da5 2024090914:44:08-UTC ./ccclib/src/uic/popupmenu.prg
+230a753ef6ebc4a5c7613fb6598c5cf19d2ae880 2024090914:23:49-UTC ./CHANGELOG_vermes
 3a46e0b91ce81cb34c0e02678e6df511164ef0c0 2024090608:58:15-UTC ./ccclib/src/levenshtein_dst.cpp
 32cf659ecb29a93f0771087b1b34ed7b02ee9c52 2024090608:51:28-UTC ./ccclib/src/levenshtein_sub.cpp
 776243c0d87b0b07b548baebb5e673f37d3cb13a 2024090511:16:26-UTC ./jt/jterminal/jterminal.jar
