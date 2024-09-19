@@ -1,9 +1,10 @@
-b8751669352a0e7d62e632e94eefc57af4b2c255 2024091717:55:52-UTC ./CHANGELOG_vermes
-6679c03c36bdca94a03c1cb745daf738fd27e1af 2024091717:53:31-UTC ./ccclib/src/uic/popupmenu.prg
+fb5828570e6d87d4712b2f19a6bfed7eb30322b6 2024091910:16:05-UTC ./CHANGELOG_vermes
+18d543e5203b20aaa69ad7968ca593b96c130404 2024091907:48:41-UTC ./ccclib/src/uic/popupmenu.prg
+07b783746daa1c023dc5b591ba07973f7c21360f 2024091823:17:39-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
+003b376635d5db8103e71ec8094e24e4e418811b 2024091718:00:36-UTC ./log-install
 3a46e0b91ce81cb34c0e02678e6df511164ef0c0 2024090608:58:15-UTC ./ccclib/src/levenshtein_dst.cpp
 32cf659ecb29a93f0771087b1b34ed7b02ee9c52 2024090608:51:28-UTC ./ccclib/src/levenshtein_sub.cpp
 776243c0d87b0b07b548baebb5e673f37d3cb13a 2024090511:16:26-UTC ./jt/jterminal/jterminal.jar
-b363fa7f53bdcbad5b2c4a4eebc171106e9c82f2 2024090511:16:26-UTC ./log-install
 64f3ae753d4d8a1e5d9c9ff315f2d3240ca055d6 2024090511:16:23-UTC ./usr/bin/linux/rnm
 ec5b926a345912fee3cff7f8216dbc42df8ad15b 2024090511:16:22-UTC ./tutor/pm/linux/2/search.say
 0c24dbd08b59d0c82ab19229f76e57f9243629ae 2024090511:16:22-UTC ./tutor/rename/rnm.say
@@ -214,7 +215,6 @@ af124077e1881aca9fdb3633a6c6293648f4af1e 2024022413:19:18-UTC ./usr/include/clp2
 0ded3fba31bbacc3a8556cb43eb7f2b333db723e 2024022413:06:42-UTC ./ccclib/src/equalto.cpp
 5b6a7c88c4b867450977c7b89665a6bc26e49a23 2024022413:00:23-UTC ./ccclib/src/errorgen.cpp
 95337bd3090fd8f35ba20496e23654ebfcf8a77e 2024022213:34:19-UTC ./ccctools/ppo2cpp/parser.h
-f73ebf5b5611a2b94bd1e714a638adf9a907ca7c 2024022213:32:01-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
 55ee8d2665ce504479324a745f760dcec41943e4 2024022213:29:59-UTC ./ccctools/ppo2cpp/parser.lem
 c62625f32ab1b66c59df149c7f340d952f08b937 2024022213:25:33-UTC ./ccctools/ppo2cpp/codegen.h
 0d0dffb1c9c51718ccbb703010523bf4a702c8da 2024022212:38:29-UTC ./ccctools/prg2ppo/xtxlegal.lem
