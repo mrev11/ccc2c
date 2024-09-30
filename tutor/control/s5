@@ -1,2 +1,3 @@
 #!/bin/bash
-CCC_CONFIG=config label.exe
+export CCC_CONFIG=config
+bright.exe

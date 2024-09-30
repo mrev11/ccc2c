@@ -1,3 +1,7 @@
+2024-09-30
+  A build scriptekben a konytarak masolgatasa helyett beallitva BUILD_LIBDIR,
+  aminek hatasara a build automatikusan installalja a lib es so fajlokat.
+  (Regota tudja ezt a build, de nem volt mindenutt kihasznalva a feature.)
 
 2024-09-30
   uj fuggveny viewmodal(getlist):  a readmodal() helyen hasznalhato
