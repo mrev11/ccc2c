@@ -1,5 +1,6 @@
-480780599cf3c61dd20b737dacf902e85125deb1 2024100212:43:40-UTC ./ccclib/src/buildnumber_ccc.prg
-6ec3e8f0b8b0126db1b06f5e3bb7be4ac6bcc227 2024100212:42:09-UTC ./CHANGELOG_vermes
+d49ba60aa62ad5cdd11056499a8f57a7fb6b4ab3 2024100213:22:44-UTC ./ccclib/src/buildnumber_ccc.prg
+f89f0b55afb044bc550ca5796d9f7ea4fdffc595 2024100213:22:39-UTC ./CHANGELOG_vermes
+9ff1a45662bac5b552644c390e87c1c4016059bc 2024100213:19:05-UTC ./tools/mask/msk2say.prg
 35ef0a084463bcc712f003da34531431ed238804 2024100212:21:51-UTC ./tutor/control/altbutton.msk
 004369ab0aaf7a426cc10830600961bcf9df2ccd 2024100212:19:40-UTC ./tutor/control/textlabel.msk
 5f965c0c6072caa5025650677880a0d310010718 2024100212:17:07-UTC ./tutor/control/control.prg
@@ -116,7 +117,6 @@ dc10760d2785ab9ab24c1347adcd3d6e55b402db 2024092922:42:55-UTC ./tools/pcre/parfi
 3e401a32c56c110ee4aa7a85170ed808ce31fa83 2024092922:42:13-UTC ./tools/pcre2/m
 4f45b549f009777cc433b39e6ba2f9ddde825538 2024092922:40:33-UTC ./tools/pcre/m
 955556a25e308430215c2aef0ea7ccd75a4fe83c 2024092922:37:31-UTC ./tools/crypto/m
-7d16851b3669779cebc389fb594a1d4f84134d27 2024092710:28:07-UTC ./tools/mask/msk2say.prg
 e95be9edf8bd41d9a2a976e84bc2a81e959a00e0 2024092511:13:27-UTC ./tutor/control/bright.prg
 e5d878c829251212c99fa63e8ec7577e8dea70c7 2024092511:12:07-UTC ./tutor/control/list.msk
 c9bf75994eca110f80963c56bd0a5360eec1c691 2024092511:10:46-UTC ./tutor/control/bright.msk
