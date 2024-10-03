@@ -1,9 +1,13 @@
-a66912a6f21117a4d6ad7e2b8aae99a94acf554d 2024100310:48:56-UTC ./ccclib/src/buildnumber_ccc.prg
-0b07fa6123e38141425b7b2c9c3bddb5895e4c22 2024100310:48:44-UTC ./CHANGELOG_vermes
+8f27f1aa7bbb3547edae8307dc51292dba106bed 2024100311:08:32-UTC ./ccclib/src/buildnumber_ccc.prg
+5d643ddd65636c8ef09d383e94df65e46f222ec0 2024100311:08:08-UTC ./CHANGELOG_vermes
+95de65e91dbe631e965ab9af04940fb6d9004e5e 2024100311:05:27-UTC ./log-install
+855060bce9041660a4f168225048f2f6dcffbd21 2024100311:05:27-UTC ./usr/bin/linux/jterminal.jar
+22211b966b1caa0f649e0f975a05deb65b11e63a 2024100311:04:49-UTC ./usr/bin/linux/cccbn
+5ecb09970f8a8bd6b645fc920b4a95b20b0403b0 2024100311:02:30-UTC ./make_base
+2a95f350c1bce78fcd524910652a0bafbbb68f32 2024100310:57:23-UTC ./ccctools/cccbn/m
+480652d9a535b16589a8c80d1dc7d72fa71a9a3d 2024100310:54:35-UTC ./ccctools/cccbn/cccbn.prg
 638df5efda480b2d0392130aeeb12a9ce4decce9 2024100310:38:00-UTC ./ccclib/src/uic/pushbutton.prg
 62806fed83da2073e012c07dad071eb5af96bfdc 2024100220:49:09-UTC ./ccclib/src/uic/getsys.prg
-17e435808c34d8150648d2ef1173dafb6c523752 2024100213:24:06-UTC ./log-install
-9581495733eb86380f0847497ff3349cfbcbd66a 2024100213:24:06-UTC ./usr/bin/linux/jterminal.jar
 9a0921a7cb0a07e0d26ef7285b4d43a0b59bc535 2024100213:24:02-UTC ./tutor/pm/linux/2/search.say
 f4ea4da8a07a697375c7f810ff94c43ac4628fd9 2024100213:24:02-UTC ./tutor/rename/rnm.say
 42e98f4f66ae54ec64792e35b2f79204d8014b31 2024100213:24:02-UTC ./usr/bin/linux/delempty
@@ -342,7 +346,6 @@ ebab3fb15620d16738118f5fd8b5c55f6fad1eff 2023111010:27:08-UTC ./tabobj/tbbtbtx/u
 734c398255f592d66d79c505b83696b64905597a 2023110812:39:56-UTC ./tabobj/tbbtbtx/utility/page_memo.prg
 3c2122fb3a551f18b194ce7c5ef0b02f90d00559 2023110617:36:19-UTC ./make_base.msys2
 84a5726334bf6f1d4d7217f73cd84d947ffcffa9 2023110617:35:55-UTC ./make_base.bat
-76d9ce88a5dae0f469452fb7d79f72fe212e9478 2023110611:59:25-UTC ./make_base
 2f925c2c68c1fd42b0e5eb8cdb2644e647214bb6 2023110611:37:43-UTC ./tools/textview/parfile.bld
 6a1427febef7cfae53903533985a72846f45a218 2023110611:26:01-UTC ./ccctools/build/build.prg
 2f1606b7760755b3afc7eb1cf63389e6ed35886e 2023110611:23:54-UTC ./ccctools/build/build.hu.ver
