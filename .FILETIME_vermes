@@ -1,5 +1,6 @@
-d097038ffdd1514ed7e300a50f114e7a25f61f97 2024100612:42:49-UTC ./ccclib/src/buildnumber_ccc.prg
-f09aa4d5ea25607c2e693995bd43b3eb3a44ddda 2024100612:41:57-UTC ./CHANGELOG_vermes
+f91c830d46a4808f3ea6a3f520038036051858a2 2024100722:16:05-UTC ./ccclib/src/buildnumber_ccc.prg
+246289d7cea1a97ff7a9fdde799d5a5d91789498 2024100722:15:27-UTC ./CHANGELOG_vermes
+53201b1fa4c31073b805ef04fe0621ee1cd5129d 2024100721:34:18-UTC ./tabobj/commonui.src/tabbrows.prg
 55d4d3fa666b1762a5f3763d7d6db73a04041476 2024100612:36:26-UTC ./tools/mask/msk2say.prg
 63d1926f8a3ed6072c97867b107e0ea7578cf6cd 2024100511:54:35-UTC ./log-install
 4651a60f0f6b9a90cb74d6de93b701fccb7282f0 2024100511:54:35-UTC ./usr/bin/linux/jterminal.jar
@@ -778,7 +779,6 @@ a09495421b1a4e3b2a5f3164b6fb28e2f851036a 2023030812:30:12-UTC ./tabobj/tbbtbtx/d
 914fbc0f1d3fe14755f3293bb53e7c2f70bb3c94 2023020815:58:43-UTC ./usr/include/fileio.ch
 4ba003de333e6dc5d4cb8ae3385fbe66c9e3b08e 2023012514:00:29-UTC ./ccclib/src/unix/thread.cpp
 32680200a163ff3fd09ec371d64d0c9f9e19bfaf 2023012009:44:04-UTC ./ccctools/ppo2cpp/.gitignore
-b0e12964b9c238823250a4175824bf9639fdf32e 2023011612:22:28-UTC ./tabobj/commonui.src/tabbrows.prg
 823a88e19a6263eb035c0eb2530e14c8e2b7f358 2023011612:01:25-UTC ./ccclib/src/class.prg
 fa56c92808d1e11015936bb9a4a2a83cf461b60a 2023011612:00:46-UTC ./ccclib/src/o_object.prg
 f83bc74bb36b7508503b67878e48aad82d1c815b 2023011610:27:58-UTC ./tabobj/tbbtbtx/bttable.ch
