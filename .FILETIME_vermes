@@ -1,8 +1,11 @@
-0893a36087cd857076153abd11d6877bdc01ba12 2024100923:19:43-UTC ./ccclib/src/buildnumber_ccc.prg
-64abadf043765fa92e76f20297d15fa8a5701042 2024100923:19:32-UTC ./CHANGELOG_vermes
+6786a429a02165f4800de07a8dafbd21991fd412 2024101710:12:37-UTC ./ccclib/src/buildnumber_ccc.prg
+aa3cf8e4e4ec3c48f3757301e160e744f9ecf421 2024101710:12:08-UTC ./CHANGELOG_vermes
+f2b4fbd6b722e9af39f5252520775012a095e2c2 2024101708:49:56-UTC ./ccclib/src/ccc_config.prg
+ed6dbed135ceeed3e7591c695686d6fbe9c946ff 2024101620:11:48-UTC ./ccclib/src/buildnumber_ccc_required.prg
+a12ae8d1711a4861a1792d54254892f5aaa70472 2024101612:23:09-UTC ./log-install
+fa2eac62f9da05bb2c65d08434a3a6db7fbeacf3 2024101612:23:09-UTC ./usr/bin/linux/jterminal.jar
+6c3334f10ea6ff930862debf2dc542951d8599d5 2024101612:18:26-UTC ./ccclib/src/levenshtein.cpp
 f2a3961dca39337028852a6f0718d41ae27c37cc 2024100921:34:25-UTC ./ccclib/src/uic/listbox.prg
-8923feecff77b1bd5bfc49a17f2064946f623801 2024100807:23:17-UTC ./log-install
-fbd482ac16814fe86acea5bbb054155e3cb688f7 2024100807:23:17-UTC ./usr/bin/linux/jterminal.jar
 2ddf81d84f53d2e7c6d8c02395f200d54ec74457 2024100807:23:13-UTC ./tutor/pm/linux/2/search.say
 e271da138c90dfa78d05e324692afd3d88d3ab0c 2024100807:23:13-UTC ./tutor/rename/rnm.say
 a87e1db3192637364dff2a855f0fc63d69d1b9bb 2024100807:23:13-UTC ./usr/bin/linux/pm
@@ -127,7 +130,6 @@ bf81871d2637e9555420060e81dd3f8d9ef84105 2024100210:20:04-UTC ./tutor/control/li
 166ed8e9ecae41df93bc78d6bb35059328b604c5 2024100210:19:10-UTC ./tutor/control/s-replace
 9d100a2141b80fda9e216ec31ee3d4064d997cfd 2024100210:18:59-UTC ./tutor/control/s-listbox
 62160340d391d1aa4a6298c6bbff492d3aa49905 2024100210:17:59-UTC ./tutor/control/s-control
-08c19b8e3ed1d814a88bf527347b5a57302118f8 2024093012:44:30-UTC ./ccclib/src/buildnumber_ccc_required.prg
 ad00ca4e4446a9ea48b061ba6fd2eea6590f3bdf 2024093011:39:11-UTC ./commit-count
 a56ee90103e64dc4d6f39bf2792d4a9d74a9dcb4 2024092923:13:08-UTC ./tools/sql2/util/tdsutil/m
 2cda85d7b5eca60eeaca0b5be1750589af6e60f4 2024092923:09:46-UTC ./ccclib/mk_ccc
@@ -170,8 +172,6 @@ f35bf4114fe4239859ba17adb97c0522af92adce 2024092110:02:54-UTC ./tutor/xtabobj/_t
 d472a6819767fc22b113e18eb48e6568cbb5676c 2024092013:33:46-UTC ./usr/build/linux/mnt2gpi.bat
 18d543e5203b20aaa69ad7968ca593b96c130404 2024091907:48:41-UTC ./ccclib/src/uic/popupmenu.prg
 07b783746daa1c023dc5b591ba07973f7c21360f 2024091823:17:39-UTC ./ccctools/ppo2cpp/ppo2cpp.ver
-3a46e0b91ce81cb34c0e02678e6df511164ef0c0 2024090608:58:15-UTC ./ccclib/src/levenshtein_dst.cpp
-32cf659ecb29a93f0771087b1b34ed7b02ee9c52 2024090608:51:28-UTC ./ccclib/src/levenshtein_sub.cpp
 d595b75937dcc19559a61a640241846c432eb4c0 2024081117:18:46-UTC ./tools/tdc2prgch/util/ereadline.prg
 91ce32f4d883ebb0e0f266b61621a9270c200914 2024081116:46:53-UTC ./setup/setup-windows/make_setup_lib.bat
 109c8bc904458a5cf09fd7c5fd4e4d867757588b 2024081110:07:01-UTC ./ccclib/src/ascan.prg
@@ -670,7 +670,6 @@ deebeadc524efbaeecb1191bfeb3fcdeeee46e1e 2023051811:26:08-UTC ./terminal/common/
 09dd67e7ed757df522e23910882dc26a830b9f53 2023051618:30:24-UTC ./tutor/colors/m.msys2
 a668cecc8f145a0239581ce4e20213895a4d94f7 2023051518:25:41-UTC ./tutor/xbrwarr/config
 099de67447e08b1221f5ada03dda75e1cdddcafc 2023051518:19:06-UTC ./ccclib/src/uic/brwmenu.prg
-bae62e0d4b0e036a29cf553e4cabc7ae3cc70e61 2023051517:05:48-UTC ./ccclib/src/ccc_config.prg
 d6d80c5296aeb36c1a553525e8907c2fa55ae455 2023051513:30:50-UTC ./ccclib/src/color.cpp
 204a2766a765ca1c43714dbe684f6ebae73e3fe1 2023051513:12:39-UTC ./terminal/common/ansi_colors/draw_ansi_color.prg
 b2541a947241b8c56cca7b232cd95cd32d3e19de 2023051512:59:39-UTC ./terminal/common/ansi_colors/m.msys2
