@@ -1,6 +1,10 @@
-3057c499894c414fb6c89be5699106596002c37e 2024110817:14:28-UTC ./ccclib/src/buildnumber_ccc.prg
-d4b63201b3ed3f60abbcd7d06d069f0836e0bd70 2024110817:14:02-UTC ./CHANGELOG_vermes
+83941c68bb0429f0ecb576deb1850e8ef409c8d5 2024110819:00:26-UTC ./ccclib/src/buildnumber_ccc.prg
+1326f89c50862bc12c088e481338d7052f5577d7 2024110819:00:19-UTC ./CHANGELOG_vermes
+a22dfe99393d56b8c0e1319ac6e5b00b910e950f 2024110818:07:17-UTC ./tabobj/common.src/transact.prg
+9e7e6048056f6ea37599d848ad4475f42e9b2359 2024110817:46:00-UTC ./tabobj/common.src/trantimer.cpp
+f14c3e5fc29d03e44b4d05338ddbfdf718fd0037 2024110817:38:00-UTC ./ccclib/src/sckutil.cpp
 f8a5ec14c330ef9f9863e2a9dbcf140e737ac7d7 2024110817:06:30-UTC ./ccclib/src/uic/listbox.prg
+ec153b4a45ac73ac818164de907bd8d32094a40c 2024110512:46:08-UTC ./ccclib/src/syserror.prg
 abcb70de846336d8751aa8af9a37ef6296ade08f 2024110112:32:03-UTC ./log-install
 1707799f3c5756cace20752ae0f0c28357f1fd10 2024110112:32:03-UTC ./usr/bin/linux/jterminal.jar
 45c43ee9e3f7a7bb2049f220fb54d6864d678042 2024110112:30:55-UTC ./usr/bin/linux/flex
@@ -548,7 +552,6 @@ a4bc191fdfb0765a87f0621f86c16db9bb9f7bcf 2023082021:41:26-UTC ./usr/bin/freebsd/
 d5182d212d0b7a448e8a25f49dc61a4a58ef3b89 2023082021:21:31-UTC ./usr/bin/freebsd/make.b
 67a8d4ffbb15e883d2e7546d03044893f8c32207 2023082021:10:22-UTC ./ccctools/pack/pack.ch
 829bc5b382b6a6ffd8f9feb176160030f3ebb2d9 2023082020:50:59-UTC ./setup/setup-unix/equalto.cpp
-907a7ef1f8852df40cd7950c63d13eea62a7dc92 2023082015:00:59-UTC ./ccclib/src/sckutil.cpp
 6c4f50cf909dbfa270553c3cdb7092ab1a6e97fe 2023082015:00:59-UTC ./terminal/windows-console/parfile.bld
 4e67c98f1f888ca296d815b503c11c2abf3ee070 2023082015:00:59-UTC ./terminal/windows-console/screensize.cpp
 046797ba8c5302f0928c9d2750ee496a7110ebd1 2023082001:02:55-UTC ./terminal/windows-console/console.cpp
@@ -786,7 +789,6 @@ a09495421b1a4e3b2a5f3164b6fb28e2f851036a 2023030812:30:12-UTC ./tabobj/tbbtbtx/d
 fa56c92808d1e11015936bb9a4a2a83cf461b60a 2023011612:00:46-UTC ./ccclib/src/o_object.prg
 f83bc74bb36b7508503b67878e48aad82d1c815b 2023011610:27:58-UTC ./tabobj/tbbtbtx/bttable.ch
 927b8c4f7a34284185d8c95b1f837773932e6bf9 2023011523:36:26-UTC ./ccclib/src/blkenv.cpp
-ae825a886f96e452f5772ad43da24c8dff7263fa 2023010712:43:10-UTC ./tabobj/common.src/transact.prg
 735d8c33c9028cba1f50eb73d3323a9cadc6e5d5 2023010616:12:44-UTC ./tabobj/common.src/tabfldtb.prg
 05296ece0b448f740344b53760cbe38311af64bf 2023010510:30:23-UTC ./tabobj/tbbtbtx/par-unixui.bld
 a42ed497e3614d9ffb53e8eb0b1d1415edf17680 2023010510:16:21-UTC ./tabobj/tbbtbtx/par-nt.bld
@@ -878,13 +880,11 @@ a662e27ec3f1c9722c6592da98fd32083e58ab2a 2022091309:18:17-UTC ./ccclib/src/windo
 96a06b56f61cbc5214d1b43330e860afde87e9be 2022091013:54:37-UTC ./terminal/unix/term_iconfile.cpp
 d5c9878fc7029dc5e22736e16a5ea51fe450ce33 2022090919:24:39-UTC ./ccclib/src/uic/termapi/termio.cpp
 91bb17284adf6e55034d8687ea3a4ab835b50a39 2022090917:52:03-UTC ./terminal/unix-ncurses/ccclib/flock.cpp
-5135724a3087ce8a9480605ffed51e6d452b8390 2022090917:34:42-UTC ./tabobj/common.src/trantimer.cpp
 059384d0213763c5b266fb762e814ca9942f878a 2022090913:49:41-UTC ./tabobj/common.src/transema.prg
 5e7a9a18708a35e6c4ebbca1040fffe4dfbb312a 2022090109:45:19-UTC ./ccclib/src/array.cpp
 50977f41c91517d15460de10b86a754b15250b67 2022083020:43:16-UTC ./tutor/control/control.msk
 714291ba99cc18400d9ded0d614cd03de78bde38 2022082612:25:16-UTC ./tabobj/tbbtbtx/utility/tsema.prg
 af0fd77f85ad2b198cb0b5370ef5d83c4530ced6 2022082512:43:56-UTC ./usr/include/table.ch
-f90417fa11d5ce65a2f7d6783cd3ea04e792ab10 2022082510:04:35-UTC ./ccclib/src/syserror.prg
 053d650c0c62ce292010b63e5bfed55e1e3795a2 2022082413:21:14-UTC ./ccclib/src/flock.cpp
 431ea0a3ebfe4722d16f0d726747e1a7c9fcd9c8 2022081808:40:27-UTC ./tutor/xbrowse/xbrowse.prg
 3b320fe5c6b2505f8b416546a7d80615c7a1f4f5 2022081807:47:57-UTC ./usr/include/tid2ptr.h
