@@ -1,4 +1,7 @@
-6bf1e8da0209761c6c86aa47a1396d734b9db95d 2024111809:13:36-UTC ./ccclib/src/buildnumber_ccc.prg
+6e4b4d59f6aabd17d0d212d1c0adabb51e2fe14c 2024113012:18:46-UTC ./ccclib/src/buildnumber_ccc.prg
+4fc9f2ba07fa376ffe2a02e170f2d47cdfb3808d 2024113012:18:33-UTC ./CHANGELOG_vermes
+3d2a7ac8554e02c8bdf244ecbbbd5cc4ea060504 2024113012:09:27-UTC ./tools/savex/sortname.prg
+08efc1b0e767bef3e3b9358f9b67380d0c9ad2f0 2024113012:08:38-UTC ./tools/savex/savebrowse.prg
 96eb4e51b1e89298b7c20bcc8685b268ac112753 2024111809:10:43-UTC ./log-install
 94dc94b3e32edd3c60b0f9ada55bd7fa93b57972 2024111809:10:43-UTC ./usr/bin/linux/jterminal.jar
 0ab6f7a7daf25d7dbe7abbfc5c18203c00cc45f5 2024111809:10:31-UTC ./usr/bin/linux/list
@@ -18,7 +21,6 @@ e779608028a784b5973607381d9276a206df74cc 2024111809:10:06-UTC ./usr/bin/linux/te
 1c3d788ac388ba91f4a11f1e6441b7f8e31ae979 2024111809:10:06-UTC ./usr/bin/linux/terminal-xft
 237934ff74fad184558657226b23243b96b0495e 2024111809:10:05-UTC ./usr/bin/linux/cccbn
 1c382364c17fb73475df1ea9026d9174279ea1c6 2024111809:10:04-UTC ./usr/bin/linux/build
-4c79679218b4a1e8812c387bedc92bd151e8df91 2024111809:07:55-UTC ./CHANGELOG_vermes
 7656170b2f796910e9b7a03672e99ad0bbdb6ae8 2024111713:57:48-UTC ./tutor/threadpool/pool2.prg
 7a033e9c3c1f07d08cc01a66e0f5d000d3c8dcd6 2024111713:57:45-UTC ./tutor/threadpool/pool1.prg
 e17b3c77909ce7a9a22e931d770a73b54c38cacd 2024111713:57:41-UTC ./tutor/threadpool/pool0.prg
@@ -602,8 +604,6 @@ cb167d6bef3372512b645a8342358aa57b67d4e6 2023062106:54:56-UTC ./setup/setup-unix
 bab45376add21e4f4dea051bb00afc6e547ffe29 2023061821:53:38-UTC ./setup/setup-unix/build/build.cpp
 947614a10342d28fc7102a4bf7e1d28b3aa02c93 2023061821:53:30-UTC ./setup/setup-unix/set.cpp
 2f26a1cf0bf7b3bc1afb3451d95bea005008cca3 2023061714:46:52-UTC ./setup/setup-unix/m
-fd9f4843c786b4c737d41665298082b7e6854a2c 2023061711:25:49-UTC ./tools/savex/sortname.prg
-4e7fab351a011138d10d3b67cc4e886a979d406b 2023061711:23:47-UTC ./tools/savex/savebrowse.prg
 065c91ea0ff017cb3d85db50ad4df6c81dc75040 2023061307:28:31-UTC ./tools/setperm/setperm.prg
 6b8785736b9e55c11b1ec2744d19367a12702107 2023061012:41:49-UTC ./usr/lib/lin/content
 aba04b109f19d9ac5067fe19ec67da7113209cbb 2023060808:48:06-UTC ./ccclib/src/qout.cpp
