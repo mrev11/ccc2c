@@ -1,4 +1,7 @@
 2024-12-29
+  atmozgatva: terminal/windows-console -> terminal/windows-cterm
+
+2024-12-29
   windows cterm cache-eles hibaja javitva;
   setsockopt TCP_NODELAY FreeBSD-n NetBSD-n es Solarison is;
   windows direxist() egysegesitve;

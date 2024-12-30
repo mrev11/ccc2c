@@ -1,5 +1,7 @@
-577cf4c3345f8df959f16231ee6ca087d867c45d 2024123009:37:36-UTC ./ccclib/src/buildnumber_ccc.prg
-72b2874ac68d2164fd55dadb2fe2fe510b14d5bb 2024123009:34:19-UTC ./CHANGELOG_vermes
+8519e995b8e1ee883a029b93ef1b0e9229074a80 2024123009:45:32-UTC ./ccclib/src/buildnumber_ccc.prg
+a9811438470c4a599a5e745d9e18ba2143a42fca 2024123009:44:25-UTC ./make_base.bat
+d8efcd98c2a6aed579c91c049ba08bcf9ddf66a2 2024123009:44:00-UTC ./make_base.msys2
+a5a81c6781e55a7d83ad200fb3c6246b9de46e3f 2024123009:39:46-UTC ./CHANGELOG_vermes
 55829d8173080abc5a3c0cba8cdb808d0721f7ea 2024122923:13:15-UTC ./usr/setenv/msys2/envccc
 b5ad2560fab6cf33b3f6285a5aeead8458038278 2024122923:11:48-UTC ./usr/setenv/dependencies-manjaro
 c3321e25b99861f7162a20574553aeea1049227c 2024122923:10:49-UTC ./terminal/m.msys2
@@ -115,10 +117,8 @@ d35b9e6686dc8a4117aab2e58db6ea67aec6a6bb 2024122620:15:39-UTC ./usr/bin/linux/pr
 91619b80683fdd222058361cb60599cdb602e3ae 2024122620:15:13-UTC ./usr/bin/linux/ppo2cpp
 0db9b8663d7995bfbebe263b1d0de779b91e4cbf 2024122619:06:18-UTC ./terminal/unix-cterm/cterm.cpp
 3f51b8a94327ab4f239305693c6ab1f8a144ce5c 2024122615:49:57-UTC ./terminal/unix/term_iconfile.cpp
-55b788f5871ac2f52974144598076c3f13f144a6 2024122322:09:36-UTC ./make_base.bat
 20854cd66df21d5d6c9518c3045e85199659d168 2024122320:29:42-UTC ./usr/options/mng/link.opt
 e586817bfe69e05aed4ecd55f3f7b15d15b08bbd 2024122315:28:59-UTC ./usr/setenv/wincmd/OLVASS
-260e4c1e75dd864c47876318f2cb7648ca4e8c16 2024121918:14:24-UTC ./make_base.msys2
 b56fadee046158ba77f390c7f2b397c84319dddd 2024121914:56:57-UTC ./ccclib/src/base32.cpp
 1bb42640c87b54d3674d12671bd184d90c1dac17 2024121019:26:11-UTC ./ccclib/src/required_buildnumber_ccc.prg
 765fb4aea1302608953d85e36e7d7b78554ad8ba 2024120412:48:19-UTC ./usr/build/linux/obj2exe.bat
