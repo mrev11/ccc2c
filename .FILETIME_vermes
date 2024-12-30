@@ -1,11 +1,10 @@
-8519e995b8e1ee883a029b93ef1b0e9229074a80 2024123009:45:32-UTC ./ccclib/src/buildnumber_ccc.prg
+07900eb2db09170b305016b1cff5fc47aa294f4f 2024123009:50:57-UTC ./ccclib/src/buildnumber_ccc.prg
+4199ad3a0821f10fe79001872759c9e8d1e42ad8 2024123009:46:18-UTC ./CHANGELOG_vermes
 a9811438470c4a599a5e745d9e18ba2143a42fca 2024123009:44:25-UTC ./make_base.bat
 d8efcd98c2a6aed579c91c049ba08bcf9ddf66a2 2024123009:44:00-UTC ./make_base.msys2
-a5a81c6781e55a7d83ad200fb3c6246b9de46e3f 2024123009:39:46-UTC ./CHANGELOG_vermes
 55829d8173080abc5a3c0cba8cdb808d0721f7ea 2024122923:13:15-UTC ./usr/setenv/msys2/envccc
 b5ad2560fab6cf33b3f6285a5aeead8458038278 2024122923:11:48-UTC ./usr/setenv/dependencies-manjaro
 c3321e25b99861f7162a20574553aeea1049227c 2024122923:10:49-UTC ./terminal/m.msys2
-7b50bb225eb4db605d36f2785dd1a9973200d877 2024122921:24:29-UTC ./x_savex_to_dsync
 2e42f55483401b59321374f1059b061abf7a6c34 2024122921:03:29-UTC ./tools/savex/ds
 c331bcfdfd9a98c42f5e586f4557ed972034ae6c 2024122918:44:13-UTC ./tools/savex/makearr.prg
 eede05872fdb5f551fb6429c8634a1149234c9b2 2024122918:35:27-UTC ./tools/savex/sortname.prg
@@ -1620,7 +1619,6 @@ f12f86a28e7959d452f1636ed14d3cdc3767585d 2016082610:02:42-UTC ./terminal/common/
 e2be9a472752d088e271da6fb5ca1204635f8feb 2016072815:54:27-UTC ./tutor/orig.savex
 dd137c38c911a31b194b54b44ad0478b17103780 2016072815:53:58-UTC ./ccctools/orig.savex
 e311394bb61da5e90b8e385034f3be4e0f46f00c 2016072815:53:52-UTC ./ccclib/src/uic/orig.savex
-49fad5071031b1cd5bbec72935d419b122538ed5 2016072815:53:45-UTC ./ccclib/src/orig.savex
 7f26e2746333dab5f721a0a7cf8bd23a8b380bf6 2016072812:18:20-UTC ./tools/xmlrpc-framework/server/test/parfile.bld
 816d3040ecdf0fe1df0e84c2a2848b2372d7f807 2016072812:18:09-UTC ./tools/xmlrpc-framework/server/rpcwrapper/parfile.bld
 24cd286d66e63665f043bf21f4ded7a1ebb9296d 2016072812:17:56-UTC ./tools/xmlrpc-framework/server/rpcsession/parfile.bld
