@@ -1,4 +1,7 @@
 2025-01-09
+   OmniOS: sok helyen inkludalva stdint.h;
+
+2025-01-09
    Figyelmen kivul hagyott warningok egysegesitve;
 
 2025-01-01

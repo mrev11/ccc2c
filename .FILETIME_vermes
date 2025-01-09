@@ -1,5 +1,22 @@
-a67bb6b745d4c6de904fb727f573aff1f58313d6 2025010912:30:02-UTC ./ccclib/src/buildnumber_ccc.prg
-b17070217a44010b1d15563d6c238f93fcb94fdf 2025010912:29:46-UTC ./CHANGELOG_vermes
+551a20588b33c32bc972cdbe677229043168356a 2025010919:15:20-UTC ./ccclib/src/buildnumber_ccc.prg
+2c506f8b8628ddf2b45d6f8449d9089fe69cf634 2025010919:14:42-UTC ./CHANGELOG_vermes
+2bb6bdcb874922fa3ed93604065ee210897ff4d6 2025010919:14:22-UTC ./usr/options/sol/compile.opt
+4a331b0e5f6008633640aece077bdff4d4b51fa6 2025010919:00:53-UTC ./terminal/sslforw/parfile.bld
+aa651e07ba2c71e8773296b19a1eea9208c74a57 2025010918:42:02-UTC ./tools/pcre/parfile.bld
+3ba13c30a5a2e9e5b81def5022eaa1aaa5d29fd8 2025010918:37:26-UTC ./tools/crypto/sign.cpp
+eabc75315c284e3361b6e0c682725605b55a17c8 2025010918:37:08-UTC ./tools/crypto/sha512.cpp
+081810af0a7244b209adea70f19ae7f79418385d 2025010918:36:56-UTC ./tools/crypto/sha256.cpp
+a39d05131f8c3f66ca353159494d251e29a6851e 2025010918:36:38-UTC ./tools/crypto/sha1.cpp
+f9c2cf56ae474d46fb4539bc02f0d4a61f402b73 2025010918:36:22-UTC ./tools/crypto/rsapubenc.cpp
+b2d459f5e187eaeb46f45dc9ae973938ecf01908 2025010918:35:56-UTC ./tools/crypto/pemparse.cpp
+3d91dd3f8e9309411bb035fdf3816fba39a57e08 2025010918:35:28-UTC ./tools/crypto/md5.cpp
+14fb98bbc239f931079751c5060b5b74d9688a9a 2025010918:35:09-UTC ./tools/crypto/des.cpp
+98530fa26295343a375f02ac575d6fe2610025c3 2025010918:34:44-UTC ./tools/crypto/crypterr.cpp
+80771982e9e3d654e7f5919fff09956f8aa91dd2 2025010918:33:49-UTC ./tools/crypto/blowfish.cpp
+8f7327db937ae8d43035f3e170237c1bde402a8b 2025010918:33:08-UTC ./tools/socket/ssl/sslctx_verifycb.cpp
+a651ac88494780825c5ece3fbb420ccca66636b8 2025010918:32:28-UTC ./tools/socket/ssl/sslctx_funif.cpp
+84353bf220de9f68d7fb2e27b6eb9f89633ca0f1 2025010918:30:56-UTC ./terminal/sslforw/context.cpp
+2c94951bb2467af3dc8d3a1469f6db1e475c4626 2025010918:30:14-UTC ./terminal/sslforw/serveclient.cpp
 d2cb22ed6a79d2bbe23ca922840c8c142702f9b0 2025010912:27:12-UTC ./log-install
 f4fa6797669a7059d050260256ccdeff1672ea38 2025010912:27:12-UTC ./usr/bin/linux/jterminal.jar
 869b032157b18b4b22beaf99f63720356d320742 2025010912:27:11-UTC ./jt/jterminal/base64.class
@@ -166,7 +183,6 @@ c10fc7b477f73b896d82e724561d1852e2b201f2 2025010912:26:10-UTC ./setup/setup-unix
 068e27616614fed02f4c117986afcaa409c202f5 2025010912:26:10-UTC ./usr/bin/linux/lemon
 bad2e0bf2a7b2c15eab7bf8e4ce11d9177bd0a15 2025010912:26:09-UTC ./usr/options/lin/cppver.exp
 fbbbbd7d34cf334062c5e6490aa5031fa038c1cd 2025010912:26:09-UTC ./usr/options/lin/cppver.opt
-2f7365579675ab4aed3c349df3c3dbe0963e8966 2025010912:24:23-UTC ./usr/options/sol/compile.opt
 abc747fa7311c885fb564fa9906dfb33d362bae8 2025010912:23:40-UTC ./usr/options/net/compile.opt
 0ebf7eeb01e696b69e605247a8aeaf87f4244ee0 2025010912:22:41-UTC ./usr/options/mng/compile.opt
 fb079daa7ea08fee6097fc1478e50fd8e808fac5 2025010912:20:22-UTC ./usr/options/lin/compile.opt
@@ -302,7 +318,6 @@ ef94701e4cb0baa1dfdf4d192eff922a857fa4e0 2024092922:47:29-UTC ./tools/socket/ssl
 106a9e3d2c435d0be3ca5a3b46088dc24abe6cf9 2024092922:46:52-UTC ./tools/socket/m
 32b52433decfe3121a544de5d1405d9aa9ce700b 2024092922:45:41-UTC ./tools/regex/m
 92d154395fd64f0f6a6abba59e12156489e7370e 2024092922:44:19-UTC ./tools/dbaseiii/m
-dc10760d2785ab9ab24c1347adcd3d6e55b402db 2024092922:42:55-UTC ./tools/pcre/parfile.bld
 87d812ecd0f695d40db17de2158e3153479f2918 2024092922:42:32-UTC ./tools/pcre2/parfile.bld
 3e401a32c56c110ee4aa7a85170ed808ce31fa83 2024092922:42:13-UTC ./tools/pcre2/m
 4f45b549f009777cc433b39e6ba2f9ddde825538 2024092922:40:33-UTC ./tools/pcre/m
@@ -603,15 +618,7 @@ d5182d212d0b7a448e8a25f49dc61a4a58ef3b89 2023082021:21:31-UTC ./usr/bin/freebsd/
 58aac26c4a0c620a982b2d0fc32ccc461a99602b 2023081610:35:56-UTC ./ccclib/src/unix/filemap.cpp
 01be6cccf6e82d464cfe9008ff1618ff6726f952 2023081511:38:41-UTC ./ccclib/src/vmm.cpp
 07d44175bfe8e1532ba6eb9875e406840f4679c5 2023081417:43:54-UTC ./tools/crypto/demo/md5.prg
-2d9876fa21aaa3dd44879c18443913221375d73c 2023081416:49:04-UTC ./tools/crypto/des.cpp
 78cecbf5d8c174131804bd5aa73b77ee967b3564 2023081416:42:27-UTC ./tools/crypto/cast.cpp
-5c0a78f5f9005d034c70d403203607b0baa9d581 2023081416:36:31-UTC ./tools/crypto/blowfish.cpp
-cbe639bf9743b566ec3d97e671fa8791c9e903a4 2023081416:29:27-UTC ./tools/crypto/rsapubenc.cpp
-0819cffd474a315e66cbeca68706797b5cac73b6 2023081416:19:39-UTC ./tools/crypto/sign.cpp
-ba986c480e0eb6c7381cb62a4ff78c51f5b781aa 2023081416:12:30-UTC ./tools/crypto/sha512.cpp
-e42e4a483f7f70be2a1204afd2e11b61c85cb866 2023081416:12:05-UTC ./tools/crypto/sha256.cpp
-046896302f74fcbf1b9a9406b501f18e9163b2fb 2023081416:11:35-UTC ./tools/crypto/sha1.cpp
-f808d16cc69694c7273afdf173ccb72730b52c24 2023081416:10:09-UTC ./tools/crypto/md5.cpp
 90e91e213e06e48f3811913f164d6c55b11ef152 2023081209:37:27-UTC ./tabobj/common.src/archivalas.txt
 909acdad9f45190c8a3ce110b9cebb376cbe33f4 2023080714:03:24-UTC ./tools/textview/demo/demo.prg
 f2d3e8b3dee5b93b2c1f066f918b802791ef9198 2023080713:34:16-UTC ./tools/textview/demo/s
@@ -781,7 +788,6 @@ af0214af27a4b20dfade0a04a75ebcf7735d44a7 2023041410:24:44-UTC ./tools/socket/ssl
 a27b04079b48c840d92856d3a54c3b73e483bd56 2023041409:22:21-UTC ./tools/socket/ssl/sslsocket-demo/demo_server2.prg
 bdb611816367f18ed7b4d8930d684f507e6407b9 2023041409:21:08-UTC ./tools/socket/ssl/sslsocket-demo/demo_server3.prg
 02007d8ea74c3450c7711be8e399cfda8b9a8479 2023041409:16:49-UTC ./tools/socket/ssl/sslsocket-demo/demo_server1.prg
-fe3b069cd88f7f80d72cecc6edb71f8203d1ab35 2023041409:16:01-UTC ./tools/socket/ssl/sslctx_funif.cpp
 cff0c82cfa3a78298febe7bcfe071e0a31b54b4a 2023040721:10:40-UTC ./terminal/unix-cterm/OLVASS
 8deb95bb931f28675e25bc073267276325da4d95 2023040714:30:35-UTC ./terminal/common/readkey_termkey/test/test.cpp
 44afd38fa697a0b65f8685d47509a9b97805f355 2023040714:29:05-UTC ./terminal/common/readkey_termkey/test/m
@@ -1295,7 +1301,6 @@ fc2b0542d835dcc1d1dd6c07fb0af92abbfdb6b7 2019061006:44:57-UTC ./usr/build/linux/
 e245faf42bfb23c0fe16658877eb242e191d1634 2018121115:32:20-UTC ./terminal/terminal-qt5/m
 dc50f1705fe360b43c66c8412b2c97ac1507c13a 2018111121:13:27-UTC ./tools/regex/regex-demo/m
 332559fde99409ae65c19dce86c4a5210cac2a2b 2018100310:57:03-UTC ./tools/socket/ssl/m.bat
-5408079fce3e9133ebbd7799a77bc135d1c95021 2018100308:22:47-UTC ./tools/socket/ssl/sslctx_verifycb.cpp
 8dfc8261ef47c5450e36ad94ecb64182b0d5b436 2018081306:07:41-UTC ./tools/xmlrpc/xmlrpc.ver
 407dda83ae7870e5fbf60fad3e5f8896158ce21a 2018081213:23:40-UTC ./tools/xmlrpc/rpc_server.prg
 80412c7fad9be5e024ffe292657f088a55d226cf 2018081006:50:25-UTC ./tools/xmlrpc/demo-rpc/ss
@@ -1693,7 +1698,6 @@ bfbbf71f1d4807e5f5d5173110ff7c8766b76e45 2016060215:24:10-UTC ./jt/jtstart/parfi
 1ecadf1190fa7b3695db02b0e116cda2648ea363 2016060215:21:20-UTC ./jt/jtdemo/parfile.bld
 0b4481944202c337b5b43630377dfde5b22cedc6 2016060215:18:26-UTC ./jt/jtdemo/ping/parfile.bld
 f55d8ca3addc92b0485f6d2326c8c92f50c47e2e 2016060215:14:56-UTC ./jt/sslforward/ssl-test/parfile.bld
-6bc4b4f63190283a41f74ab1492baa9fcd07a815 2016060213:05:09-UTC ./terminal/sslforw/parfile.bld
 f1e943f71d9f1024f0ecf691404a2e314e9753c6 2016060212:49:10-UTC ./jt/sslforward/ssl-test/xstart.log
 1e247a124bd672732329dc2c43be62348ac83af1 2016060212:42:38-UTC ./jt/sslforward/sslforward.cpp
 6408eeee5f986a93f742ba65cd4bba0046002f1c 2016060211:55:48-UTC ./terminal/sslforw/sslforw-serv.cpp
@@ -2211,7 +2215,6 @@ eeaad7126c0dc5dbf03d465ee882c36070d332b5 2008031322:06:43-UTC ./jt/jterminal/get
 1f5b006a031ca52c2cfb27ace48b2781f42de268 2008022211:20:04-UTC ./tutor/hash/hashtable.prg
 7c205d589152b86c9e914f03e4d5fcc8668c4d64 2008012711:30:30-UTC ./ccctools/ppo2cpp/parsenode.cpp
 a95f4bec8fa426789d24a2fc2ce1efce3a4b41a4 2008012423:15:41-UTC ./tools/sql2/driver-oracle/ociload.cpp
-2e911092d81d37618bbbada584ed4780ffc67063 2008012420:37:40-UTC ./tools/crypto/crypterr.cpp
 f4b332071fdf4aa30e649a42fff441c533c6014b 2008012420:37:32-UTC ./tools/crypto/ccc_crypto.h
 21ceff9ada039d7a890d58d7263f4188bab6a826 2008012418:41:20-UTC ./usr/include/xmethod2.h
 8f46439ee450018d5ddafdf1e8ab7a3cd9752736 2008011911:46:01-UTC ./jt/jtdemo/tree/tree2.prg
@@ -2826,7 +2829,6 @@ c5365413b611ce8dad9560d06c17cb5f3f6499a5 2003061007:42:14-UTC ./jt/jtdemo/enable
 f251d1f52f9b41baaca591307e86d37fa60b8c73 2003042811:42:04-UTC ./jt/texdoc/jtproba/jnlp/ekonto.nat
 ea2a55fd5268b59fd6c217fdfcf4c589f06e09bd 2003042506:04:28-UTC ./jt/jtdemo/sign/sign.dlg
 4a08604b096eff6eb49234b8ac61498afe22999b 2003042506:04:26-UTC ./jt/jtdemo/sign/sign.msk
-3f0fb809b073c631ce49920b1323604d1d0f1bb3 2003041414:58:20-UTC ./tools/crypto/pemparse.cpp
 64574882324ffb127c646871fec3b3846aea6a4e 2003033105:51:00-UTC ./jt/jterminal/s-debug
 1fc6aaa115d3362e9f6818dfc432c88d74c92df4 2003032614:43:14-UTC ./jt/jtdemo/cccdown/ziplist1.txt
 b87586f67861bd51c57a4cc8010e3a51e3295e73 2003031311:38:58-UTC ./tools/dbfview/search.msk
