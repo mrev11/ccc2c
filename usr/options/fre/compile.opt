@@ -15,6 +15,16 @@
 -Wall
 -Wno-unused
 -Wno-invalid-source-encoding
+-Wno-unused-value
+-Wno-unused-result
+-Wno-trigraphs
+-Wno-empty-body
+-Wno-format-overflow
+-Wno-parentheses
+-Wno-unknown-warning-option
+-Wno-constant-logical-operand
 -Wno-deprecated-declarations
 -Wno-unknown-warning-option
+-Wno-vla-cxx-extension
+
 -I/usr/local/include
