@@ -23,24 +23,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 #include <cccapi.h> 
  
-//  Javitasok
-//
-//  2014.07.24 A CCC3-beli program visszaegyszerusitve CCC2-re
-//          (string.cpp-ben stringek oref-beli hossza 1 helyett -1!).
-//  2007.05.12 rekurzio nelkul, typeinfo nelkul, 0-as oref
-//  2007.05.05 generacios szemetgyujtes, age hisztogramm
-//  2007.04.11 MUTEX_LOCK/MUTEX_UNLOCK makrok
-//  2006.03.17 unicode tamogatas (TYPE_BINARY <--> TYPE_STRING)
-//  2005.07.20 szalkezeles atirva, szignalkezeles
-//  2003.07.30 multithreading tamogatas
-//  2002.06.28 oref_size merete linkeleskor szabalyozhato    
-//  1999.01.16 oref tobbe egyaltalan nem latszik ki    
-//  1998.05.03 oref,vref static, szabalyozhato meretu
-//  1996.06.26 0-as oref nincs
-
-
 //---------------------------------------------------------------------------
 static int vnext;  // a kovetkezo szabad index vref-ben
 static int onext;  // a kovetkezo szabad index oref-ben
@@ -51,15 +36,16 @@ static int ofree;  // szabad elemek szama oref-ben szemetgyujtes utan
 static int alloc_count=0;  // foglalasok szama
 static long alloc_size=0;  // foglalasok osszmerete 
 
+static char *env_orefsize=getenv("CCC_OREFSIZE");
+static char *env_vrefsize=getenv("CCC_VREFSIZE");
+static char *env_gcdebug=getenv("CCC_GCDEBUG");
 
-static char *env_garbage=NULL;  // szemetgyujtes debug info
+static int  OREF_SIZE   = 200000;
+static int  VREF_SIZE   = 5000;
 
-static int  OREF_SIZE   =   40000;
-static int  VREF_SIZE   =    5000;
+static int  ALLOC_COUNT = OREF_SIZE;
+static long ALLOC_SIZE  = OREF_SIZE*100;
 
-static int  ALLOC_COUNT =   40000;
-static long ALLOC_SIZE  = 4000000;  //4MB
- 
 static OREF *oref;
 static VREF *vref;
 
@@ -225,19 +211,17 @@ void vartab_ini(void)
 #endif
     siglocklev=0; //unlock (kezdetben lockolva van)
  
-    char *orsp=getenv("OREF_SIZE");
-    if( orsp )
+    if( env_orefsize )
     {
-        long size=atol(orsp);
+        long size=atol(env_orefsize);
         OREF_SIZE=size;
         ALLOC_COUNT=size;
         ALLOC_SIZE=size*100;
     }
 
-    char *vrsp=getenv("VREF_SIZE");
-    if( vrsp )
+    if( env_vrefsize )
     {
-        long size=atol(vrsp);
+        long size=atol(env_vrefsize);
         VREF_SIZE=size;
     }
     
@@ -266,10 +250,7 @@ void vartab_ini(void)
         exit(1);
     }
 
-    env_garbage=getenv("GARBAGE");
-
     int n;
-
     for(n=0; n<VREF_SIZE; n++)
     {
         vref[n].value.type=TYPE_NIL;
@@ -300,15 +281,14 @@ void vartab_rebuild(void)
 
     VARTAB_STOP();
  
-    if( env_garbage ) //debug info
+    if( env_gcdebug ) //debug info
     { 
-        fprintf
-        (
-            stderr,
-            "\nalloc_count: %d/%d, alloc_size: %ldK/%ldK",
-            alloc_count,ALLOC_COUNT,alloc_size>>10,ALLOC_SIZE>>10 
-        );
         fflush(0);
+        setlocale(LC_ALL,"en_US");
+        fprintf(stderr,"\nalloc_count: %'d/%'d, alloc_size: %ldM/%ldM",
+                          alloc_count,ALLOC_COUNT,alloc_size>>20,ALLOC_SIZE>>20 );
+        fflush(0);
+        setlocale(LC_ALL,"C");
     }
 
     alloc_count=0;
@@ -375,10 +355,13 @@ void vartab_rebuild(void)
 
     vartab_sweep();
 
-    if( env_garbage ) //degub info
+    if( env_gcdebug ) //degub info
     {
-        fprintf(stderr,"\nofree=%d vfree=%d\n",ofree,vfree);
+        setlocale(LC_ALL,"en_US"); //set
+        fprintf(stderr,"\nofree=%'d vfree=%'d",ofree,vfree);
+        fprintf(stderr,"\n");
         fflush(0);
+        setlocale(LC_ALL,"C");
     }
 
     garbage_collection_is_running=0;
