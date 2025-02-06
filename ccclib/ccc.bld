@@ -1,9 +1,8 @@
 -sccc2
 
 -d.
--dunix
+-duic/screenbuf
 -iinclude
--iuic/screenbuf
 
 BUILD_SRC=src
  

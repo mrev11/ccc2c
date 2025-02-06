@@ -18,8 +18,45 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+#ifdef _UNIX_
+#include <sys/mman.h>
+#endif
+
+#include <stdlib.h>
+#include <unistd.h>
 #include <string.h>
 #include <cccapi.h>
+
+//------------------------------------------------------------------------
+static char *oneletter(int c)
+{
+    static char *buffer=0;
+    if( buffer==0 )
+    {
+        int ps=4096; //getpagesize();
+
+        #ifdef _UNIX_
+            buffer=(char*)aligned_alloc(ps,ps);
+        #else
+            buffer=(char*)VirtualAlloc(0,ps,MEM_COMMIT,PAGE_READWRITE);
+        #endif
+
+        for( int i=0; i<256; i++ )
+        {
+            buffer[(i<<1)]=i;
+            buffer[(i<<1)+1]=0;
+        }
+
+        #ifdef _UNIX_
+            mprotect(buffer,ps,PROT_READ);
+        #else
+            DWORD oldprot=0; VirtualProtect(buffer,ps,PAGE_READONLY,&oldprot);
+        #endif
+    }
+    //static int count=0;
+    //printf("\noneletter %6d %3d [%s]", ++count, c, buffer+((c&255)<<1)); fflush(0);
+    return buffer+((c&255)<<1);
+}
 
 
 //------------------------------------------------------------------------
@@ -37,7 +74,7 @@ void _clp___maxstrlen(int argno)
 }
 
 //------------------------------------------------------------------------
-void string(char const *ptr) //új példány rámutatással (new nélkül)
+void string(char const *ptr) //uj peldany ramutatassal (new nelkul)
 {
 //stack:   --- s
 
@@ -45,7 +82,7 @@ void string(char const *ptr) //új példány rámutatással (new nélkül)
 
     OREF *o=oref_new(); 
     o->ptr.chrptr=(char*)ptr;
-    o->length=0;              //szemétgyûjtés NEM törli 
+    o->length=0;              //szemetgyujtes NEM torli 
     o->next=NEXT_RESERVED;
  
     VALUE *v=PUSHNIL();
@@ -57,18 +94,35 @@ void string(char const *ptr) //új példány rámutatással (new nélkül)
 }
 
 //------------------------------------------------------------------------
-void stringn(char const *ptr) //új példány másolással (new)
+void stringn(char const *ptr) //uj peldany masolassal (new)
 {
 //stack:   --- s
+
+    static int opt=(getenv("ONELETTER")==0);
+
+    unsigned long len=strlen(ptr);
+    if(len>MAXSTRLEN)
+    {
+        number(len);
+        error_cln("stringn",stack-1,1);
+    }
 
     VARTAB_LOCK();
 
     OREF *o=oref_new(); 
-    int len=strlen(ptr);
-    char *p=newChar(len+1);
-    memcpy(p,ptr,len+1);
-    o->ptr.chrptr=p;
-    o->length=-1;              //szemétgyûjtés törli
+    if( opt && len<=1 )
+    {
+        o->ptr.chrptr=oneletter(*ptr);
+        o->length=0; //szemetgyujtes NEM torli
+        //printf("<n>");fflush(0);
+    }
+    else
+    {
+        char *p=newChar(len+1);
+        memcpy(p,ptr,len+1);
+        o->ptr.chrptr=p;
+        o->length=-1; //szemetgyujtes torli
+    }
     o->next=NEXT_RESERVED;
  
     VALUE *v=PUSHNIL();
@@ -80,9 +134,11 @@ void stringn(char const *ptr) //új példány másolással (new)
 }
 
 //------------------------------------------------------------------------
-void strings(char const *ptr, unsigned long len) //substring kimásolása new-val
+void strings(char const *ptr, unsigned long len) //substring kimasolasa new-val
 {
 //stack:   --- s
+
+    static int opt=(getenv("ONELETTER")==0);
 
     if(len>MAXSTRLEN)
     {
@@ -93,11 +149,20 @@ void strings(char const *ptr, unsigned long len) //substring kimásolása new-val
     VARTAB_LOCK();
 
     OREF *o=oref_new(); 
-    char *p=newChar(len+1);
-    memcpy(p,ptr,len);
-    *(p+len)=0x00;
-    o->ptr.chrptr=p;
-    o->length=-1;              //szemétgyûjtés törli 
+    if( opt && len<=1 )
+    {
+        o->ptr.chrptr=oneletter(*ptr);
+        o->length=0; //szemetgyujtes NEM torli
+        //printf("<s>");fflush(0);
+    }
+    else
+    {
+        char *p=newChar(len+1);
+        memcpy(p,ptr,len);
+        *(p+len)=0x00;
+        o->ptr.chrptr=p;
+        o->length=-1; //szemetgyujtes torli 
+    }
     o->next=NEXT_RESERVED;
   
     VALUE *v=PUSHNIL();
@@ -109,7 +174,7 @@ void strings(char const *ptr, unsigned long len) //substring kimásolása new-val
 }
 
 //------------------------------------------------------------------------
-char *stringl(unsigned long len) //inicializálatlan string new-val
+char *stringl(unsigned long len) //inicializalatlan string new-val
 {
 //stack:   --- s
 //return: string pointer
@@ -125,7 +190,7 @@ char *stringl(unsigned long len) //inicializálatlan string new-val
     OREF *o=oref_new();
     o->ptr.chrptr=newChar(len+1);
     *(o->ptr.chrptr+len)=0x00; 
-    o->length=-1;              //szemétgyûjtés törli  
+    o->length=-1;              //szemetgyujtes torli  
     o->next=NEXT_RESERVED;
  
     VALUE *v=PUSHNIL();

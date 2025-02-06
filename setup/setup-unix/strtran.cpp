@@ -1,4 +1,4 @@
-//input: strtran.ppo (4.10.0)
+//input: ppo/strtran.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -38,6 +38,7 @@ push_call("_clp_strtran",base);
     push_symbol(base+2);//s2
     push(&NIL);
     eqeq();
+    cmp_104:;
     if(!flag()) goto if_1_1;
         line(36);
         string("");
@@ -56,12 +57,14 @@ push_call("_clp_strtran",base);
     push_symbol(base+4);//cnt
     push(&NIL);
     eqeq();
+    cmp_156:;
     if(flag()){
     push(&TRUE);
     }else{
     push_symbol(base+10);//chg
     push_symbol(base+4);//cnt
     lt();
+    cmp_163:;
     }
     if(!flag()){
     push(&FALSE);
@@ -73,6 +76,7 @@ push_call("_clp_strtran",base);
     _clp_at(3);
     assign(base+8);//p
     lt();
+    cmp_174:;
     }
     if(!flag()) goto lab_2_2;
         line(47);
@@ -80,6 +84,7 @@ push_call("_clp_strtran",base);
         push_symbol(base+3);//sta
         push(&NIL);
         neeq();
+        cmp_218:;
         if(!flag()){
         push(&FALSE);
         }else{
@@ -89,6 +94,7 @@ push_call("_clp_strtran",base);
         assign(base+9);//no
         push_symbol(base+3);//sta
         lt();
+        cmp_227:;
         }
         if(!flag()) goto if_3_1;
             line(42);

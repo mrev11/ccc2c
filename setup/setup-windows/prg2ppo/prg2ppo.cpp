@@ -1,4 +1,4 @@
-//input: prg2ppo.ppo (4.10.0)
+//input: ppo/prg2ppo.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -125,6 +125,7 @@ push_call("main",base);
         _clp_left(2);
         string("@");
         eqeq();
+        cmp_212:;
         if(!flag()) goto if_2_1;
             line(46);
             push_symbol(base+0);//opt
@@ -143,6 +144,7 @@ push_call("main",base);
         _clp_left(2);
         string("!");
         eqeq();
+        cmp_284:;
         if(!flag()) goto if_2_2;
             line(49);
             push_symbol(base+0);//opt
@@ -161,6 +163,7 @@ push_call("main",base);
         _clp_left(2);
         string("-");
         eqeq();
+        cmp_357:;
         topnot();
         if(!flag()) goto if_2_3;
             line(52);
@@ -175,6 +178,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-o");
         eqeq();
+        cmp_389:;
         if(!flag()) goto if_2_4;
             line(55);
             push_symbol(base+0);//opt
@@ -190,6 +194,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-i");
         eqeq();
+        cmp_435:;
         if(!flag()) goto if_2_5;
             line(58);
             push_symbol(_st_s_include_ptr());//global
@@ -209,6 +214,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-u");
         eqeq();
+        cmp_485:;
         if(!flag()) goto if_2_6;
             line(61);
             push_symbol(_st_s_files_ptr());//global
@@ -228,6 +234,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-d");
         eqeq();
+        cmp_535:;
         if(!flag()) goto if_2_7;
             line(64);
             push_symbol(_st_s_define_ptr());//global
@@ -247,6 +254,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-l");
         eqeq();
+        cmp_585:;
         if(!flag()) goto if_2_8;
             line(67);
             push_symbol(base+0);//opt
@@ -256,6 +264,7 @@ push_call("main",base);
             _clp_substr(2);
             string("+");
             eqeq();
+            cmp_620:;
             assign(_st_s_line_ptr());//global
             pop();
         goto if_2_0;
@@ -264,6 +273,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-v");
         eqeq();
+        cmp_635:;
         if(!flag()) goto if_2_9;
             line(70);
             push(&TRUE);
@@ -275,6 +285,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-q");
         eqeq();
+        cmp_661:;
         if(!flag()) goto if_2_10;
             line(73);
             push(&TRUE);
@@ -286,6 +297,7 @@ push_call("main",base);
         push_symbol(base+1);//o
         string("-x");
         eqeq();
+        cmp_687:;
         if(!flag()) goto if_2_11;
             line(76);
             push(&TRUE);
@@ -348,6 +360,7 @@ push_call("main",base);
     push_symbol(_st_s_input_ptr());//global
     push(&NIL);
     eqeq();
+    cmp_840:;
     if(!flag()) goto if_5_1;
         line(103);
         _clp_qout(0);
@@ -689,7 +702,7 @@ push_call("logo",base);
 //
     line(202);
     string(nls_text("CCC Preprocessor "));
-    string("1.5.3");
+    string("1.6.1");
     add();
     string(" Copyright (C) ComFirm Bt.");
     add();
@@ -945,6 +958,7 @@ push_call("searchinclude",base);
             _clp_right(2);
             _clp_dirsep(0);
             neeq();
+            cmp_2602:;
             if(!flag()) goto if_19_1;
                 line(263);
                 push_symbol(base+1);//incdir

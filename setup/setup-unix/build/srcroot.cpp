@@ -1,4 +1,4 @@
-//input: srcroot.ppo (4.10.0)
+//input: ppo/srcroot.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -52,6 +52,7 @@ push_call("srcroot",base);
         _clp_s_srcdir(0);
         push(&NIL);
         eqeq();
+        cmp_130:;
         if(!flag()) goto if_3_1;
             line(34);
             string(".");
@@ -132,6 +133,7 @@ push_call("srcroot",base);
         _clp_s_incdir(0);
         push(&NIL);
         neeq();
+        cmp_356:;
         if(!flag()) goto if_6_1;
             line(51);
             _clp_s_incdir(0);

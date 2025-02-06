@@ -1,4 +1,4 @@
-//input: like.ppo (4.10.0)
+//input: ppo/like.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -35,6 +35,7 @@ push_call("like",base);
         _clp_substr(3);
         string("?");
         eqeq();
+        cmp_89:;
         if(!flag()) goto if_2_1;
         goto if_2_0;
         if_2_1:
@@ -45,6 +46,7 @@ push_call("like",base);
         _clp_substr(3);
         string("*");
         eqeq();
+        cmp_126:;
         if(!flag()) goto if_2_2;
             line(33);
             push_symbol(base+0);//minta
@@ -59,6 +61,7 @@ push_call("like",base);
             _clp_len(1);
             push(&ZERO);
             eqeq();
+            cmp_177:;
             if(!flag()) goto if_3_1;
                 line(36);
                 push(&TRUE);
@@ -114,6 +117,7 @@ push_call("like",base);
         push(&ONE);
         _clp_substr(3);
         eqeq();
+        cmp_318:;
         if(!flag()) goto if_2_3;
         goto if_2_0;
         if_2_3:
@@ -140,6 +144,7 @@ push_call("like",base);
     push_symbol(base+0);//minta
     _clp_len(1);
     gt();
+    cmp_386:;
     if(!flag()) goto if_6_1;
         line(55);
         push(&FALSE);
@@ -152,6 +157,7 @@ push_call("like",base);
     push_symbol(base+0);//minta
     _clp_len(1);
     eqeq();
+    cmp_425:;
     if(!flag()) goto if_6_2;
         line(57);
         push(&TRUE);
@@ -179,6 +185,7 @@ push_call("like",base);
         _clp_substr(3);
         string("*");
         eqeq();
+        cmp_517:;
         topnot();
         if(!flag()) goto if_8_1;
             line(65);

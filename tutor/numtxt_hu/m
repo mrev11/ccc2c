@@ -1,2 +1,2 @@
-bapp_unixc.b  BUILD_PRE=-DDEBUG_NUMTXT
+cccapp_term.sh  BUILD_PRE=-DDEBUG_NUMTXT
  

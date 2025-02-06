@@ -351,11 +351,9 @@ extern char *remote_console();
 //File CLPSET.PRG:
 extern void _clp___setcentury(int argno);
 
-//File CHARCONV.PRG:
-extern int  charconv_char(int tab, int c);
-extern void charconv_string(int tab, char *buf, unsigned int len);
-extern void charconv_top(int tab);
+//File CHARCONV.CPP:
 extern char *charconv_selecttab(int tab);
+extern void charconv_top(int tab);
 extern void _clp__charconv(int argno);
 
 //File W32C_KEYB.CPP

@@ -1,4 +1,4 @@
-//input: ccomp.ppo (4.10.0)
+//input: ppo/ccomp.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -51,6 +51,7 @@ push_call("main",base);
         _clp_left(2);
         string("@");
         eqeq();
+        cmp_102:;
         if(!flag()) goto if_2_1;
             line(51);
             push_symbol(base+2);//arg

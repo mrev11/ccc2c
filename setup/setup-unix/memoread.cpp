@@ -1,4 +1,4 @@
-//input: memoread.ppo (4.10.0)
+//input: ppo/memoread.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -35,6 +35,7 @@ push_call("memoread",base);
     _clp_fopen(2);
     assign(base+1);//hnd
     lteq();
+    cmp_47:;
     if(!flag()){
     push(&FALSE);
     }else{
@@ -45,6 +46,7 @@ push_call("memoread",base);
     _clp_fseek(3);
     assign(base+2);//len
     lt();
+    cmp_77:;
     }
     if(!flag()){
     push(&FALSE);
@@ -52,6 +54,7 @@ push_call("memoread",base);
     push_symbol(base+2);//len
     _clp___maxstrlen(0);
     lt();
+    cmp_114:;
     }
     if(!flag()) goto if_1_1;
         line(32);
@@ -72,6 +75,7 @@ push_call("memoread",base);
         push_symbol(base+2);//len
         _clp_fread(3);
         gt();
+        cmp_173:;
         if(!flag()) goto if_2_1;
             line(36);
             string("");
@@ -117,6 +121,7 @@ push_call("memowrit",base);
     push(&ZERO);
     push_symbol(base+2);//hnd
     lteq();
+    cmp_316:;
     if(!flag()){
     push(&FALSE);
     }else{
@@ -126,6 +131,7 @@ push_call("memowrit",base);
     push_symbol(base+3);//lng
     _clp_fwrite(3);
     eqeq();
+    cmp_323:;
     }
     if(!flag()) goto if_3_1;
         line(48);

@@ -1,4 +1,4 @@
-//input: compat_ccc3.ppo (4.10.0)
+//input: compat_ccc3.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 

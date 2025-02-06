@@ -19,42 +19,58 @@
  */
 
 #include <string.h>
+#include <stdio.h>
+#include <charconv.ch>
+#include <chartab.h>
 #include <cccapi.h>
 
+#define VARSTACK(x)  //(printf("\n\n### varstack-%d",x),_clp_varstack(0),pop(),fflush(0))
+
 //---------------------------------------------------------------------
-void charconv_string(int tab, char *buf, unsigned int len)
+char *charconv_selecttab(int tab)
 {
-    char *t=charconv_selecttab(tab);
-    if( t )
+    switch( tab )
     {
-        unsigned int n;
-        for(n=0; n<len; n++)
-        {
-            buf[n]=t[255&buf[n]];
-        }
+        case CHARTAB_CCC2CWI      : return chartab_ccc2cwi;
+        case CHARTAB_CWI2CCC      : return chartab_cwi2ccc;
+        case CHARTAB_CCC2LAT      : return chartab_ccc2lat;
+        case CHARTAB_LAT2CCC      : return chartab_lat2ccc;
+        case CHARTAB_CCC2WIN      : return chartab_ccc2win;
+        case CHARTAB_LOWER2UPPER  : return chartab_lower2upper;  //ékezetes!
+        case CHARTAB_UPPER2LOWER  : return chartab_upper2lower;  //ékezetes! 
+        default                   : return NULL;
     }
-}
-
-//---------------------------------------------------------------------
-int charconv_char(int tab, int c)
-{
-    char *t=charconv_selecttab(tab);
-    return t ? t[255&c] : c;
-}
-
+}    
 
 //---------------------------------------------------------------------
 void charconv_top(int tab)
 {
-    VALUE *s=TOP();
-    unsigned int len=STRINGLEN(s);
-    if( len>0 )
+    VARSTACK(0);
+
+    char *t=charconv_selecttab(tab);
+    if( t==0 )
     {
-        strings(STRINGPTR(s),len);
-        charconv_string(tab,STRINGPTR(TOP()),len);
-        *TOP2()=*TOP();
-        POP();
+        return;
     }
+    unsigned int len=STRINGLEN(TOP());
+    if( len==0 )
+    {
+        return;
+    }
+   
+    char *source=STRINGPTR(TOP());
+    stringl(len);
+    VARSTACK(1);
+    char *destin=STRINGPTR(TOP());
+    for(unsigned n=0; n<len; n++)
+    {
+        destin[n]=t[255&source[n]];
+    }
+    VARSTACK(2);
+    *TOP2()=*TOP();
+    POP();
+
+    VARSTACK(3);
 }
 
 //---------------------------------------------------------------------

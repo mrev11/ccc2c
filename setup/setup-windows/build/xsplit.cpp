@@ -1,4 +1,4 @@
-//input: xsplit.ppo (4.10.0)
+//input: ppo/xsplit.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -43,6 +43,7 @@ push_call("xsplit",base);
         push_symbol(base+0);//txt
         _clp_at(2);
         lt();
+        cmp_95:;
         if(!flag()) goto if_2_1;
             line(30);
             goto lab_1_2;//exit

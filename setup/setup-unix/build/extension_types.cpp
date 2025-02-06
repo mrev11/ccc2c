@@ -1,4 +1,4 @@
-//input: extension_types.ppo (4.10.0)
+//input: ppo/extension_types.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -56,6 +56,7 @@ push_call("extension_types",base);
         push_symbol(base+1);//r2
         string(".obj");
         eqeq();
+        cmp_144:;
         if(!flag()) goto if_2_1;
             line(36);
             _clp_s_primary(0);

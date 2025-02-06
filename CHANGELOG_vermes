@@ -1,3 +1,10 @@
+
+2025-02-06 
+  egyseges build rendszer minden platformra;
+  a build rendszer cache-eli az objecteket;
+  oneletter branch: egybetus stringek kulon kezelve;  
+
+
 2025-01-21 
   OREF_SIZE helyett CCC_OREFSIZE (default=200000);
   VREF_SIZE helyett CCC_VREFSIZE;

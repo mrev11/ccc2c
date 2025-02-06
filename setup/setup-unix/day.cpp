@@ -1,4 +1,4 @@
-//input: day.ppo (4.10.0)
+//input: ppo/day.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -256,6 +256,7 @@ push_call("_clp_ctod",base);
     _clp_len(1);
     number(8);
     neeq();
+    cmp_648:;
     if(!flag()) goto if_5_1;
         line(73);
         string("00000000");
@@ -311,6 +312,7 @@ push_call("ctos",base);
     addnum(2);
     push_symbol(base+3);//ldate
     eqeq();
+    cmp_812:;
     if(!flag()) goto if_6_1;
         line(87);
         push_symbol(base+1);//dform
@@ -331,6 +333,7 @@ push_call("ctos",base);
     push_symbol(base+3);//ldate
     addnum(2);
     eqeq();
+    cmp_877:;
     if(!flag()) goto if_6_2;
         line(90);
         push_symbol(base+1);//dform
@@ -374,6 +377,7 @@ push_call("ctos",base);
         push_symbol(base+8);//c
         string("y");
         eqeq();
+        cmp_1021:;
         if(!flag()) goto if_8_1;
             line(99);
             push_symbol(base+4);//y
@@ -390,6 +394,7 @@ push_call("ctos",base);
         push_symbol(base+8);//c
         string("m");
         eqeq();
+        cmp_1068:;
         if(!flag()) goto if_8_2;
             line(101);
             push_symbol(base+5);//m
@@ -406,6 +411,7 @@ push_call("ctos",base);
         push_symbol(base+8);//c
         string("d");
         eqeq();
+        cmp_1115:;
         if(!flag()) goto if_8_3;
             line(103);
             push_symbol(base+6);//d
@@ -434,11 +440,13 @@ push_call("ctos",base);
     _clp_len(1);
     number(2);
     eqeq();
+    cmp_1182:;
     if(!flag()) goto if_9_1;
         line(108);
         push_symbol(base+4);//y
         string("54");
         lt();
+        cmp_1199:;
         if(flag()){
         string("20");
         }else{

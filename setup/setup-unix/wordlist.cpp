@@ -1,4 +1,4 @@
-//input: wordlist.ppo (4.10.0)
+//input: ppo/wordlist.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -49,6 +49,7 @@ push_call("wordlist",base);
     _clp_at(3);
     assign(base+4);//i
     lt();
+    cmp_62:;
     if(!flag()) goto lab_1_2;
         line(26);
         push_symbol(base+2);//wlist
@@ -72,6 +73,7 @@ push_call("wordlist",base);
     _clp_len(1);
     push_symbol(base+3);//n
     gteq();
+    cmp_169:;
     if(!flag()) goto if_2_1;
         line(34);
         push_symbol(base+2);//wlist

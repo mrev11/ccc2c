@@ -1,4 +1,4 @@
-//input: normalize.ppo (4.10.0)
+//input: ppo/normalize.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -71,6 +71,7 @@ push_call("normalize",base);
             _clp_dirsep(0);
             add();
             eqeq();
+            cmp_178:;
             if(!flag()) goto if_3_1;
                 line(35);
                 push_symbol(base+3);//x

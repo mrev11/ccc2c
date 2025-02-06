@@ -1,4 +1,4 @@
-//input: makeso.ppo (4.10.0)
+//input: ppo/makeso.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -109,6 +109,7 @@ push_call("makeso",base);
     push_symbol(base+3);//ttarget
     push(&NIL);
     eqeq();
+    cmp_286:;
     if(!flag()) goto if_2_1;
         line(42);
         string("");

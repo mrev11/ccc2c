@@ -1,4 +1,4 @@
-//input: dbtransl.ppo (4.10.0)
+//input: ppo/dbtransl.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -57,6 +57,7 @@ push_call("translate",base);
         _clp_valtype(1);
         string("A");
         eqeq();
+        cmp_140:;
         if(!flag()) goto if_2_1;
             line(38);
             push_symbol(base+4);//rs
@@ -84,6 +85,7 @@ push_call("translate",base);
                 _clp_valtype(1);
                 string("A");
                 eqeq();
+                cmp_207:;
                 if(!flag()){
                 push(&FALSE);
                 }else{
@@ -93,6 +95,7 @@ push_call("translate",base);
                 idxr0(1);
                 push_symbol(base+7);//name
                 eqeq();
+                cmp_224:;
                 }
                 if(!flag()) goto if_4_1;
                     line(42);
@@ -126,6 +129,7 @@ push_call("translate",base);
             push_symbol(base+3);//ls
             _clp_len(1);
             gt();
+            cmp_287:;
             if(!flag()) goto if_5_1;
                 line(48);
                 string("left :");
@@ -180,6 +184,7 @@ push_call("translate",base);
         _clp_valtype(1);
         string("A");
         eqeq();
+        cmp_439:;
         if(!flag()) goto if_7_1;
             line(62);
             line(57);
@@ -189,6 +194,7 @@ push_call("translate",base);
             _clp_len(1);
             number(2);
             gt();
+            cmp_466:;
             if(!flag()) goto if_8_1;
                 line(58);
                 push_symbol(base+3);//ls

@@ -1,4 +1,4 @@
-//input: ftime.ppo (4.10.0)
+//input: ppo/ftime.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -28,6 +28,7 @@ push_call("ftime",base);
     _clp_len(1);
     push(&ONE);
     eqeq();
+    cmp_62:;
     if(!flag()) goto if_1_1;
         line(28);
         push_symbol(base+1);//d

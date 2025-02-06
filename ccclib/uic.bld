@@ -3,7 +3,7 @@
 -duic
 -duic/termapi
 -duic/compat
--duic/screenbuf
+-iuic/screenbuf
 
 -iinclude
  

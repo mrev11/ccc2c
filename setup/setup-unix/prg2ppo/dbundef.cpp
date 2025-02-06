@@ -1,4 +1,4 @@
-//input: dbundef.ppo (4.10.0)
+//input: ppo/dbundef.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -28,6 +28,7 @@ push_call("undef",base);
     _clp_len(1);
     push(&ZERO);
     gt();
+    cmp_65:;
     if(flag()){
     push_symbol(base+1);//toklist
     idxr0(1);

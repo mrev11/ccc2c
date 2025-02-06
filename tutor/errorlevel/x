@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if  errorlevel.exe $1; then
+    echo RIGHT
+else
+    echo WRONG
+fi

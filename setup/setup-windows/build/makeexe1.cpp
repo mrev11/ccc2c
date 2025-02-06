@@ -1,4 +1,4 @@
-//input: makeexe1.ppo (4.10.0)
+//input: ppo/makeexe1.ppo (4.11.0.1)
 
 #include <clp2cpp.h>
 
@@ -102,6 +102,7 @@ push_call("makeexe1",base);
     push_symbol(base+3);//ttarget
     push(&NIL);
     eqeq();
+    cmp_268:;
     if(!flag()) goto if_2_1;
         line(40);
         string("");
@@ -210,6 +211,7 @@ push_call("makeexe1",base);
         _clp_right(2);
         string(".lib");
         eqeq();
+        cmp_561:;
         if(!flag()) goto if_5_1;
             line(60);
             _clp_s_libspec(0);
