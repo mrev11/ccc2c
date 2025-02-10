@@ -12,12 +12,12 @@ rm -f $ERROR
 rm -f $CMPOPT 
 mkdir -p $BUILD_OBJ
 
-if ! test -f $CCCDIR/usr/options/$CCCBIN/gccver.opt; then
-   gccver.b >$CCCDIR/usr/options/$CCCBIN/gccver.opt 
+if ! test -f $CCCDIR/usr/options/${CCCBIN}/gccver.opt; then
+   gccver.b >$CCCDIR/usr/options/${CCCBIN}/gccver.opt 
 fi
 
-cat $CCCDIR/usr/options/$CCCBIN/gccver.opt >$CMPOPT
-cat $CCCDIR/usr/options/$CCCBIN/$BUILD_OPT >>$CMPOPT
+cat $CCCDIR/usr/options/${CCCBIN}/gccver.opt >$CMPOPT
+cat $CCCDIR/usr/options/${CCCBIN}/$BUILD_OPT >>$CMPOPT
 for i in $BUILD_INC; do echo -I$i >>$CMPOPT; done
 if test -f "$BUILD_CFG"; then
     cat $BUILD_CFG >>$CMPOPT 

@@ -18,12 +18,11 @@
 -Wno-unused-result
 -Wno-trigraphs
 -Wno-empty-body
--Wno-invalid-source-encoding
 -Wno-format-overflow
 -Wno-parentheses
--Wno-unknown-warning-option
--Wno-constant-logical-operand
 -Wno-deprecated-declarations
--Wno-unknown-warning-option
+-Wno-constant-logical-operand
 -Wno-vla-cxx-extension
+-Wno-unknown-warning-option
+-Wno-invalid-source-encoding
 

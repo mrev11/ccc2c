@@ -1,3 +1,7 @@
+2025-02-10 
+  tovabbi modularizalas: termux, raspi;
+  CCCUNAME es CCCBIN nevu directoryk csak az options alatt vannak;
+
 
 2025-02-06 
   egyseges build rendszer minden platformra;
@@ -1683,9 +1687,9 @@
 
 2018.01.16 make (m, mb.bat, parfile.bld) scriptek korszerusitese:
   Az m scriptekben
-    for so in obj$CCCBIN/*.so; do
+    for so in ${BUILD_OBJ}/*.so; do
   helyett
-    find obj$CCCBIN/*.so | while read so; do
+    find ${BUILD_OBJ}/*.so | while read so; do
   elobbi ciklus (zavart okozva) egyszer akkor is fut,
   ha valami hiba miatt nem keszult el az so;
   Egyforma scriptek CCC2-re es CCC3-ra;
