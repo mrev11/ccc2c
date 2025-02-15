@@ -1,3 +1,6 @@
+2025-02-15
+  CCC_GCDEBUG helyertek vesszos kiirasban setlocale helyett decimal();
+
 2025-02-14
    setup-flex/misc.c-ben nagyobb buffer;
    terminal/windows-cterm-ben non-breaking space;

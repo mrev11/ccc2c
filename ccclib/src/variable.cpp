@@ -36,6 +36,8 @@ static int ofree;  // szabad elemek szama oref-ben szemetgyujtes utan
 static int alloc_count=0;  // foglalasok szama
 static long alloc_size=0;  // foglalasok osszmerete 
 
+static int gc_maxoref=0;
+
 static char *env_orefsize=getenv("CCC_OREFSIZE");
 static char *env_vrefsize=getenv("CCC_VREFSIZE");
 static char *env_gcdebug=getenv("CCC_GCDEBUG");
@@ -53,6 +55,7 @@ static volatile int garbage_collection_is_running=0;
 
 static void vartab_mark(VALUE*);
 static void vartab_sweep();
+static char *decimal(long x);
 
 
 #if ! defined MULTITHREAD
@@ -284,11 +287,9 @@ void vartab_rebuild(void)
     if( env_gcdebug ) //debug info
     { 
         fflush(0);
-        setlocale(LC_ALL,"en_US");
-        fprintf(stderr,"\nalloc_count: %'d/%'d, alloc_size: %ldM/%ldM",
-                          alloc_count,ALLOC_COUNT,alloc_size>>20,ALLOC_SIZE>>20 );
+        fprintf(stderr,"\nalloc_count: %s/%s, alloc_size: %ldM/%ldM",
+                          decimal(alloc_count),decimal(ALLOC_COUNT),alloc_size>>20,ALLOC_SIZE>>20 );
         fflush(0);
-        setlocale(LC_ALL,"C");
     }
 
     alloc_count=0;
@@ -357,11 +358,10 @@ void vartab_rebuild(void)
 
     if( env_gcdebug ) //degub info
     {
-        setlocale(LC_ALL,"en_US"); //set
-        fprintf(stderr,"\nofree=%'d vfree=%'d",ofree,vfree);
+        gc_maxoref=max(gc_maxoref,OREF_SIZE-ofree);
+        fprintf(stderr,"\nofree=%s vfree=%s maxoref=%s",decimal(ofree),decimal(vfree),decimal(gc_maxoref));
         fprintf(stderr,"\n");
         fflush(0);
-        setlocale(LC_ALL,"C");
     }
 
     garbage_collection_is_running=0;
@@ -627,7 +627,56 @@ void _clp_vartab_rebuild(int argno)
 }
 
 
-
+//---------------------------------------------------------------------------                                           
+static char *decimal(long x)                                                                                            
+{                                                                                                                       
+    static char store[1024];                                                                                            
+    static int storeidx=0;                                                                                              
+    if( storeidx>1024-64 )                                                                                              
+    {                                                                                                                   
+        storeidx=0;                                                                                                     
+    }                                                                                                                   
+    int storebeg=storeidx;                                                                                              
+                                                                                                                        
+    int sign=0;                                                                                                         
+    if( x<0 )                                                                                                           
+    {                                                                                                                   
+        sign=1;                                                                                                         
+        x=-x;                                                                                                           
+    }                                                                                                                   
+                                                                                                                        
+    char buf[64];                                                                                                       
+    int i=0;                                                                                                            
+    if( x==0 )                                                                                                          
+    {                                                                                                                   
+        buf[i++]='0';                                                                                                   
+    }                                                                                                                   
+    while( x!=0 )                                                                                                       
+    {                                                                                                                   
+        buf[i++]='0'+x%10;                                                                                              
+        x/=10;                                                                                                          
+                                                                                                                        
+        // 987,654,321                                                                                                  
+        //    ^   ^   ^                                                                                                 
+        // 0  3   7  (11)                                                                                               
+                                                                                                                        
+        if( x && (i-3)%4==0 )                                                                                           
+        {                                                                                                               
+            buf[i++]=',';                                                                                               
+        }                                                                                                               
+    }                                                                                                                   
+    if( sign )                                                                                                          
+    {                                                                                                                   
+        store[storeidx++]='-';                                                                                          
+    }                                                                                                                   
+    while( i>0 )                                                                                                        
+    {                                                                                                                   
+        store[storeidx++]=buf[--i];                                                                                     
+    }                                                                                                                   
+    store[storeidx++]=0;                                                                                                
+    return store+storebeg;                                                                                              
+}                                                                                                                       
+    
 //---------------------------------------------------------------------------
 //DEBUG: object inventory
 //---------------------------------------------------------------------------
