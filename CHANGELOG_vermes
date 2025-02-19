@@ -1,3 +1,6 @@
+2025-02-19
+   -soname felveve a linker parameterlistajaba;
+
 2025-02-15
   CCC_GCDEBUG helyertek vesszos kiirasban setlocale helyett decimal();
 
