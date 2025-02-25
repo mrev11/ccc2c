@@ -5,6 +5,7 @@
 
 ./cc ${CCCDIR}/ccclib/src/unix/envir.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/chown.cpp
+./cc ${CCCDIR}/ccclib/src/unix/curdir.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/filecreat.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/fork.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/fseek.cpp
