@@ -25,22 +25,16 @@
 ******************************************************************************
 function main()
    
-    //Figyelem:
-    //"set dosconv off" nélkül a környezeti változók nagybetûsek
-    //"set dosconv off" után a környezeti változók case sensitivek
-
-    set dosconv off
-
     if( argc()<=1 )
         parent()
     else
         child()
     end
-    return NIL
+    ?
 
 
 ******************************************************************************
-static function parent()  //ír a pipe-ba
+static function parent()  //Ã­r a pipe-ba
 
 local n:=0
 local pp:=pipe()
@@ -48,55 +42,53 @@ local pr:=pp[1]
 local pw:=pp[2]
 local env:={},c 
 
-    //Ha beállítjuk a child környezetét, akkor be kell
-    //állítani LD_LIBRARY_PATH-t is, máskülönben a child
-    //nem találja meg az so-kat.
+    //Ha beÃ¡llÃ­tjuk a child kÃ¶rnyezetÃ©t, akkor be kell
+    //Ã¡llÃ­tani LD_LIBRARY_PATH-t is, mÃ¡skÃ¼lÃ¶nben a child
+    //nem talÃ¡lja meg az so-kat.
 
     aadd(env,"PATH="+getenv("PATH"))
     aadd(env,"LD_LIBRARY_PATH="+getenv("LD_LIBRARY_PATH"))
     aadd(env,"proba=szerencse")
-    aadd(env,"vanaki=forrón szereti")
+    aadd(env,"vanaki=forrÃ³n szereti")
     
-    //át kell adni pr-t és pw-t is,
-    //pw-t csak azért, hogy a child lezárhassa,
-    //máskülönben pr olvasása vég nélkül vár
+    //Ã¡t kell adni pr-t Ã©s pw-t is,
+    //pw-t csak azÃ©rt, hogy a child lezÃ¡rhassa,
+    //mÃ¡skÃ¼lÃ¶nben pr olvasÃ¡sa vÃ©g nÃ©lkÃ¼l vÃ¡r
 
     spawn(SPAWN_NOWAIT, {"test1.exe", str(pr), str(pw)}, env )
     
     fclose(pr)
 
-    while( ++n<=3 )
+    while( ++n<=26 )
         c:=chr(asc("a")+n-1) 
-        ? "parent:",c, fwrite(pw,c)  
-        sleep(1000)
+        ? "parent:",c
+        fwrite(pw,c)  
+        sleep(200)
     end
 
     fclose(pw)
 
-    return NIL
- 
  
 ******************************************************************************
-static function child() //olvas a pipe-ból
+static function child() //olvas a pipe-bÃ³l
 
 local pr:=val(argv(1))
 local pw:=val(argv(2))
-local buf:=space(32),nbyte
+local buf:=replicate(a" ",32),nbyte
 
     fclose(pw)
 
-    ? "child :", getenv("proba")
-    ? "child :", getenv("vanaki")
-    ? "child :", getenv("PATH")
-
     while( 0<(nbyte:=fread(pr,@buf,len(buf)))     )
-        ? "child :", upper(left(buf,nbyte))
+        ?? "  child:", upper(left(buf,nbyte))
     end
+
+    ?
+    ? "CHILD proba :", getenv("proba")
+    ? "CHILD vanaki:", getenv("vanaki")
+    ? "CHILD PATH  :", getenv("PATH")
     
     fclose(pr)
-
-    return NIL
- 
+    ?
 
 ******************************************************************************
  

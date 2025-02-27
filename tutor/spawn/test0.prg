@@ -27,43 +27,38 @@ function main()
     else
         child()
     end
-    return NIL
+    ?
 
 
 ******************************************************************************
-static function parent() //olvas a pipe-ból
+static function parent() //olvas a pipe-bÃ³l
 
 local pp:=pipe()
 local pr:=pp[1]
 local pw:=pp[2]
-local nbyte,buf:=space(32)
+local nbyte,buf:=replicate(a" ",256)
 
     spawn(.f., "test0.exe", str(pw) )
     
     fclose(pw)
 
     while( 0<(nbyte:=fread(pr,@buf,len(buf))) )
-        ?? "'"+left(buf,nbyte)+"'", nbyte, crlf()
+        ? nbyte, left(buf,nbyte)
     end
 
-    ? nbyte
-    
     fclose(pr)
-
-    return NIL
  
  
 ******************************************************************************
-static function child() //ír a pipe-ba 
+static function child() //Ã­r a pipe-ba 
 
 local pw:=val(argv(1))
 local d:=directory("*.*","H"),n
  
     for n:=1 to len(d)
-        fwrite( pw,d[n][1] )
+        fwrite( pw,any2str(d[n]) )
         sleep(1000)
     end
-    return NIL
  
 
 ******************************************************************************
