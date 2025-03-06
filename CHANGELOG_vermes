@@ -1,3 +1,7 @@
+2025-03-06 time.cpp:
+  mutex helyett atirva reentrans fuggvenyekre (localtime_r/gmtime_r);
+  ctime() es  gmtime2httpdate() megszuntek;
+
 2025-03-01 sslauth-demo felfrissitve;
 
 2025-03-01 object cache szetbontva kisebb directorykra;
