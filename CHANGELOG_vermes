@@ -1,3 +1,7 @@
+2025-03-09 
+  time.cpp-ben _POSIX_THREAD_SAFE_FUNCTIONS;
+  options/msys/gcc/compile.opt eliras javitva;
+
 2025-03-07 ures array borwse tamogatas;
 
 2025-03-06 time.cpp:

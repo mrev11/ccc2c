@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo ${CCCDIR}
-cp   ${CCCDIR}/ccclib/src/add.cpp add.cppx
-
 ./cc ${CCCDIR}/ccclib/src/ui_/main.cpp
 ./cc ${CCCDIR}/ccclib/src/ui_/remoteio.cpp
 
