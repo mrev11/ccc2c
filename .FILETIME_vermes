@@ -1,11 +1,17 @@
-7c03554e726528411d522afb1f3457c840f1a674 2025031818:15:56-UTC ./ccclib/src/buildnumber_ccc.prg
-9f42329925a3c0e822b9d68a651766268492f8e6 2025031818:15:30-UTC ./CHANGELOG_vermes
+0c45ed97e60bef83a84dbd7c24f032dc0de1a26a 2025031818:22:15-UTC ./ccclib/src/buildnumber_ccc.prg
+338f316aa3a1233717f52ed5dec336c27445a160 2025031818:21:07-UTC ./make_extn
+d6d0c99a00e12cc295521361f4f767307658423c 2025031818:16:47-UTC ./CHANGELOG_vermes
 cee31f52ea10d348c85ed6d5222ef64c9f182a55 2025031817:59:04-UTC ./ccclib/src/uic/brwmenu.prg
+b70213bdb6cf8d7ffa7783bf55998b1c7f9d7de5 2025031817:02:59-UTC ./tools/tdc2prg/tdc2prg.prg
+4e78b92cbfa45b4dc124eb36bde79fd2a9524b01 2025031817:02:54-UTC ./tools/tdc2prg/tdc2tabobj.prg
+5e8cec733a7fec14a3c7996331fe0bafefe55883 2025031817:02:50-UTC ./tools/tdc2prg/parsetdc.prg
+e317c1e5de7a613031436a2f207425d0bc6c92c8 2025031817:02:45-UTC ./tools/tdc2prg/tdc2ch.prg
 2d14359032b5850033bba2e4e2c1911f845cdf98 2025031700:12:52-UTC ./tabobj/tbbtbtx/utility/bt2tdc.prg
 f3c9bc51012bd77d3c2ef58d7cbcf9b8d3b48c9f 2025031700:09:27-UTC ./tabobj/tbbtbtx/dbinfo.prg
 893f8c1ca2f3bcf5de9274298e9d76e0bb579342 2025031623:50:35-UTC ./tabobj/tbbtbtx/btree/bt_order.cpp
 a3f6f5afae04d6885353cc27948ba7e102b732b8 2025031623:50:05-UTC ./tabobj/tbbtbtx/btree/extern.h
 2ffa6758cc5958af41ef5d7e93931324927f36e4 2025031623:49:22-UTC ./tabobj/tbbtbtx/btree/db.cpp
+1b0eb4f6ce7d003174b4859b9172ff73faecebd2 2025031622:30:10-UTC ./tools/tdc2prg/prg2tdc.prg
 8a91eba73bbea7195f0ada411d6a94eb4ecf9a0f 2025031621:48:03-UTC ./tabobj/utility.src/stru.prg
 69cb377e5df07f31d413c2542152dec9612608d0 2025031618:24:44-UTC ./tabobj/tbbtbtx/tabobjclass.prg
 a053568bf344c8e02c1f48b2265c4fe220c1a4da 2025031515:10:33-UTC ./tabobj/log-install
@@ -57,6 +63,7 @@ c7ecfd39cc4e0e47ed31355c9531d49ded885e62 2025031512:35:08-UTC ./tabobj/tbbtbtx/d
 e8c3824211f64d6a9889cd0a92eec80ddd6c2160 2025031512:35:08-UTC ./tabobj/utility.src/tbl2txt.prg
 325fa19e559129ec336788bebbc71b66b39a5903 2025031419:22:26-UTC ./usr/build/tdc2ch.bld
 9528360dd2a5cb29ee512bc452d9298e21949c9b 2025031418:59:20-UTC ./usr/build/compile_tdc
+65f92077ddd88212cbcc73657f7961bf883479e8 2025031418:02:52-UTC ./tools/tdc2prg/parfile.bld
 08d6e44dd9e5c26318d78865525640eccfe0ec2b 2025031113:39:23-UTC ./log-install
 4c00e719545bd1225264d1f9d9e525e47894c19d 2025031113:39:23-UTC ./usr/bin/delempty
 3e86f6b5c602289ea5aea12984a1c17a16fdec62 2025031113:39:23-UTC ./usr/bin/delobj
@@ -155,10 +162,6 @@ ba8e60fd2e07dd5ca63295711d9d90030aaa3d9f 2025030618:37:40-UTC ./tutor/fpath/obje
 e271da138c90dfa78d05e324692afd3d88d3ab0c 2025030618:37:40-UTC ./tutor/rename/rnm.say
 6a79a7e85b54082df9929864c99d4092a8820000 2025030618:37:39-UTC ./tools/sql2/util/jeed/object/rsp--exe-jeed
 7cc2f5c23df9bf489a84bfaa39523f404fa03187 2025030618:37:39-UTC ./tools/sql2/util/jeed/object/rsp--lib-ccc2_jeed
-b136da15935cc3365de251d9df087fe442e61c4a 2025030618:37:39-UTC ./tools/tdc2prgch/object/rsp--exe-prg2tdc
-abbcc19566efa2130603e2d5ad583d49e9843e54 2025030618:37:39-UTC ./tools/tdc2prgch/object/rsp--exe-tabsuper
-072d60085138d2d67af6936991a2cd20f32c9e2c 2025030618:37:39-UTC ./tools/tdc2prgch/object/rsp--exe-tdc2prgch
-47c04c25f26da23dde2196b05c8ddeb01d3923e1 2025030618:37:39-UTC ./tools/tdc2prgch/object/rsp--exe-tdc2tabobj
 13166e2d01ee8428dbcf9ec9e1577c48a740be66 2025030618:37:39-UTC ./tools/tdccmp/object/rsp--exe-tdccmp
 55a05074f8b8008e34c6e646245def9c8a12c7fc 2025030618:37:39-UTC ./tools/tran2cpp/object/rsp--exe-tran2cpp
 5a9ce683210993a06ae63d5e5c05ea636d6cbdf0 2025030618:37:39-UTC ./tools/xmlrpc/object/rsp--lib-ccc2_xmlrpc
@@ -484,7 +487,6 @@ e2462f27735018b72d339d1f02c445c2d4e0c7ff 2025020413:38:53-UTC ./tools/tran2cpp/p
 16d50f35f59b30818db24a19ac04e6a385c3b510 2025020413:38:37-UTC ./jt/jtdemo/postest2/s
 77d6678d63b30979fcad22371f6798aced1c185b 2025020413:38:30-UTC ./jt/jtdemo/ping/parfile.bld
 c35fea49f3b5fae69446d5135db93e53202f9516 2025020413:38:15-UTC ./ccctools/cccbn/m
-a3710ba7fddc3e1fcb70d61206a0ad8432e4f4b8 2025020413:17:08-UTC ./make_extn
 fa9e1bdee7cc3d635cbe24a98fcfe51b60bf2b35 2025020413:11:45-UTC ./setup/setup-unix/build/makeobj.cpp
 58e020b0168186d7aa45bbc4e9193716ef848988 2025020413:11:45-UTC ./setup/setup-unix/build/makeso.cpp
 2a329bbb406558e5850b88ac1c3093635a2011d4 2025020413:11:45-UTC ./setup/setup-unix/build/normalize.cpp
@@ -596,6 +598,7 @@ b74119144f5b0ef9b9e01f448b15743f30fc09c5 2025020309:15:03-UTC ./tools/sql2/drive
 4e7977cfaee7db9f599f8ae52b3352b0decd6343 2025020309:15:03-UTC ./tools/sql2/driver-db2/proba/m
 2b9385f232140b0369695b215dde70a8e962dced 2025020309:15:03-UTC ./tools/sql2/driver-mysql/proba/m
 1bf2d2c14981f6f2bd825a50fd9bb5903a877fa0 2025020309:15:03-UTC ./tools/sql2/util/bt2tds/m
+437aa33cb4b6803ca1820482c4ce2a1d8fa6d8fa 2025020309:15:03-UTC ./tools/tdc2prg/tabobj/m
 59e00148d0c5941013716f551351843e4d4922b4 2025020309:15:03-UTC ./tools/tdc2prgch/m
 e599c140424f2ed4e3711ecc5af3b198623d6b5c 2025020309:15:03-UTC ./tools/textview/demo/m
 e217a7470473408c91c538e4f5db6def832d9943 2025020309:15:03-UTC ./tools/textview/m
@@ -1057,6 +1060,14 @@ f80288f9afbe332dfe6074799a78020c68138496 2022110812:18:09-UTC ./tools/xmlrpc-fra
 5abd913cadca933fca6a4c3513fb560fc0703c62 2022110812:17:35-UTC ./tools/xmlrpc-framework/texdoc/t
 e174dbcdbc776e4743190ee18a03bbc2ff2745b6 2022110418:31:25-UTC ./tools/xmlrpc-framework/s.savex
 5435706b1f802c19063b6f446768c35436e244ff 2022110418:23:49-UTC ./tools/xmlrpc-framework/rpcbase/.gitignore
+75965d71ee625098aa43950fd517cb4c87f6e0dc 2022103114:06:08-UTC ./tools/tdc2prg/tabobj/multith.prg
+520cf2e75525240d4b015231e852e6d52a9bd87e 2022103114:05:30-UTC ./tools/tdc2prg/tabobj/demo.prg
+7f21c00eff40da50e8276c275fb2efbbf8e6448e 2022103114:01:48-UTC ./tools/tdc2prg/tabobj/list.prg
+57468b62d9e210c94ba29ea936dcecf227a55c29 2022103114:01:45-UTC ./tools/tdc2prg/tabobj/list0.prg
+2e395fdfead8369c825bfc197c6591b5e20bc72a 2022103113:35:25-UTC ./tools/tdc2prg/tabobj/s
+1c9fc4db072fa57670b99faa14445a5412a7f2b1 2022103113:26:49-UTC ./tools/tdc2prg/tabobj/parfile.bld
+2fd7ba6bf76b7dbf2ebd65ad6271e4f86b02c5ba 2022103112:36:01-UTC ./tools/tdc2prg/tabobj/tdc/_cassa.ch
+72750bccca43934523981f9d9b797e75e3c24a75 2022103109:53:39-UTC ./tools/tdc2prg/tabobj/tdc/_cassa.tdc
 531bd2ee6d324cdda5725a1cde213348b796b99c 2022102915:53:52-UTC ./tools/tdc2prgch/tabobj/.gitignore
 5be3835aebc636d3f01d0c6e16f8389b93c9c15a 2022102110:50:22-UTC ./ccctools/ppo2cpp/fundecl.cpp
 c937cace48e7645f8d371196ac814834f224ead6 2022102110:49:16-UTC ./ccctools/ppo2cpp/nodetab.h
@@ -1474,6 +1485,7 @@ f00044b3e99ca0fc5c236226c98cd498eb5a96c0 2017042706:18:12-UTC ./ccclib/src/uic/s
 e91cfb664b0fb48bc20953ac5c06393b33069f73 2017042522:23:58-UTC ./tools/mask/maskdemo.sor
 ddb1cf929f4c5ffb3dfc7bd563c9e44d1ab82f36 2017032419:47:07-UTC ./tools/ddict2/ddict2.prg
 7fe8211f5db832f2f7e14db3d99608dc4f09997c 2017032419:37:54-UTC ./tools/ddict2/progout.prg
+6add75e968a67e4ce8cb2294d2b8cd6e8e8ea0ae 2017032417:56:19-UTC ./tools/tdc2prg/tabsuper.prg
 a13801d71f3bdc1551b1af1b734ca55e0b1e6ca4 2017032212:29:33-UTC ./tools/ddict2/dddel.prg
 23ef682d33674e2ca5985df1c878903a9bce0299 2017031511:58:28-UTC ./tools/sql2/driver-sqlite3/regression/sqlite3-regression.rb
 d54351ee8b70057485757fe55daaa00e98cee654 2017021918:14:34-UTC ./tutor/xbrwarr/xbrwarr.prg
