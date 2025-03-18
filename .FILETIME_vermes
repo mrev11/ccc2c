@@ -1,6 +1,6 @@
-0c45ed97e60bef83a84dbd7c24f032dc0de1a26a 2025031818:22:15-UTC ./ccclib/src/buildnumber_ccc.prg
+7775d5b897a35a6a53d4de5b3587eef70acbe1a9 2025031818:23:38-UTC ./ccclib/src/buildnumber_ccc.prg
+fd214d54a673e7bab667cb19c361eaf17b793f91 2025031818:22:58-UTC ./CHANGELOG_vermes
 338f316aa3a1233717f52ed5dec336c27445a160 2025031818:21:07-UTC ./make_extn
-d6d0c99a00e12cc295521361f4f767307658423c 2025031818:16:47-UTC ./CHANGELOG_vermes
 cee31f52ea10d348c85ed6d5222ef64c9f182a55 2025031817:59:04-UTC ./ccclib/src/uic/brwmenu.prg
 b70213bdb6cf8d7ffa7783bf55998b1c7f9d7de5 2025031817:02:59-UTC ./tools/tdc2prg/tdc2prg.prg
 4e78b92cbfa45b4dc124eb36bde79fd2a9524b01 2025031817:02:54-UTC ./tools/tdc2prg/tdc2tabobj.prg
