@@ -1,3 +1,7 @@
+2025-04-01 
+  build global valtozok szinkronizalva;
+  fspec.prg megszunt, helyette filespec.prg;
+   
 2025-03-26 super rebuild;
 
 2025-03-22
