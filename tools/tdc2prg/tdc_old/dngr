@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cp -p table.ch              $CCC2DIR/usr/include
+
+cp -p prg2tdc.prg           $CCC2DIR/tools/tdc2prg/
+cp -p tabsuper.prg          $CCC2DIR/tools/tdc2prg/
+cp -p tdc2prg.prg           $CCC2DIR/tools/tdc2prg/
+cp -p tdc2tabobj.prg        $CCC2DIR/tools/tdc2prg/
+

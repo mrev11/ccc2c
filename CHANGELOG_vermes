@@ -1,4 +1,8 @@
 2025-04-01 
+  tools/tdc2prg/tdc_new-ban beallithato az uj tdc feldolgozas;
+  tools/tdc2prg/tdc_old-ban beallithato az regi tdc feldolgozas;
+
+2025-04-01 
   build global valtozok szinkronizalva;
   fspec.prg megszunt, helyette filespec.prg;
    
