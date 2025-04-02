@@ -1,11 +1,13 @@
-2025-04-01 
+2025-04-02 tdc2prg javitva;
+
+2025-04-01
   tools/tdc2prg/tdc_new-ban beallithato az uj tdc feldolgozas;
   tools/tdc2prg/tdc_old-ban beallithato az regi tdc feldolgozas;
 
-2025-04-01 
+2025-04-01
   build global valtozok szinkronizalva;
   fspec.prg megszunt, helyette filespec.prg;
-   
+
 2025-03-26 super rebuild;
 
 2025-03-22
@@ -40,7 +42,7 @@
   BUILD_USECACHE!=no (default) eseten forditas helyett a tarolt objectet veszi;
   BUILD_USECACHE=no eseten a cache-t nem nezi (de az uj objectet tarolja);
 
-2025-03-09 
+2025-03-09
   time.cpp-ben _POSIX_THREAD_SAFE_FUNCTIONS;
   options/msys/gcc/compile.opt eliras javitva;
 
@@ -74,18 +76,18 @@
    setup-flex/misc.c-ben nagyobb buffer;
    terminal/windows-cterm-ben non-breaking space;
 
-2025-02-10 
+2025-02-10
   tovabbi modularizalas: termux, raspi;
   CCCUNAME es CCCBIN nevu directoryk csak az options alatt vannak;
 
 
-2025-02-06 
+2025-02-06
   egyseges build rendszer minden platformra;
   a build rendszer cache-eli az objecteket;
-  oneletter branch: egybetus stringek kulon kezelve;  
+  oneletter branch: egybetus stringek kulon kezelve;
 
 
-2025-01-21 
+2025-01-21
   OREF_SIZE helyett CCC_OREFSIZE (default=200000);
   VREF_SIZE helyett CCC_VREFSIZE;
   GARBAGE helyett CCC_GCDEBUG;
@@ -115,11 +117,11 @@
   setsockopt TCP_NODELAY FreeBSD-n NetBSD-n es Solarison is;
   windows direxist() egysegesitve;
 
-2024-12-26 
+2024-12-26
   windows cterm is megorzi a kurzopoziciot;
   unix-ncterm megszuntetve;
 
-2024-12-26 
+2024-12-26
   socketek defaultja TCP_NODELAY;
   cterm kepernyo frissites megorzi a kurzopoziciot (ncterm-ben benne volt);
   Windowson linkelodik onecore;
@@ -139,7 +141,7 @@
 2024-11-08
   A tranzakcio timeout kezeles atirva:
     Timeout-ra a program nem bocsat ki SIGALRM-ot (kezelese veszelyes),
-    hanem csak megjegyzi, hogy timeout tortent. A tranCommit() megnezi, 
+    hanem csak megjegyzi, hogy timeout tortent. A tranCommit() megnezi,
     hogy tortent-e timeout, es ha igen, akkor commit helyett rollbackel.
     (Alternativa: timeout-ra azonnal ki lehetne leptetni a programot)
   Uj error leszarmazott osztaly: trantimouterror;
@@ -230,7 +232,7 @@
   uj fuggveny get.behave_as_label(get): a get label-kent viselkedik, get:preblock:={||.f.}
   uj fuggveny get.behave_as_get(get): a get getl-kent viselkedik, get:preblock:={||.t.}
 
-2024-09-25 
+2024-09-25
    uj maszk kontroll: textlabel;
    msk2say tamogatja a textlabel kontrollokat;
    get:bright  uj attrib - jelzi, hogy a kontrollt kiemelten kell megjeleniteni;
@@ -255,14 +257,14 @@
 2024-09-04 msk2say fejlesztes:
   Ha a maszk nem fer el a terminalban, akkor megnoveli a terminalt.
   *
-  Ezekben a hivasokban: 
+  Ezekben a hivasokban:
     maszk({|g|load(g)},{|g|readmodal(g)},{|g|store(g)},x,y)
   megadhato az opcionalis x es y parameter, erteke 0-100.
   x=0,y=0 eseten a maszk a bal felso sarokba pozicionalodik,
   x=100,y=100 eseten a maszk a jobb also sarokba pozicionalodik,
   egyebkent aranyosan helyezkedik el, pl. x=50,y=50 eseten kozepen.
   *
-  Ha a maszk bal felso sarka kozel esik a terminal bal felso sarkahoz, 
+  Ha a maszk bal felso sarka kozel esik a terminal bal felso sarkahoz,
   akkor beallitja x=30, y=30-at. Hogy a regi 80x25-os terminalra meretezett
   nagy maszkok ne nezzenek ki idetlenul a mostani nagyobb terminalokban.
 
@@ -273,7 +275,7 @@
 2024-08-11
   Windows cmd/batch setup javitva:
   az ss.cpp es stdcmp.cpp (ujabb) modulokat potolni kellett;
-  
+
 
 2024-08-11
   aeval() az array elem mellett az array indexet is atadja a kodblokknak.
@@ -285,15 +287,15 @@
 
 2024-08-06
   str(x) tul pontos kiirasa javitva, amikor  x double szamabrazolasa pontatlan.
-  Ebbol allitja ossze a stringet: sprintf(buffer,"%40.15le",x). 
+  Ebbol allitja ossze a stringet: sprintf(buffer,"%40.15le",x).
   A format korabban volt 20.10 (keves), 40.20 (sok), eppen 15 decimalis kell.
 
-2024-07-21 
+2024-07-21
   harfbuzz/hb-common.h egy ideje hibas (hianyzik belole stdint.h),
   es ezert a gtk-s dolgok nem fordultak: berakva #include <stdint.h>;
   clang valtozo meretu tomb miatti warningja elnyomva: -Wno-vla-cxx-extension;
 
-2024-07-11 prg2ppo 1.6.1  
+2024-07-11 prg2ppo 1.6.1
   #else ifdef ... preprocesszor direktivak;
 
 2024-06-17
@@ -323,7 +325,7 @@
   ascpos.cpp egysegesitve;
   base64.cpp egysegesitve;
   mod.prg megszunt;
-  
+
 
 2024-02-22
   ppo2cpp 4.11.0: lancolt osszehasonlitasok, default operator;
@@ -338,30 +340,30 @@
     codeset_letter_utf8_to_ascii
   MEGJEGYZES:  CCC2-ben modositott Latin-2 kodolast hasznalunk.
   A szabvanyos karakterek egy reszet dobozrajzolok helyettesitik.
-  A konverzios fuggvenyek a (szabvanyos) magyar ekezetes karaktereket plusz a 
+  A konverzios fuggvenyek a (szabvanyos) magyar ekezetes karaktereket plusz a
   (specialis) dobozrajzolokat konvertaljak a (szabvanyos) UTF-8 megfelelojukbe.
 
 2024-02-09  lex szabalyok valtoztak
-  Ezek a szabalyok, mint 
-        {static}{wspace}{function} {return STFUNCTION;} 
+  Ezek a szabalyok, mint
+        {static}{wspace}{function} {return STFUNCTION;}
   megvaltoztak
-        {static}{w1}{function}/{symdel} {return STFUNCTION;} 
+        {static}{w1}{function}/{symdel} {return STFUNCTION;}
   A static utani space kotelezo, function utan symbol delimeter kotelezo.
   Hasonloan modosult: 'static class', 'do while', 'begin sequence', stb.
 
 
-2024-01-28 
+2024-01-28
    dbf2bt.exe script szinten parhuzamosithato;
    Sok dbf importalasakor tobb peldanyban futhat,
    a kulonbozo peldanyok kikerulik egymast.
 
-2024-01-27 dbf2bt.exe import; 
+2024-01-27 dbf2bt.exe import;
 
-2024-01-22 
+2024-01-22
   terminal/icon: ikon generalo program
     Linux   : terminal.svg
     Linux   : terminal.xpm
-    Windows : terminal.ico 
+    Windows : terminal.ico
 
 2023-11-28 bti addindex ellenorzi az uj index nevet: nem szabad leteznie;
 
@@ -379,7 +381,7 @@
 2023-11-05 btp.exe browseolja egy bt fajl lapjait;
 
 2023-11-04
-  freelist-bol vett indexlapok listakapcsolasa javitva; 
+  freelist-bol vett indexlapok listakapcsolasa javitva;
   *
   bti.exe listazza a lapok sorszamat, a lapokon levo kulcsok darabszamat;
   bti.exe uj index hozzaadasa tabUpgrade helyett tabSuppIndex-szel;
@@ -395,7 +397,7 @@
   bti fname -k                 az osszes index kulcsainak listazasa
 
 
-2023-11-02 
+2023-11-02
   * atveve a btbtx fejlesztesek
   atnevezve: pgview -> btpage
   atnevezve: pgmemo -> btmemo
@@ -477,11 +479,11 @@
 2023-09-16 tabResource nem keszit alias->field blockokat;
     Inkompatibilis valtozas:
   Korabban tabResource-ban automatikus aliast kapott a tabla.
-  Az ilyenkor keszulo (alias->field) => fldblk tablazat utkozik 
-  a statikus TABLE:open-ben keszulo tablazattal. Ezert most csak 
-  akkor keszulnek alias->field blockok, ha tabResource-ban meg van 
+  Az ilyenkor keszulo (alias->field) => fldblk tablazat utkozik
+  a statikus TABLE:open-ben keszulo tablazattal. Ezert most csak
+  akkor keszulnek alias->field blockok, ha tabResource-ban meg van
   adva egy nemures alias. Kovetkezmeny: Nem static tablakban csak
-  akkor lehet alias->field formaval hivatkozni a mezokre, ha kulon 
+  akkor lehet alias->field formaval hivatkozni a mezokre, ha kulon
   aliast adunk a tablanak.
 
 2023-09-02 Linux, Windows, MSYS2 kornyezet beallito scriptek;
@@ -500,7 +502,7 @@
   Linuxon gcc/clang tamogatas (clang llvm linkerrel);
   Windows MSYS2-ben MINGW64, UCRT64, CLANG64 tamogatas;
 
-2023-08-24 
+2023-08-24
    A windows console terminalban javitva az elromlo szelso oszlop.
    A terminal hibaja miatt (?) a maxcol()-1-re vegzodo sorok kiirasakor
    elromik a maxcol() pozicio. Ezert az ilyen sorokat ket reszben irjuk:
@@ -529,9 +531,9 @@
 
 2023-08-17 array fuggvenyek: aiins, addel, apush, apop;
 
-2023-08-16 
+2023-08-16
   javitva crypto_md5, crypto_sha1, crypto_sha256, crypto_sha512;
-  hibas tipuskonverzio miatt rosszul mukodtek 2G-nel nagyobb fajlokra; 
+  hibas tipuskonverzio miatt rosszul mukodtek 2G-nel nagyobb fajlokra;
   az atvett binaris adatok hosszanak tipusa int helyett size_t;
   ugyanez a modositas a crypto konyvtarban minden erdekes helyen;
 
@@ -541,7 +543,7 @@
 2023-08-04 tabchlog-ban a logok archivalasa cp-vel:
   thread-ben futo filecopy helyett cp (copy) paranccsal;
   Bar Windowson is van/lehet cp, nem lehet letorolni
-  a korabbi logot, ha azt a parent processz nyitva tartja. 
+  a korabbi logot, ha azt a parent processz nyitva tartja.
   Ezert Windowson az archivalas semmikepp sem mukodik.
   A "(cp -p $SRC $DST && rm $SRC) &" akkor is jol mukodik,
   ha lecsukjak a terminalt es a parent HUP-ot vagy TERM-et kap.
@@ -549,9 +551,9 @@
 2023-08-03 setlocalname-ben jobb logika;
 
 2023-08-02 tabchlog.prg atdolgozva:
-  A lokalis fs-en keletkezo log fajlokat NFS-re tudja archivalni. 
+  A lokalis fs-en keletkezo log fajlokat NFS-re tudja archivalni.
   Ha frename nem tudja atmozgatni a logot, akkor atmasolja.
-  A masolas kulon szalon fut. Ha egy program eppen masolas kozben 
+  A masolas kulon szalon fut. Ha egy program eppen masolas kozben
   akarna kilepni, akkor elobb megvarja a masolas befejezodeset.
   Hibakezeles finomitva, logolas logolva;
 
@@ -570,13 +572,13 @@
 2023-06-17 build 1.6.3 include-ok keresese javitva;
 
 2023-06-16 lat2utf8 javitva:
-  Az ismeretlen karaktereket '?'-re csereli (enelkul 
+  Az ismeretlen karaktereket '?'-re csereli (enelkul
   a latex2pdf konverzio fennakad a hibas karakteren).
 
-2023-06-16 
+2023-06-16
    setperm atallitva 644/755-re;
 
-2023-06-10 
+2023-06-10
   qout.cpp/setfp-ben a lokalisan megnyilo csatornak fajlnevei
   transzormalodnak a setlocalname()-ben  beallitott kodblokk
   kiertekelesevel. Alapesetben nincs semmilyen transzformacio.
@@ -620,10 +622,10 @@
 
 2023-05-15 brwColor() konfiguracio valtozott:
   Ha a brwloop()-ok melyebben vannak egymasba agyazva,
-  mint ahany szin konfiguralva van, akkor az utolso konfiguralt 
+  mint ahany szin konfiguralva van, akkor az utolso konfiguralt
   szint valasztja (nem pedig a default szint);
 
-2023-05-15 
+2023-05-15
   szinek megadasa kozvetlenul ANSI color indexekkel;
   pelda: w+/#160 (piros alapon feher, ugyanaz mint w+/400);
   tutor/colors-ban demo programok a szinek hasznalatara;
@@ -660,19 +662,19 @@
 
 2023-04-24
   Meg egy terminal Windowsra: console.exe;
-  Ugyanaz a program, mint a cterm,  kiveve, hogy 
+  Ugyanaz a program, mint a cterm,  kiveve, hogy
   a Windowson hasznalhatatlanul lassu virtual terminal API helyett
   a regebbi (mar nem ajanlott) WriteConsoleOutput-tal irja a kepernyot.
   A paint() fuggveny implementaciojan kivul minden mas egyezik.
   Az ncterm-hez hasonloan csak az alapszineket tudja megjeleniteni.
   *
-  Windows cterm cursor shape beallitva block-ra; 
+  Windows cterm cursor shape beallitva block-ra;
   cterm-ben implementalva settermsize es setcaption,
   Linux is, Windowson is, korabban ezek uresek voltak;
 
-2023-04-20 power.cpp javitva es egysegesitve; 
+2023-04-20 power.cpp javitva es egysegesitve;
 
-2023-04-19 
+2023-04-19
   cterm: CCC szinek precizebb lekepezese ANSI szinekre;
   cterm: implementacio Windowson (hasznalhatatlanul lassu);
 
@@ -683,7 +685,7 @@
 2023-04-15 az unsecure-nak minositett (SHA1) kulcsok lecserelve;
   SSL_METHOD: TLS_method, TLS_server_method, TLS_client_method;
   az elobbieken kivul minden mas deprecated vagy removed;
-  az sslctxNew() defaultja TLS_method (a korabbi SSLv23 helyett); 
+  az sslctxNew() defaultja TLS_method (a korabbi SSLv23 helyett);
   a demokbol eltavolitasra kerultek az elavult method-ok;
 
 2023-04-07 ncurses/cterm terminalok atrendezve:
@@ -694,7 +696,7 @@
   Mindket esetben ketfele lehetoseg van a keyboard bemenet olvasasara.
     a) kozvetlen olvasas (read a 0-as file descriptorbol).
     b) billentyu olvasas a libtermkey, libunibilium konyvtarakkal.
-  Osszesen 4 variacio. 
+  Osszesen 4 variacio.
   Az ncurses/termkey konyvtarakkal keszult programok hordozhatok
   (volnanak), a valosagban nincsenek meg minden platformon.
   Ezen konyvtarak nelkul mukodo programok nem nezik a terminfo
