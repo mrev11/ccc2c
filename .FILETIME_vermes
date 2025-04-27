@@ -1,5 +1,7 @@
-8b21d72d143371e019dbafe543cc563feff1e1d1 2025042708:18:48-UTC ./ccclib/src/buildnumber_ccc.prg
-83174725ffd57ffe257f0adcab01ed44d8da2b58 2025042708:18:27-UTC ./CHANGELOG_vermes
+da42dd4fc698cde476c9b098043a3e0f07d282c8 2025042708:23:30-UTC ./ccclib/src/buildnumber_ccc.prg
+8c49fb02e784596a3fbec2c9f7c58a45e0789e0b 2025042708:23:12-UTC ./CHANGELOG_vermes
+abcdd4a1be0fc0f6d9151490f23ab11dd0b12dbd 2025042622:01:52-UTC ./ccclib/src/uic/mask.prg
+b225ddcec046800333c80e51efed1a402d16c608 2025042611:42:59-UTC ./ccclib/src/ccc_config.prg
 955f013393131874372a54bf67a4e22bc3704552 2025042516:53:52-UTC ./tabobj/tbbtbtx/utility/tsema.prg
 ffe7abd7383104f6b05e8e7a48c0abaf51418176 2025042516:52:41-UTC ./tabobj/common.src/transema.prg
 890e50e504060a0405abba1630fbb12057fce99a 2025041409:03:25-UTC ./log-install
@@ -634,10 +636,8 @@ e91876b08a80dab8d7d294b52b0d346ab5d27b7c 2024102310:43:12-UTC ./setup/setup-flex
 99f09e9b5a78cb8f60bc638c6c71561ff89b79fc 2024102309:23:08-UTC ./setup/setup-unix/thread.cpp
 46bace258e27f9a0dbc7ee4b443e2a8cf2c7aa49 2024101716:58:48-UTC ./tutor/control/control.prg
 b77e591eaa26f60caff03a3a32316d47597b0a08 2024101715:33:53-UTC ./ccclib/src/codeset_hungarian.cpp
-f2b4fbd6b722e9af39f5252520775012a095e2c2 2024101708:49:56-UTC ./ccclib/src/ccc_config.prg
 1bd3ea657e2ddeee8c5df14ae2dfbfbae3d57964 2024101612:18:27-UTC ./ccclib/src/levenshtein.cpp
 53201b1fa4c31073b805ef04fe0621ee1cd5129d 2024100721:34:18-UTC ./tabobj/commonui.src/tabbrows.prg
-d9ff6e81523a593902ebae2b0a8298abaa371538 2024100511:34:06-UTC ./ccclib/src/uic/mask.prg
 638df5efda480b2d0392130aeeb12a9ce4decce9 2024100310:38:00-UTC ./ccclib/src/uic/pushbutton.prg
 62806fed83da2073e012c07dad071eb5af96bfdc 2024100220:49:09-UTC ./ccclib/src/uic/getsys.prg
 35ef0a084463bcc712f003da34531431ed238804 2024100212:21:51-UTC ./tutor/control/altbutton.msk
