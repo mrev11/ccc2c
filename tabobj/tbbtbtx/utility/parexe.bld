@@ -26,4 +26,5 @@
 -bccc${CCCVER}_btbtx
 
 BUILD_EXE=${CCCDIR}/usr/bin
+#BUILD_SHR=fullstatic
 

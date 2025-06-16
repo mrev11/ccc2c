@@ -43,17 +43,25 @@ local exe:={*},n
 
 ******************************************************************************************
 function elfapp(exe)
-local fd:=fopen(exe)
-local map:=filemap.open(fd)
-local pos:=rat(a"[",map)
-local app:=a""
-    if( 0<pos .and. pos>len(map)-48 )
-        app:=map[pos..]
-    end
-    filemap.close(map)
-    fclose(fd)
-    return app
 
+local fd,map,pos,app
+
+    begin
+        fd:=fopen(exe)
+        map:=filemap.open(fd)
+        pos:=rat(a"[",map)
+        app:=a""
+        if( 0<pos .and. pos>len(map)-48 )
+            app:=map[pos..]
+        end
+    recover
+        app:="cannot open"
+    finally
+        if(map!=NIL); filemap.close(map); end
+        if(fd>=0); fclose(fd); end
+    end
+
+    return app
 
 ******************************************************************************************
 
