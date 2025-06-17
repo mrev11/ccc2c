@@ -1,4 +1,4 @@
-a7f52651e29484a6331dc62740c284120656dc3b 2025061718:07:09-UTC ./ccclib/src/buildnumber_ccc.prg
+af16fcdc5e0ec6158d1370b67344f29dee480ab7 2025061718:09:11-UTC ./ccclib/src/buildnumber_ccc.prg
 3c1b2ec1b1e134bad2092ae8f75b89021918e21c 2025061718:06:44-UTC ./CHANGELOG_vermes
 0dda83c95ee39adcdd8bee33fe58b37f0bdf995e 2025061718:03:19-UTC ./tabobj/tbbtbtx/utility/parexe.bld
 271bbae9f0237c3c46bd7d6c389e2c5dbbb74faf 2025061714:36:06-UTC ./ccctools/commitid/commitid.prg
@@ -16,6 +16,7 @@ bf54b255cbeea6f1a1a9e2e8754a9c21dfe68093 2025051911:33:22-UTC ./tools/tdc2prg/td
 bf40c7a80620537326ff834f657785631178d342 2025051910:45:16-UTC ./tools/tdc2prg/tdc2prg.prg
 9adb7d240109f8e5182da9e6ef7cc13656af5a31 2025051910:41:11-UTC ./tools/tdc2prg/tdc2tabobj.prg
 044e36eb1d1987afe09ad13d865e281159c3924d 2025051910:29:48-UTC ./tools/tdc2prg/tdcutil.ch
+e4afd92f429623a111c11546636ca88246c0eeb5 2025051808:02:35-UTC ./push-oldtdc
 11eb47ae657a7b4f21edb82db92955222691a7c8 2025051622:58:04-UTC ./tools/mask/msk2say.prg
 2c7cb803612ad07c50dac89ba06ee613f331f50a 2025051608:43:10-UTC ./setup/setup-lemon/olvass.txt
 314c08daea875e0db7f6b6315f9d4335b7c12c47 2025051608:41:48-UTC ./setup/setup-lemon/lemon.c
@@ -697,6 +698,7 @@ b99319e943a3506f8aaeeb5ec1981d0d6b38b3ac 2023102109:38:36-UTC ./tabobj/utility.s
 34a074addb305e6741547d69e1635ca5a6a0e6ee 2023102012:22:39-UTC ./ccclib/src/qout.cpp
 0c87eb5ef8d33dc097adabae2b719305d60226aa 2023101517:00:47-UTC ./tabobj/tbbtbtx/utility/btdecrypt.prg
 2d8e0ff540d3ef0e2041405247f9f90c3456a399 2023101517:00:47-UTC ./tabobj/tbbtbtx/utility/btencrypt.prg
+99449163e997d3d79d24db53348606a6614b9953 2023101511:35:47-UTC ./push-as_bare
 ddbe7d5d5169805d6d8ef84cdf08ab02e9fdaeca 2023101416:47:49-UTC ./tabobj/tbbtbtx/utility/btpasswd_windll/btpasswd.cpp
 426b66c4d32626c802e0c4b00428b10cbf3b2c9e 2023101312:54:28-UTC ./tabobj/tbbtbtx/dbcrypt.prg
 30dd9c0090d9fe1dff4087af6f44f19a9516161b 2023101312:14:30-UTC ./tabobj/common.src/tabpack.prg
@@ -712,6 +714,8 @@ d4c03bd5bf5adeb6dea359c257fc249d0823d4c6 2023092018:02:21-UTC ./tools/zlib/demo/
 7962e08ec1247c3ad13cc2d4c13bfe4521349cc5 2023092017:59:21-UTC ./tools/zlib/demo/gzwrite.prg
 b8096c1cca51432d8522505ecbfa4ce664011937 2023091917:58:42-UTC ./tools/zlib/demo/deflate.prg
 9c1da65de8a4186dfea032868b28c50d845ce38d 2023091917:50:55-UTC ./tools/zlib/demo/inflate.prg
+bc4e52039c679d8601dfdecd6b5e1b4ed4e747a4 2023091612:22:06-UTC ./push-comfirm
+a2ad4f30decdb34a9a773bbf50af8882a7848914 2023091612:15:32-UTC ./push-github
 83fd16ecdf4428de938a7eb3260a54ffd22678f9 2023082810:42:08-UTC ./terminal/common/termicon.cpp
 181674466434c8ace8d81ecae695737e39faf346 2023082810:42:07-UTC ./terminal/windows/terminal.cpp
 99eae61dd28228babebed5180c3692a5fc785b0a 2023082721:51:12-UTC ./usr/setenv/OLVASS
