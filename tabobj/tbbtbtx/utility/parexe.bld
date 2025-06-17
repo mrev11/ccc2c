@@ -26,5 +26,8 @@
 -bccc${CCCVER}_btbtx
 
 BUILD_EXE=${CCCDIR}/usr/bin
-#BUILD_SHR=fullstatic
+
+# RHEL-ben nem mukodik
+# nincsnenek meg a static konyvtarak
+# BUILD_SHR=fullstatic
 
