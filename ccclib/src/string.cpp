@@ -98,8 +98,6 @@ void stringn(char const *ptr) //uj peldany masolassal (new)
 {
 //stack:   --- s
 
-    static int opt=(getenv("ONELETTER")==0);
-
     unsigned long len=strlen(ptr);
     if(len>MAXSTRLEN)
     {
@@ -110,7 +108,7 @@ void stringn(char const *ptr) //uj peldany masolassal (new)
     VARTAB_LOCK();
 
     OREF *o=oref_new(); 
-    if( opt && len<=1 )
+    if( len<=1 )
     {
         o->ptr.chrptr=oneletter(*ptr);
         o->length=0; //szemetgyujtes NEM torli
@@ -138,7 +136,10 @@ void strings(char const *ptr, unsigned long len) //substring kimasolasa new-val
 {
 //stack:   --- s
 
-    static int opt=(getenv("ONELETTER")==0);
+    if( len==0 )
+    {
+        ptr="";
+    }
 
     if(len>MAXSTRLEN)
     {
@@ -149,7 +150,7 @@ void strings(char const *ptr, unsigned long len) //substring kimasolasa new-val
     VARTAB_LOCK();
 
     OREF *o=oref_new(); 
-    if( opt && len<=1 )
+    if( len<=1 )
     {
         o->ptr.chrptr=oneletter(*ptr);
         o->length=0; //szemetgyujtes NEM torli

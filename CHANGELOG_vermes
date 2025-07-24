@@ -1,3 +1,6 @@
+2025-07-24 nullstring:  
+   strings(ptr,len) len==0 eseten ures stinget tesz a stackre;
+
 2025-07-14
    .lock_transema athelyezve semaphor.tmp-be;
    bti.exe a '-lc' opcioval kiirja a kulcsok szamat;
