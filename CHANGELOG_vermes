@@ -1,3 +1,5 @@
+2025-07-27 terminal-gtk3 paste:
+
 2025-07-24 nullstring:  
    strings(ptr,len) len==0 eseten ures stinget tesz a stackre;
 
