@@ -1,0 +1,3 @@
+#!/bin/bash
+export CCC_COLORCONF=config 
+mskcolor.exe
