@@ -49,7 +49,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#ifdef MULTITHREAD
 
 #ifdef UNIX
   #include <pthread.h>
@@ -64,9 +63,6 @@
   extern pthread_key_t thread_key;
   class thread_data;
   #define thread_data_ptr ((thread_data*)pthread_getspecific(thread_key))
-
-#endif
-
 
 
 #include <variable.h>
@@ -87,13 +83,8 @@ typedef struct
 } TRACE;
 
 
-#ifdef MULTITHREAD
-  #define trace    (thread_data_ptr->_trace)
-  #define tracebuf (thread_data_ptr->_tracebuf)
-#else 
-  extern TRACE *trace;
-  extern TRACE tracebuf[];
-#endif
+#define trace    (thread_data_ptr->_trace)
+#define tracebuf (thread_data_ptr->_tracebuf)
  
 //#define push_call(f,b)  (++trace,trace->func=f,trace->base=b,trace->line=0)
 extern void push_call(const char*, VALUE*);
@@ -104,13 +95,8 @@ extern void push_call(const char*, VALUE*);
 unsigned const int STACK_SIZE=2048;
 unsigned const int STSTACK_SIZE=2048;
 
-#ifdef MULTITHREAD
-  #define stack     (thread_data_ptr->_stack)
-  #define stackbuf  (thread_data_ptr->_stackbuf)
-#else 
-  extern VALUE *stack;
-  extern VALUE stackbuf[];
-#endif
+#define stack     (thread_data_ptr->_stack)
+#define stackbuf  (thread_data_ptr->_stackbuf)
  
 extern VALUE *ststack;
 extern VALUE ststackbuf[];
@@ -175,23 +161,13 @@ typedef struct
 } SEQJMP;
 
  
-#ifdef MULTITHREAD
-  #define seqjmp      (thread_data_ptr->_seqjmp)
-  #define seqjmpbuf   (thread_data_ptr->_seqjmpbuf)
-  #define usingstk    (thread_data_ptr->_usingstk)
-  #define usingstkbuf (thread_data_ptr->_usingstkbuf)
-  #define siglocklev  (thread_data_ptr->_siglocklev)
-  #define signumpend  (thread_data_ptr->_signumpend)
-  #define sigcccmask  (thread_data_ptr->_sigcccmask)
-#else
-  extern SEQJMP     seqjmpbuf[];
-  extern SEQJMP     *seqjmp;
-  extern VALUE      usingstkbuf[];
-  extern VALUE      *usingstk;
-  extern int        siglocklev;
-  extern int        signumpend;
-  extern int        sigcccmask;
-#endif 
+#define seqjmp      (thread_data_ptr->_seqjmp)
+#define seqjmpbuf   (thread_data_ptr->_seqjmpbuf)
+#define usingstk    (thread_data_ptr->_usingstk)
+#define usingstkbuf (thread_data_ptr->_usingstkbuf)
+#define siglocklev  (thread_data_ptr->_siglocklev)
+#define signumpend  (thread_data_ptr->_signumpend)
+#define sigcccmask  (thread_data_ptr->_sigcccmask)
 
 //------------------------------------------------------------
 
@@ -399,14 +375,8 @@ typedef USHORT FLAG;
 #endif
  
 //------------------------------------------------------------
-#if ! defined MULTITHREAD
-#define MUTEX_CREATE(x)
-#define MUTEX_DECLARE(x)
-#define MUTEX_INIT(x)
-#define MUTEX_LOCK(x)      0
-#define MUTEX_UNLOCK(x)    0
 
-#elif defined UNIX
+#if defined UNIX
 #define MUTEX_CREATE(x)    static pthread_mutex_t x=PTHREAD_MUTEX_INITIALIZER
 #define MUTEX_DESTROY(x)   pthread_mutex_destroy(&x)
 #define MUTEX_DECLARE(x)   pthread_mutex_t x
@@ -423,9 +393,7 @@ typedef USHORT FLAG;
 #define MUTEX_UNLOCK(x)    ReleaseMutex(x)
 #endif
 
-#ifdef MULTITHREAD
 #include <thread_data.h>
-#endif
 
 extern void vartab_lock();
 extern void vartab_unlock();

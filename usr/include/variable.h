@@ -90,11 +90,9 @@ struct VALUE
 
     } data;
 
-#ifdef MULTITHREAD
     VALUE operator=(VALUE v);
     //többszálú esetben speciális értékadás
     //variable.cpp-ben van definiálva
-#endif
 
 };
 

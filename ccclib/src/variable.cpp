@@ -58,25 +58,6 @@ static void vartab_sweep();
 static char *decimal(long x);
 
 
-#if ! defined MULTITHREAD
-//---------------------------------------------------------------------------
-#define VARTAB_STOP()
-#define VARTAB_CONT()
- 
-void vartab_lock0(){}
-void vartab_unlock0(){}
-void vartab_lock(){ SIGNAL_LOCK(); }
-void vartab_unlock(){ SIGNAL_UNLOCK(); }
-
-//---------------------------------------------------------------------------
-void valuemove(VALUE *to, VALUE *fr, int n)  //egyszalu 
-{
-    SIGNAL_LOCK();
-    memmove((void*)to,(void*)fr,n*sizeof(VALUE));
-    SIGNAL_UNLOCK();
-}
-
-#else //MULTITHREAD
 //---------------------------------------------------------------------------
 MUTEX_CREATE(mutex);
 
@@ -167,8 +148,6 @@ static void vartab_cont() // minden varakozo szalat kienged
     }
 }
  
-#endif //MULTITHREAD
-
 
 //---------------------------------------------------------------------------
 static int *mark_stack=0;
@@ -203,9 +182,7 @@ void vartab_ini(void)
     }
     initialized=1;
 
-#if ! defined  MULTITHREAD
-    //ures
-#elif defined UNIX
+#if defined UNIX
     pthread_key_create(&thread_key,0);
     pthread_setspecific(thread_key,new thread_data());
 #else
@@ -322,7 +299,6 @@ void vartab_rebuild(void)
         vartab_mark(sp);
     }
 
-#ifdef MULTITHREAD
     //local valtozok stack-je
     //az osszes szal local stackjet be kell jarni
 
@@ -336,13 +312,6 @@ void vartab_rebuild(void)
         }
         td=td->next;
     }
-#else
-    //local valtozok stack-je
-    for( sp=stackbuf; sp<stack; sp++)
-    {
-        vartab_mark(sp);
-    }
-#endif
 
     OREF *marked_oref;
     while( 0!=(marked_oref=mark_pop()) ) //pop
