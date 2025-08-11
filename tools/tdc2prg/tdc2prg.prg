@@ -19,7 +19,6 @@ local tcre,tacc,tmod
     next
 
 
-
 ******************************************************************************************
 static function gensrc(data)
 
@@ -32,22 +31,13 @@ local keep:=data[5]
 local lf:=chr(10)
 local n,line,prg:="//"+TDCUTIL_BUILD+lf+lf
     
-    prg+="function table."+table::lower+"(col,exp)"+lf
-    prg+="static tbl"+lf
-    prg+="    if(empty(tbl))"+lf
-    prg+="        tbl:=table.init."+table::lower+"()"+lf
-    prg+="    end"+lf
-    prg+="    if(col==NIL)"+lf
-    prg+="        return tbl"+lf
-    prg+="    end"+lf
-    prg+="    return tabEvalColumn(tbl,col,exp)"+lf
-    prg+=lf
-
-    prg+="static function table.init."+table::lower+"()"+lf
-    prg+='local tbl:=tabNew("'+table+'")'+lf
+    prg:="function _"+table::upper+"(col,exp)"+lf
+    prg+="static dbf"+lf
+    prg+="    if(empty(dbf))"+lf
+    prg+='        dbf:=tabNew("'+table+'")'+lf
 
     for n:=1 to len(field)
-        line:='    tabAddColumn(tbl,{[COLUMN],[TYPE],[WIDTH],[DEC]})'
+        line:='        tabAddColumn(dbf,{[COLUMN],[TYPE],[WIDTH],[DEC]})'
         line::=strtran("[COLUMN]"   , ('"'+field[n]:column+'"')::padr(20))
         line::=strtran("[TYPE]"     , '"'+field[n]:type+'"')
         line::=strtran("[WIDTH]"    , field[n]:width::str::alltrim::padl(3))
@@ -56,7 +46,7 @@ local n,line,prg:="//"+TDCUTIL_BUILD+lf+lf
     next
 
     for n:=1 to len(index)
-        line:='    tabAddIndex(tbl,{"[CONTROL]","[FILE]",[SEGMENTS]})'
+        line:='        tabAddIndex(dbf,{"[CONTROL]","[FILE]",[SEGMENTS]})'
         line::=strtran("[CONTROL]"  ,index[n]:control)
         line::=strtran("[FILE]"     ,index[n]:file)
         line::=strtran("[SEGMENTS]" ,index[n]:segments::any2str)
@@ -64,13 +54,17 @@ local n,line,prg:="//"+TDCUTIL_BUILD+lf+lf
     next
 
     if( path!=NIL )
-        prg+='    tabPath(tbl,"[PATH]/")'::strtran("[PATH]",path)+lf
+        prg+='        tabPath(dbf,"[PATH]/")'::strtran("[PATH]",path)+lf
     end
     if( keep!=NIL )
-        prg+='    tabKeepDeleted(tbl,KEEP)'::strtran("KEEP",keep::str::alltrim)+lf
+        prg+='        tabKeepDeleted(dbf,KEEP)'::strtran("KEEP",keep::str::alltrim)+lf
     end
    
-    prg+="    return tbl"+lf
+    prg+="    end"+lf
+    prg+="    if(col==NIL)"+lf
+    prg+="        return dbf"+lf
+    prg+="    end"+lf
+    prg+="    return tabEvalColumn(dbf,col,exp)"+lf
 
     return prg
 
