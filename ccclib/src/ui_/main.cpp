@@ -18,24 +18,36 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+#include <locale.h>
 #include <stdio.h>
 #include <cccapi.h>
 #include <global.h>
+
 
 #ifdef WINDOWS
 #include <io.h>
 #include <fcntl.h>
 #endif
- 
+
+
+int vartab_is_ready=0;
+
 //----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
+    setup_signal_handlers();
+
     #ifdef WINDOWS
     _fmode=O_BINARY;
     _setmode(0,O_BINARY);
     _setmode(1,O_BINARY);
     _setmode(2,O_BINARY);
     #endif
+
+    if( !setlocale(LC_CTYPE,"") )
+    {
+        //fprintf(stderr,"setlocale failed\n");
+    }
 
     if( getenv("CPPSTANDARD") )
     {
@@ -47,21 +59,22 @@ int main(int argc, char **argv)
     ARGV=argv;
 
     vartab_ini();
- 
-    setup_signal_handlers();
+    pthread_key_create(&thread_key,0);
+    pthread_setspecific(thread_key,new thread_data());
+
+    vartab_is_ready=1;
 
     for(int i=1; i<argc; i++)
     {
-        stringn(argv[i]);
+        stringnb(argv[i]);
     }
+
+    extern void _clp_main(int);
     _clp_main(argc-1);POP();
-
     _clp___quit(0);POP();
-
     return 0;
-
 }
 
 
-//----------------------------------------------------------------------------
 
+//----------------------------------------------------------------------------

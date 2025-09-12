@@ -58,15 +58,15 @@ void _clp_inkey(int argno)
     double wait;
     if( ISNIL(1) )
     {
-        key=readkey(0); //várakozás nélkül
+        key=readkey(0); //vÃ¡rakozÃ¡s nÃ©lkÃ¼l
     }
     else if( (wait=_parnd(1))<=0 )
     {
-        key=readkey((unsigned)-1); //végtelen várakozással
+        key=readkey((unsigned)-1); //vÃ©gtelen vÃ¡rakozÃ¡ssal
     }
     else
     {
-        key=readkey( (int)(wait*1000) ); //várakozással
+        key=readkey( (int)(wait*1000) ); //vÃ¡rakozÃ¡ssal
     }
     _retni(key);
     CCC_EPILOG();

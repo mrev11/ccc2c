@@ -31,6 +31,3 @@ function bin2str(x)
 function split(*)    
     return wordlist(*)
 
-function gc()    
-    vartab_rebuild()
-

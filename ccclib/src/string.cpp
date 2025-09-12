@@ -83,7 +83,7 @@ void string(char const *ptr) //uj peldany ramutatassal (new nelkul)
     OREF *o=oref_new(); 
     o->ptr.chrptr=(char*)ptr;
     o->length=0;              //szemetgyujtes NEM torli 
-    o->next=NEXT_RESERVED;
+    o->color=COLOR_RESERVED;
  
     VALUE *v=PUSHNIL();
     v->data.string.oref=o;
@@ -121,7 +121,7 @@ void stringn(char const *ptr) //uj peldany masolassal (new)
         o->ptr.chrptr=p;
         o->length=-1; //szemetgyujtes torli
     }
-    o->next=NEXT_RESERVED;
+    o->color=COLOR_RESERVED;
  
     VALUE *v=PUSHNIL();
     v->data.string.oref=o;
@@ -164,7 +164,7 @@ void strings(char const *ptr, unsigned long len) //substring kimasolasa new-val
         o->ptr.chrptr=p;
         o->length=-1; //szemetgyujtes torli 
     }
-    o->next=NEXT_RESERVED;
+    o->color=COLOR_RESERVED;
   
     VALUE *v=PUSHNIL();
     v->data.string.oref=o;
@@ -192,7 +192,7 @@ char *stringl(unsigned long len) //inicializalatlan string new-val
     o->ptr.chrptr=newChar(len+1);
     *(o->ptr.chrptr+len)=0x00; 
     o->length=-1;              //szemetgyujtes torli  
-    o->next=NEXT_RESERVED;
+    o->color=COLOR_RESERVED;
  
     VALUE *v=PUSHNIL();
     v->data.string.oref=o;

@@ -52,7 +52,7 @@ void push_symbol_ref(VALUE *v) // @ par, blokk környezet
         VARTAB_LOCK();
         VREF *vr=vref_new();
         vr->value=*v;
-        vr->next=NEXT_RESERVED;
+        vr->color=COLOR_RESERVED;
         v->data.vref=vr;
         v->type=TYPE_REF;
         VARTAB_UNLOCK();
@@ -123,7 +123,7 @@ void block(void (*code)(int), int len)
         (p+len)->type=TYPE_END;
         (p+len)->data.size=len;
         while(--len>=0) *(p+len)=*(base+len);
-        orp->next=NEXT_RESERVED;
+        orp->color=COLOR_RESERVED;
  
         stack=base;
         PUSHNIL();

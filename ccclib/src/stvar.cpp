@@ -43,12 +43,10 @@ stvar::stvar()
 {
     verify_overflow();
 
-    SIGNAL_LOCK();
     MUTEX_LOCK(mutex);
     ptr=ststack;
     STPUSH(&NIL);
     MUTEX_UNLOCK(mutex);
-    SIGNAL_UNLOCK();
 }
 
 stvar::stvar(char *str)
@@ -56,12 +54,10 @@ stvar::stvar(char *str)
     verify_overflow();
 
     string(str);
-    SIGNAL_LOCK();
     MUTEX_LOCK(mutex);
     ptr=ststack;
     STPUSH(TOP());
     MUTEX_UNLOCK(mutex);
-    SIGNAL_UNLOCK();
     POP();
 }
 
@@ -70,12 +66,10 @@ stvar::stvar(const char *str)
     verify_overflow();
 
     string(str);
-    SIGNAL_LOCK();
     MUTEX_LOCK(mutex);
     ptr=ststack;
     STPUSH(TOP());
     MUTEX_UNLOCK(mutex);
-    SIGNAL_UNLOCK();
     POP();
 }
 
@@ -84,12 +78,10 @@ stvar::stvar(double d)
     verify_overflow();
 
     number(d);
-    SIGNAL_LOCK();
     MUTEX_LOCK(mutex);
     ptr=ststack;
     STPUSH(TOP());
     MUTEX_UNLOCK(mutex);
-    SIGNAL_UNLOCK();
     POP();
 }
  
@@ -98,12 +90,10 @@ stvar::stvar( void (*inicode)() )
     verify_overflow();
 
     inicode();
-    SIGNAL_LOCK();
     MUTEX_LOCK(mutex);
     ptr=ststack;
     STPUSH(TOP());
     MUTEX_UNLOCK(mutex);
-    SIGNAL_UNLOCK();
     POP();
 }
 
@@ -112,19 +102,16 @@ stvar::stvar( VALUE *v )
     verify_overflow();
 
     push_symbol(v);
-    SIGNAL_LOCK();
     MUTEX_LOCK(mutex);
     ptr=ststack;
     STPUSH(TOP());
     MUTEX_UNLOCK(mutex);
-    SIGNAL_UNLOCK();
     POP();
 }
 
 stvarloc::stvarloc( void (*inicode)(VALUE*),VALUE*base )
 {
     inicode(base);
-    SIGNAL_LOCK();
     MUTEX_LOCK(mutex);
 
     //ptr=ststack;
@@ -132,7 +119,6 @@ stvarloc::stvarloc( void (*inicode)(VALUE*),VALUE*base )
     *ptr=*TOP(); //2011.06.28 az stvar::stvar() konstruktor már lefutott
 
     MUTEX_UNLOCK(mutex);
-    SIGNAL_UNLOCK();
     POP();
 }
 

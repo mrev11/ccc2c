@@ -13,7 +13,6 @@
 ./cc ${CCCDIR}/ccclib/src/unix/readdir.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/signals.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/spawn.cpp
-./cc ${CCCDIR}/ccclib/src/unix/thread.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/utime.cpp
 ./cc ${CCCDIR}/ccclib/src/unix/wait.cpp
 
@@ -66,6 +65,7 @@
 ./cc ${CCCDIR}/ccclib/src/stuff.cpp
 ./cc ${CCCDIR}/ccclib/src/stvar.cpp
 ./cc ${CCCDIR}/ccclib/src/substr.cpp
+./cc ${CCCDIR}/ccclib/src/thread.cpp
 ./cc ${CCCDIR}/ccclib/src/time.cpp
 ./cc ${CCCDIR}/ccclib/src/transform.cpp
 ./cc ${CCCDIR}/ccclib/src/trim.cpp

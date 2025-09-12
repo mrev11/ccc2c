@@ -82,21 +82,3 @@ push(&NIL);
 pop_call();
 }
 //=======================================================================
-void _clp_gc(int argno)
-{
-VALUE *base=stack-argno;
-stack=base+min(argno,0);
-while(stack<base+0)PUSHNIL();
-argno=0;
-push_call("gc",base);
-//
-    line(35);
-    _clp_vartab_rebuild(0);
-    pop();
-//
-stack=base;
-push(&NIL);
-pop_call();
-}
-//=======================================================================
-

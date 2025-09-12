@@ -39,7 +39,7 @@ static function default_alert(txt)
 local n
     ? "ALERT"
     if( valtype(txt)=="C" )  
-        txt:=wordlist(txt,";")
+        txt:=split(txt,";")
         for n:=1 to len(txt)
             ? " ",txt[n]
         next

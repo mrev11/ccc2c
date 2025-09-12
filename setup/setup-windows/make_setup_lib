@@ -13,7 +13,6 @@
 ./cc ${CCCDIR}/ccclib/src/windows/nlstext.cpp
 ./cc ${CCCDIR}/ccclib/src/windows/signals.cpp
 ./cc ${CCCDIR}/ccclib/src/windows/spawn.cpp
-./cc ${CCCDIR}/ccclib/src/windows/thread.cpp
 
 ./cc ${CCCDIR}/ccclib/src/add.cpp
 ./cc ${CCCDIR}/ccclib/src/argv.cpp
@@ -61,6 +60,7 @@
 ./cc ${CCCDIR}/ccclib/src/stuff.cpp
 ./cc ${CCCDIR}/ccclib/src/stvar.cpp
 ./cc ${CCCDIR}/ccclib/src/substr.cpp
+./cc ${CCCDIR}/ccclib/src/thread.cpp
 ./cc ${CCCDIR}/ccclib/src/time.cpp
 ./cc ${CCCDIR}/ccclib/src/transform.cpp
 ./cc ${CCCDIR}/ccclib/src/trim.cpp

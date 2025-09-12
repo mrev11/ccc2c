@@ -25,24 +25,31 @@
 
 const unsigned int  MAXSTRLEN=0x4000000;  //64MB
 
+const int TYPE_END        = -1;    // array end/size
+const int TYPE_NIL        =  0;    // 'U'
+const int TYPE_NUMBER     =  1;    // 'N'
+const int TYPE_DATE       =  2;    // 'D'
+const int TYPE_FLAG       =  3;    // 'L'
+const int TYPE_POINTER    =  4;    // 'P'
+const int TYPE_STRING     =  5;    // 'C'
+const int TYPE_ARRAY      =  6;    // 'A'
+const int TYPE_BLOCK      =  7;    // 'B'
+const int TYPE_OBJECT     =  8;    // 'O'
+const int TYPE_REF        =  9;    // 'R'
 
-const int TYPE_END        =-1;    // array end/size
-const int TYPE_NIL        = 0;    // 'U'
-const int TYPE_NUMBER     = 1;    // 'N'
-const int TYPE_DATE       = 2;    // 'D'
-const int TYPE_FLAG       = 3;    // 'L'
-const int TYPE_POINTER    = 4;    // 'P'
-const int TYPE_STRING     = 5;    // 'C'
-const int TYPE_ARRAY      = 6;    // 'A'
-const int TYPE_BLOCK      = 7;    // 'B'
-const int TYPE_OBJECT     = 8;    // 'O'
-const int TYPE_REF        = 9;    // 'R'
+//Lenyeges a konstansok nagysag szerinti sorrendje!
 
-//Lényeges a konstansok nagyság szerinti sorrendje!
+const int TYPE_GARBAGE = TYPE_STRING; // (v.type<TYPE_GARBAGE) => v-nek nincs oref-je
+const int TYPE_SCALAR  = TYPE_STRING; // (v.type<=TYPE_SCALAR) => ha v-nek van oref-je, abban nincs VALUE
 
-const int  NEXT_UNKNOWN   = 0;
-const int  NEXT_RESERVED  =-1;
-const int  NEXT_LOCKED    =-2;
+
+
+static const int COLOR_WHITE        = 0;
+static const int COLOR_GRAY         = 1;
+static const int COLOR_BLACK        = 2;
+
+static const int COLOR_LOCKED       = 3;
+static const int COLOR_RESERVED     = COLOR_BLACK;
 
 
 struct OREF;
@@ -76,14 +83,14 @@ struct VALUE
 
         struct
         {
-            OREF *oref; // a slotokból felépített array
-            int subtype; // az objektum típusa
+            OREF *oref; // a slotokbol felepitett array
+            int subtype; // az objektum tipusa
         } object;
 
         struct
         {
-            OREF *oref; // környezeti változók
-            void (*code)(int); // block függvény
+            OREF *oref; // kornyezeti valtozok
+            void (*code)(int); // block fuggveny
         } block;
 
         VREF *vref;
@@ -91,8 +98,8 @@ struct VALUE
     } data;
 
     VALUE operator=(VALUE v);
-    //többszálú esetben speciális értékadás
-    //variable.cpp-ben van definiálva
+    //tobbszalu esetben specialis ertekadas
+    //variable.cpp-ben van definialva
 
 };
 
@@ -105,14 +112,16 @@ struct OREF
         VALUE *valptr;
     } ptr;
     int length;
-    int next;
+    int color;
+    int link;
 };
 
 
 struct VREF
 {
     VALUE value;
-    int next;
+    int color;
+    int link;
 };
 
 
@@ -121,7 +130,7 @@ struct VARTAB_SETSIZE
     int *oref_size;
     int *vref_size;
     int *alloc_count;
-    long *alloc_size;
+    unsigned long *alloc_size;
 };
 
 
