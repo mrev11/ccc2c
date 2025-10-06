@@ -383,8 +383,6 @@ extern void vartab_unlock0();
 
 extern int signal_raise(int);
 extern int signal_send(int,int);
-#define SIGNAL_LOCK()     (++siglocklev)
-#define SIGNAL_UNLOCK()   ((--siglocklev==0)&&(signumpend!=0)?signal_raise(signumpend):0)
 
 #define CHRLIT(x)         x  // "literal" -> "literal"
 
