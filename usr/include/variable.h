@@ -134,10 +134,12 @@ struct VARTAB_SETSIZE
 };
 
 
-extern VREF* vref_new(void);
 extern OREF* oref_new(void);
-extern void  vartab_ini(void);
+extern OREF* oref_new(VALUE*,void*,int);
+extern VREF* vref_new(void);
+extern VREF* vref_new(VALUE*);
 
+extern void  vartab_ini(void);
 extern void  vartab_setsize( struct VARTAB_SETSIZE *vss );
 extern void  vartab_rebuild(void);
 extern VALUE *newValue(unsigned int len);

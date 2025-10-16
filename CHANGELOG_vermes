@@ -1,3 +1,5 @@
+2025-10-16 PUSH elkeruli az operator=-t;
+
 2025-10-05
   fork() hozzaigazitva a kulon szalon futo szemetgyujteshez;
   thread_yield();
