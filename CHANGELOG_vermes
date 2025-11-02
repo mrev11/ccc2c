@@ -1,3 +1,7 @@
+2025.11.02  ppo2cpp 4.11.1  hibajavitas:
+   Ha tobb prg modulban is definialva volt ugyanolyan nevu class,
+   akkor a classnameNew generalaskor hasznalt ideiglenes fajlok neve utkozott;
+
 2025-10-19
   gc sweep fazisban szelektivebb lockolas a varlock-kal;
   pthread_atfork() collector mutexei inicializalva (unlock helyett);  
