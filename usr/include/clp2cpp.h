@@ -98,7 +98,7 @@ extern VALUE ststackbuf[];
 #define PUSHDAT()  (stack->type=TYPE_DATE,stack++)
 #define PUSHPTR()  (stack->type=TYPE_POINTER,stack++)
 #define PUSHNUM()  (stack->type=TYPE_NUMBER,stack++)
-#define PUSH(v)    (stack->type=(v)->type,stack->data=(v)->data,stack++)
+#define PUSH(v)    (assign_lock(),stack->type=(v)->type,stack->data=(v)->data,stack++,assign_unlock())
 
 //Több szál esetén a pop()-> felhasználása tilos,
 //ezért pop() visszatérése VALUE*-ról void-ra változott.
@@ -376,10 +376,8 @@ typedef USHORT FLAG;
 
 extern void vartab_lock();
 extern void vartab_unlock();
-extern void vartab_lock0();
-extern void vartab_unlock0();
-#define VARTAB_LOCK()     vartab_lock()  
-#define VARTAB_UNLOCK()   vartab_unlock()  
+extern void assign_lock();
+extern void assign_unlock();
 
 extern int signal_raise(int);
 extern int signal_send(int,int);

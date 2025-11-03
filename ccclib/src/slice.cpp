@@ -87,10 +87,9 @@ void slice()
         }
         else
         {
-            extern void valuemove(VALUE *to, VALUE *fr, int n);
             int slen=jdx-idx+1; //>=1
             VALUE *v=array0(slen);
-            valuemove(v,ARRAYPTR(a)+idx-1,slen);
+            valuecopy_lk(v,ARRAYPTR(a)+idx-1,slen);
         }
         *a=*TOP();
         stack=a+1;

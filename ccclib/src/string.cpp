@@ -78,19 +78,10 @@ void string(char const *ptr) //uj peldany ramutatassal (new nelkul)
 {
 //stack:   --- s
 
-    VARTAB_LOCK();
-
-    OREF *o=oref_new(); 
-    o->ptr.chrptr=(char*)ptr;
-    o->length=0;              //szemetgyujtes NEM torli 
-    o->color=COLOR_RESERVED;
- 
-    VALUE *v=PUSHNIL();
-    v->data.string.oref=o;
-    STRINGLEN(v)=strlen(ptr);
-    v->type=TYPE_STRING;
- 
-    VARTAB_UNLOCK();
+    VALUE v;
+    v.type=TYPE_STRING;
+    v.data.string.len=strlen(ptr);
+    oref_new(&v,(void*)ptr,0); // PUSH (szemetgyujtes nem torli)
 }
 
 //------------------------------------------------------------------------
@@ -105,30 +96,25 @@ void stringn(char const *ptr) //uj peldany masolassal (new)
         error_cln("stringn",stack-1,1);
     }
 
-    VARTAB_LOCK();
-
-    OREF *o=oref_new(); 
+    char *chrptr=0;
+    int length=0;
     if( len<=1 )
     {
-        o->ptr.chrptr=oneletter(*ptr);
-        o->length=0; //szemetgyujtes NEM torli
+        chrptr=oneletter(*ptr);
+        length=0; //szemetgyujtes NEM torli
         //printf("<n>");fflush(0);
     }
     else
     {
-        char *p=newChar(len+1);
-        memcpy(p,ptr,len+1);
-        o->ptr.chrptr=p;
-        o->length=-1; //szemetgyujtes torli
+        chrptr=newChar(len+1);
+        memcpy(chrptr,ptr,len+1);
+        length=-1; //szemetgyujtes torli
     }
-    o->color=COLOR_RESERVED;
- 
-    VALUE *v=PUSHNIL();
-    v->data.string.oref=o;
-    STRINGLEN(v)=len;
-    v->type=TYPE_STRING;
 
-    VARTAB_UNLOCK();
+    VALUE v;
+    v.type=TYPE_STRING;
+    v.data.string.len=len;
+    oref_new(&v,chrptr,length); // PUSH
 }
 
 //------------------------------------------------------------------------
@@ -147,31 +133,27 @@ void strings(char const *ptr, unsigned long len) //substring kimasolasa new-val
         error_cln("strings",stack-1,1);
     }
 
-    VARTAB_LOCK();
-
-    OREF *o=oref_new(); 
+    char *chrptr=0;
+    int length=0;
     if( len<=1 )
     {
-        o->ptr.chrptr=oneletter(*ptr);
-        o->length=0; //szemetgyujtes NEM torli
-        //printf("<s>");fflush(0);
+        chrptr=oneletter(*ptr);
+        length=0; //szemetgyujtes NEM torli
+        //printf("<S>");fflush(0);
     }
     else
     {
-        char *p=newChar(len+1);
-        memcpy(p,ptr,len);
-        *(p+len)=0x00;
-        o->ptr.chrptr=p;
-        o->length=-1; //szemetgyujtes torli 
+        chrptr=newChar(len+1);
+        memcpy(chrptr,ptr,len);
+        *(chrptr+len)=0x00;
+        length=-1; //szemetgyujtes torli
     }
-    o->color=COLOR_RESERVED;
-  
-    VALUE *v=PUSHNIL();
-    v->data.string.oref=o;
-    STRINGLEN(v)=len;
-    v->type=TYPE_STRING;
 
-    VARTAB_UNLOCK();
+    VALUE v;
+    v.type=TYPE_STRING;
+    v.data.string.len=len;
+
+    oref_new(&v,chrptr,length); // PUSH
 }
 
 //------------------------------------------------------------------------
@@ -186,21 +168,14 @@ char *stringl(unsigned long len) //inicializalatlan string new-val
         error_cln("stringl",stack-1,1);
     }
 
-    VARTAB_LOCK();
+    char *chrptr=newChar(len+1);
+    *(chrptr+len)=0x00;
+    VALUE v;
+    v.type=TYPE_STRING;
+    v.data.string.len=len;
 
-    OREF *o=oref_new();
-    o->ptr.chrptr=newChar(len+1);
-    *(o->ptr.chrptr+len)=0x00; 
-    o->length=-1;              //szemetgyujtes torli  
-    o->color=COLOR_RESERVED;
- 
-    VALUE *v=PUSHNIL();
-    v->data.string.oref=o;
-    STRINGLEN(v)=len;
-    v->type=TYPE_STRING;
- 
-    VARTAB_UNLOCK();
-    return o->ptr.chrptr;
+    oref_new(&v,chrptr,-1); // PUSH (szemetgyujtes torli)
+    return chrptr;
 }
 
 //------------------------------------------------------------------------

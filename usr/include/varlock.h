@@ -25,14 +25,20 @@ struct varlock
 
     int lock(void *p)
     {
-        int x=((unsigned long)p)%prime;
+        int x=((unsigned long long)p)%prime;
+        pthread_mutex_lock( &mutex[x] );
+        return x;
+    };
+
+    int lock(int x)
+    {
         pthread_mutex_lock( &mutex[x] );
         return x;
     };
 
     int lock_try(void *p)
     {
-        int x=((unsigned long)p)%prime;
+        int x=((unsigned long long)p)%prime;
         if( pthread_mutex_trylock(&mutex[x]) ) // -> 0 vagy errno
         {
             return -1;

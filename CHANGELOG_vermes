@@ -1,3 +1,10 @@
+2025-11-03
+  vartab_lock() athelyezve oref_new/vref_new-ba;
+  PUSH assign_lock vedelem alatt;
+  operator= helyett valuecopy_lk;
+  valuemove() helyett valuecopy_lk;
+  assign()-ban valuecopy_lk;
+
 2025.11.02  ppo2cpp 4.11.1  hibajavitas:
    Ha tobb prg modulban is definialva volt ugyanolyan nevu class,
    akkor a classnameNew generalaskor hasznalt ideiglenes fajlok neve utkozott;
