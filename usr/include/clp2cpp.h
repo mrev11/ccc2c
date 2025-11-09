@@ -98,16 +98,6 @@ extern VALUE ststackbuf[];
 #define PUSHDAT()  (stack->type=TYPE_DATE,stack++)
 #define PUSHPTR()  (stack->type=TYPE_POINTER,stack++)
 #define PUSHNUM()  (stack->type=TYPE_NUMBER,stack++)
-#define PUSH(v)    (assign_lock(),stack->type=(v)->type,stack->data=(v)->data,stack++,assign_unlock())
-
-//Több szál esetén a pop()-> felhasználása tilos,
-//ezért pop() visszatérése VALUE*-ról void-ra változott.
-//Hogy a compiler kiszûrhesse a rossz POP()-> használatot,
-//ideiglenesen POP-ot pop-ra preprocesszáljuk.
-
-#define POP()      (stack-=1)
-#define POP2()     (stack-=2)
-#define POP3()     (stack-=3)
 
 #define TOP0()     (stack)      // a stack tetején az elsõ szabad hely
 #define TOP()      (stack-1)    // a stack tetején lévõ érték
@@ -116,15 +106,12 @@ extern VALUE ststackbuf[];
 #define TOP3()     (stack-3)    // a stack tetején a harmadik érték
 #define TOP4()     (stack-4)
 
-#define DUP()      (PUSH(TOP1()))
-#define DUP2()     (PUSH(TOP2()))
-#define DUP3()     (PUSH(TOP3()))
-
 #define RETURN(bs) {*bs=*TOP();stack=bs+1;return;}
 
 #define STPUSH(v)  (ststack->type=(v)->type,ststack->data=(v)->data,ststack++)
 
 extern void push(VALUE*);
+extern void PUSH(VALUE*);
 extern void push_symbol(VALUE*);
 extern void push_blkenv(VALUE*);
 extern void push_symbol_ref(VALUE*);
@@ -134,8 +121,15 @@ extern void push_symbol_ref(VALUE*);
 #define push_blkenv_ref(v) push_symbol_ref(v)
 
 extern void pop();
+extern void POP();
+extern void POP2();
+extern void POP3();
 extern void dup(); 
+extern void DUP(); 
+extern void DUP2(); 
+extern void DUP3(); 
 extern void swap(); 
+extern void SWAP(); 
  
 extern void debug(const char*); // varstack teszteléséhez
 
