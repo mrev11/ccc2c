@@ -372,6 +372,7 @@ extern void vartab_lock();
 extern void vartab_unlock();
 
 extern int  assign_lock();
+extern int  assign_lock(int);
 extern int  assign_lock(VALUE*);
 extern int  assign_lock(VALUE*,VALUE*);
 extern void assign_unlock();
