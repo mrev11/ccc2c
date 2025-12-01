@@ -368,16 +368,6 @@ typedef USHORT FLAG;
 
 #include <thread_data.h>
 
-extern void vartab_lock();
-extern void vartab_unlock();
-
-extern int  assign_lock();
-extern int  assign_lock(int);
-extern int  assign_lock(VALUE*);
-extern int  assign_lock(VALUE*,VALUE*);
-extern void assign_unlock();
-extern void assign_unlock(int);
-
 extern int signal_raise(int);
 extern int signal_send(int,int);
 
