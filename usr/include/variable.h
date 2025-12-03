@@ -21,29 +21,43 @@
 #ifndef _VARIABLE_H_
 #define _VARIABLE_H_
 
-#include <compat_ccc3.h>
+#ifdef _CCC2_
+#undef  BYTE
+#define BYTE char
+#undef  CHAR
+#define CHAR char
+#endif
+
+#ifdef _CCC3_
+#undef  BYTE
+#define BYTE char
+#undef  CHAR
+#define CHAR wchar_t
+#endif
 
 //---------------------------------------------------------------------------
 
-const unsigned int  MAXSTRLEN=0x4000000;  //64MB
 
-const int TYPE_END        = -1;    // array end/size
-const int TYPE_NIL        =  0;    // 'U'
-const int TYPE_NUMBER     =  1;    // 'N'
-const int TYPE_DATE       =  2;    // 'D'
-const int TYPE_FLAG       =  3;    // 'L'
-const int TYPE_POINTER    =  4;    // 'P'
-const int TYPE_STRING     =  5;    // 'C'
-const int TYPE_ARRAY      =  6;    // 'A'
-const int TYPE_BLOCK      =  7;    // 'B'
-const int TYPE_OBJECT     =  8;    // 'O'
-const int TYPE_REF        =  9;    // 'R'
+const unsigned int  MAXBINLEN=0x4000000;  //64MB
+const unsigned int  MAXSTRLEN=MAXBINLEN/sizeof(CHAR);
 
-//Lenyeges a konstansok nagysag szerinti sorrendje!
+const int TYPE_END        =   -1;    // array end/size
+const int TYPE_NIL        = 0x00;    // 'U'
+const int TYPE_NUMBER     = 0x01;    // 'N'
+const int TYPE_DATE       = 0x02;    // 'D'
+const int TYPE_FLAG       = 0x03;    // 'L'
+const int TYPE_POINTER    = 0x04;    // 'P'
+const int TYPE_GARBAGE    = 0x10;
+const int TYPE_BINARY     = 0x11;    // 'X'
+const int TYPE_STRING     = 0x12;    // 'C'
+const int TYPE_SCALAR     = 0x20;
+const int TYPE_ARRAY      = 0x21;    // 'A'
+const int TYPE_BLOCK      = 0x22;    // 'B'
+const int TYPE_OBJECT     = 0x23;    // 'O'
 
-const int TYPE_GARBAGE = TYPE_STRING; // (v.type<TYPE_GARBAGE) => v-nek nincs oref-je
-const int TYPE_SCALAR  = TYPE_STRING; // (v.type<=TYPE_SCALAR) => ha v-nek van oref-je, abban nincs VALUE
+const int TYPE_REF        = 0x31;    // 'R'
 
+//Lenyeges a tipus konstansok nagysag szerinti sorrendje!
 
 
 struct OREF;
@@ -65,10 +79,16 @@ struct VALUE
 
         struct
         {
-            OREF *oref; // string
-            //unsigned long len; // hossz
-            binarysize_t len; // hossz
+            OREF *oref; // wchar_t string
+            unsigned long len; // hossz (CHAR-ban merve)
         } string;
+
+        struct
+        {
+            OREF *oref; // byte array
+            //unsigned long len; // hossz (BYTE-ban merve)
+            binarysize_t len; // hossz (BYTE-ban merve)
+        } binary;
 
         struct
         {
@@ -91,8 +111,7 @@ struct VALUE
 
     } data;
 
-    VALUE &operator=(VALUE &v); // defines in variable.cpp
-
+    VALUE &operator=(VALUE &v); // defined in variable.cpp
 };
 
 
@@ -100,8 +119,9 @@ struct OREF
 {
     union
     {
-        char *chrptr;
+        CHAR *chrptr;
         VALUE *valptr;
+        BYTE *binptr;
     } ptr;
     int length;
     int color;
@@ -117,7 +137,7 @@ struct VREF
 };
 
 
-struct VARTAB_SETSIZE 
+struct VARTAB_SETSIZE
 {
     unsigned int *oref_size;
     unsigned int *vref_size;
@@ -148,7 +168,7 @@ extern void   vartab_ini(void);
 extern void  *vartab_collector(void*);
 extern void   oref_gray(OREF*);
 extern OREF  *oref_new(VALUE*,void*,int);
-extern VREF  *vref_new(VALUE*);
+extern VREF  *vref_new();
 extern VALUE *newValue(unsigned);
 extern CHAR  *newChar(unsigned int len);
 extern BYTE  *newBinary(unsigned int len);
@@ -157,9 +177,6 @@ extern void   valuecopy(VALUE*,VALUE*);
 extern void   arraycopy(VALUE*,VALUE*,int);
 
 
-// egyik vagy masik
-#define FINE_GRAINED_LOCK
-//#define COARSE_GRAINED_LOCK
 
 //---------------------------------------------------------------------------
 
