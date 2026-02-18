@@ -1,6 +1,7 @@
-9641b89731ed9311cb5d762fc3b51194456add34 2026021013:33:43-UTC ./ccclib/src/buildnumber_ccc.prg
+71568e7e8be98069c78befd9ba84c5d6c4743159 2026021812:22:14-UTC ./ccclib/src/buildnumber_ccc.prg
+226d038b3783966849aa9401111768ab94002956 2026021812:22:07-UTC ./CHANGELOG_vermes
+21ac63f19ce71cab134c36e4d816d4690171f72e 2026021808:46:04-UTC ./ccclib/src/variable.cpp
 b2602e4ebd8a6c6eb284db9e442b94ce48aa306e 2026021013:30:12-UTC ./rb
-2d42ddd7aa6b7aa3fce2fec9a4effb8fce13754a 2026021013:15:11-UTC ./CHANGELOG_vermes
 f418a31d832e2b492c20a1e4b1d3e4859f6d0e0f 2026021013:01:30-UTC ./log-install
 8ffe7df3a4cc6dba3511ed64ed9ec8af1c22772a 2026021013:01:30-UTC ./usr/bin/list
 9b9a6c2d2ef74f3f24923e77cc08c25de4890820 2026021013:01:30-UTC ./usr/bin/xstart
@@ -176,7 +177,6 @@ e712ad8c13542e51eb53edab0b25a0525b4707ad 2026011714:03:31-UTC ./usr/bin/removecr
 b0732af7dc3549886986ee5ae6ac467c72fea27b 2026011714:03:30-UTC ./usr/bin/cccbn
 b654a60aad122275fffa492d99f145fe3bc2334c 2026011714:03:25-UTC ./usr/bin/ppo2cpp
 5d4ead9ac32d52323d1f6ee5b2814ad0b3c2a7f6 2025122510:25:04-UTC ./ccclib/src/thread.cpp
-de017705967e308605c211b1bab34f4dc4f1c7c7 2025122509:42:33-UTC ./ccclib/src/variable.cpp
 0db65f34d9b056fe0eabfc7968362350ccfa5ac0 2025122509:41:25-UTC ./ccclib/src/unix/signals.cpp
 ece993344691fe2188d2a2fae1c17908214c8ff8 2025122509:39:56-UTC ./ccclib/src/unix/fork.cpp
 872af487c5a5e82233f0cbaa8dd60cc799e460a0 2025122509:38:01-UTC ./ccclib/src/uic/termapi/termapi.cpp
